@@ -32,6 +32,10 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: false
         },
+        image: {
+          type: DataTypes.STRING,
+          allowNull: false  
+        }
         age: {
             type: DataTypes.NUMBER,
             allowNull: false
