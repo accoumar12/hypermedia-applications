@@ -6,14 +6,14 @@
         <h1><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></h1>
         <nav>
             <span class="nav-link">About Us</span>
-            <span class="nav-link">Our Team</span>
-            <span class="nav-link">Investments</span>
+            <span class="nav-link"><NuxtLink to = "/dogs">Our Team</NuxtLink></span>
+            <span class="nav-link"><NuxtLink to = "/locations">Investments</NuxtLink></span>
             <span class="nav-link">News</span>
             <span class="nav-link">Get In Touch</span>
         </nav>
     </header>
 </template>
-  
+
 <style>
 header {
     background-color: white;
