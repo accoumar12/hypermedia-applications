@@ -12,7 +12,7 @@
                 <router-link to="/news" class="nav-link">News</router-link>
                 <router-link to="/get-in-touch" class="nav-link">Get In Touch</router-link>
                 <div class="search">
-                    <button @click="toggleSearch"><i class="bi bi-search"></i></button>
+                    <button @click="toggleSearch"><font-awesome-icon :icon="fa - search" ,font-size: 30px /></button>
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                 </div>
@@ -22,6 +22,7 @@
 </template>
 <script>
 export default {
+
     data() {
         return {
             isSearchExpanded: false,
