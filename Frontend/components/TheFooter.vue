@@ -9,15 +9,15 @@
 </template>
 
 <style>
-    footer
-    {
-        background-color: orange;
-        flex-shrink: 0;
-        text-align: center;
-        margin-top: auto;
-        border-top: 5px solid brown;
-        padding: 10px;
+footer {
+    background-color: white;
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: auto;
+    border-top: 0.2em solid;
+    border-image: linear-gradient(to right, rgb(91, 199, 204), rgb(9, 91, 119)) 1;
+    padding: 10px;
 
-        min-height: 1vh;
-    }
+    min-height: 1vh;
+}
 </style>

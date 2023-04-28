@@ -59,7 +59,7 @@
         align-content: flex-start;
         gap: 20px;
 
-        background-color: burlywood;
+        background-color: white;
         padding: 20px;
     }
 
