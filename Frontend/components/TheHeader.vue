@@ -10,7 +10,7 @@
                 <router-link to="/dogs" class="nav-link">Our Team</router-link>
                 <router-link to="/investments" class="nav-link">Investments</router-link>
                 <router-link to="/news" class="nav-link">News</router-link>
-                <router-link to="/get-in-touch" class="nav-link">Get In Touch</router-link>
+                <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
                     <button @click="toggleSearch"><i class="fas fa-search" style="color: #2479a3;"></i></button>
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"

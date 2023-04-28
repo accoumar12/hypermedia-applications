@@ -5,22 +5,43 @@
 <template>
     <main>
         <!--
-            Form used to filter the list by age.
-        -->
+        Form used to filter the list by age.
+      -->
+        <div class="breadcrumbs">
+            <nav>
+                <ul class="nav-breadcrumbs">
+                    <li><router-link to="/">Home</router-link></li> /
+                    <li><router-link to="/dogs"> Our Team</router-link></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="intro">
+            <h1>Meet Our Team</h1>
+
+            <div class="team-info">
+                <p>Our team is made up of experienced and driven individuals who are passionate about identifying and
+                    supporting
+                    the next generation of disruptors.</p>
+                <p> Together, our team has a proven track record of identifying and investing in startups that have gone on
+                    to
+                    become industry leaders.</p>
+            </div>
+        </div>
         <div class="form-container">
             <label for="age-filter">Age filter</label><input id="age-filter" type='text' placeholder="Age filter"
                 v-model="age">
         </div>
-        <h1>Dogs</h1>
+
         <div id="card-container">
-            <Card v-for="dog of filtered" :title="dog.name" :subtitle="dog.breed" :link="'/dogs/' + dog.id" />
+            <Card v-for="dog of filtered" :key="dog.id" :title="dog.name" :subtitle="dog.breed" :link="'/dogs/' + dog.id" />
         </div>
     </main>
 </template>
-
+  
 <script setup>
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
+
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
@@ -45,23 +66,73 @@ const filtered = computed(() => {
     return arr
 })
 </script>
-
-<style>
+  
+<style scoped>
 #card-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
-    align-content: flex-start;
     gap: 20px;
 }
 
-main {
+.breadcrumbs {
+    position: relative;
+    padding-right: 80%;
+    margin-top: 2%;
+}
+
+.nav-breadcrumbs {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-breadcrumbs li {
+    margin-right: 40px;
+}
+
+.nav-breadcrumbs li:last-child {
+    font-weight: bold;
+}
+
+.nav-breadcrumbs a {
+    text-decoration: none;
+    color: #0e6b74;
+    font-weight: bold;
+}
+
+.nav-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-left: 10%;
     justify-content: center;
-    align-content: flex-start;
-    gap: 10px;
+}
+
+.intro {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #77c7ac;
+    position: relative;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 50%;
+}
+
+.team-info {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #77c7ac;
+    position: relative;
+    margin-top: 0.5%;
+    margin-right: 25%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .form-container {
@@ -69,12 +140,85 @@ main {
     border-radius: 10px;
     border: 2px solid brown;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    gap: 20px;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 20px;
+    margin: 20px auto;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 2px 2px #e8e8e8;
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-breadcrumbs li {
+        list-style-type: none;
+        margin-right: 10px;
+    }
+
+    .nav-link {
+        color: blue;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid blue;
+    }
+}
+
+/* For larger screens */
+@media screen and (min-width: 769px) {
+    .nav-breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-breadcrumbs li {
+        list-style-type: none;
+        margin-right: 0;
+    }
+
+    .nav-link {
+        color: blue;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid blue;
+    }
 }
 </style>
