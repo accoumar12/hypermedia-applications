@@ -12,9 +12,10 @@
                 <router-link to="/news" class="nav-link">News</router-link>
                 <router-link to="/get-in-touch" class="nav-link">Get In Touch</router-link>
                 <div class="search">
-                    <button @click="toggleSearch"><font-awesome-icon :icon="fa - search" ,font-size: 30px /></button>
+                    <button @click="toggleSearch"><i class="fas fa-search" style="color: #2479a3;"></i></button>
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
+                    <font-awesome-icon :icon="['fas', 'robot']" />
                 </div>
             </nav>
         </header>
@@ -22,7 +23,6 @@
 </template>
 <script>
 export default {
-
     data() {
         return {
             isSearchExpanded: false,
@@ -64,7 +64,7 @@ header {
     padding: 0.5em 0.5%;
     margin-bottom: 0.5em;
     border-bottom: 0.2em solid;
-    border-image: linear-gradient(to right, rgb(91, 199, 204), rgb(9, 91, 119)) 1;
+    border-image: linear-gradient(to right, rgb(25, 147, 153), rgb(4, 48, 61)) 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,20 +73,42 @@ header {
 nav {
     display: flex;
     gap: 3em;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: rgb(25, 129, 129);
     align-items: center;
+    font-weight: bold;
     flex-grow: 1;
+
 }
 
 .nav-link {
     text-decoration: none;
     font-family: monospace;
     font-weight: bold;
-    color: rgb(13, 84, 84);
+    color: rgb(46, 194, 194);
     cursor: pointer;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.4em;
+    --b: 0.1em;
+    /* the thickness of the line */
+    --c: #268fb2;
+    /* the color */
+
+    color: #0000;
+    padding-block: var(--b);
+    background:
+        linear-gradient(var(--c) 50%, #06393e 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: .1s var(--_s, 0s) linear, background-size .1s calc(.3s - var(--_s, 0s));
+
+
+}
+
+.nav-link:hover {
+    --_p: 100%;
+    --_s: .3s;
 }
 
 .logo {
@@ -117,17 +139,18 @@ nav {
     font-size: 1rem;
     padding: 0.5em;
     width: 0;
-    border-radius: 0.5em;
+    border-radius: 1em;
     transition: all 0.2s ease-in-out;
 }
 
 .search input.search-expanded {
     width: 200px;
     color: white;
+    border-radius: 1em;
 }
 
 .search button {
-    background-color: white;
+    background-color: rgb(141, 1, 1);
     border-radius: 50%;
     border: none;
     outline: none;
