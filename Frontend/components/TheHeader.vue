@@ -2,19 +2,58 @@
     Header of the page
 -->
 <template>
-    <header>
-        <h1><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></h1>
-        <nav>
-            <span class="nav-link">About Us</span>
-            <span class="nav-link">Our Team</span>
-            <span class="nav-link">Investments</span>
-            <span class="nav-link">News</span>
-            <span class="nav-link">Get In Touch</span>
-        </nav>
-    </header>
+    <div>
+        <header>
+            <h1><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h1>
+            <nav>
+                <router-link to="/about-us" class="nav-link">About Us</router-link>
+                <router-link to="/dogs" class="nav-link">Our Team</router-link>
+                <router-link to="/investments" class="nav-link">Investments</router-link>
+                <router-link to="/news" class="nav-link">News</router-link>
+                <router-link to="/get-in-touch" class="nav-link">Get In Touch</router-link>
+                <div class="search">
+                    <button @click="toggleSearch"><i class="bi bi-search"></i></button>
+                    <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
+                        placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
+                </div>
+            </nav>
+        </header>
+    </div>
 </template>
-  
-<style>
+<script>
+export default {
+    data() {
+        return {
+            isSearchExpanded: false,
+            searchText: '',
+        };
+    },
+    methods: {
+        toggleSearch(event) {
+            event.stopPropagation();
+            if (this.isSearchExpanded) {
+                this.isSearchExpanded = false;
+            } else {
+                this.isSearchExpanded = true;
+                this.$nextTick(() => this.$refs.searchInput.focus());
+            }
+        },
+        search() {
+            // handle search functionality here
+            console.log('Searching for: ', this.searchText);
+        },
+    },
+    mounted() {
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    },
+};
+</script>
+
+<style scoped>
 header {
     background-color: white;
 }
