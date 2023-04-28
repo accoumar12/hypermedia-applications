@@ -12,7 +12,7 @@
         </div>
         <h1>Dogs</h1>
         <div id="card-container">
-            <Card v-for = "dog of filtered" :title = "dog.name" :subtitle = "dog.breed" :link = "'/dogs/' + dog.id" />
+            <Card v-for = "dog of filtered" :image = "dog.image" :title = "dog.name" :subtitle = "dog.breed" :link = "'/dogs/' + dog.id" />
         </div>
     </main>
 </template>
