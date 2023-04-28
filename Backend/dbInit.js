@@ -19,7 +19,7 @@ export default async (models) => {
         {
             name: "Orfeo",
             breed: "Schnauzer",
-            image: "https://plus.unsplash.com/premium_photo-1670771171077-14858acd4f37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
+            image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
             age: 14,
             description: loremIpsum({
                 count: 4,
@@ -31,7 +31,7 @@ export default async (models) => {
             name: "Lessie",
             breed: "Collie",
             age: 7,
-            image: "~/assets/img/People/P02.png",
+            image: "Frontend/assets/img/People/P02.png",
             description: loremIpsum({
                 count: 4,
                 units: "paragraph"
