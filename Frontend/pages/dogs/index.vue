@@ -8,9 +8,10 @@
             Form used to filter the list by age.
         -->
         <div class = "form-container">
-            <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
+            <label for = "age-filter">Role filter</label>
+            <input id = "age-filter" type = 'text' placeholder = "Role filter" v-model = "role">
         </div>
-        <h1>Dogs</h1>
+        <h1>Teams</h1>
         <div id="card-container">
             <Card v-for = "dog of filtered" :image = "dog.image" :title = "dog.name" :subtitle = "dog.role" :link = "'/dogs/' + dog.id" />
         </div>
@@ -25,18 +26,18 @@
         This allows to have a cached value that contains the filtered list.
         Instead of using the normal list for the cards, we used the computed property directly.
     */
-    const age = ref(0);
+    const role = ref(0);
 
     const filtered = computed(() => {
         // Checking for values where the full list is provided
-        if(age.value == 0 || age.value == "")
+        if(role.value == 0 || role.value == "")
             return dogs.value
 
         const arr = []
 
         // Filtering the list
         for(let dog of dogs.value) {
-            if(dog.age < age.value)
+            if(dog.role.includes(role.value))
                 arr.push(dog)
         }
 

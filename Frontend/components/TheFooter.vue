@@ -4,7 +4,7 @@
 
 <template>
     <footer>
-        Made by me :)
+        Made by Mirko Calcaterra, Emma Lodetti and Nikolina Zallemi
     </footer>
 </template>
 
