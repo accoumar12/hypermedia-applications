@@ -12,7 +12,17 @@
             <input id = "age-filter" type = 'text' placeholder = "Role filter" v-model = "role">
         </div>
         <h1>Teams</h1>
-        <div id="card-container">
+          <div>
+            <button id = "button-filter" class = "btn" @click="getButtonString('Africa Team')">Africa Team</button>
+            <button id = "button-filter" class = "btn" @click="getButtonString('America Team')">America Team</button>
+            <button id = "button-filter" class = "btn" @click="getButtonString('Asia Team')">Asia Team</button>
+            <button id = "button-filter" class = "btn" @click="getButtonString('Europe Team')">Europe Team</button>
+            <button id = "button-filter" class = "btn" @click="getButtonString('Oceania Team')">Oceania Team</button>
+            <ul>
+                <li v-for="team in filteredTeams" :key="dog.team">{{ dog.team }}</li>
+            </ul>
+        </div>
+        <div id = "card-container">
             <Card v-for = "dog of filtered" :image = "dog.image" :title = "dog.name" :subtitle = "dog.role" :link = "'/dogs/' + dog.id" />
         </div>
     </main>
@@ -35,15 +45,25 @@
 
         const arr = []
 
+
         // Filtering the list
         for(let dog of dogs.value) {
-            if(dog.role.includes(role.value))
+            if(dog.role.toLowerCase().includes(role.value.toLowerCase()))
                 arr.push(dog)
         }
 
         // Returning the filtered list
         return arr
     })
+    function getButtonString(a) {
+        const arr = []
+        var button = a; // replace "myButton" with the ID of your button
+        for(let dog of dogs.value) {
+            if(dog.role.includes(role.value) && dog.team == a)
+                arr.push(dog)
+        }
+        return arr;
+    }  
 </script>
 
 <style>
@@ -79,5 +99,22 @@
         background-color: burlywood;
         padding: 20px;
     }
+
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+    .btn.active {
+        background-color: #666;
+        color: white;
+}
 
 </style>
