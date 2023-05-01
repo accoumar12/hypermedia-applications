@@ -12,19 +12,19 @@
 
     <div class="row">
         <div class="image-container">
-            <span class="title">
+            <span class="subtitle">
                 <img class="img" :src = "image" />
 
                 <!--<img class="img" src='~/assets/img/People/P01.png' />-->
 
-                <h3>{{ title }}</h3>
+                <h2>{{ title }}</h2>
 
                 <div class="clickable-image-container">
                     <NuxtLink :to="link">
                         <div class="hover-content">
 
                             <img class="img" :src = "image" />
-                            <h3><span class="title">{{ title }}</span></h3>
+                            <h3><span class="subtitle">{{ title }}</span></h3>
                             <p><span class="subtitle">{{ subtitle }}</span></p>
                             <p>Health</p>
 
@@ -158,7 +158,7 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 .hover-content img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
 }
 
