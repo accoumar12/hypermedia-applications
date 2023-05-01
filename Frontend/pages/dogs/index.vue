@@ -49,6 +49,7 @@
                 <div class="filter-container team">
 
                     <div class="grid-x">
+
                         <div class="cell small-12 filter-title">Filter By</div>
                         <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
@@ -86,9 +87,16 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
+                        <div class = "form-container">
+                            <label for = "age-filter">Role filter</label>
+                            <input id = "age-filter" type = 'text' placeholder = "Role filter" v-model = "role">
+                        </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id = "card-container">
+                <Card v-for = "dog of filtered" :image = "dog.image" :title = "dog.name" :subtitle = "dog.role" :link = "'/dogs/' + dog.id" />
             </div>
             <div class="row">
                 <div class="image-container">
@@ -133,14 +141,7 @@
             </div>
         </section>
 -->
-        <div class="form-container">
-            <label for="age-filter">Age filter</label><input id="age-filter" type='text' placeholder="Age filter"
-                v-model="age">
-        </div>
-
-        <div id="card-container">
-            <Card v-for="dog of filtered" :key="dog.id" :title="dog.name" :subtitle="dog.breed" :link="'/dogs/' + dog.id" />
-        </div>
+        
     </main>
 </template>
   
