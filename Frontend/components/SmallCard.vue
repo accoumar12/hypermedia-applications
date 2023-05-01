@@ -10,6 +10,9 @@
 
 <template>
     <div class="card">
+        <div class="image-container">
+            <img class="img" :src = "image" />
+        </div>
         <span class="title">{{ title }}</span>
         <span class="subtitle">{{ subtitle }}</span>
         <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
@@ -19,6 +22,7 @@
 <script>
     export default {
         props: [
+            'image',
             'title',
             'subtitle',
             'link'
@@ -31,7 +35,7 @@
     {
         display: flex;
         justify-content: center;
-        border: 2px dashed red;
+        
         border-radius: 10px;
         padding: 2px;
         width: 250px;
@@ -43,7 +47,7 @@
         display: flex;
         flex-flow: column;
         padding: 20px;
-        border: 2px solid black;
+        
         border-radius: 20px;
         width: fit-content;
         height: fit-content;

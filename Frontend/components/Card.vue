@@ -9,15 +9,15 @@
     - link: link to the page description
 -->
 <template>
+
     <div class="row">
         <div class="image-container">
+            <span class="title">
             <img class="img" :src = "image" />
             <!--<img class="img" src='~/assets/img/People/P01.png' />-->
-        </div>
 
-        <span class="title">{{ title }}</span>
-        <span class="subtitle">{{ subtitle }}</span>
-        <div class="clickable-image-container">
+            {{ title }}
+            <div class="clickable-image-container">
                         <NuxtLink :to="link">
                             <div class="hover-content">
                                 <img class="img" :src = "image" />
@@ -28,7 +28,11 @@
                             </div>
                         </NuxtLink>
         </div>
-        <NuxtLink :to="link"><button>Open description</button></NuxtLink>
+        </span>
+        
+        </div>
+
+        
     </div>
 </template>
 
@@ -47,8 +51,8 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 }
 
 .card {
-    /*display: flex;
-    flex-flow: column;*/
+    display: flex;
+    flex-flow: column;
     padding: 20px;
     border: 2px solid black;
     border-radius: 20px;
@@ -61,10 +65,10 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
     font-weight: bold;
 }
 .image-container {
-    position: flex; /*relative*/
+    position: relative; /*relative*/
     justify-content: center;
     display: inline-block;
-    text-align: center;
+    text-align: ;
     border-color: none;
     border-style: none;
     margin-left: 8vw;
@@ -72,11 +76,11 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 }
 
 .image-container img {
-    display: block;
+    display: flex;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    width: 80%;
+    width: auto;
 }
 
 .image-container h2 {
@@ -121,6 +125,7 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 
 .clickable-image-container:hover img {
     opacity: 1;
+    height: auto;
 }
 
 .image-container:hover .clickable-image-container {
