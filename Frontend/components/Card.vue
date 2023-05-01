@@ -157,8 +157,8 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 
 .hover-content img {
     display: block;
-    margin: 0 auto;
-    max-width: 60%;
+    margin-top: 50;
+    max-width: 50%;
     height: auto;
 }
 

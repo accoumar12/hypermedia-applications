@@ -62,7 +62,7 @@
 
 
                                 <label for="investment-team">
-                                    MANAGMENT<input type="radio" id="investment-team" value="investment-team"
+                                    MANAGMENT <input type="radio" id="investment-team" value="investment-team"
                                         name="team-categories">
                                     <span class="checkmark"></span>
                                 </label>
@@ -76,7 +76,7 @@
 
 
                                 <label for="finance-operations">
-                                    OPS &amp;FINANCE <input type="radio" id="finance-operations" value="finance-operations"
+                                    OPS &amp; FINANCE <input type="radio" id="finance-operations" value="finance-operations"
                                         name="team-categories">
                                     <span class="checkmark"></span>
                                 </label>
@@ -172,6 +172,7 @@
 
         // Returning the filtered list
         return arr
+        
     })
     function getButtonString(a) {
         const arr = []
@@ -182,6 +183,7 @@
         }
         return arr;
     }  
+
 
 </script>
 
