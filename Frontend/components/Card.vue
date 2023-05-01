@@ -8,27 +8,30 @@
     - subtitle: second information to display
     - link: link to the page description
 -->
-<template>
+<template>     
 
     <div class="row">
         <div class="image-container">
             <span class="title">
-            <img class="img" :src = "image" />
-            <!--<img class="img" src='~/assets/img/People/P01.png' />-->
+                <img class="img" :src = "image" />
 
-            {{ title }}
-            <div class="clickable-image-container">
-                        <NuxtLink :to="link">
-                            <div class="hover-content">
-                                <img class="img" :src = "image" />
-                                <h3><span class="title">{{ title }}</span></h3>
-                                <p><span class="subtitle">{{ subtitle }}</span></p>
-                                <p>Health</p>
+                <!--<img class="img" src='~/assets/img/People/P01.png' />-->
 
-                            </div>
-                        </NuxtLink>
-        </div>
-        </span>
+                <h3>{{ title }}</h3>
+
+                <div class="clickable-image-container">
+                    <NuxtLink :to="link">
+                        <div class="hover-content">
+
+                            <img class="img" :src = "image" />
+                            <h3><span class="title">{{ title }}</span></h3>
+                            <p><span class="subtitle">{{ subtitle }}</span></p>
+                            <p>Health</p>
+
+                        </div>
+                    </NuxtLink>
+                </div>
+            </span>
         
         </div>
 
@@ -50,25 +53,30 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
     margin: auto;
 }
 
+/*
 .card {
-    display: flex;
+    
+    display: flex;              QUESTO è QUELLO DOVE CI SONO LE CARTE 
     flex-flow: column;
-    padding: 20px;
-    border: 2px solid black;
+    padding: 20px;              DELLE PERSONE
+    border: 2px solid black; QUELLO SOTTO è IL MODELLO DI NIKY GIUSTO?
     border-radius: 20px;
     width: fit-content;
     height: fit-content;
 }
+*/
 
 .title {
     font-size: 2em;
     font-weight: bold;
 }
+
+
 .image-container {
-    position: relative; /*relative*/
+    position: relative;
     justify-content: center;
     display: inline-block;
-    text-align: ;
+    text-align: center;
     border-color: none;
     border-style: none;
     margin-left: 8vw;
@@ -76,11 +84,11 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 }
 
 .image-container img {
-    display: flex;
+    display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-    width: auto;
+    width: 80%;
 }
 
 .image-container h2 {
@@ -97,7 +105,7 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 }
 
 .clickable-image-container {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
