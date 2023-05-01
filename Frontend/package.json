@@ -10,6 +10,9 @@
     "postinstall": "nuxt prepare",
     "deploy": "gh-pages -d dist --dotfiles"
   },
+  "dependencies": {
+    "vue-count-to": "1.0.13"
+  },
   "devDependencies": {
     "gh-pages": "^5.0.0",
     "nuxt": "^3.3.3"
