@@ -146,34 +146,42 @@
 </template>
   
 <script setup>
-//import countercard from "~/components/countercard.vue";
-// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
+    //import countercard from "~/components/countercard.vue";
+    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+    const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
+    /*
+        In order to implement a filter, we use the computed property.
+        This allows to have a cached value that contains the filtered list.
+        Instead of using the normal list for the cards, we used the computed property directly.
+    */
+    const role = ref(0);
 
-/*
-    In order to implement a filter, we use the computed property.
-    This allows to have a cached value that contains the filtered list.
-    Instead of using the normal list for the cards, we used the computed property directly.
-*/
-const age = ref(0);
+    const filtered = computed(() => {
+        // Checking for values where the full list is provided
+        if(role.value == 0 || role.value == "")
+            return dogs.value
 
-const filtered = computed(() => {
-    // Checking for values where the full list is provided
-    if (age.value == 0 || age.value == "")
-        return dogs.value
+        const arr = []
 
-    const arr = []
 
-    // Filtering the list
-    for (let dog of dogs.value) {
-        if (dog.age < age.value)
-            arr.push(dog)
-    }
+        // Filtering the list
+        for(let dog of dogs.value) {
+            if(dog.role.toLowerCase().includes(role.value.toLowerCase()))
+                arr.push(dog)
+        }
 
-    // Returning the filtered list
-    return arr
-})
-
+        // Returning the filtered list
+        return arr
+    })
+    function getButtonString(a) {
+        const arr = []
+        var button = a; // replace "myButton" with the ID of your button
+        for(let dog of dogs.value) {
+            if(dog.role.includes(role.value) && dog.team == a)
+                arr.push(dog)
+        }
+        return arr;
+    }  
 
 </script>
 
@@ -549,6 +557,23 @@ label>[type=radio] {
         list-style-type: none;
         margin-right: 0;
     }
+
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+    .btn.active {
+        background-color: #666;
+        color: white;
+}
 
     .nav-link {
         color: blue;

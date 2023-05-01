@@ -28,13 +28,21 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: false
         },
-        breed: {
+        role: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        age: {
-            type: DataTypes.NUMBER,
+        image: {
+          type: DataTypes.STRING,
+          allowNull: false  
+        },
+        team: {
+            type: DataTypes.STRING,
             allowNull: false
+        },
+        supervisor: {
+            type: DataTypes.STRING,
+            allowNull: true
         },
         description: {
             type: DataTypes.STRING,
