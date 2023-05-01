@@ -9,13 +9,25 @@
     - link: link to the page description
 -->
 <template>
-    <div class="card">
+    <div class="row">
         <div class="image-container">
             <img class="img" :src = "image" />
             <!--<img class="img" src='~/assets/img/People/P01.png' />-->
         </div>
+
         <span class="title">{{ title }}</span>
         <span class="subtitle">{{ subtitle }}</span>
+        <div class="clickable-image-container">
+                        <NuxtLink :to="link">
+                            <div class="hover-content">
+                                <img class="img" :src = "image" />
+                                <h3><span class="title">{{ title }}</span></h3>
+                                <p><span class="subtitle">{{ subtitle }}</span></p>
+                                <p>Health</p>
+
+                            </div>
+                        </NuxtLink>
+        </div>
         <NuxtLink :to="link"><button>Open description</button></NuxtLink>
     </div>
 </template>
@@ -25,16 +37,6 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 </script>
 
 <style>
-.image-container {
-    display: flex;
-    justify-content: center;
-    border: 2px dashed red;
-    border-radius: 10px;
-    padding: 2px;
-    width: 250px;
-    height: 250px;
-}
-
 .img {
     vertical-align: middle;
     max-width: 100%;
@@ -45,8 +47,8 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 }
 
 .card {
-    display: flex;
-    flex-flow: column;
+    /*display: flex;
+    flex-flow: column;*/
     padding: 20px;
     border: 2px solid black;
     border-radius: 20px;
@@ -58,4 +60,93 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
     font-size: 2em;
     font-weight: bold;
 }
+.image-container {
+    position: flex; /*relative*/
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+    border-color: none;
+    border-style: none;
+    margin-left: 8vw;
+    margin-bottom: 5%;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+
+.image-container h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.image-container:hover img {
+    opacity: 0;
+}
+
+.image-container:hover h2 {
+    opacity: 0;
+}
+
+.clickable-image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #77c7ac;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-style: solid;
+    border-radius: 20%;
+    border-color: #77c7ac;
+}
+
+.clickable-image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.clickable-image-container:hover {
+    opacity: 1;
+}
+
+.clickable-image-container:hover img {
+    opacity: 1;
+}
+
+.image-container:hover .clickable-image-container {
+    opacity: 1;
+}
+
+.hover-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hover-content p {
+    margin: 0;
+    color: #fff;
+    margin-top: 2%;
+}
+
+.hover-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
 </style>
