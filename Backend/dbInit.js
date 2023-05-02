@@ -146,7 +146,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Technology',
         },
         {
             name: "Carlos Ramirez",
@@ -182,7 +183,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Technology',
         },
         {
             name: "Sofia Hernandez",
@@ -194,7 +196,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Sustainability"
         },
         {
             name: "Rajesh Singh",
@@ -206,7 +209,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Technology',
         },
         {
             name: "Olivia Jones",
@@ -218,7 +222,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Sustainability"
         },
         {
             name: "Amirah Abdullahi",
@@ -230,7 +235,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Lars Andersen",
@@ -242,7 +248,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Healthcare',
         },
         {
             name: "Fatima Hassan",
@@ -254,7 +261,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Technology',
         },
     ]
     await models.Dog.bulkCreate(dogModel)
