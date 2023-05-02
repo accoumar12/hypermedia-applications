@@ -27,21 +27,8 @@
                         on to become industry leaders.</p>
                 </div>
             </div>
-            <div class="background col-sm-6 d-flex align-items-center justify-content-center align-self-stretch">
-                <div class="col-6 d-flex align-items-center justify-content-center align-self-stretch w-100">
-                    <div class="row">
-                        <div class="col-md-6">
-
-                            <img src="~/assets/img/airport.png" style="max-width: 92%; height: 50%;">
-
-                        </div>
-                        <div class="col-md-6">
-
-                            <p id="text-container">We are here to fly with you to GROWTH!</p>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-6-2 d-flex align-items-center justify-content-center ">
+                <img src="~/assets/img/teampic.png" style="max-width: 70%; height: 70%;padding-top: 5%;">
             </div>
         </div>
         <section class="team-members-grid">
@@ -87,17 +74,19 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                        <div class = "form-container">
-                            <label for = "age-filter">Role filter</label>
-                            <input id = "age-filter" type = 'text' placeholder = "Role filter" v-model = "role">
-                        </div>
+                            <div class="form-container">
+                                <label for="age-filter">Role filter</label>
+                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id = "card-container">
-                <Card v-for = "dog of filtered" :image = "dog.image" :title = "dog.name" :subtitle = "dog.role" :link = "'/dogs/' + dog.id" />
+            <div id="card-container">
+                <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role"
+                    :link="'/dogs/' + dog.id" />
             </div>
+            <!--
             <div class="row">
                 <div class="image-container">
                     <img src="~/assets/img/People/P01.png" />
@@ -115,74 +104,51 @@
                     </div>
                 </div>
             </div>
+            -->
         </section>
 
-        <!--
-        <section class="pt-3 pb-4" id="count-stats">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 z-index-2 border-radius-xl mx-auto py-3">
-                        <div class="row">
-                            <div class="col-md-4 position-relative">
-                                <DefaultCounterCard color="success" title="Coded Elements" description="From buttons, to inputs, navbars, alerts or cards, you are
-                  covered" :count="70" suffix="+" :duration="3000" divider="vertical" />
-                            </div>
-                            <div class="col-md-4 position-relative">
-                                <DefaultCounterCard color="success" title="Design Blocks" description="Mix the sections, change the colors and unleash your
-                  creativity" :count="15" suffix="+" :duration="3000" divider="vertical" />
-                            </div>
-                            <div class="col-md-4">
-                                <DefaultCounterCard color="success" title="Pages" description="Save 3-4 weeks of work when you use our pre-made pages for
-                  your website" :count="4" :duration="3000" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
--->
-        
+
+
     </main>
 </template>
   
 <script setup>
-    //import countercard from "~/components/countercard.vue";
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
-    /*
-        In order to implement a filter, we use the computed property.
-        This allows to have a cached value that contains the filtered list.
-        Instead of using the normal list for the cards, we used the computed property directly.
-    */
-    const role = ref(0);
+// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
+/*
+    In order to implement a filter, we use the computed property.
+    This allows to have a cached value that contains the filtered list.
+    Instead of using the normal list for the cards, we used the computed property directly.
+*/
+const role = ref(0);
 
-    const filtered = computed(() => {
-        // Checking for values where the full list is provided
-        if(role.value == 0 || role.value == "")
-            return dogs.value
+const filtered = computed(() => {
+    // Checking for values where the full list is provided
+    if (role.value == 0 || role.value == "")
+        return dogs.value
 
-        const arr = []
+    const arr = []
 
 
-        // Filtering the list
-        for(let dog of dogs.value) {
-            if(dog.role.toLowerCase().includes(role.value.toLowerCase()))
-                arr.push(dog)
-        }
+    // Filtering the list
+    for (let dog of dogs.value) {
+        if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
+            arr.push(dog)
+    }
 
-        // Returning the filtered list
-        return arr
-        
-    })
-    function getButtonString(a) {
-        const arr = []
-        var button = a; // replace "myButton" with the ID of your button
-        for(let dog of dogs.value) {
-            if(dog.role.includes(role.value) && dog.team == a)
-                arr.push(dog)
-        }
-        return arr;
-    }  
+    // Returning the filtered list
+    return arr
+
+})
+function getButtonString(a) {
+    const arr = []
+    var button = a; // replace "myButton" with the ID of your button
+    for (let dog of dogs.value) {
+        if (dog.role.includes(role.value) && dog.team == a)
+            arr.push(dog)
+    }
+    return arr;
+}
 
 
 </script>
@@ -193,12 +159,14 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    text-decoration: none;
+    border: none;
 }
 
 .breadcrumbs {
-    position: relative;
+    position: absolute;
+    padding-top: 5%;
     padding-right: 80%;
-    margin-top: 2%;
 }
 
 .image-container {
@@ -280,6 +248,7 @@
     margin: 0;
     color: #fff;
     margin-top: 2%;
+    text-decoration: none;
 }
 
 .hover-content img {
@@ -291,15 +260,13 @@
 
 .nav-breadcrumbs {
     list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
 }
 
 .nav-breadcrumbs li {
-    margin-right: 40px;
+    margin-right: 30%;
 }
 
 .nav-breadcrumbs li:last-child {
@@ -324,7 +291,7 @@ h1 {
 .intro {
     font-family: monospace;
     font-size: 1.5rem;
-    color: #77c7ac;
+    color: #5d9295;
     position: relative;
     margin-top: 6%;
     margin-left: 10%;
@@ -334,10 +301,9 @@ h1 {
 .team-info {
     font-family: monospace;
     font-size: 1.5rem;
-    color: #77c7ac;
+    color: #818b88;
     position: relative;
     margin-top: 0.5%;
-    margin-right: 25%;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -350,21 +316,12 @@ h1 {
     align-items: center;
     margin-top: 100px;
     height: 60%;
-    box-shadow: 0px 10px 10px -10px rgba(163, 198, 206, 0.75);
 }
 
-.background {
-    background-color: #0e6b74;
-    position: relative;
-    margin-top: 4%;
-}
 
 .gif-container {
     position: relative;
     justify-content: flex-start;
-
-
-
 
 }
 
@@ -391,8 +348,18 @@ h1 {
 .col-sm-6 {
     width: 50%;
     padding-left: 10%;
+    justify-content: center;
+    align-items: center;
 
 }
+
+.col-sm-6-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
 
 .text-container {
     position: absolute;
@@ -575,7 +542,7 @@ label>[type=radio] {
     .btn.active {
         background-color: #666;
         color: white;
-}
+    }
 
     .nav-link {
         color: blue;

@@ -12,7 +12,8 @@
                 <router-link to="/news" class="nav-link">News</router-link>
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
-                    <button @click="toggleSearch"><i class="fas fa-search" style="color: #2479a3;"></i></button>
+                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
+                            style="color: #2479a3;"></button>
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <font-awesome-icon :icon="['fas', 'robot']" />
@@ -131,7 +132,6 @@ nav {
 .search {
     display: flex;
     align-items: center;
-    background-color: #337ab7;
     text-decoration-color: white;
     border-radius: 5px;
     padding: 5px;
@@ -140,8 +140,8 @@ nav {
 .search input[type="text"] {
     border: none;
     outline: none;
-    background-color: #337ab7;
-    text-decoration-color: white;
+    background-color: none;
+    text-decoration-color: rgb(25, 129, 129);
     font-size: 1rem;
     padding: 0.5em;
     width: 0;
@@ -151,17 +151,24 @@ nav {
 
 .search input.search-expanded {
     width: 200px;
-    color: white;
+    color: rgb(25, 129, 129);
     border-radius: 1em;
 }
 
 .search button {
-    background-color: rgb(141, 1, 1);
+    background-color: none;
     border-radius: 50%;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search button img {
+    height: 12px;
 }
 
 

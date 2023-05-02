@@ -8,12 +8,11 @@
     - subtitle: second information to display
     - link: link to the page description
 -->
-<template>     
-
+<template>
     <div class="row">
         <div class="image-container">
             <span class="subtitle">
-                <img class="img" :src = "image" />
+                <img class="img" :src="image" />
 
                 <!--<img class="img" src='~/assets/img/People/P01.png' />-->
 
@@ -23,7 +22,7 @@
                     <NuxtLink :to="link">
                         <div class="hover-content">
 
-                            <img class="img" :src = "image" />
+                            <img class="img" :src="image" />
                             <h3><span class="subtitle">{{ title }}</span></h3>
                             <p><span class="subtitle">{{ subtitle }}</span></p>
                             <p>Health</p>
@@ -32,18 +31,27 @@
                     </NuxtLink>
                 </div>
             </span>
-        
+
         </div>
 
-        
+
     </div>
 </template>
 
 <script setup>
-const props = defineProps(['image','title', 'subtitle', 'link'])
+const props = defineProps(['image', 'title', 'subtitle', 'link'])
 </script>
 
 <style>
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    height: 60%;
+}
+
 .img {
     vertical-align: middle;
     max-width: 100%;
@@ -69,8 +77,16 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 .title {
     font-size: 2em;
     font-weight: bold;
+    text-decoration: none;
 }
 
+.subtitle {
+    text-decoration: none;
+}
+
+.h3 {
+    text-decoration: none;
+}
 
 .image-container {
     position: relative;
@@ -94,6 +110,7 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
 .image-container h2 {
     margin-top: 20px;
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 .image-container:hover img {
@@ -146,13 +163,15 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: white;
+    text-decoration: none;
 }
 
 .hover-content p {
     margin: 0;
-    color: #fff;
+    color: white;
     margin-top: 2%;
+    text-decoration: none;
 }
 
 .hover-content img {
@@ -161,5 +180,4 @@ const props = defineProps(['image','title', 'subtitle', 'link'])
     max-width: 50%;
     height: auto;
 }
-
 </style>
