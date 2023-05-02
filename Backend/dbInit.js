@@ -26,7 +26,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Technology',
         },
         {
             name: "Hiroshi Nakamura",
@@ -38,7 +39,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Healthcare',
         },
         {
             name: "Javier Rodriguez",
@@ -50,7 +52,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Emilia Costa",
@@ -62,7 +65,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Healthcare",
         },
         {
             name: "Isabella Rossi",
@@ -74,7 +78,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Maya Patel",
@@ -86,7 +91,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Juan Garcia",
@@ -98,7 +104,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Healthcare"
         },
         {
             name: "Aisha Khan",
@@ -110,7 +117,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Sustainability"
         },
         {
             name: "Kofi Mensah",
@@ -122,7 +130,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Omar Al-Farsi",
@@ -134,7 +143,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Sustainability"
         },
         {
             name: "Leila Ahmed",
@@ -159,7 +169,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: "Sustainability"
         },
         {
             name: "Niamh Murphy",
@@ -171,7 +182,8 @@ export default async (models) => {
                 count: 4,
                 units: "paragraph"
             }),
-            locationId: location0.id
+            locationId: location0.id,
+            area: 'Consumer Goods',
         },
         {
             name: "Tariq Ali",
@@ -210,7 +222,7 @@ export default async (models) => {
                 units: "paragraph"
             }),
             locationId: location0.id,
-            area: 'Technology',
+            area: 'Healthcare',
         },
         {
             name: "Olivia Jones",
