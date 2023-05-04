@@ -1,4 +1,3 @@
-import { loremIpsum } from "lorem-ipsum"
 
 export default async (models) => {
     const locationModel = [
@@ -9,7 +8,7 @@ export default async (models) => {
         {
             name: "Dog City",
             city: "Rome"
-        }
+        },
     ]
 
     const location0 = await models.Location.create(locationModel[0])
@@ -21,8 +20,8 @@ export default async (models) => {
             role: "General Manager",
             image: "https://images.generated.photos/o2s8ngYVqmlVHuvqaAKIBM2OHzeFU0T-ZsFPedVW0Ks/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTE1MjgwLmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
-            description: '<p>Anastasia Petrova is an accomplished technology manager with a wealth of experience in the venture capital industry. She is responsible for overseeing a diverse portfolio of technology startups, working closely with founders and management teams to help them navigate the challenges of scaling their businesses. Anastasia is widely respected in the industry for her expertise in identifying emerging trends and disruptive technologies, and for her ability to connect innovative startups with the resources they need to succeed. Her analytical skills and deep knowledge of the technology landscape have enabled her to make smart investment decisions and to help guide companies through critical periods of growth.\n\nIn addition to her work in venture capital, Anastasia is a passionate advocate for diversity and inclusion in the tech industry. She is committed to supporting underrepresented founders and promoting greater equity in funding and entrepreneurship. Her dedication to creating a more inclusive and equitable tech ecosystem has earned her widespread recognition and respect within the industry.<p /><p>Anastasia is known for her strong work ethic, her collaborative approach to problem-solving, and her ability to build lasting relationships with her colleagues and partners. She is a skilled communicator and a natural leader, and her insights and expertise are highly valued by her team and her clients alike. With her combination of strategic vision, operational excellence, and commitment to social impact, Anastasia is a valuable asset to any organization she serves.<p />',
+            team: "Management Team",
+            description: 'Anastasia Petrova is an accomplished technology manager with a wealth of experience in the venture capital industry. She is responsible for overseeing a diverse portfolio of technology startups, working closely with founders and management teams to help them navigate the challenges of scaling their businesses. Anastasia is widely respected in the industry for her expertise in identifying emerging trends and disruptive technologies, and for her ability to connect innovative startups with the resources they need to succeed. Her analytical skills and deep knowledge of the technology landscape have enabled her to make smart investment decisions and to help guide companies through critical periods of growth.<br><br>In addition to her work in venture capital, Anastasia is a passionate advocate for diversity and inclusion in the tech industry. She is committed to supporting underrepresented founders and promoting greater equity in funding and entrepreneurship. Her dedication to creating a more inclusive and equitable tech ecosystem has earned her widespread recognition and respect within the industry. Anastasia is known for her strong work ethic, her collaborative approach to problem-solving, and her ability to build lasting relationships with her colleagues and partners. She is a skilled communicator and a natural leader, and her insights and expertise are highly valued by her team and her clients alike. With her combination of strategic vision, operational excellence, and commitment to social impact, Anastasia is a valuable asset to any organization she serves.',
             locationId: location0.id,
             area: 'Technology',
         },
@@ -31,7 +30,7 @@ export default async (models) => {
             role: "Marketing Manager",
             image: "https://images.generated.photos/qdLD50WNxBPnVwgGiRsEHQU1VC2pVyPA2-VS-ZPRSVQ/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NzYwNDY2LmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
+            team: "Management Team",
             description: "Hiroshi Nakamura is an experienced marketing professional with a proven track record in the venture capital industry. As Marketing Manager of the Management Team, he oversees the development and execution of marketing strategies for a diverse portfolio of companies, working closely with founders and management teams to help them achieve their business goals. Hiroshi is widely recognized for his ability to identify emerging trends and disruptive technologies, and for his skill in crafting compelling narratives that resonate with investors, customers, and stakeholders. His strategic vision and creative approach to marketing have helped his clients to successfully launch new products and services, expand into new markets, and achieve significant growth and market share. With his combination of marketing expertise, industry knowledge, and business acumen, Hiroshi is a valuable asset to any organization he serves.",
             locationId: location0.id,
             area: 'Healthcare',
@@ -72,7 +71,7 @@ export default async (models) => {
             role: "Marketing Manager",
             image: "https://images.generated.photos/ICdteXo2TklxncJ0AXFcb4pbqUU09fI1hF8aBUyrkVI/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjkwMjgyLmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
+            team: "Management Team",
             description: "Maya Patel is a Marketing Manager with extensive experience in the venture capital industry. She has a strong background in marketing, branding, and business development. Maya is responsible for creating and implementing marketing strategies that help the firm attract and retain investors. She is an expert in using various digital marketing channels to drive awareness and engagement, and is always looking for new and innovative ways to promote the firm. Maya is a collaborative team player and works closely with other members of the management team to ensure that the firm's marketing efforts are aligned with its overall business objectives. With her strategic vision and leadership skills, Maya is an invaluable asset to the firm.",
             locationId: location0.id,
             area: 'Consumer Goods',
@@ -116,7 +115,7 @@ export default async (models) => {
             role: "Managing Partner",
             image: "https://images.generated.photos/kGsAWkP8-SuFDEjVOnhTj1VqLDtv_exzolBxepiJyvs/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDkyNTY3LmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
+            team: "Management Team",
             description: "Omar Al-Farsi is a Managing Partner at our company, bringing a wealth of experience and expertise to our management team. With a strong background in business and finance, Omar is responsible for overseeing the strategic direction of the company and ensuring that all operations are running smoothly. He is committed to building and maintaining strong relationships with our clients and partners, and his passion for innovation and collaboration drives our team to deliver the best possible results.Prior to joining our company, Omar held several leadership roles in the finance industry, where he developed a deep understanding of the markets and established a proven track record of success. He is known for his ability to identify new opportunities and develop innovative strategies that drive growth and profitability. Omar's leadership style is characterized by his collaborative approach, and he places a strong emphasis on teamwork, communication, and continuous improvement.Outside of work, Omar is actively involved in several community organizations and is passionate about giving back to the community. He is a frequent speaker at industry events and conferences, where he shares his insights and experiences with other professionals in the field. We are proud to have Omar as a member of our team and look forward to his continued contributions to our company's success.",
 
             locationId: location0.id,
@@ -181,7 +180,7 @@ export default async (models) => {
             role: "Managing Partner",
             image: "https://images.generated.photos/19JlfeiSlISk0S4OdOfChzW99ghETYKXJyjY30GYWbk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzUxMzY3LmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
+            team: "Management Team",
             description: "Rajesh Singh is a Managing Partner at our company, where he leads our Management Team. With many years of experience in leadership and management roles, Rajesh brings a wealth of knowledge and expertise to our organization. He is responsible for overseeing the overall strategy and direction of our company, as well as managing and mentoring our team of talented professionals. Prior to joining our company, Rajesh held senior leadership positions at several other firms in the industry, where he gained extensive experience in business development, financial planning, and operations management. He is known for his ability to build strong relationships with clients and stakeholders, and his strategic vision and leadership have been instrumental in driving our company's growth and success. Rajesh holds an MBA from a top-tier business school, and he is a frequent speaker at industry conferences and events. When he's not working, he enjoys spending time with his family and pursuing his passion for photography. We're proud to have Rajesh on our team and look forward to his continued contributions to our organization.",
 
             locationId: location0.id,

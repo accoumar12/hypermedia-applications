@@ -135,6 +135,10 @@ const props = defineProps(['image', 'title', 'subtitle', 'link'])
     border-color: #77c7ac;
 }
 
+.clickable-image-container a {
+    text-decoration: none;
+}
+
 .clickable-image-container img {
     display: block;
     margin: 0 auto;

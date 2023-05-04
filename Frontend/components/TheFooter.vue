@@ -6,30 +6,33 @@
     <div class="footer-dark">
         <footer>
             <div class="container">
-                <div class="row">
+                <div class="rowf">
                     <div class="col-md-3 col-sm-6 item text-right">
                         <h3>Services</h3>
                         <ul>
                             <li><a href="#">Web design</a></li>
                             <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="#">Terms & Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-6 item text-middle">
-                        <h3>About</h3>
+                        <h3>Contacts</h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
+                                    target="_blank">Address:
+                                    Politecnico di Milano</a></li>
+                            <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
+                            <li><a href="mailto:{{email}}?subject=Hello" target="_blank">Email:
+                                    powerpuff.geoinformatics@gmail.com</a></li>
                         </ul>
                     </div>
 
-                    <div class="logo">
-                        <router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
+                    <div class="logof">
+                        <router-link to="/"><img class="logof" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 item ">
-                    <div class="social-icons"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
+                    <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
                         <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
                         <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
                     </div>
@@ -44,12 +47,22 @@
 <style>
 .text-right {
 
-    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
 
 }
 
-.text-right2 {
+.rowf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+}
+
+.text-middle {
     padding-left: 2%;
+    padding-top: 5%;
 }
 
 
@@ -57,11 +70,12 @@
     position: middle;
 }
 
-.logo {
+.logof {
     max-width: 30%;
     max-height: 18%;
     position: relative;
     padding-left: 40%;
+    padding-top: 2.5%;
 }
 
 .copy-right {
@@ -108,14 +122,16 @@
     opacity: 0.8;
 }
 
-.social-icons {
+.social-iconsf {
     display: flex;
     justify-content: center;
+    margin-top: 2%;
+    margin-left: 1%;
     gap: 2%;
 
 }
 
-.social-icons img {
+.social-iconsf img {
     width: 25px;
     height: 25px;
     padding: auto;

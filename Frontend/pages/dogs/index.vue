@@ -84,8 +84,27 @@
             </div>
             <div id="card-container">
                 <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role"
-                    :link="'/dogs/' + dog.id" />
+                    :subsubtitle="dog.area" :link="'/dogs/' + dog.id" />
             </div>
+            <!--
+            <div>
+                <label for="area-filter">Filter by area:</label>
+                <select id="area-filter" v-model="area">
+                    <option value="">All</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Consumer goods">Consumer goods</option>
+                    <option value="Sustainability">Sustainability</option>
+                </select>
+            </div>
+            <ul>
+                <li v-for="dog in filteredPeople" :key="person.id">
+                    <img :src="person.image" :alt="person.name">
+                    <h2>{{ person.name }}</h2>
+                    <p>{{ person.description }}</p>
+                    <p><strong>Area:</strong> {{ person.area }}</p>
+                </li>
+            </ul>-->
             <!--
             <div class="row">
                 <div class="image-container">
@@ -120,7 +139,7 @@ const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/do
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-const role = ref(0);
+const role = ref("");
 
 const filtered = computed(() => {
     // Checking for values where the full list is provided
@@ -175,7 +194,7 @@ function getButtonString(a) {
     text-align: center;
     border-color: none;
     border-style: none;
-    margin-left: 8vw;
+    margin-left: 5rem;
     margin-bottom: 5%;
 }
 
@@ -414,7 +433,7 @@ section {
     padding-right: 30px;
     padding-left: 30px;
     max-width: 90rem;
-    margin-left: auto;
+    margin-left: 10%;
     margin-right: auto;
 }
 

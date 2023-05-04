@@ -79,7 +79,7 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    gap: 10%;
+    gap: 12%;
 }
 
 .social-icons img {
