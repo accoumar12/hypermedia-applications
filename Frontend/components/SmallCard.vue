@@ -15,6 +15,7 @@
         </div>
         <span class="title">{{ title }}</span>
         <span class="subtitle">{{ subtitle }}</span>
+        <span class="subtitle">{{ area }}</span>
         <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
     </div>
 </template>
@@ -25,7 +26,8 @@
             'image',
             'title',
             'subtitle',
-            'link'
+            'link',
+            'area'
         ]
     }
 </script>

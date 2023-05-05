@@ -22,8 +22,8 @@ export default async (models) => {
             supervisor: "false",
             team: "Management Team",
             description: 'Anastasia Petrova is an accomplished technology manager with a wealth of experience in the venture capital industry. She is responsible for overseeing a diverse portfolio of technology startups, working closely with founders and management teams to help them navigate the challenges of scaling their businesses. Anastasia is widely respected in the industry for her expertise in identifying emerging trends and disruptive technologies, and for her ability to connect innovative startups with the resources they need to succeed. Her analytical skills and deep knowledge of the technology landscape have enabled her to make smart investment decisions and to help guide companies through critical periods of growth.<br><br>In addition to her work in venture capital, Anastasia is a passionate advocate for diversity and inclusion in the tech industry. She is committed to supporting underrepresented founders and promoting greater equity in funding and entrepreneurship. Her dedication to creating a more inclusive and equitable tech ecosystem has earned her widespread recognition and respect within the industry. Anastasia is known for her strong work ethic, her collaborative approach to problem-solving, and her ability to build lasting relationships with her colleagues and partners. She is a skilled communicator and a natural leader, and her insights and expertise are highly valued by her team and her clients alike. With her combination of strategic vision, operational excellence, and commitment to social impact, Anastasia is a valuable asset to any organization she serves.',
-            locationId: location0.id,
             area: 'Technology',
+            locationId: location0.id,
         },
         {
             name: "Hiroshi Nakamura",
@@ -82,7 +82,7 @@ export default async (models) => {
             role: "Operations Manager",
             image: "https://images.generated.photos/uJWbQx2qeCN1wRTiAb4kMnmx1MiVE9hwGGiGceNZPHo/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjYxMzI4LmpwZw.jpg",
             supervisor: "false",
-            team: "Operations & Finance Team",
+            team: "Operations and Finance Team",
             description: "Juan Garcia is the Operations Manager at our venture capital company, responsible for overseeing the day-to-day operations of our business. With over 10 years of experience in operations and finance, Juan brings a wealth of knowledge and expertise to our team. He has a proven track record of streamlining processes, optimizing performance, and maximizing profitability. Prior to joining our company, Juan worked at a leading financial institution where he was responsible for managing operations across multiple departments. During his tenure, he successfully implemented a number of key initiatives that resulted in significant cost savings and increased efficiency. Juan is known for his attention to detail, his analytical skills, and his ability to solve complex problems in a timely and effective manner.In his role as Operations Manager, Juan works closely with other members of our team to ensure that all aspects of our business are running smoothly. He oversees our finance and accounting functions, manages vendor relationships, and works to optimize our processes and procedures. Juan is a dedicated and hardworking member of our team who is always looking for ways to improve our operations and better serve our clients.",
 
             locationId: location0.id,
@@ -104,7 +104,7 @@ export default async (models) => {
             role: "Analyst",
             image: "https://images.generated.photos/dIyJWRLfsX-V0m02fHxliP0rKbXdDanizxCu92SMbFg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NzcwMTM3LmpwZw.jpg",
             supervisor: "false",
-            team: "Operations & Finance Team",
+            team: "Operations and Finance Team",
             description: "Kofi Mensah is an Analyst at our company and a valuable member of the Operations & Finance Team. Kofi's responsibilities include analyzing financial data, identifying trends, and generating reports that are used to inform decision-making processes. Kofi's attention to detail and ability to work with large datasets have been instrumental in the success of the team's projects.Before joining our company, Kofi worked as a financial analyst for several years, gaining experience in the financial services industry. His background in finance has proven to be an asset to the team, as he is able to bring a unique perspective to projects and collaborate with other departments effectively. Kofi's ability to think critically and creatively has also allowed him to develop innovative solutions to complex problems. In addition to his analytical skills, Kofi is also an excellent communicator and a team player. He works well with others and is always willing to lend a helping hand. Kofi's positive attitude and strong work ethic make him a pleasure to work with, and we are lucky to have him on our team.",
 
             locationId: location0.id,
@@ -126,12 +126,12 @@ export default async (models) => {
             role: "Operations Manager",
             image: "https://images.generated.photos/-5hL90kRQCOIJcoSfTE1jg5HXqgkJsR5m6LpvV-3tnY/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjAwNzM0LmpwZw.jpg",
             supervisor: "false",
-            team: "Operations & Finance Team",
+            team: "Operations and Finance Team",
             description: "Leila Ahmed is the Operations Manager for the Operations & Finance Team. She is responsible for overseeing and managing the day-to-day operations of the team, ensuring that everything runs smoothly and efficiently. Leila brings a wealth of experience to her role, having worked in various operational roles in the past. With her excellent organizational skills and attention to detail, Leila ensures that all operational tasks are completed to a high standard, and that any issues are dealt with in a timely and effective manner. She is highly skilled in analyzing complex data and creating strategies to improve operational efficiency. Leila is also a great communicator and team player, able to work effectively with others and build strong relationships with colleagues and clients. In her role as Operations Manager, Leila plays a critical role in driving the success of the organization. She ensures that the Operations & Finance Team is meeting its goals and objectives, and that it is aligned with the organization's overall strategy. Through her leadership, Leila has helped the team to become more efficient and effective, resulting in improved business outcomes. Leila is highly respected by her colleagues and is known for her dedication, hard work, and professionalism. She is a valuable member of the team and is committed to making a positive impact on the organization.",
 
             locationId: location0.id,
             area: 'Technology',
-              },
+        },
         {
             name: "Carlos Ramirez",
             role: "Analyst",
@@ -191,7 +191,7 @@ export default async (models) => {
             role: "Analyst",
             image: "https://images.generated.photos/QlI_H6ImJ413_0BcIcbXe7sPVBlxMXg2X6lYmKbpjSk/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDI4MTA0LmpwZw.jpg",
             supervisor: "false",
-            team: "Operations & Finance Team",
+            team: "Operations and Finance Team",
             description: "Olivia Jones is an Analyst in the Operations & Finance Team. She is responsible for analyzing financial data, preparing reports and budgets, and identifying cost-saving opportunities. Olivia is known for her attention to detail, strong analytical skills, and ability to work effectively under pressure. With a background in finance and accounting, Olivia brings a wealth of knowledge and experience to the team. Prior to joining the company, she worked for several large financial institutions, where she gained experience in financial analysis, risk management, and strategic planning. In her current role, Olivia enjoys working collaboratively with her colleagues to solve complex financial problems and drive the company's success. Outside of work, Olivia enjoys hiking, reading, and spending time with family and friends. She is also actively involved in several community organizations and volunteers her time to support causes related to education and social justice.",
             locationId: location0.id,
             area: "Sustainability"
@@ -211,7 +211,7 @@ export default async (models) => {
             role: "Finance Director",
             image: "https://images.generated.photos/vnu9KzNx3sWXqL-ayVCXsCOsCtXiWpHEp5441eFcoe4/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTE3MTQzLmpwZw.jpg",
             supervisor: "false",
-            team: "Operations & Finance Team",
+            team: "Operations and Finance Team",
             description: "Lars Andersen is the Finance Director at our company and brings with him a wealth of knowledge and experience in financial management. He has been with the company for over a decade and has played an instrumental role in the growth and success of our organization. Lars is responsible for the financial health of the company and ensures that we operate within budget, meet our financial targets, and comply with all regulatory requirements. He oversees all financial operations, including budgeting, forecasting, and financial reporting. Lars is a highly skilled financial professional who has a passion for excellence. He has a deep understanding of financial analysis and is able to provide insightful recommendations to the management team. He is highly respected by his colleagues for his attention to detail and his ability to think strategically. Lars is a natural leader who is able to motivate his team to achieve their goals and deliver results. He is an excellent communicator who is able to explain complex financial information in a clear and concise manner. One of Lars's key strengths is his ability to identify potential risks and opportunities in the financial markets. He is able to analyze economic trends and market conditions to determine the best course of action for the company. Lars has a keen eye for detail and is always looking for ways to improve financial performance. He is constantly seeking new ideas and innovative solutions to drive growth and profitability.",
             locationId: location0.id,
             area: 'Healthcare',

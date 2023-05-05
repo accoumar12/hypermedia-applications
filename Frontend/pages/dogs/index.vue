@@ -53,34 +53,34 @@
 
                                 <label for="all-team">
                                     ALL
-                                    <input type="radio" id="all-team" value="" name="team-categories" checked>
+                                    <input type="radio" id="all-team" value="" name="team-categories" v-model="team" checked>
                                     <span class="checkmark"></span>
                                 </label>
 
 
                                 <label for="investment-team">
-                                    MANAGMENT <input type="radio" id="investment-team" value="investment-team"
-                                        name="team-categories">
+                                    MANAGMENT <input type="radio" id="Management-Team" value="Management Team"
+                                        name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
 
                                 <label for="investor-relations">
-                                    INVESTMENT <input type="radio" id="investor-relations" value="investor-relations"
-                                        name="team-categories">
+                                    INVESTMENT <input type="radio" id="Investment-Team" value="Investment Team"
+                                        name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
 
                                 <label for="finance-operations">
-                                    OPS &amp; FINANCE <input type="radio" id="finance-operations" value="finance-operations"
-                                        name="team-categories">
+                                    OPS &amp; FINANCE <input type="radio" id="finance-operations" value="Operations and Finance Team"
+                                        name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
                                 <label for="finance-operations">
-                                    ADVISORING BOARD <input type="radio" id="finance-operations" value="finance-operations"
-                                        name="team-categories">
+                                    ADVISORING BOARD <input type="radio" id="finance-operations" value="Advisoring Board Team"
+                                        name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -93,8 +93,8 @@
                 </div>
             </div>
             <div id="card-container">
-                <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role"
-                    :subsubtitle="dog.area" :link="'/dogs/' + dog.id" />
+                <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role" :team="dog.team"
+                    :area="dog.area" :link="'/dogs/' + dog.id" />
             </div>
             <!--
             <div>
@@ -147,10 +147,11 @@ const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/do
     Instead of using the normal list for the cards, we used the computed property directly.
 */
 const role = ref("");
+const team = ref("");
 
 const filtered = computed(() => {
     // Checking for values where the full list is provided
-    if (role.value == 0 || role.value == "")
+    if ((role.value == 0 || role.value == "") & (team.value == 0 || team.value == ""))
         return dogs.value
 
     const arr = []
@@ -158,8 +159,11 @@ const filtered = computed(() => {
 
     // Filtering the list
     for (let dog of dogs.value) {
-        if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
+        if (dog.team ==team.value){
             arr.push(dog)
+        }/*
+        else if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
+            arr.push(dog)*/
     }
 
     // Returning the filtered list

@@ -25,7 +25,7 @@
                             <img class="img" :src="image" />
                             <h3><span class="subtitle">{{ title }}</span></h3>
                             <p><span class="subtitle">{{ subtitle }}</span></p>
-                            <p>Health</p>
+                            <p>Area: <span class="subtitle">{{ area }}</span></p>
 
                         </div>
                     </NuxtLink>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['image', 'title', 'subtitle', 'link'])
+const props = defineProps(['image', 'title', 'subtitle', 'link', 'team']) /* TODO I need only to see if it works, change with area*/
 </script>
 
 <style>
