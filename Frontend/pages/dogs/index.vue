@@ -32,8 +32,8 @@
                     <img src="~/assets/img/teampic.png" style="width: 100%;">
                     <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                         <div class="text-white text-center"
-                            style="font-size: 2rem; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
-                            <span id="blinking-text" style="background-color: rgba(109, 217, 241, 0.7);">With you to
+                            style="font-size: 2rem; color: #033f52; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
+                            <span id="blinking-text" style="background-color: white;">With you to
                                 GROWTH!</span>
                         </div>
                     </div>
@@ -369,6 +369,7 @@ h1 {
 }
 
 .row1 {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -376,6 +377,15 @@ h1 {
     margin-top: 2%;
     height: 40rem;
     box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.row1:after {
+    content: "";
+    position: absolute;
+    top: 97%;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
 }
 
 .gif-container {

@@ -68,7 +68,7 @@ header {
     position: fixed;
     width: 100%;
     height: 4rem;
-    padding: 0.5em 0.5%;
+    padding: 1vw 1%;
     margin-bottom: 0.7em;
     display: flex;
     justify-content: center;
@@ -82,8 +82,9 @@ header {
 }
 
 nav {
+    padding-left: 10%;
     display: flex;
-    gap: 3em;
+    gap: 3%;
     font-size: 1rem;
     text-decoration: #033f52;
     align-items: center;
@@ -100,7 +101,7 @@ nav {
     color: rgb(46, 194, 194);
     cursor: pointer;
     text-align: center;
-    padding: 0.4em;
+    padding: 0.8em;
     --b: 0.1em;
     /* the thickness of the line */
     --c: #268fb2;
