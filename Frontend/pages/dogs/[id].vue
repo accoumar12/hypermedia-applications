@@ -6,7 +6,7 @@
     <main id="back">
         <div class="info-group">
             <div class="arrow">
-                <router-link to="~/pages/contact.vue"><img src="~/assets/img/left-arrows.png"></router-link>
+                <router-link to="/dogs"><img src="~/assets/img/left-arrows.png"></router-link>
             </div>
             <h1 class="name">{{ dog.name }}</h1>
             <div id="data-container">
