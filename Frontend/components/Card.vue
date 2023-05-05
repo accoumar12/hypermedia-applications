@@ -95,8 +95,8 @@ const props = defineProps(['image', 'title', 'subtitle', 'link'])
     text-align: center;
     border-color: none;
     border-style: none;
-    margin-left: 8vw;
-    margin-bottom: 5%;
+    margin-left: 5rem;
+    margin-bottom: 0%;
 }
 
 .image-container img {
@@ -127,12 +127,12 @@ const props = defineProps(['image', 'title', 'subtitle', 'link'])
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #77c7ac;
+    background-color: #033f52;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-style: solid;
     border-radius: 20%;
-    border-color: #77c7ac;
+    border-color: white;
 }
 
 .clickable-image-container a {

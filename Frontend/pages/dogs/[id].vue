@@ -3,8 +3,11 @@
     As described in the SmallCard component, the same component was used for both Dog and Location since they have the same structure.
 -->
 <template>
-    <main>
+    <main id="back">
         <div class="info-group">
+            <div class="arrow">
+                <router-link to="~/pages/contact.vue"><img src="~/assets/img/left-arrows.png"></router-link>
+            </div>
             <h1 class="name">{{ dog.name }}</h1>
             <div id="data-container">
                 <p class="role">{{ dog.role }}</p>
@@ -68,11 +71,13 @@ const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dog
 </script>
 
 <style>
-main {
+#back {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('assets/img/19449741.jpg');
+    background-position-x: center;
 }
 
 .social-icons {
@@ -89,13 +94,41 @@ main {
     cursor: pointer;
 }
 
+.arrow {
+    width: 10%;
+    height: 15%;
+    padding-top: 6%;
+    justify-content: left;
+    padding-right: 80%;
+}
+
+.arrow img {
+    max-width: 12%;
+    max-height: 12%;
+    position: relative;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .info-group {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
     text-align: center;
 }
 

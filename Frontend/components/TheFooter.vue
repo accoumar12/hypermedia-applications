@@ -22,7 +22,7 @@
                                     target="_blank">Address:
                                     Politecnico di Milano</a></li>
                             <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                            <li><a href="mailto:{{email}}?subject=Hello" target="_blank">Email:
+                            <li><a href="mailto:info@example.com" target="_blank">Email:
                                     powerpuff.geoinformatics@gmail.com</a></li>
                         </ul>
                     </div>
@@ -50,6 +50,11 @@
     padding-left: 5%;
     padding-top: 5%;
 
+}
+
+
+h3 {
+    color: rgb(0, 9, 9);
 }
 
 .rowf {
@@ -91,10 +96,10 @@
 .footer-dark {
 
     color: #010406;
-    background-color: white;
+    background-color: #033f52;
     padding-bottom: none;
-    border-top: 0.2em solid;
-    border-image: linear-gradient(to right, rgb(25, 147, 153), rgb(4, 48, 61)) 1;
+
+
 }
 
 .footer-dark h3 {

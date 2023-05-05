@@ -7,15 +7,15 @@
         <!--
         Form used to filter the list by age.
       -->
-        <div class="breadcrumbs">
+        <!--  <div class="breadcrumbs">
             <nav>
                 <ul class="nav-breadcrumbs">
                     <li><router-link to="/">Home</router-link></li> /
                     <li><router-link to="/dogs"> Our Team</router-link></li>
                 </ul>
             </nav>
-        </div>
-        <div class="row d-flex align-items-stretch">
+        </div>-->
+        <div class="row1 d-flex align-items-stretch">
             <div class="col-sm-6 d-flex align-items-center justify-content-center">
                 <div class="intro">
                     <h1>Meet Our Team</h1>
@@ -27,9 +27,19 @@
                         on to become industry leaders.</p>
                 </div>
             </div>
-            <div class="col-sm-6-2 d-flex align-items-center justify-content-center ">
-                <img src="~/assets/img/teampic.png" style="max-width: 70%; height: 70%;padding-top: 5%;">
+            <div class="col-sm-6-2 d-flex align-items-center justify-content-center position-relative">
+                <div style="position: relative; z-index: 1;">
+                    <img src="~/assets/img/teampic.png" style="width: 100%;">
+                    <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                        <div class="text-white text-center"
+                            style="font-size: 2rem; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
+                            <span id="blinking-text" style="background-color: rgba(109, 217, 241, 0.7);">With you to
+                                GROWTH!</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
         <section class="team-members-grid">
             <div class="grid-container">
@@ -37,7 +47,7 @@
 
                     <div class="grid-x">
 
-                        <div class="cell small-12 filter-title">Filter By</div>
+                        <div class="cell small-12 filter-title">Filter By Department:</div>
                         <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
 
@@ -125,9 +135,6 @@
             </div>
             -->
         </section>
-
-
-
     </main>
 </template>
   
@@ -173,6 +180,10 @@ function getButtonString(a) {
 </script>
 
 <style scoped>
+main {
+    background-color: #033f52;
+}
+
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -185,7 +196,28 @@ function getButtonString(a) {
 .breadcrumbs {
     position: absolute;
     padding-top: 5%;
-    padding-right: 80%;
+    padding-right: 75%;
+}
+
+#blinking-text {
+    animation: blink 4s linear infinite;
+    position: absolute;
+    font-family: monospace;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .image-container {
@@ -195,7 +227,6 @@ function getButtonString(a) {
     border-color: none;
     border-style: none;
     margin-left: 5rem;
-    margin-bottom: 5%;
 }
 
 .image-container img {
@@ -337,6 +368,15 @@ h1 {
     height: 60%;
 }
 
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    height: 40rem;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+}
 
 .gif-container {
     position: relative;
@@ -344,14 +384,9 @@ h1 {
 
 }
 
-.gif-container img {
-
-    background-color: none;
-    color: #0e6b74;
-    position: left;
-    margin-top: 30%;
-    margin-bottom: 20%;
-
+.grid-x {
+    padding-left: 0%;
+    padding-top: 0%;
 }
 
 #text-container {
@@ -365,7 +400,7 @@ h1 {
 }
 
 .col-sm-6 {
-    width: 50%;
+    width: 40%;
     padding-left: 10%;
     justify-content: center;
     align-items: center;
@@ -376,7 +411,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 40%;
+    padding-top: 6%;
+    padding-right: 4%;
 }
 
 
@@ -419,13 +456,15 @@ h1 {
 
 
 .team-members-grid {
+    background-image: url('assets/img/19449741.jpg');
+    background-position-x: center;
+    opacity: 100%;
     position: relative;
     width: 100%;
 }
 
 section {
     display: block;
-    background-color: #68c0c8;
 }
 
 .grid-container {
@@ -438,7 +477,7 @@ section {
 }
 
 .filter-container {
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 

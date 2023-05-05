@@ -2,9 +2,9 @@
     Header of the page
 -->
 <template>
-    <div>
+    <div class="header-container">
         <header>
-            <h1><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h1>
+            <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
             <nav>
                 <router-link to="/about-us" class="nav-link">About Us</router-link>
                 <router-link to="/dogs" class="nav-link">Our Team</router-link>
@@ -12,11 +12,10 @@
                 <router-link to="/news" class="nav-link">News</router-link>
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
-                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
-                            style="color: #2479a3;"></button>
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
-                    <font-awesome-icon :icon="['fas', 'robot']" />
+                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
+                            style="color: #2479a3;"></button>
                 </div>
             </nav>
         </header>
@@ -56,35 +55,41 @@ export default {
 </script>
 
 <style scoped>
-header {
+.header-container {
+    display: flex;
+    justify-content: right;
+}
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
+* {
+    box-sizing: border-box;
 }
 
 header {
-    height: 3em;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
     padding: 0.5em 0.5%;
-    margin-bottom: 0.5em;
-    border-bottom: 0.2em solid;
-    border-image: linear-gradient(to right, rgb(25, 147, 153), rgb(4, 48, 61)) 1;
+    margin-bottom: 0.7em;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+}
+
+.h4 {
+    padding-left: 50%;
 }
 
 nav {
     display: flex;
     gap: 3em;
     font-size: 1rem;
-    text-decoration: rgb(25, 129, 129);
+    text-decoration: #033f52;
     align-items: center;
     font-weight: bold;
     flex-grow: 1;
+    width: 100%;
 
 }
 
@@ -119,8 +124,7 @@ nav {
 }
 
 .logo {
-    vertical-align: middle;
-    max-width: 16%;
+    max-width: 25%;
     max-height: 25%;
     height: auto;
     width: auto;
@@ -135,22 +139,24 @@ nav {
     text-decoration-color: white;
     border-radius: 5px;
     padding: 5px;
+    background-color: transparent;
 }
 
 .search input[type="text"] {
     border: none;
     outline: none;
-    background-color: none;
-    text-decoration-color: rgb(25, 129, 129);
+    text-decoration-color: #033f52;
     font-size: 1rem;
     padding: 0.5em;
     width: 0;
     border-radius: 1em;
     transition: all 0.2s ease-in-out;
+    background-color: transparent;
 }
 
 .search input.search-expanded {
     width: 200px;
+    background-color: transparent;
     color: rgb(25, 129, 129);
     border-radius: 1em;
 }
