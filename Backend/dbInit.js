@@ -147,7 +147,7 @@ export default async (models) => {
             role: "Managing Advisor",
             image: "https://images.generated.photos/ol8-PlI0aHrwYAddM0J_rJ5JpgnyrlohY8dm4iyEJM0/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODYwMDIwLmpwZw.jpg",
             supervisor: "false",
-            team: "Managment Team",
+            team: "Investment Team",
             description: "Niamh Murphy is a Managing Advisor who is a key member of the Management Team at the company. She plays a crucial role in providing guidance and direction to the organization's operations and strategic planning. Niamh's expertise in management and leadership allows her to oversee and optimize various processes, resulting in increased efficiency and productivity.As a Managing Advisor, Niamh also provides mentorship and support to other team members, helping to develop their skills and expertise. She is a strong communicator and works closely with other departments and teams to ensure effective collaboration and coordination. Niamh's analytical and problem-solving skills make her an asset to the organization, as she is able to identify and address any challenges that may arise. Niamh's extensive experience in management and leadership roles in various industries has equipped her with a diverse skill set that allows her to adapt to changing circumstances and drive the organization towards success. She is committed to the company's values and mission and works tirelessly to ensure that these are reflected in all aspects of the organization's operations.",
 
             locationId: location0.id,
