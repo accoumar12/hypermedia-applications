@@ -12,8 +12,14 @@
 
             </div>
             <div class="text-containeri">
-                <p>Investing in the most promising startups with the potential to change the
-                    world! </p>
+                <h1>Investing in the most promising startups with the potential to change the
+                    world! </h1>
+            </div>
+            <div class="text-containeri2">
+                <p>We provide to our portfolio companies: support, guidance, and resources, to help them succeed.
+                    We have a track record of identifying and nurtuing some of the most innovative and dynamic
+                    startups in the world!
+                </p>
             </div>
         </div>
         <!--<div id="card-container">
@@ -24,7 +30,7 @@
 </template>
 
 <script>
-import { pbkdf2 } from 'crypto';
+//import { pbkdf2 } from 'crypto';
 
 /*
     The defineNuxtComponent gets us access to the asyncData property.
@@ -44,8 +50,8 @@ import { pbkdf2 } from 'crypto';
 </script>
 <style>
 .containeri {
-    background-color: #f5f5f5;
-    height: 100vh;
+    background-color: #033f52;
+    padding-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +76,7 @@ import { pbkdf2 } from 'crypto';
     padding-top: 100%;
     position: relative;
     width: 20rem;
-    height: 1.2rem;
+    height: 0.9rem;
     margin: 0 auto;
 }
 
@@ -90,17 +96,25 @@ import { pbkdf2 } from 'crypto';
     align-items: center;
 }
 
-.text-containeri h1 {
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: monospace;
-
+.text-containeri2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text-containeri p {
-    text-align: bottom;
-    font-size: 1rem;
+.text-containeri2 p {
+    width: 30%;
+    font-size: 1.2rem;
     font-family: monospace;
+    text-align: center;
+    color: white;
+}
 
+
+.text-containeri h1 {
+    font-size: 1.3rem;
+    font-family: monospace;
+    margin-bottom: 0.5 rem;
+    color: rgb(121, 189, 166);
 }
 </style>
