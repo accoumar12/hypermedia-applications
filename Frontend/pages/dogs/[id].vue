@@ -25,6 +25,7 @@
                 <div class="column2">
                     <div class="description-container">
                         <p2 class="description">{{ dog.description }}</p2>
+                        <p2 class="description">{{ dog.description2 }}</p2>
                         <button2>CONTACT</button2>
                     </div>
                 </div>
