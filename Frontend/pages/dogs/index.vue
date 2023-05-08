@@ -53,13 +53,14 @@
 
                                 <label for="all-team">
                                     ALL
-                                    <input type="radio" id="all-team" value="" name="team-categories" v-model="team" checked>
+                                    <input type="radio" id="all-team" value="" name="team-categories" v-model="team"
+                                        checked>
                                     <span class="checkmark"></span>
                                 </label>
 
 
                                 <label for="investment-team">
-                                    MANAGMENT <input type="radio" id="Management-Team" value="Management Team"
+                                    MANAGEMENT <input type="radio" id="Management-Team" value="Management Team"
                                         name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
@@ -73,21 +74,21 @@
 
 
                                 <label for="finance-operations">
-                                    OPS &amp; FINANCE <input type="radio" id="finance-operations" value="Operations and Finance Team"
-                                        name="team-categories" v-model="team">
+                                    OPS &amp; FINANCE <input type="radio" id="finance-operations"
+                                        value="Operations and Finance Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
                                 <label for="finance-operations">
-                                    ADVISORING BOARD <input type="radio" id="finance-operations" value="Advisoring Board Team"
-                                        name="team-categories" v-model="team">
+                                    ADVISORING BOARD <input type="radio" id="finance-operations"
+                                        value="Advisoring Board Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="form-container">
+                            <!-- <div class="form-container">
                                 <label for="age-filter">Role filter</label>
                                 <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -159,7 +160,7 @@ const filtered = computed(() => {
 
     // Filtering the list
     for (let dog of dogs.value) {
-        if (dog.team ==team.value){
+        if (dog.team == team.value) {
             arr.push(dog)
         }/*
         else if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
@@ -191,8 +192,8 @@ main {
 #card-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
-    gap: 20px;
     text-decoration: none;
     border: none;
 }
@@ -368,7 +369,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 3rem;
     height: 60%;
 }
 

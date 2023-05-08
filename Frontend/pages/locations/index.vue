@@ -16,10 +16,44 @@
                     world! </h1>
             </div>
             <div class="text-containeri2">
-                <p>We provide to our portfolio companies: support, guidance, and resources, to help them succeed.
+                <p>
                     We have a track record of identifying and nurtuing some of the most innovative and dynamic
                     startups in the world!
                 </p>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="column41">
+                <div class="area-icons">
+                    <img src="~/assets/img/technology.png" alt="Tech">
+                </div>
+                <div class="counter" data-target="100"></div>
+                <p>Technology Investments</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+            <div class="column4">
+                <div class="area-icons">
+                    <img src="~/assets/img/health.png" alt="Healthcare">
+                </div>
+                <div class="counter" data-target="250"></div>
+                <p>Healthcare Investments</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+            <div class="column4">
+                <div class="area-icons">
+                    <img src="~/assets/img/customer.png" alt="Goods">
+                </div>
+                <div class="counter" data-target="120"></div>
+                <p>Consumer Goods Investments</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+            <div class="column4">
+                <div class="area-icons">
+                    <img src="~/assets/img/sustainable.png" alt="Sustainability">
+                </div>
+                <div class="counter" data-target="270"></div>
+                <p>Sustainability Investments</p>
+                <a href="#">LEARN MORE</a>
             </div>
         </div>
         <!--<div id="card-container">
@@ -30,6 +64,52 @@
 </template>
 
 <script>
+export default {
+    mounted() {
+        const counters = document.querySelectorAll('.counter');
+        const delay = 500;
+
+        // define a function to check if an element is in view
+        const isInView = (el) => {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        };
+
+        const animateCounters = () => {
+            counters.forEach((counter, index) => {
+                // only animate counters that are in view
+                if (isInView(counter)) {
+                    const target = +counter.dataset.target;
+                    const start = 0;
+                    const duration = 5000;
+                    const step = (timestamp) => {
+                        const elapsed = timestamp - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const value = Math.floor(progress * target);
+                        counter.textContent = `${value}+`;
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        }
+                    };
+                    setTimeout(() => {
+                        requestAnimationFrame(step);
+                    }, index * delay);
+                }
+            });
+        };
+
+        // run the animation once when the page loads
+        animateCounters();
+
+        // run the animation again when the user scrolls
+        window.addEventListener('scroll', animateCounters);
+    }
+};
 //import { pbkdf2 } from 'crypto';
 
 /*
@@ -115,6 +195,134 @@
     font-size: 1.3rem;
     font-family: monospace;
     margin-bottom: 0.5 rem;
-    color: rgb(121, 189, 166);
+    color: rgb(242, 249, 246);
+}
+
+.column4 {
+
+    position: relative;
+    background-size: 100%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-left: 1px solid black;
+
+}
+
+.column4::before {
+    background: url('assets/img/areas.png') center center no-repeat;
+    content: "";
+    position: absolute;
+    background-size: 100%;
+    width: 90%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.1;
+
+}
+
+.column41 {
+
+    position: relative;
+    background-size: 100%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.column41::before {
+    background: url('assets/img/areas.png') center center no-repeat;
+    content: "";
+    position: absolute;
+    background-size: 100%;
+    width: 90%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.1;
+}
+
+.row4 {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 2%;
+}
+
+
+
+.area-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 0;
+    padding-bottom: 40%;
+    position: relative;
+}
+
+.area-icons img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.column4 p {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.column4 a {
+    color: #033f52;
+    font-family: monospace;
+    text-decoration: underline;
+    font-size: large;
+    padding-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+    font-weight: normal;
+}
+
+.column4 a:hover {
+    color: #033f52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.column41 a {
+    color: #033f52;
+    font-family: monospace;
+    text-decoration: underline;
+    font-size: large;
+    padding-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+    font-weight: normal;
+}
+
+.column41 a:hover {
+    color: #033f52;
+    text-decoration: none;
+    font-weight: bold;
 }
 </style>
