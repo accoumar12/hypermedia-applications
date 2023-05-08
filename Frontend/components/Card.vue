@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['image', 'title', 'subtitle', 'link', 'team']) /* TODO I need only to see if it works, change with area*/
+const props = defineProps(['image', 'title', 'subtitle', 'link', 'area']) 
 </script>
 
 <style>

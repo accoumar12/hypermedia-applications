@@ -47,6 +47,10 @@ async function initDB() {
         description: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        area:{
+            type: DataTypes.STRING,
+            allowNull: false
         }
     })
 
