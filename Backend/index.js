@@ -48,12 +48,15 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
+        description2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         area:{
             type: DataTypes.STRING,
             allowNull: false
         }
     })
-
     models.Location = db.define('location', {
         name: {
             type: DataTypes.STRING,
@@ -64,9 +67,23 @@ async function initDB() {
             allowNull: false
         }
     })
-
     models.Location.hasMany(models.Dog)
     models.Dog.belongsTo(models.Location)
+    
+
+    models.Supervisor = db.define('supervisor', {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        areas: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+    })
+
+    models.Supervisor.belongsTo(models.Dog)
+    models.Dog.hasMany(models.Supervisor)
 
     await db.sync({ force: true })
 
@@ -91,7 +108,7 @@ async function initServer() {
             },
             include: [
                 {
-                    model: models.Location
+                    model: models.Supervisor
                 }
             ]
         })
@@ -104,14 +121,14 @@ async function initServer() {
         }
     })
 
-    app.get('/locations', async (req, res) => {
-        const data = await models.Location.findAll();
+    app.get('/supervisors', async (req, res) => {
+        const data = await models.Supervisor.findAll();
 
         res.status(200).json(data)
     })
 
-    app.get('/locations/:id', async (req, res) => {
-        const data = await models.Location.findOne({
+    app.get('/supervisors/:id', async (req, res) => {
+        const data = await models.Supervisor.findOne({
             where: {
                 id: req.params.id
             },
