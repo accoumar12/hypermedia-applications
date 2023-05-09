@@ -228,9 +228,11 @@ export default async (models) => {
     const companySup1 = await models.Dog.create(dogModel[1])
     const CompanyModel = [
         {
-            name: "Dog Paradise",
-            areas: "Milan",
+            name: "UnitedHealth Group",
+            areas: "Healthcare",
             companyId: companySup0.id,
+            description: "UnitedHealth Group, Inc. engages in the provision of health care coverage, software, and data consultancy services. It operates through the following segments: UnitedHealthcare, OptumHealth, OptumInsight, and OptumRx. The UnitedHealthcare segment utilizes Optum's capabilities to help coordinate patient care, improve affordability of medical care, analyze cost trends, manage pharmacy benefits, work with care providers more effectively, and create a simpler consumer experience. The OptumHealth segment provides health and wellness care, serving the broad health care marketplace including payers, care providers, employers, government, life sciences companies, and consumers. The OptumInsight segment focuses on data and analytics, technology, and information to help major participants in the healthcare industry. The OptumRx segment offers pharmacy care services. The company was founded by Richard T. Burke in January 1977 and is headquartered in Minnetonka, MN.",
+            link: "https://www.unitedhealthgroup.com/"
         },
         {
             name: "Dog City",
