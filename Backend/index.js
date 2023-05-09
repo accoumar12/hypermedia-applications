@@ -22,7 +22,6 @@ async function initDB() {
     const models = {}
 
     await db.authenticate()
-
     models.Dog = db.define('dog', {
         name: {
             type: DataTypes.STRING,
@@ -30,15 +29,15 @@ async function initDB() {
         },
         role: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         image: {
           type: DataTypes.STRING,
-          allowNull: false  
+          allowNull: true  
         },
         team: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         supervisor: {
             type: DataTypes.STRING,
@@ -54,24 +53,11 @@ async function initDB() {
         },
         area:{
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         }
     })
-    models.Location = db.define('location', {
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        city: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    })
-    models.Location.hasMany(models.Dog)
-    models.Dog.belongsTo(models.Location)
-    
 
-    models.Supervisor = db.define('supervisor', {
+    models.Company = db.define('companySup', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -82,8 +68,8 @@ async function initDB() {
         }
     })
 
-    models.Supervisor.belongsTo(models.Dog)
-    models.Dog.hasMany(models.Supervisor)
+    models.Company.belongsTo(models.Dog)
+    models.Dog.hasMany(models.Company)
 
     await db.sync({ force: true })
 
@@ -108,7 +94,7 @@ async function initServer() {
             },
             include: [
                 {
-                    model: models.Supervisor
+                    model: models.Company
                 }
             ]
         })
@@ -120,14 +106,15 @@ async function initServer() {
             res.sendStatus(404)
         }
     })
+    
 
-    app.get('/supervisors', async (req, res) => {
-        const data = await models.Supervisor.findAll();
+    app.get('/companies', async (req, res) => {
+        const data = await models.Company.findAll();
 
         res.status(200).json(data)
     })
 
-    app.get('/supervisors/:id', async (req, res) => {
+    app.get('/companies/:id', async (req, res) => {
         const data = await models.Supervisor.findOne({
             where: {
                 id: req.params.id
