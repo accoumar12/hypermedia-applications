@@ -346,7 +346,8 @@ h1 {
 .intro {
     font-family: monospace;
     font-size: 1.5rem;
-    color: #5d9295;
+    color: white;
+    opacity: 0.8;
     position: relative;
     margin-top: 6%;
     margin-left: 10%;
@@ -356,7 +357,8 @@ h1 {
 .team-info {
     font-family: monospace;
     font-size: 1.5rem;
-    color: #818b88;
+    color: white;
+    opacity: 0.6;
     position: relative;
     margin-top: 0.5%;
     align-items: center;

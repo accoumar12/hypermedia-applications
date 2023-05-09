@@ -3,11 +3,11 @@
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
-                    <router-link to="/locations">
+                    <router-link to="/consumer">
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </router-link>
                 </div>
-                <router-link to="/healthcare">
+                <router-link to="/locations">
                     <div class="arrow-right">
                         <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
                     </div>
@@ -15,7 +15,7 @@
                 </router-link>
             </div>
 
-            <h1 class="name">Technology Investments</h1>
+            <h1 class="name">Sustainability Investments</h1>
             <hr />
             <div class="row">
                 <div class="columna">

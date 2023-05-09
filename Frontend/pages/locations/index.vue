@@ -44,9 +44,9 @@
                 <div class="counter" data-target="250"></div>
                 <p>Healthcare Investments</p>
                 <div class="link-text">
-                    <a href="/dogs">
-                        <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
-                    </a>
+                    <a><router-link to="/healthcare">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
                 </div>
             </div>
 
@@ -57,9 +57,9 @@
                 <div class="counter" data-target="120"></div>
                 <p>Consumer Goods Investments</p>
                 <div class="link-text">
-                    <a href="/dogs">
-                        <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
-                    </a>
+                    <a><router-link to="/consumer">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
                 </div>
             </div>
 
@@ -70,9 +70,9 @@
                 <div class="counter" data-target="270"></div>
                 <p>Sustainability Investments</p>
                 <div class="link-text">
-                    <a href="/dogs">
-                        <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
-                    </a>
+                    <a><router-link to="/sustainability">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
                 </div>
             </div>
         </div>

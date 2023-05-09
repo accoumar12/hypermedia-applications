@@ -54,7 +54,7 @@
 
 
 h3 {
-    color: rgb(0, 9, 9);
+    color: aliceblue;
 }
 
 .rowf {
@@ -95,7 +95,7 @@ h3 {
 
 .footer-dark {
 
-    color: #010406;
+    color: aliceblue;
     background-color: #033f52;
     padding-bottom: none;
 
@@ -118,13 +118,14 @@ h3 {
 }
 
 .footer-dark ul a {
-    color: inherit;
+    color: aliceblue;
     text-decoration: none;
     opacity: 0.6;
 }
 
 .footer-dark ul a:hover {
-    opacity: 0.8;
+    opacity: 3;
+    color: aliceblue;
 }
 
 .social-iconsf {
