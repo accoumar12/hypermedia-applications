@@ -19,31 +19,31 @@
             <hr />
             <div class="row">
                 <div class="columna">
-                    <img id="area-img" src="~/assets/img/tech-team.png" />
+                    <img id="area-img" src="~/assets/img/health-team.png" />
                 </div>
                 <div class="columna2">
-                    <div class="button-container">
+                    <div class="button-container" style="position: sticky; top: 0; z-index: 1;">
                         <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
-                            Description
+                            <br>
+                            DESCRIPTION
                         </button>
                         <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
-                            Projects
+                            <br>
+                            PROJECTS
                         </button>
                     </div>
                     <div class="description-containera">
                         <div v-if="activeSection === 1">
                             <p2 class="description">
-                                VenTour understands the importance of technology investments and is committed to investing
-                                in cutting-edge technologies. We have a team of experienced professionals who have an eye
-                                for identifying promising technologies and the potential to change the world.
-                                By investing in technology, VenTour aims to support startups that are focused on creating
-                                innovative solutions to complex problems.
+                                Our company has a strong track record of identifying promising healthcare startups and
+                                helping them grow and succeed.
+                                VenTour invests in a variety of healthcare sectors, including biotechnology, medical
+                                devices, and digital health.Investments are targeted at companies that are developing
+                                cutting-edge technologies and products that can improve patient outcomes,
+                                reduce healthcare costs, and increase access to care.
                                 <br>
-                                VenTour, a venture capital firm, has been investing in technology companies for years,
-                                contributing to the growth and success of some of the most innovative businesses in the
-                                industry.
-                                VenTour's extensive knowledge and expertise in technology investments have helped its
-                                portfolio companies reach their full potential.
+                                Our goal is to help every portfolio company to navigate the complex healthcare landscape
+                                and bring their innovations to market as quickly and efficiently as possible.
                             </p2>
                         </div>
                         <div v-else-if="activeSection === 2">
@@ -102,11 +102,13 @@ export default {
 }
 
 .arrow {
+    padding-top: 5%;
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: blink 4s infinite;
 }
 
 .arrow-left img,
@@ -205,6 +207,7 @@ hr {
 
 
 .description-containera {
+    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,10 +218,11 @@ hr {
 }
 
 .description-containera p2 {
+    height: 20%;
     padding-left: 2%;
     font-size: 15pt;
     width: 40%;
-    font-family: PT sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
 }
 
@@ -272,22 +276,30 @@ hr {
 }
 
 .section-button {
+    padding-bottom: 2.5%;
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 20px;
     margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
 }
 
 .section-button.active {
-    color: #00bfff;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
     font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
 }
 
 .button-container {
+    position: fixed;
     display: flex;
     justify-content: flex-start;
-    margin-top: 5%;
+    margin-bottom: 2%;
     font-family: monospace;
     color: #033f52;
 }

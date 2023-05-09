@@ -19,31 +19,32 @@
             <hr />
             <div class="row">
                 <div class="columna">
-                    <img id="area-img" src="~/assets/img/tech-team.png" />
+                    <img id="area-img" src="~/assets/img/consumer-team.png" />
                 </div>
                 <div class="columna2">
-                    <div class="button-container">
+                    <div class="button-container" style="position: sticky; top: 0; z-index: 1;">
                         <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
-                            Description
+                            <br>
+                            DESCRIPTION
                         </button>
                         <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
-                            Projects
+                            <br>
+                            PROJECTS
                         </button>
                     </div>
                     <div class="description-containera">
                         <div v-if="activeSection === 1">
                             <p2 class="description">
-                                VenTour understands the importance of technology investments and is committed to investing
-                                in cutting-edge technologies. We have a team of experienced professionals who have an eye
-                                for identifying promising technologies and the potential to change the world.
-                                By investing in technology, VenTour aims to support startups that are focused on creating
-                                innovative solutions to complex problems.
+                                Our company looks for opportunities in the consumer goods sector that are able to offer
+                                unique value propositions to customers,
+                                create new markets or disrupt existing ones.
                                 <br>
-                                VenTour, a venture capital firm, has been investing in technology companies for years,
-                                contributing to the growth and success of some of the most innovative businesses in the
-                                industry.
-                                VenTour's extensive knowledge and expertise in technology investments have helped its
-                                portfolio companies reach their full potential.
+                                The company's consumer goods investments span across a variety of categories including food
+                                and beverage, beauty and personal care,
+                                and household goods. VenTour is interested in companies that leverage cutting-edge
+                                technologies to create new products and services that meet evolving consumer needs.
+                                The company also prioritizes businesses that have a strong brand identity and are able to
+                                connect with their customers on a personal level.
                             </p2>
                         </div>
                         <div v-else-if="activeSection === 2">
@@ -102,11 +103,13 @@ export default {
 }
 
 .arrow {
+    padding-top: 5%;
     margin: 0 auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: blink 4s infinite;
 }
 
 .arrow-left img,
@@ -205,6 +208,7 @@ hr {
 
 
 .description-containera {
+    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,10 +219,11 @@ hr {
 }
 
 .description-containera p2 {
+    height: 20%;
     padding-left: 2%;
     font-size: 15pt;
     width: 40%;
-    font-family: PT sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
 }
 
@@ -272,23 +277,30 @@ hr {
 }
 
 .section-button {
+    padding-bottom: 2.5%;
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 20px;
     margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
 }
 
 .section-button.active {
-    color: #00bfff;
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
     font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
 }
 
 .button-container {
+    position: fixed;
     display: flex;
     justify-content: flex-start;
-    margin-top: 5%;
+    margin-bottom: 2%;
     font-family: monospace;
     color: #033f52;
-}
-</style>
+}</style>
