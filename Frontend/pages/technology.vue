@@ -50,8 +50,27 @@
                         </div>
                         <div v-else-if="activeSection === 2">
                             <p2 class="description">
-                                This is the second section.Im gonna but here a list of projects(companies).
+                                Current Portfolio of the investment projects in the field of Technology:
                             </p2>
+                            <ul class="comp-list">
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.microsoft.com/it-it" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">Microsoft</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.dell.com/it-it"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Dell</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">Intel</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.tsmc.com/english"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Taiwan
+                                        Semiconductor
+                                        Manufacturing Co.,
+                                        Ltd</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.st.com/content/st_com/en.html" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">STMicroelectronics</a></li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -60,7 +79,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <p>COMPANIES:</p>
+                <p>HAPPY INVESTORS:</p>
             </div>
         </div>
         <div id="flex-container" class="testimonials">
@@ -68,52 +87,57 @@
                 <ul class="list">
                     <li class="item">
                         <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
-                        <label class="label_testimonial-1" for="radio_testimonial-1">Diamond Pest Elimination</label>
+                        <label class="label_testimonial-1" for="radio_testimonial-1">Microsoft</label>
                         <div class="content-test content_testimonial-1">
                             <span class="picto"></span>
-                            <h1>Diamond Pest Elimination</h1>
-                            <p>“The team really takes pride in their work. If I didn’t know any better I would think they
-                                actually worked for my company.”</p>
-                            <p class="testimonialFrom">Bill, Owner</p>
-                            <p class="testimonialState">Rochester, NY</p>
+                            <h1>Microsoft</h1>
+                            <p>"I've been investing with VenTour for the past few years and I couldn't be happier with the
+                                results. Their team of experts really knows how to spot promising startups and help them
+                                grow.
+                                My portfolio has seen significant gains thanks to VenTour's strategic investments."</p>
+                            <p class="testimonialFrom">Paul Gardner Allen, Founder</p>
+                            <p class="testimonialState">Redmond, NY</p>
                         </div>
                     </li>
                     <li class="item">
                         <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
-                        <label class="label_testimonial-2" for="radio_testimonial-2">A+ Handyman Service</label>
+                        <label class="label_testimonial-2" for="radio_testimonial-2">DELL</label>
                         <div class="content-test content_testimonial-2">
                             <span class="picto"></span>
-                            <h1>A+ Handyman Service</h1>
-                            <p>“Quite simply… the service offers prompt response time to my visitors and helps me to better
-                                know what type of project a potential customer wants.”</p>
-                            <p class="testimonialFrom">Bill, Owner</p>
-                            <p class="testimonialState">Tucson, AZ</p>
+                            <h1>DELL</h1>
+                            <p>"As a first-time investor, I was a bit nervous about putting my money into the hands of a
+                                venture capital firm. But VenTour's professionalism and transparency made me feel at ease.
+                                They keep me updated every step of the way and have exceeded my expectations in terms of
+                                returns."</p>
+                            <p class="testimonialFrom">Michael Saul Dell, Owner</p>
+                            <p class="testimonialState">Round Rock, TX</p>
                             <br>
                         </div>
                     </li>
                     <li class="item">
                         <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
-                        <label class="label_testimonial-3" for="radio_testimonial-3">Mod Movers</label>
+                        <label class="label_testimonial-3" for="radio_testimonial-3">intel</label>
                         <div class="content-test content_testimonial-3">
                             <span class="picto"></span>
-                            <h1>Mod Movers</h1>
-                            <p>“I couldn’t believe it. I actually had to hire someone to help me keep up with the new
-                                business. I had no idea my website had so much value.”</p>
-                            <p class="testimonialFrom">Marlene, Owner</p>
-                            <p class="testimonialState">Monterey, CA</p>
+                            <h1>intel</h1>
+                            <p>"I've been working with VenTour for several years now and I can confidently say they are one
+                                of the best venture capital firms out there.
+                                Their ability to identify and support high-growth companies is unmatched. ”</p>
+                            <p class="testimonialFrom">Gordon Earle Moore, CEO</p>
+                            <p class="testimonialState">Santa Clara, CA</p>
                         </div>
                     </li>
                     <li class="item">
                         <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
-                        <label class="label_testimonial-4" for="radio_testimonial-4">AK Pest Control</label>
+                        <label class="label_testimonial-4" for="radio_testimonial-4">ST Microelectronics</label>
                         <div class="content-test content_testimonial-4">
                             <span class="picto"></span>
-                            <h1>AK Pest Control</h1>
-                            <p>Great company to send leads. Very efficient and pleased with the services. We get lots of
-                                leads and that whats important. Support is also great from the managers/support. Thanks YPC
-                                Chat</p>
-                            <p class="testimonialFrom">Mark, Owner</p>
-                            <p class="testimonialState">Somerset, VA</p>
+                            <h1>ST Microelectronics</h1>
+                            <p>"Working with VenTour has been an absolute pleasure. Their team is knowledgeable, responsive,
+                                and always willing to go the extra mile to ensure success. They have helped me diversify my
+                                portfolio and achieve financial goals I never thought possible."</p>
+                            <p class="testimonialFrom">Jean-Marc Chery, Chief Executive</p>
+                            <p class="testimonialState">Geneva, Switzerland</p>
                             <br>
                         </div>
                     </li>
@@ -189,6 +213,7 @@ function cycleTestimonials() {
 
 cycleTestimonials();
 </script>
+
 <style>
 #back {
     width: 100%;
@@ -249,6 +274,7 @@ cycleTestimonials();
 
 .name {
     font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -279,6 +305,26 @@ hr {
     padding-bottom: 2%;
 }
 
+.comp-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration-color: #033f52;
+
+}
+
+.comp-list li::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 8px;
+    border: 1px solid #033f52;
+    text-decoration-color: #033f52;
+    border-radius: 50%;
+    vertical-align: middle;
+}
 
 
 .columna {
@@ -315,11 +361,11 @@ hr {
     padding-right: 23%;
 }
 
-.description-containera p2 {
+.description-containera {
     height: 20%;
     padding-left: 2%;
     font-size: 15pt;
-    width: 40%;
+    width: 70%;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
 }
@@ -340,7 +386,8 @@ hr {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #033f52;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .column3 {
@@ -419,10 +466,10 @@ hr {
     min-height: 30%;
     max-width: 70%;
     margin-bottom: 2%;
-    background-color: rgb(229, 236, 236);
+    background-color: rgb(212, 208, 208);
     -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12),
         2px 1px 2px rgba(0, 0, 0, 0.24);
-    box-shadow: 2px 2px 3px rgba(18, 2, 2, 0.12), 2px 2px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 2px 2px 2px rgba(18, 2, 2, 0.12);
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -555,7 +602,7 @@ input:checked~.content-test {
     }
 
     .content-test {
-        padding-top: 2%;
+        padding-top: 0%;
         width: 65%;
         height: 100%;
         pointer-events: auto;
@@ -577,19 +624,19 @@ input:checked~.content-test {
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
     .content_testimonial-1 .picto {
-        padding-top: 100px;
+        padding-top: 40%;
     }
 
     .content_testimonial-2 .picto {
-        padding-top: 100px;
+        padding-top: 40%;
     }
 
     .content_testimonial-3 .picto {
-        padding-top: 100px;
+        padding-top: 40%;
     }
 
     .content_testimonial-4 .picto {
-        padding-top: 100px;
+        padding-top: 40%;
     }
 
     .item>label {
@@ -598,9 +645,9 @@ input:checked~.content-test {
 }
 
 .content_testimonial-1 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+    height: 30%;
+    width: 30%;
+    background-image: url("assets/img/Microsoft.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -612,42 +659,43 @@ input:checked~.content-test {
 }
 
 .content_testimonial-2 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+    height: 20%;
+    width: 20%;
+    background-image: url('assets/img/Dell Technologies.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .content_testimonial-2 h1 {
-    color: #f5d76e;
+    color: #2e579d;
 }
 
 .content_testimonial-3 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("https://i.postimg.cc/zV7sq04z/mod-Movers-Logo.jpg");
+    height: 15%;
+    width: 20%;
+    padding-left: 2%;
+    background-image: url('assets/img/Intel.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .content_testimonial-3 h1 {
-    color: #00b16a;
+    color: #010d08;
 }
 
 .content_testimonial-4 .picto {
-    height: 100px;
-    width: 100px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    height: 25%;
+    width: 20%;
+    background-image: url('assets/img/ST.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .content_testimonial-4 h1 {
-    color: #f27935;
+    color: rgb(87, 153, 239);
 }
 
 .content-test h1:first-letter {
@@ -666,30 +714,30 @@ input:checked~label.label_testimonial-1 {
 }
 
 input:checked~label.label_testimonial-2 {
-    color: #f5d76e;
-    border-right: solid 4px #f5d76e;
+    color: #2e579d;
+    border-right: solid 4px #2e579d;
 }
 
 input:checked~label.label_testimonial-3 {
-    color: #00b16a;
-    border-right: solid 4px #00b16a;
+    color: #010d08;
+    border-right: solid 4px #010d08;
 }
 
 input:checked~label.label_testimonial-4 {
-    color: #f27935;
-    border-right: solid 4px #f27935;
+    color: #1464dc;
+    border-right: solid 4px #1464dc;
 }
 
 label.label_testimonial-1:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 15%;
+    height: 100%;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/RFBHkG46/diamond-Pest-Logo-small.jpg");
+    background-image: url('assets/img/Microsoft.png');
     background-position: center;
-    background-size: 75% 75%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 50%;
 }
@@ -698,12 +746,12 @@ label.label_testimonial-2:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/bsqXXKCV/a-Plus-Handyman-Logo.jpg");
+    background-image: url('assets/img/Dell.png');
     background-position: center;
-    background-size: 75% 75%;
+    background-size: 100% 100%;
     border-radius: 50%;
     background-repeat: no-repeat;
 }
@@ -712,12 +760,12 @@ label.label_testimonial-3:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 15%;
+    height: 100%;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/zV7sq04z/mod-Movers-Logo.jpg");
+    background-image: url('assets/img/Intel.png');
     background-position: center;
-    background-size: 75% 75%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 50%;
 }
@@ -726,10 +774,10 @@ label.label_testimonial-4:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 15%;
+    height: 85%;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url('assets/img/ST.jpg');
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -760,10 +808,10 @@ label:first-letter {
             left top,
             right top,
             from(#ffffff),
-            to(#f5d76e59));
-    background-image: -webkit-linear-gradient(left, #ffffff, #f5d76e59);
-    background-image: -o-linear-gradient(left, #ffffff, #f5d76e59);
-    background-image: linear-gradient(to right, #ffffff, #f5d76e59);
+            to(#2fb6ec59));
+    background-image: -webkit-linear-gradient(left, #ffffff, #2fb6ec59);
+    background-image: -o-linear-gradient(left, #ffffff, #2fb6ec59);
+    background-image: linear-gradient(to right, #ffffff, #2fb6ec59);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
@@ -775,10 +823,10 @@ label:first-letter {
             left top,
             right top,
             from(#ffffff),
-            to(#00b16aa3));
-    background-image: -webkit-linear-gradient(left, #ffffff, #00b16aa3);
-    background-image: -o-linear-gradient(left, #ffffff, #00b16aa3);
-    background-image: linear-gradient(to right, #ffffff, #00b16aa3);
+            to(#000000a3));
+    background-image: -webkit-linear-gradient(left, #ffffff, #000000a3);
+    background-image: -o-linear-gradient(left, #ffffff, #000000a3);
+    background-image: linear-gradient(to right, #ffffff, #000000a3);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
@@ -790,10 +838,10 @@ label:first-letter {
             left top,
             right top,
             from(#ffffff),
-            to(#f27935a3));
-    background-image: -webkit-linear-gradient(left, #ffffff, #f27935a3);
-    background-image: -o-linear-gradient(left, #ffffff, #f27935a3);
-    background-image: linear-gradient(to right, #ffffff, #f27935a3);
+            to(rgb(87, 153, 239)));
+    background-image: -webkit-linear-gradient(left, #ffffff, rgb(87, 153, 239));
+    background-image: -o-linear-gradient(left, #ffffff, rgb(87, 153, 239));
+    background-image: linear-gradient(to right, #ffffff, rgb(87, 153, 239));
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
@@ -804,7 +852,7 @@ p.testimonialState {
     margin-top: -5px;
     font-size: 0.8rem;
     font-style: italic;
-    color: #808080d4;
+    color: #3e3c3cd4;
 }
 
 p.testimonialFrom {
