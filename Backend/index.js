@@ -65,7 +65,16 @@ async function initDB() {
         areas: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        link: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
     })
 
     models.Company.belongsTo(models.Dog)

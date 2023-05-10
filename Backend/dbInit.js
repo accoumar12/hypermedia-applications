@@ -305,5 +305,5 @@ export default async (models) => {
     
 
 
-    await models.Dog.bulkCreate(CompanyModel)
+    await models.Company.bulkCreate(CompanyModel)
 }
