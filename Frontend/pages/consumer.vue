@@ -85,58 +85,57 @@
             <div id="left-zone">
                 <ul class="list">
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
-                        <label class="label_testimonial-1" for="radio_testimonial-1">Microsoft</label>
-                        <div class="content-test content_testimonial-1">
+                        <input type="radio" id="radio_testimonial2-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial2-1" for="radio_testimonial2-1">Nestlè</label>
+                        <div class="content-test content_testimonial2-1">
                             <span class="picto"></span>
-                            <h1>Microsoft</h1>
-                            <p>"I've been investing with VenTour for the past few years and I couldn't be happier with the
-                                results. Their team of experts really knows how to spot promising startups and help them
-                                grow.
-                                My portfolio has seen significant gains thanks to VenTour's strategic investments."</p>
-                            <p class="testimonialFrom">Paul Gardner Allen, Founder</p>
-                            <p class="testimonialState">Redmond, NY</p>
+                            <h1>Nestlè</h1>
+                            <p>"I've been investing with VenTour for a few years now and I couldn't be happier with their
+                                work in the consumer goods sector. Their expertise and guidance have helped our portfolio of
+                                companies grow tremendously."</p>
+                            <p class="testimonialFrom">Mark Schneider, Chief Executive Officer</p>
+                            <p class="testimonialState">Vevey, Switzerland</p>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
-                        <label class="label_testimonial-2" for="radio_testimonial-2">DELL</label>
-                        <div class="content-test content_testimonial-2">
+                        <input type="radio" id="radio_testimonial2-2" name="basic_carousel" />
+                        <label class="label_testimonial2-2" for="radio_testimonial2-2">Unilever</label>
+                        <div class="content-test content_testimonial2-2">
                             <span class="picto"></span>
-                            <h1>DELL</h1>
-                            <p>"As a first-time investor, I was a bit nervous about putting my money into the hands of a
-                                venture capital firm. But VenTour's professionalism and transparency made me feel at ease.
-                                They keep me updated every step of the way and have exceeded my expectations in terms of
-                                returns."</p>
-                            <p class="testimonialFrom">Michael Saul Dell, Owner</p>
-                            <p class="testimonialState">Round Rock, TX</p>
+                            <h1>Unilever</h1>
+                            <p>"As an investor, it's always reassuring to see the companies you've invested in succeed.
+                                VenTour's strategic investments in the consumer goods sector have consistently led to
+                                impressive results, and I'm proud to be a part of it."</p>
+                            <p class="testimonialFrom">Alan Jope, CEO</p>
+                            <p class="testimonialState">London, UK</p>
                             <br>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
-                        <label class="label_testimonial-3" for="radio_testimonial-3">intel</label>
-                        <div class="content-test content_testimonial-3">
+                        <input type="radio" id="radio_testimonial2-3" name="basic_carousel" />
+                        <label class="label_testimonial2-3" for="radio_testimonial2-3">NIKE</label>
+                        <div class="content-test content_testimonial2-3">
                             <span class="picto"></span>
-                            <h1>intel</h1>
-                            <p>"I've been working with VenTour for several years now and I can confidently say they are one
-                                of the best venture capital firms out there.
-                                Their ability to identify and support high-growth companies is unmatched. ”</p>
-                            <p class="testimonialFrom">Gordon Earle Moore, CEO</p>
-                            <p class="testimonialState">Santa Clara, CA</p>
+                            <h1>NIKE</h1>
+                            <p>"I've invested in several venture capital firms over the years, but VenTour stands out in
+                                their commitment to their portfolio companies in the consumer goods industry. Their team's
+                                dedication and support have helped take our investments to the next level."</p>
+                            <p class="testimonialFrom">John Donahoe, President</p>
+                            <p class="testimonialState">Oregon, USA</p>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
-                        <label class="label_testimonial-4" for="radio_testimonial-4">ST Microelectronics</label>
-                        <div class="content-test content_testimonial-4">
+                        <input type="radio" id="radio_testimonial2-4" name="basic_carousel" />
+                        <label class="label_testimonial2-4" for="radio_testimonial2-4">Kraft Heinz</label>
+                        <div class="content-test content_testimonial2-4">
                             <span class="picto"></span>
-                            <h1>ST Microelectronics</h1>
-                            <p>"Working with VenTour has been an absolute pleasure. Their team is knowledgeable, responsive,
-                                and always willing to go the extra mile to ensure success. They have helped me diversify my
-                                portfolio and achieve financial goals I never thought possible."</p>
-                            <p class="testimonialFrom">Jean-Marc Chery, Chief Executive</p>
-                            <p class="testimonialState">Geneva, Switzerland</p>
+                            <h1>Kraft Heinz</h1>
+                            <p>"VenTour's approach to investing in the consumer goods sector is truly unique. Their focus on
+                                sustainability and ethical practices in their portfolio companies has not only yielded great
+                                returns but has also made a positive impact on our environment and society. I'm proud to be
+                                a part of their mission."</p>
+                            <p class="testimonialFrom">Miguel Patricio, Chief Executive</p>
+                            <p class="testimonialState"> Illinois, USA</p>
                             <br>
                         </div>
                     </li>
@@ -160,7 +159,7 @@ export default {
     },
 };
 
-const testimonialItems = document.querySelectorAll('.item label');
+const testimonial2Items = document.querySelectorAll('.item label');
 let timer;
 let index = 0;
 
@@ -196,7 +195,7 @@ function cycleTestimonials() {
                 clientX: 20,
             });
         }
-        const ele = `.${testimonialItems[index].className}`;
+        const ele = `.${testimonial2Items[index].className}`;
         const ele2 = document.querySelector(ele);
         ele2.dispatchEvent(evt);
         index++; // Increment the index
@@ -363,7 +362,7 @@ hr {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #010d08;
 }
 
 .column3 {
@@ -599,19 +598,19 @@ input:checked~.content-test {
 
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
-    .content_testimonial-1 .picto {
+    .content_testimonial2-1 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-2 .picto {
+    .content_testimonial2-2 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-3 .picto {
+    .content_testimonial2-3 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-4 .picto {
+    .content_testimonial2-4 .picto {
         padding-top: 40%;
     }
 
@@ -620,58 +619,58 @@ input:checked~.content-test {
     }
 }
 
-.content_testimonial-1 .picto {
-    height: 30%;
+.content_testimonial2-1 .picto {
+    height: 20%;
     width: 30%;
-    background-image: url("assets/img/Microsoft.png");
+    background-image: url("assets/img/nestle.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-1 h1 {
-    color: #d64541;
+.content_testimonial2-1 h1 {
+    color: #04447d;
     text-align: center;
 }
 
-.content_testimonial-2 .picto {
-    height: 20%;
-    width: 20%;
-    background-image: url('assets/img/Dell Technologies.png');
+.content_testimonial2-2 .picto {
+    height: 22%;
+    width: 30%;
+    background-image: url('assets/img/unilever.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-2 h1 {
-    color: #2e579d;
+.content_testimonial2-2 h1 {
+    color: #102448;
 }
 
-.content_testimonial-3 .picto {
-    height: 15%;
+.content_testimonial2-3 .picto {
+    height: 16%;
     width: 20%;
     padding-left: 2%;
-    background-image: url('assets/img/Intel.png');
+    background-image: url('assets/img/nike.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-3 h1 {
+.content_testimonial2-3 h1 {
     color: #010d08;
 }
 
-.content_testimonial-4 .picto {
-    height: 25%;
+.content_testimonial2-4 .picto {
+    height: 18%;
     width: 20%;
-    background-image: url('assets/img/ST.jpg');
+    background-image: url('assets/img/kraftHeinz.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-4 h1 {
-    color: rgb(87, 153, 239);
+.content_testimonial2-4 h1 {
+    color: rgb(200, 43, 32);
 }
 
 .content-test h1:first-letter {
@@ -684,117 +683,113 @@ input:checked~label {
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-input:checked~label.label_testimonial-1 {
-    color: #d64541;
-    border-right: solid 4px #d64541;
+input:checked~label.label_testimonial2-1 {
+    color: #04447d;
+    border-right: solid 4px #04447d;
 }
 
-input:checked~label.label_testimonial-2 {
+input:checked~label.label_testimonial2-2 {
     color: #2e579d;
     border-right: solid 4px #2e579d;
 }
 
-input:checked~label.label_testimonial-3 {
+input:checked~label.label_testimonial2-3 {
     color: #010d08;
     border-right: solid 4px #010d08;
 }
 
-input:checked~label.label_testimonial-4 {
-    color: #1464dc;
-    border-right: solid 4px #1464dc;
+input:checked~label.label_testimonial2-4 {
+    color: rgb(200, 43, 32);
+    border-right: solid 4px rgb(200, 43, 32);
 }
 
-label.label_testimonial-1:before {
+label.label_testimonial2-1:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 15%;
-    height: 100%;
+    width: 20%;
+    height: 80%;
     margin-left: 15px;
-    background-image: url('assets/img/Microsoft.png');
+    background-image: url('assets/img/nestle.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 50%;
 }
 
-label.label_testimonial-2:before {
+label.label_testimonial2-2:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 80%;
     margin-left: 15px;
-    background-image: url('assets/img/Dell.png');
-    background-position: center;
-    background-size: 100% 100%;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-}
-
-label.label_testimonial-3:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    margin-left: 15px;
-    background-image: url('assets/img/Intel.png');
+    background-image: url('assets/img/unilever.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 50%;
 }
 
-label.label_testimonial-4:before {
+label.label_testimonial2-3:before {
     content: " ";
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 80%;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url('assets/img/nike.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+label.label_testimonial2-4:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 25%;
+    height: 85%;
+    margin-left: 5px;
+    background-image: url('assets/img/kraftHeinz.png');
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
-    border-radius: 50%;
 }
 
 label:first-letter {
     text-transform: uppercase;
 }
 
-.label_testimonial-1:hover {
+.label_testimonial2-1:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
             from(#ffffff),
-            to(#d64541a3));
-    background-image: -webkit-linear-gradient(left, #ffffff, #d64541a3);
-    background-image: -o-linear-gradient(left, #ffffff, #d64541a3);
-    background-image: linear-gradient(to right, #ffffff, #d64541a3);
+            to(#4992d1a3));
+    background-image: -webkit-linear-gradient(left, #ffffff, #4992d1a3);
+    background-image: -o-linear-gradient(left, #ffffff, #4992d1a3);
+    background-image: linear-gradient(to right, #ffffff, #4992d1a3);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
-.label_testimonial-2:hover {
+.label_testimonial2-2:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
             from(#ffffff),
-            to(#2fb6ec59));
-    background-image: -webkit-linear-gradient(left, #ffffff, #2fb6ec59);
-    background-image: -o-linear-gradient(left, #ffffff, #2fb6ec59);
-    background-image: linear-gradient(to right, #ffffff, #2fb6ec59);
+            to(#3493a659));
+    background-image: -webkit-linear-gradient(left, #ffffff, #3493a659);
+    background-image: -o-linear-gradient(left, #ffffff, #3493a659);
+    background-image: linear-gradient(to right, #ffffff, #3493a659);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
-.label_testimonial-3:hover {
+.label_testimonial2-3:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
@@ -809,15 +804,15 @@ label:first-letter {
     transition: font-size 0.5s;
 }
 
-.label_testimonial-4:hover {
+.label_testimonial2-4:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
             from(#ffffff),
-            to(rgb(87, 153, 239)));
-    background-image: -webkit-linear-gradient(left, #ffffff, rgb(87, 153, 239));
-    background-image: -o-linear-gradient(left, #ffffff, rgb(87, 153, 239));
-    background-image: linear-gradient(to right, #ffffff, rgb(87, 153, 239));
+            to(rgb(205, 89, 47)));
+    background-image: -webkit-linear-gradient(left, #ffffff, rgb(205, 89, 47));
+    background-image: -o-linear-gradient(left, #ffffff, rgb(205, 89, 47));
+    background-image: linear-gradient(to right, #ffffff, rgb(205, 89, 47));
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
@@ -835,5 +830,4 @@ p.testimonialFrom {
     margin-top: 5px;
     font-weight: bold;
     color: #33475c;
-}
-</style>
+}</style>

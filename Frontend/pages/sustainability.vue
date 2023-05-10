@@ -49,24 +49,23 @@
                         </div>
                         <div v-else-if="activeSection === 2">
                             <p2 class="description">
-                                Current Portfolio of the investment projects in the field of Technology:
+                                Current Portfolio of the investment projects in the field of Sustainability:
                             </p2>
                             <ul class="comp-list">
                                 <li style="list-style: none; text-decoration: none;font-size: medium;"><a
-                                        href="https://www.unitedhealthgroup.com/" target="_blank"
-                                        style="text-decoration: none;">UnitedHealth Group, Inc.</a></li>
+                                        href="https://www.ge.com/" target="_blank" style="text-decoration: none;">General
+                                        Electric Co.</a></li>
                                 <li style="list-style: none; text-decoration: none;font-size: medium;"><a
-                                        href="https://www.cardinalhealth.com/en.html" target="_blank"
-                                        style="text-decoration: none;">Cardinal Health, Inc.</a></li>
+                                        href="https://www.iberdrola.it/" target="_blank"
+                                        style="text-decoration: none;">Iberdrola SA</a></li>
                                 <li style="list-style: none; text-decoration: none;font-size: medium;"><a
-                                        href="https://www.cigna.com/" target="_blank" style="text-decoration: none;">The
-                                        Cigna Group</a></li>
+                                        href="https://www.canadiansolar.com/" target="_blank"
+                                        style="text-decoration: none;">Canadian Solar, Inc. </a></li>
                                 <li style="list-style: none; text-decoration: none;font-size: medium;"><a
-                                        href="https://www.elevancehealth.com/" target="_blank"
-                                        style="text-decoration: none;">Elevance Health, Inc.
-                                        Ltd</a></li>
-                                <li style="list-style: none; text-decoration: none;"><a href="https://www.pfizer.it/"
-                                        target="_blank" style="text-decoration: none;font-size: medium;">Pfizer Inc</a></li>
+                                        href="https://www.jinkosolar.com/en/" target="_blank"
+                                        style="text-decoration: none;">JinkoSolar Holding Co., Ltd. </a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.enelx.com/"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Enel X</a></li>
                             </ul>
                         </div>
                     </div>
@@ -83,58 +82,63 @@
             <div id="left-zone">
                 <ul class="list">
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
-                        <label class="label_testimonial-1" for="radio_testimonial-1">Microsoft</label>
-                        <div class="content-test content_testimonial-1">
+                        <input type="radio" id="radio_testimonial3-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial3-1" for="radio_testimonial3-1">Canadian Solar</label>
+                        <div class="content-test content_testimonial3-1">
                             <span class="picto"></span>
-                            <h1>Microsoft</h1>
-                            <p>"I've been investing with VenTour for the past few years and I couldn't be happier with the
-                                results. Their team of experts really knows how to spot promising startups and help them
-                                grow.
-                                My portfolio has seen significant gains thanks to VenTour's strategic investments."</p>
-                            <p class="testimonialFrom">Paul Gardner Allen, Founder</p>
-                            <p class="testimonialState">Redmond, NY</p>
+                            <h1>Canadian Solar</h1>
+                            <p>"I have been investing with VenTour for years, and I can say with confidence that they are
+                                one of the best in the business when it comes to sustainability. They have a clear vision of
+                                the kind of world they want to help create. It's been a pleasure to be a part of their
+                                journey."
+                            </p>
+                            <p class="testimonialFrom">Shawn Qu, Founder</p>
+                            <p class="testimonialState">Guelph, Canada</p>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
-                        <label class="label_testimonial-2" for="radio_testimonial-2">DELL</label>
-                        <div class="content-test content_testimonial-2">
+                        <input type="radio" id="radio_testimonial3-2" name="basic_carousel" />
+                        <label class="label_testimonial3-2" for="radio_testimonial3-2">Enel X</label>
+                        <div class="content-test content_testimonial3-2">
                             <span class="picto"></span>
-                            <h1>DELL</h1>
-                            <p>"As a first-time investor, I was a bit nervous about putting my money into the hands of a
-                                venture capital firm. But VenTour's professionalism and transparency made me feel at ease.
-                                They keep me updated every step of the way and have exceeded my expectations in terms of
-                                returns."</p>
-                            <p class="testimonialFrom">Michael Saul Dell, Owner</p>
-                            <p class="testimonialState">Round Rock, TX</p>
+                            <h1>Enel X</h1>
+                            <p>"Working with VenTour has been a fantastic experience. Not only are they dedicated to
+                                sustainability, but they are also incredibly knowledgeable about the latest trends and
+                                technologies in the field. I feel confident that my investment is not only supporting a good
+                                cause, but also in the hands of experts who know how to make it grow."</p>
+                            <p class="testimonialFrom">Francesco Venturini, CEO</p>
+                            <p class="testimonialState">Rome, Italy</p>
                             <br>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
-                        <label class="label_testimonial-3" for="radio_testimonial-3">intel</label>
-                        <div class="content-test content_testimonial-3">
+                        <input type="radio" id="radio_testimonial3-3" name="basic_carousel" />
+                        <label class="label_testimonial3-3" for="radio_testimonial3-3">Iberdrola SA</label>
+                        <div class="content-test content_testimonial3-3">
                             <span class="picto"></span>
-                            <h1>intel</h1>
-                            <p>"I've been working with VenTour for several years now and I can confidently say they are one
-                                of the best venture capital firms out there.
-                                Their ability to identify and support high-growth companies is unmatched. ”</p>
-                            <p class="testimonialFrom">Gordon Earle Moore, CEO</p>
-                            <p class="testimonialState">Santa Clara, CA</p>
+                            <h1>Iberdrola SA</h1>
+                            <p>"VenTour has truly shown us that investing in sustainability can be both profitable and good
+                                for the planet. They have a keen eye for identifying companies that are making a real impact
+                                on the environment, and their support has been instrumental in helping these businesses
+                                thrive."</p>
+                            <p class="testimonialFrom">Juan de Urrutia, Founder</p>
+                            <p class="testimonialState">Bilbao, Spain</p>
                         </div>
                     </li>
                     <li class="item">
-                        <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
-                        <label class="label_testimonial-4" for="radio_testimonial-4">ST Microelectronics</label>
-                        <div class="content-test content_testimonial-4">
+                        <input type="radio" id="radio_testimonial3-4" name="basic_carousel" />
+                        <label class="label_testimonial3-4" for="radio_testimonial3-4">General
+                            Electric Co.</label>
+                        <div class="content-test content_testimonial3-4">
                             <span class="picto"></span>
-                            <h1>ST Microelectronics</h1>
-                            <p>"Working with VenTour has been an absolute pleasure. Their team is knowledgeable, responsive,
-                                and always willing to go the extra mile to ensure success. They have helped me diversify my
-                                portfolio and achieve financial goals I never thought possible."</p>
-                            <p class="testimonialFrom">Jean-Marc Chery, Chief Executive</p>
-                            <p class="testimonialState">Geneva, Switzerland</p>
+                            <h1>General
+                                Electric Co.</h1>
+                            <p>"I am so impressed with VenTour's commitment to sustainability. Their portfolio of companies
+                                includes some of the most innovative and environmentally-conscious businesses I have ever
+                                seen. As an investor, I am proud to be associated with a company that is making a real
+                                difference in the world."</p>
+                            <p class="testimonialFrom">Thomas Alva Edison, Founder</p>
+                            <p class="testimonialState">Boston, MA</p>
                             <br>
                         </div>
                     </li>
@@ -158,7 +162,7 @@ export default {
     },
 };
 
-const testimonialItems = document.querySelectorAll('.item label');
+const testimonial3Items = document.querySelectorAll('.item label');
 let timer;
 let index = 0;
 
@@ -198,7 +202,7 @@ function cycleTestimonials() {
         const ele2 = document.querySelector(ele);
         ele2.dispatchEvent(evt);
         index++; // Increment the index
-        if (index >= testimonialItems.length) {
+        if (index >= testimonial3Items.length) {
             index = 0; // Set it back to `0` when it reaches `3`
         }
         cycleTestimonials(); // Recursively call `cycleTestimonials()`
@@ -362,7 +366,7 @@ hr {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #010d08;
 }
 
 .column3 {
@@ -598,19 +602,19 @@ input:checked~.content-test {
 
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
-    .content_testimonial-1 .picto {
+    .content_testimonial3-1 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-2 .picto {
+    .content_testimonial3-2 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-3 .picto {
+    .content_testimonial3-3 .picto {
         padding-top: 40%;
     }
 
-    .content_testimonial-4 .picto {
+    .content_testimonial3-4 .picto {
         padding-top: 40%;
     }
 
@@ -619,58 +623,58 @@ input:checked~.content-test {
     }
 }
 
-.content_testimonial-1 .picto {
+.content_testimonial3-1 .picto {
     height: 30%;
     width: 30%;
-    background-image: url("assets/img/Microsoft.png");
+    background-image: url("assets/img/canadiansolar.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-1 h1 {
+.content_testimonial3-1 h1 {
     color: #d64541;
     text-align: center;
 }
 
-.content_testimonial-2 .picto {
+.content_testimonial3-2 .picto {
     height: 20%;
     width: 20%;
-    background-image: url('assets/img/Dell Technologies.png');
+    background-image: url('assets/img/enelx.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-2 h1 {
-    color: #2e579d;
+.content_testimonial3-2 h1 {
+    color: #53046a;
 }
 
-.content_testimonial-3 .picto {
-    height: 15%;
-    width: 20%;
+.content_testimonial3-3 .picto {
+    height: 28%;
+    width: 30%;
     padding-left: 2%;
-    background-image: url('assets/img/Intel.png');
+    background-image: url('assets/img/iberdrola.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-3 h1 {
-    color: #010d08;
+.content_testimonial3-3 h1 {
+    color: #59a552;
 }
 
-.content_testimonial-4 .picto {
-    height: 25%;
-    width: 20%;
-    background-image: url('assets/img/ST.jpg');
+.content_testimonial3-4 .picto {
+    height: 34%;
+    width: 18%;
+    background-image: url('assets/img/generalelectric.png');
     background-position: center;
-    background-size: cover;
+    background-size: 70%;
     background-repeat: no-repeat;
 }
 
-.content_testimonial-4 h1 {
-    color: rgb(87, 153, 239);
+.content_testimonial3-4 h1 {
+    color: #1464dc;
 }
 
 .content-test h1:first-letter {
@@ -683,76 +687,73 @@ input:checked~label {
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-input:checked~label.label_testimonial-1 {
+input:checked~label.label_testimonial3-1 {
     color: #d64541;
     border-right: solid 4px #d64541;
 }
 
-input:checked~label.label_testimonial-2 {
-    color: #2e579d;
-    border-right: solid 4px #2e579d;
+input:checked~label.label_testimonial3-2 {
+    color: #53046a;
+    border-right: solid 4px #53046a;
 }
 
-input:checked~label.label_testimonial-3 {
-    color: #010d08;
-    border-right: solid 4px #010d08;
+input:checked~label.label_testimonial3-3 {
+    color: #59a552;
+    border-right: solid 4px #59a552;
 }
 
-input:checked~label.label_testimonial-4 {
+input:checked~label.label_testimonial3-4 {
     color: #1464dc;
     border-right: solid 4px #1464dc;
 }
 
-label.label_testimonial-1:before {
+label.label_testimonial3-1:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    margin-left: 15px;
+    background-image: url('assets/img/canadiansolar.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+label.label_testimonial3-2:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 5rem;
+    height: 80%;
+    margin-left: 15px;
+    background-image: url('assets/img/enelx.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+label.label_testimonial3-3:before {
     content: " ";
     display: block;
     position: absolute;
     width: 15%;
-    height: 100%;
+    height: 80%;
     margin-left: 15px;
-    background-image: url('assets/img/Microsoft.png');
+    background-image: url('assets/img/iberdrola.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border-radius: 50%;
 }
 
-label.label_testimonial-2:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    margin-left: 15px;
-    background-image: url('assets/img/Dell.png');
-    background-position: center;
-    background-size: 100% 100%;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-}
-
-label.label_testimonial-3:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    margin-left: 15px;
-    background-image: url('assets/img/Intel.png');
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-}
-
-label.label_testimonial-4:before {
+label.label_testimonial3-4:before {
     content: " ";
     display: block;
     position: absolute;
     width: 50px;
     height: 50px;
     margin-left: 15px;
-    background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+    background-image: url('assets/img/generalelectric.png');
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;
@@ -763,7 +764,7 @@ label:first-letter {
     text-transform: uppercase;
 }
 
-.label_testimonial-1:hover {
+.label_testimonial3-1:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
@@ -778,37 +779,37 @@ label:first-letter {
     transition: font-size 0.5s;
 }
 
-.label_testimonial-2:hover {
+.label_testimonial3-2:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
             from(#ffffff),
-            to(#2fb6ec59));
-    background-image: -webkit-linear-gradient(left, #ffffff, #2fb6ec59);
-    background-image: -o-linear-gradient(left, #ffffff, #2fb6ec59);
-    background-image: linear-gradient(to right, #ffffff, #2fb6ec59);
+            to(#d75adf59));
+    background-image: -webkit-linear-gradient(left, #ffffff, #d75adf59);
+    background-image: -o-linear-gradient(left, #ffffff, #d75adf59);
+    background-image: linear-gradient(to right, #ffffff, #d75adf59);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
-.label_testimonial-3:hover {
+.label_testimonial3-3:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,
             from(#ffffff),
-            to(#000000a3));
-    background-image: -webkit-linear-gradient(left, #ffffff, #000000a3);
-    background-image: -o-linear-gradient(left, #ffffff, #000000a3);
-    background-image: linear-gradient(to right, #ffffff, #000000a3);
+            to(#69cb62a3));
+    background-image: -webkit-linear-gradient(left, #ffffff, #69cb62a3);
+    background-image: -o-linear-gradient(left, #ffffff, #69cb62a3);
+    background-image: linear-gradient(to right, #ffffff, #69cb62a3);
     font-size: 1.2rem;
     -webkit-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
-.label_testimonial-4:hover {
+.label_testimonial3-4:hover {
     background-image: -webkit-gradient(linear,
             left top,
             right top,

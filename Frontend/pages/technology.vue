@@ -386,7 +386,7 @@ hr {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
-    color: #033f52;
+    color: #010d08;
     font-family: Arial, Helvetica, sans-serif;
 }
 
