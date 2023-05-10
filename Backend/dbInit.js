@@ -224,10 +224,10 @@ export default async (models) => {
     ]
     await models.Dog.bulkCreate(dogModel)
 
-    const companySup0 = await models.Dog.create(dogModel[0])
-    const companySup1 = await models.Dog.create(dogModel[1])
-    const companySup3 = await models.Dog.create(dogModel[3])
-    const companySup10 = await models.Dog.create(dogModel[10])
+    const companySup0 = await models.Company.create(dogModel[0])
+    const companySup1 = await models.Company.create(dogModel[1])
+    const companySup3 = await models.Company.create(dogModel[3])
+    const companySup10 = await models.Company.create(dogModel[10])
     const CompanyModel = [
         {
             name: "UnitedHealth Group",
