@@ -8,7 +8,7 @@
             <nav>
                 <router-link to="/about-us" class="nav-link">About Us</router-link>
                 <router-link to="/dogs" class="nav-link">Our Team</router-link>
-                <router-link to="/locations" class="nav-link">Investments</router-link>
+                <router-link to="/companies" class="nav-link">Investments</router-link>
                 <router-link to="/news" class="nav-link">News</router-link>
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
