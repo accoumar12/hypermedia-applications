@@ -96,11 +96,11 @@ const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dog
 }
 
 .arrow {
-    width: 10%;
+    width: 16%;
     height: 15%;
     padding-top: 6%;
     justify-content: left;
-    padding-right: 80%;
+    padding-right: 70%;
 }
 
 .arrow img {

@@ -25,7 +25,7 @@
                             <img class="img" :src="image" />
                             <h3><span class="subtitle">{{ title }}</span></h3>
                             <p><span class="subtitle">{{ subtitle }}</span></p>
-                            <p>Area: <span class="subtitle">{{ area }}</span></p>
+                            <p><span class="subtitle">{{ area }}</span></p>
 
                         </div>
                     </NuxtLink>

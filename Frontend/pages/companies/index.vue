@@ -29,31 +29,56 @@
                 </div>
                 <div class="counter" data-target="100"></div>
                 <p>Technology Investments</p>
-                <a href="#">LEARN MORE</a>
+
+                <div class="link-text">
+                    <a><router-link to="/technology">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
+                </div>
             </div>
-            <div class="column4">
+
+
+            <div class=" column4">
                 <div class="area-icons">
                     <img src="~/assets/img/health.png" alt="Healthcare">
                 </div>
                 <div class="counter" data-target="250"></div>
                 <p>Healthcare Investments</p>
-                <a href="#">LEARN MORE</a>
+
+                <div class="link-text">
+                    <a><router-link to="/healthcare">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
+                </div>
             </div>
+
+
             <div class="column4">
                 <div class="area-icons">
                     <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
                 <div class="counter" data-target="120"></div>
                 <p>Consumer Goods Investments</p>
-                <a href="#">LEARN MORE</a>
+
+                <div class="link-text">
+                    <a><router-link to="/consumer">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
+                </div>
             </div>
+
             <div class="column4">
                 <div class="area-icons">
                     <img src="~/assets/img/sustainable.png" alt="Sustainability">
                 </div>
                 <div class="counter" data-target="270"></div>
                 <p>Sustainability Investments</p>
-                <a href="#">LEARN MORE</a>
+
+                <div class="link-text">
+                    <a><router-link to="/sustainability">
+                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                        </router-link></a>
+                </div>
             </div>
         </div>
         <!--<div id="card-container">
@@ -85,8 +110,9 @@ export default {
                 // only animate counters that are in view
                 if (isInView(counter)) {
                     const target = +counter.dataset.target;
-                    const start = 0;
-                    const duration = 5000;
+                    const start = performance.now();
+                    const duration = 2000;
+
                     const step = (timestamp) => {
                         const elapsed = timestamp - start;
                         const progress = Math.min(elapsed / duration, 1);
@@ -99,6 +125,10 @@ export default {
                     setTimeout(() => {
                         requestAnimationFrame(step);
                     }, index * delay);
+
+                } else {
+                    counter.textContent = '0+';
+
                 }
             });
         };
@@ -224,7 +254,9 @@ export default {
     flex-basis: 20%;
     padding: 0.7rem;
     background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0.1;
+
+    opacity: 0.07;
+
 
 }
 
@@ -242,6 +274,13 @@ export default {
     text-align: center;
 }
 
+
+.counter {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #033f52;
+}
+
 .column41::before {
     background: url('assets/img/areas.png') center center no-repeat;
     content: "";
@@ -252,7 +291,9 @@ export default {
     flex-basis: 20%;
     padding: 0.7rem;
     background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0.1;
+
+    opacity: 0.07;
+
 }
 
 .row4 {
@@ -289,40 +330,30 @@ export default {
 
 
 .column4 p {
-    font-size: 16px;
+
+    font-size: 1.5rem;
+
     font-weight: bold;
 
 }
 
-.column4 a {
-    color: #033f52;
+
+.column41 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+
+.learn-more {
+    text-decoration-color: #033f52;
     font-family: monospace;
-    text-decoration: underline;
-    font-size: large;
-    padding-bottom: 3px;
-    transition: all 0.3s ease-in-out;
-    font-weight: normal;
-}
-
-.column4 a:hover {
-    color: #033f52;
-    text-decoration: none;
     font-weight: bold;
-}
-
-.column41 a {
-    color: #033f52;
-    font-family: monospace;
-    text-decoration: underline;
     font-size: large;
-    padding-bottom: 3px;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
-    font-weight: normal;
-}
-
-.column41 a:hover {
-    color: #033f52;
-    text-decoration: none;
-    font-weight: bold;
+    position: relative;
+    padding-top: 10%;
+    position: left;
 }
 </style>
