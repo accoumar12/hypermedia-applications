@@ -29,6 +29,7 @@
                 </div>
                 <div class="counter" data-target="100"></div>
                 <p>Technology Investments</p>
+
                 <div class="link-text">
                     <a><router-link to="/technology">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -43,6 +44,7 @@
                 </div>
                 <div class="counter" data-target="250"></div>
                 <p>Healthcare Investments</p>
+
                 <div class="link-text">
                     <a><router-link to="/healthcare">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -50,12 +52,14 @@
                 </div>
             </div>
 
+
             <div class="column4">
                 <div class="area-icons">
                     <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
                 <div class="counter" data-target="120"></div>
                 <p>Consumer Goods Investments</p>
+
                 <div class="link-text">
                     <a><router-link to="/consumer">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -69,6 +73,7 @@
                 </div>
                 <div class="counter" data-target="270"></div>
                 <p>Sustainability Investments</p>
+
                 <div class="link-text">
                     <a><router-link to="/sustainability">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -107,6 +112,7 @@ export default {
                     const target = +counter.dataset.target;
                     const start = performance.now();
                     const duration = 2000;
+
                     const step = (timestamp) => {
                         const elapsed = timestamp - start;
                         const progress = Math.min(elapsed / duration, 1);
@@ -119,8 +125,10 @@ export default {
                     setTimeout(() => {
                         requestAnimationFrame(step);
                     }, index * delay);
+
                 } else {
                     counter.textContent = '0+';
+
                 }
             });
         };
@@ -246,7 +254,9 @@ export default {
     flex-basis: 20%;
     padding: 0.7rem;
     background-color: rgba(255, 255, 255, 0.8);
+
     opacity: 0.07;
+
 
 }
 
@@ -264,6 +274,7 @@ export default {
     text-align: center;
 }
 
+
 .counter {
     font-size: 3rem;
     font-weight: bolder;
@@ -280,7 +291,9 @@ export default {
     flex-basis: 20%;
     padding: 0.7rem;
     background-color: rgba(255, 255, 255, 0.8);
+
     opacity: 0.07;
+
 }
 
 .row4 {
@@ -317,10 +330,13 @@ export default {
 
 
 .column4 p {
+
     font-size: 1.5rem;
+
     font-weight: bold;
 
 }
+
 
 .column41 p {
     font-size: 1.5rem;

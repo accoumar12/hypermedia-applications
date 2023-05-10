@@ -22,7 +22,6 @@ async function initDB() {
     const models = {}
 
     await db.authenticate()
-
     models.Dog = db.define('dog', {
         name: {
             type: DataTypes.STRING,
@@ -30,15 +29,15 @@ async function initDB() {
         },
         role: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         image: {
           type: DataTypes.STRING,
-          allowNull: false  
+          allowNull: true  
         },
         team: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         supervisor: {
             type: DataTypes.STRING,
@@ -48,25 +47,38 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
+        description2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         area:{
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         }
     })
 
-    models.Location = db.define('location', {
+    models.Company = db.define('companySup', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        city: {
+        areas: {
             type: DataTypes.STRING,
-            allowNull: false
-        }
+            allowNull: true
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        link: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
     })
 
-    models.Location.hasMany(models.Dog)
-    models.Dog.belongsTo(models.Location)
+    models.Company.belongsTo(models.Dog)
+    models.Dog.hasMany(models.Company)
 
     await db.sync({ force: true })
 
@@ -91,7 +103,7 @@ async function initServer() {
             },
             include: [
                 {
-                    model: models.Location
+                    model: models.Company
                 }
             ]
         })
@@ -103,15 +115,16 @@ async function initServer() {
             res.sendStatus(404)
         }
     })
+    
 
-    app.get('/locations', async (req, res) => {
-        const data = await models.Location.findAll();
+    app.get('/companies', async (req, res) => {
+        const data = await models.Company.findAll();
 
         res.status(200).json(data)
     })
 
-    app.get('/locations/:id', async (req, res) => {
-        const data = await models.Location.findOne({
+    app.get('/companies/:id', async (req, res) => {
+        const data = await models.Supervisor.findOne({
             where: {
                 id: req.params.id
             },

@@ -7,8 +7,8 @@
         <div class = "info-group">
             <img id = "main-img" src = "~/assets/img/home-image.jpg" />
             <div id = "data-container">
-                <p class = "data">Name: <span>{{ location.name }}</span></p>
-                <p class = "data">City: <span>{{ location.city }}</span></p>
+                <p class = "data">Name: <span>{{ supervisor.name }}</span></p>
+                <p class = "data">City: <span>{{ supervisor.areas }}</span></p>
             </div>
         </div>
         <div id = "dog-card-container">
