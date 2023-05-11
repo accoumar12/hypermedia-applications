@@ -23,9 +23,28 @@
                     <img id="main-img" :src="dog.image" />
                 </div>
                 <div class="column2">
+                    
+                    <div class="description-containera">
+                        <div class="button-container" style="position: relative; top: 0; z-index: 1;">
+                            <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                                <br>
+                                DESCRIPTION
+                            </button>
+                            <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                                <br>
+                                PROJECTS
+                            </button>
+                        </div>
+                        <div class="description-container" v-if="activeSection === 1">
+                            <p2 class="description">{{ dog.description }}</p2>
+                            <p2 class="description">{{ dog.description2 }}</p2>    
+                        </div>
+                        <div v-else-if="activeSection === 2">
+                            <p>AOOOOOOOOOOOOOOOO</p>
+                        </div>
+                    </div>
                     <div class="description-container">
-                        <p2 class="description">{{ dog.description }}</p2>
-                        <p2 class="description">{{ dog.description2 }}</p2>
+                        
                         <button2>CONTACT</button2>
                     </div>
                 </div>
@@ -63,12 +82,22 @@
         <SmallCard :title="dog.location.name" :subtitle="dog.location.city" :link="'/locations/' + dog.location.id" />
         -->
   
-
+<script>
+    export default {
+    data() {
+        return {
+            activeSection: 1,
+        };
+    },
+};
+</script>
 <script setup>
+
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/' + id)
+
 </script>
 
 <style>
@@ -265,5 +294,33 @@ button2:hover {
 #description {
     padding: 0 20px 0 20px;
     font-size: 15pt;
+}
+.section-button {
+    padding-bottom: 2.5%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
+}
+
+.section-button.active {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
+    font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    font-family: monospace;
+    color: #033f52;
 }
 </style>
