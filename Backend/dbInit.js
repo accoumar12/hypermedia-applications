@@ -332,10 +332,10 @@ export default async (models) => {
             link: "https://www.asahigroup-holdings.com/en/"
         },
         {
-            name: "Natura & go",
+            name: "Natura and go",
             areas: "Goods",
             companyId: companySup5.id,
-            description: "Nature & Co is a Japanese company that specializes in natural and organic cosmetics. It was founded in 1984 by Mr. Toshiaki Kamata with the aim of creating high-quality, eco-friendly products that are gentle on the skin and the environment. The company's philosophy is centered around the concept of "harmony with nature," and it strives to use only natural ingredients in its products. Nature & Co offers a wide range of skincare, body care, and hair care products that are free from harmful chemicals such as parabens, mineral oil, and synthetic fragrances. In addition to its commitment to using natural ingredients, Nature & Co is also dedicated to sustainability. The company uses eco-friendly packaging materials and has implemented various initiatives to reduce its environmental impact. Overall, Nature & Co is a company that values natural beauty and sustainability. Its products are designed to enhance the health and well-being of both individuals and the planet.",
+            description: "Nature and Co is a Japanese company that specializes in natural and organic cosmetics. It was founded in 1984 by Mr. Toshiaki Kamata with the aim of creating high-quality, eco-friendly products that are gentle on the skin and the environment. The company's philosophy is centered around the concept of harmony with nature, and it strives to use only natural ingredients in its products. Nature and Co offers a wide range of skincare, body care, and hair care products that are free from harmful chemicals such as parabens, mineral oil, and synthetic fragrances. In addition to its commitment to using natural ingredients, Nature & Co is also dedicated to sustainability. The company uses eco-friendly packaging materials and has implemented various initiatives to reduce its environmental impact. Overall, Nature and Co is a company that values natural beauty and sustainability. Its products are designed to enhance the health and well-being of both individuals and the planet.",
             link: "https://www.naturaeco.com/"
         },
         {

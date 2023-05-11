@@ -124,7 +124,7 @@ async function initServer() {
     })
 
     app.get('/companies/:id', async (req, res) => {
-        const data = await models.Supervisor.findOne({
+        const data = await models.Company.findOne({
             where: {
                 id: req.params.id
             },

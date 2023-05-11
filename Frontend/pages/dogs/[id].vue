@@ -57,6 +57,8 @@
             </div>
         </div>
         <div class="row2">
+            <SmallCard v-for = "company of dog.company" :link = "'/companies/' + company.id" :title = "company.name" :area = "company.area"/>
+            <!--
             <div class="column3">
                 <img src="image1.jpg" alt="Image 1">
                 <p>Text for image 1</p>
@@ -68,7 +70,7 @@
             <div class="column3">
                 <img src="image3.jpg" alt="Image 3">
                 <p>Text for image 3</p>
-            </div>
+            </div>-->
         </div>
     </main>
 </template>
@@ -83,13 +85,23 @@
         -->
   
 <script>
-    export default {
-    data() {
-        return {
-            activeSection: 1,
-        };
-    },
-};
+    export default defineNuxtComponent({
+        data() {
+            return {
+                activeSection: 1,
+            };
+        },
+        async asyncData() {
+            // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+            const route = useRoute()
+            const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies' + route.params.id)
+
+            return {
+                companies
+            }
+        }
+    })
+
 </script>
 <script setup>
 
