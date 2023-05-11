@@ -299,6 +299,34 @@ export default async (models) => {
             description: "STMicroelectronics is a global leader in the design, manufacturing, and sale of semiconductor devices. Their products are used in a wide range of applications including automotive and industrial equipment, consumer electronics, and wired and wireless communication systems. The company was founded in 1987 and is headquartered in Geneva, Switzerland. STMicroelectronics is committed to innovation, sustainability, and social responsibility, and is dedicated to providing their customers with high-quality products and services that meet their evolving needs. With a strong focus on research and development, STMicroelectronics is well-positioned to continue leading the way in the semiconductor industry for years to come.",
             link: "https://www.st.com/content/st_com/en.html"
         },
+        {
+            name: "Nestlè",
+            areas: "Goods",
+            companyId: companySup10.id,
+            description: "Nestlé is a leading global food and beverage company, with a portfolio of well-known brands including Nescafé, KitKat, and Gerber. The company was founded in 1866 and is headquartered in Vevey, Switzerland. Nestlé's products are sold in over 190 countries and include coffee, water, pet food, and infant nutrition. The company is committed to sustainability, responsible sourcing, and improving the lives of farmers and communities where it operates. Nestlé has set ambitious goals to reduce its environmental impact and has pledged to achieve zero net greenhouse gas emissions by 2050. With a focus on innovation and meeting consumer needs, Nestlé is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
+            link: "https://www.nestle.it/"
+        },
+        {
+            name: "Unilever",
+            areas: "Goods",
+            companyId: companySup10.id,
+            description: "Unilever is a leading global consumer goods company, with a portfolio of well-known brands including Dove, Lipton, and Ben & Jerry's. The company was founded in 1929 and is headquartered in London, UK. Unilever's products are sold in over 190 countries and include food, home care, and personal care products. The company is committed to sustainability, responsible sourcing, and improving the lives of people around the world. Unilever has set ambitious goals to reduce its environmental impact and has pledged to achieve net zero emissions from its products by 2039. With a focus on innovation and meeting the changing needs of consumers, Unilever is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
+            link: "https://www.unilever.com/"
+        },
+        {
+            name: "Nike",
+            areas: "Goods",
+            companyId: companySup10.id,
+            description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
+            link: "https://www.nike.com/it/"
+        },
+        {
+            name: "Asahi Group",
+            areas: "Goods",
+            companyId: companySup10.id,
+            description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage. Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
+            link: "https://www.asahigroup-holdings.com/en/"
+        },
     ]
 
     
