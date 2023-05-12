@@ -81,6 +81,63 @@
                 </div>
             </div>
         </div>
+        <section class="team-members-grid2">
+            <div class="grid-container2">
+                <div class="filter-container2 areas">
+
+                    <div class="grid-x2">
+
+                        <div class="cell2 small-12 filter-title2">Filter By Investment Area:</div>
+                        <div class="dropdown-grid-filter-container2">
+                            <div class="dropdown-grid-filter2 grid-x2 align-middle">
+
+                                <label for="all-team">
+                                    ALL
+                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
+                                        checked>
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label for="investment-team">
+                                    Technology <input type="radio" id="Management-Team" value="Management Team"
+                                        name="team-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label for="investor-relations">
+                                    Healthcare <input type="radio" id="Investment-Team" value="Investment Team"
+                                        name="team-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label for="finance-operations">
+                                    Consumer Goods <input type="radio" id="finance-operations"
+                                        value="Operations and Finance Team" name="team-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label for="finance-operations">
+                                    Sustainability <input type="radio" id="finance-operations" value="Advisoring Board Team"
+                                        name="team-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- <div class="form-container">
+                                <label for="age-filter">Role filter</label>
+                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card-container">
+                <Card v-for="companySup of filtered" :image="companySup.image" :title="companySup.name"
+                    :area="companySup.areas" :link="'/companies/' + companySup.id" />
+            </div>
+        </section>
         <!--<div id="card-container">
             <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
                 :link="'/locations/' + location.id" />
@@ -89,6 +146,46 @@
 </template>
 
 <script>
+// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+/*
+    In order to implement a filter, we use the computed property.
+    This allows to have a cached value that contains the filtered list.
+    Instead of using the normal list for the cards, we used the computed property directly.
+*/
+const areas = ref("");
+
+const filtered = computed(() => {
+    // Checking for values where the full list is provided
+    if ((role.areas == 0 || areas.value == ""))
+        return dogs.value
+
+    const arr = []
+
+
+    // Filtering the list
+    for (let dog of dogs.value) {
+        if (dog.areas == areas.value) {
+            arr.push(dog)
+        }/*
+        else if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
+            arr.push(dog)*/
+    }
+
+    // Returning the filtered list
+    return arr
+
+})
+function getButtonString(a) {
+    const arr = []
+    var button = a; // replace "myButton" with the ID of your button
+    for (let dog of dogs.value) {
+        if (dog.name.includes(name.value) && dog.areas == a)
+            arr.push(dog)
+    }
+    return arr;
+}
+
 export default {
     mounted() {
         const counters = document.querySelectorAll('.counter');
@@ -355,5 +452,90 @@ export default {
     position: relative;
     padding-top: 10%;
     position: left;
+}
+
+.team-members-grid2 {
+    background-color: rgb(171, 250, 250);
+    background-position-x: center;
+    opacity: 100%;
+    position: relative;
+    width: 100%;
+}
+
+section {
+    display: block;
+}
+
+.grid-container2 {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 90rem;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.filter-container2 {
+    padding-top: 2%;
+}
+
+
+.grid-x2 {
+    padding-top: 2%;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-transform: uppercase;
+}
+
+.filter-container2 .filter-title2 {
+    color: #0e6b74;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 27px;
+    font-family: monospace;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.grid-x2>.shrink {
+    width: auto;
+}
+
+.cell2.shrink {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cell2 {
+    width: 100%;
+    margin-right: 40%;
+}
+
+.filter-container2 .dropdown-grid-filter-container2 .dropdown-grid-filter2 label {
+    font-size: 1.3rem;
+    line-height: 1.1;
+    font-family: monospace;
+    color: #0e6b74;
+    font-weight: 500;
+    display: block;
+    position: relative;
+
+    margin-right: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 2px;
+}
+
+label>[type=checkbox],
+label>[type=radio] {
+    margin-right: 2rem;
+    -webkit-text-fill-color: #0e6b74;
+    margin: 1rem 1rem 0.2rem 0;
 }
 </style>
