@@ -57,7 +57,7 @@ async function initDB() {
         }
     })
 
-    models.Company = db.define('companySup', {
+    models.Company = db.define('company', {
         name: {
             type: DataTypes.STRING,
             allowNull: false

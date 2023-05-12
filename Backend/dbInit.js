@@ -375,9 +375,5 @@ export default async (models) => {
         },
     ]
 
-    
-    
-
-
     await models.Company.bulkCreate(CompanyModel)
 }
