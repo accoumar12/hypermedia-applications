@@ -332,11 +332,11 @@ export default async (models) => {
             link: "https://www.asahigroup-holdings.com/en/"
         },
         {
-            name: "Natura and go",
+            name: "Kraft Heinz",
             areas: "Goods",
             companyId: companySup5.id,
-            description: "Nature and Co is a Japanese company that specializes in natural and organic cosmetics. It was founded in 1984 by Mr. Toshiaki Kamata with the aim of creating high-quality, eco-friendly products that are gentle on the skin and the environment. The company's philosophy is centered around the concept of harmony with nature, and it strives to use only natural ingredients in its products. Nature and Co offers a wide range of skincare, body care, and hair care products that are free from harmful chemicals such as parabens, mineral oil, and synthetic fragrances. In addition to its commitment to using natural ingredients, Nature & Co is also dedicated to sustainability. The company uses eco-friendly packaging materials and has implemented various initiatives to reduce its environmental impact. Overall, Nature and Co is a company that values natural beauty and sustainability. Its products are designed to enhance the health and well-being of both individuals and the planet.",
-            link: "https://www.naturaeco.com/"
+            description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
+            link: "https://www.kraftheinzcompany.com/"
         },
         {
             name: "General Electric Co.",
