@@ -238,91 +238,104 @@ export default async (models) => {
             areas: "Healthcare",
             companyId: companySup1.id,
             description: "UnitedHealth Group, Inc. engages in the provision of health care coverage, software, and data consultancy services. It operates through the following segments: UnitedHealthcare, OptumHealth, OptumInsight, and OptumRx. The UnitedHealthcare segment utilizes Optum's capabilities to help coordinate patient care, improve affordability of medical care, analyze cost trends, manage pharmacy benefits, work with care providers more effectively, and create a simpler consumer experience. The OptumHealth segment provides health and wellness care, serving the broad health care marketplace including payers, care providers, employers, government, life sciences companies, and consumers. The OptumInsight segment focuses on data and analytics, technology, and information to help major participants in the healthcare industry. The OptumRx segment offers pharmacy care services. The company was founded by Richard T. Burke in January 1977 and is headquartered in Minnetonka, MN.",
-            link: "https://www.unitedhealthgroup.com/"
+            link: "https://www.unitedhealthgroup.com/",
+            image:"https://images.generated.photos/2D-ZKeoiXPPGKyvaymCUpul7jU34JkdmmBa1Qp9NWio/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDc1NzI1LmpwZw.jpg"
         },
         {
             name: "Cardinal Health",
             areas: "Healthcare",
+            image:"",
             companyId: companySup1.id,
             description: "Cardinal Health, Inc. is a healthcare services and products company, which engages in the provision of customized solutions for hospitals, healthcare systems, pharmacies, ambulatory surgery centers, clinical laboratories, and physician offices. It also provides medical products and pharmaceuticals and cost-effective solutions that enhance supply chain efficiency. The firm operates through the Pharmaceutical and Medical segments. The Pharmaceutical segment distributes branded and generic pharmaceutical, specialty pharmaceutical and over-the-counter healthcare and consumer products. The Medical segment manufactures, sources and distributes Cardinal Health branded medical, surgical, and laboratory products. The company was founded by Robert D. Walter in 1971 and is headquartered in Dublin, OH.",
-            link: "https://www.cardinalhealth.com/en.html"
+            link: "https://www.cardinalhealth.com/en.html",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Elevance Health, Inc.",
             areas: "Healthcare",
             companyId: companySup1.id,
             description: "Elevance Health, Inc. operates as a health company, which engages in improving lives and communities, and making healthcare simpler. It operates through the following segments: Commercial and Specialty Business, Government Business, CarelonRx, and Other. The Commercial and Specialty Business segment provides insurance products and services such as stop loss, dental, vision, life, disability and supplemental health insurance. The Government Business segment includes medicare and medicaid businesses, national government services, and services provided to the federal government. The CerelonRx segment offers formulary management, pharmacy networks, prescription drug database, member services, and mail order capabilities. The Other segment is involved in health services business focused on quality of healthcare by enabling and creating new care delivery and payment models. The company was founded in 1944 and is headquartered in Indianapolis, IN.",
-            link: "https://www.elevancehealth.com/"
+            link: "https://www.elevancehealth.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Cigna Group",
             areas: "Healthcare",
             companyId: companySup3.id,
             description: "The Cigna Group is engaged in the provision of global health services. It operates through the following segments: Evernorth, U.S. Medical, International Markets, and Group Disability and Other. The Evernorth segment includes a broad range of coordinated and point solution health services, including pharmacy solutions, benefits management solutions, care solutions and intelligence solutions. The U.S. Medical segment includes Cigna's U.S. Commercial and U.S. Government businesses that provide comprehensive medical and coordinated solutions to clients and customers. The International Markets segment includes supplemental health, life and accident insurance products and health care coverage in international markets, as well as health care benefits to globally mobile employees of multinational organizations. The Group Disability and Other segment represents group disability and life, corporate-owned life insurance, and run-off business consisting of reinsurance, settlement authority, and individual life insurance and annuity and retirement benefits business. The company was founded in 1792 and is headquartered in Bloomfield, CT.",
-            link: "https://www.cigna.com/"
+            link: "https://www.cigna.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Pfizer Inc.",
             areas: "Healthcare",
             companyId: companySup3.id,
             description: "Pfizer Inc is a research-based global biopharmaceutical company. It engages in the discovery, development, manufacture, marketing, sales and distribution of biopharmaceutical products worldwide. The firm works across developed and emerging markets to advance wellness, prevention, treatments and cures that challenge the most feared diseases. The company was founded by Charles Pfizer Sr. and Charles Erhart in 1849 and is headquartered in New York, NY",
-            link: "https://www.pfizer.it/"
+            link: "https://www.pfizer.it/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Microsoft",
             areas: "Technology",
             companyId: companySup0.id,
             description: "Microsoft Corp engages in the development and support of software, services, devices, and solutions. It operates through the following business segments: Productivity and Business Processes; Intelligent Cloud; and More Personal Computing. The Productivity and Business Processes segment comprises products and services in the portfolio of productivity, communication, and information services of the company spanning a variety of devices and platform. The Intelligent Cloud segment refers to the public, private, and hybrid serve products and cloud services of the company which can power modern business. The More Personal Computing segment encompasses products and services geared towards the interests of end users, developers, and IT professionals across all devices. The firm also offers operating systems; cross-device productivity applications; server applications; business solution applications; desktop and server management tools; software development tools; video games; personal computers, tablets; gaming and entertainment consoles; other intelligent devices; and related accessories. The company was founded by Paul Gardner Allen and William Henry Gates III in 1975 and is headquartered in Redmond",
-            link: "https://www.microsoft.com/it-it"
+            link: "https://www.microsoft.com/it-it",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Dell Technologies, Inc",
             areas: "Technology",
             companyId: companySup0.id,
             description: "Dell Technologies, Inc. is a holding company, which engages in the provision of information technology hardware, software, and service solutions through its subsidiaries. It operates through the following segments: Infrastructure Solutions Group (ISG), Client Solutions Group (CSG), and VMware. The ISG segment includes servers, networking, and storage, as well as services and third-party software and peripherals that are closely tied to the sale of ISG hardware. The CSG segment consists of sales to commercial and consumer customers of desktops, thin client products, and notebooks. The VMware segment provides compute, cloud management, networking and security, storage and availability, and other end-user computing offerings. The company was founded by Michael Saul Dell in 1984 and is headquartered in Round Rock, TX.",
-            link: "https://www.dell.com/it-it"
+            link: "https://www.dell.com/it-it",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Taiwan Semiconductor Manufacturing Co.",
             areas: "Technology",
             companyId: companySup0.id,
             description: "Taiwan Semiconductor Manufacturing Co., Ltd. engages in the manufacture and sale of integrated circuits and wafer semiconductor devices. Its chips are used in personal computers and peripheral products, information applications, wired and wireless communications systems products, and automotive and industrial equipment including consumer electronics such as digital video compact disc player, digital television, game consoles, and digital cameras. The company was founded by Chung Mou Chang on February 21, 1987 and is headquartered in Hsinchu, Taiwan.",
-            link: "https://www.tsmc.com/english"
+            link: "https://www.tsmc.com/english",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Intel Corporation",
             areas: "Technology",
             companyId: companySup10.id,
             description: "Intel Corporation engages in the design, manufacture, and sale of computer products and technologies. It delivers computer, networking, data storage, and communications platforms. The firm operates through the following segments: Client Computing Group (CCG), Data Center Group (DCG), Internet of Things Group (IOTG), Non-Volatile Memory Solutions Group (NSG), Programmable Solutions (PSG), and All Other. The CCG segment consists of platforms designed for notebooks, 2-in-1 systems, desktops, tablets, phones, wireless and wired connectivity products, and mobile communication components. The DCG segment includes workload-optimized platforms and related products designed for enterprise, cloud, and communication infrastructure market. The IOTG segment offers compute solutions for targeted verticals and embedded applications for the retail, manufacturing, health care, energy, automotive, and government market segments. The NSG segment constitutes of NAND flash memory products primarily used in solid-state drives. The PSG segment contains programmable semiconductors and related products for a broad range of markets, including communications, data center, industrial, military, and automotive. The All Other segment consists of results from other non-reportable segment and corporate-related charges. The company was founded by Robert Norton Noyce and Gordon Earle Moore on July 18, 1968 and is headquartered in Santa Clara, CA.",
-            link: "https://www.intel.com/content/www/us/en/homepage.html"
+            link: "https://www.intel.com/content/www/us/en/homepage.html",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "STMicroelectronics",
             areas: "Technology",
             companyId: companySup10.id,
             description: "STMicroelectronics is a global leader in the design, manufacturing, and sale of semiconductor devices. Their products are used in a wide range of applications including automotive and industrial equipment, consumer electronics, and wired and wireless communication systems. The company was founded in 1987 and is headquartered in Geneva, Switzerland. STMicroelectronics is committed to innovation, sustainability, and social responsibility, and is dedicated to providing their customers with high-quality products and services that meet their evolving needs. With a strong focus on research and development, STMicroelectronics is well-positioned to continue leading the way in the semiconductor industry for years to come.",
-            link: "https://www.st.com/content/st_com/en.html"
+            link: "https://www.st.com/content/st_com/en.html",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Nestlè",
             areas: "Goods",
             companyId: companySup2.id,
             description: "Nestlé is a leading global food and beverage company, with a portfolio of well-known brands including Nescafé, KitKat, and Gerber. The company was founded in 1866 and is headquartered in Vevey, Switzerland. Nestlé's products are sold in over 190 countries and include coffee, water, pet food, and infant nutrition. The company is committed to sustainability, responsible sourcing, and improving the lives of farmers and communities where it operates. Nestlé has set ambitious goals to reduce its environmental impact and has pledged to achieve zero net greenhouse gas emissions by 2050. With a focus on innovation and meeting consumer needs, Nestlé is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
-            link: "https://www.nestle.it/"
+            link: "https://www.nestle.it/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Unilever",
             areas: "Goods",
             companyId: companySup2.id,
             description: "Unilever is a leading global consumer goods company, with a portfolio of well-known brands including Dove, Lipton, and Ben & Jerry's. The company was founded in 1929 and is headquartered in London, UK. Unilever's products are sold in over 190 countries and include food, home care, and personal care products. The company is committed to sustainability, responsible sourcing, and improving the lives of people around the world. Unilever has set ambitious goals to reduce its environmental impact and has pledged to achieve net zero emissions from its products by 2039. With a focus on innovation and meeting the changing needs of consumers, Unilever is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
-            link: "https://www.unilever.com/"
+            link: "https://www.unilever.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Nike",
             areas: "Goods",
             companyId: companySup2.id,
             description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
-            link: "https://www.nike.com/it/",
+            link: "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
             image: "https://images.generated.photos/vnu9KzNx3sWXqL-ayVCXsCOsCtXiWpHEp5441eFcoe4/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTE3MTQzLmpwZw.jpg"
         },
         {
@@ -330,49 +343,56 @@ export default async (models) => {
             areas: "Goods",
             companyId: companySup5.id,
             description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage. Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
-            link: "https://www.asahigroup-holdings.com/en/"
+            link: "https://www.asahigroup-holdings.com/en/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Kraft Heinz",
             areas: "Goods",
             companyId: companySup5.id,
             description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
-            link: "https://www.kraftheinzcompany.com/"
+            link: "https://www.kraftheinzcompany.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "General Electric Co.",
             areas: "Sustainability",
             companyId: companySup11.id,
             description: "General Electric Co. engages in the provision of commercial and military aircraft engines and systems, wind, and other renewable energy generation equipment and grid solutions, and gas, steam, nuclear, and other power generation equipment. It operates through the following segments: Aviation, Healthcare, Renewable Energy, and Power. The Aviation segment designs and produces commercial and military aircraft engines, integrated engine components, electric power and mechanical aircraft systems. The Healthcare segment provides essential healthcare technologies to developed and emerging markets and has expertise in medical imaging, digital solutions, patient monitoring and diagnostics, drug discovery and performance improvement solutions. The Renewable Energy segment’s portfolio of business units includes onshore and offshore wind, blade manufacturing, grid solutions, hydro, storage, hybrid renewables and digital services offerings. The Power segment serves power generation, industrial, government and other customers worldwide with products and services related to energy production. The company was founded by Thomas Alva Edison in 1878 and is headquartered in Boston, MA.",
-            link: "https://www.ge.com/"
+            link: "https://www.ge.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Iberdrola SA",
             areas: "Sustainability",
             companyId: companySup11.id,
             description: "Iberdrola SA is a holding company, which engages in the generation, distribution, trading, and marketing of electricity. It operates through the following businesses: Networks, Liberalized, Renewables and Other Businesses. The Networks business engages in the transmission and distribution of energy businesses, as well as those of any other regulated nature, originating in Spain, the United Kingdom, the United States and Brazil. The Liberalized business includes wholesale and retail of electricity in Spain, Portugal, the United Kingdom, Mexico and Continental Europe. The Renewables business involves the generation of electricity from renewable energy sources worldwide. The Other Businesses segment consists of group's supply and gas storage up to the moment of sale and other non-energy businesses. The company was founded by Juan de Urrutia in 1901 and is headquartered in Bilbao, Spain",
-            link: "https://www.iberdrola.it/"
+            link: "https://www.iberdrola.it/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Canadian Solar, Inc.",
             areas: "Sustainability",
             companyId: companySup11.id,
             description: "Canadian Solar, Inc. engages in the manufacture of solar photovoltaic modules, provision of solar energy and battery storage solutions, and development of utility-scale solar and battery storage products. It operates through the CSI Solar and Global Energy segments. The CSI Solar segment designs, develops, and manufactures solar ingots, wafers, cells, modules, and other solar power and battery storage products. The Global Energy segment includes solar and battery storage project development and sale, asset management services for operational projects, sale of electricity, and investment in retained assets. The company was founded by Shawn Qu in October 2001 and is headquartered in Guelph, Canada.",
-            link: "https://www.canadiansolar.com/"
+            link: "https://www.canadiansolar.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "JinkoSolar Holding Co",
             areas: "Sustainability",
             companyId: companySup14.id,
             description: "JinkoSolar Holding Co., Ltd. engages in the manufacture of solar modules. It distributes solar products and sells its solutions and services to a diversified international utility, commercial and residential customers. The company was founded by Xian De Li, Kang Ping Chen, and Xian Hua Li on August 3, 2007 and is headquartered in Shangrao, China.",
-            link: "https://www.jinkosolar.com/en/"
+            link: "https://www.jinkosolar.com/en/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
         {
             name: "Enel X",
             areas: "Sustainability",
             companyId: companySup14.id,
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
-            link: "https://www.enelx.com/"
+            link: "https://www.enelx.com/",
+            image:"https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
         },
     ]
     await models.Company.bulkCreate(CompanyModel)
