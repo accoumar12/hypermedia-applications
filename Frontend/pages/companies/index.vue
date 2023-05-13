@@ -85,8 +85,102 @@
             <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
                 :link="'/locations/' + location.id" />
         </div>-->
+        <section class="team-members-grid">
+            <div class="grid-container">
+                <div class="filter-container team">
+
+                    <div class="grid-x">
+
+                        <div class="cell small-12 filter-title">Filter By Area:</div>
+                        <div class="dropdown-grid-filter-container">
+                            <div class="dropdown-grid-filter grid-x align-middle">
+
+                                <label for="all-areas">
+                                    ALL
+                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
+                                        checked>
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label for="Healthcare">
+                                    Healthcare <input type="radio" id="Healthcare-areas" value="Healthcare"
+                                        name="areas-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label for="Technology">
+                                    Technology <input type="radio" id="Technology-areas" value="Technology"
+                                        name="areas-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label for="Goods">
+                                    Goods <input type="radio" id="Goods-areas" value="Goods"
+                                        name="areas-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label for="Sustainability">
+                                    Sustainability <input type="radio" id="Sustainability-areas" value="Sustainability"
+                                        name="areas-categories" v-model="areas">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                            </div>
+                            <!-- <div class="form-container">
+                                <label for="age-filter">Role filter</label>
+                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card-container">
+                <Card v-for="company of filtered" :title="company.name"
+                    :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
+            </div>
+        </section>
     </main>
 </template>
+
+
+<script setup>
+// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+/*
+    In order to implement a filter, we use the computed property.
+    This allows to have a cached value that contains the filtered list.
+    Instead of using the normal list for the cards, we used the computed property directly.
+*/
+//const role = ref("");
+const areas = ref("");
+
+const filtered = computed(() => {
+    // Checking for values where the full list is provided
+    if (areas.value == 0 || areas.value == "")
+        return companies.value
+
+    const arr = []
+
+
+    // Filtering the list
+    for (let company of companies.value) {
+        if (company.areas == areas.value) {
+            arr.push(company)
+        }/*
+        else if (company.areas.toLowerCase().includes(areas.value.toLowerCase()))
+            arr.push(company)*/
+    }
+
+    // Returning the filtered list
+    return arr
+
+})
+
+
+</script>
 
 <script>
 export default {
@@ -158,7 +252,105 @@ export default {
     }
 })*/
 </script>
-<style>
+<style scoped>
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-color: none;
+    border-style: none;
+    margin-left: 5rem;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+
+.image-container h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.image-container:hover img {
+    opacity: 0;
+}
+
+.image-container:hover h2 {
+    opacity: 0;
+}
+
+.clickable-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #77c7ac;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-style: solid;
+    border-radius: 20%;
+    border-color: #77c7ac;
+}
+
+.clickable-image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.clickable-image-container:hover {
+    opacity: 1;
+}
+
+.clickable-image-container:hover img {
+    opacity: 1;
+}
+
+.image-container:hover .clickable-image-container {
+    opacity: 1;
+}
+
+.hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hover-content p {
+    margin: 0;
+    color: #fff;
+    margin-top: 2%;
+    text-decoration: none;
+}
+
+.hover-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
 .containeri {
     background-color: #033f52;
     padding-top: 8%;
@@ -355,5 +547,142 @@ export default {
     position: relative;
     padding-top: 10%;
     position: left;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    height: 60%;
+}
+
+.row1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    height: 40rem;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.row1:after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+}
+
+.gif-container {
+    position: relative;
+    justify-content: flex-start;
+
+}
+
+.grid-x {
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+#text-container {
+    position: right;
+    transform: translateY(-50%);
+    font-family: monospace;
+    font-size: 2rem;
+    color: #77c7ac;
+    justify-content: center;
+    padding-left: 20%;
+}
+
+
+label>[type=checkbox],
+label>[type=radio] {
+    margin-right: 2rem;
+    -webkit-text-fill-color: #0e6b74;
+    margin: 1rem 1rem 0.2rem 0;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-breadcrumbs li {
+        list-style-type: none;
+        margin-right: 10px;
+    }
+
+    .nav-link {
+        color: blue;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid blue;
+    }
+}
+
+/* For larger screens */
+@media screen and (min-width: 769px) {
+    .nav-breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-breadcrumbs li {
+        list-style-type: none;
+        margin-right: 0;
+    }
+
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+    .btn.active {
+        background-color: #666;
+        color: white;
+    }
+
+    .nav-link {
+        color: blue;
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid blue;
+    }
 }
 </style>

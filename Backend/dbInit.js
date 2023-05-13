@@ -322,7 +322,8 @@ export default async (models) => {
             areas: "Goods",
             companyId: companySup2.id,
             description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
-            link: "https://www.nike.com/it/"
+            link: "https://www.nike.com/it/",
+            image: "https://images.generated.photos/vnu9KzNx3sWXqL-ayVCXsCOsCtXiWpHEp5441eFcoe4/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTE3MTQzLmpwZw.jpg"
         },
         {
             name: "Asahi Group",
@@ -374,6 +375,5 @@ export default async (models) => {
             link: "https://www.enelx.com/"
         },
     ]
-
     await models.Company.bulkCreate(CompanyModel)
 }
