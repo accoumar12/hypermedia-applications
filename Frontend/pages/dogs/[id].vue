@@ -17,6 +17,7 @@
             <div class="social-icons">
                 <img src="~/assets/img/facebook.png" alt="Facebook" />
                 <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
+                <img src="~/assets/img/email.png" alt="Email" />
             </div>
             <div class="row">
                 <div class="column">
@@ -26,7 +27,6 @@
                     <div class="description-container">
                         <p2 class="description">{{ dog.description }}</p2>
                         <p2 class="description">{{ dog.description2 }}</p2>
-                        <button2>CONTACT</button2>
                     </div>
                 </div>
             </div>
@@ -189,17 +189,6 @@ hr {
 
 }
 
-button2 {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    margin-top: 10px;
-}
-
-button2:hover {
-    cursor: pointer;
-}
 
 .description-container {
     display: flex;

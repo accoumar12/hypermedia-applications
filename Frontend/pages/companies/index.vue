@@ -28,7 +28,9 @@
                     <img src="~/assets/img/technology.png" alt="Tech">
                 </div>
                 <div class="counter" data-target="100"></div>
-                <p>Technology Investments</p>
+                <a class="learn-more" href="/technology.vue#projects">
+                    Technology Investments
+                </a>
 
                 <div class="link-text">
                     <a><router-link to="/technology">
@@ -81,63 +83,7 @@
                 </div>
             </div>
         </div>
-        <section class="team-members-grid2">
-            <div class="grid-container2">
-                <div class="filter-container2 areas">
 
-                    <div class="grid-x2">
-
-                        <div class="cell2 small-12 filter-title2">Filter By Investment Area:</div>
-                        <div class="dropdown-grid-filter-container2">
-                            <div class="dropdown-grid-filter2 grid-x2 align-middle">
-
-                                <label for="all-team">
-                                    ALL
-                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
-                                        checked>
-                                    <span class="checkmark"></span>
-                                </label>
-
-
-                                <label for="investment-team">
-                                    Technology <input type="radio" id="Management-Team" value="Management Team"
-                                        name="team-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-
-                                <label for="investor-relations">
-                                    Healthcare <input type="radio" id="Investment-Team" value="Investment Team"
-                                        name="team-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-
-                                <label for="finance-operations">
-                                    Consumer Goods <input type="radio" id="finance-operations"
-                                        value="Operations and Finance Team" name="team-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-                                <label for="finance-operations">
-                                    Sustainability <input type="radio" id="finance-operations" value="Advisoring Board Team"
-                                        name="team-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- <div class="form-container">
-                                <label for="age-filter">Role filter</label>
-                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="card-container">
-                <Card v-for="companySup of filtered" :image="companySup.image" :title="companySup.name"
-                    :area="companySup.areas" :link="'/companies/' + companySup.id" />
-            </div>
-        </section>
         <!--<div id="card-container">
             <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
                 :link="'/locations/' + location.id" />
@@ -235,7 +181,13 @@ export default {
 
         // run the animation again when the user scrolls
         window.addEventListener('scroll', animateCounters);
-    }
+    },
+    methods: {
+        navigateToProjects() {
+            this.$router.push({ name: 'technology', hash: '#projects' });
+        },
+    },
+
 };
 //import { pbkdf2 } from 'crypto';
 

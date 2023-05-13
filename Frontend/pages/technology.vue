@@ -33,7 +33,7 @@
                         </button>
                     </div>
                     <div class="description-containera">
-                        <div v-if="activeSection === 1">
+                        <div v-if="activeSection === 1" id="section1">
                             <p2 class="description">
                                 VenTour understands the importance of technology investments and is committed to investing
                                 in cutting-edge technologies. We have a team of experienced professionals who have an eye
@@ -48,8 +48,8 @@
                                 portfolio companies reach their full potential.
                             </p2>
                         </div>
-                        <div v-else-if="activeSection === 2">
-                            <p2 class="description">
+                        <div v-else-if="activeSection === 2" id="projects">
+                            <p2 class="description2">
                                 Current Portfolio of the investment projects in the field of Technology:
                             </p2>
                             <ul class="comp-list">
@@ -159,6 +159,8 @@ export default {
             activeSection: 1,
         };
     },
+
+
 };
 
 const testimonialItems = document.querySelectorAll('.item label');
