@@ -11,7 +11,7 @@
                         <p class="nav-link">About Us</p>
                     </span>
                     <div class="dropdown-content">
-                        <p><router-link to="/history" class="nav-link">History</router-link></p>
+                        <p><router-link to="/History" class="nav-link">History</router-link></p>
                         <p><router-link to="/about-us" class="nav-link">Our Approach</router-link></p>
                     </div>
                 </div>
