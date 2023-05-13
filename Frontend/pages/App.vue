@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Carousel from './pages/history';
-import CarouselSlide from './pages/CarouselSlide';
+import Carousel from '/pages/history';
+import CarouselSlide from '/pages/CarouselSlide';
 
 export default {
     data() {
