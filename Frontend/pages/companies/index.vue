@@ -83,7 +83,23 @@
                 </div>
             </div>
         </div>
-
+        <div class="row41">
+            <div class="text-block">
+                Our Exit Strategies
+                <p class="left-text">{{ leftColumnText }}</p>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <div v-for="button in buttons" :key="button.id">
+                        <button style="color: white;" @click="updateText(button.text)"><span>{{ button.label
+                        }}</span></button>
+                    </div>
+                </div>
+                <div class="right-text">
+                    <p>{{ rightColumnText }}</p>
+                </div>
+            </div>
+        </div>
         <!--<div id="card-container">
             <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
                 :link="'/locations/' + location.id" />
@@ -187,7 +203,23 @@ export default {
             this.$router.push({ name: 'technology', hash: '#projects' });
         },
     },
-
+    data() {
+        return {
+            leftColumnText: 'We are committed to helping our portfolio companies realize theri full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
+            rightColumnText: '',
+            buttons: [
+                { id: 2, label: 'IPO', text: 'An Initial Public Offering is a process where a private company goes public and offers shares of stock to the public market. We prepare our companies for an IPO, including helping them build a strong management team, establishing governance and financial controls,and developing a compelling growth strategy. Our deep understanding of the public markets, combined with our network of investment bankers,allows us to guide our companies to achieve the best possible outcome.' },
+                { id: 3, label: 'M & A', text: 'Mergers & Acquisitions involves the acquisition of a company by another company often at a premiuim price. We work closely to identify potential acquirers and facilitate the M & A process, including valuation analysis, due diligence and negotiation. Our network of strategic buyers, private equity firms, and other potential acquirers enables us to help our companies to achieve transactions that maximize returns for our investors.' },
+                { id: 4, label: 'Strategic Sale', text: 'A strategic sale involves the scale of a company to a strategic buyer, such as a competitor or industry player. We have deep industry expertise and a broad network of strategic buyers, enabling us to help our portfolio companies identify potential acquirers and negotiate a successful sale. Our focus on building strong relationships with key players in the industry allows us to achieve the best possible outcome for our companies.' },
+                { id: 5, label: 'Recapitalization', text: 'Recapitalization involves restructuring the capital structure of a company, often through a combination of debt and equity. We work closely to evaluate their capital needs and develop comprehensive recapitalization plan that balances the companys growth objectives with its financial profile. We help the companies achieve a successful recapitalization that provides a strong foundation for future growth and opportunities.' },
+            ],
+        }
+    },
+    methods: {
+        updateText(newText) {
+            this.rightColumnText = newText;
+        },
+    },
 };
 //import { pbkdf2 } from 'crypto';
 
@@ -280,7 +312,7 @@ export default {
 .column4 {
 
     position: relative;
-    background-size: 100%;
+    background-size: 80%;
     height: 100%;
     flex-basis: 20%;
     padding: 0.7rem;
@@ -297,22 +329,20 @@ export default {
     background: url('assets/img/areas.png') center center no-repeat;
     content: "";
     position: absolute;
-    background-size: 100%;
+    background-size: 80%;
     width: 90%;
     height: 100%;
     flex-basis: 20%;
     padding: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.8);
-
     opacity: 0.07;
 
 
 }
 
 .column41 {
-
+    padding-top: 2%;
     position: relative;
-    background-size: 100%;
+    background-size: 80%;
     height: 100%;
     flex-basis: 20%;
     padding: 0.7rem;
@@ -334,7 +364,7 @@ export default {
     background: url('assets/img/areas.png') center center no-repeat;
     content: "";
     position: absolute;
-    background-size: 100%;
+    background-size: 80%;
     width: 90%;
     height: 100%;
     flex-basis: 20%;
@@ -347,16 +377,31 @@ export default {
 
 .row4 {
     width: 100%;
-    height: 25rem;
+    height: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 30px;
-    padding-bottom: 2%;
 }
 
+.row41 {
+    background: url('assets/img/exit.png') no-repeat;
 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row41 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .area-icons {
     display: flex;
@@ -364,7 +409,7 @@ export default {
     justify-content: center;
     width: 30%;
     height: 0;
-    padding-bottom: 40%;
+    padding-bottom: 50%;
     position: relative;
 }
 
@@ -489,5 +534,93 @@ label>[type=radio] {
     margin-right: 2rem;
     -webkit-text-fill-color: #0e6b74;
     margin: 1rem 1rem 0.2rem 0;
+}
+
+.text-block {
+    position: relative;
+    font-family: monospace;
+    font-size: 3rem;
+    color: white;
+    padding-left: 8%;
+    padding-top: 10%;
+    padding-right: 10%;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+}
+
+
+.row41 .left-text {
+    margin-top: 3%;
+    width: 35%;
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.buttons {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    display: flex;
+    width: 40%;
+    height: 100%;
+    gap: 2%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.buttons button {
+    width: 150px;
+    height: 2.5rem;
+    margin-right: 10%;
+    font-size: 18px;
+    text-decoration-color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #0e6b74;
+    border: 2px solid #0e6b74;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+.row4.button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5ecbde;
+}
+
+.right-text {
+    background-color: rgba(18, 143, 165, 0.7);
+    border-radius: 5%;
+    padding-left: 1%;
+    width: 33%;
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: #f6f9f9;
+}
+
+.col p {
+    font-size: 18px;
+    line-height: 1.5;
+
 }
 </style>

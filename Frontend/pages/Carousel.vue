@@ -1,39 +1,69 @@
 <template>
-  <div class="carousel">
-    <div class="inner" ref="inner" :style="innerStyles">
-      <div class="card" v-for="card in cards" :key="card">
-        {{ card }}
+  <div class="carousel-container">
+
+    <div class="carousel">
+      <div class="inner" ref="inner" :style="innerStyles">
+        <div class="card" v-for="(card, index) in  cards " :key="index"
+          :style="{ backgroundImage: `url(${backgroundUrl})` }">
+          <div class="card-content">
+            <h2 class="card-title">{{ card.title }}</h2>
+            <p class="card-text">{{ card.text }}</p>
+          </div>
+          <div class="left-arrow-container">
+
+            <img class="left-arrow" @click="prev" src="~/assets/img/left-arrows.png" />
+          </div>
+          <div class="right-arrow-container">
+            <img class="right-arrow" @click="next" src="~/assets/img/right-arrows.png" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <button @click="prev">prev</button>
-  <button @click="next">next</button>
 </template>
 
 <script>
+import backgroundUrl from "~/assets/img/card1.png";
 export default {
-  data () {
+  data() {
     return {
-      cards: [1, 2, 3, 4, 5, 6, 7, 8],
+      cards: [
+        {
+          backgroundImage: `url(${backgroundUrl})`,
+          title: '',
+          text: 'Card 1 Text'
+        },
+        {
+          image: '',
+          title: 'Card 2 Title',
+          text: 'Card 2 Text'
+        },
+        {
+          image: '',
+          title: 'Card 3 Title',
+          text: 'Card 3 Text'
+        }
+      ],
       innerStyles: {},
       step: '',
-      transitioning: false
+      transitioning: false,
+      currentCardIndex: 0,
     }
   },
 
-  mounted () {
+  mounted() {
     this.setStep()
     this.resetTranslate()
   },
 
   methods: {
-    setStep () {
+    setStep() {
       const innerWidth = this.$refs.inner.scrollWidth
       const totalCards = this.cards.length
-      this.step = `${innerWidth / totalCards}px`
+      this.step = `0%`
     },
 
-    next () {
+    next() {
       if (this.transitioning) return
 
       this.transitioning = true
@@ -48,7 +78,7 @@ export default {
       })
     },
 
-    prev () {
+    prev() {
       if (this.transitioning) return
 
       this.transitioning = true
@@ -63,21 +93,21 @@ export default {
       })
     },
 
-    moveLeft () {
+    moveLeft() {
       this.innerStyles = {
         transform: `translateX(-${this.step})
                     translateX(-${this.step})`
       }
     },
 
-    moveRight () {
+    moveRight() {
       this.innerStyles = {
         transform: `translateX(${this.step})
                     translateX(-${this.step})`
       }
     },
 
-    afterTransition (callback) {
+    afterTransition(callback) {
       const listener = () => {
         callback()
         this.$refs.inner.removeEventListener('transitionend', listener)
@@ -85,7 +115,7 @@ export default {
       this.$refs.inner.addEventListener('transitionend', listener)
     },
 
-    resetTranslate () {
+    resetTranslate() {
       this.innerStyles = {
         transition: 'none',
         transform: `translateX(-${this.step})`
@@ -96,33 +126,116 @@ export default {
 </script>
 
 <style>
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.left-arrow-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4%;
+  z-index: 1;
+  padding-left: 45%;
+  padding-bottom: 1%;
+}
+
+.right-arrow-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4%;
+  z-index: 1;
+  padding-right: 45%;
+  padding-bottom: 1%;
+}
+
+.left-arrow,
+.right-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-arrow img,
+.right-arrow img {
+  position: relative;
+  width: 5%;
+  height: 5%;
+}
+
 .carousel {
-  width: 170px;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
 }
 
 .inner {
-  transition: transform 0.2s;
+  width: 100%;
+  transition: transform 0.1s;
   white-space: nowrap;
 }
 
 .card {
-  width: 40px;
-  margin-right: 10px;
+  width: 100%;
+  height: 100%;
   display: inline-flex;
-
-  /* optional */
-  height: 40px;
-  background-color: #39b1bd;
   color: white;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 80% 100%;
 }
 
-/* optional */
-button {
-  margin-right: 5px;
-  margin-top: 10px;
+.card img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card .content .hr {
+  width: 20%;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #110404;
+}
+
+.card p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #fff;
 }
 </style>
