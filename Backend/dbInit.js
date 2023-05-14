@@ -294,7 +294,7 @@ export default async (models) => {
             description: "Dell Technologies, Inc. is a holding company, which engages in the provision of information technology hardware, software, and service solutions through its subsidiaries. It operates through the following segments: Infrastructure Solutions Group (ISG), Client Solutions Group (CSG), and VMware. The ISG segment includes servers, networking, and storage, as well as services and third-party software and peripherals that are closely tied to the sale of ISG hardware. The CSG segment consists of sales to commercial and consumer customers of desktops, thin client products, and notebooks. The VMware segment provides compute, cloud management, networking and security, storage and availability, and other end-user computing offerings. The company was founded by Michael Saul Dell in 1984 and is headquartered in Round Rock, TX.",
             link: "https://www.dell.com/it-it",
             ceo: "Michael Dell",
-            image: "https://w7.pngwing.com/pngs/255/14/png-transparent-dell-vostro-laptop-hewlett-packard-logo-laptop-blue-electronics-text-thumbnail.png"
+            image: "https://aeseurope.com/wp-content/uploads/2021/05/dell-technologies-vertical_logo.png"
         },
         {
             name: "Taiwan Semiconductor Manufacturing Co.",

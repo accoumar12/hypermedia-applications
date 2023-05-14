@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div id="card-container">
-                <Card v-for="company of filtered" :title="company.name"
+                <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
                     :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
             </div>
         </section>

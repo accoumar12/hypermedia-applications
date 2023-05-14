@@ -73,6 +73,15 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
+        ceo: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        image: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        
 
     })
 
