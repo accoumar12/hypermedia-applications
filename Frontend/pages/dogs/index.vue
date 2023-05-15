@@ -97,44 +97,6 @@
                 <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role" :team="dog.team"
                     :area="dog.area" :link="'/dogs/' + dog.id" />
             </div>
-            <!--
-            <div>
-                <label for="area-filter">Filter by area:</label>
-                <select id="area-filter" v-model="area">
-                    <option value="">All</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Healthcare">Healthcare</option>
-                    <option value="Consumer goods">Consumer goods</option>
-                    <option value="Sustainability">Sustainability</option>
-                </select>
-            </div>
-            <ul>
-                <li v-for="dog in filteredPeople" :key="person.id">
-                    <img :src="person.image" :alt="person.name">
-                    <h2>{{ person.name }}</h2>
-                    <p>{{ person.description }}</p>
-                    <p><strong>Area:</strong> {{ person.area }}</p>
-                </li>
-            </ul>-->
-            <!--
-            <div class="row">
-                <div class="image-container">
-                    <img src="~/assets/img/People/P01.png" />
-                    <h2>John Doe</h2>
-                    <div class="clickable-image-container">
-                        <a href="#">
-                            <div class="hover-content">
-                                <img src="~/assets/img/People/P01.png" />
-                                <h3>John Doe</h3>
-                                <p>CEO and Founder</p>
-                                <p>Health</p>
-
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            -->
         </section>
     </main>
 </template>
