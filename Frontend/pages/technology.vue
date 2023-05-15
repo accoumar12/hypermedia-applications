@@ -154,9 +154,12 @@
         -->
 <script>
 export default {
+
     data() {
+        let i = 2
         return {
-            activeSection: 1,
+
+            activeSection: i,
         };
     },
 
