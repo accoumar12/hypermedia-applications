@@ -326,7 +326,7 @@ export default async (models) => {
         },
         {
             name: "Nestlè",
-            areas: "Goods",
+            areas: "Consumer Goods",
             companyId: companySup2.id,
             description: "Nestlé is a leading global food and beverage company, with a portfolio of well-known brands including Nescafé, KitKat, and Gerber. The company was founded in 1866 and is headquartered in Vevey, Switzerland. Nestlé's products are sold in over 190 countries and include coffee, water, pet food, and infant nutrition. The company is committed to sustainability, responsible sourcing, and improving the lives of farmers and communities where it operates. Nestlé has set ambitious goals to reduce its environmental impact and has pledged to achieve zero net greenhouse gas emissions by 2050. With a focus on innovation and meeting consumer needs, Nestlé is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
             link: "https://www.nestle.it/",
@@ -335,7 +335,7 @@ export default async (models) => {
         },
         {
             name: "Unilever",
-            areas: "Goods",
+            areas: "Consumer Goods",
             companyId: companySup2.id,
             description: "Unilever is a leading global consumer goods company, with a portfolio of well-known brands including Dove, Lipton, and Ben & Jerry's. The company was founded in 1929 and is headquartered in London, UK. Unilever's products are sold in over 190 countries and include food, home care, and personal care products. The company is committed to sustainability, responsible sourcing, and improving the lives of people around the world. Unilever has set ambitious goals to reduce its environmental impact and has pledged to achieve net zero emissions from its products by 2039. With a focus on innovation and meeting the changing needs of consumers, Unilever is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
             link: "https://www.unilever.com/",
@@ -344,16 +344,16 @@ export default async (models) => {
         },
         {
             name: "Nike",
-            areas: "Goods",
+            areas: "Consumer Goods",
             companyId: companySup2.id,
             description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
             link: "https://www.nike.com/it/",
             ceo: "John Donahoe",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png"
+            image: "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f3.png"
         },
         {
             name: "Asahi Group",
-            areas: "Goods",
+            areas: "Consumer Goods",
             companyId: companySup5.id,
             description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage. Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
             link: "https://www.asahigroup-holdings.com/en/",
@@ -362,12 +362,12 @@ export default async (models) => {
         },
         {
             name: "Kraft Heinz",
-            areas: "Goods",
+            areas: "Consumer Goods",
             companyId: companySup5.id,
             description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
             link: "https://www.kraftheinzcompany.com/",
             ceo: "Miguel Patricio",
-            image: "https://www.kraftheinzcompany.com/images/logo_main.png"
+            image: "https://cdn.abcotvs.com/dip/images/572033_032515-wtvd-heinz-kraft-logo-img.jpg?w=1600"
         },
         {
             name: "General Electric Co.",
@@ -394,7 +394,7 @@ export default async (models) => {
             description: "Canadian Solar, Inc. engages in the manufacture of solar photovoltaic modules, provision of solar energy and battery storage solutions, and development of utility-scale solar and battery storage products. It operates through the CSI Solar and Global Energy segments. The CSI Solar segment designs, develops, and manufactures solar ingots, wafers, cells, modules, and other solar power and battery storage products. The Global Energy segment includes solar and battery storage project development and sale, asset management services for operational projects, sale of electricity, and investment in retained assets. The company was founded by Shawn Qu in October 2001 and is headquartered in Guelph, Canada.",
             link: "https://www.canadiansolar.com/",
             ceo: "Xiaohua Qu Ph.D.",
-            image: "https://www.canadiansolar.com/wp-content/uploads/2019/11/cropped-1.png"
+            image: "https://tandem-solar-systems.com/wp-content/uploads/2017/03/Canadian-Solar-logo.png"
         },
         {
             name: "JinkoSolar Holding Co",
@@ -412,7 +412,7 @@ export default async (models) => {
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             link: "https://www.enelx.com/",
             ceo: "Francesco Venturini",
-            image: "https://www.enelx.com/content/dam/local-romania/header/logo_Enel%20X.png"
+            image: "https://static.blitzquotidiano.it/wp/wp-content/uploads/2019/12/enel_x_logo-1024x696.jpg"
         },
     ]
     await models.Company.bulkCreate(CompanyModel)

@@ -17,9 +17,9 @@
                 <!--<img class="img" src='~/assets/img/People/P01.png' />-->
 
 
-                <div class="clickable-image-container">
+                <div class="clickable-image-container2">
                     <NuxtLink :to="link">
-                        <div class="hover-content">
+                        <div class="hover-content2">
 
                             <img class="img" :src="image" />
                             <h3><span class="subtitle">{{ title }}</span></h3>
@@ -47,7 +47,7 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 70px;
     height: 60%;
 }
 
@@ -61,9 +61,12 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 }
 
 .title {
-    font-size: 2em;
+    padding-top: 6%;
+    padding-left: 45%;
+    position: relative;
+    font-size: 2rem;
     font-weight: bold;
-    text-decoration: none;
+    font-family: monospace;
 }
 
 .subtitle {
@@ -88,8 +91,8 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 .image-container img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+    max-width: 95%;
+    height: 50%;
     width: 80%;
 }
 
@@ -107,25 +110,25 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     opacity: 0;
 }
 
-.clickable-image-container {
+.clickable-image-container2 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #033f52;
+    background-color: #94d5db;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-style: solid;
     border-radius: 20%;
-    border-color: white;
+    border-color: #94d5db;
 }
 
-.clickable-image-container a {
+.clickable-image-container2 a {
     text-decoration: none;
 }
 
-.clickable-image-container img {
+.clickable-image-container2 img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -134,37 +137,36 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     transition: opacity 0.3s ease-in-out;
 }
 
-.clickable-image-container:hover {
+.clickable-image-container2:hover {
     opacity: 1;
 }
 
-.clickable-image-container:hover img {
+.clickable-image-container2:hover img {
     opacity: 1;
     height: auto;
 }
 
-.image-container:hover .clickable-image-container {
+.image-container:hover .clickable-image-container2 {
     opacity: 1;
 }
 
-.hover-content {
+.hover-content2 {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
     text-decoration: none;
 }
 
-.hover-content p {
+.hover-content2 p {
     margin: 0;
-    color: white;
+    color: black;
     margin-top: 2%;
     text-decoration: none;
 }
 
-.hover-content img {
+.hover-content2 img {
     display: block;
     margin-top: 50;
     max-width: 50%;

@@ -19,49 +19,29 @@
                 <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
                 <img src="~/assets/img/email.png" alt="Email" />
             </div>
-            <div class="row">
-                <div class="column">
-                    <img id="main-img" :src="dog.image" />
-                </div>
+            <div class="row5">
                 <div class="column2">
-                    
-                    <div class="description-containera">
-                        <div class="button-container" style="position: relative; top: 0; z-index: 1;">
-                            <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
-                                <br>
-                                DESCRIPTION
-                            </button>
-                            <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
-                                <br>
-                                PROJECTS
-                            </button>
-                        </div>
-                        <div class="description-container" v-if="activeSection === 1">
-                            <p2 class="description">{{ dog.description }}</p2>
-                            <p2 class="description">{{ dog.description2 }}</p2>    
-                        </div>
-                        <div v-else-if="activeSection === 2">
-                            <p>AOOOOOOOOOOOOOOOO</p>
-                        </div>
-                    </div>
-                    <div class="description-container">                      
-                        <button2>CONTACT</button2>
+                    <div class="description-container">
+                        <p2 class="description">{{ dog.description }}</p2>
+                        <p2 class="description">{{ dog.description2 }}</p2>
                     </div>
                 </div>
             </div>
             <hr />
         </div>
-        <div class="row">
+        <div class="row5">
             <div class="text-center">
                 <p>COMPANIES:</p>
             </div>
         </div>
     </main>
-    <div class="row2">
-            <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
-                    :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
-            <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
-            <!--
+    <!--
+    <div class="row6">
+        <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo" :area="company.areas"
+            :image="company.image" :link="'/companies/' + company.id" />
+            -->
+    <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
+    <!--
             <div class="column3">
                 <img src="image1.jpg" alt="Image 1">
                 <p>Text for image 1</p>
@@ -73,8 +53,8 @@
             <div class="column3">
                 <img src="image3.jpg" alt="Image 3">
                 <p>Text for image 3</p>
-            </div>-->
-        </div>
+            </div>
+</div>-->
 </template>
         <!--
             v-html allows us to change the structure of a HTML element.
@@ -87,22 +67,22 @@
         -->
   
 <script>
-    export default defineNuxtComponent({
-        data() {
-            return {
-                activeSection: 1,
-            };
-        },
-        async asyncData() {
-            //const route = useRoute()
-            const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies')
+export default defineNuxtComponent({
+    data() {
+        return {
+            activeSection: 1,
+        };
+    },
+    async asyncData() {
+        //const route = useRoute()
+        const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies')
 
-            return {
-                companies
-            }
+        return {
+            companies
         }
-    })
-    
+    }
+})
+
 
 </script>
 <script setup>
@@ -125,7 +105,7 @@ const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the full list is provided
     for (let company of companies.value) {
-        if ((areas.value == 0 || areas.value == "")&(company.companyId==id)){
+        if ((areas.value == 0 || areas.value == "") & (company.companyId == id)) {
             console.log(company)
             arrTot.push(company)
         }
@@ -237,7 +217,7 @@ hr {
     margin: 20px 0;
 }
 
-.row {
+.row5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,6 +249,17 @@ hr {
 
 }
 
+button2 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+button2:hover {
+    cursor: pointer;
+}
 
 .description-container {
     display: flex;
@@ -287,7 +278,7 @@ hr {
     font-size: 1.1rem;
 }
 
-.row2 {
+.row6 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -334,33 +325,5 @@ hr {
 #description {
     padding: 0 20px 0 20px;
     font-size: 15pt;
-}
-.section-button {
-    padding-bottom: 2.5%;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-right: 20px;
-    font-family: monospace;
-    color: #033f52;
-    font-size: 1rem;
-}
-
-.section-button.active {
-    font-family: monospace;
-    font-size: 1rem;
-    color: #033f52;
-    font-weight: bold;
-    background-color: rgb(212, 208, 208);
-    border-radius: 10%;
-}
-
-.button-container {
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2%;
-    font-family: monospace;
-    color: #033f52;
 }
 </style>

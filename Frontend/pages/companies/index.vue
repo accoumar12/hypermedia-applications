@@ -83,6 +83,22 @@
                 </div>
             </div>
         </div>
+        <section class="team-members-grid">
+            <div class="title">ALL COMPANIES</div>
+            <div class="title2">PORTFOLIO SNAPSHOT</div>
+            <div class="dropdown-grid-filter-container">
+                <!-- <label for="all-areas">
+                                    ALL
+                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
+                                        checked>
+                                    <span class="checkmark"></span>
+                                </label>-->
+                <div id="card-container">
+                    <Card2 v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                        :link="'/companies/' + company.id" />
+                </div>
+            </div>
+        </section>
         <div class="row41">
             <div class="text-block">
                 Our Exit Strategies
@@ -95,8 +111,10 @@
                         }}</span></button>
                     </div>
                 </div>
-                <div class="right-text">
-                    <p>{{ rightColumnText }}</p>
+                <div style="position=relative;display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="right-text">
+                        <p>{{ rightColumnText }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,63 +122,7 @@
             <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
                 :link="'/locations/' + location.id" />
         </div>-->
-        <section class="team-members-grid">
-            <div class="grid-container">
-                <div class="filter-container team">
 
-                    <div class="grid-x">
-
-                        <div class="cell small-12 filter-title">Filter By Area:</div>
-                        <div class="dropdown-grid-filter-container">
-                            <div class="dropdown-grid-filter grid-x align-middle">
-
-                                <label for="all-areas">
-                                    ALL
-                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
-                                        checked>
-                                    <span class="checkmark"></span>
-                                </label>
-
-
-                                <label for="Healthcare">
-                                    Healthcare <input type="radio" id="Healthcare-areas" value="Healthcare"
-                                        name="areas-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-
-                                <label for="Technology">
-                                    Technology <input type="radio" id="Technology-areas" value="Technology"
-                                        name="areas-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-                                <label for="Goods">
-                                    Goods <input type="radio" id="Goods-areas" value="Goods"
-                                        name="areas-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-                                <label for="Sustainability">
-                                    Sustainability <input type="radio" id="Sustainability-areas" value="Sustainability"
-                                        name="areas-categories" v-model="areas">
-                                    <span class="checkmark"></span>
-                                </label>
-
-                            </div>
-                            <!-- <div class="form-container">
-                                <label for="age-filter">Role filter</label>
-                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="card-container">
-                <Card2 v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
-                    :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
-            </div>
-        </section>
     </main>
 </template>
 
@@ -180,7 +142,7 @@ const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the full list is provided
     for (let company of companies.value) {
-        if ((areas.value == 0 || areas.value == "")&(company.id>8)){
+        if ((areas.value == 0 || areas.value == "") & (company.id > 8)) {
             console.log(company)
             arrTot.push(company)
         }
@@ -213,7 +175,6 @@ export default {
         const counters = document.querySelectorAll('.counter');
         const delay = 500;
 
-        // define a function to check if an element is in view
         const isInView = (el) => {
             const rect = el.getBoundingClientRect();
             return (
@@ -226,7 +187,6 @@ export default {
 
         const animateCounters = () => {
             counters.forEach((counter, index) => {
-                // only animate counters that are in view
                 if (isInView(counter)) {
                     const target = +counter.dataset.target;
                     const start = performance.now();
@@ -241,22 +201,21 @@ export default {
                             requestAnimationFrame(step);
                         }
                     };
-                    setTimeout(() => {
-                        requestAnimationFrame(step);
-                    }, index * delay);
 
+                    requestAnimationFrame(step);
                 } else {
                     counter.textContent = '0+';
-
                 }
             });
         };
 
-        // run the animation once when the page loads
-        animateCounters();
+        const handleScroll = () => {
+            animateCounters();
+            window.removeEventListener('scroll', handleScroll);
+        };
 
-        // run the animation again when the user scrolls
-        window.addEventListener('scroll', animateCounters);
+        animateCounters();
+        window.addEventListener('scroll', handleScroll);
     },
     methods: {
         navigateToProjects() {
@@ -300,7 +259,6 @@ export default {
 })*/
 </script>
 <style scoped>
-
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -308,6 +266,7 @@ export default {
     justify-content: center;
     text-decoration: none;
     border: none;
+    padding-bottom: 2%;
 }
 
 .image-container {
@@ -581,11 +540,8 @@ export default {
 
 
 .column4 p {
-
     font-size: 1.5rem;
-
     font-weight: bold;
-
 }
 
 
@@ -616,15 +572,41 @@ label>[type=radio] {
     margin: 1rem 1rem 0.2rem 0;
 }
 
+.team-members-grid {
+    background-color: rgba(233, 237, 237, 0.997);
+    background-position-x: center;
+    opacity: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    padding-top: 6%;
+    padding-left: 46%;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.title2 {
+    padding-top: 1%;
+    padding-left: 45.5%;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: monospace;
+}
+
 .text-block {
     position: relative;
     font-family: monospace;
     font-size: 3rem;
     color: white;
     padding-left: 8%;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-right: 10%;
 }
+
 .container-fluid {
     max-width: 100%;
     margin: 0;
@@ -632,11 +614,13 @@ label>[type=radio] {
 }
 
 .buttons-container {
-        display: flex;
+    display: flex;
     flex-direction: column;
-        align-items: center;
+    align-items: center;
     padding-left: 5%;
-    }
+    padding-bottom: 2%;
+}
+
 .row41 .left-text {
     margin-top: 3%;
     width: 35%;
@@ -644,18 +628,20 @@ label>[type=radio] {
     font-size: 1.1rem;
     color: white;
 }
+
 .buttons {
     padding-top: 5%;
     padding-bottom: 2%;
-        display: flex;
+    display: flex;
     width: 40%;
     height: 100%;
     gap: 2%;
-        flex-direction: row;
+    flex-direction: row;
     justify-content: center;
-        align-items: center;
+    align-items: center;
     z-index: 1;
-    }
+}
+
 .buttons button {
     width: 150px;
     height: 2.5rem;
@@ -669,17 +655,20 @@ label>[type=radio] {
     background-color: #0e6b74;
     border: 2px solid #0e6b74;
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
-    }
+}
+
 .row4.button {
     padding: 10px 20px;
     margin: 5px;
-        border: none;
+    border: none;
     border-radius: 10%;
-        cursor: pointer;
-    }
+    cursor: pointer;
+}
+
 button:hover {
     background-color: #5ecbde;
-    }
+}
+
 .right-text {
     background-color: rgba(18, 143, 165, 0.7);
     border-radius: 5%;
@@ -688,7 +677,8 @@ button:hover {
     font-family: monospace;
     font-size: 1.1rem;
     color: #f6f9f9;
-    }
+}
+
 .col p {
     font-size: 18px;
     line-height: 1.5;
