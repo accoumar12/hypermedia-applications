@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div id="card-container">
-                <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
+                <Card2 v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
                     :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
             </div>
         </section>
@@ -158,9 +158,15 @@ const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL +
 const areas = ref("");
 
 const filtered = computed(() => {
+    const arrTot = []
     // Checking for values where the full list is provided
-    if (areas.value == 0 || areas.value == "")
-        return companies.value
+    for (let company of companies.value) {
+        if ((areas.value == 0 || areas.value == "")&(company.id>8)){
+            console.log(company)
+            arrTot.push(company)
+        }
+    }
+    return arrTot
 
     const arr = []
 

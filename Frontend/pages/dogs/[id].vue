@@ -56,8 +56,10 @@
                 <p>COMPANIES:</p>
             </div>
         </div>
-        <div class="row2">
-            <Card v-for = "company of companies" :title = "company.name" :subtitle = "company.area" :link = "'/companies/' + company.id" />
+    </main>
+    <div class="row2">
+            <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo"
+                    :area="company.areas" :image="company.image" :link="'/companies/' + company.id" />
             <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
             <!--
             <div class="column3">
@@ -73,7 +75,6 @@
                 <p>Text for image 3</p>
             </div>-->
         </div>
-    </main>
 </template>
         <!--
             v-html allows us to change the structure of a HTML element.
@@ -110,6 +111,43 @@ const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/' + id)
+
+const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+/*
+    In order to implement a filter, we use the computed property.
+    This allows to have a cached value that contains the filtered list.
+    Instead of using the normal list for the cards, we used the computed property directly.
+*/
+//const role = ref("");
+const areas = ref("");
+
+const filtered = computed(() => {
+    const arrTot = []
+    // Checking for values where the full list is provided
+    for (let company of companies.value) {
+        if ((areas.value == 0 || areas.value == "")&(company.companyId==id)){
+            console.log(company)
+            arrTot.push(company)
+        }
+    }
+    return arrTot
+
+    const arr = []
+
+
+    // Filtering the list
+    for (let company of companies.value) {
+        if (company.areas == areas.value) {
+            arr.push(company)
+        }/*
+        else if (company.areas.toLowerCase().includes(areas.value.toLowerCase()))
+            arr.push(company)*/
+    }
+
+    // Returning the filtered list
+    return arr
+
+})
 
 </script>
 
