@@ -158,6 +158,7 @@ main {
     justify-content: center;
     text-decoration: none;
     border: none;
+    padding-bottom: 3%;
 }
 
 .breadcrumbs {

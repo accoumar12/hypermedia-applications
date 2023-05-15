@@ -28,9 +28,7 @@
                     <img src="~/assets/img/technology.png" alt="Tech">
                 </div>
                 <div class="counter" data-target="100"></div>
-                <a class="learn-more" href="/technology.vue#projects">
-                    Technology Investments
-                </a>
+                <p>Technology Investments</p>
 
                 <div class="link-text">
                     <a><router-link to="/technology">
@@ -86,16 +84,16 @@
         <section class="team-members-grid">
             <div class="title">ALL COMPANIES</div>
             <div class="title2">PORTFOLIO SNAPSHOT</div>
-            <div class="dropdown-grid-filter-container">
-                <!-- <label for="all-areas">
+            <!-- <label for="all-areas">
                                     ALL
                                     <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
                                         checked>
                                     <span class="checkmark"></span>
                                 </label>-->
+            <div class="row-c">
                 <div id="card-container">
-                    <Card2 v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                        :link="'/companies/' + company.id" />
+                    <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
+                        :image="company.image" :link="'/companies/' + company.id" />
                 </div>
             </div>
         </section>
@@ -492,6 +490,8 @@ export default {
 
 }
 
+
+
 .row4 {
     width: 100%;
     height: 30%;
@@ -582,9 +582,9 @@ label>[type=radio] {
 
 .title {
     padding-top: 6%;
-    padding-left: 46%;
+    padding-left: 44.8%;
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 

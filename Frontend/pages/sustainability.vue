@@ -86,7 +86,7 @@
                         <label class="label_testimonial3-1" for="radio_testimonial3-1">Canadian Solar</label>
                         <div class="content-test content_testimonial3-1">
                             <span class="picto"></span>
-                            <h1>Canadian Solar</h1>
+
                             <p>"I have been investing with VenTour for years, and I can say with confidence that they are
                                 one of the best in the business when it comes to sustainability. They have a clear vision of
                                 the kind of world they want to help create. It's been a pleasure to be a part of their
@@ -101,7 +101,7 @@
                         <label class="label_testimonial3-2" for="radio_testimonial3-2">Enel X</label>
                         <div class="content-test content_testimonial3-2">
                             <span class="picto"></span>
-                            <h1>Enel X</h1>
+
                             <p>"Working with VenTour has been a fantastic experience. Not only are they dedicated to
                                 sustainability, but they are also incredibly knowledgeable about the latest trends and
                                 technologies in the field. I feel confident that my investment is not only supporting a good
@@ -116,7 +116,7 @@
                         <label class="label_testimonial3-3" for="radio_testimonial3-3">Iberdrola SA</label>
                         <div class="content-test content_testimonial3-3">
                             <span class="picto"></span>
-                            <h1>Iberdrola SA</h1>
+
                             <p>"VenTour has truly shown us that investing in sustainability can be both profitable and good
                                 for the planet. They have a keen eye for identifying companies that are making a real impact
                                 on the environment, and their support has been instrumental in helping these businesses
@@ -131,8 +131,7 @@
                             Electric Co.</label>
                         <div class="content-test content_testimonial3-4">
                             <span class="picto"></span>
-                            <h1>General
-                                Electric Co.</h1>
+
                             <p>"I am so impressed with VenTour's commitment to sustainability. Their portfolio of companies
                                 includes some of the most innovative and environmentally-conscious businesses I have ever
                                 seen. As an investor, I am proud to be associated with a company that is making a real
@@ -600,6 +599,21 @@ input:checked~.content-test {
     }
 }
 
+.picto {
+    display: inline-block;
+    width: 50px;
+
+    height: 50px;
+
+    overflow: hidden;
+}
+
+.picto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
     .content_testimonial3-1 .picto {
@@ -651,8 +665,8 @@ input:checked~.content-test {
 }
 
 .content_testimonial3-3 .picto {
-    height: 28%;
-    width: 30%;
+    height: 65px;
+    width: 125px;
     padding-left: 2%;
     background-image: url('assets/img/iberdrola.png');
     background-position: center;

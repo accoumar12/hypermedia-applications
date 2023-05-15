@@ -86,7 +86,7 @@
                         <label class="label_testimonial1-1" for="radio_testimonial1-1">UnitedHealth Group</label>
                         <div class="content-test content_testimonial1-1">
                             <span class="picto"></span>
-                            <h1>UnitedHealth Group</h1>
+
                             <p>"As a healthcare professional, I am thrilled to be a part of VenTour's investment portfolio.
                                 Their commitment to improving patient outcomes through innovative technology and services is
                                 truly inspiring.
@@ -101,7 +101,7 @@
                         <label class="label_testimonial1-2" for="radio_testimonial1-2">Cigna Group</label>
                         <div class="content-test content_testimonial1-2">
                             <span class="picto"></span>
-                            <h1>Cigna Group</h1>
+
                             <p>"VenTour's expertise and guidance have been instrumental in helping our healthcare startup
                                 succeed. Their understanding of the market and willingness to take risks has allowed us to
                                 develop groundbreaking solutions that have the potential to transform patient care."</p>
@@ -115,7 +115,7 @@
                         <label class="label_testimonial1-3" for="radio_testimonial1-3">CardinalHealth</label>
                         <div class="content-test content_testimonial1-3">
                             <span class="picto"></span>
-                            <h1>CardinalHealth</h1>
+
                             <p>"Working with VenTour has been an incredibly positive experience. Their team is
                                 knowledgeable, professional, and committed to supporting companies that are making a real
                                 difference in healthcare. I have no doubt that their investments will have a lasting impact
@@ -129,7 +129,7 @@
                         <label class="label_testimonial1-4" for="radio_testimonial1-4">Pfizer</label>
                         <div class="content-test content_testimonial1-4">
                             <span class="picto"></span>
-                            <h1>Pfizer</h1>
+
                             <p>"As an investor, I appreciate VenTour's approach to healthcare investments. They are focused
                                 on supporting companies that are developing innovative solutions to some of the biggest
                                 challenges in healthcare. Their commitment to making a positive impact is evident in their
@@ -597,6 +597,21 @@ input:checked~.content-test {
     }
 }
 
+.picto {
+    display: inline-block;
+    width: 50px;
+
+    height: 50px;
+
+    overflow: hidden;
+}
+
+.picto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
     .content_testimonial-1 .picto {
@@ -621,9 +636,9 @@ input:checked~.content-test {
 }
 
 .content_testimonial1-1 .picto {
-    height: 20%;
+    height: 30%;
     width: 30%;
-    background-image: url("assets/img/UnitedHealth.jpg");
+    background-image: url("assets/img/UnitedHealth.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -649,8 +664,8 @@ input:checked~.content-test {
 }
 
 .content_testimonial1-3 .picto {
-    height: 15%;
-    width: 20%;
+    height: 82px;
+    width: 160px;
     padding-left: 2%;
     background-image: url('assets/img/CardinalHealth.png');
     background-position: center;
@@ -666,7 +681,7 @@ input:checked~.content-test {
     margin-top: 2%;
     height: 25%;
     width: 20%;
-    background-image: url('assets/img/pfizer.jpg');
+    background-image: url('assets/img/pfizer.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -713,7 +728,7 @@ label.label_testimonial1-1:before {
     width: 20%;
     height: 100%;
     margin-left: 3%;
-    background-image: url('assets/img/UnitedHealth.jpg');
+    background-image: url('assets/img/UnitedHealth.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -755,7 +770,7 @@ label.label_testimonial1-4:before {
     width: 15%;
     height: 100%;
     margin-left: 15px;
-    background-image: url('assets/img/pfizer.jpg');
+    background-image: url('assets/img/pfizer.png');
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;

@@ -19,7 +19,10 @@
                 <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
                 <img src="~/assets/img/email.png" alt="Email" />
             </div>
-            <div class="row5">
+            <div class="row-section">
+                <div class="column">
+                    <img id="main-img" :src="dog.image" />
+                </div>
                 <div class="column2">
                     <div class="description-container">
                         <p2 class="description">{{ dog.description }}</p2>
@@ -29,17 +32,18 @@
             </div>
             <hr />
         </div>
-        <div class="row5">
+        <div class="row-section">
             <div class="text-center">
-                <p>COMPANIES:</p>
+                <p>COMPANIES IN SUPERVISION:</p>
             </div>
         </div>
+        <div class="row-section2">
+            <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                :link="'/components/' + company.id" />
+        </div>
     </main>
-    <!--
-    <div class="row6">
-        <Card v-for="company of filtered" :title="company.name" :subtitle="company.ceo" :area="company.areas"
-            :image="company.image" :link="'/companies/' + company.id" />
-            -->
+
+
     <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
     <!--
             <div class="column3">
@@ -217,7 +221,7 @@ hr {
     margin: 20px 0;
 }
 
-.row5 {
+.row-section {
     display: flex;
     justify-content: center;
     align-items: center;

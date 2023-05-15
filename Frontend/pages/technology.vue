@@ -90,7 +90,6 @@
                         <label class="label_testimonial-1" for="radio_testimonial-1">Microsoft</label>
                         <div class="content-test content_testimonial-1">
                             <span class="picto"></span>
-                            <h1>Microsoft</h1>
                             <p>"I've been investing with VenTour for the past few years and I couldn't be happier with the
                                 results. Their team of experts really knows how to spot promising startups and help them
                                 grow.
@@ -104,7 +103,7 @@
                         <label class="label_testimonial-2" for="radio_testimonial-2">DELL</label>
                         <div class="content-test content_testimonial-2">
                             <span class="picto"></span>
-                            <h1>DELL</h1>
+
                             <p>"As a first-time investor, I was a bit nervous about putting my money into the hands of a
                                 venture capital firm. But VenTour's professionalism and transparency made me feel at ease.
                                 They keep me updated every step of the way and have exceeded my expectations in terms of
@@ -119,7 +118,7 @@
                         <label class="label_testimonial-3" for="radio_testimonial-3">intel</label>
                         <div class="content-test content_testimonial-3">
                             <span class="picto"></span>
-                            <h1>intel</h1>
+
                             <p>"I've been working with VenTour for several years now and I can confidently say they are one
                                 of the best venture capital firms out there.
                                 Their ability to identify and support high-growth companies is unmatched. ”</p>
@@ -132,7 +131,6 @@
                         <label class="label_testimonial-4" for="radio_testimonial-4">ST Microelectronics</label>
                         <div class="content-test content_testimonial-4">
                             <span class="picto"></span>
-                            <h1>ST Microelectronics</h1>
                             <p>"Working with VenTour has been an absolute pleasure. Their team is knowledgeable, responsive,
                                 and always willing to go the extra mile to ensure success. They have helped me diversify my
                                 portfolio and achieve financial goals I never thought possible."</p>
@@ -626,6 +624,19 @@ input:checked~.content-test {
     }
 }
 
+.picto {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.picto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
     .content_testimonial-1 .picto {
@@ -664,7 +675,7 @@ input:checked~.content-test {
 }
 
 .content_testimonial-2 .picto {
-    height: 20%;
+    height: 25%;
     width: 20%;
     background-image: url('assets/img/Dell Technologies.png');
     background-position: center;
@@ -677,7 +688,7 @@ input:checked~.content-test {
 }
 
 .content_testimonial-3 .picto {
-    height: 15%;
+    height: 16%;
     width: 20%;
     padding-left: 2%;
     background-image: url('assets/img/Intel.png');
@@ -693,7 +704,7 @@ input:checked~.content-test {
 .content_testimonial-4 .picto {
     height: 25%;
     width: 20%;
-    background-image: url('assets/img/ST.jpg');
+    background-image: url('assets/img/ST.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -782,7 +793,7 @@ label.label_testimonial-4:before {
     width: 15%;
     height: 85%;
     margin-left: 15px;
-    background-image: url('assets/img/ST.jpg');
+    background-image: url('assets/img/ST.png');
     background-position: center;
     background-size: 75% 75%;
     background-repeat: no-repeat;

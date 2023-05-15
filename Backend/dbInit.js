@@ -286,7 +286,7 @@ export default async (models) => {
             description: "Microsoft Corp engages in the development and support of software, services, devices, and solutions. It operates through the following business segments: Productivity and Business Processes; Intelligent Cloud; and More Personal Computing. The Productivity and Business Processes segment comprises products and services in the portfolio of productivity, communication, and information services of the company spanning a variety of devices and platform. The Intelligent Cloud segment refers to the public, private, and hybrid serve products and cloud services of the company which can power modern business. The More Personal Computing segment encompasses products and services geared towards the interests of end users, developers, and IT professionals across all devices. The firm also offers operating systems; cross-device productivity applications; server applications; business solution applications; desktop and server management tools; software development tools; video games; personal computers, tablets; gaming and entertainment consoles; other intelligent devices; and related accessories. The company was founded by Paul Gardner Allen and William Henry Gates III in 1975 and is headquartered in Redmond",
             link: "https://www.microsoft.com/it-it",
             ceo: "Satya Nadella",
-            image: "https://static.vecteezy.com/system/resources/previews/019/017/460/original/microsoft-transparent-logo-free-png.png"
+            image: "https://www.pngplay.com/wp-content/uploads/1/Microsoft-Logo-Download-Free-PNG.png"
         },
         {
             name: "Dell Technologies, Inc",
@@ -358,7 +358,7 @@ export default async (models) => {
             description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage. Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
             link: "https://www.asahigroup-holdings.com/en/",
             ceo: "Atsushi Katsuki",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Asahi_logo.svg/2560px-Asahi_logo.svg.png"
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Asahi_logo.svg/1200px-Asahi_logo.svg.png"
         },
         {
             name: "Kraft Heinz",
@@ -367,7 +367,7 @@ export default async (models) => {
             description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
             link: "https://www.kraftheinzcompany.com/",
             ceo: "Miguel Patricio",
-            image: "https://cdn.abcotvs.com/dip/images/572033_032515-wtvd-heinz-kraft-logo-img.jpg?w=1600"
+            image: "https://o.remove.bg/downloads/a1195dbd-abf6-4a62-bdd6-da14c294a05f/572033_032515-wtvd-heinz-kraft-logo-img-removebg-preview.png"
         },
         {
             name: "General Electric Co.",
@@ -412,7 +412,7 @@ export default async (models) => {
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             link: "https://www.enelx.com/",
             ceo: "Francesco Venturini",
-            image: "https://static.blitzquotidiano.it/wp/wp-content/uploads/2019/12/enel_x_logo-1024x696.jpg"
+            image: "https://o.remove.bg/downloads/14e793bd-c602-4a1b-8b29-a0f58ce85620/enel_x_logo-1024x696-removebg-preview.png"
         },
     ]
     await models.Company.bulkCreate(CompanyModel)

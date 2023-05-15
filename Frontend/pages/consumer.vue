@@ -89,7 +89,7 @@
                         <label class="label_testimonial2-1" for="radio_testimonial2-1">Nestlè</label>
                         <div class="content-test content_testimonial2-1">
                             <span class="picto"></span>
-                            <h1>Nestlè</h1>
+
                             <p>"I've been investing with VenTour for a few years now and I couldn't be happier with their
                                 work in the consumer goods sector. Their expertise and guidance have helped our portfolio of
                                 companies grow tremendously."</p>
@@ -102,7 +102,7 @@
                         <label class="label_testimonial2-2" for="radio_testimonial2-2">Unilever</label>
                         <div class="content-test content_testimonial2-2">
                             <span class="picto"></span>
-                            <h1>Unilever</h1>
+
                             <p>"As an investor, it's always reassuring to see the companies you've invested in succeed.
                                 VenTour's strategic investments in the consumer goods sector have consistently led to
                                 impressive results, and I'm proud to be a part of it."</p>
@@ -116,7 +116,7 @@
                         <label class="label_testimonial2-3" for="radio_testimonial2-3">NIKE</label>
                         <div class="content-test content_testimonial2-3">
                             <span class="picto"></span>
-                            <h1>NIKE</h1>
+
                             <p>"I've invested in several venture capital firms over the years, but VenTour stands out in
                                 their commitment to their portfolio companies in the consumer goods industry. Their team's
                                 dedication and support have helped take our investments to the next level."</p>
@@ -129,7 +129,7 @@
                         <label class="label_testimonial2-4" for="radio_testimonial2-4">Kraft Heinz</label>
                         <div class="content-test content_testimonial2-4">
                             <span class="picto"></span>
-                            <h1>Kraft Heinz</h1>
+
                             <p>"VenTour's approach to investing in the consumer goods sector is truly unique. Their focus on
                                 sustainability and ethical practices in their portfolio companies has not only yielded great
                                 returns but has also made a positive impact on our environment and society. I'm proud to be
@@ -596,6 +596,19 @@ input:checked~.content-test {
     }
 }
 
+.picto {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.picto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
     .content_testimonial2-1 .picto {
@@ -647,10 +660,10 @@ input:checked~.content-test {
 }
 
 .content_testimonial2-3 .picto {
-    height: 16%;
+    height: 20%;
     width: 20%;
     padding-left: 2%;
-    background-image: url('assets/img/nike.jpg');
+    background-image: url('assets/img/nike.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -736,7 +749,7 @@ label.label_testimonial2-3:before {
     width: 5rem;
     height: 80%;
     margin-left: 15px;
-    background-image: url('assets/img/nike.jpg');
+    background-image: url('assets/img/nike.png');
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -830,4 +843,5 @@ p.testimonialFrom {
     margin-top: 5px;
     font-weight: bold;
     color: #33475c;
-}</style>
+}
+</style>
