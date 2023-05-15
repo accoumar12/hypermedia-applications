@@ -6,7 +6,15 @@
         <header>
             <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
             <nav>
-                <router-link to="/about-us" class="nav-link">About Us</router-link>
+                <div class="dropdown">
+                    <span>
+                        <p class="nav-link">About Us</p>
+                    </span>
+                    <div class="dropdown-content">
+                        <p><router-link to="/History" class="nav-link">History</router-link></p>
+                        <p><router-link to="/about-us" class="nav-link">Our Approach</router-link></p>
+                    </div>
+                </div>
                 <router-link to="/dogs" class="nav-link">Our Team</router-link>
                 <router-link to="/companies" class="nav-link">Investments</router-link>
                 <router-link to="/news" class="nav-link">News</router-link>
@@ -117,6 +125,25 @@ nav {
     transition: .1s var(--_s, 0s) linear, background-size .1s calc(.3s - var(--_s, 0s));
 
 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;
+    padding: 10px 10px;
+    z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .nav-link:hover {

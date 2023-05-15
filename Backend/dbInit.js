@@ -245,6 +245,7 @@ export default async (models) => {
         {
             name: "Cardinal Health",
             areas: "Healthcare",
+            image:"",
             companyId: companySup1.id,
             description: "Cardinal Health, Inc. is a healthcare services and products company, which engages in the provision of customized solutions for hospitals, healthcare systems, pharmacies, ambulatory surgery centers, clinical laboratories, and physician offices. It also provides medical products and pharmaceuticals and cost-effective solutions that enhance supply chain efficiency. The firm operates through the Pharmaceutical and Medical segments. The Pharmaceutical segment distributes branded and generic pharmaceutical, specialty pharmaceutical and over-the-counter healthcare and consumer products. The Medical segment manufactures, sources and distributes Cardinal Health branded medical, surgical, and laboratory products. The company was founded by Robert D. Walter in 1971 and is headquartered in Dublin, OH.",
             link: "https://www.cardinalhealth.com/en.html",

@@ -17,6 +17,7 @@
             <div class="social-icons">
                 <img src="~/assets/img/facebook.png" alt="Facebook" />
                 <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
+                <img src="~/assets/img/email.png" alt="Email" />
             </div>
             <div class="row">
                 <div class="column">
@@ -43,8 +44,7 @@
                             <p>AOOOOOOOOOOOOOOOO</p>
                         </div>
                     </div>
-                    <div class="description-container">
-                        
+                    <div class="description-container">                      
                         <button2>CONTACT</button2>
                     </div>
                 </div>
@@ -269,17 +269,6 @@ hr {
 
 }
 
-button2 {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    margin-top: 10px;
-}
-
-button2:hover {
-    cursor: pointer;
-}
 
 .description-container {
     display: flex;
