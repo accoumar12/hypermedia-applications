@@ -6,6 +6,7 @@
         <div class="card" v-for="(card, index) in  cards " :key="index"
           :style="{ backgroundImage: `url(${backgroundUrl})` }">
           <div class="card-content">
+            <img class="img" :src="card.image" />
             <h2 class="card-title">{{ card.title }}</h2>
             <p class="card-text">{{ card.text }}</p>
           </div>
@@ -34,7 +35,7 @@ export default {
           text: 'Card 1 Text'
         },
         {
-          image: '',
+          image: 'https://images.unsplash.com/photo-1683971745402-62952a6b8677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
           title: 'Card 2 Title',
           text: 'Card 2 Text'
         },
@@ -126,6 +127,14 @@ export default {
 </script>
 
 <style>
+.card-content img{
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 30px;
+  object-fit: cover;
+}
+
 .carousel-container {
   display: flex;
   justify-content: center;
