@@ -1,6 +1,5 @@
 import express from "express"
 import { DataTypes, Sequelize } from "sequelize"
-import { loremIpsum } from "lorem-ipsum"
 
 import { fileURLToPath } from "url"
 import path from "path"
@@ -57,7 +56,7 @@ async function initDB() {
         }
     })
 
-    models.Company = db.define('companySup', {
+    models.Company = db.define('company', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -124,7 +123,7 @@ async function initServer() {
     })
 
     app.get('/companies/:id', async (req, res) => {
-        const data = await models.Supervisor.findOne({
+        const data = await models.Company.findOne({
             where: {
                 id: req.params.id
             },

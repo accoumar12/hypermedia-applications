@@ -226,8 +226,12 @@ export default async (models) => {
 
     const companySup0 = await models.Company.create(dogModel[0])
     const companySup1 = await models.Company.create(dogModel[1])
+    const companySup2 = await models.Company.create(dogModel[2])
     const companySup3 = await models.Company.create(dogModel[3])
+    const companySup5 = await models.Company.create(dogModel[5])
     const companySup10 = await models.Company.create(dogModel[10])
+    const companySup11 = await models.Company.create(dogModel[11])
+    const companySup14 = await models.Company.create(dogModel[14])
     const CompanyModel = [
         {
             name: "UnitedHealth Group",
@@ -299,11 +303,77 @@ export default async (models) => {
             description: "STMicroelectronics is a global leader in the design, manufacturing, and sale of semiconductor devices. Their products are used in a wide range of applications including automotive and industrial equipment, consumer electronics, and wired and wireless communication systems. The company was founded in 1987 and is headquartered in Geneva, Switzerland. STMicroelectronics is committed to innovation, sustainability, and social responsibility, and is dedicated to providing their customers with high-quality products and services that meet their evolving needs. With a strong focus on research and development, STMicroelectronics is well-positioned to continue leading the way in the semiconductor industry for years to come.",
             link: "https://www.st.com/content/st_com/en.html"
         },
+        {
+            name: "Nestlè",
+            areas: "Goods",
+            companyId: companySup2.id,
+            description: "Nestlé is a leading global food and beverage company, with a portfolio of well-known brands including Nescafé, KitKat, and Gerber. The company was founded in 1866 and is headquartered in Vevey, Switzerland. Nestlé's products are sold in over 190 countries and include coffee, water, pet food, and infant nutrition. The company is committed to sustainability, responsible sourcing, and improving the lives of farmers and communities where it operates. Nestlé has set ambitious goals to reduce its environmental impact and has pledged to achieve zero net greenhouse gas emissions by 2050. With a focus on innovation and meeting consumer needs, Nestlé is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
+            link: "https://www.nestle.it/"
+        },
+        {
+            name: "Unilever",
+            areas: "Goods",
+            companyId: companySup2.id,
+            description: "Unilever is a leading global consumer goods company, with a portfolio of well-known brands including Dove, Lipton, and Ben & Jerry's. The company was founded in 1929 and is headquartered in London, UK. Unilever's products are sold in over 190 countries and include food, home care, and personal care products. The company is committed to sustainability, responsible sourcing, and improving the lives of people around the world. Unilever has set ambitious goals to reduce its environmental impact and has pledged to achieve net zero emissions from its products by 2039. With a focus on innovation and meeting the changing needs of consumers, Unilever is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
+            link: "https://www.unilever.com/"
+        },
+        {
+            name: "Nike",
+            areas: "Goods",
+            companyId: companySup2.id,
+            description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
+            link: "https://www.nike.com/it/"
+        },
+        {
+            name: "Asahi Group",
+            areas: "Goods",
+            companyId: companySup5.id,
+            description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage. Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
+            link: "https://www.asahigroup-holdings.com/en/"
+        },
+        {
+            name: "Kraft Heinz",
+            areas: "Goods",
+            companyId: companySup5.id,
+            description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
+            link: "https://www.kraftheinzcompany.com/"
+        },
+        {
+            name: "General Electric Co.",
+            areas: "Sustainability",
+            companyId: companySup11.id,
+            description: "General Electric Co. engages in the provision of commercial and military aircraft engines and systems, wind, and other renewable energy generation equipment and grid solutions, and gas, steam, nuclear, and other power generation equipment. It operates through the following segments: Aviation, Healthcare, Renewable Energy, and Power. The Aviation segment designs and produces commercial and military aircraft engines, integrated engine components, electric power and mechanical aircraft systems. The Healthcare segment provides essential healthcare technologies to developed and emerging markets and has expertise in medical imaging, digital solutions, patient monitoring and diagnostics, drug discovery and performance improvement solutions. The Renewable Energy segment’s portfolio of business units includes onshore and offshore wind, blade manufacturing, grid solutions, hydro, storage, hybrid renewables and digital services offerings. The Power segment serves power generation, industrial, government and other customers worldwide with products and services related to energy production. The company was founded by Thomas Alva Edison in 1878 and is headquartered in Boston, MA.",
+            link: "https://www.ge.com/"
+        },
+        {
+            name: "Iberdrola SA",
+            areas: "Sustainability",
+            companyId: companySup11.id,
+            description: "Iberdrola SA is a holding company, which engages in the generation, distribution, trading, and marketing of electricity. It operates through the following businesses: Networks, Liberalized, Renewables and Other Businesses. The Networks business engages in the transmission and distribution of energy businesses, as well as those of any other regulated nature, originating in Spain, the United Kingdom, the United States and Brazil. The Liberalized business includes wholesale and retail of electricity in Spain, Portugal, the United Kingdom, Mexico and Continental Europe. The Renewables business involves the generation of electricity from renewable energy sources worldwide. The Other Businesses segment consists of group's supply and gas storage up to the moment of sale and other non-energy businesses. The company was founded by Juan de Urrutia in 1901 and is headquartered in Bilbao, Spain",
+            link: "https://www.iberdrola.it/"
+        },
+        {
+            name: "Canadian Solar, Inc.",
+            areas: "Sustainability",
+            companyId: companySup11.id,
+            description: "Canadian Solar, Inc. engages in the manufacture of solar photovoltaic modules, provision of solar energy and battery storage solutions, and development of utility-scale solar and battery storage products. It operates through the CSI Solar and Global Energy segments. The CSI Solar segment designs, develops, and manufactures solar ingots, wafers, cells, modules, and other solar power and battery storage products. The Global Energy segment includes solar and battery storage project development and sale, asset management services for operational projects, sale of electricity, and investment in retained assets. The company was founded by Shawn Qu in October 2001 and is headquartered in Guelph, Canada.",
+            link: "https://www.canadiansolar.com/"
+        },
+        {
+            name: "JinkoSolar Holding Co",
+            areas: "Sustainability",
+            companyId: companySup14.id,
+            description: "JinkoSolar Holding Co., Ltd. engages in the manufacture of solar modules. It distributes solar products and sells its solutions and services to a diversified international utility, commercial and residential customers. The company was founded by Xian De Li, Kang Ping Chen, and Xian Hua Li on August 3, 2007 and is headquartered in Shangrao, China.",
+            link: "https://www.jinkosolar.com/en/"
+        },
+        {
+            name: "Enel X",
+            areas: "Sustainability",
+            companyId: companySup14.id,
+            description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
+            link: "https://www.enelx.com/"
+        },
     ]
-
-    
-    
-
 
     await models.Company.bulkCreate(CompanyModel)
 }

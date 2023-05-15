@@ -47,7 +47,7 @@
 
                     <div class="grid-x">
 
-                        <div class="cell small-12 filter-title">Filter By Department:</div>
+                        <div class="cell small-12 filter-title">Filter By Team:</div>
                         <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
 
