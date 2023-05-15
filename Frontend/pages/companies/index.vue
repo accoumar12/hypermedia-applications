@@ -208,46 +208,6 @@ const filtered = computed(() => {
 </script>
 
 <script>
-// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
-/*
-    In order to implement a filter, we use the computed property.
-    This allows to have a cached value that contains the filtered list.
-    Instead of using the normal list for the cards, we used the computed property directly.
-*/
-const areas = ref("");
-
-const filtered = computed(() => {
-    // Checking for values where the full list is provided
-    if ((role.areas == 0 || areas.value == ""))
-        return dogs.value
-
-    const arr = []
-
-
-    // Filtering the list
-    for (let dog of dogs.value) {
-        if (dog.areas == areas.value) {
-            arr.push(dog)
-        }/*
-        else if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
-            arr.push(dog)*/
-    }
-
-    // Returning the filtered list
-    return arr
-
-})
-function getButtonString(a) {
-    const arr = []
-    var button = a; // replace "myButton" with the ID of your button
-    for (let dog of dogs.value) {
-        if (dog.name.includes(name.value) && dog.areas == a)
-            arr.push(dog)
-    }
-    return arr;
-}
-
 export default {
     mounted() {
         const counters = document.querySelectorAll('.counter');
@@ -584,7 +544,6 @@ export default {
 
 .row41 {
     background: url('assets/img/exit.png') no-repeat;
-
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -649,6 +608,7 @@ export default {
     position: left;
 }
 
+
 label>[type=checkbox],
 label>[type=radio] {
     margin-right: 2rem;
@@ -665,7 +625,6 @@ label>[type=radio] {
     padding-top: 10%;
     padding-right: 10%;
 }
-
 .container-fluid {
     max-width: 100%;
     margin: 0;
@@ -673,13 +632,11 @@ label>[type=radio] {
 }
 
 .buttons-container {
-    display: flex;
+        display: flex;
     flex-direction: column;
-    align-items: center;
+        align-items: center;
     padding-left: 5%;
-}
-
-
+    }
 .row41 .left-text {
     margin-top: 3%;
     width: 35%;
@@ -687,20 +644,18 @@ label>[type=radio] {
     font-size: 1.1rem;
     color: white;
 }
-
 .buttons {
     padding-top: 5%;
     padding-bottom: 2%;
-    display: flex;
+        display: flex;
     width: 40%;
     height: 100%;
     gap: 2%;
-    flex-direction: row;
+        flex-direction: row;
     justify-content: center;
-    align-items: center;
+        align-items: center;
     z-index: 1;
-}
-
+    }
 .buttons button {
     width: 150px;
     height: 2.5rem;
@@ -714,20 +669,17 @@ label>[type=radio] {
     background-color: #0e6b74;
     border: 2px solid #0e6b74;
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
-}
-
+    }
 .row4.button {
     padding: 10px 20px;
     margin: 5px;
-    border: none;
+        border: none;
     border-radius: 10%;
-    cursor: pointer;
-}
-
+        cursor: pointer;
+    }
 button:hover {
     background-color: #5ecbde;
-}
-
+    }
 .right-text {
     background-color: rgba(18, 143, 165, 0.7);
     border-radius: 5%;
@@ -736,11 +688,9 @@ button:hover {
     font-family: monospace;
     font-size: 1.1rem;
     color: #f6f9f9;
-}
-
+    }
 .col p {
     font-size: 18px;
     line-height: 1.5;
-
 }
 </style>
