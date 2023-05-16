@@ -84,6 +84,10 @@
         <section class="team-members-grid">
             <div class="title">ALL COMPANIES</div>
             <div class="title2">PORTFOLIO SNAPSHOT</div>
+            <div class="form-container">
+                                <label for="age-filter">Company name filter</label>
+                                <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
+                            </div>
             <!-- <label for="all-areas">
                                     ALL
                                     <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
@@ -133,34 +137,26 @@ const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL +
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-//const role = ref("");
+const name = ref("");
 const areas = ref("");
 
 const filtered = computed(() => {
     const arrTot = []
-    // Checking for values where the full list is provided
+    // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
-        if ((areas.value == 0 || areas.value == "") & (company.id > 8)) {
-            console.log(company)
+        if (company.id > 8){ // Irst 8 of the db are supervisors' name
+            if (name.value == 0 || name.value == "") { // All companies
+                console.log(company) // Only for debug
+                arrTot.push(company)
+            }
+            else if (company.name == name.value) {
+                arrTot.push(company)
+            }
+            else if (company.name.toLowerCase().includes(name.value.toLowerCase()))
             arrTot.push(company)
         }
     }
     return arrTot
-
-    const arr = []
-
-
-    // Filtering the list
-    for (let company of companies.value) {
-        if (company.areas == areas.value) {
-            arr.push(company)
-        }/*
-        else if (company.areas.toLowerCase().includes(areas.value.toLowerCase()))
-            arr.push(company)*/
-    }
-
-    // Returning the filtered list
-    return arr
 
 })
 
