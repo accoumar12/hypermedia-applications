@@ -39,7 +39,7 @@
         </div>
         <div class="row-section2">
             <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                :link="'/components/' + company.id" />
+                :link="'/companies/' + company.id" />
         </div>
     </main>
 
