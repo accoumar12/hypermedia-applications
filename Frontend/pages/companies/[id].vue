@@ -84,8 +84,7 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/' + id)
-const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '/companies/' + id)
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
