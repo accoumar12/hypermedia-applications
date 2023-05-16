@@ -5,7 +5,7 @@
 <template>
     <div class="footer-dark">
         <footer>
-            <div class="container">
+            <div class="container-f">
                 <div class="rowf">
                     <div class="col-md-3 col-sm-6 item text-right">
                         <h3>Services</h3>
@@ -79,7 +79,7 @@ h3 {
     max-width: 30%;
     max-height: 18%;
     position: relative;
-    padding-left: 40%;
+    padding-left: 30%;
     padding-top: 2.5%;
 }
 

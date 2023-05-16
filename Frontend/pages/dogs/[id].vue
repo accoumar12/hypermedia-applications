@@ -145,6 +145,7 @@ const filtered = computed(() => {
     background-position-x: center;
 }
 
+
 .social-icons {
     display: flex;
     justify-content: center;

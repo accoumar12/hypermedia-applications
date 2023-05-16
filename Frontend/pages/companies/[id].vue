@@ -22,7 +22,9 @@
                     <div class="description-container">
                         <p class="description">{{ company.description }}</p>
                         <p>Visit their official website:
-                            <span class="link"> {{ company.link }}</span>
+                            <a href="{{ company.link }}" target="_blank">
+                                {{ company.link }}
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -32,7 +34,7 @@
     </main>
 </template>
      
-  
+
 <script>
 export default defineNuxtComponent({
     data() {

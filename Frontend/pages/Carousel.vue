@@ -1,26 +1,32 @@
 <template>
-  <div class="carousel-container">
-
-    <div class="carousel">
-      <div class="inner" ref="inner" :style="innerStyles">
-        <div class="card" v-for="(card, index) in  cards " :key="index">
-          <div class="card-content">
-            <img class="img" :src="card.image" />
-            <hr>
-            <h2 class="card-title">{{ card.title }}</h2>
-            <p class="card-text">{{ card.text }}</p>
-          </div>
-          <div class="left-arrow-container">
-
-            <img class="left-arrow" @click="prev" src="~/assets/img/left-arrows.png" />
-          </div>
-          <div class="right-arrow-container">
-            <img class="right-arrow" @click="next" src="~/assets/img/right-arrows.png" />
+  <main id="back-c">
+    <div class="carousel-container" @wheel="handleMouseScroll">
+      <div class="carousel">
+        <div class="inner" ref="inner" :style="innerStyles">
+          <div class="card" v-for="(card, index) in  cards " :key="index">
+            <div class="card-content">
+              <img class="img" :src="card.image" />
+              <div class="text-container">
+                <hr>
+                <div class="card-info">
+                  <h2 class="card-title">{{ card.title }}</h2>
+                  <p class="card-text">{{ card.text }}</p>
+                </div>
+              </div>
+              <div class="arrow-c">
+                <div class="left-arrow-container">
+                  <img class="left-arrow" @click="prev" src="~/assets/img/left-arrows.png" />
+                </div>
+                <div class="right-arrow-container">
+                  <img class="right-arrow" @click="next" src="~/assets/img/right-arrows.png" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -55,7 +61,7 @@ export default {
           text: 'Card 4Text'
         },
         {
-          image: 'https://www.suffolknews.co.uk/_media/img/1200x0/QXS5N2VAEQD9S6LANXVC.jpg',
+          image: 'https://media.istockphoto.com/id/530686057/photo/portrait-of-young-man-holding-trophy-standing-in-conference-room-smiling-to-applauding-audience.jpg?b=1&s=170667a&w=0&k=20&c=of1xAxrNRRRN6p1V7cRhBiTW0O-lIEQxhCDOGwJu0L4=',
           title: 'Card 4 Title',
           text: 'Card 4Text'
         },
@@ -73,6 +79,14 @@ export default {
   },
 
   methods: {
+    handleMouseScroll(event) {
+      const deltaX = event.deltaX
+      if (deltaX > 0) {
+        this.next()
+      } else if (deltaX < 0) {
+        this.prev()
+      }
+    },
     setStep() {
       const innerWidth = this.$refs.inner.scrollWidth
       const totalCards = this.cards.length
@@ -142,81 +156,73 @@ export default {
 </script>
 
 <style>
-.cart-content {
-  position: relative;
+#back-c {
+  width: 100%;
+  background-image: url('assets/img/Background_Abstract.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
 }
 
-.card-content img {
+#back-c::after {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 2px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-
-.left-arrow-container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4%;
-  z-index: 1;
-  padding-left: 45%;
-  padding-bottom: 1%;
-}
-
-.right-arrow-container {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4%;
-  z-index: 1;
-  padding-right: 45%;
-  padding-bottom: 1%;
-}
-
-.left-arrow,
-.right-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  background-image: url('assets/img/Background_Abstract.jpg');
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.arrow-c {
+  position: absolute;
+  bottom: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 0;
+  z-index: 1;
 }
 
-.left-arrow img,
-.right-arrow img {
+.arrow-c::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+.container-history .content-h {
   position: relative;
-  width: 5%;
-  height: 5%;
+  top: 80%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+
+}
+
+
+.carousel-container {
+  width: 80%;
+  padding-top: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .carousel {
   width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   height: 100%;
-
 }
 
 .inner {
@@ -230,41 +236,144 @@ export default {
   height: 100%;
   color: white;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex-grow: 1;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 80% 100%;
 }
 
-.card img {
-  top: 0;
-  left: 0;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-content img {
+  width: 75%;
+  height: 100% !important;
   object-fit: cover;
+  justify-content: center;
+  align-items: center;
 }
 
-.card .content {
+.text-container {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 5%;
+  left: 15%;
+  background-color: rgba(233, 228, 228, 0.5);
+  padding: 2%;
+  border-radius: 4px;
 }
 
-.card .content .hr {
-  width: 20%;
+.card-info {
+  color: white;
 }
 
-.card h2 {
-  margin: 0;
-  font-size: 24px;
+.card-title {
+  font-size:
+    24px;
+  margin: 0 0 10px;
   color: #110404;
 }
 
-.card p {
-  margin: 10px 0 0;
+.card-text {
   font-size: 16px;
+  margin: 0;
   color: #fff;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.left-arrow-container {
+  left: calc(10% - 50px);
+}
+
+.right-arrow-container {
+  right: calc(10% - 50px);
+}
+
+.left-arrow img,
+.right-arrow img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 90%;
+  }
+
+  .left-arrow-container,
+  .right-arrow-container {
+    width: 40px;
+    height: 30px;
+  }
+
+  .left-arrow-container {
+    left: 50px;
+  }
+
+  .right-arrow-container {
+    right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 90%;
+  }
+
+  .left-arrow-container,
+  .right-arrow-container {
+    width: 40px;
+
+    height: 30px;
+  }
+
+  .left-arrow-container {
+    left: 5%;
+  }
+
+  .right-arrow-container {
+    right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 95%;
+    padding-top: 1%;
+    height: 500px;
+  }
+
+  .left-arrow-container,
+  .right-arrow-container {
+    width: 30px;
+    height: 20px;
+  }
+
+  .left-arrow-container {
+    left: 2%;
+  }
+
+  .right-arrow-container {
+    right: 2%;
+  }
 }
 </style>
