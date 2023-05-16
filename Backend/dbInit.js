@@ -349,7 +349,7 @@ export default async (models) => {
             description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste. Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
             link: "https://www.nike.com/it/",
             ceo: "John Donahoe",
-            image: "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f3.png"
+            image: "https://parspng.com/wp-content/uploads/2022/10/nikepng.parspng.com_.png"
         },
         {
             name: "Asahi Group",

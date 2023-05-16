@@ -9,56 +9,29 @@
                 <router-link to="/companies"><img src="~/assets/img/left-arrows.png"></router-link>
             </div>
             <h1 class="name">{{ company.name }}</h1>
-            <div id="data-container">
-                <p class="areas">{{ company.areas }}</p>
-                <p class="ceo">{{ company.ceo }}</p>
+            <div id="data-container-c">
+                <p class="areas">Area of investment: {{ company.areas }}</p>
+                <p class="ceo">CEO: {{ company.ceo }}</p>
             </div>
             <hr />
-            <div class="social-icons">
-                <img src="~/assets/img/facebook.png" alt="Facebook" />
-                <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
-                <img src="~/assets/img/email.png" alt="Email" />
-            </div>
             <div class="row-section">
-                <div class="column">
+                <div class="column-c">
                     <img id="main-img" :src="company.image" />
                 </div>
-                <div class="column2">
+                <div class="column2-c">
                     <div class="description-container">
                         <p class="description">{{ company.description }}</p>
+                        <p>Visit their official website:
+                            <span class="link"> {{ company.link }}</span>
+                        </p>
                     </div>
                 </div>
             </div>
             <hr />
         </div>
     </main>
-
-
-    <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
-    <!--
-            <div class="column3">
-                <img src="image1.jpg" alt="Image 1">
-                <p>Text for image 1</p>
-            </div>
-            <div class="column3">
-                <img src="image2.jpg" alt="Image 2">
-                <p>Text for image 2</p>
-            </div>
-            <div class="column3">
-                <img src="image3.jpg" alt="Image 3">
-                <p>Text for image 3</p>
-            </div>
-</div>-->
 </template>
-        <!--
-            v-html allows us to change the structure of a HTML element.
-            It used because of the 'newLineOnFullStop' function that returns a string with the <br> tags.
-            This function is a composable that is available anywhere, without requiring to be imported.
-        -->
-        <!--
-        <p id="description" v-html="newLineOnFullStop(dog.description)"></p>
-        <SmallCard :title="dog.location.name" :subtitle="dog.location.city" :link="'/locations/' + dog.location.id" />
-        -->
+     
   
 <script>
 export default defineNuxtComponent({
@@ -104,20 +77,6 @@ const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '
     background-position-x: center;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
-    gap: 12%;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    padding: auto;
-    cursor: pointer;
-}
-
 .arrow {
     width: 16%;
     height: 15%;
@@ -161,9 +120,10 @@ const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '
     font-weight: bold;
 }
 
-#data-container {
+#data-container-c {
     margin-top: 10px;
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .areas {
@@ -190,15 +150,12 @@ hr {
 
 
 
-.column {
-    flex-basis: 50%;
-    padding-left: 2%;
+.column-c {
+    flex-basis: 500px;
 }
 
-.column2 {
-    flex-basis: 50%;
-    padding-right: 4%;
-
+.column2-c {
+    flex-basis: 500px;
 }
 
 .column.p2 {
@@ -206,22 +163,10 @@ hr {
 }
 
 #main-img {
-    width: 60%;
+    width: 300px;
     height: 40%;
     padding-left: 10%;
 
-}
-
-button2 {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    margin-top: 10px;
-}
-
-button2:hover {
-    cursor: pointer;
 }
 
 .description-container {
@@ -231,62 +176,16 @@ button2:hover {
     align-items: center;
     margin-top: 10px;
     text-align: justify;
-}
-
-.description-container p2 {
-    margin-bottom: 10px;
-    font-size: 15pt;
-    width: 80%;
     font-family: PT sans-serif;
-    font-size: 1.1rem;
 }
 
-.row6 {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
-    padding-bottom: 2%;
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(19, 112, 112);
 }
 
-.text-center {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.column3 {
-    flex-basis: 20%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-left: 1px solid black;
-}
-
-.column3:first-child {
-    border-left: none;
-}
-
-.column3 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.column3 p {
-    font-size: 16px;
-}
-
-#description {
-    padding: 0 20px 0 20px;
-    font-size: 15pt;
+.link:hover {
+    color: blue;
 }
 </style>

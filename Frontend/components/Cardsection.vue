@@ -1,12 +1,13 @@
 <template>
     <div class="row-c">
-        <div class="image-container-section">
-            <img class="img" :src="image" />
-            <NuxtLink :to="link">
+        <NuxtLink :to="link">
+            <div class="image-container-section">
+                <img class="img" :src="image" />
+
                 <p><span class="subtitle2">CEO: {{ subtitle }}</span></p>
                 <p><span class="subtitle2">Area: {{ area }}</span></p>
-            </NuxtLink>
-        </div>
+            </div>
+        </NuxtLink>
     </div>
 </template>
     
@@ -18,7 +19,6 @@ const props = defineProps(['image', 'subtitle', 'link', 'area']);
 .row-section2 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 10%;
     align-items: center;
     height: 20%;
@@ -36,6 +36,10 @@ const props = defineProps(['image', 'subtitle', 'link', 'area']);
     margin-top: 2%;
     height: 60%;
     gap: 10%;
+}
+
+.row-c a {
+    text-decoration: none;
 }
 
 .img {
