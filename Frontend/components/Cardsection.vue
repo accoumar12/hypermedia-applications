@@ -11,7 +11,7 @@
 </template>
     
 <script setup>
-const props = defineProps(['image', 'title', 'subtitle', 'link', 'area']);
+const props = defineProps(['image', 'subtitle', 'link', 'area']);
 </script>
     
 <style>
