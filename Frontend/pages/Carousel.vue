@@ -30,8 +30,8 @@ export default {
     return {
       cards: [
         {
-          backgroundImage: `url(${backgroundUrl})`,
-          title: '',
+          image: 'https://images.unsplash.com/photo-1652109629663-1fbc7b2ff7e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
+          title: 'Card 2 Title',
           text: 'Card 1 Text'
         },
         {
@@ -127,7 +127,7 @@ export default {
 </script>
 
 <style>
-.card-content img{
+.card-content img {
   top: 0;
   left: 0;
   width: 70px;

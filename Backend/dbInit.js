@@ -367,7 +367,7 @@ export default async (models) => {
             description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage. The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
             link: "https://www.kraftheinzcompany.com/",
             ceo: "Miguel Patricio",
-            image: "https://o.remove.bg/downloads/a1195dbd-abf6-4a62-bdd6-da14c294a05f/572033_032515-wtvd-heinz-kraft-logo-img-removebg-preview.png"
+            image: "https://www.pngmart.com/files/22/Heinz-Logo-PNG-Image.png"
         },
         {
             name: "General Electric Co.",
@@ -412,7 +412,7 @@ export default async (models) => {
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             link: "https://www.enelx.com/",
             ceo: "Francesco Venturini",
-            image: "https://o.remove.bg/downloads/14e793bd-c602-4a1b-8b29-a0f58ce85620/enel_x_logo-1024x696-removebg-preview.png"
+            image: "https://corporate.enelx.com/content/dam/global/media-hub/press-kit/logos-highres/Enel_X_Logo_Violet_RGB.png"
         },
     ]
     await models.Company.bulkCreate(CompanyModel)
