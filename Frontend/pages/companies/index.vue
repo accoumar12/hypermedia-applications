@@ -83,11 +83,12 @@
         </div>
         <section class="team-members-grid">
             <div class="title">ALL COMPANIES</div>
-            <div class="title2">PORTFOLIO SNAPSHOT</div>
             <div class="form-container">
-                                <label for="age-filter">Company name filter</label>
-                                <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
-                            </div>
+                <label for="age-filter">Filter companies by name </label>
+                <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
+            </div>
+            <div class="title2">PORTFOLIO SNAPSHOT</div>
+
             <!-- <label for="all-areas">
                                     ALL
                                     <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
@@ -144,7 +145,7 @@ const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
-        if (company.id > 8){ // Irst 8 of the db are supervisors' name
+        if (company.id > 8) { // Irst 8 of the db are supervisors' name
             if (name.value == 0 || name.value == "") { // All companies
                 console.log(company) // Only for debug
                 arrTot.push(company)
@@ -153,7 +154,7 @@ const filtered = computed(() => {
                 arrTot.push(company)
             }
             else if (company.name.toLowerCase().includes(name.value.toLowerCase()))
-            arrTot.push(company)
+                arrTot.push(company)
         }
     }
     return arrTot
@@ -261,6 +262,36 @@ export default {
     text-decoration: none;
     border: none;
     padding-bottom: 2%;
+}
+
+.form-container {
+    padding-left: 35%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+input {
+    border-color: #b2b7b5;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 40%;
+    background-color: rgba(233, 237, 237, 0.997);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input::placeholder {
+    color: #b2b7b5;
 }
 
 .image-container {

@@ -3,10 +3,10 @@
 
     <div class="carousel">
       <div class="inner" ref="inner" :style="innerStyles">
-        <div class="card" v-for="(card, index) in  cards " :key="index"
-          :style="{ backgroundImage: `url(${backgroundUrl})` }">
+        <div class="card" v-for="(card, index) in  cards " :key="index">
           <div class="card-content">
             <img class="img" :src="card.image" />
+            <hr>
             <h2 class="card-title">{{ card.title }}</h2>
             <p class="card-text">{{ card.text }}</p>
           </div>
@@ -31,19 +31,34 @@ export default {
       cards: [
         {
           image: 'https://images.unsplash.com/photo-1652109629663-1fbc7b2ff7e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
-          title: 'Card 2 Title',
+          title: 'Card 1 Title',
           text: 'Card 1 Text'
         },
         {
-          image: 'https://images.unsplash.com/photo-1683971745402-62952a6b8677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          image: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           title: 'Card 2 Title',
           text: 'Card 2 Text'
         },
         {
-          image: '',
+          image: 'https://www.whoateallthepies.tv/wp-content/gallery/signing-on-photos/pa-2469860.jpg',
           title: 'Card 3 Title',
           text: 'Card 3 Text'
-        }
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+          title: 'Card 4 Title',
+          text: 'Card 4Text'
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
+          title: 'Card 4 Title',
+          text: 'Card 4Text'
+        },
+        {
+          image: 'https://www.suffolknews.co.uk/_media/img/1200x0/QXS5N2VAEQD9S6LANXVC.jpg',
+          title: 'Card 4 Title',
+          text: 'Card 4Text'
+        },
       ],
       innerStyles: {},
       step: '',
@@ -127,12 +142,18 @@ export default {
 </script>
 
 <style>
+.cart-content {
+  position: relative;
+}
+
 .card-content img {
   top: 0;
   left: 0;
-  width: 70px;
-  height: 30px;
+  width: 50px;
+  height: 2px;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .carousel-container {
@@ -207,7 +228,6 @@ export default {
 .card {
   width: 100%;
   height: 100%;
-  display: inline-flex;
   color: white;
   border-radius: 4px;
   align-items: center;
