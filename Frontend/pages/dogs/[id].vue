@@ -230,7 +230,6 @@ hr {
 }
 
 
-
 .column {
     flex-basis: 50%;
     padding-left: 2%;
@@ -247,10 +246,13 @@ hr {
 }
 
 #main-img {
+/*
     width: 60%;
     height: 40%;
     padding-left: 10%;
-
+*/
+    height: 500px;
+    padding-left: 10%;
 }
 
 button2 {
