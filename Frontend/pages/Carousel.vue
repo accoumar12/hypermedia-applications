@@ -45,24 +45,31 @@
         <h2>Growing Markets</h2>
         <p>We look for startups that are addressing large and growing markets with significant untapped potential. We
           assess the size of the market, the competitive landscape, and the potential for disruption.</p>
-        <img class="ikona" src="~/assets/img/market-analysis.png" alt="">
+        <img class="ikona" src="~/assets/img/market-analysis.png">
       </div>
       <div class="box red">
         <h2>Team Experience</h2>
-        <p>Scans our talent network to create the optimal team for your project</p>
-        <img class="ikona" src="~/assets/img/teamexp.png" alt="">
+        <p>We believe that the founding team is critical to the success of any startup. We evaulate the team's experience,
+          skills, and track record to ensure that they have the expertise and leadership necessary to execute on their
+          vision. </p>
+        <img class="ikona" src="~/assets/img/teamexp.png">
       </div>
       <div class="box box-down blue">
         <h2>Startup Products</h2>
-        <p>Uses data from past projects to provide better delivery estimates</p>
-        <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        <p>We evaluate the startup's product or technology to ensure that it has a strong competitive advantage and
+          addresses a real customer need. We assess the potential for scalability and the potential for further innovation
+          and development.</p>
+        <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg">
       </div>
     </div>
     <div class="row2-container">
       <div class="box orange">
-        <h2>Karma</h2>
-        <p>Regularly evaluates our talent to ensure quality</p>
-        <img class="ikona" src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+        <h2>Customer Needs</h2>
+        <p>We focus on analyzing the alignment with market demand and customer needs. We assess the clarity and
+          feasibility of the company's objectives, ensuring that they are relevant and time-bound.
+          We evaluate the strategic plans, including actions and milestones outlined to achieve the specific objectives.
+        </p>
+        <img class="ikona" src="~/assets/img/customer-need.png">
       </div>
     </div>
   </main>
