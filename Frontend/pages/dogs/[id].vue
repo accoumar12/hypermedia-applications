@@ -24,14 +24,30 @@
                     <img id="main-img" :src="dog.image" />
                 </div>
                 <div class="column2">
-                    <div class="description-container">
-                        <p2 class="description">{{ dog.description }}</p2>
-                        <p2 class="description">{{ dog.description2 }}</p2>
+                    <div class="description-containera">
+                        <div class="button-container" style="position: relative; top: 0; z-index: 1;">
+                            <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                                <br>
+                                DESCRIPTION
+                            </button>
+                            <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                                <br>
+                                PROJECTS
+                            </button>
+                        </div>
+                        <div class="description-container" v-if="activeSection === 1">
+                            <p2 class="description">{{ dog.description }}</p2>
+                            <p2 class="description">{{ dog.description2 }}</p2>    
+                        </div>
+                        <div v-else-if="activeSection === 2">
+                            <p2 class="description">AOOOOOOOOOOOOOOOO</p2>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr />
         </div>
+
         <div class="row-section">
             <div class="text-center">
                 <p>COMPANIES IN SUPERVISION:</p>
@@ -72,19 +88,19 @@
   
 <script>
 export default defineNuxtComponent({
-    data() {
-        return {
-            activeSection: 1,
-        };
-    },
-    async asyncData() {
-        //const route = useRoute()
-        const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies')
-
-        return {
-            companies
+        data() {
+            return {
+                activeSection: 1,
+            };
+        },
+        async asyncData() {
+            // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+            const route = useRoute()
+            const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies' + route.params.id)
+            return {
+                companies
+            }
         }
-    }
 })
 
 
