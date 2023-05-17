@@ -28,19 +28,19 @@
                         <div class="button-container" style="position: relative; top: 0; z-index: 1;">
                             <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
                                 <br>
-                                DESCRIPTION
+                                BIO
                             </button>
                             <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
                                 <br>
-                                PROJECTS
+                                AWARDS
                             </button>
                         </div>
                         <div class="description-container" v-if="activeSection === 1">
                             <p2 class="description">{{ dog.description }}</p2>
-                            <p2 class="description">{{ dog.description2 }}</p2>    
+                            
                         </div>
                         <div v-else-if="activeSection === 2">
-                            <p2 class="description">AOOOOOOOOOOOOOOOO</p2>
+                             <p2 class="description">{{ dog.description2 }}</p2>
                         </div>
                     </div>
                 </div>
@@ -262,13 +262,13 @@ hr {
 }
 
 #main-img {
-/*
     width: 60%;
     height: 40%;
     padding-left: 10%;
-*/
-    height: 500px;
+    /*
+    height: auto;
     padding-left: 10%;
+    */
 }
 
 button2 {
@@ -301,6 +301,37 @@ button2:hover {
 }
 
 .row6 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 2%;
+}
+
+
+.description-containera {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    text-align: justify;
+    padding-right: 20%;
+}
+
+.description-containera p2 {
+    height: 20%;
+    padding-left: -10%;
+    font-size: 15pt;
+    width: 90%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.row2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -347,5 +378,34 @@ button2:hover {
 #description {
     padding: 0 20px 0 20px;
     font-size: 15pt;
+}
+
+.section-button {
+    padding-bottom: 2.5%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
+}
+
+.section-button.active {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
+    font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    font-family: monospace;
+    color: #033f52;
 }
 </style>
