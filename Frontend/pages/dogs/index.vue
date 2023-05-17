@@ -501,7 +501,7 @@ section {
     font-weight: 500;
     display: block;
     position: relative;
-
+    opacity: 1;
     margin-right: 40px;
     cursor: pointer;
     -webkit-user-select: none;
