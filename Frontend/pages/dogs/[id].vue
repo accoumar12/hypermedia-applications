@@ -37,6 +37,7 @@
                         </div>
                         <div class="description-container" v-if="activeSection === 1">
                             <p2 class="description">{{ dog.description }}</p2>
+                            <p2 class="description">{{ dog.description2 }}</p2>
                             
                         </div>
                         <div v-else-if="activeSection === 2">
@@ -265,6 +266,7 @@ hr {
     width: 60%;
     height: 40%;
     padding-left: 10%;
+    display: initial;
     /*
     height: auto;
     padding-left: 10%;
@@ -363,12 +365,6 @@ button2:hover {
 
 .column3:first-child {
     border-left: none;
-}
-
-.column3 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
 }
 
 .column3 p {
