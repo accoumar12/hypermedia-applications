@@ -35,9 +35,10 @@
                     <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
                         <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
                         <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
+                        <div class="copy-right">© 2020 VenTour. All rights reserved.</div>
                     </div>
                 </div>
-                <div class="copy-right">© 2020 VenTour. All rights reserved.</div>
+
             </div>
         </footer>
     </div>
@@ -45,13 +46,14 @@
 
 
 <style>
-.text-right {
-
-    padding-left: 5%;
-    padding-top: 5%;
-
+.container-f {
+    height: 200px;
 }
 
+.text-right {
+    padding-left: 5%;
+    padding-top: 2%;
+}
 
 h3 {
     color: aliceblue;
@@ -62,49 +64,48 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 40%;
+    height: 20%;
+}
+
+.col-md-3 {
+    padding-top: 2%;
+    height: 10%;
 }
 
 .text-middle {
     padding-left: 2%;
-    padding-top: 5%;
+    padding-top: 2%;
 }
-
 
 .text-bottom {
     position: middle;
 }
 
 .logof {
-    max-width: 30%;
-    max-height: 18%;
+    max-width: 25%;
+    max-height: 16%;
     position: relative;
     padding-left: 30%;
     padding-top: 2.5%;
 }
 
 .copy-right {
-    position: relative;
+    position: absolute;
     position: center;
     opacity: 0.6;
     font-size: 13px;
-    padding-left: 45%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-top: 20%;
 }
 
 .footer-dark {
-
     color: aliceblue;
     background-color: #033f52;
     padding-bottom: none;
-
-
 }
 
 .footer-dark h3 {
     margin-top: 0;
-    margin-bottom: 12px;
     font-weight: bold;
     font-size: 16px;
 }
@@ -129,12 +130,13 @@ h3 {
 }
 
 .social-iconsf {
+    width: 15%;
+    position: absolute;
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    margin-left: 1%;
-    gap: 2%;
-
+    margin-left: 45%;
+    gap: 6%;
 }
 
 .social-iconsf img {
@@ -144,10 +146,54 @@ h3 {
     cursor: pointer;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
     .footer-dark .item:not(.social) {
         text-align: center;
         padding-bottom: 20px;
+    }
+
+    .rowf {
+        flex-wrap: wrap;
+    }
+
+    .col-md-3 {
+        flex: 0 0 100%;
+        padding-top: 2%;
+        height: auto;
+        text-align: center;
+    }
+
+    .text-middle,
+    .text-right {
+        padding-left: 0;
+        padding-top: 2%;
+    }
+
+    .logof {
+        max-width: 50%;
+        max-height: auto;
+        padding-left: 0;
+        padding-top: 2.5%;
+    }
+
+    .copy-right {
+        padding-left: 0;
+        padding-top: 10%;
+        padding-bottom: 2%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .logof {
+        max-width: 70%;
+    }
+
+    .copy-right {
+        font-size: 11px;
+        padding-left: 0;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 }
 
@@ -155,7 +201,7 @@ h3 {
     margin-bottom: 36px;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
     .footer-dark .item.text {
         margin-bottom: 0;
     }
@@ -170,13 +216,12 @@ h3 {
     text-align: center;
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
     .footer-dark .item.social {
         text-align: center;
         margin-top: 20px;
     }
 }
-
 
 .footer-dark .item.social>a:hover {
     opacity: 0.9;

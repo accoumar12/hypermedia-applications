@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <a class="link2" href="#header">
+    <a class="link2" href="#header2">
       <span class="link__arrow2">
         <span></span>
         <span></span>
@@ -57,10 +57,13 @@
       <span class="link__line2"></span>
       <span class="link__text2">Our Approach</span>
     </a>
-    <div id="header">
-      <h1>Our investment Approach</h1>
+    <div id="header2">
+      <h1>Our Investment Approach</h1>
       <p>We are focused on four key factors that help us identify promising startups or better say... We make EVERYTHING
-        promising!</p>
+        promising!Our investment approach is driven by a meticulous evaluation of market dynamics, team expertise, product
+        viability, and customer needs, ensuring a comprehensive assessment of startup potential. By combining strategic
+        insights, rigorous analysis, and an unwavering belief in the power of innovation, we strive to transform every
+        venture we back into a resounding success story that shapes the future of industries.</p>
     </div>
     <div class="row1-container">
       <div class="box box-down cyan">
@@ -666,15 +669,16 @@ body {
   }
 }
 
-#header {
-  text-align: center;
+#header2 {
+  padding-left: 10%;
+  text-align: left;
   line-height: 0.8;
   margin-bottom: 1%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
-#header p {
-  margin: 0 auto;
+#header2 p {
+  padding-right: 20%;
   line-height: 2;
   color: var(--grayishBlue);
 }
