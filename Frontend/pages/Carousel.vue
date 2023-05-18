@@ -6,16 +6,31 @@
         <h1 class="big-text">About VenTour</h1>
         <p class="small-text">We are a leading venture capital firm driving innovation and empowering startups to reach
           their full potential.</p>
+        <a class="link" href="#header1">
+          <span class="link__arrow">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="link__line"></span>
+          <span class="link__text">History Insight</span>
+        </a>
+
       </div>
     </div>
-    <div class="carousel-container" @wheel="handleMouseScroll">
+    <div id="header1">
+      <h1>Our Brief History</h1>
+      <p>Our history brings inovation.With a rich legacy spanning decades, we have been at the forefront of driving
+        transformative change and empowering startups to shape the future.With a rich heritage spanning over two decades,
+        our venture company has been at the forefront of fueling innovation, supporting promising startups, and fostering
+        groundbreaking ideas that have revolutionized industries worldwide.</p>
+    </div>
+    <div id="carousel-container" @wheel="handleMouseScroll">
       <div class="carousel">
         <div class="inner" ref="inner" :style="innerStyles">
           <div class="card" v-for="(card, index) in  cards " :key="index">
             <div class="card-content">
               <img class="img" :src="card.image" />
               <div class="text-container2">
-                <hr>
                 <div class="card-info" v-if="index === currentCardIndex">
                   <h2 class="card-title">{{ card.title }}</h2>
                   <p class="card-text">{{ card.text }}</p>
@@ -34,8 +49,15 @@
         </div>
       </div>
     </div>
-    <div class="header">
-      <h1 class="first-h1">We work with a plan! </h1>
+    <a class="link2" href="#header">
+      <span class="link__arrow2">
+        <span></span>
+        <span></span>
+      </span>
+      <span class="link__line2"></span>
+      <span class="link__text2">Our Approach</span>
+    </a>
+    <div id="header">
       <h1>Our investment Approach</h1>
       <p>We are focused on four key factors that help us identify promising startups or better say... We make EVERYTHING
         promising!</p>
@@ -82,7 +104,7 @@ export default {
       cards: [
         {
           image: 'https://images.unsplash.com/photo-1652109629663-1fbc7b2ff7e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80',
-          title: 'Ventour: A Century of Pioneering Investments',
+          title: 'VenTour: A Century of Pioneering Investments',
           text: 'Everything started in 1907 and none of us knew that be would witness the birth of VenTour, a trailblazing venture capital company that has shaped industries and empowered entrepreneurs for over a hundred years.'
         },
         {
@@ -107,7 +129,7 @@ export default {
         },
         {
           image: 'https://media.istockphoto.com/id/530686057/photo/portrait-of-young-man-holding-trophy-standing-in-conference-room-smiling-to-applauding-audience.jpg?b=1&s=170667a&w=0&k=20&c=of1xAxrNRRRN6p1V7cRhBiTW0O-lIEQxhCDOGwJu0L4=',
-          title: "Excellence Recognized: VenTour's Triumph as Best Company of the Year",
+          title: "Excellence Recognized:Best Company of the Year",
           text: 'Witness a moment of well-deserved celebration as a proud member of VenTour holds the prestigious award for "Best Company of the Year 2023", a testament to their relentless pursuit of excellence in the realm of venture capital.'
         },
       ],
@@ -215,8 +237,8 @@ export default {
 <style>
 #back-c {
   width: 100%;
-  background-image: url('assets/img/Background_Abstract.jpg');
-  background-size: contain;
+  background-image: url('assets/img/19449741.jpg');
+  background-size: cover;
   height: 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -246,7 +268,7 @@ export default {
 .text-container-h {
   width: 600px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -255,21 +277,229 @@ export default {
 .big-text {
   text-decoration-color: #0e6b74;
   text-align: center;
-  font-size: 85px;
-  font-family: monospace;
+  font-size: 60px;
+  font-family: sans-serif;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .small-text {
   text-align: center;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-family: sans-serif;
 
 }
 
+.link {
+  display: inline-flex;
+  padding: 5px;
+  text-decoration: none;
+  transform: rotate(-90deg) translate3d(-300px, 0, 0);
+  position: absolute;
+  right: 90%;
+  top: 0%;
+}
+
+.link2 {
+  display: inline-flex;
+  padding: 5px;
+  text-decoration: none;
+  transform: rotate(-90deg) translate3d(-300px, 0, 0);
+  position: absolute;
+  right: 40%;
+  top: 3.4%;
+}
+
+.link__arrow {
+  display: inline-flex;
+}
+
+.link__arrow span {
+  position: relative;
+  width: 14px;
+  height: 2px;
+  left: 125%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #bebdbe;
+  z-index: 2;
+}
+
+.link__arrow span:nth-child(1) {
+  transform-origin: left bottom;
+  transform: rotate(45deg) translate3d(8px, -10px, 0);
+
+}
+
+.link__arrow span:nth-child(2) {
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+}
+
+.link__arrow span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #045663;
+}
+
+.link__arrow2 {
+  display: inline-flex;
+}
+
+.link__arrow2 span {
+  position: relative;
+  width: 14px;
+  height: 2px;
+  left: 145%;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #bebdbe;
+  z-index: 2;
+}
+
+.link__arrow2 span:nth-child(1) {
+  transform-origin: left bottom;
+  transform: rotate(45deg) translate3d(8px, -10px, 0);
+
+}
+
+.link__arrow2 span:nth-child(2) {
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+}
+
+.link__arrow2 span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #045663;
+}
+
+.link__line {
+  position: relative;
+  margin-left: -10px;
+  width: 120px;
+  left: 14%;
+  height: 3px;
+  background: #bebdbe;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.link__line2 {
+  position: relative;
+  margin-left: -10px;
+  width: 90px;
+  left: 14%;
+  height: 3px;
+  background: #bebdbe;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.link__line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 70px;
+  width: 50px;
+  height: 2px;
+  background: #045663;
+}
+
+.link__text {
+  color: #4a4a4a;
+  font-family: sans-serif;
+  font-size: 18px;
+  transform: rotate(+90deg);
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link:hover .link__line:after {
+  animation: animation-line 1.5s forwards;
+}
+
+.link:hover .link__arrow span:after {
+  animation: animation-arrow 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.link:hover .link__text {
+  color: #045663;
+}
+
+.link2:hover .link__arrow2 span:after {
+  animation: animation-arrow 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.link__line2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 70px;
+  width: 50px;
+  height: 2px;
+  background: #045663;
+}
+
+.link__text2 {
+  color: #4a4a4a;
+  font-family: sans-serif;
+  font-size: 18px;
+  transform: rotate(+90deg);
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link2:hover .link__line2:after {
+  animation: animation-line 1.5s forwards;
+}
+
+.link2:hover .link__arrow2 span:after {
+  animation: animation-arrow 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.link2:hover .link__arrow2 span:after {
+  animation: animation-arrow 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.link2:hover .link__text2 {
+  color: #045663;
+}
 
 
+@keyframes animation-line {
+  0% {
+    left: 70px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes animation-arrow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 
 .arrow-c {
   position: absolute;
@@ -289,7 +519,7 @@ export default {
 }
 
 
-.carousel-container {
+#carousel-container {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -316,7 +546,6 @@ export default {
 .card {
   width: 100%;
   height: 100%;
-  color: white;
   border-radius: 4px;
   align-items: left;
   justify-content: left;
@@ -346,21 +575,22 @@ export default {
 }
 
 .text-container2 {
-  position: absolute;
-  bottom: 5%;
-  left: 15%;
+  width: 70%;
+  position: relative;
+  bottom: 27%;
+  height: 15%;
   text-align: justify;
   padding: 2%;
-  border-radius: 4px;
+  background-color: rgba(233, 228, 228, 0.5);
 }
 
 .card-info {
   text-align: justify;
-  font-family: PT sans-serif;
+  font-family: sans-serif;
 }
 
 .card-title {
-  background-color: rgba(233, 228, 228);
+
   font-size:
     24px;
   max-width: 70%;
@@ -369,11 +599,10 @@ export default {
 }
 
 .card-text {
-  background-color: rgb(7, 119, 167);
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
-  max-width: 60%;
-  color: #fff;
+  max-width: 80%;
+  color: #110404;
   text-align: justify;
 }
 
@@ -408,15 +637,15 @@ export default {
   --blue: hsl(212, 86%, 64%);
   --varyDarkBlue: hsl(234, 12%, 34%);
   --grayishBlue: hsl(228, 5%, 60%);
-  --veryLightGray: hsl(0, 4%, 75%);
+  --veryLightGray: hsl(0, 3%, 66%);
   --weight1: 200;
   --weight2: 400;
   --weight3: 600;
 }
 
 body {
-  font-size: 15px;
-  font-family: monospace;
+  font-size: 16px;
+  font-family: sans-serif;
   background-color: var(--veryLightGray);
 }
 
@@ -429,16 +658,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-.first-h1:first-of-type {
-  font-size: 1rem;
-  font-weight: var(--weight3);
-  text-decoration-color: aqua;
 
-}
-
-.header.h1:last-of-type {
-  color: var(--varyDarkBlue);
-}
 
 @media (max-width: 400px) {
   h1 {
@@ -446,15 +666,29 @@ body {
   }
 }
 
-.header {
+#header {
   text-align: center;
   line-height: 0.8;
-  margin-bottom: 50px;
-  margin-top: 5%;
+  margin-bottom: 1%;
+  margin-top: 10%;
 }
 
-.header p {
+#header p {
   margin: 0 auto;
+  line-height: 2;
+  color: var(--grayishBlue);
+}
+
+#header1 {
+  padding-left: 10%;
+  text-align: left;
+  line-height: 0.8;
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+#header1 p {
+  padding-right: 20%;
   line-height: 2;
   color: var(--grayishBlue);
 }
@@ -462,6 +696,7 @@ body {
 
 .box p {
   color: var(--grayishBlue);
+  text-decoration-color: #1c1b1b;
 }
 
 .box {
@@ -536,7 +771,7 @@ h2 {
 
   }
 
-  .header p {
+  #header p {
     width: 30%;
   }
 
@@ -545,7 +780,7 @@ h2 {
 /* Media Queries */
 
 @media (max-width: 768px) {
-  .carousel-container {
+  #carousel-container {
     width: 90%;
   }
 
@@ -565,7 +800,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .carousel-container {
+  #carousel-container {
     width: 90%;
   }
 
@@ -586,7 +821,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  .carousel-container {
+  #carousel-container {
     width: 95%;
     padding-top: 1%;
     height: 500px;
