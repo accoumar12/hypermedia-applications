@@ -41,7 +41,7 @@
                             
                         </div>
                         <div v-else-if="activeSection === 2">
-                             <p2 class="description">{{ dog.description2 }}</p2>
+                             <p2 class="description">{{ dog.award1 }}</p2>
                         </div>
                     </div>
                 </div>
