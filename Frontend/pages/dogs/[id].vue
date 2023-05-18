@@ -35,13 +35,19 @@
                                 AWARDS
                             </button>
                         </div>
+
                         <div class="description-container" v-if="activeSection === 1">
                             <p2 class="description">{{ dog.description }}</p2>
                             <p2 class="description">{{ dog.description2 }}</p2>
-                            
                         </div>
-                        <div v-else-if="activeSection === 2">
-                             <p2 class="description">{{ dog.award1 }}</p2>
+
+                        <div class="description-container" v-else-if="activeSection === 2">
+                             <ul>
+                                  <li><p2 class="description">{{ dog.award1 }}</p2></li>
+                                  <li><p2 class="description">{{ dog.award2 }}</p2></li>
+                                  <li><p2 class="description">{{ dog.award3 }}</p2></li>
+                                  <li><p2 class="description">{{ dog.award4 }}</p2></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
