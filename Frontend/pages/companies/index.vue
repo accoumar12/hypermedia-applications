@@ -91,11 +91,10 @@
                 </div>
                 <div class="counter" data-target="270"></div>
                 <label for="Sustainability">
-                    <span class="checkmark">
                     <p>Sustainability Investments</p>
                     <input type="radio" id="Sustainability" value="Sustainability"
                                         name="Investments-categories" v-model="areas">
-                    </span>
+                    <span class="checkmark"></span>
                 </label>  
                 
                 <div class="link-text">
@@ -112,7 +111,7 @@
                                         checked>
                         <span class="checkmark"></span>
                     </label></div>
-
+        <!--
             <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
                 <label for="Technology">
@@ -146,6 +145,7 @@
                 </label>
                 </div>
             </div>
+        -->
             <div class="form-container">
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
@@ -660,6 +660,7 @@ label>[type=radio] {
     margin-right: 2rem;
     -webkit-text-fill-color: #0e6b74;
     margin: 1rem 1rem 0.2rem 0;
+    position: absolute;
 }
 
 .team-members-grid {
