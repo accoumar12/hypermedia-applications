@@ -42,12 +42,17 @@
                         </div>
 
                         <div class="description-container" v-else-if="activeSection === 2">
+                            <p3 class="description">
                              <ul>
-                                  <li><p2 class="description">{{ dog.award1 }}</p2></li>
-                                  <li><p2 class="description">{{ dog.award2 }}</p2></li>
-                                  <li><p2 class="description">{{ dog.award3 }}</p2></li>
-                                  <li><p2 class="description">{{ dog.award4 }}</p2></li>
+                                  <li>{{ dog.award1 }}</li>
+                                  <br>
+                                  <li>{{ dog.award2 }}</li>
+                                  <br>
+                                  <li>{{ dog.award3 }}</li>
+                                  <br>
+                                  <li>{{ dog.award4 }}</li>
                             </ul>
+                            </p3>
                         </div>
                     </div>
                 </div>
@@ -307,6 +312,13 @@ button2:hover {
     font-family: PT sans-serif;
     font-size: 1.1rem;
 }
+.description-container p3 {
+    margin-bottom: 8px;
+    font-size: 15pt;
+    width: 100%;
+    font-family: PT sans-serif;
+    font-size: 1.1rem;
+}
 
 .row6 {
     width: 100%;
@@ -335,6 +347,14 @@ button2:hover {
     padding-left: -10%;
     font-size: 15pt;
     width: 90%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+}
+.description-containera p3 {
+    height: 20%;
+    padding-left: 70%;
+    font-size: 15pt;
+    width: 150%;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
 }
