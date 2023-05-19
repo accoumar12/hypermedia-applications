@@ -1,24 +1,31 @@
 <template>
   <main id="back-c">
+
     <div class="background-section">
-      <div class="overlay"></div>
+      <div class="double_content">
+        <div class="double_wrapper02 dotted02">
+        </div>
+        <div class="double_wrapper02 white02">
+          <div class="double_wrapper01 white01"></div>
+        </div>
+        <div class="double_wrapper02 gray02">
+          <div class="double_wrapper01 gray01"></div>
+        </div>
+        <div class="double_wrapper02 orange02">
+          <div class="double_wrapper01 orange01"></div>
+        </div>
+      </div>
+      <div class="name">
+        <p>WE ARE GROWTH</p>
+      </div>
       <div class="text-container-h">
         <h1 class="big-text">About VenTour</h1>
         <p class="small-text">We are a leading venture capital firm driving innovation and empowering startups to reach
           their full potential.</p>
-        <a class="link" href="#header1">
-          <span class="link__arrow">
-            <span></span>
-            <span></span>
-          </span>
-          <span class="link__line"></span>
-          <span class="link__text">History Insight</span>
-        </a>
-
       </div>
     </div>
     <div id="header1">
-      <h1>Our Brief History</h1>
+      <h1>OUR BRIEF HISTORY</h1>
       <p>Our history brings inovation.With a rich legacy spanning decades, we have been at the forefront of driving
         transformative change and empowering startups to shape the future.With a rich heritage spanning over two decades,
         our venture company has been at the forefront of fueling innovation, supporting promising startups, and fostering
@@ -49,16 +56,9 @@
         </div>
       </div>
     </div>
-    <a class="link2" href="#header2">
-      <span class="link__arrow2">
-        <span></span>
-        <span></span>
-      </span>
-      <span class="link__line2"></span>
-      <span class="link__text2">Our Approach</span>
-    </a>
+
     <div id="header2">
-      <h1>Our Investment Approach</h1>
+      <h1>OUR INVESTMENT APPROACH</h1>
       <p>We are focused on four key factors that help us identify promising startups or better say... We make EVERYTHING
         promising!Our investment approach is driven by a meticulous evaluation of market dynamics, team expertise, product
         viability, and customer needs, ensuring a comprehensive assessment of startup potential. By combining strategic
@@ -95,6 +95,77 @@
           We evaluate the strategic plans, including actions and milestones outlined to achieve the specific objectives.
         </p>
         <img class="ikona" src="~/assets/img/customer-need.png">
+      </div>
+    </div>
+
+    <div id="header3">
+      <h1>WHAT WE OFFER TO COMPANIES</h1>
+      <p>Once we have identified a promising startup, we work closely with the founding team to provide support, guidance,
+        and resources to help them achieve their goals. Our team's extensive network and industry connections give our
+        portfolio companies a competitive advantage in their respective markets.Our goal is to provide all companies with
+        the resources they need to succeed, no matter what challenges
+        they may face.</p>
+    </div>
+    <div class="card-o-row">
+      <div class="card-o">
+        <img
+          src="https://media.istockphoto.com/id/494940062/photo/financial-concept-business-and-money.jpg?b=1&s=170667a&w=0&k=20&c=XPiQNsS1zIOyNLFDeffchh6T03A_mkR2IkBP06J9iyw="
+          alt="">
+        <div class="card-content-o">
+          <h2>
+            SUPPORT
+          </h2>
+          <p> We believe that investing in a startup is more than just providing funding. We take a hands-on approach to
+            investing, working closely with our companies to provide the support they need to succeed. We are always
+            available to provide support and
+            answer questions.
+          </p>
+          <a href="#" class="button-o">
+            Contact for info. or questions
+            <span class="material-symbols-outlined">
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card-o">
+        <img
+          src="https://media.istockphoto.com/id/950986640/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?b=1&s=170667a&w=0&k=20&c=RvubsRQ8G-ZHiD0VyahnuZWKoQ-88HMnGQMBFSnOBjU="
+          alt="">
+        <div class="card-content-o">
+          <h2>
+            GUIDANCE
+          </h2>
+          <p>
+            We work with out founding team to help companies develop their strategy and execute on their vision. We have a
+            deep understanding of the challenges that startups face, and we draw on this knowledge to provide targeted
+            guidance to our porfolio companies.
+          </p>
+          <a href="#" class="button-o">
+            Contact for info. or questions
+            <span class="material-symbols-outlined">
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card-o">
+        <img
+          src="https://media.istockphoto.com/id/1468415656/photo/interest-rate-and-dividend-concept-businessman-with-percentage-symbol-and-up-arrow-interest.jpg?b=1&s=170667a&w=0&k=20&c=TeLXGpi5W-S04Lq0pSFluYu-xb7TpLa3isCcUiMOJb4="
+          alt="">
+        <div class="card-content-o">
+          <h2>
+            RESOURCES
+          </h2>
+          <p>
+            We provide our portfolio companies with a wide range of resources. We provide them with access to a variety of
+            services, such as marketing and branding support, legal and accounting services, and HR and recruiting
+            support.
+          </p>
+          <a href="#" class="button-o">
+            Contact for info. or questions
+            <span class="material-symbols-outlined">
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -268,6 +339,202 @@ export default {
   z-index: 3;
 }
 
+.double_content {
+  position: absolute;
+  top: 90%;
+  right: 30%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  animation: double_content 6.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+}
+
+.double_wrapper02 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: double_content forwards;
+  opacity: 0;
+}
+
+.double_wrapper01 {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.double_wrapper01::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #045663;
+  z-index: 2;
+}
+
+.double_wrapper01::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #045663;
+  z-index: 3;
+}
+
+/*============
+white circle
+============*/
+.white02 {
+  top: -100%;
+  animation-delay: 1s;
+}
+
+.white01 {
+  width: 15vw;
+  height: 15vw;
+  background: #fff;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.white01::before {
+  top: 0;
+  left: 14.5vw;
+  width: 29vw;
+  height: 29vw;
+  transform-origin: left 14.5vw;
+  animation: rotate-circle-right 0.3s linear 1.2s forwards;
+
+}
+
+.white01::after {
+  top: 0;
+  left: -14.5vw;
+  width: 29vw;
+  height: 29vw;
+  transform-origin: right 14.5vw;
+  animation: rotate-circle-left 0.3s linear 1.2s forwards;
+}
+
+@keyframes rotate-circle-left {
+  0% {
+    transform: rotate(0deg);
+    background: #212022;
+  }
+
+  50% {
+    transform: rotate(-180deg);
+    background: #212022;
+  }
+
+  50.01% {
+    transform: rotate(-360deg);
+    background: #fff;
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    background: #fff;
+  }
+}
+
+/*============
+orange circle
+============*/
+.orange02 {
+  top: -300%;
+  animation-delay: 1.1s;
+}
+
+.orange01 {
+  width: 15vw;
+  height: 15vw;
+  background: #045663;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orange01::before {
+  top: 0;
+  left: 13.5vw;
+  width: 27vw;
+  height: 27vw;
+  background: #045663;
+  transform-origin: left 13.5vw;
+  animation: rotate-circle-right 0.5s linear 1.3s forwards;
+
+}
+
+.orange01::after {
+  top: 0;
+  left: -13.5vw;
+  width: 27vw;
+  height: 27vw;
+  background: #045663;
+  transform-origin: right 13.5vw;
+  animation: rotate-circle-left02 0.5s linear 1.3s forwards;
+}
+
+
+@keyframes double_content {
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+@keyframes rotate-circle-right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.name {
+  position: relative;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 23vw;
+  height: 7vw;
+  animation: name 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s forwards;
+  opacity: 0;
+  left: -10%;
+}
+
+.name p {
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.4vw;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+}
+
+
+@keyframes name {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .text-container-h {
   width: 600px;
   position: absolute;
@@ -291,217 +558,6 @@ export default {
   font-size: 24px;
   font-family: sans-serif;
 
-}
-
-.link {
-  display: inline-flex;
-  padding: 5px;
-  text-decoration: none;
-  transform: rotate(-90deg) translate3d(-300px, 0, 0);
-  position: absolute;
-  right: 90%;
-  top: 0%;
-}
-
-.link2 {
-  display: inline-flex;
-  padding: 5px;
-  text-decoration: none;
-  transform: rotate(-90deg) translate3d(-300px, 0, 0);
-  position: absolute;
-  right: 40%;
-  top: 3.4%;
-}
-
-.link__arrow {
-  display: inline-flex;
-}
-
-.link__arrow span {
-  position: relative;
-  width: 14px;
-  height: 2px;
-  left: 125%;
-  border-radius: 2px;
-  overflow: hidden;
-  background: #bebdbe;
-  z-index: 2;
-}
-
-.link__arrow span:nth-child(1) {
-  transform-origin: left bottom;
-  transform: rotate(45deg) translate3d(8px, -10px, 0);
-
-}
-
-.link__arrow span:nth-child(2) {
-  transform-origin: left bottom;
-  transform: rotate(-45deg);
-}
-
-.link__arrow span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #045663;
-}
-
-.link__arrow2 {
-  display: inline-flex;
-}
-
-.link__arrow2 span {
-  position: relative;
-  width: 14px;
-  height: 2px;
-  left: 145%;
-  border-radius: 2px;
-  overflow: hidden;
-  background: #bebdbe;
-  z-index: 2;
-}
-
-.link__arrow2 span:nth-child(1) {
-  transform-origin: left bottom;
-  transform: rotate(45deg) translate3d(8px, -10px, 0);
-
-}
-
-.link__arrow2 span:nth-child(2) {
-  transform-origin: left bottom;
-  transform: rotate(-45deg);
-}
-
-.link__arrow2 span:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #045663;
-}
-
-.link__line {
-  position: relative;
-  margin-left: -10px;
-  width: 120px;
-  left: 14%;
-  height: 3px;
-  background: #bebdbe;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.link__line2 {
-  position: relative;
-  margin-left: -10px;
-  width: 90px;
-  left: 14%;
-  height: 3px;
-  background: #bebdbe;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.link__line:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 70px;
-  width: 50px;
-  height: 2px;
-  background: #045663;
-}
-
-.link__text {
-  color: #4a4a4a;
-  font-family: sans-serif;
-  font-size: 18px;
-  transform: rotate(+90deg);
-  text-transform: uppercase;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.link:hover .link__line:after {
-  animation: animation-line 1.5s forwards;
-}
-
-.link:hover .link__arrow span:after {
-  animation: animation-arrow 1.5s forwards;
-  animation-delay: 1s;
-}
-
-.link:hover .link__text {
-  color: #045663;
-}
-
-.link2:hover .link__arrow2 span:after {
-  animation: animation-arrow 1.5s forwards;
-  animation-delay: 1s;
-}
-
-.link__line2:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 70px;
-  width: 50px;
-  height: 2px;
-  background: #045663;
-}
-
-.link__text2 {
-  color: #4a4a4a;
-  font-family: sans-serif;
-  font-size: 18px;
-  transform: rotate(+90deg);
-  text-transform: uppercase;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.link2:hover .link__line2:after {
-  animation: animation-line 1.5s forwards;
-}
-
-.link2:hover .link__arrow2 span:after {
-  animation: animation-arrow 1.5s forwards;
-  animation-delay: 1s;
-}
-
-.link2:hover .link__arrow2 span:after {
-  animation: animation-arrow 1.5s forwards;
-  animation-delay: 1s;
-}
-
-.link2:hover .link__text2 {
-  color: #045663;
-}
-
-
-@keyframes animation-line {
-  0% {
-    left: 70px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes animation-arrow {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
 }
 
 .arrow-c {
@@ -593,16 +649,14 @@ export default {
 }
 
 .card-title {
-
-  font-size:
-    24px;
+  font-size: 24px;
   max-width: 70%;
   margin: 0 0 10px;
   color: #110404;
 }
 
 .card-text {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   max-width: 80%;
   color: #110404;
@@ -661,6 +715,119 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+.card-o-row {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+
+.card-o {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-o img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: 1s ease-out;
+}
+
+.card-o h2 {
+  opacity: 1;
+  transition: transform 0.1s ease-in;
+  font-size: 24px;
+  position: absolute;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  inset: auto auto 220px 30px;
+}
+
+.card-o .p,
+.card-o .a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: 0.3s ease-out;
+}
+
+.card-o .p {
+  inset: auto auto 80px 30px;
+}
+
+.card-o .a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-o:hover .card-content-o {
+  display: block;
+}
+
+.card-content-o {
+  display: none;
+}
+
+.card-content-o p {
+  display: none;
+}
+
+.card-o:hover h2 {
+  color: rgb(84, 82, 82);
+  font-weight: bold;
+  inset: auto auto 220px 30px;
+}
+
+.card-o:hover p,
+.card-o:hover a {
+  font-size: 18px;
+  padding-top: 20%;
+  color: black;
+  z-index: 4;
+  opacity: 0.9;
+  transition: 0.1s ease-in;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.card-o:hover img {
+  transition: 0.3s ease-in;
+  opacity: 0.4;
+  transform: scaleY(0.0);
+}
+
+.card-o:hover .button-o {
+  transition: 0.3s ease-in;
+  opacity: 0.9;
+  color: #045663;
+}
+
+.card-o:hover .card-content-o p {
+  display: block;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+
+
 
 
 @media (max-width: 400px) {
@@ -669,29 +836,50 @@ body {
   }
 }
 
+#header3 {
+  padding-left: 10%;
+  text-align: left;
+  line-height: 0.8;
+  margin-bottom: 1%;
+  margin-top: 5%;
+  z-index: 3;
+}
+
+#header3 p {
+  font-size: 18px;
+  padding-right: 20%;
+  line-height: 2;
+  color: var(--grayishBlue);
+}
+
 #header2 {
   padding-left: 10%;
   text-align: left;
   line-height: 0.8;
   margin-bottom: 1%;
   margin-top: 5%;
+  z-index: 3;
 }
 
 #header2 p {
+  font-size: 18px;
   padding-right: 20%;
   line-height: 2;
   color: var(--grayishBlue);
 }
 
 #header1 {
+  font-family: sans-serif;
+  font-size: 18px;
   padding-left: 10%;
   text-align: left;
   line-height: 0.8;
   margin-bottom: 1%;
-  margin-top: 2%;
+  margin-top: 10%;
 }
 
 #header1 p {
+  font-size: 18px;
   padding-right: 20%;
   line-height: 2;
   color: var(--grayishBlue);
@@ -699,13 +887,16 @@ body {
 
 
 .box p {
+  font-family: sans-serif;
+  font-size: 18px;
   color: var(--grayishBlue);
   text-decoration-color: #1c1b1b;
 }
 
 .box {
+  background-color: #c8dce0;
   border-radius: 5px;
-  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  box-shadow: 0px 30px 40px -20px var(--varyDarkBlue);
   padding: 30px;
   margin: 20px;
 }
@@ -759,7 +950,7 @@ h2 {
   }
 
   .row2-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
