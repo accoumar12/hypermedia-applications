@@ -101,7 +101,10 @@ async function initDB() {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-
+        MostRelevant: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true
+        },
     })
 
     models.Company.belongsTo(models.Dog)
