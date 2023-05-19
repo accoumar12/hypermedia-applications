@@ -301,7 +301,8 @@ export default async (models) => {
             description: "UnitedHealth Group, Inc. engages in the provision of health care coverage, software, and data consultancy services. It operates through the following segments: UnitedHealthcare, OptumHealth, OptumInsight, and OptumRx. The UnitedHealthcare segment utilizes Optum's capabilities to help coordinate patient care, improve affordability of medical care, analyze cost trends, manage pharmacy benefits, work with care providers more effectively, and create a simpler consumer experience. The OptumHealth segment provides health and wellness care, serving the broad health care marketplace including payers, care providers, employers, government, life sciences companies, and consumers. The OptumInsight segment focuses on data and analytics, technology, and information to help major participants in the healthcare industry. The OptumRx segment offers pharmacy care services. The company was founded by Richard T. Burke in January 1977 and is headquartered in Minnetonka, MN.",
             link: "https://www.unitedhealthgroup.com/",
             ceo: "Sir Andrew Witty",
-            image: "https://1000logos.net/wp-content/uploads/2018/02/United-Healthcare-Logo-640x343.png"
+            image: "https://1000logos.net/wp-content/uploads/2018/02/United-Healthcare-Logo-640x343.png",
+            MostRelevant: false,
         },
         {
             name: "Cardinal Health",
@@ -310,7 +311,8 @@ export default async (models) => {
             description: "Cardinal Health, Inc. is a healthcare services and products company, which engages in the provision of customized solutions for hospitals, healthcare systems, pharmacies, ambulatory surgery centers, clinical laboratories, and physician offices. It also provides medical products and pharmaceuticals and cost-effective solutions that enhance supply chain efficiency. The firm operates through the Pharmaceutical and Medical segments. The Pharmaceutical segment distributes branded and generic pharmaceutical, specialty pharmaceutical and over-the-counter healthcare and consumer products. The Medical segment manufactures, sources and distributes Cardinal Health branded medical, surgical, and laboratory products. The company was founded by Robert D. Walter in 1971 and is headquartered in Dublin, OH.",
             link: "https://www.cardinalhealth.com/en.html",
             ceo: "Jason Hollar",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cardinal_Health_Logo.svg/2560px-Cardinal_Health_Logo.svg.png"
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cardinal_Health_Logo.svg/2560px-Cardinal_Health_Logo.svg.png",
+            MostRelevant: false
         },
         {
             name: "Elevance Health, Inc.",
@@ -319,7 +321,8 @@ export default async (models) => {
             description: "Elevance Health, Inc. operates as a health company, which engages in improving lives and communities, and making healthcare simpler. It operates through the following segments: Commercial and Specialty Business, Government Business, CarelonRx, and Other. The Commercial and Specialty Business segment provides insurance products and services such as stop loss, dental, vision, life, disability and supplemental health insurance. The Government Business segment includes medicare and medicaid businesses, national government services, and services provided to the federal government. The CerelonRx segment offers formulary management, pharmacy networks, prescription drug database, member services, and mail order capabilities. The Other segment is involved in health services business focused on quality of healthcare by enabling and creating new care delivery and payment models. The company was founded in 1944 and is headquartered in Indianapolis, IN.",
             link: "https://www.elevancehealth.com/",
             ceo: "Gail Boudreaux",
-            image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Elevance_Health_logo.svg/1200px-Elevance_Health_logo.svg.png"
+            image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Elevance_Health_logo.svg/1200px-Elevance_Health_logo.svg.png",
+            MostRelevant: false,
         },
         {
             name: "Cigna Group",
@@ -328,7 +331,8 @@ export default async (models) => {
             description: "The Cigna Group is engaged in the provision of global health services. It operates through the following segments: Evernorth, U.S. Medical, International Markets, and Group Disability and Other. The Evernorth segment includes a broad range of coordinated and point solution health services, including pharmacy solutions, benefits management solutions, care solutions and intelligence solutions. The U.S. Medical segment includes Cigna's U.S. Commercial and U.S. Government businesses that provide comprehensive medical and coordinated solutions to clients and customers. The International Markets segment includes supplemental health, life and accident insurance products and health care coverage in international markets, as well as health care benefits to globally mobile employees of multinational organizations. The Group Disability and Other segment represents group disability and life, corporate-owned life insurance, and run-off business consisting of reinsurance, settlement authority, and individual life insurance and annuity and retirement benefits business. The company was founded in 1792 and is headquartered in Bloomfield, CT.",
             link: "https://www.cigna.com/",
             ceo: "David Cordani",
-            image: "https://1000logos.net/wp-content/uploads/2020/07/Cigna-Logo-640x360.png"
+            image: "https://1000logos.net/wp-content/uploads/2020/07/Cigna-Logo-640x360.png",
+            MostRelevant: false,
         },
         {
             name: "Pfizer Inc.",
@@ -337,7 +341,8 @@ export default async (models) => {
             description: "Pfizer Inc is a research-based global biopharmaceutical company. It engages in the discovery, development, manufacture, marketing, sales and distribution of biopharmaceutical products worldwide. The firm works across developed and emerging markets to advance wellness, prevention, treatments and cures that challenge the most feared diseases. The company was founded by Charles Pfizer Sr. and Charles Erhart in 1849 and is headquartered in New York, NY",
             link: "https://www.pfizer.it/",
             ceo: "Albert Bourla",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Pfizer.svg/1200px-Pfizer.svg.png"
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Pfizer.svg/1200px-Pfizer.svg.png",
+            MostRelevant: true,
         },
         {
             name: "Microsoft",
