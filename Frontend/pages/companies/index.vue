@@ -70,7 +70,7 @@
                     <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
                 <div class="counter" data-target="120"></div>
-                <label for="Technology">
+                <label for="Consumer Goods">
                     
                     <p>Consumer Goods Investments</p>
                     <input type="radio" id="Consumer Goods" value="Consumer Goods"
@@ -90,7 +90,7 @@
                     <img src="~/assets/img/sustainable.png" alt="Sustainability">
                 </div>
                 <div class="counter" data-target="270"></div>
-                <label for="Technology">
+                <label for="Sustainability">
                     <span class="checkmark">
                     <p>Sustainability Investments</p>
                     <input type="radio" id="Sustainability" value="Sustainability"
@@ -112,6 +112,40 @@
                                         checked>
                         <span class="checkmark"></span>
                     </label></div>
+
+            <div class="dropdown-grid-filter-container">
+                            <div class="dropdown-grid-filter grid-x align-middle">
+                <label for="Technology">
+                    
+                    <p> Technology Investments</p>
+                    <input type="radio" id="Technology" value="Technology"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label for="Healthcare">
+                    
+                    <p>Healthcare Investments</p>
+                    <input type="radio" id="Healthcare" value="Healthcare"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="Consumer Goods">
+                    
+                    <p>Consumer Goods Investments</p>
+                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>  
+                <label for="Sustainability">
+                    <span class="checkmark">
+                    <p>Sustainability Investments</p>
+                    <input type="radio" id="Sustainability" value="Sustainability"
+                                        name="Investments-categories" v-model="areas">
+                    </span>
+                </label>
+                </div>
+            </div>
             <div class="form-container">
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
@@ -175,14 +209,14 @@ const filtered = computed(() => {
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
         if (company.id > 8) { // Irst 8 of the db are supervisors' name
-            if (name.value == 0 || name.value == "" || areas.value == 0 || areas.value == "") { // All companies
+            if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "")) { // All companies
                 console.log(company) // Only for debug
                 arrTot.push(company)
             }
-            else if (company.name == name.value & company.areas == areas.value) {
+            else if ((company.name == name.value) & (company.areas == areas.value)) {
                 arrTot.push(company)
             }
-            else if (company.name.toLowerCase().includes(name.value.toLowerCase()))
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase()))& (company.areas == areas.value))
                 arrTot.push(company)
         }
     }
