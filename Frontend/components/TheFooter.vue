@@ -22,8 +22,8 @@
                                     target="_blank">Address:
                                     Politecnico di Milano</a></li>
                             <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                            <li><a href="mailto:info@example.com" target="_blank">Email:
-                                    powerpuff.geoinformatics@gmail.com</a></li>
+                            <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
+                                    ventourteam@gmail.com</a></li>
                         </ul>
                     </div>
 
