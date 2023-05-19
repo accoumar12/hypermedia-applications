@@ -28,7 +28,13 @@
                     <img src="~/assets/img/technology.png" alt="Tech">
                 </div>
                 <div class="counter" data-target="100"></div>
-                <p>Technology Investments</p>
+                <label for="Technology">
+                    
+                    <p> Technology Investments</p>
+                    <input type="radio" id="Technology" value="Technology"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
 
                 <div class="link-text">
                     <a><router-link to="/technology">
@@ -43,8 +49,14 @@
                     <img src="~/assets/img/health.png" alt="Healthcare">
                 </div>
                 <div class="counter" data-target="250"></div>
-                <p>Healthcare Investments</p>
-
+                <label for="Healthcare">
+                    
+                    <p>Healthcare Investments</p>
+                    <input type="radio" id="Healthcare" value="Healthcare"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
+                
                 <div class="link-text">
                     <a><router-link to="/healthcare">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -58,7 +70,13 @@
                     <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
                 <div class="counter" data-target="120"></div>
-                <p>Consumer Goods Investments</p>
+                <label for="Consumer Goods">
+                    
+                    <p>Consumer Goods Investments</p>
+                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>                
 
                 <div class="link-text">
                     <a><router-link to="/consumer">
@@ -72,8 +90,13 @@
                     <img src="~/assets/img/sustainable.png" alt="Sustainability">
                 </div>
                 <div class="counter" data-target="270"></div>
-                <p>Sustainability Investments</p>
-
+                <label for="Sustainability">
+                    <p>Sustainability Investments</p>
+                    <input type="radio" id="Sustainability" value="Sustainability"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>  
+                
                 <div class="link-text">
                     <a><router-link to="/sustainability">
                             <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
@@ -82,7 +105,47 @@
             </div>
         </div>
         <section class="team-members-grid">
-            <div class="title">ALL COMPANIES</div>
+            <div class="title"> <label for="all-team">
+                                    ALL COMPANIES
+                                    <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
+                                        checked>
+                        <span class="checkmark"></span>
+                    </label></div>
+        <!--
+            <div class="dropdown-grid-filter-container">
+                            <div class="dropdown-grid-filter grid-x align-middle">
+                <label for="Technology">
+                    
+                    <p> Technology Investments</p>
+                    <input type="radio" id="Technology" value="Technology"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label for="Healthcare">
+                    
+                    <p>Healthcare Investments</p>
+                    <input type="radio" id="Healthcare" value="Healthcare"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="Consumer Goods">
+                    
+                    <p>Consumer Goods Investments</p>
+                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
+                                        name="Investments-categories" v-model="areas">
+                    <span class="checkmark"></span>
+                </label>  
+                <label for="Sustainability">
+                    <span class="checkmark">
+                    <p>Sustainability Investments</p>
+                    <input type="radio" id="Sustainability" value="Sustainability"
+                                        name="Investments-categories" v-model="areas">
+                    </span>
+                </label>
+                </div>
+            </div>
+        -->
             <div class="form-container">
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
@@ -146,14 +209,14 @@ const filtered = computed(() => {
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
         if (company.id > 8) { // Irst 8 of the db are supervisors' name
-            if (name.value == 0 || name.value == "") { // All companies
+            if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "")) { // All companies
                 console.log(company) // Only for debug
                 arrTot.push(company)
             }
-            else if (company.name == name.value) {
+            else if ((company.name == name.value) & (company.areas == areas.value)) {
                 arrTot.push(company)
             }
-            else if (company.name.toLowerCase().includes(name.value.toLowerCase()))
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase()))& (company.areas == areas.value))
                 arrTot.push(company)
         }
     }
@@ -597,6 +660,7 @@ label>[type=radio] {
     margin-right: 2rem;
     -webkit-text-fill-color: #0e6b74;
     margin: 1rem 1rem 0.2rem 0;
+    position: absolute;
 }
 
 .team-members-grid {

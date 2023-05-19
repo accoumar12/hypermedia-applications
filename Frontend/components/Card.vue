@@ -61,19 +61,6 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     margin: auto;
 }
 
-/*
-.card {
-    
-    display: flex;              QUESTO è QUELLO DOVE CI SONO LE CARTE 
-    flex-flow: column;
-    padding: 20px;              DELLE PERSONE
-    border: 2px solid black; QUELLO SOTTO è IL MODELLO DI NIKY GIUSTO?
-    border-radius: 20px;
-    width: fit-content;
-    height: fit-content;
-}
-*/
-
 .title {
     font-size: 2em;
     font-weight: bold;

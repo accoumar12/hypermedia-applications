@@ -53,6 +53,22 @@ async function initDB() {
         area:{
             type: DataTypes.STRING,
             allowNull: true
+        },
+        award1:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        award2:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        award3:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        award4:{
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
 

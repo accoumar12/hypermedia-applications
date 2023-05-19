@@ -24,14 +24,42 @@
                     <img id="main-img" :src="dog.image" />
                 </div>
                 <div class="column2">
-                    <div class="description-container">
-                        <p2 class="description">{{ dog.description }}</p2>
-                        <p2 class="description">{{ dog.description2 }}</p2>
+                    <div class="description-containera">
+                        <div class="button-container" style="position: relative; top: 0; z-index: 1;">
+                            <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                                <br>
+                                BIO
+                            </button>
+                            <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                                <br>
+                                AWARDS
+                            </button>
+                        </div>
+
+                        <div class="description-container" v-if="activeSection === 1">
+                            <p2 class="description">{{ dog.description }}</p2>
+                            <p2 class="description">{{ dog.description2 }}</p2>
+                        </div>
+
+                        <div class="description-container" v-else-if="activeSection === 2">
+                            <p3 class="description">
+                             <ul>
+                                  <li>{{ dog.award1 }}</li>
+                                  <br>
+                                  <li>{{ dog.award2 }}</li>
+                                  <br>
+                                  <li>{{ dog.award3 }}</li>
+                                  <br>
+                                  <li>{{ dog.award4 }}</li>
+                            </ul>
+                            </p3>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr />
         </div>
+
         <div class="row-section">
             <div class="text-center">
                 <p>COMPANIES IN SUPERVISION:</p>
@@ -72,19 +100,19 @@
   
 <script>
 export default defineNuxtComponent({
-    data() {
-        return {
-            activeSection: 1,
-        };
-    },
-    async asyncData() {
-        //const route = useRoute()
-        const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies')
-
-        return {
-            companies
+        data() {
+            return {
+                activeSection: 1,
+            };
+        },
+        async asyncData() {
+            // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+            const route = useRoute()
+            const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies' + route.params.id)
+            return {
+                companies
+            }
         }
-    }
 })
 
 
@@ -231,7 +259,6 @@ hr {
 }
 
 
-
 .column {
     flex-basis: 50%;
     padding-left: 2%;
@@ -251,7 +278,11 @@ hr {
     width: 60%;
     height: 40%;
     padding-left: 10%;
-
+    display: initial;
+    /*
+    height: auto;
+    padding-left: 10%;
+    */
 }
 
 button2 {
@@ -282,8 +313,54 @@ button2:hover {
     font-family: PT sans-serif;
     font-size: 1.1rem;
 }
+.description-container p3 {
+    margin-bottom: 8px;
+    font-size: 15pt;
+    width: 100%;
+    font-family: PT sans-serif;
+    font-size: 1.1rem;
+}
 
 .row6 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 2%;
+}
+
+
+.description-containera {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    text-align: justify;
+    padding-right: 20%;
+}
+
+.description-containera p2 {
+    height: 20%;
+    padding-left: -10%;
+    font-size: 15pt;
+    width: 90%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+}
+.description-containera p3 {
+    height: 20%;
+    padding-left: 70%;
+    font-size: 15pt;
+    width: 150%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.row2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -317,12 +394,6 @@ button2:hover {
     border-left: none;
 }
 
-.column3 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
 .column3 p {
     font-size: 16px;
 }
@@ -330,5 +401,34 @@ button2:hover {
 #description {
     padding: 0 20px 0 20px;
     font-size: 15pt;
+}
+
+.section-button {
+    padding-bottom: 2.5%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
+}
+
+.section-button.active {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
+    font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    font-family: monospace;
+    color: #033f52;
 }
 </style>
