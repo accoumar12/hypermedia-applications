@@ -43,15 +43,19 @@
 
                         <div class="description-container" v-else-if="activeSection === 2">
                             <p3 class="description">
+                            
                              <ul>
                                   <li>{{ dog.award1 }}</li>
                                   <br>
-                                  <li>{{ dog.award2 }}</li>
+                                  <li v-if="dog.award2 != ''">{{ dog.award2 }}</li>
                                   <br>
-                                  <li>{{ dog.award3 }}</li>
+                                  <li v-if="dog.award3 != ''">{{ dog.award3 }}</li>
                                   <br>
-                                  <li>{{ dog.award4 }}</li>
+                                  <li v-if="dog.award4 != ''">{{ dog.award4 }}</li>
                             </ul>
+                            <!--
+                            <ul id="AwardList"></ul>
+                            -->
                             </p3>
                         </div>
                     </div>
@@ -116,9 +120,8 @@ export default defineNuxtComponent({
             }
         }
 })
-
-
 </script>
+
 <script setup>
 
 const route = useRoute()
@@ -163,7 +166,25 @@ const filtered = computed(() => {
 
 })
 
+/*
+  var items = [
+    { text: dog.award1 },
+    { text: dog.award2 },
+    { text: dog.award3 },
+    { text: dog.award4 }
+  ];
+
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].text !== '') {
+      var listItem = document.createElement('li');
+      listItem.textContent = items[i].text;
+      document.getElementById('myList').appendChild(listItem);
+    }
+  }
+*/
+
 </script>
+
 
 <style>
 #back {
