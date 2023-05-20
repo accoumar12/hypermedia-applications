@@ -59,15 +59,17 @@
             </div>
             <hr />
         </div>
+        <div v-if="filtered.length > 0">
 
-        <div class="row-section">
-            <div class="text-center">
-                <p>COMPANIES IN SUPERVISION:</p>
+            <div class="row-section">
+                <div class="text-center">
+                    <p>COMPANIES IN SUPERVISION:</p>
+                </div>
             </div>
-        </div>
-        <div class="row-section2">
-            <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                :link="'/companies/' + company.id" />
+            <div class="row-section2">
+                <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                    :link="'/companies/' + company.id" />
+            </div>
         </div>
     </main>
 
