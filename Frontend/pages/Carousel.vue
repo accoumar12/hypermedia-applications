@@ -1,27 +1,52 @@
 <template>
   <main id="back-c">
-
     <div class="background-section">
-      <div class="double_content">
-        <div class="double_wrapper02 dotted02">
-        </div>
-        <div class="double_wrapper02 white02">
-          <div class="double_wrapper01 white01"></div>
-        </div>
-        <div class="double_wrapper02 gray02">
-          <div class="double_wrapper01 gray01"></div>
-        </div>
-        <div class="double_wrapper02 orange02">
-          <div class="double_wrapper01 orange01"></div>
-        </div>
-      </div>
-      <div class="name">
-        <p>WE ARE GROWTH</p>
-      </div>
       <div class="text-container-h">
         <h1 class="big-text">About VenTour</h1>
         <p class="small-text">We are a leading venture capital firm driving innovation and empowering startups to reach
           their full potential.</p>
+      </div>
+
+      <div class="row-a">
+        <div class="container-a">
+          <div class="col-a">
+            <a class="card1" href="#header1">
+              <h3>OUR HISTORY</h3>
+              <p class="small-a">Excellence over a decade in VenTour. From 15 million Euros of capital invested in 1910 to
+                500 million Euros in 2020. We grow together with our investors!
+              </p>
+              <div class="go-corner" href="#header1">
+                <div class="go-arrow">
+                  →
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-a">
+            <a class="card1" href="#header2">
+              <h3>OUR APPROACH</h3>
+              <p class="small-a">Evaluated from numerous experts as the best approach in helping the investors accomplish
+                their ambitions for success. We help you to believe in YOU!</p>
+              <div class="go-corner" href="#header2">
+                <div class="go-arrow">
+                  →
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-a">
+            <a class="card1" href="#header3">
+              <h3>WHAT DO WE OFFER</h3>
+              <p class="small-a">We offer constant support, full guidance and numerous resources. We give information and
+                assistance to new investors interested in joining us.</p>
+              <div class="go-corner" href="#header3">
+                <div class="go-arrow">
+                  →
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div id="header1">
@@ -166,6 +191,18 @@
             </span>
           </a>
         </div>
+      </div>
+    </div>
+    <div class="row3-container">
+      <div class="col3">
+        <a class="card13" href="/dogs/index">
+          <h3>MEET OUR TEAM</h3>
+          <div class="go-corner" href="#header4">
+            <div class="go-arrow">
+              →
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </main>
@@ -323,8 +360,9 @@ export default {
 
 
 .background-section {
+  padding-top: 20%;
   position: relative;
-  height: 500px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   z-index: 2;
@@ -505,7 +543,7 @@ orange circle
 
 .name {
   position: relative;
-  top: 45%;
+  top: -170%;
   transform: translate(-50%, -50%);
   width: 23vw;
   height: 7vw;
@@ -533,6 +571,166 @@ orange circle
   100% {
     opacity: 1;
   }
+}
+
+.row-a {
+  top: 0px;
+}
+
+.container-a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-a h3 {
+  color: #262626;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.container-a p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+}
+
+p.small {
+  font-size: 14px;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #00838d;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.container-a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 42px 34px;
+  margin: 10px;
+  text-decoration: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.row3-container {
+  padding-left: 60%;
+  padding-bottom: 2%;
+}
+
+.card13 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin: 10px;
+  text-decoration: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.card13:hover:before {
+  transform: scale(21);
+}
+
+.card13:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+.col3 h3 {
+  color: #262626;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 60% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+  transform: scale(21);
+}
+
+.card1:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card1:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+.card13:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 60% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card13:hover:before {
+  transform: scale(21);
+}
+
+
+.card13:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff;
 }
 
 .text-container-h {
@@ -583,7 +781,7 @@ orange circle
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 600px;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -815,6 +1013,10 @@ body {
 .card-o:hover .button-o {
   transition: 0.3s ease-in;
   opacity: 0.9;
+  color: black;
+}
+
+.card-o:hover .button-o:hover {
   color: #045663;
 }
 
@@ -874,8 +1076,7 @@ body {
   padding-left: 10%;
   text-align: left;
   line-height: 0.8;
-  margin-bottom: 1%;
-  margin-top: 10%;
+  margin-top: 16%;
 }
 
 #header1 p {

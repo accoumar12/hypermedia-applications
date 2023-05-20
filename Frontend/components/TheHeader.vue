@@ -6,17 +6,26 @@
         <header>
             <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
             <nav>
+                <span>
+                    <p><router-link to="/History" class="nav-link">About Us</router-link></p>
+                </span>
+                <router-link to="/dogs" class="nav-link">Our Team</router-link>
                 <div class="dropdown">
-                    <span>
-                        <p class="nav-link">About Us</p>
-                    </span>
-                    <div class="dropdown-content">
-                        <p><router-link to="/History" class="nav-link">History</router-link></p>
-                        <p><router-link to="/about-us" class="nav-link">Our Approach</router-link></p>
+                    <div class="dropdown-toggle">
+                        <router-link to="/companies" class="nav-link">Investments</router-link>
+                    </div>
+                    <div class="dropdown-menu">
+                        <p>
+                            <router-link to="/companies" class="nav-link">Areas</router-link>
+                        </p>
+                        <div class="sub-menu">
+                            <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
+                            <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
+                            <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
+                            <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
+                        </div>
                     </div>
                 </div>
-                <router-link to="/dogs" class="nav-link">Our Team</router-link>
-                <router-link to="/companies" class="nav-link">Investments</router-link>
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
@@ -131,17 +140,44 @@ nav {
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    min-width: 160px;
-    padding: 10px 10px;
-    z-index: 1;
 
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    min-width: 160px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    min-width: 160px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .sub-menu {
+    display: none;
+}
+
+.dropdown-menu:hover .sub-menu {
     display: block;
 }
 
