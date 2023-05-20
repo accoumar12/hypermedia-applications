@@ -111,6 +111,8 @@
                                         checked>
                         <span class="checkmark"></span>
                     </label></div>
+            <button class="active" @click="MR = ''"> Show all </button>
+            <button @click="MR = true">Most Relevant Companies</button>
         <!--
             <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
@@ -203,21 +205,23 @@ const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL +
 */
 const name = ref("");
 const areas = ref("");
+const MR = ref("");
 
 const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
         if (company.id > 8) { // Irst 8 of the db are supervisors' name
-            if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "")) { // All companies
+            if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "") & (MR.value == 0 || MR.value == "")) { // All companies
                 console.log(company) // Only for debug
                 arrTot.push(company)
             }
-            else if ((company.name == name.value) & (company.areas == areas.value)) {
+            //else if ((company.name == name.value) & (company.areas == areas.value)) {
+            //    arrTot.push(company)
+            //}
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase()))& ((company.areas == areas.value)||(areas.value == 0 || areas.value == "")) & (company.MostRelevant==MR.value))
                 arrTot.push(company)
-            }
-            else if ((company.name.toLowerCase().includes(name.value.toLowerCase()))& (company.areas == areas.value))
-                arrTot.push(company)
+                console.log(MR.value) 
         }
     }
     return arrTot
