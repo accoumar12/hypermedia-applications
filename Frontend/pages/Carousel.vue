@@ -195,14 +195,16 @@
     </div>
     <div class="row3-container">
       <div class="col3">
-        <a class="card13" href="/dogs/index">
+        <router-link to="/dogs" class="nav-link"> <!-- If you want you can do whatever you want with this class, I mean like changing the 'underline' name-->
+        <a class="card13">
           <h3>MEET OUR TEAM</h3>
-          <div class="go-corner" href="#header4">
+          <div class="go-corner"><!--href="#header4"-->
             <div class="go-arrow">
               →
             </div>
           </div>
         </a>
+      </router-link>
       </div>
     </div>
   </main>
