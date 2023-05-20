@@ -39,7 +39,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <section class="team-members-grid">
             <div class="grid-container">
@@ -346,17 +345,9 @@ h1 {
     align-items: center;
     margin-top: 2%;
     height: 40rem;
-    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+
 }
 
-.row1:after {
-    content: "";
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 1rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
-}
 
 .gif-container {
     position: relative;

@@ -1,11 +1,9 @@
 <template>
   <main id="back-c">
     <div class="background-section">
-      <div class="text-container-h">
-        <h1 class="big-text">About VenTour</h1>
-        <p class="small-text">We are a leading venture capital firm driving innovation and empowering startups to reach
-          their full potential.</p>
-      </div>
+      <h1 class="big-text">About VenTour</h1>
+      <!--<p class="small-text">We are a leading venture capital firm driving innovation and empowering startups to reach
+          their full potential.</p>-->
 
       <div class="row-a">
         <div class="container-a">
@@ -195,16 +193,16 @@
     </div>
     <div class="row3-container">
       <div class="col3">
-        <router-link to="/dogs" class="nav-link"> <!-- If you want you can do whatever you want with this class, I mean like changing the 'underline' name-->
-        <a class="card13">
-          <h3>MEET OUR TEAM</h3>
-          <div class="go-corner"><!--href="#header4"-->
-            <div class="go-arrow">
-              →
+        <router-link to="/dogs" class="nav-link-end">
+          <a class="card13">
+            <h3>MEET OUR TEAM</h3>
+            <div class="go-corner">
+              <div class="go-arrow">
+                →
+              </div>
             </div>
-          </div>
-        </a>
-      </router-link>
+          </a>
+        </router-link>
       </div>
     </div>
   </main>
@@ -362,12 +360,13 @@ export default {
 
 
 .background-section {
-  padding-top: 20%;
+  background-image: url("https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?cs=srgb&dl=pexels-fauxels-3184338.jpg&fm=jpg");
+  width: 100%;
+  padding-top: 30%;
   position: relative;
-  height: 100px;
+  height: 300px;
   background-size: cover;
-  background-position: center;
-  z-index: 2;
+  background-position: fixed;
 }
 
 .overlay {
@@ -379,205 +378,6 @@ export default {
   z-index: 3;
 }
 
-.double_content {
-  position: absolute;
-  top: 90%;
-  right: 30%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  animation: double_content 6.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  opacity: 0;
-}
-
-.double_wrapper02 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  animation: double_content forwards;
-  opacity: 0;
-}
-
-.double_wrapper01 {
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.double_wrapper01::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: #045663;
-  z-index: 2;
-}
-
-.double_wrapper01::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: #045663;
-  z-index: 3;
-}
-
-/*============
-white circle
-============*/
-.white02 {
-  top: -100%;
-  animation-delay: 1s;
-}
-
-.white01 {
-  width: 15vw;
-  height: 15vw;
-  background: #fff;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.white01::before {
-  top: 0;
-  left: 14.5vw;
-  width: 29vw;
-  height: 29vw;
-  transform-origin: left 14.5vw;
-  animation: rotate-circle-right 0.3s linear 1.2s forwards;
-
-}
-
-.white01::after {
-  top: 0;
-  left: -14.5vw;
-  width: 29vw;
-  height: 29vw;
-  transform-origin: right 14.5vw;
-  animation: rotate-circle-left 0.3s linear 1.2s forwards;
-}
-
-@keyframes rotate-circle-left {
-  0% {
-    transform: rotate(0deg);
-    background: #212022;
-  }
-
-  50% {
-    transform: rotate(-180deg);
-    background: #212022;
-  }
-
-  50.01% {
-    transform: rotate(-360deg);
-    background: #fff;
-  }
-
-  100% {
-    transform: rotate(-360deg);
-    background: #fff;
-  }
-}
-
-/*============
-orange circle
-============*/
-.orange02 {
-  top: -300%;
-  animation-delay: 1.1s;
-}
-
-.orange01 {
-  width: 15vw;
-  height: 15vw;
-  background: #045663;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.orange01::before {
-  top: 0;
-  left: 13.5vw;
-  width: 27vw;
-  height: 27vw;
-  background: #045663;
-  transform-origin: left 13.5vw;
-  animation: rotate-circle-right 0.5s linear 1.3s forwards;
-
-}
-
-.orange01::after {
-  top: 0;
-  left: -13.5vw;
-  width: 27vw;
-  height: 27vw;
-  background: #045663;
-  transform-origin: right 13.5vw;
-  animation: rotate-circle-left02 0.5s linear 1.3s forwards;
-}
-
-
-@keyframes double_content {
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-
-@keyframes rotate-circle-right {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-
-.name {
-  position: relative;
-  top: -170%;
-  transform: translate(-50%, -50%);
-  width: 23vw;
-  height: 7vw;
-  animation: name 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s forwards;
-  opacity: 0;
-  left: -10%;
-}
-
-.name p {
-  top: 45%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 1.4vw;
-  font-family: sans-serif;
-  letter-spacing: 0.1em;
-}
-
-
-@keyframes name {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.row-a {
-  top: 0px;
-}
 
 .container-a {
   width: 100%;
@@ -586,6 +386,7 @@ orange circle
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 5%;
 }
 
 .container-a h3 {
@@ -628,10 +429,7 @@ p.small {
   font-family: courier, sans;
 }
 
-.container-a {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .card1 {
   display: block;
@@ -647,17 +445,17 @@ p.small {
 }
 
 .row3-container {
-  padding-left: 60%;
+  padding-left: 75%;
   padding-bottom: 2%;
 }
 
 .card13 {
   display: block;
   position: relative;
-  max-width: 262px;
+  max-width: 151px;
   background-color: #f2f8f9;
   border-radius: 10px;
-  padding: 20px 30px;
+  padding: 20px 20px;
   margin: 10px;
   text-decoration: none;
   z-index: 5;
@@ -745,15 +543,23 @@ p.small {
 }
 
 .big-text {
-  text-decoration-color: #0e6b74;
-  text-align: center;
+  background-color: white;
+  color: black;
   font-size: 60px;
-  font-family: sans-serif;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 28%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
 }
 
 .small-text {
+  font-weight: bold;
   text-align: center;
   font-size: 24px;
   font-family: sans-serif;
@@ -779,7 +585,7 @@ p.small {
 
 
 #carousel-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -790,7 +596,7 @@ p.small {
 }
 
 .carousel {
-  width: 100%;
+  width: 80% !important;
   overflow: hidden;
   display: flex;
   justify-content: left;
@@ -916,9 +722,11 @@ body {
 }
 
 .card-o-row {
+  gap: 2%;
   display: flex;
   justify-content: center;
   padding-bottom: 2%;
+  width: 100%;
 }
 
 .card-o {
@@ -1030,9 +838,9 @@ body {
   vertical-align: middle;
 }
 
-
-
-
+.nav-link-end {
+  text-decoration: none;
+}
 
 @media (max-width: 400px) {
   h1 {
@@ -1078,7 +886,7 @@ body {
   padding-left: 10%;
   text-align: left;
   line-height: 0.8;
-  margin-top: 16%;
+  margin-top: 5%;
 }
 
 #header1 p {

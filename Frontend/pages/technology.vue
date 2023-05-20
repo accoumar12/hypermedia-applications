@@ -347,7 +347,7 @@ hr {
 
 #area-img {
     width: 70%;
-    height: 700%;
+    height: 100%;
     padding-left: 10%;
 
 }
