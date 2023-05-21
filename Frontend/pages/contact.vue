@@ -127,7 +127,8 @@
                                     </span>
                                     <div class="job-list-badges">
                                         <div class="job-list-badge job-list-badge-remote">
-                                            <b-icon-house-door></b-icon-house-door> <!-- House icon not working-->
+                                            <img class="ikona" src="~/assets/img/home-icon.png">
+                                            <!-- <b-icon-house-door></b-icon-house-door> House icon not working-->
                                             
                                         <span class="job-list-badge-text">Work remotely</span>
                                         </div>
@@ -516,6 +517,12 @@ button2:hover {
 
 .job-list-badges {
   margin-top: 16px;
+}
+
+.ikona {
+  float: left;
+  max-width: 5%;
+  max-height: 5%;
 }
 
 </style>
