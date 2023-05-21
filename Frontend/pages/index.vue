@@ -4,91 +4,168 @@
 <template>
     <main id="back-h">
         <div class="row-h-1">
+            <div class="content2">
+                <p class="content__container__text">
+                    Fly with us to a journey of growth!
+                </p>
+                <a href="#section2" class="plane-icon">
+                    <img src="~/assets/img/plane.png" />
+                </a>
+            </div>
             <div class="content">
                 <div class="content__container">
                     <p class="content__container__text">
-                        Hello
+                        We are
                     </p>
                     <ul class="content__container__list">
-                        <li class="content__container__list__item">world !</li>
-                        <li class="content__container__list__item">bob !</li>
-                        <li class="content__container__list__item">users !</li>
-                        <li class="content__container__list__item">everybody !</li>
+                        <li class="content__container__list__item">inovation !</li>
+                        <li class="content__container__list__item">power !</li>
+                        <li class="content__container__list__item">potential !</li>
+                        <li class="content__container__list__item">VenTour !</li>
+
                     </ul>
                 </div>
             </div>
+
             <div class="container-first">
                 <div class="container__image-f">
-                    <div class="container__info container__author">Photo by <a class="link"
-                            href="https://instagram.com/silvia.diaconescu" target="_blank">Silvia Diaconescu</a></div>
-                    <div class="container__info container__location">Geneva Lake Switzerland </div>
-
+                    <div class="container__info container__author">Investments in a decade </div>
                 </div>
+
             </div>
             <div class="container-second">
                 <div class="container__image-t">
-                    <div class="container__info container__author">Photo by <a class="link"
-                            href="https://instagram.com/silvia.diaconescu" target="_blank">Silvia Diaconescu</a></div>
-                    <div class="container__info container__location">Geneva Lake Switzerland </div>
+                    <div class="container__info2 container__author">Invested in 5 BEST worldwide companies</div>
                 </div>
             </div>
-            <div class="container-third">
-                <div class="container__image-e"></div>
-                <div class="container__info container__author">Photo by <a class="link"
-                        href="https://instagram.com/silvia.diaconescu" target="_blank">Silvia Diaconescu</a></div>
-                <div class="container__info container__location">Geneva Lake Switzerland </div>
-
+            <div class="container-second-b">
+                <div class="container__image-e">
+                    <div class="container__info3 container__author">Operating in 4 diverse investment areas</div>
+                </div>
             </div>
         </div>
-
-
     </main>
 </template>
 
-<style>
-#back-h {
-    width: 100%;
-    background-image: url('assets/img/logo.png');
-    background-size: cover;
-    height: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+<script>
+// JavaScript code for handling the hover event
+document.addEventListener("DOMContentLoaded", function () {
+    const planeIcon = document.querySelector(".plane-icon");
+    const planeImage = document.querySelector(".plane-icon img");
 
+    planeIcon.addEventListener("mouseover", function () {
+        planeImage.style.animation = "movePlane 1s infinite";
+    });
+
+    planeIcon.addEventListener("mouseout", function () {
+        planeImage.style.animation = "";
+    });
+});
+</script>
+<style>
+.plane-icon img {
+    opacity: 1;
+    position: absolute;
+    width: 38%;
+    top: 200%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    border-radius: 50%;
+    animation: movePlane 5s linear infinite;
+}
+
+.plane-icon:hover img {
+    animation: none;
+    opacity: 0.5;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes movePlane {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, 0%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 .row-h-1 {
-    background-size: cover;
+    background-image: url("~/assets/img/wallhome.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 40%;
+    height: 90%;
     position: relative;
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 0%;
     right: 0;
+    z-index: 1;
+
 }
 
 .content {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 29%;
+    left: 68%;
     transform: translate(50%, 50%);
-    height: 160px;
+    height: 180px;
     overflow: hidden;
     padding: 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 35px;
+    font-family: sans-serif;
+    font-size: 25px;
     line-height: 40px;
-    color: #ecf0f1;
+    color: rgb(15, 108, 126);
+    z-index: 2;
 }
 
+.content2 {
+    width: 25%;
+    position: absolute;
+    font-weight: bold;
+    top: 0px;
+    left: 58%;
+    transform: translate(46%, 50%);
+    height: 135px;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    color: rgb(15, 108, 126);
+    z-index: 6
+}
 
 
 .content__container {
     font-weight: 600;
     overflow: hidden;
-    height: 40px;
+    height: 44px;
     padding: 0 40px;
     position: relative;
 }
@@ -119,7 +196,7 @@
     top: 0;
 
     color: #0e1010;
-    font-size: 42px;
+    font-size: 60px;
     line-height: 40px;
 
     -webkit-animation-name: opacity;
@@ -133,7 +210,7 @@
 
 .content__container__list {
     margin-top: 0;
-    padding-left: 110px;
+    padding-left: 100px;
     text-align: left;
     list-style: none;
 
@@ -355,7 +432,7 @@
     height: 150px;
 
     border-radius: 50%;
-    background-image: url('https://img.freepik.com/premium-photo/growth-graph-finance-business-chart-market-financial-stock-money-background-success-digital-investment-data-concept-economy-analysis-profit-diagram-global-trade-currency-report-exchange_79161-2475.jpg');
+    background-image: url("~/assets/img/euros.png");
     background-size: cover;
     transition: ease-in-out .3s;
 
@@ -386,6 +463,11 @@
 }
 
 .container__info {
+    color: rgb(43 49 71);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 70%;
     position: relative;
     line-height: 1.8;
     transition: opacity 0.3s ease;
@@ -400,8 +482,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
     padding: 10px;
     border-radius: 5px;
 }
@@ -410,15 +490,13 @@
     opacity: 1;
 }
 
-.container__location {
-    transition-delay: .15s;
-}
+
 
 .container__image-f:hover {
     border-radius: 0%;
     width: 250px;
     height: 210px;
-
+    opacity: 0.7;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
 }
 
@@ -431,18 +509,6 @@
 }
 
 
-.link {
-    border-bottom: 1px solid transparent;
-    color: #06C0A8;
-    text-decoration: none;
-    transition: ease-in .13s;
-}
-
-.link:hover {
-    background-color: #06C0A8;
-    color: #ffffff;
-}
-
 /* Top Middle Image */
 .top-middle-image {
     position: absolute;
@@ -452,13 +518,52 @@
 }
 
 .container-second {
-    padding-left: 2%;
+    padding-left: 6%;
     display: flex;
     justify-content: center;
     justify-content: center;
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+
+.container-second-b {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container__info2 {
+    color: rgb(43 49 71);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    left: 10%;
+    padding-bottom: 30%;
+    position: relative;
+    line-height: 1.8;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.container__info2.container__text {
+    /* ... existing styles ... */
+    position: absolute;
+    /* Added position absolute */
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container__image-t:hover .container__info2 {
+    opacity: 1;
 }
 
 .container__image-t {
@@ -471,7 +576,7 @@
     height: 150px;
 
     border-radius: 50%;
-    background-image: url('https://img.freepik.com/premium-photo/growth-graph-finance-business-chart-market-financial-stock-money-background-success-digital-investment-data-concept-economy-analysis-profit-diagram-global-trade-currency-report-exchange_79161-2475.jpg');
+    background-image: url('~/assets/img/offices.png');
     background-size: cover;
     transition: ease-in-out .3s;
 
@@ -511,7 +616,7 @@
     border-radius: 0;
     width: 250px;
     height: 210px;
-
+    opacity: 0.7;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
 }
 
@@ -523,20 +628,34 @@
     transform: scale(2.8) translate3d(-18%, 0px, 0px);
 }
 
-/* Right Image */
-.right-image {
-    max-width: 100%;
-    max-height: 100%;
+.container__info3 {
+    color: rgb(43 49 71);
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    left: 10%;
+    padding-bottom: 58%;
+    position: relative;
+    line-height: -5px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
-.container-third {
-    padding-left: 4%;
-    width: 100%;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.container__info3.container__text {
+    /* ... existing styles ... */
+    position: absolute;
+    /* Added position absolute */
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container__image-e:hover .container__info3 {
+    opacity: 1;
 }
 
 .container__image-e {
@@ -549,7 +668,7 @@
     height: 150px;
 
     border-radius: 50%;
-    background-image: url('https://img.freepik.com/premium-photo/growth-graph-finance-business-chart-market-financial-stock-money-background-success-digital-investment-data-concept-economy-analysis-profit-diagram-global-trade-currency-report-exchange_79161-2475.jpg');
+    background-image: url('~/assets/img/areass.png');
     background-size: cover;
     transition: ease-in-out .3s;
 
@@ -583,11 +702,13 @@
     opacity: 1;
 }
 
+
+
 .container__image-e:hover {
     border-radius: 0;
     width: 250px;
     height: 210px;
-
+    opacity: 0.7;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
 }
 
