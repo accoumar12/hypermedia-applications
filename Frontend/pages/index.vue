@@ -129,19 +129,20 @@
 </template>
 
 <script>
-// JavaScript code for handling the hover event
-document.addEventListener("DOMContentLoaded", function () {
+    export default {
+  mounted() {
     const planeIcon = document.querySelector(".plane-icon");
     const planeImage = document.querySelector(".plane-icon img");
 
-    planeIcon.addEventListener("mouseover", function () {
-        planeImage.style.animation = "movePlane 1s infinite";
+    planeIcon.addEventListener("mouseover", () => {
+      planeImage.style.animation = "movePlane 1s infinite";
     });
 
-    planeIcon.addEventListener("mouseout", function () {
-        planeImage.style.animation = "";
+    planeIcon.addEventListener("mouseout", () => {
+      planeImage.style.animation = "";
     });
-});
+  },
+};
 </script>
 <style>
 #us {
