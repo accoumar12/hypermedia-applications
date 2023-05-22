@@ -12,6 +12,9 @@
             <div id="data-container-c">
                 <p class="areas">Area of investment: {{ company.areas }}</p>
                 <p class="ceo">CEO: {{ company.ceo }}</p>
+                <div class="supervisor">
+                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/dogs/'+person.id" />
+                </div>
             </div>
             <hr />
             <div class="row-section">
@@ -59,12 +62,26 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/')
 const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '/companies/' + id)
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
+const supervisorname = computed(() => {
+    const NameSupervisor = []
+    // Checking for values where the part of the company name is provided
+    for (let dog of dogs.value) {
+        if (dog.id === company.value.companyId) { // Irst 8 of the db are supervisors' name
+            console.log("Hello world")
+            NameSupervisor.push(dog)
+            }
+        }
+    console.log(NameSupervisor)
+    return NameSupervisor
+
+})
 
 
 </script>
@@ -189,5 +206,12 @@ hr {
 
 .link:hover {
     color: blue;
+}
+
+.supervisor {
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
 }
 </style>
