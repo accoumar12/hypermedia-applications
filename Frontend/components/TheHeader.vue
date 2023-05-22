@@ -32,12 +32,18 @@
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
                             style="color: #2479a3;"></button>
+                    <ul>
+                      <li v-for="result in searchResults" :key="result.text">
+                        <a :href="result.link">{{ result.text }}</a>
+                      </li>
+                    </ul>
                 </div>
             </nav>
         </header>
     </div>
 </template>
 <script>
+const searchText = ref("");
 export default {
     data() {
         return {
@@ -56,8 +62,24 @@ export default {
             }
         },
         search() {
+            const arrTot = []
+            const pages = [
+              { text: 'Page 1', link: '/page1' },
+              { text: 'Page 2', link: '/page2' },
+              { text: 'Page 3', link: '/page3' },
+              // ... more pages
+            ];
+            const searchTerm = searchText.value.toLowerCase();
             // handle search functionality here
             console.log('Searching for: ', this.searchText);
+
+            for (const page of pages) {
+              if (page.text.toLowerCase().includes(searchTerm)) {
+                arrTot.push(page)
+                //this.searchResults.push(page);
+              }
+            }
+            return arrTot;
         },
     },
     mounted() {
