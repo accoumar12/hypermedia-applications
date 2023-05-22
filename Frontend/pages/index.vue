@@ -72,21 +72,51 @@
                     <div class="us-right-col1-layout-row">
                         <div class="us-right-col1">
                             <div class="us-right-col1-layout2">
-                                <div class="us-right-col1-layout2-card">
+                                <div class="us-right-col1-layout2-card-1">
                                     <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="">
-                                        <h4 class="us-text1">why ventour</h4>
-                                        <p class="us-text2">"Ven" meaning "come"...Ven" meaning "come"...Come in a tour with
-                                            us!...At VenTour, we emb </p>
+                                        <img class="icon-circle" src="~/assets/img/innovation.png">
+                                        <h4 class="us-text1">Empowering Innovation</h4>
+                                        <p class="us-text2">Innovation is at the core of everything we do. We actively seek
+                                            out the most innovative and disruptive ideas across a wide range of industries,
+                                            from technology and healthcare to energy and beyond. </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="us-right-col1-layout4">
-                                <div class="us-right-col1-layout2-card">
+                                <div class="us-right-col1-layout2-card-2">
                                     <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="">
-                                        <h4 class="us-text1">why ventour</h4>
-                                        <p class="us-text2">"Ven" meaning "come"... </p>
+                                        <img class="icon-circle" src="~/assets/img/fuel.png">
+                                        <h4 class="us-text1">Fuelling growth</h4>
+                                        <p class="us-text2">We believe in the transformative power of ideas.We are a leading
+                                            venture capital firm dedicated to fueling the growth of groundbreaking startups
+                                            and empowering them to reach their full potential. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="us-right-col1">
+                            <div class="us-right-col1-layout2">
+                                <div class="us-right-col1-layout2-card-3">
+                                    <div class="us-right-col1-layout3">
+                                        <img class="icon-circle" src="~/assets/img/unlock.png">
+                                        <h4 class="us-text1">Unlocking potential</h4>
+                                        <p class="us-text2">We partner with visionary entrepreneurs and startups at every
+                                            stage of their journey, providing financial support, but also
+                                            invaluable expertise, resources, and a vast network of industry connections.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="us-right-col1-layout4">
+                                <div class="us-right-col1-layout2-card-4">
+                                    <div class="us-right-col1-layout3">
+                                        <img class="icon-circle" src="~/assets/img/worldwide.png">
+                                        <h4 class="us-text1">Global Reach, Local Impact</h4>
+                                        <p class="us-text2">We are rooted in
+                                            startups in every country. Our experts
+                                            combine deep industry knowledge with a passion for supporting entrepreneurs.
+                                            We create a dynamic environment that drives
+                                            positive change. </p>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 #us {
     width: 100%;
     height: 40%;
-    background-color: aqua;
+    background-color: #ffffff;
     justify-content: center;
     display: flex;
 }
@@ -134,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     flex: 1;
     max-width: 100%;
     padding: 15% 0% 0 30%;
-    color: rgb(15, 108, 126);
+    color: rgb(10, 10, 10);
 }
 
 .u-section-text {
@@ -169,9 +199,14 @@ document.addEventListener("DOMContentLoaded", function () {
     background-image: none;
     margin: 26px 9px 12px 80px;
     padding: 15px 46px 15px 45px;
-    color: #ffffff !important;
-    background-color: #f49ea8 !important;
+    color: #060606 !important;
+    background-color: #d9f3f3 !important;
     border-radius: 50px !important;
+}
+
+.us-button:hover {
+    color: #060606 !important;
+    background-color: rgb(15, 108, 126) !important;
 }
 
 .us-right-col1 {
@@ -179,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
     margin: -15px;
     box-sizing: border-box;
     z-index: 5;
+    display: flex;
 }
 
 .us-right-col1-layout {
@@ -191,11 +227,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 .us-right-col1-layout-row {
     flex: 1 0 50%;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .us-right-col {
-    padding-top: 10%;
+    padding-top: 6%;
     width: 50%;
     flex-direction: column;
     min-height: 100%;
@@ -206,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
     opacity: 1;
     position: absolute;
     width: 38%;
-    top: 200%;
+    top: 212%;
     left: 70%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -223,6 +259,8 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 .us-right-col1-layout4 {
+    padding-top: 80px;
+    margin-left: auto;
     min-height: 367px;
     border: 15px solid transparent;
     color: #111111;
@@ -230,8 +268,38 @@ document.addEventListener("DOMContentLoaded", function () {
     box-sizing: border-box;
 }
 
-.us-right-col1-layout2-card {
-    background-color: #ffffff;
+.us-right-col1-layout2-card-1 {
+    background-color: rgb(15, 108, 126);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout2-card-2 {
+    background-color: #9fb7b7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout2-card-3 {
+    background-color: #9fb7b7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout2-card-4 {
+    background-color: #d9f3f3;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -723,7 +791,7 @@ body {
     display: flex;
     justify-content: center;
     justify-content: center;
-    height: 100%;
+    height: 300px;
     width: 100%;
     overflow: hidden;
 }
