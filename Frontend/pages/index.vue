@@ -8,7 +8,7 @@
                 <p class="content__container__text">
                     Fly with us to a journey of growth!
                 </p>
-                <a href="#section2" class="plane-icon">
+                <a href="#us" class="plane-icon">
                     <img src="~/assets/img/plane.png" />
                 </a>
             </div>
@@ -26,24 +26,75 @@
                     </ul>
                 </div>
             </div>
+            <a href="#section3">
+                <div class="container-first">
+                    <div class="container__image-f">
+                        <div class="container__info container__author">Investments in a decade </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#section3">
+                <div class="container-second">
+                    <div class="container__image-t">
 
-            <div class="container-first">
-                <div class="container__image-f">
-                    <div class="container__info container__author">Investments in a decade </div>
+                        <div class="container__info2 container__author">Invested in 5 BEST worldwide companies</div>
+                    </div>
                 </div>
-
-            </div>
-            <div class="container-second">
-                <div class="container__image-t">
-                    <div class="container__info2 container__author">Invested in 5 BEST worldwide companies</div>
+            </a>
+            <a href="#section3">
+                <div class="container-second-b">
+                    <div class="container__image-e">
+                        <div class="container__info3 container__author">Operating in 4 diverse investment areas</div>
+                    </div>
                 </div>
-            </div>
-            <div class="container-second-b">
-                <div class="container__image-e">
-                    <div class="container__info3 container__author">Operating in 4 diverse investment areas</div>
-                </div>
-            </div>
+            </a>
         </div>
+        <section id="us">
+            <div class="us-left-col">
+                <div class="left-layout">
+                    <h5 class="u-section-text">why ventour</h5>
+                    <h2 class="u-section-text2">What do we represent?</h2>
+                    <p class="u-section-text3">"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody the
+                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a venture
+                        capital firm, we specialize in providing crucial support and funding to early-stage and high-growth
+                        companies that are reshaping industries and driving forward societal progress. We understand that
+                        the journey of transforming groundbreaking ideas into successful businesses can be challenging,
+                        which is why we strive to be more than just financial backers. Our mission is to be your strategic
+                        partner, offering not only capital but also expertise, guidance, and an extensive network of
+                        industry connections. </p>
+                    <router-link to="/contact">
+                        <a href="/contact" class="us-button">join us</a>
+                    </router-link>
+                </div>
+            </div>
+            <div class="us-right-col">
+                <div class="us-right-col1-layout">
+                    <div class="us-right-col1-layout-row">
+                        <div class="us-right-col1">
+                            <div class="us-right-col1-layout2">
+                                <div class="us-right-col1-layout2-card">
+                                    <div class="us-right-col1-layout3">
+                                        <img class="icon-circle" src="">
+                                        <h4 class="us-text1">why ventour</h4>
+                                        <p class="us-text2">"Ven" meaning "come"...Ven" meaning "come"...Come in a tour with
+                                            us!...At VenTour, we emb </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="us-right-col1-layout4">
+                                <div class="us-right-col1-layout2-card">
+                                    <div class="us-right-col1-layout3">
+                                        <img class="icon-circle" src="">
+                                        <h4 class="us-text1">why ventour</h4>
+                                        <p class="us-text2">"Ven" meaning "come"... </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -63,6 +114,94 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <style>
+#us {
+    width: 100%;
+    height: 40%;
+    background-color: aqua;
+    justify-content: center;
+    display: flex;
+}
+
+.us-left-col {
+    width: 40%;
+    min-height: 836px;
+    margin: 58px auto 0 0;
+}
+
+.left-layout {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    padding: 15% 0% 0 30%;
+    color: rgb(15, 108, 126);
+}
+
+.u-section-text {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0% 0 0;
+}
+
+.u-section-text2 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 12px 0 0;
+}
+
+.u-section-text3 {
+    line-height: 120%;
+    font-size: 20px;
+    margin: 28px 0 0;
+}
+
+.us-button {
+    position: absolute;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    background-image: none;
+    margin: 26px 9px 12px 80px;
+    padding: 15px 46px 15px 45px;
+    color: #ffffff !important;
+    background-color: #f49ea8 !important;
+    border-radius: 50px !important;
+}
+
+.us-right-col1 {
+    justify-content: flex-end;
+    margin: -15px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.us-right-col1-layout {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+}
+
+.us-right-col1-layout-row {
+    flex: 1 0 50%;
+    max-width: 50%;
+}
+
+.us-right-col {
+    padding-top: 10%;
+    width: 50%;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
 .plane-icon img {
     opacity: 1;
     position: absolute;
@@ -73,6 +212,54 @@ document.addEventListener("DOMContentLoaded", function () {
     z-index: 7;
     border-radius: 50%;
     animation: movePlane 5s linear infinite;
+}
+
+.us-right-col1-layout2 {
+    border: 15px solid transparent;
+    color: #111111;
+
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout4 {
+    min-height: 367px;
+    border: 15px solid transparent;
+    color: #111111;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout2-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+.us-right-col1-layout3 {
+    padding: 30px;
+    justify-content: center;
+}
+
+.icon-circle {
+    height: 75px;
+    width: 75px;
+    background-image: none;
+    margin: 0 auto 0 0;
+}
+
+.us-text1 {
+    margin: 20px auto 0 0;
+}
+
+.us-text2 {
+    line-height: 1.8;
+    font-style: italic;
+    margin: 20px auto 0 0;
 }
 
 .plane-icon:hover img {
@@ -422,6 +609,10 @@ body {
     padding-top: 4%;
 }
 
+.row-h-1 a {
+    text-decoration: none;
+}
+
 .container__image-f {
     position: relative;
     display: flex;
@@ -463,6 +654,7 @@ body {
 }
 
 .container__info {
+    text-decoration: none;
     color: rgb(43 49 71);
     font-family: sans-serif;
     font-size: 20px;
@@ -537,6 +729,7 @@ body {
 }
 
 .container__info2 {
+    text-decoration: none;
     color: rgb(43 49 71);
     font-family: sans-serif;
     font-size: 20px;
@@ -629,6 +822,7 @@ body {
 }
 
 .container__info3 {
+
     color: rgb(43 49 71);
     font-family: sans-serif;
     font-size: 20px;
@@ -641,13 +835,18 @@ body {
     opacity: 0;
 }
 
+.container__info3.a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container__info3.container__text {
     /* ... existing styles ... */
     position: absolute;
     /* Added position absolute */
     top: 50%;
     left: 50%;
-
+    text-decoration: none;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
