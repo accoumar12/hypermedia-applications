@@ -26,7 +26,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="#section3">
+            <a href="#numbers">
                 <div class="container-first">
                     <div class="container__image-f">
                         <div class="container__info container__author">Investments in a decade </div>
@@ -125,23 +125,102 @@
                 </div>
             </div>
         </section>
+        <section id="numbers">
+            <div class="midl-container">
+                <h4 class="subtitle-midl">INVESTMENTS MILLIONSSSS</h4>
+                <div class="midl-list">
+                    <div class="repeater">
+
+                        <div class="first-rep">
+                            <img class="rep-icon" src="~/assets/img/worldwide.png">
+                            <h7 class="number-text">breaking ideas into</h7>
+                            <div class="text-container-list">
+                                <h8 class="text-up">548395720</h8>
+                                <p class="text-down">548395720</p>
+                            </div>
+
+                        </div>
+
+                        <div class="first-rep">
+                            <img class="rep-icon" src="~/assets/img/worldwide.png">
+                            <h7 class="number-text">548395720</h7>
+                            <div class="text-container-list">
+                                <h8 class="text-up">548395720</h8>
+                                <p class="text-down">548395720</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="first-rep">
+                            <img class="rep-icon" src="~/assets/img/worldwide.png">
+                            <h7 class="number-text">548395720</h7>
+                            <div class="text-container-list">
+                                <h8 class="text-up">548395720</h8>
+                                <p class="text-down">548395720</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="best-comp">
+            <div class="step-container">
+                <div class="step">
+                    <div class="icon">
+                        <i class="fa-solid fa-bicycle"></i>
+                    </div>
+                    <div class="title">Step 1</div>
+                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <div class="title">Step 2</div>
+                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <i class="fa-solid fa-helicopter"></i>
+                    </div>
+                    <div class="title">Step 3</div>
+                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <div class="title">Step 4</div>
+                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                </div>
+                <div class="step">
+                    <div class="icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="title">Step 5</div>
+                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
 <script>
-    export default {
-  mounted() {
-    const planeIcon = document.querySelector(".plane-icon");
-    const planeImage = document.querySelector(".plane-icon img");
+export default {
+    mounted() {
+        const planeIcon = document.querySelector(".plane-icon");
+        const planeImage = document.querySelector(".plane-icon img");
 
-    planeIcon.addEventListener("mouseover", () => {
-      planeImage.style.animation = "movePlane 1s infinite";
-    });
+        planeIcon.addEventListener("mouseover", () => {
+            planeImage.style.animation = "movePlane 1s infinite";
+        });
 
-    planeIcon.addEventListener("mouseout", () => {
-      planeImage.style.animation = "";
-    });
-  },
+        planeIcon.addEventListener("mouseout", () => {
+            planeImage.style.animation = "";
+        });
+    },
 };
 </script>
 <style>
@@ -238,6 +317,107 @@
     min-height: 100%;
 }
 
+#numbers {
+    width: 100%;
+    height: 40%;
+    color: #111111;
+    background-color: #f2f2f2;
+    position: relative;
+    text-align: left;
+}
+
+.midl-container {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+.repeater {
+    gap: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+    justify-content: center;
+}
+
+
+
+.first-rep {
+    border-radius: 5% !important;
+    padding: 10px 10px;
+    position: relative;
+    max-width: 50% !important;
+    transition-duration: inherit;
+    box-shadow: 5px 5px 37px 0 rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-bottom: 10px;
+
+}
+
+.rep-icon img {
+    width: 80px;
+    height: 80px;
+    background-image: none;
+    margin: 23px auto 0 0;
+    padding: 16px;
+}
+
+.text-container-list {
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+.number-text {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 5% 0px 0px 2%;
+    font-family: Montserrat, sans-serif !important;
+    padding: 0;
+    word-wrap: break-word;
+    position: relative;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.text-up {
+    font-size: 18px;
+    margin-top: 2%;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    font-family: sans-serif !important;
+    padding: 0;
+    word-wrap: break-word;
+    position: relative;
+    line-height: 1.2;
+}
+
+.text-down {
+    margin: 10px 0 0;
+    word-wrap: break-word;
+    position: relative;
+    padding: 0;
+}
+
+.subtitle-midl {
+    padding-top: 5%;
+    margin-left: 12%;
+    font-size: 40px;
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+.midl-list {
+    margin-top: 45px;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: relative;
+}
 
 .plane-icon img {
     opacity: 1;
@@ -322,6 +502,7 @@
 }
 
 .us-text1 {
+    font-size: 18px;
     margin: 20px auto 0 0;
 }
 
@@ -986,5 +1167,11 @@ body {
     opacity: 0.18;
     filter: blur(10px) saturate(100%);
     transform: scale(2.8) translate3d(-18%, 0px, 0px);
+}
+
+@media (max-width: 768px) {
+    .rep-items {
+        flex-basis: 100%;
+    }
 }
 </style>
