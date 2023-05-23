@@ -284,7 +284,7 @@ export default async (models) => {
             award4: ""
         },
     ]
-    await models.Dog.bulkCreate(personModel)
+    await models.Person.bulkCreate(personModel)
 
     // Definition of Supervisors:
 
