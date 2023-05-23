@@ -16,33 +16,44 @@
             </nav>
         </div>-->
         <div class="row1 d-flex align-items-stretch">
-            <div class="col-sm-6 d-flex align-items-center justify-content-center">
-                <div class="intro">
-                    <h1>Meet Our Team</h1>
+            <a href="#team-members-grid">
+                <h1 class="ourt-intro blink">Meet Our Team</h1>
+            </a>
+            <div class="col-a">
+                <div class="card1o">
+                    <h3>MANAGEMENT DEPARTMENT</h3>
+                    <p class="small-a">They develop and implement strategic plans, set organizational goals,
+                        and provide leadership to drive the company's growth and success.</p>
                 </div>
-                <div class="team-info">
-                    <p>Our team is made up of experienced and driven individuals who are passionate about identifying and
-                        supporting the next generation of disruptors.</p>
-                    <p>Together, our team has a proven track record of identifying and investing in startups that have gone
-                        on to become industry leaders.</p>
-                </div>
+                <a class="card1o" href="#header2">
+                    <h3> INVESTMENT DEPARTMENT</h3>
+                    <p class="small-a">They conduct thorough research, assess risk factors, and make informed investment
+                        decisions to optimize the company's financial performance.</p>
+
+                </a>
+                <a class="card1o" href="#header2">
+                    <h3>OPERATIONS & FINANCE DEPARTMENT</h3>
+                    <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures while
+                        maintaining quality standards to support the company's overall objectives.</p>
+                </a>
+                <a class="card1o" href="#header2">
+                    <h3>ADVISORING DEPARTMENT</h3>
+                    <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on key
+                        decisions, helping the company navigate challenges and capitalize on opportunities.</p>
+                </a>
             </div>
-            <div class="col-sm-6-2 d-flex align-items-center justify-content-center position-relative">
-                <div style="position: relative; z-index: 1;">
-                    <img src="~/assets/img/teampic.png" style="width: 100%;">
-                    <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-                        <div class="text-white text-center"
-                            style="font-size: 2rem; color: #033f52; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
-                            <span id="blinking-text" style="background-color: white; font-size: 1.7rem;">With you to
-                                GROWTH!</span>
-                        </div>
-                    </div>
-                </div>
+            <!--
+            <div class="team-info">
+                <p>Our team is made up of experienced and driven individuals who are passionate about identifying and
+                    supporting the next generation of disruptors.</p>
+                <p>Together, our team has a proven track record of identifying and investing in startups that have gone
+                    on to become industry leaders.</p>
             </div>
+-->
         </div>
-        <section class="team-members-grid">
+        <section id="team-members-grid">
             <div class="grid-container">
-                <div class="filter-container team">
+                <div id="filter-container">
 
                     <div class="grid-x">
 
@@ -93,8 +104,8 @@
                 </div>
             </div>
             <div id="card-container">
-                <Card v-for="person of filtered" :image="person.image" :title="person.name" :subtitle="person.role" :team="person.team"
-                    :area="person.area" :link="'/people/' + person.id" />
+                <Card v-for="person of filtered" :image="person.image" :title="person.name" :subtitle="person.role"
+                    :team="person.team" :area="person.area" :link="'/people/' + person.id" />
             </div>
         </section>
     </main>
@@ -141,15 +152,18 @@ function getButtonString(a) {
     }
     return arr;
 }
+const blinking = ref(false);
 
+onMounted(() => {
+    blinking.value = true;
+    setTimeout(() => {
+        blinking.value = false;
+    }, 2000); // Adjust the duration of blinking (in milliseconds) as per your preference
+});
 
 </script>
 
 <style scoped>
-main {
-    background-color: #033f52;
-}
-
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -160,40 +174,102 @@ main {
     padding-bottom: 3%;
 }
 
-.breadcrumbs {
-    position: absolute;
-    padding-top: 5%;
-    padding-right: 75%;
+.col-a {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    gap: 2%;
+
+    padding-bottom: 2%;
 }
 
-#blinking-text {
-    animation: blink 4s linear infinite;
-    position: absolute;
-    font-family: monospace;
-    transform: translate(-50%, -50%);
+.col-a.-a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.col-a h3 {
+    color: #262626;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
+    20% {
+        opacity: 0;
     }
 
     50% {
-        opacity: 0.5;
+        opacity: 1;
     }
 
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
-.image-container {
+.blink {
+    animation: blink 3s;
+}
+
+.col-a p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #666666;
+}
+
+p.small {
+    font-size: 14px;
+}
+
+
+.card1o {
+    display: block;
     position: relative;
-    display: inline-block;
-    text-align: center;
-    border-color: none;
-    border-style: none;
-    margin-left: 5rem;
+    max-width: 262px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 42px 34px;
+    margin: 10px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.card1o:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 60% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.card1o:before {
+    transform: scale(21);
+}
+
+.card1o p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.col-a h3 {
+    color: #ffffff;
 }
 
 .image-container img {
@@ -300,10 +376,22 @@ main {
     text-decoration: underline;
 }
 
-h1 {
-    display: inline-block;
-    vertical-align: middle;
+.ourt-intro {
+    background-color: rgb(239, 241, 246);
+    color: rgb(6, 6, 6);
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 28%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
 }
+
 
 .intro {
     font-family: monospace;
@@ -338,15 +426,19 @@ h1 {
 }
 
 .row1 {
+    background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    background-size: cover;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2%;
-    height: 40rem;
-
+    padding-top: 30%;
+    height: 300px;
 }
+
 
 
 .gif-container {
@@ -370,23 +462,60 @@ h1 {
     padding-left: 20%;
 }
 
-.col-sm-6 {
-    width: 40%;
-    padding-left: 10%;
-    justify-content: center;
-    align-items: center;
 
+
+.arrow {
+    position: absolute;
+    width: 5% !important;
+    height: 11% !important;
+    display: inline-block;
+    position: absolute;
+    top: 52%;
+    left: 47%;
 }
 
-.col-sm-6-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    padding-top: 6%;
-    padding-right: 4%;
+.arrow::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    transform-origin: 50% 50%;
 }
 
+.arrow.down::before {
+    transform: rotate(135deg);
+    margin: -20px 0 0 -15px;
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-color: #000;
+    position: absolute;
+    transform-origin: 50% 50%;
+}
+
+.arrow.down::after {
+    width: 0;
+    height: 40px;
+    border-width: 0 2px 0 0;
+    transform: translate(-1px, -26px);
+}
+
+.arrow.circle {
+    background: #f2f8f9;
+    opacity: 0.7;
+    border-radius: 50px;
+}
 
 .text-container {
     position: absolute;
@@ -426,7 +555,7 @@ h1 {
 
 
 
-.team-members-grid {
+#team-members-grid {
     background-image: url('assets/img/19449741.jpg');
     background-position-x: center;
     opacity: 100%;
@@ -447,7 +576,7 @@ section {
     margin-right: auto;
 }
 
-.filter-container {
+#filter-container {
     padding-top: 2%;
 }
 
@@ -458,13 +587,13 @@ section {
     flex-flow: row wrap;
 }
 
-.filter-container .filter-title {
+#filter-container .filter-title {
     color: #0e6b74;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 4px;
     line-height: 27px;
-    font-family: monospace;
+    font-family: sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -484,10 +613,10 @@ section {
     margin-right: 40%;
 }
 
-.filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
-    font-size: 1.3rem;
+#filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+    font-size: 18px;
     line-height: 1.1;
-    font-family: monospace;
+    font-family: sans-serif;
     color: #0e6b74;
     font-weight: 500;
     display: block;

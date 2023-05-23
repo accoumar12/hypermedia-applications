@@ -62,7 +62,8 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 }
 
 .title {
-    font-size: 2em;
+    font-family: sans-serif;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -114,7 +115,7 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #033f52;
+    background-color: #00838d;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-style: solid;
@@ -149,6 +150,7 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 }
 
 .hover-content {
+    font-family: sans-serif;
     position: relative;
     top: 50%;
     left: 50%;
