@@ -1,6 +1,6 @@
 <!--
-    Page with the list of all the dogs.
-    As described in the Card component, the same component was used for both Dog and Location since they have the same structure.
+    Page with the list of all the people.
+    As described in the Card component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
     <main>
@@ -11,7 +11,7 @@
             <nav>
                 <ul class="nav-breadcrumbs">
                     <li><router-link to="/">Home</router-link></li> /
-                    <li><router-link to="/dogs"> Our Team</router-link></li>
+                    <li><router-link to="/people"> Our Team</router-link></li>
                 </ul>
             </nav>
         </div>-->
@@ -93,8 +93,8 @@
                 </div>
             </div>
             <div id="card-container">
-                <Card v-for="dog of filtered" :image="dog.image" :title="dog.name" :subtitle="dog.role" :team="dog.team"
-                    :area="dog.area" :link="'/dogs/' + dog.id" />
+                <Card v-for="person of filtered" :image="person.image" :title="person.name" :subtitle="person.role" :team="person.team"
+                    :area="person.area" :link="'/people/' + person.id" />
             </div>
         </section>
     </main>
@@ -102,7 +102,7 @@
   
 <script setup>
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs')
+const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/people')
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
@@ -114,18 +114,18 @@ const team = ref("");
 const filtered = computed(() => {
     // Checking for values where the full list is provided
     if ((role.value == 0 || role.value == "") & (team.value == 0 || team.value == ""))
-        return dogs.value
+        return people.value
 
     const arr = []
 
 
     // Filtering the list
-    for (let dog of dogs.value) {
-        if (dog.team == team.value) {
-            arr.push(dog)
+    for (let person of people.value) {
+        if (person.team == team.value) {
+            arr.push(person)
         }/*
-        else if (dog.role.toLowerCase().includes(role.value.toLowerCase()))
-            arr.push(dog)*/
+        else if (person.role.toLowerCase().includes(role.value.toLowerCase()))
+            arr.push(person)*/
     }
 
     // Returning the filtered list
@@ -135,9 +135,9 @@ const filtered = computed(() => {
 function getButtonString(a) {
     const arr = []
     var button = a; // replace "myButton" with the ID of your button
-    for (let dog of dogs.value) {
-        if (dog.role.includes(role.value) && dog.team == a)
-            arr.push(dog)
+    for (let person of people.value) {
+        if (person.role.includes(role.value) && person.team == a)
+            arr.push(person)
     }
     return arr;
 }

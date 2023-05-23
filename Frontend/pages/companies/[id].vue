@@ -1,6 +1,6 @@
 <!--
-    Page description for a single dog.
-    As described in the SmallCard component, the same component was used for both Dog and Location since they have the same structure.
+    Page description for a single person.
+    As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
     <main id="back">
@@ -13,7 +13,7 @@
                 <p class="areas">Area of investment: {{ company.areas }}</p>
                 <p class="ceo">CEO: {{ company.ceo }}</p>
                 <div class="supervisor">
-                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/dogs/'+person.id" />
+                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/people/'+person.id" />
                 </div>
             </div>
             <hr />
@@ -62,7 +62,7 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dogs } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/')
+const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/people/')
 const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '/companies/' + id)
 /*
     In order to implement a filter, we use the computed property.
@@ -72,10 +72,10 @@ const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '
 const supervisorname = computed(() => {
     const NameSupervisor = []
     // Checking for values where the part of the company name is provided
-    for (let dog of dogs.value) {
-        if (dog.id === company.value.companyId) { // Irst 8 of the db are supervisors' name
+    for (let person of people.value) {
+        if (person.id === company.value.companyId) { // Irst 8 of the db are supervisors' name
             console.log("Hello world")
-            NameSupervisor.push(dog)
+            NameSupervisor.push(person)
             }
         }
     console.log(NameSupervisor)

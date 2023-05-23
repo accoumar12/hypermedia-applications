@@ -149,8 +149,8 @@
 </template>
         
         <!--
-        <p id="description" v-html="newLineOnFullStop(dog.description)"></p>
-        <SmallCard :title="dog.location.name" :subtitle="dog.location.city" :link="'/locations/' + dog.location.id" />
+        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
+        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
         -->
 <script>
 export default {

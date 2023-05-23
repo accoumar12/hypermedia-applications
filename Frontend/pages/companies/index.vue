@@ -1,6 +1,6 @@
 <!--
     Page with the list of all the location.
-    As described in the Card component, the same component was used for both Dog and Location since they have the same structure.
+    As described in the Card component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
     <main>

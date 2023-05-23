@@ -193,7 +193,7 @@
     </div>
     <div class="row3-container">
       <div class="col3">
-        <router-link to="/dogs" class="nav-link-end">
+        <router-link to="/people" class="nav-link-end">
           <a class="card13">
             <h3>MEET OUR TEAM</h3>
             <div class="go-corner">
