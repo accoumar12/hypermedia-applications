@@ -21,7 +21,7 @@ async function initDB() {
     const models = {}
 
     await db.authenticate()
-    models.Dog = db.define('dog', {
+    models.Person = db.define('person', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -107,8 +107,8 @@ async function initDB() {
         },
     })
 
-    models.Company.belongsTo(models.Dog)
-    models.Dog.hasMany(models.Company)
+    models.Company.belongsTo(models.Person)
+    models.Person.hasMany(models.Company)
 
     await db.sync({ force: true })
 
@@ -120,14 +120,14 @@ async function initDB() {
 async function initServer() {
     const models = await initDB()
 
-    app.get('/dogs', async (req, res) => {
-        const data = await models.Dog.findAll();
+    app.get('/people', async (req, res) => {
+        const data = await models.Person.findAll();
 
         res.status(200).json(data)
     })
 
-    app.get('/dogs/:id', async (req, res) => {
-        const data = await models.Dog.findOne({
+    app.get('/people/:id', async (req, res) => {
+        const data = await models.Person.findOne({
             where: {
                 id: req.params.id
             },
@@ -160,7 +160,7 @@ async function initServer() {
             },
             include: [
                 {
-                    model: models.Dog
+                    model: models.Person
                 }
             ]
         })
