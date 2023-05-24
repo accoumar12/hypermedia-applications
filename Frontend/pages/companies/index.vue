@@ -98,7 +98,7 @@
                     <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
                         v-model="areas">
                     <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
-                    <span class="checkmark"></span>
+                    <span class="checkmark" href="#"></span>
                 </label>
             </div>
         </div>
@@ -108,8 +108,8 @@
                     <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas" checked>
                     <span class="checkmark"></span>
                 </label></div>
-            <button class="active" @click="MR = ''"> Show all </button>
-            <button @click="MR = true">Most Relevant Companies</button>
+            <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                <button @click="MR = true">Most Relevant Companies</button></a>
             <!--
             <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
@@ -149,7 +149,7 @@
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
             </div>
-            <div class="title2">PORTFOLIO SNAPSHOT</div>
+            <div id="title2">PORTFOLIO SNAPSHOT</div>
 
             <!-- <label for="all-areas">
                                     ALL
@@ -685,7 +685,7 @@ label>[type=radio] {
     font-weight: bold;
 }
 
-.title2 {
+#title2 {
     padding-top: 1%;
     padding-left: 45.5%;
     position: relative;
