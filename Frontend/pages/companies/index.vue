@@ -208,7 +208,7 @@ const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
-        if (company.id > 8) { // Irst 8 of the db are supervisors' name
+        if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
             if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "") & (MR.value == 0 || MR.value == "")) { // All companies
                 console.log(company) // Only for debug
                 arrTot.push(company)
