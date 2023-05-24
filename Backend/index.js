@@ -85,6 +85,10 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
+        description2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         link: {
             type: DataTypes.STRING,
             allowNull: true

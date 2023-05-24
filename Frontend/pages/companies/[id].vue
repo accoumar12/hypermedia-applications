@@ -24,6 +24,7 @@
                 <div class="column2-c">
                     <div class="description-container">
                         <p class="description">{{ company.description }}</p>
+                        <p class="description2">{{ company.description2 }}</p>
                         <p>Visit their official website:
                             <a href="{{ company.link }}" target="_blank">
                                 {{ company.link }}
