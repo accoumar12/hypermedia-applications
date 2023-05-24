@@ -288,14 +288,25 @@ export default async (models) => {
 
     // Definition of Supervisors:
 
-    const companySup0 = await models.Company.create(personModel[0])
-    const companySup1 = await models.Company.create(personModel[1])
-    const companySup2 = await models.Company.create(personModel[2])
-    const companySup3 = await models.Company.create(personModel[3])
-    const companySup5 = await models.Company.create(personModel[5])
-    const companySup10 = await models.Company.create(personModel[10])
-    const companySup11 = await models.Company.create(personModel[11])
-    const companySup14 = await models.Company.create(personModel[14])
+    const companySup = [];
+    let i = 0;
+
+    for (let c of personModel) {
+        companySup[i] = await models.Company.create(c);
+        i = i + 1;
+    }
+
+    const companySup0 = companySup[0] //await models.Company.create(personModel[0])
+    const companySup1 = companySup[1] //await models.Company.create(personModel[1])
+    const companySup2 = companySup[2] //await models.Company.create(personModel[2])
+    const companySup3 = companySup[3] //await models.Company.create(personModel[3])
+    const companySup5 = companySup[5] //await models.Company.create(personModel[5])
+    //const companySup = await models.Company.create(personModel)
+    const companySup10 = companySup[10] //await models.Company.create(personModel[10])
+    const companySup11 = companySup[11] //await models.Company.create(personModel[11])
+    const companySup14 = companySup[14] //await models.Company.create(personModel[14])
+    console.log('\n The solution issss \n',companySup14)
+    //console.log('\n The solution issss \n',companySup)
     const CompanyModel = [
         {
             name: "UnitedHealth Group",
@@ -480,7 +491,7 @@ export default async (models) => {
         {
             name: "JinkoSolar Holding Co",
             areas: "Sustainability",
-            companyId: companySup14.id,
+            companyId: 14,
             description: "JinkoSolar Holding Co., Ltd. engages in the manufacture of solar modules. It distributes solar products and sells its solutions and services to a diversified international utility, commercial and residential customers. The company was founded by Xian De Li, Kang Ping Chen, and Xian Hua Li on August 3, 2007 and is headquartered in Shangrao, China.",
             link: "https://www.jinkosolar.com/en/",
             ceo: "Xiande Li",
@@ -490,7 +501,7 @@ export default async (models) => {
         {
             name: "Enel X",
             areas: "Sustainability",
-            companyId: companySup14.id,
+            companyId: 14,
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             link: "https://www.enelx.com/",
             ceo: "Francesco Venturini",

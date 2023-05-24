@@ -32,11 +32,13 @@
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
                             style="color: #2479a3;"></button>
+                    <!--
                     <ul>
                       <li v-for="result in searchResults" :key="result.text">
                         <a :href="result.link">{{ result.text }}</a>
                       </li>
                     </ul>
+                -->
                 </div>
             </nav>
         </header>
