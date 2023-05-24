@@ -1,7 +1,7 @@
 <!--
     Card to display information in the list page.
     This component could be achieved with the SmallCard component by using a <slot> to insert the div with the image. The solution used here allows for better control of the layout.
-    Since the information shown can be categorized into title and subtitle, it was preferred to use only one component for both dogs and location.
+    Since the information shown can be categorized into title and subtitle, it was preferred to use only one component for both people and location.
 
     PROPS:
     - title: main information to display
@@ -62,7 +62,8 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 }
 
 .title {
-    font-size: 2em;
+    font-family: sans-serif;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -114,7 +115,7 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #033f52;
+    background-color: #00838d;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-style: solid;
@@ -149,6 +150,7 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
 }
 
 .hover-content {
+    font-family: sans-serif;
     position: relative;
     top: 50%;
     left: 50%;

@@ -1,17 +1,17 @@
 <!--
-    Page description for a single dog.
-    As described in the SmallCard component, the same component was used for both Dog and Location since they have the same structure.
+    Page description for a single person.
+    As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
     <main id="back">
         <div class="info-group">
             <div class="arrow">
-                <router-link to="/dogs"><img src="~/assets/img/left-arrows.png"></router-link>
+                <router-link to="/people"><img src="~/assets/img/left-arrows.png"></router-link>
             </div>
-            <h1 class="name">{{ dog.name }}</h1>
+            <h1 class="name">{{ person.name }}</h1>
             <div id="data-container">
-                <p class="role">{{ dog.role }}</p>
-                <p class="team">{{ dog.team }}</p>
+                <p class="role">{{ person.role }}</p>
+                <p class="team">{{ person.team }}</p>
             </div>
             <hr />
             <div class="social-icons">
@@ -21,7 +21,7 @@
             </div>
             <div class="row-section">
                 <div class="column">
-                    <img id="main-img" :src="dog.image" />
+                    <img id="main-img" :src="person.image" />
                 </div>
                 <div class="column2">
                     <div class="description-containera">
@@ -37,21 +37,21 @@
                         </div>
 
                         <div class="description-container" v-if="activeSection === 1">
-                            <p2 class="description">{{ dog.description }}</p2>
-                            <p2 class="description">{{ dog.description2 }}</p2>
+                            <p2 class="description">{{ person.description }}</p2>
+                            <p2 class="description">{{ person.description2 }}</p2>
                         </div>
 
                         <div class="description-container" v-else-if="activeSection === 2">
                             <p3 class="description">
                             
                              <ul>
-                                  <li>{{ dog.award1 }}</li>
+                                  <li>{{ person.award1 }}</li>
                                   <br>
-                                  <li v-if="dog.award2 != ''">{{ dog.award2 }}</li>
+                                  <li v-if="person.award2 != ''">{{ person.award2 }}</li>
                                   <br>
-                                  <li v-if="dog.award3 != ''">{{ dog.award3 }}</li>
+                                  <li v-if="person.award3 != ''">{{ person.award3 }}</li>
                                   <br>
-                                  <li v-if="dog.award4 != ''">{{ dog.award4 }}</li>
+                                  <li v-if="person.award4 != ''">{{ person.award4 }}</li>
                             </ul>
                             <!--
                             <ul id="AwardList"></ul>
@@ -78,7 +78,7 @@
     </main>
 
 
-    <!--<SmallCard :title="dog.company.name" :subtitle="dog.company.area" :link="'/companies/' + dog.company.id" />-->
+    <!--<SmallCard :title="person.company.name" :subtitle="person.company.area" :link="'/companies/' + person.company.id" />-->
     <!--
             <div class="column3">
                 <img src="image1.jpg" alt="Image 1">
@@ -100,8 +100,8 @@
             This function is a composable that is available anywhere, without requiring to be imported.
         -->
         <!--
-        <p id="description" v-html="newLineOnFullStop(dog.description)"></p>
-        <SmallCard :title="dog.location.name" :subtitle="dog.location.city" :link="'/locations/' + dog.location.id" />
+        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
+        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
         -->
   
 <script>
@@ -127,7 +127,7 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/' + id)
+const { data: person } = await useFetch(useRuntimeConfig().public.serverURL + '/people/' + id)
 
 const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
 /*
@@ -168,10 +168,10 @@ const filtered = computed(() => {
 
 /*
   var items = [
-    { text: dog.award1 },
-    { text: dog.award2 },
-    { text: dog.award3 },
-    { text: dog.award4 }
+    { text: person.award1 },
+    { text: person.award2 },
+    { text: person.award3 },
+    { text: person.award4 }
   ];
 
   for (var i = 0; i < items.length; i++) {

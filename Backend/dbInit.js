@@ -1,7 +1,8 @@
 
 export default async (models) => {
+    //List o all the people working in our company
     
-    const dogModel = [
+    const personModel = [
         {
             name: "Anastasia Petrova",
             role: "General Manager",
@@ -283,16 +284,18 @@ export default async (models) => {
             award4: ""
         },
     ]
-    await models.Dog.bulkCreate(dogModel)
+    await models.Person.bulkCreate(personModel)
 
-    const companySup0 = await models.Company.create(dogModel[0])
-    const companySup1 = await models.Company.create(dogModel[1])
-    const companySup2 = await models.Company.create(dogModel[2])
-    const companySup3 = await models.Company.create(dogModel[3])
-    const companySup5 = await models.Company.create(dogModel[5])
-    const companySup10 = await models.Company.create(dogModel[10])
-    const companySup11 = await models.Company.create(dogModel[11])
-    const companySup14 = await models.Company.create(dogModel[14])
+    // Definition of Supervisors:
+
+    const companySup0 = await models.Company.create(personModel[0])
+    const companySup1 = await models.Company.create(personModel[1])
+    const companySup2 = await models.Company.create(personModel[2])
+    const companySup3 = await models.Company.create(personModel[3])
+    const companySup5 = await models.Company.create(personModel[5])
+    const companySup10 = await models.Company.create(personModel[10])
+    const companySup11 = await models.Company.create(personModel[11])
+    const companySup14 = await models.Company.create(personModel[14])
     const CompanyModel = [
         {
             name: "UnitedHealth Group",

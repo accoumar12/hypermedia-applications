@@ -344,7 +344,7 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: dog } = await useFetch(useRuntimeConfig().public.serverURL + '/dogs/' + id)
+const { data: person } = await useFetch(useRuntimeConfig().public.serverURL + '/people/' + id)
 
 const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
 /*
@@ -385,10 +385,10 @@ const filtered = computed(() => {
 
 /*
   var items = [
-    { text: dog.award1 },
-    { text: dog.award2 },
-    { text: dog.award3 },
-    { text: dog.award4 }
+    { text: person.award1 },
+    { text: person.award2 },
+    { text: person.award3 },
+    { text: person.award4 }
   ];
 
   for (var i = 0; i < items.length; i++) {

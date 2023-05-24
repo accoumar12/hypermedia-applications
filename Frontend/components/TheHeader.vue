@@ -9,7 +9,7 @@
                 <span>
                     <p><router-link to="/History" class="nav-link">About Us</router-link></p>
                 </span>
-                <router-link to="/dogs" class="nav-link">Our Team</router-link>
+                <router-link to="/people" class="nav-link">Our Team</router-link>
                 <div class="dropdown">
                     <div class="dropdown-toggle">
                         <router-link to="/companies" class="nav-link">Investments</router-link>
