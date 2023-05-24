@@ -25,22 +25,22 @@
                     <p class="small-a">They develop and implement strategic plans, set organizational goals,
                         and provide leadership to drive the company's growth and success.</p>
                 </div>
-                <a class="card1o" href="#header2">
+                <div class="card1o">
                     <h3> INVESTMENT DEPARTMENT</h3>
                     <p class="small-a">They conduct thorough research, assess risk factors, and make informed investment
                         decisions to optimize the company's financial performance.</p>
 
-                </a>
-                <a class="card1o" href="#header2">
+                </div>
+                <div class="card1o">
                     <h3>OPERATIONS & FINANCE DEPARTMENT</h3>
                     <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures while
                         maintaining quality standards to support the company's overall objectives.</p>
-                </a>
-                <a class="card1o" href="#header2">
+                </div>
+                <div class="card1o">
                     <h3>ADVISORING DEPARTMENT</h3>
                     <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on key
                         decisions, helping the company navigate challenges and capitalize on opportunities.</p>
-                </a>
+                </div>
             </div>
             <!--
             <div class="team-info">
@@ -57,7 +57,7 @@
 
                     <div class="grid-x">
 
-                        <div class="cell small-12 filter-title">Filter By Team:</div>
+                        <div class="cell small-12 filter-title">Filter By Department:</div>
                         <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
 
@@ -107,7 +107,22 @@
                 <Card v-for="person of filtered" :image="person.image" :title="person.name" :subtitle="person.role"
                     :team="person.team" :area="person.area" :link="'/people/' + person.id" />
             </div>
+            <div class="row3-container">
+                <div class="col3">
+                    <router-link to="/companies" class="nav-link-end">
+                        <a class="card13">
+                            <h3>CHECK OUR INVESTMENTS</h3>
+                            <div class="go-corner">
+                                <div class="go-arrow">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </router-link>
+                </div>
+            </div>
         </section>
+
     </main>
 </template>
   
@@ -270,6 +285,91 @@ p.small {
 
 .col-a h3 {
     color: #ffffff;
+}
+
+.col3 h3 {
+    color: #262626;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.nav-link-end {
+    text-decoration: none;
+}
+
+.card13 {
+    display: block;
+    position: relative;
+    max-width: 151px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 10px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.card13:hover:before {
+    transform: scale(21);
+}
+
+.card13:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+}
+
+.card13:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 60% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.card13:hover:before {
+    transform: scale(21);
+}
+
+
+.card13:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #00838d;
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.row3-container {
+    padding-left: 75%;
+    padding-bottom: 2%;
 }
 
 .image-container img {

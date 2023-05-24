@@ -29,16 +29,15 @@
                 </div>
                 <div class="counter" data-target="100"></div>
                 <label for="Technology">
-                    
+
                     <p> Technology Investments</p>
-                    <input type="radio" id="Technology" value="Technology"
-                                        name="Investments-categories" v-model="areas">
+                    <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
                     <span class="checkmark"></span>
                 </label>
 
                 <div class="link-text">
                     <a><router-link to="/technology">
-                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
                         </router-link></a>
                 </div>
             </div>
@@ -50,16 +49,15 @@
                 </div>
                 <div class="counter" data-target="250"></div>
                 <label for="Healthcare">
-                    
+
                     <p>Healthcare Investments</p>
-                    <input type="radio" id="Healthcare" value="Healthcare"
-                                        name="Investments-categories" v-model="areas">
+                    <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
                     <span class="checkmark"></span>
                 </label>
-                
+
                 <div class="link-text">
                     <a><router-link to="/healthcare">
-                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
                         </router-link></a>
                 </div>
             </div>
@@ -71,16 +69,16 @@
                 </div>
                 <div class="counter" data-target="120"></div>
                 <label for="Consumer Goods">
-                    
+
                     <p>Consumer Goods Investments</p>
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
-                                        name="Investments-categories" v-model="areas">
+                    <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
+                        v-model="areas">
                     <span class="checkmark"></span>
-                </label>                
+                </label>
 
                 <div class="link-text">
                     <a><router-link to="/consumer">
-                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
                         </router-link></a>
                 </div>
             </div>
@@ -90,30 +88,29 @@
                     <img src="~/assets/img/sustainable.png" alt="Sustainability">
                 </div>
                 <div class="counter" data-target="270"></div>
-                <label for="Sustainability">
-                    <p>Sustainability Investments</p>
-                    <input type="radio" id="Sustainability" value="Sustainability"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>  
-                
                 <div class="link-text">
-                    <a><router-link to="/sustainability">
-                            <h1 class="learn-more" style="color:#033f52">LEARN MORE</h1>
+                    <a class="learn-more"><router-link to="/sustainability">
+                            <h1 style="color:#033f52">Sustainability Investments</h1>
                         </router-link></a>
                 </div>
+                <label for="Sustainability">
+
+                    <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
+                        v-model="areas">
+                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <span class="checkmark"></span>
+                </label>
             </div>
         </div>
         <section class="team-members-grid">
             <div class="title"> <label for="all-team">
-                                    ALL COMPANIES
-                                    <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
-                                        checked>
-                        <span class="checkmark"></span>
-                    </label></div>
+                    ALL COMPANIES
+                    <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas" checked>
+                    <span class="checkmark"></span>
+                </label></div>
             <button class="active" @click="MR = ''"> Show all </button>
             <button @click="MR = true">Most Relevant Companies</button>
-        <!--
+            <!--
             <div class="dropdown-grid-filter-container">
                             <div class="dropdown-grid-filter grid-x align-middle">
                 <label for="Technology">
@@ -219,9 +216,9 @@ const filtered = computed(() => {
             //else if ((company.name == name.value) & (company.areas == areas.value)) {
             //    arrTot.push(company)
             //}
-            else if ((company.name.toLowerCase().includes(name.value.toLowerCase()))& ((company.areas == areas.value)||(areas.value == 0 || areas.value == "")) & (company.MostRelevant==MR.value))
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase())) & ((company.areas == areas.value) || (areas.value == 0 || areas.value == "")) & (company.MostRelevant == MR.value))
                 arrTot.push(company)
-                console.log(MR.value) 
+            console.log(MR.value)
         }
     }
     return arrTot
@@ -505,7 +502,7 @@ input::placeholder {
 .text-containeri2 p {
     width: 30%;
     font-size: 1.2rem;
-    font-family: monospace;
+    font-family: sans-serif;
     text-align: center;
     color: white;
 }
@@ -513,7 +510,7 @@ input::placeholder {
 
 .text-containeri h1 {
     font-size: 1.3rem;
-    font-family: monospace;
+    font-family: sans-serif;
     margin-bottom: 0.5 rem;
     color: rgb(242, 249, 246);
 }
@@ -647,9 +644,10 @@ input::placeholder {
 
 
 .learn-more {
+    text-decoration: none;
+    font-size: 18px;
     text-decoration-color: #033f52;
-    font-family: monospace;
-    font-weight: bold;
+    font-family: sans-serif;
     font-size: large;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -658,6 +656,10 @@ input::placeholder {
     position: left;
 }
 
+.learn-more a {
+    text-decoration: none;
+    font-size: 10px;
+}
 
 label>[type=checkbox],
 label>[type=radio] {
@@ -689,12 +691,12 @@ label>[type=radio] {
     position: relative;
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 .text-block {
     position: relative;
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: 3rem;
     color: white;
     padding-left: 8%;
@@ -719,7 +721,7 @@ label>[type=radio] {
 .row41 .left-text {
     margin-top: 3%;
     width: 35%;
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: 1.1rem;
     color: white;
 }
@@ -769,7 +771,7 @@ button:hover {
     border-radius: 5%;
     padding-left: 1%;
     width: 33%;
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: 1.1rem;
     color: #f6f9f9;
 }
