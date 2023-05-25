@@ -59,7 +59,6 @@ const props = defineProps(['image', 'title', 'subtitle', 'link', 'area'])
     height: auto;
     width: auto;
     margin: auto;
-    border-radius: 100%;
 }
 
 .title {
