@@ -304,7 +304,7 @@ export default async (models) => {
     //const companySup = await models.Company.create(personModel)
     const companySup10 = companySup[10] //await models.Company.create(personModel[10])
     const companySup11 = companySup[11] //await models.Company.create(personModel[11])
-    const companySup14 = companySup[14] //await models.Company.create(personModel[14])
+    const companySup14 = companySup[15] //await models.Company.create(personModel[14])
     console.log('\n The solution issss \n',companySup14)
     //console.log('\n The solution issss \n',companySup)
     const CompanyModel = [

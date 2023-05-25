@@ -1,14 +1,14 @@
 {
-  "name": "t03---backend-project",
+  "name": "Venture Capital",
   "version": "1.0.0",
   "type": "module",
-  "description": "This is the repo for the webpage that was developed during the lecture on 23/03/2023",
+  "description": "This is the repo for the webpage that was developed during the Academic Year 2022/23",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mirko Calcaterra",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.21.0",
