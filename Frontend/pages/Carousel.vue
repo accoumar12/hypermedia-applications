@@ -143,7 +143,7 @@
             available to provide support and
             answer questions.
           </p>
-          <a href="#" class="button-o">
+          <a href="#" class="button-o" @click="sendEmail">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
@@ -163,7 +163,7 @@
             deep understanding of the challenges that startups face, and we draw on this knowledge to provide targeted
             guidance to our porfolio companies.
           </p>
-          <a href="#" class="button-o">
+          <a href="#" class="button-o" @click="sendEmail">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
@@ -183,7 +183,7 @@
             services, such as marketing and branding support, legal and accounting services, and HR and recruiting
             support.
           </p>
-          <a href="#" class="button-o">
+          <a href="#" class="button-o" @click="sendEmail">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
@@ -257,6 +257,14 @@ export default {
   },
 
   methods: {
+    sendEmail() {
+      // Send the email
+      const email = 'ventourteam@gmail.com';
+      const subject = 'General information [Insert Topic]';
+      const body = 'Hello, I have some questions about [continue].';
+
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    },
     handleMouseScroll(event) {
       const deltaX = event.deltaX
       if (deltaX > 0) {
