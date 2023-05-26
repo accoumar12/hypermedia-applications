@@ -10,141 +10,137 @@
     <section class="co-section">
       <div class="co-container">
         <div class="header-center">
-          <h2> Do you want to join us?</h2>
-        </div>
-        <div class="button-container-co" style="position: relative; top: 0; z-index: 1;">
-          <button class="section-button-co" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
-            <br>
-            New Company
-          </button>
-          <button class="section-button-co" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
-            <br>
-            Open Position
-          </button>
-        </div>
-        <div class="description-container" v-if="activeSection === 1">
-          <h1>Do you have a company which works in: </h1>
-          <div class="job-boards-company-grid">
-            <div class="job-boards-company-item">
-              <img class="job-boards-company-logo" alt="Personio logo"
-                src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
-                width="240" height="160">
-
-              <h2 class="job-boards-company-name">
-                Healthcare?
-              </h2>
-              <div class="job-boards-company-link">
-                <a href="#">
-                  Join us
-                </a>
-              </div>
-            </div>
-
-
-
-            <div class="job-boards-company-item">
-              <img class="job-boards-company-logo" alt="Personio logo"
-                src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
-                width="240" height="160">
-
-              <h2 class="job-boards-company-name">
-                Technology?
-              </h2>
-              <div class="job-boards-company-link">
-                <a href="#">
-                  Join us
-                </a>
-              </div>
-            </div>
-
-
-            <div class="job-boards-company-item">
-              <img class="job-boards-company-logo" alt="Personio logo"
-                src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
-                width="240" height="160">
-
-              <h2 class="job-boards-company-name">
-                Consumer goods?
-              </h2>
-              <div class="job-boards-company-link">
-                <a href="#">
-                  Join us
-                </a>
-              </div>
-            </div>
-
-
-
-            <div class="job-boards-company-item">
-              <img class="job-boards-company-logo" alt="Personio logo"
-                src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
-                width="240" height="160">
-
-              <h2 class="job-boards-company-name">
-                Sustainability?
-              </h2>
-              <div class="job-boards-company-link">
-                <a href="#">
-                  Join us
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="description-container" v-else-if="activeSection === 2">
-          <div class="job-list">
-            <div class="job-list-job-details">
-              <div class="job-list-job-details">
-                <h2 class="job-list-job-title">
-                  Frontend Developer
-                </h2>
-                <div class="job-list-job-skills">
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://vuejs.org/">Vue.js</a>
-                  </span>
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://nodejs.org/en">Node.js</a>
-                  </span>
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://www.w3schools.com/html/">HTML</a>
-                  </span>
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://www.w3schools.com/css/">CSS</a>
-                  </span>
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://www.w3schools.com/js/default.asp"> JavaScript
-                    </a>
-                  </span>
-                  <span class="job-list-job-skill job-list-job-skill-clickable">
-                    <a href="https://bootstrap-vue.org/"> BootstrapVue
-                    </a>
-                  </span>
-                </div>
-                <span class="job-list-company-meta-item">
-                  Milan, IT
-                </span>
-                <div class="job-list-badges">
-                  <div class="job-list-badge job-list-badge-remote">
-                    <img class="ikona" src="~/assets/img/home-icon.png">
-                    <!-- <b-icon-house-door></b-icon-house-door> House icon not working-->
-
-                    <span class="job-list-badge-text">Work remotely</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <h2> Join VenTour!</h2>
         </div>
       </div>
     </section>
+    <div class="button-container-co" style="position: relative; top: 0; z-index: 1;">
+      <button class="section-button-co" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+        <br>
+        New Company
+      </button>
+      <button class="section-button-co" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+        <br>
+        Open Position
+      </button>
+    </div>
+    <div class="description-container" v-if="activeSection === 1">
+      <h1>Do you have a company in the field of: </h1>
+      <div class="job-boards-company-grid">
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
+            width="240" height="160">
+
+          <h2 class="job-boards-company-name">
+            Healthcare?
+          </h2>
+          <div class="job-boards-company-link">
+
+          </div>
+        </div>
+
+
+
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
+            width="240" height="160">
+
+          <h2 class="job-boards-company-name">
+            Technology?
+          </h2>
+          <div class="job-boards-company-link">
+
+          </div>
+        </div>
+
+
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
+            width="240" height="160">
+
+          <h2 class="job-boards-company-name">
+            Consumer goods?
+          </h2>
+          <div class="job-boards-company-link">
+
+          </div>
+        </div>
+
+
+
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
+            width="240" height="160">
+
+          <h2 class="job-boards-company-name">
+            Sustainability?
+          </h2>
+          <div class="job-boards-company-link">
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="description-container" v-else-if="activeSection === 2">
+      <div class="job-list">
+        <div class="job-list-job-details">
+          <div class="job-list-job-details">
+            <h2 class="job-list-job-title">
+              Frontend Developer
+            </h2>
+            <div class="job-list-job-skills">
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://vuejs.org/">Vue.js</a>
+              </span>
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://nodejs.org/en">Node.js</a>
+              </span>
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://www.w3schools.com/html/">HTML</a>
+              </span>
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://www.w3schools.com/css/">CSS</a>
+              </span>
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://www.w3schools.com/js/default.asp"> JavaScript
+                </a>
+              </span>
+              <span class="job-list-job-skill job-list-job-skill-clickable">
+                <a href="https://bootstrap-vue.org/"> BootstrapVue
+                </a>
+              </span>
+            </div>
+            <span class="job-list-company-meta-item">
+              Milan, IT
+            </span>
+            <div class="job-list-badges">
+              <div class="job-list-badge job-list-badge-remote">
+                <img class="ikona" src="~/assets/img/home-icon.png">
+                <!-- <b-icon-house-door></b-icon-house-door> House icon not working-->
+
+                <span class="job-list-badge-text">Work remotely</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <form>
       <div class="space-y-12">
         <div class="border-b border-gray-900/10 pb-12">
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Profile</h2>
+          <h2 class="text-base font-semibold leading-7 text-gray-900"> <a href="#">
+              Join us
+            </a></h2>
 
           <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-4">
@@ -431,8 +427,17 @@ label {
   }
 }
 
+.co-section {
+  background-image: url('assets/img/joinus.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+  padding-top: 10%;
+}
+
 .co-container {
-  max-width: 540px;
+  max-width: 450px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -441,16 +446,18 @@ label {
 }
 
 .header-center {
-  padding-top: 20%;
+  background-color: white;
+  color: black;
+  margin-top: 10%;
   text-align: center !important;
   margin-bottom: 3rem !important;
   position: relative;
   width: 100%;
-  font-size: 20px;
-  color: #000;
-  line-height: 1.5;
+  font-size: 60px;
   font-weight: 400;
   font-family: sans-serif;
+
+  mix-blend-mode: screen;
 }
 
 
@@ -523,12 +530,12 @@ label {
   margin-right: 20px;
   font-family: sans-serif;
   color: #033f52;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .section-button-co.active {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #033f52;
   font-weight: bold;
   background-color: rgb(212, 208, 208);
