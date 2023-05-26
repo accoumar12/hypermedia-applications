@@ -28,18 +28,18 @@
                     <img src="~/assets/img/technology.png" alt="Tech">
                 </div>
                 <div class="counter" data-target="100"></div>
-                <label for="Technology">
-
-                    <p> Technology Investments</p>
-                    <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-
                 <div class="link-text">
-                    <a><router-link to="/technology">
-                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <a class="learn-more"><router-link to="/technology">
+                            <h1 style="color:#033f52">Technology Investments</h1>
                         </router-link></a>
                 </div>
+                <label for="Technology">
+
+                    
+                    <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
+                    <a href="#title2" @click="filterAndNavigate"> <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1></a>
+                    <span class="checkmark"></span>
+                </label>
             </div>
 
 
@@ -48,18 +48,16 @@
                     <img src="~/assets/img/health.png" alt="Healthcare">
                 </div>
                 <div class="counter" data-target="250"></div>
-                <label for="Healthcare">
-
-                    <p>Healthcare Investments</p>
-                    <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-
                 <div class="link-text">
-                    <a><router-link to="/healthcare">
-                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <a class="learn-more"><router-link to="/healthcare">
+                            <h1 style="color:#033f52">Healthcare Investments</h1>
                         </router-link></a>
                 </div>
+                <label for="Healthcare">
+                    <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
+                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <span class="checkmark" href="#"></span>
+                </label>
             </div>
 
 
@@ -68,19 +66,19 @@
                     <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
                 <div class="counter" data-target="120"></div>
-                <label for="Consumer Goods">
-
-                    <p>Consumer Goods Investments</p>
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
-                        v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-
                 <div class="link-text">
-                    <a><router-link to="/consumer">
-                            <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <a class="learn-more"><router-link to="/consumer">
+                            <h1 style="color:#033f52">Consumer Goods Investments</h1>
                         </router-link></a>
                 </div>
+                <label for="Consumer Goods">
+
+                    <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
+                        v-model="areas">
+                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <span class="checkmark" href="#"></span>
+                </label>
+            
             </div>
 
             <div class="column4">
@@ -210,7 +208,7 @@ const filtered = computed(() => {
     for (let company of companies.value) {
         if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
             if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "") & (MR.value == 0 || MR.value == "")) { // All companies
-                console.log(company) // Only for debug
+                //console.log(company) // Only for debug
                 arrTot.push(company)
             }
             //else if ((company.name == name.value) & (company.areas == areas.value)) {
@@ -280,9 +278,24 @@ export default {
         navigateToProjects() {
             this.$router.push({ name: 'technology', hash: '#projects' });
         },
+        filterAndNavigate(event) {
+          // Prevent the default link behavior
+          event.preventDefault();
+
+          // Perform filtering based on the selected value (example filtering code)
+          // Replace this code with your actual filtering logic
+          if (this.areas === 'Technology') {
+            // Get the target section using the href attribute
+            const targetSection = document.querySelector(event.target.getAttribute('href'));
+
+            // Scroll to the target section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        },
     },
     data() {
         return {
+            areas: '',
             leftColumnText: 'We are committed to helping our portfolio companies realize theri full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
             rightColumnText: '',
             buttons: [

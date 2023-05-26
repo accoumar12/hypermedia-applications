@@ -677,7 +677,7 @@ input:checked~.content-test {
 .content_testimonial-2 .picto {
     height: 25%;
     width: 20%;
-    background-image: url('assets/img/Dell Technologies.png');
+    background-image: url('assets/img/DellTechnologies.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
