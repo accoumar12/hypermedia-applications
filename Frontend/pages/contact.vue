@@ -24,7 +24,7 @@
         Open Position
       </button>
     </div>
-    <div class="description-container" v-if="activeSection === 1">
+    <div class="description-container-co" v-if="activeSection === 1">
       <h1>Do you have a company in the field of: </h1>
       <div class="job-boards-company-grid">
         <div class="job-boards-company-item">
@@ -36,12 +36,8 @@
             Healthcare?
           </h2>
           <div class="job-boards-company-link">
-
           </div>
         </div>
-
-
-
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
             src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
@@ -51,26 +47,18 @@
             Technology?
           </h2>
           <div class="job-boards-company-link">
-
           </div>
         </div>
-
-
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
             src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
             width="240" height="160">
-
           <h2 class="job-boards-company-name">
             Consumer goods?
           </h2>
           <div class="job-boards-company-link">
-
           </div>
         </div>
-
-
-
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
             src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
@@ -80,15 +68,11 @@
             Sustainability?
           </h2>
           <div class="job-boards-company-link">
-
           </div>
         </div>
-
       </div>
-
     </div>
-
-    <div class="description-container" v-else-if="activeSection === 2">
+    <div class="description-container-co" v-else-if="activeSection === 2">
       <div class="job-list">
         <div class="job-list-job-details">
           <div class="job-list-job-details">
@@ -123,137 +107,143 @@
             <div class="job-list-badges">
               <div class="job-list-badge job-list-badge-remote">
                 <img class="ikona" src="~/assets/img/home-icon.png">
-                <!-- <b-icon-house-door></b-icon-house-door> House icon not working-->
-
                 <span class="job-list-badge-text">Work remotely</span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
-
     <form>
       <div class="space-y-12">
-        <div class="border-b border-gray-900/10 pb-12">
-          <h2 class="text-base font-semibold leading-7 text-gray-900"> <a href="#">
-              Join us
-            </a></h2>
-
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div class="sm:col-span-4">
-              <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
-              <div class="mt-2">
-                <div
-                  class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                  <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">Put the url of your company
-                  </span>
-                  <input type="text" name="username" id="username" autocomplete="username"
-                    class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    placeholder="Ventour.com" />
-                </div>
-              </div>
+        <h2 class="text-base ">
+          Join us
+        </h2>
+        <div class="contact-us">
+          <form action="#">
+            <label for="customerName">COMPANY NAME<em>&#x2a;</em></label><input id="customerName" name="customerName"
+              required="" type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
+              name="customerEmail" required="" type="email" /><label for="customerPhone">PHONE</label><input
+              id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label
+              for="country">COUNTRY</label>
+            <div class="mt-2">
+              <select id="country" name="country" autocomplete="country-name" class="block ">
+                <option>Albania</option>
+                <option>China</option>
+                <option>France</option>
+                <option>Japan</option>
+                <option>Italy</option>
+                <option>Switzerland</option>
+                <option>Spain</option>
+                <option>Other</option>
+              </select>
             </div>
-
-            <div class="col-span-full">
-              <label for="about" class="block text-sm font-medium leading-6 text-gray-900">About</label>
-              <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your company, focusing on the
-                its goal and stating the motto (if exists).</p>
-              <div class="mt-2">
-                <textarea id="about" name="about" rows="3"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-
-            </div>
-
-            <div class="col-span-full">
-              <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover letter/
-                CV</label>
-              <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                <div class="text-center">
-                  <PhotoIcon class="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
-                  <div class="mt-4 flex text-sm leading-6 text-gray-600">
-                    <label for="file-upload"
-                      class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                      <span>Upload a file</span>
-                      <input id="file-upload" name="file-upload" type="file" class="sr-only" />
-                    </label>
-                  </div>
-                </div>
+            <label for="customerNote">ABOUT <em>&#x2a;</em></label>Write about your company's goal:<textarea
+              id="customerNote" name="customerNote" required="" rows="4"></textarea>
+            <label for="spamProtection">SPAM PROTECTION <em>&#x2a; </em><span>&nbsp;&nbsp;&nbsp;&nbsp;What day comes
+                before July 11th?</span></label><input id="spamProtection" name="spamProtection" type="text" /><button
+              id="customerOrder">SUBMIT</button>
+          </form>
+        </div>
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-4">
+            <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
+            <div class="mt-2">
+              <div
+                class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">Put the url of your company
+                </span>
+                <input type="text" name="username" id="username" autocomplete="username"
+                  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  placeholder="Ventour.com" />
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="border-b border-gray-900/10 pb-12">
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-          <!--<p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>-->
-
-          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div class="sm:col-span-3">
-              <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
-              <div class="mt-2">
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
+          <div class="col-span-full">
+            <label for="about" class="block text-sm font-medium leading-6 text-gray-900">About</label>
+            <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your company, focusing on the
+              its goal and stating the motto (if exists).</p>
+            <div class="mt-2">
+              <textarea id="about" name="about" rows="3"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
-
-            <div class="sm:col-span-3">
-              <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
-              <div class="mt-2">
-                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
-            <div class="sm:col-span-4">
-              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-              <div class="mt-2">
-                <input id="email" name="email" type="email" autocomplete="email"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
-            <div class="sm:col-span-3">
-              <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Country</label>
-              <div class="mt-2">
-                <select id="country" name="country" autocomplete="country-name"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                  <option>Albania</option>
-                  <option>China</option>
-                  <option>France</option>
-                  <option>Japan</option>
-                  <option>Italy</option>
-                  <option>Switzerland</option>
-                  <option>Spain</option>
-                  <option>Other</option>
-
-                </select>
-              </div>
-            </div>
-
-            <div class="col-span-full">
-              <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Street
-                address</label>
-              <div class="mt-2">
-                <input type="text" name="street-address" id="street-address" autocomplete="street-address"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-              </div>
-            </div>
-
-            <div class="sm:col-span-2 sm:col-start-1">
-              <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
-              <div class="mt-2">
-                <input type="text" name="city" id="city" autocomplete="address-level2"
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+          </div>
+          <div class="col-span-full">
+            <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover letter/
+              CV</label>
+            <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+              <div class="text-center">
+                <PhotoIcon class="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
+                <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                  <label for="file-upload"
+                    class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                    <span>Upload a file</span>
+                    <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <div class="border-b border-gray-900/10 pb-12">
+        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+            <div class="mt-2">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+            <div class="mt-2">
+              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
+          </div>
+          <div class="sm:col-span-4">
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input id="email" name="email" type="email" autocomplete="email"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Country</label>
+            <div class="mt-2">
+              <select id="country" name="country" autocomplete="country-name"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option>Albania</option>
+                <option>China</option>
+                <option>France</option>
+                <option>Japan</option>
+                <option>Italy</option>
+                <option>Switzerland</option>
+                <option>Spain</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Street
+              address</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
+          </div>
+          <div class="sm:col-span-2 sm:col-start-1">
+            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
+            <div class="mt-2">
+              <input type="text" name="city" id="city" autocomplete="address-level2"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="mt-6 flex items-center justify-end gap-x-6">
         <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
         <button type="submit"
@@ -363,6 +353,98 @@ const filtered = computed(() => {
 </script>
 
 <style>
+.contact-us {
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border-top: 10px solid #f45702;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: "Spartan";
+}
+
+input {
+  margin-bottom: 24pt;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 24pt;
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #f45702;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+#customerOrder {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+#customerOrder:hover {
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+::selection {
+  background: #ffc7b8;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #6bd4b1;
+  -webkit-text-fill-color: #2A293E;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 #contact {
   background-image: url('assets/img/19449741.jpg');
   background-size: cover;
@@ -523,6 +605,7 @@ label {
 }
 
 .section-button-co {
+
   padding-bottom: 2.5%;
   border: none;
   background: none;
@@ -543,6 +626,7 @@ label {
 }
 
 .button-container-co {
+  margin-top: 5%;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -587,13 +671,15 @@ label {
   cursor: pointer;
 }
 
-.description-container {
+.description-container-co {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
   text-align: justify;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 
 .job-boards-company-grid {
@@ -620,7 +706,7 @@ label {
   font-size: 18px;
 }
 
-.description-container p2 {
+.description-container-co p2 {
   margin-bottom: 10px;
   font-size: 15pt;
   width: 80%;
@@ -628,7 +714,7 @@ label {
   font-size: 1.1rem;
 }
 
-.description-container p3 {
+.description-container-co p3 {
   margin-bottom: 8px;
   font-size: 15pt;
   width: 100%;
