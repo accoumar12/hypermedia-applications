@@ -2,6 +2,8 @@
     Header of the page
 -->
 <template>
+    <div v-if="!isMobile">
+    <desktop> 
     <div class="header-container">
         <header>
             <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
@@ -43,6 +45,53 @@
             </nav>
         </header>
     </div>
+    </desktop>
+    </div>
+    <div v-else>
+    <mobile>
+        <div class="header-container">
+        <header>
+            <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
+            <nav>
+                <span>
+                    <p><router-link to="/History" class="nav-link">About Us</router-link></p>
+                </span>
+                <router-link to="/people" class="nav-link">Our Team</router-link>
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        <router-link to="/companies" class="nav-link">Investments</router-link>
+                    </div>
+                    <div class="dropdown-menu">
+                        <p>
+                            <router-link to="/companies" class="nav-link">Areas</router-link>
+                        </p>
+                        <div class="sub-menu">
+                            <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
+                            <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
+                            <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
+                            <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
+                        </div>
+                    </div>
+                </div>
+                <router-link to="/contact" class="nav-link">Get In Touch</router-link>
+                <div class="search">
+                    <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
+                        placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
+                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
+                            style="color: #2479a3;"></button>
+                    <!--
+                    <ul>
+                      <li v-for="result in searchResults" :key="result.text">
+                        <a :href="result.link">{{ result.text }}</a>
+                      </li>
+                    </ul>
+                -->
+                </div>
+            </nav>
+        </header>
+    </div>
+      </mobile>
+  </div>
 </template>
 <script>
 const searchText = ref("");
@@ -83,6 +132,13 @@ export default {
             }
             return arrTot;
         },
+        isMobile() {
+           if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+             return true
+           } else {
+             return false
+           }
+         }
     },
     mounted() {
         document.addEventListener("click", (event) => {
