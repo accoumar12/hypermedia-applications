@@ -59,9 +59,9 @@
             </a>
                 <div id="sidemenu">
                 <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
-                      <span class="top"></span>
-                      <span class="mid"></span>
-                      <span class="bottom"></span>
+                      <span class="top">Ciao</span>
+                      <span class="mid">Ciao</span>
+                      <span class="bottom">Ciao</span>
                 </button>
                 <transition name="translateX">
                   <nav v-show="navOpen">
@@ -194,7 +194,6 @@ nav {
     font-weight: bold;
     flex-grow: 1;
     width: 100%;
-
 }
 
 .nav-link {
@@ -341,10 +340,7 @@ nav {
         max-height: 20%;
     }
 }
-
-#sidemenu {
-
-  .sidemenu__nav {
+.sidemenu__nav {
     width: 200px;
     background: grey;
     position: fixed;
@@ -355,7 +351,7 @@ nav {
     overflow-y: scroll;
   }
 
-  .sidemenu__btn {
+.sidemenu__btn {
     display: block;
     width: 50px;
     height: 50px;
@@ -365,8 +361,8 @@ nav {
     z-index: 100;
     cursor: pointer;
     outline: none;
-
-    span {
+}
+.sidemenu__btn:hover .span {
       display: block;
       width: 20px;
       height: 2px;
@@ -388,6 +384,10 @@ nav {
       }
     }
 
+    
+  
+
+#sidemenu {
     &.active {
       .top {
         transform: rotate(-45deg);
@@ -400,7 +400,6 @@ nav {
         transform: rotate(45deg);
       }
     }
-  }
 
   .sidemenu__wrapper {
     padding-top: 50px;
