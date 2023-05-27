@@ -29,13 +29,14 @@
                         </div>
                     </div>
                 </div>
+                
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
                 <div class="search">
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
                             style="color: #2479a3;"></button>
-                    <!--
+                 <!--   
                     <ul>
                       <li v-for="result in searchResults" :key="result.text">
                         <a :href="result.link">{{ result.text }}</a>
@@ -50,32 +51,60 @@
     </div>
     <div v-else>
     <mobile>
+        
         <div class="navbar">
         <header>
             <a class="navbar-item">
-                <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" alt="Vue.js Examples" width="40" height="40"></router-link>
-
+                <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="40" height="40"></router-link>
             </a>
-            <div id="navbarBurger" class="navbar-burger burger is-active" data-target="navMenuIndex">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
+                <div id="sidemenu">
+                <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
+                      <span class="top"></span>
+                      <span class="mid"></span>
+                      <span class="bottom"></span>
+                </button>
+                <transition name="translateX">
+                  <nav v-show="navOpen">
+                    <div class="sidemenu__wrapper">
+                      <ul class="sidemenu__list">
+                        <li class="sidemenu__item"><a href="">Top</a></li>
+                        <li class="sidemenu__item"><a href="">About</a></li>
+                        <li class="sidemenu__item"><a href="">Blog</a></li>
+                        <li class="sidemenu__item"><a href="">Work</a></li>
+                        <li class="sidemenu__item"><a href="">Link</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </transition>
+              </div>
         </header>    
+        </div>
+    </mobile>
     </div>
-      </mobile>
-  </div>
-  </div>
-
+</div>
 </template>
+
 <script>
+
+import { reactive } from 'vue';
 
 const searchText = ref("");
 export default {
+
+    setup() {
+        const sidemenu = reactive({
+          navOpen: true
+        });
+
+        return {
+          sidemenu
+        };
+    },
+
     data() {
         return {
             isMobile: false,
+            navOpen: false,
             isSearchExpanded: false,
             searchText: '',
         };
@@ -312,104 +341,110 @@ nav {
         max-height: 20%;
     }
 }
-.navbar-brand, .navbar-tabs {
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 3.25rem;
-}
 
-.navbar-item {
-  font-size: 15px;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
+#sidemenu {
 
-.navbar-burger {
-  cursor: pointer;
-  display: block;
-  height: 60px;
-  position: relative;
-  width: 4.25rem;
-  right: 10px;
-  margin-left: auto;
-}
+  .sidemenu__nav {
+    width: 200px;
+    background: grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 2px 0 3px$grey-6;
+    overflow-y: scroll;
+  }
 
-
-
-.navbar-burger.is-active span:nth-child(1) {
-  -webkit-transform: translateY(5px) rotate(45deg);
-  transform: translateY(5px) rotate(45deg);
-}
-.navbar-burger span:nth-child(1) {
-  top: calc(50% - 6px);
-}
-.navbar-burger span {
-  background-color: currentColor;
-  display: block;
-  height: 1px;
-  left: calc(50% - 8px);
-  position: absolute;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition-duration: 86ms;
-  transition-duration: 86ms;
-  -webkit-transition-property: background-color,opacity,-webkit-transform;
-  transition-property: background-color,opacity,-webkit-transform;
-  transition-property: background-color,opacity,transform;
-  transition-property: background-color,opacity,transform,-webkit-transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  width: 16px;
-}
-
-.navbar-menu.is-active {
-  display: block;
-}
-
-@media screen and (max-width: 1023px)
-.navbar-menu {
-  background-color: #fff;
-  -webkit-box-shadow: 0 8px 16px rgba(10,10,10,.1);
-  box-shadow: 0 8px 16px rgba(10,10,10,.1);
-  padding: .5rem 0;
-}
-.navbar-menu {
-  display: none;
-}
-
-
-.navbar-item.has-dropdown {
-
-    padding: 0;
-
-}
-.navbar-item {
-
-    font-size: 15px;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-
-}
-.navbar-item, .navbar-link {
-
-    color: #4a4a4a;
+  .sidemenu__btn {
     display: block;
-    line-height: 1.5;
-    padding: .5rem .6rem;
+    width: 50px;
+    height: 50px;
+    background: grey;
+    border: none;
     position: relative;
+    z-index: 100;
+    cursor: pointer;
+    outline: none;
 
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: auto;
+      background: white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.4s ease;
+
+      &.top {
+        transform: translateY(-8px);
+      }
+
+      &.bottom {
+        transform: translateY(8px);
+      }
+    }
+
+    &.active {
+      .top {
+        transform: rotate(-45deg);
+      }
+      .mid {
+        transform: translateX(-20px) rotate(360deg);
+        opacity: 0;
+      }
+      .bottom {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .sidemenu__wrapper {
+    padding-top: 50px;
+  }
+
+  .sidemenu__list {
+    padding-top: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidemenu__item {
+    a {
+      text-decoration: none;
+      line-height: 1.6em;
+      font-size: 1.6em;
+      padding: 0.5em;
+      display: block;
+      color: white;
+      transition: 0.4s ease;
+
+      &:hover {
+        background: lightgrey;
+        color: dimgrey;
+      }
+    }
+  }
+}
+
+.translateX-enter {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.translateX-enter-active,
+.translateX-leave-active {
+  transform-origin: top left 0;
+  transition: 0.2s ease;
+}
+
+.translateX-leave-to {
+  transform: translateX(-200px);
+  opacity: 0;
 }
 
 </style>
