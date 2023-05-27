@@ -67,10 +67,40 @@
                   <nav class="sidemenu__nav" v-show="navOpen">
                     <div class="sidemenu__wrapper">
                       <ul class="sidemenu__list">
-                        <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
-                            <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
-                            <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
-                            <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
+                        <span>
+                            <p><router-link to="/History" class="nav-link">About Us</router-link></p>
+                        </span>
+                        <p> <router-link to="/people" class="nav-link">Our Team</router-link></p>
+                        
+                            <div class="dropdown">
+                                <div class="dropdown-toggle">
+                                    <p><router-link to="/companies" class="nav-link">Investments</router-link></p>
+                                </div>
+                                <div class="dropdown-menu">
+                                <p> <router-link to="/companies" class="nav-link">Areas</router-link> </p>
+                            <div class="sub-menu">
+                                <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
+                                <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
+                                <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
+                                <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p><router-link to="/contact" class="nav-link">Get In Touch</router-link></p>
+                <div class="search">
+                    <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
+                        placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
+                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
+                            style="color: #2479a3;"></button>
+                 <!--   
+                    <ul>
+                      <li v-for="result in searchResults" :key="result.text">
+                        <a :href="result.link">{{ result.text }}</a>
+                      </li>
+                    </ul>
+                -->
+                </div>
                       </ul>
                     </div>
                   </nav>
