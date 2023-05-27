@@ -57,21 +57,20 @@
             <a class="navbar-item">
                 <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="40" height="40"></router-link>
             </a>
-                <div id="sidemenu">   
-                <button class="sidemenu__btn" @click="navOpen = !navOpen" >
+                <div id="sidemenu">
+                <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
                       <span class="top"></span>
                       <span class="mid"></span>
                       <span class="bottom"></span>
                 </button>
                 <transition name="translateX">
-                  <nav v-show="navOpen">
+                  <nav class="sidemenu__nav" v-show="navOpen">
                     <div class="sidemenu__wrapper">
                       <ul class="sidemenu__list">
-                        <li class="sidemenu__item"><a href="">Top</a></li>
-                        <li class="sidemenu__item"><a href="">About</a></li>
-                        <li class="sidemenu__item"><a href="">Blog</a></li>
-                        <li class="sidemenu__item"><a href="">Work</a></li>
-                        <li class="sidemenu__item"><a href="">Link</a></li>
+                        <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
+                            <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
+                            <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
+                            <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
                       </ul>
                     </div>
                   </nav>
@@ -93,7 +92,7 @@ export default {
 
     setup() {
         const sidemenu = reactive({
-          navOpen: true
+          navOpen: false
         });
 
         return {
@@ -340,29 +339,33 @@ nav {
         max-height: 20%;
     }
 }
+.navbar{
+    position: relative;
+}
 .sidemenu__nav {
-    width: 200px;
+    width: auto;
+    height: auto;
     background: grey;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 25;
     box-shadow: 2px 0 3px$grey-6;
     overflow-y: scroll;
   }
 
 .sidemenu__btn {
+    align-items: left;
     display: block;
     width: 50px;
     height: 50px;
     background: grey;
     border: none;
     position: relative;
-    z-index: 100;
+    
     cursor: pointer;
     outline: none;
 }
-
 .sidemenu__btn span {
       display: block;
       width: 20px;
@@ -375,57 +378,52 @@ nav {
       left: 0;
       right: 0;
       transition: all 0.4s ease;
-
-      &.top {
-        transform: translateY(-8px);
-      }
-
-      &.bottom {
+    }
+.sidemenu__btn span top{
+    transform: translateY(-8px);
+}
+.sidemenu__btn span bottom {
         transform: translateY(8px);
       }
-    }
-
-  .sidemenu__btn .active .top {
+.sidemenu__btn .active .top {
         transform: rotate(-45deg);
       }
-  .sidemenu__btn .active .mid {
+.sidemenu__btn .active .mid {
         transform: translateX(-20px) rotate(360deg);
         opacity: 0;
       }
-  .sidemenu__btn .active .bottom {
+.sidemenu__btn .active .bottom {
         transform: rotate(45deg);
       }
-
-
-  .sidemenu__wrapper {
-    padding-top: 100px;
-  }
-
-  .sidemenu__list {
+    
+.sidemenu__wrapper {
     padding-top: 50px;
+  }
+    
+.sidemenu__list {
+    padding-top: 10px;
     list-style: none;
     padding: 0;
     margin: 0;
   }
-
-  .sidemenu__item a {
+.sidemenu__item a {
       text-decoration: none;
       line-height: 5px;
       font-size: 10px;
-      padding: 0.5em;
+      padding: 5px;
       display: block;
       color: black;
       transition: 0.4s ease;
-    }
-
-    .sidemenu__item a:hover {
+  }
+.sidemenu__item a:hover {
         background: lightgrey;
         color: dimgrey;
-    }
+      }
 
 
 .translateX-enter {
-  transform: translateX(-200px);
+  transform: translateX(20px);
+  transform: translateY(20px);
   opacity: 0;
 }
 
@@ -436,7 +434,7 @@ nav {
 }
 
 .translateX-leave-to {
-  transform: translateX(-200px);
+  transform: translateX(20px);
   opacity: 0;
 }
 
