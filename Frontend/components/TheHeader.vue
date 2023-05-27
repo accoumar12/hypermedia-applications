@@ -59,9 +59,9 @@
             </a>
                 <div id="sidemenu">
                 <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
-                      <span class="top">Ciao</span>
-                      <span class="mid">Ciao</span>
-                      <span class="bottom">Ciao</span>
+                      <span class="top"></span>
+                      <span class="mid"></span>
+                      <span class="bottom"></span>
                 </button>
                 <transition name="translateX">
                   <nav v-show="navOpen">
@@ -362,7 +362,7 @@ nav {
     cursor: pointer;
     outline: none;
 }
-.sidemenu__btn:hover .span {
+.sidemenu__btn span {
       display: block;
       width: 20px;
       height: 2px;
