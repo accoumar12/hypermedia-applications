@@ -57,8 +57,8 @@
             <a class="navbar-item">
                 <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="40" height="40"></router-link>
             </a>
-                <div id="sidemenu">
-                <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
+                <div id="sidemenu">   
+                <button class="sidemenu__btn" @click="navOpen = !navOpen" >
                       <span class="top"></span>
                       <span class="mid"></span>
                       <span class="bottom"></span>
@@ -362,6 +362,7 @@ nav {
     cursor: pointer;
     outline: none;
 }
+
 .sidemenu__btn span {
       display: block;
       width: 20px;
@@ -384,25 +385,20 @@ nav {
       }
     }
 
-    
-  
-
-#sidemenu {
-    &.active {
-      .top {
+  .sidemenu__btn .active .top {
         transform: rotate(-45deg);
       }
-      .mid {
+  .sidemenu__btn .active .mid {
         transform: translateX(-20px) rotate(360deg);
         opacity: 0;
       }
-      .bottom {
+  .sidemenu__btn .active .bottom {
         transform: rotate(45deg);
       }
-    }
+
 
   .sidemenu__wrapper {
-    padding-top: 50px;
+    padding-top: 100px;
   }
 
   .sidemenu__list {
@@ -412,23 +408,21 @@ nav {
     margin: 0;
   }
 
-  .sidemenu__item {
-    a {
+  .sidemenu__item a {
       text-decoration: none;
-      line-height: 1.6em;
-      font-size: 1.6em;
+      line-height: 5px;
+      font-size: 10px;
       padding: 0.5em;
       display: block;
-      color: white;
+      color: black;
       transition: 0.4s ease;
+    }
 
-      &:hover {
+    .sidemenu__item a:hover {
         background: lightgrey;
         color: dimgrey;
-      }
     }
-  }
-}
+
 
 .translateX-enter {
   transform: translateX(-200px);
