@@ -327,14 +327,6 @@ input {
 
 }
 
-h3 {
-  font-weight: normal;
-  font-size: 10pt;
-  line-height: 24pt;
-  font-style: italic;
-  margin: 0 0 0.5em 0;
-}
-
 span {
   font-size: 8pt;
 }
@@ -420,8 +412,6 @@ textarea:-webkit-autofill:focus {
   align-items: center;
 }
 
-
-
 form {
   width: 60%;
   margin-bottom: 5%;
@@ -503,35 +493,6 @@ label {
   mix-blend-mode: screen;
 }
 
-
-.description-containera p2 {
-  height: 20%;
-  padding-left: -10%;
-  font-size: 15pt;
-  width: 90%;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.1rem;
-}
-
-.description-containera p3 {
-  height: 20%;
-  padding-left: 70%;
-  font-size: 15pt;
-  width: 150%;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.1rem;
-}
-
-.row2 {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 30px;
-  padding-bottom: 2%;
-}
-
 .text-center {
   text-align: center;
   position: absolute;
@@ -539,30 +500,6 @@ label {
   font-size: 18px;
   font-weight: bold;
   color: #333;
-}
-
-.column3 {
-  flex-basis: 20%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-left: 1px solid black;
-}
-
-.column3:first-child {
-  border-left: none;
-}
-
-.column3 p {
-  font-size: 16px;
-}
-
-#description {
-  padding: 0 20px 0 20px;
-  font-size: 15pt;
 }
 
 .section-button-co {
@@ -594,42 +531,6 @@ label {
   margin-bottom: 2%;
   font-family: sans-serif;
   color: black;
-}
-
-.column {
-  flex-basis: 50%;
-  padding-left: 2%;
-}
-
-.column2 {
-  padding: 7em 0;
-}
-
-.column.p2 {
-  position: absolute;
-}
-
-#main-img {
-  width: 60%;
-  height: 40%;
-  padding-left: 10%;
-  display: initial;
-  /*
-    height: auto;
-    padding-left: 10%;
-    */
-}
-
-.button2 {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border: none;
-  margin-top: 10px;
-}
-
-.button2:hover {
-  cursor: pointer;
 }
 
 .description-container-co {
@@ -667,22 +568,6 @@ label {
   font-size: 18px;
 }
 
-.description-container-co p2 {
-  margin-bottom: 10px;
-  font-size: 15pt;
-  width: 80%;
-  font-family: PT sans-serif;
-  font-size: 1.1rem;
-}
-
-.description-container-co p3 {
-  margin-bottom: 8px;
-  font-size: 15pt;
-  width: 100%;
-  font-family: sans-serif;
-  font-size: 1.1rem;
-}
-
 @media (min-width: 720px) {
   .job-boards-company-item {
     margin-bottom: 0;
@@ -693,50 +578,6 @@ label {
     padding: 24px 24px 32px;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: var(--border-md);
-  }
-
-  .job-list {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: var(--border-md);
-  }
-
-  .job-list-job {
-    font-size: 14px;
-    padding: 24px;
-    display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    line-height: 1.5;
-  }
-
-  .job-list-job-title {
-
-    margin-bottom: 8px;
-    word-break: break-word;
-  }
-
-  .job-list-job-skill {
-    font-size: 13px;
-    border: 1px solid #C5CDD1;
-    border-radius: var(--border-small);
-    display: inline-block;
-    padding: 2px 12px;
-    line-height: 18px;
-    margin-right: 4px;
-    margin-bottom: 4px;
-  }
-
-  .job-list-job-skill-clickable {
-    cursor: pointer;
-  }
-
-  .job-list-badges {
-    margin-top: 16px;
-  }
-
-  .ikona {
-    float: left;
-    max-width: 5%;
-    max-height: 5%;
   }
 }
 </style>
