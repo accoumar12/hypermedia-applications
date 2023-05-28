@@ -409,22 +409,24 @@ nav {
       right: 0;
       transition: all 0.4s ease;
     }
-.sidemenu__btn span top{
+.sidemenu__btn span.top{
     transform: translateY(-8px);
 }
-.sidemenu__btn span bottom {
+.sidemenu__btn span.bottom {
         transform: translateY(8px);
       }
-.sidemenu__btn .active .top {
-        transform: rotate(-45deg);
-      }
-.sidemenu__btn .active .mid {
-        transform: translateX(-20px) rotate(360deg);
-        opacity: 0;
-      }
-.sidemenu__btn .active .bottom {
-        transform: rotate(45deg);
-      }
+.sidemenu__btn.active .top {
+  transform: rotate(-45deg);
+}
+
+.sidemenu__btn.active .mid {
+  transform: translateX(-20px) rotate(360deg);
+  opacity: 0;
+}
+
+.sidemenu__btn.active .bottom {
+  transform: rotate(45deg);
+}
     
 .sidemenu__wrapper {
     padding-top: 50px;
