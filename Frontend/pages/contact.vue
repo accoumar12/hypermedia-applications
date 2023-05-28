@@ -21,113 +21,78 @@
       </button>
       <button class="section-button-co" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
         <br>
-        Open Position
+        Open Positions
       </button>
     </div>
     <div class="description-container-co" v-if="activeSection === 1">
       <h1>Do you have a company in the field of: </h1>
       <div class="job-boards-company-grid">
-        <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
-            width="240" height="160">
+        <router-link to="/healthcare">
+          <div class="job-boards-company-item">
+            <img class="job-boards-company-logo" alt="Personio logo"
+              src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
+              width="240" height="160">
 
-          <h2 class="job-boards-company-name">
-            Healthcare?
-          </h2>
-          <div class="job-boards-company-link">
-          </div>
-        </div>
-        <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
-            width="240" height="160">
-
-          <h2 class="job-boards-company-name">
-            Technology?
-          </h2>
-          <div class="job-boards-company-link">
-          </div>
-        </div>
-        <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
-            width="240" height="160">
-          <h2 class="job-boards-company-name">
-            Consumer goods?
-          </h2>
-          <div class="job-boards-company-link">
-          </div>
-        </div>
-        <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
-            width="240" height="160">
-
-          <h2 class="job-boards-company-name">
-            Sustainability?
-          </h2>
-          <div class="job-boards-company-link">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="description-container-co" v-else-if="activeSection === 2">
-      <div class="job-list">
-        <div class="job-list-job-details">
-          <div class="job-list-job-details">
-            <h2 class="job-list-job-title">
-              Frontend Developer
+            <h2 class="job-boards-company-name">
+              Healthcare
             </h2>
-            <div class="job-list-job-skills">
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://vuejs.org/">Vue.js</a>
-              </span>
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://nodejs.org/en">Node.js</a>
-              </span>
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://www.w3schools.com/html/">HTML</a>
-              </span>
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://www.w3schools.com/css/">CSS</a>
-              </span>
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://www.w3schools.com/js/default.asp"> JavaScript
-                </a>
-              </span>
-              <span class="job-list-job-skill job-list-job-skill-clickable">
-                <a href="https://bootstrap-vue.org/"> BootstrapVue
-                </a>
-              </span>
-            </div>
-            <span class="job-list-company-meta-item">
-              Milan, IT
-            </span>
-            <div class="job-list-badges">
-              <div class="job-list-badge job-list-badge-remote">
-                <img class="ikona" src="~/assets/img/home-icon.png">
-                <span class="job-list-badge-text">Work remotely</span>
-              </div>
+            <div class="job-boards-company-link">
             </div>
           </div>
-        </div>
+        </router-link>
+        <router-link to="/technology">
+          <div class="job-boards-company-item">
+            <img class="job-boards-company-logo" alt="Personio logo"
+              src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
+              width="240" height="160">
+
+            <h2 class="job-boards-company-name">
+              Technology
+            </h2>
+            <div class="job-boards-company-link">
+            </div>
+          </div>
+        </router-link>
+        <router-link to="/consumer">
+          <div class="job-boards-company-item">
+            <img class="job-boards-company-logo" alt="Personio logo"
+              src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
+              width="240" height="160">
+            <h2 class="job-boards-company-name">
+              Consumer goods
+            </h2>
+            <div class="job-boards-company-link">
+            </div>
+          </div>
+        </router-link>
+        <router-link to="/sustainability">
+          <div class="job-boards-company-item">
+            <img class="job-boards-company-logo" alt="Personio logo"
+              src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
+              width="240" height="160">
+
+            <h2 class="job-boards-company-name">
+              Sustainability
+            </h2>
+            <div class="job-boards-company-link">
+            </div>
+          </div>
+        </router-link>
       </div>
-    </div>
-    <form>
-      <div class="space-y-12">
-        <h2 class="text-base ">
-          Join us
-        </h2>
-        <div class="contact-us">
-          <form action="#">
-            <label for="customerName">COMPANY NAME<em>&#x2a;</em></label><input id="customerName" name="customerName"
-              required="" type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
+      <form>
+        <div class="space">
+          <h1>
+            Join us
+          </h1>
+          <div class="contact-us">
+
+            <label for="customerName">NAME<em>&#x2a;</em></label><input id="customerName" name="customerName" required=""
+              type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
               name="customerEmail" required="" type="email" /><label for="customerPhone">PHONE</label><input
               id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label
-              for="country">COUNTRY</label>
+              for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
-              <select id="country" name="country" autocomplete="country-name" class="block ">
+              <select id="country" name="country" autocomplete="country-name" class="block" style="height: 36px;">
                 <option>Albania</option>
                 <option>China</option>
                 <option>France</option>
@@ -138,84 +103,88 @@
                 <option>Other</option>
               </select>
             </div>
-            <label for="customerNote">ABOUT <em>&#x2a;</em></label>Write about your company's goal:<textarea
-              id="customerNote" name="customerNote" required="" rows="4"></textarea>
-            <label for="spamProtection">SPAM PROTECTION <em>&#x2a; </em><span>&nbsp;&nbsp;&nbsp;&nbsp;What day comes
-                before July 11th?</span></label><input id="spamProtection" name="spamProtection" type="text" /><button
-              id="customerOrder">SUBMIT</button>
-          </form>
-        </div>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div class="sm:col-span-4">
-            <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
-            <div class="mt-2">
-              <div
-                class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">Put the url of your company
-                </span>
-                <input type="text" name="username" id="username" autocomplete="username"
-                  class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                  placeholder="Ventour.com" />
-              </div>
-            </div>
-          </div>
+            <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about your company
+                (name,goal)
+              </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+            <label for="file-upload"
+              class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file
+              </span>
+              <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+            </label>
 
-          <div class="col-span-full">
-            <label for="about" class="block text-sm font-medium leading-6 text-gray-900">About</label>
-            <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your company, focusing on the
-              its goal and stating the motto (if exists).</p>
-            <div class="mt-2">
-              <textarea id="about" name="about" rows="3"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-          <div class="col-span-full">
-            <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover letter/
-              CV</label>
-            <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-              <div class="text-center">
-                <PhotoIcon class="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
-                <div class="mt-4 flex text-sm leading-6 text-gray-600">
-                  <label for="file-upload"
-                    class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                    <span>Upload a file</span>
-                    <input id="file-upload" name="file-upload" type="file" class="sr-only" />
-                  </label>
-                </div>
-              </div>
-            </div>
+            <button id="customerOrder">SUBMIT</button>
+
           </div>
         </div>
+      </form>
+    </div>
+    <div class="description-container-co" v-else-if="activeSection === 2">
+      <h1>Do you have knowledge in Frontend Technologies: </h1>
+      <div class="job-boards-company-grid">
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="200" height="160">
+          <a href="https://vuejs.org/" target="_blank">
+            <h2 class="job-boards-company-name">
+              Vue.js
+            </h2>
+          </a>
+          <div class="job-boards-company-link">
+          </div>
+        </div>
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png" width="240"
+            height="160">
+          <a href="https://www.w3schools.com/html/" target="_blank">
+            <h2 class="job-boards-company-name">
+              HTML
+            </h2>
+          </a>
+          <div class="job-boards-company-link">
+          </div>
+        </div>
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png" width="240"
+            height="160">
+          <a href="https://www.w3schools.com/css/" target="_blank">
+            <h2 class="job-boards-company-name">
+              CSS
+            </h2>
+          </a>
+          <div class="job-boards-company-link">
+          </div>
+        </div>
+        <div class="job-boards-company-item">
+          <img class="job-boards-company-logo" alt="Personio logo"
+            src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png" width="240"
+            height="160">
+          <a href="https://www.w3schools.com/js/default.asp" target="_blank">
+            <h2 class="job-boards-company-name">
+              JavaScript
+            </h2>
+          </a>
+          <div class="job-boards-company-link">
+          </div>
+        </div>
+
       </div>
-      <div class="border-b border-gray-900/10 pb-12">
-        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div class="sm:col-span-3">
-            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+      <form>
+        <div class="space">
+          <h1>
+            Join us
+          </h1>
+          <div class="contact-us">
+
+            <label for="customerName">NAME<em>&#x2a;</em></label><input id="customerName" name="customerName" required=""
+              type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
+              name="customerEmail" required="" type="email" /><label for="customerPhone">PHONE</label><input
+              id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label
+              for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-          <div class="sm:col-span-3">
-            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
-            <div class="mt-2">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-          <div class="sm:col-span-4">
-            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-            <div class="mt-2">
-              <input id="email" name="email" type="email" autocomplete="email"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-          <div class="sm:col-span-3">
-            <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Country</label>
-            <div class="mt-2">
-              <select id="country" name="country" autocomplete="country-name"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+              <select id="country" name="country" autocomplete="country-name" class="block" style="height: 36px;">
                 <option>Albania</option>
                 <option>China</option>
                 <option>France</option>
@@ -226,48 +195,22 @@
                 <option>Other</option>
               </select>
             </div>
-          </div>
-          <div class="col-span-full">
-            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Street
-              address</label>
-            <div class="mt-2">
-              <input type="text" name="street-address" id="street-address" autocomplete="street-address"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
-          </div>
-          <div class="sm:col-span-2 sm:col-start-1">
-            <label for="city" class="block text-sm font-medium leading-6 text-gray-900">City</label>
-            <div class="mt-2">
-              <input type="text" name="city" id="city" autocomplete="address-level2"
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-            </div>
+            <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about you
+                (goals,expectations)
+              </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+            <label for="file-upload"
+              class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file
+              </span>
+              <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+            </label>
+
+            <button id="customerOrder">SUBMIT</button>
+
           </div>
         </div>
-      </div>
-      <div class="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
-        <button type="submit"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
-      </div>
-    </form>
-
-    <!--
-            <form>
-                <div>
-                    <label for = "name">Name & Surname</label>
-                    <input type = "text" id = "name" placeholder = "Name & Surname">
-                </div>
-                <div>
-                    <label for = "mail">E-mail</label>
-                    <input type = "email" id = "mail" placeholder = "E-mail">
-                </div>
-                <div id = "message-div">
-                    <label for = "message">Message</label>
-                    <textarea id = "message" placeholder = "Write your message here"></textarea>  
-                </div>
-                <button>Send Message</button>
-            </form>
-        -->
+      </form>
+    </div>
 
   </main>
 </template>
@@ -354,23 +297,34 @@ const filtered = computed(() => {
 
 <style>
 .contact-us {
-  background: #f8f4e5;
-  padding: 50px 100px;
-  border-top: 10px solid #f45702;
+  background: rgb(212, 208, 208);
+  padding: 70px 100px;
+  border-top: 10px solid var(--varyDarkBlue);
 }
 
 label,
 input,
+select,
 textarea {
   display: block;
   width: 100%;
   font-size: 12pt;
   line-height: 24pt;
-  font-family: "Spartan";
+  font-family: sans-serif;
 }
 
+textarea {
+  margin-bottom: 3%;
+}
+
+label {
+  text-align: left;
+}
+
+select,
 input {
   margin-bottom: 24pt;
+
 }
 
 h3 {
@@ -391,15 +345,17 @@ em {
 }
 
 input,
+select,
 textarea {
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  background: #f8f4e5;
+  background: #f1f1f1;
   padding-left: 5px;
   outline: none;
 }
 
+select:focus,
 input:focus,
 textarea:focus {
   border: 1px solid #6bd4b1;
@@ -413,9 +369,10 @@ textarea {
   display: block;
   float: right;
   line-height: 24pt;
-  padding: 0 20px;
+  margin-top: 5%;
+  padding: 0px 20px;
   border: none;
-  background: #f45702;
+  background: var(--varyDarkBlue);
   color: white;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
@@ -425,14 +382,17 @@ textarea {
 
 #customerOrder:hover {
   background: inherit;
-  color: #f45702;
-  border-bottom: 2px solid #f45702;
+  color: var(--varyDarkBlue);
+  border-bottom: 2px solid var(--varyDarkBlue);
 }
 
 ::selection {
   background: #ffc7b8;
 }
 
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -443,6 +403,10 @@ textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: #2A293E;
   -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.space {
+  text-align: center;
 }
 
 #contact {
@@ -456,24 +420,12 @@ textarea:-webkit-autofill:focus {
   align-items: center;
 }
 
-/*
 
-    form {
-        width: 600px;
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        border: 2px rgb(255, 102, 0) dashed;
-        border-radius: 5px;
-        row-gap: 20px;
-    }
 
-    form div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    */
+form {
+  width: 60%;
+  margin-bottom: 5%;
+}
 
 textarea {
   width: 99%;
@@ -481,7 +433,12 @@ textarea {
   resize: vertical;
 }
 
+select,
 input {
+  width: 60%;
+}
+
+.mt-2 {
   width: 60%;
 }
 
@@ -500,6 +457,10 @@ label {
   }
 
   input {
+    width: 100%;
+  }
+
+  select {
     width: 100%;
   }
 
@@ -612,14 +573,14 @@ label {
   cursor: pointer;
   margin-right: 20px;
   font-family: sans-serif;
-  color: #033f52;
+  color: black;
   font-size: 20px;
 }
 
 .section-button-co.active {
   font-family: sans-serif;
   font-size: 20px;
-  color: #033f52;
+  color: black;
   font-weight: bold;
   background-color: rgb(212, 208, 208);
   border-radius: 10%;
@@ -632,7 +593,7 @@ label {
   justify-content: center;
   margin-bottom: 2%;
   font-family: sans-serif;
-  color: #033f52;
+  color: black;
 }
 
 .column {

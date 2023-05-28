@@ -66,20 +66,20 @@ export default {
         search() {
             const arrTot = []
             const pages = [
-              { text: 'Page 1', link: '/page1' },
-              { text: 'Page 2', link: '/page2' },
-              { text: 'Page 3', link: '/page3' },
-              // ... more pages
+                { text: 'Page 1', link: '/page1' },
+                { text: 'Page 2', link: '/page2' },
+                { text: 'Page 3', link: '/page3' },
+                // ... more pages
             ];
             const searchTerm = searchText.value.toLowerCase();
             // handle search functionality here
             console.log('Searching for: ', this.searchText);
 
             for (const page of pages) {
-              if (page.text.toLowerCase().includes(searchTerm)) {
-                arrTot.push(page)
-                //this.searchResults.push(page);
-              }
+                if (page.text.toLowerCase().includes(searchTerm)) {
+                    arrTot.push(page)
+                    //this.searchResults.push(page);
+                }
             }
             return arrTot;
         },
@@ -143,6 +143,7 @@ nav {
     text-align: center;
     padding: 0.8em;
     --b: 0.1em;
+    font-size: 16px;
     /* the thickness of the line */
     --c: #268fb2;
     /* the color */
