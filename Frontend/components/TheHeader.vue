@@ -57,7 +57,7 @@
             <a class="navbar-item">
                 <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="40" height="40"></router-link>
             </a>
-                <div id="sidemenu">
+                <div id="sidemenu" class="sidemenu">
                 <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
                       <span class="top"></span>
                       <span class="mid"></span>
@@ -372,12 +372,22 @@ nav {
 .navbar{
     position: relative;
 }
+
+.navbar-item{
+    left: 10px;
+    position: fixed;
+}
+.sidemenu{
+    right: 10px;
+    position: fixed;
+}
+
 .sidemenu__nav {
     width: auto;
     height: auto;
     background: grey;
     position: fixed;
-    top: 0;
+    top: 4rem;
     left: 0;
     z-index: 25;
     box-shadow: 2px 0 3px$grey-6;
