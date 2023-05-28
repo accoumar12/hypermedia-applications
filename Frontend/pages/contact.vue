@@ -299,7 +299,7 @@ const filtered = computed(() => {
 .contact-us {
   background: rgb(212, 208, 208);
   padding: 70px 100px;
-  border-top: 10px solid var(--varyDarkBlue);
+  border-top: 10px solid #2A293E;
 }
 
 label,
@@ -358,13 +358,14 @@ textarea {
 }
 
 #customerOrder {
+  cursor: pointer;
   display: block;
   float: right;
   line-height: 24pt;
   margin-top: 5%;
   padding: 0px 20px;
   border: none;
-  background: var(--varyDarkBlue);
+  background-color: #2A293E;
   color: white;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
@@ -562,10 +563,13 @@ label {
   align-items: center;
   margin-top: 10px;
   text-align: justify;
+  text-decoration: none;
 }
 
 .job-boards-company-name {
+  color: #2A293E;
   font-size: 18px;
+  text-decoration: none;
 }
 
 @media (min-width: 720px) {
