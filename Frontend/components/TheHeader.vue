@@ -55,9 +55,9 @@
         <div class="navbar">
         <header>
             <a class="navbar-item">
-                <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="40" height="40"></router-link>
+                <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="50" height="50"></router-link>
             </a>
-                <div id="sidemenu">
+                <div id="sidemenu" class="sidemenu">
                 <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
                       <span class="top"></span>
                       <span class="mid"></span>
@@ -372,12 +372,24 @@ nav {
 .navbar{
     position: relative;
 }
-.sidemenu__nav {
-    width: auto;
-    height: auto;
-    background: grey;
+
+.navbar-item{
+    left: 10px;
     position: fixed;
-    top: 0;
+}
+
+.sidemenu{
+    right: 10px;
+    position: fixed;
+}
+
+
+.sidemenu__nav {
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 4rem;
     left: 0;
     z-index: 25;
     box-shadow: 2px 0 3px$grey-6;
@@ -389,19 +401,18 @@ nav {
     display: block;
     width: 50px;
     height: 50px;
-    background: grey;
+    background: rgba(255, 255, 255, 0);
     border: none;
     position: relative;
-    
     cursor: pointer;
     outline: none;
 }
 .sidemenu__btn span {
       display: block;
       width: 20px;
-      height: 2px;
+      height: 3px;
       margin: auto;
-      background: white;
+      background: #033f52;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -409,25 +420,26 @@ nav {
       right: 0;
       transition: all 0.4s ease;
     }
-.sidemenu__btn span top{
+.sidemenu__btn span.top{
     transform: translateY(-8px);
 }
-.sidemenu__btn span bottom {
+.sidemenu__btn span.bottom {
         transform: translateY(8px);
-      }
-.sidemenu__btn .active .top {
+}
+
+.sidemenu__btn.active .top {
         transform: rotate(-45deg);
       }
-.sidemenu__btn .active .mid {
+.sidemenu__btn.active .mid {
         transform: translateX(-20px) rotate(360deg);
         opacity: 0;
       }
-.sidemenu__btn .active .bottom {
+.sidemenu__btn.active .bottom {
         transform: rotate(45deg);
       }
     
 .sidemenu__wrapper {
-    padding-top: 50px;
+    padding-top: 10px;
   }
     
 .sidemenu__list {
