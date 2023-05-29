@@ -4,15 +4,18 @@
 -->
 <template>
     <main>
-        <section>
-            <div class="container custom-container">
+        <section class="container custom-container">
+            <div>
                 <div class="row0">
                     <a href="#team-members-grid">
-                        <h1 class="ourt-intro blink">Meet Our Team</h1>
+                        <h1 class="ourt-intro">Meet Our Team</h1>
                     </a>
                 </div>
+            </div>
+        </section>
+        <section id="team-members-grid">
+            <section class="department-section">
                 <div class="row">
-
                     <div class="card1o">
                         <h3>MANAGEMENT DEPARTMENT</h3>
                         <p class="small-a">They develop and implement strategic plans, set organizational goals, and
@@ -38,9 +41,10 @@
                             helping the company navigate challenges and capitalize on opportunities.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="team-members-grid">
+            </section>
+
+
+
             <div class="grid-container">
                 <div id="filter-container">
 
@@ -164,18 +168,22 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.department-section {
+    padding-top: 0.5%;
+}
+
 .container.custom-container {
     background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
     background-repeat: no-repeat;
-    background-position-y: 65%;
+    background-position-y: 35%;
     background-size: cover;
     max-width: 100%;
+    max-height: 100%;
     margin: 0 auto;
-    padding: 20px;
     align-items: center;
     text-align: center;
-    padding-top: 30%;
-    height: 300px;
+    padding-top: 15%;
+
 }
 
 
@@ -465,10 +473,9 @@ p.small {
 }
 
 .row {
+    bottom: 30%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
-    height: 0%;
 }
 
 .row0 {
