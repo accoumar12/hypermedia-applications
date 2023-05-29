@@ -494,14 +494,18 @@ label {
   mix-blend-mode: screen;
 }
 
-.text-center {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+@media screen and (max-width: 600px) {
+  .co-container {
+    max-width: 100%; /* Adjusted to full width */
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .header-center {
+    font-size: 36px; /* Adjusted font size for smaller screens */
+  }
 }
+
 
 .section-button-co {
 
