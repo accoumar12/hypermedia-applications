@@ -35,10 +35,12 @@
                 </div>
                 <label for="Technology">
 
-                    
+
                     <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
-                    <a href="#title2" @click="filterAndNavigate"> <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1></a>
+                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark"></span>
+                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
             </div>
 
@@ -55,8 +57,10 @@
                 </div>
                 <label for="Healthcare">
                     <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
-                    <span class="checkmark" href="#"></span>
+                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                    <span class="checkmark"></span>
+                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
             </div>
 
@@ -75,10 +79,12 @@
 
                     <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
                         v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark" href="#"></span>
+                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
-            
+
             </div>
 
             <div class="column4">
@@ -95,10 +101,16 @@
 
                     <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
                         v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">CHECK COMPANIES</h1>
+                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark" href="#"></span>
                 </label>
+
             </div>
+            <div class="selection">
+                <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                    <button @click="MR = true">Most Relevant Companies</button></a>
+            </div>
+
         </div>
         <section class="team-members-grid">
             <div class="title"> <label for="all-team">
@@ -279,18 +291,18 @@ export default {
             this.$router.push({ name: 'technology', hash: '#projects' });
         },
         filterAndNavigate(event) {
-          // Prevent the default link behavior
-          event.preventDefault();
+            // Prevent the default link behavior
+            event.preventDefault();
 
-          // Perform filtering based on the selected value (example filtering code)
-          // Replace this code with your actual filtering logic
-          if (this.areas === 'Technology') {
-            // Get the target section using the href attribute
-            const targetSection = document.querySelector(event.target.getAttribute('href'));
+            // Perform filtering based on the selected value (example filtering code)
+            // Replace this code with your actual filtering logic
+            if (this.areas === 'Technology') {
+                // Get the target section using the href attribute
+                const targetSection = document.querySelector(event.target.getAttribute('href'));
 
-            // Scroll to the target section
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
+                // Scroll to the target section
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         },
     },
     data() {
@@ -342,19 +354,31 @@ export default {
 }
 
 .form-container {
-    padding-left: 35%;
+    text-align: right;
     padding-right: 4%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
+    padding-bottom: 0%;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 input {
     border-color: #b2b7b5;
     padding: 10px;
     font-size: 1.1em;
-    width: 40%;
+    width: 10%;
+    background-color: rgba(233, 237, 237, 0.997);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#age-filter {
+    border-color: #b2b7b5;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 20%;
     background-color: rgba(233, 237, 237, 0.997);
     box-sizing: border-box;
     border: 3px solid #ccc;
@@ -461,7 +485,7 @@ input::placeholder {
 
 .containeri {
     background-color: #033f52;
-    padding-top: 8%;
+    padding-top: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -514,7 +538,7 @@ input::placeholder {
 
 .text-containeri2 p {
     width: 30%;
-    font-size: 1.2rem;
+    font-size: 24px;
     font-family: sans-serif;
     text-align: center;
     color: white;
@@ -522,7 +546,7 @@ input::placeholder {
 
 
 .text-containeri h1 {
-    font-size: 1.3rem;
+    font-size: 28px;
     font-family: sans-serif;
     margin-bottom: 0.5 rem;
     color: rgb(242, 249, 246);
@@ -539,7 +563,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: right;
     border-left: 1px solid black;
 
 }
@@ -569,7 +593,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: right;
 }
 
 
@@ -658,14 +682,13 @@ input::placeholder {
 
 .learn-more {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration-color: #033f52;
     font-family: sans-serif;
     font-size: large;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
-    padding-top: 10%;
     position: left;
 }
 
@@ -691,7 +714,7 @@ label>[type=radio] {
 }
 
 .title {
-    padding-top: 6%;
+    padding-top: 4%;
     padding-left: 44.8%;
     position: relative;
     font-size: 1.6rem;
@@ -705,6 +728,7 @@ label>[type=radio] {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: sans-serif;
+    z-index: 5;
 }
 
 .text-block {
