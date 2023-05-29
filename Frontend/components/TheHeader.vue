@@ -77,9 +77,9 @@
                                     <p><router-link to="/companies" class="nav-link">Investments</router-link></p>
                                     <div id="sidemenu" class="sidemenu2">
                                         <button class="sidemenu__btn" @click="navOpen2 = !navOpen2" :class="{ active: navOpen2 }">
-                                              <span class="top"></span>
-                                              <span class="mid"></span>
-                                              <span class="bottom"></span>
+                                              <span class="vert"></span>
+                                              <!--<span class="mid"></span>-->
+                                              <span class="horiz"></span>
                                         </button>
                                         <transition name="translateX">
                                           <nav class="sidemenu__nav2" v-show="navOpen2">
@@ -404,6 +404,7 @@ nav {
     box-shadow: 2px 0 3px$grey-6;
     overflow-y: scroll;
   }
+
 .sidemenu__nav2 {
     width: 100%;
     height: auto;
@@ -424,7 +425,7 @@ nav {
     height: 50px;
     background: rgba(255, 255, 255, 0);
     border: none;
-    position: relative;
+    position: initial;
     cursor: pointer;
     outline: none;
 }
@@ -448,6 +449,10 @@ nav {
 .sidemenu__btn span.bottom {
         transform: translateY(8px);
 }
+.sidemenu__btn span.vert {
+        transform: rotate(90deg);
+}
+
 
 .sidemenu__btn.active .top {
         transform: rotate(-45deg);
@@ -459,7 +464,13 @@ nav {
 .sidemenu__btn.active .bottom {
         transform: rotate(45deg);
       }
-
+.sidemenu__btn.active .vert {
+        transform: rotate(-45deg);
+        width: 20px;
+      }
+.sidemenu__btn.active .horiz {
+        transform: rotate(45deg);
+      }
     
 .sidemenu__wrapper {
     padding-top: 10px;
