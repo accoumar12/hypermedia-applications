@@ -504,8 +504,6 @@ p.small {
     height: 300px;
 }
 
-
-
 .gif-container {
     position: relative;
     justify-content: flex-start;
@@ -517,17 +515,32 @@ p.small {
     padding-top: 0%;
 }
 
-#text-container {
-    position: right;
-    transform: translateY(-50%);
-    font-family: monospace;
-    font-size: 2rem;
-    color: #77c7ac;
-    justify-content: center;
-    padding-left: 20%;
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+  .row0 {
+    bottom: auto; /* Removed bottom positioning */
+    height: auto; /* Adjusted height to auto */
+    left: auto; /* Removed left positioning */
+    width: 90%; /* Adjusted width for better responsiveness */
+    margin: 0 auto; /* Center the element horizontally */
+  }
+
+  .row1 {
+    background-position-y: center; /* Adjusted background position */
+    padding-top: 20%; /* Adjusted padding top */
+    height: auto; /* Adjusted height to auto */
+  }
+  .ourt-intro {
+    background-color: rgb(239, 241, 246);
+    color: rgb(6, 6, 6);
+    font-size: 18px;
+    font-weight: bold;
+    top: auto;
+    text-align: center;
+    position: inherit;
+    transform: translate(-50%, -50%);
+    }
 }
-
-
 
 .arrow {
     position: absolute;
@@ -580,24 +593,6 @@ p.small {
     background: #f2f8f9;
     opacity: 0.7;
     border-radius: 50px;
-}
-
-.text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #5ac6cf;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.text-container p {
-    font-family: monospace;
-    font-size: 1.2rem;
-    color: #77c7ac;
-    margin: 0;
 }
 
 .form-container {
@@ -708,13 +703,6 @@ label>[type=radio] {
     .col-a {
         justify-content: flex-start;
     }
-
-    .card1o {
-        width: 100%;
-        min-width: unset;
-        max-width: unset;
-    }
-
     .col-a .card1o {
         flex-basis: calc(50% - 20px);
         margin: 10px 0;
@@ -724,11 +712,6 @@ label>[type=radio] {
         text-align: center;
         height: 30%;
     }
-
-    .ourt-intro {
-        font-size: 60px;
-        width: 50%;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -736,15 +719,21 @@ label>[type=radio] {
         flex-basis: 100%;
         margin: 10px 0;
     }
+    .card1o {
+        max-width: 100% !important; /* Adjusted max-width to fit full width */
+        padding: 25px 18px; /* Adjusted padding for smaller screens */
+        margin: 10px 10px; /* Adjusted margin for smaller screens */
+    }
+    .card1o h3 {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+    .card1o p {
+        font-size: 10px; /* Adjusted font size for smaller screens */
+    }
 
 
     .row0 {
         height: 40%;
-    }
-
-    .ourt-intro {
-        width: 60%;
-        font-size: 60px;
     }
 }
 
