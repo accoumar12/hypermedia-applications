@@ -4,53 +4,42 @@
 -->
 <template>
     <main>
-        <!--
-        Form used to filter the list by age.
-      -->
-        <!--  <div class="breadcrumbs">
-            <nav>
-                <ul class="nav-breadcrumbs">
-                    <li><router-link to="/">Home</router-link></li> /
-                    <li><router-link to="/people"> Our Team</router-link></li>
-                </ul>
-            </nav>
-        </div>-->
-        <div class="row1 d-flex align-items-stretch">
-            <a href="#team-members-grid">
-                <h1 class="ourt-intro blink">Meet Our Team</h1>
-            </a>
-            <div class="col-a">
-                <div class="card1o">
-                    <h3>MANAGEMENT DEPARTMENT</h3>
-                    <p class="small-a">They develop and implement strategic plans, set organizational goals,
-                        and provide leadership to drive the company's growth and success.</p>
+        <section>
+            <div class="container custom-container">
+                <div class="row0">
+                    <a href="#team-members-grid">
+                        <h1 class="ourt-intro blink">Meet Our Team</h1>
+                    </a>
                 </div>
-                <div class="card1o">
-                    <h3> INVESTMENT DEPARTMENT</h3>
-                    <p class="small-a">They conduct thorough research, assess risk factors, and make informed investment
-                        decisions to optimize the company's financial performance.</p>
+                <div class="row">
 
-                </div>
-                <div class="card1o">
-                    <h3>OPERATIONS & FINANCE DEPARTMENT</h3>
-                    <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures while
-                        maintaining quality standards to support the company's overall objectives.</p>
-                </div>
-                <div class="card1o">
-                    <h3>ADVISORING DEPARTMENT</h3>
-                    <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on key
-                        decisions, helping the company navigate challenges and capitalize on opportunities.</p>
+                    <div class="card1o">
+                        <h3>MANAGEMENT DEPARTMENT</h3>
+                        <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                            provide
+                            leadership to drive the company's growth and success.</p>
+                    </div>
+                    <div class="card1o">
+                        <h3>INVESTMENT DEPARTMENT</h3>
+                        <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                            investment decisions
+                            to optimize the company's financial performance.</p>
+                    </div>
+                    <div class="card1o">
+                        <h3>OPS & FINANCE DEPARTMENT</h3>
+                        <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                            while maintaining
+                            quality standards to support the company's overall objectives.</p>
+                    </div>
+                    <div class="card1o">
+                        <h3>ADVISORING DEPARTMENT</h3>
+                        <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                            key decisions,
+                            helping the company navigate challenges and capitalize on opportunities.</p>
+                    </div>
                 </div>
             </div>
-            <!--
-            <div class="team-info">
-                <p>Our team is made up of experienced and driven individuals who are passionate about identifying and
-                    supporting the next generation of disruptors.</p>
-                <p>Together, our team has a proven track record of identifying and investing in startups that have gone
-                    on to become industry leaders.</p>
-            </div>
--->
-        </div>
+        </section>
         <section id="team-members-grid">
             <div class="grid-container">
                 <div id="filter-container">
@@ -95,10 +84,6 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <!-- <div class="form-container">
-                                <label for="age-filter">Role filter</label>
-                                <input id="age-filter" type='text' placeholder="Role filter" v-model="role">
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -179,6 +164,22 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.container.custom-container {
+    background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    background-size: cover;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    padding-top: 30%;
+    height: 300px;
+}
+
+
+
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -198,15 +199,6 @@ onMounted(() => {
     padding-bottom: 2%;
 }
 
-.col-a.-a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-}
 
 .col-a h3 {
     color: #262626;
@@ -248,37 +240,18 @@ p.small {
 
 .card1o {
     display: block;
-    position: relative;
-    max-width: 262px;
-    background-color: #f2f8f9;
+    position: inherit;
+    max-width: 30% !important;
+    background: #00838d;
     border-radius: 4px;
-    padding: 42px 34px;
+    padding: 48px 34px;
     margin: 10px;
     text-decoration: none;
-    z-index: 5;
-    overflow: hidden;
 }
 
-.card1o:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -16px;
-    right: -16px;
-    background: #00838d;
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(1);
-    transform-origin: 60% 50%;
-    transition: transform 0.25s ease-out;
-}
-
-.card1o:before {
-    transform: scale(21);
-}
 
 .card1o p {
+    font-size: 18px;
     transition: all 0.3s ease-out;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -451,30 +424,6 @@ p.small {
     height: auto;
 }
 
-.nav-breadcrumbs {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-}
-
-.nav-breadcrumbs li {
-    margin-right: 30%;
-}
-
-.nav-breadcrumbs li:last-child {
-    font-weight: bold;
-}
-
-.nav-breadcrumbs a {
-    text-decoration: none;
-    color: #0e6b74;
-    font-weight: bold;
-}
-
-.nav-breadcrumbs a:hover {
-    text-decoration: underline;
-}
 
 .ourt-intro {
     background-color: rgb(239, 241, 246);
@@ -484,10 +433,9 @@ p.small {
     margin: 0 auto;
     padding: 10px;
     width: 28%;
+    top: auto;
     text-align: center;
-    position: absolute;
-    top: 45%;
-    left: 50%;
+    position: inherit;
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
 }
@@ -517,12 +465,22 @@ p.small {
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
-    height: 60%;
+    height: 0%;
+}
+
+.row0 {
+    position: relative;
+    bottom: 60%;
+    height: 20%;
+    left: 15%;
+
+}
+
+.row0 a {
+    text-decoration: none;
 }
 
 .row1 {
@@ -738,81 +696,85 @@ label>[type=radio] {
     margin: 1rem 1rem 0.2rem 0;
 }
 
-
-/* Responsive styles */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .nav-breadcrumbs {
-        display: flex;
-        flex-direction: row;
+    .col-a {
         justify-content: flex-start;
-        align-items: center;
-        margin: 0;
-        padding: 0;
     }
 
-    .nav-breadcrumbs li {
-        list-style-type: none;
-        margin-right: 10px;
+    .card1o {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
     }
 
-    .nav-link {
-        color: blue;
-        display: inline-block;
-        margin-right: 0;
-        margin-bottom: 10px;
-        text-decoration: none;
-        border-bottom: 2px solid transparent;
+    .col-a .card1o {
+        flex-basis: calc(50% - 20px);
+        margin: 10px 0;
     }
 
-    .nav-link:hover {
-        border-bottom: 2px solid blue;
+    .row0 {
+        text-align: center;
+        height: 30%;
+    }
+
+    .ourt-intro {
+        font-size: 60px;
+        width: 50%;
     }
 }
 
-/* For larger screens */
-@media screen and (min-width: 769px) {
-    .nav-breadcrumbs {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+@media screen and (max-width: 480px) {
+    .col-a .card1o {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+
+    .row0 {
+        height: 40%;
+    }
+
+    .ourt-intro {
+        width: 60%;
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-a {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .row1 {
+        flex-direction: column;
         align-items: center;
-        margin: 0;
-        padding: 0;
+        justify-content: center;
+        text-align: center;
     }
 
-    .nav-breadcrumbs li {
-        list-style-type: none;
-        margin-right: 0;
+    .col-a {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
     }
+}
 
-    .btn {
-        border: none;
-        outline: none;
-        padding: 12px 16px;
-        background-color: #f1f1f1;
-        cursor: pointer;
+@media (min-width: 992px) {
+    .row1 {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        text-align: left;
     }
+}
 
-    .btn:hover {
-        background-color: #ddd;
-    }
-
-    .btn.active {
-        background-color: #666;
-        color: white;
-    }
-
-    .nav-link {
-        color: blue;
-        display: inline-block;
-        margin-right: 0;
-        margin-bottom: 10px;
-        text-decoration: none;
-        border-bottom: 2px solid transparent;
-    }
-
-    .nav-link:hover {
-        border-bottom: 2px solid blue;
+@media (min-width: 1200px) {
+    .col-a {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 </style>
