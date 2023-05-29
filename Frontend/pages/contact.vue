@@ -53,6 +53,8 @@
             </div>
           </div>
         </router-link>
+      </div>
+      <div class="job-boards-company-grid">
         <router-link to="/consumer">
           <div class="job-boards-company-item">
             <img class="job-boards-company-logo" alt="Personio logo"
@@ -103,9 +105,10 @@
                 <option>Other</option>
               </select>
             </div>
-            <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about your company
-                (name,goal)
-              </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+            <label for=" customerNote">ABOUT <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about your company
+                (i.e. name and goal)
+              </span></label>
+              <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
             <label for="file-upload"
               class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
               CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file
@@ -124,7 +127,7 @@
       <div class="job-boards-company-grid">
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="200" height="160">
+            src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png">
           <a href="https://vuejs.org/" target="_blank">
             <h2 class="job-boards-company-name">
               Vue.js
@@ -135,8 +138,7 @@
         </div>
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png" width="240"
-            height="160">
+            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png">
           <a href="https://www.w3schools.com/html/" target="_blank">
             <h2 class="job-boards-company-name">
               HTML
@@ -145,9 +147,11 @@
           <div class="job-boards-company-link">
           </div>
         </div>
+      </div>
+      <div class="job-boards-company-grid">
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png" width="240"
+            src="https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png"
             height="160">
           <a href="https://www.w3schools.com/css/" target="_blank">
             <h2 class="job-boards-company-name">
@@ -159,8 +163,7 @@
         </div>
         <div class="job-boards-company-item">
           <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png" width="240"
-            height="160">
+            src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png">
           <a href="https://www.w3schools.com/js/default.asp" target="_blank">
             <h2 class="job-boards-company-name">
               JavaScript
@@ -169,7 +172,6 @@
           <div class="job-boards-company-link">
           </div>
         </div>
-
       </div>
       <form>
         <div class="space">
@@ -505,6 +507,9 @@ label {
     font-size: 36px; /* Adjusted font size for smaller screens */
   }
 }
+.spanNew{
+  font-size: 10px;
+}
 
 
 .section-button-co {
@@ -547,6 +552,15 @@ label {
   text-align: justify;
   font-family: sans-serif;
   font-size: 18px;
+  width: 90%;
+}
+
+/* Media Query for mobile devices */
+@media screen and (max-width: 600px) {
+  .description-container-co {
+    font-size: 8px; /* Adjusted font size for smaller screens */
+    margin-top: 5px; /* Adjusted margin top for smaller screens */
+  }
 }
 
 .job-boards-company-grid {
@@ -575,6 +589,10 @@ label {
   font-size: 18px;
   text-decoration: none;
 }
+.job-boards-company-logo{
+  width: 170px;
+  height: 140px;
+}
 
 @media (min-width: 720px) {
   .job-boards-company-item {
@@ -588,4 +606,5 @@ label {
     border-radius: var(--border-md);
   }
 }
+
 </style>
