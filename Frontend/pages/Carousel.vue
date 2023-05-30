@@ -1,5 +1,5 @@
 <template>
-  <main id="back-c">
+  <main>
     <div id="carousel-container" @wheel="handleMouseScroll">
       <div class="carousel">
         <div class="inner" ref="inner" :style="innerStyles">
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    
+
   </main>
 </template>
 
@@ -176,29 +176,6 @@ export default {
 </script>
 
 <style>
-#back-c {
-  width: 100%;
-  background-image: url('assets/img/19449741.jpg');
-  background-size: cover;
-  height: 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-
-}
-
-
-.background-section {
-  background-image: url("https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?cs=srgb&dl=pexels-fauxels-3184338.jpg&fm=jpg");
-  width: 100%;
-  padding-top: 30%;
-  position: relative;
-  height: 300px;
-  background-size: cover;
-  background-position: fixed;
-}
-
 .overlay {
   position: absolute;
   top: 0;
@@ -261,45 +238,13 @@ p.small {
 
 
 
-.card1 {
-  display: block;
-  position: relative;
-  max-width: 262px;
-  background-color: #f2f8f9;
-  border-radius: 4px;
-  padding: 42px 34px;
-  margin: 10px;
-  text-decoration: none;
-  z-index: 5;
-  overflow: hidden;
-}
 
 .row3-container {
   padding-left: 75%;
   padding-bottom: 2%;
 }
 
-.card13 {
-  display: block;
-  position: relative;
-  max-width: 151px;
-  background-color: #f2f8f9;
-  border-radius: 10px;
-  padding: 20px 20px;
-  margin: 10px;
-  text-decoration: none;
-  z-index: 5;
-  overflow: hidden;
-}
 
-.card13:hover:before {
-  transform: scale(21);
-}
-
-.card13:hover h3 {
-  transition: all 0.3s ease-out;
-  color: #ffffff;
-}
 
 .col3 h3 {
   color: #262626;
@@ -309,59 +254,8 @@ p.small {
   margin-bottom: 4px;
 }
 
-.card1:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #00838d;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 60% 50%;
-  transition: transform 0.25s ease-out;
-}
-
-.card1:hover:before {
-  transform: scale(21);
-}
-
-.card1:hover p {
-  transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.card1:hover h3 {
-  transition: all 0.3s ease-out;
-  color: #ffffff;
-}
-
-.card13:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #00838d;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 60% 50%;
-  transition: transform 0.25s ease-out;
-}
-
-.card13:hover:before {
-  transform: scale(21);
-}
 
 
-.card13:hover h3 {
-  transition: all 0.3s ease-out;
-  color: #ffffff;
-}
 
 .text-container-h {
   width: 600px;
@@ -544,9 +438,14 @@ body {
 
 @media (max-width: 480px) {
   #carousel-container {
-    width: 95%;
+    width: 100%;
     padding-top: 1%;
     height: 500px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 40%;
   }
 
   .left-arrow-container,
@@ -561,6 +460,170 @@ body {
 
   .right-arrow-container {
     right: 2%;
+  }
+
+  .card {
+    flex: 0 0 100%;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .inner {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 0 50%;
+  }
+
+  .card-info {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .arrow-c {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+
+  /* Styles for iPhone 5/SE and similar devices */
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 375px) {
+
+  /* Styles for iPhone 6/7/8 and similar devices */
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 414px) {
+
+  /* Styles for iPhone 6/7/8 Plus and similar devices */
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Styles for most Android phones */
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Styles for larger phone screens */
+  #carousel-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
   }
 }
 </style>
