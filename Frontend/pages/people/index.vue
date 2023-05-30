@@ -661,6 +661,11 @@ p.small {
         padding-bottom: 3%;
         margin-right: 20%;
     }
+
+    .row3-container {
+    padding-left: 50%;
+    padding-bottom: 2%;
+}
 }
 
 .arrow {
