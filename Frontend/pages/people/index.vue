@@ -253,6 +253,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
     text-decoration: none;
     border: none;
     padding-bottom: 3%;
@@ -649,6 +650,16 @@ p.small {
     padding-bottom: 2px;
     flex-direction: column;
     margin: 0 10%;
+    }
+    #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+        padding-bottom: 3%;
+        margin-right: 20%;
     }
 }
 
