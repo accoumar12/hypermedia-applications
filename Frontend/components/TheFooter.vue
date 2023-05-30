@@ -50,44 +50,40 @@
     <div v-else>
         <mobile>
             <div class="footer-dark">
-        <footer>
-            <div class="container-f2">
-                <div class="rowf2">
-                    <div class="Services">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Terms & Policy</a></li>
-                        </ul>
-                        <div class="Space">
-                            <p> </p>                            
-                        </div>
-                    <h3>Contacts</h3>
-                        <ul>
-                            <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
-                                    target="_blank">Address:
-                                    Politecnico di Milano</a></li>
-                            <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                            <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
-                                    ventourteam@gmail.com</a></li>
-                        </ul>
-                    <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
-                    <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
-                        <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                        <div class="copy-right2">© 2020 VenTour
-                            <br>
-                        All rights reserved.</div>
+            <footer>
+                <div class="container-f2">
+                    <div class="rowf2">
+                        <div class="Services">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Terms & Policy</a></li>
+                            </ul>
+                            <div class="Space">
+                                <p> </p>                            
+                            </div>
+                            <h3>Contacts</h3>
+                            <ul>
+                                <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
+                                        target="_blank">Address:
+                                        Politecnico di Milano</a></li>
+                                <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
+                                <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
+                                        ventourteam@gmail.com</a></li>
+                            </ul>
+                        <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
+                        <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
+                            <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
+                            <div class="copy-right2">© 2020 VenTour
+                                <br>
+                            All rights reserved.</div>
+                            </div>
+                        </div>    
                     </div>
-                    </div>
-                    
-                    
                 </div>
-                
-
+            </footer>
             </div>
-        </footer>
-    </div>
         </mobile>
     </div>
     </div>

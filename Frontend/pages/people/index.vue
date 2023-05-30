@@ -16,68 +16,67 @@
         <section class="department-section">
                 <div v-if="!isMobile">
                     <desktop> 
-                    <div class="row">
-                        <div class="card1o">
-                            <h3>MANAGEMENT DEPARTMENT</h3>
-                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                provide
-                                leadership to drive the company's growth and success.</p>
+                        <div class="row">
+                            <div class="card1o">
+                                <h3>MANAGEMENT DEPARTMENT</h3>
+                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                    provide
+                                    leadership to drive the company's growth and success.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>INVESTMENT DEPARTMENT</h3>
+                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                    investment decisions
+                                    to optimize the company's financial performance.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>OPS & FINANCE DEPARTMENT</h3>
+                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                    while maintaining
+                                    quality standards to support the company's overall objectives.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>ADVISORING DEPARTMENT</h3>
+                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                    key decisions,
+                                    helping the company navigate challenges and capitalize on opportunities.</p>
+                            </div>
                         </div>
-                        <div class="card1o">
-                            <h3>INVESTMENT DEPARTMENT</h3>
-                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                investment decisions
-                                to optimize the company's financial performance.</p>
-                        </div>
-                        <div class="card1o">
-                            <h3>OPS & FINANCE DEPARTMENT</h3>
-                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                while maintaining
-                                quality standards to support the company's overall objectives.</p>
-                        </div>
-                        <div class="card1o">
-                            <h3>ADVISORING DEPARTMENT</h3>
-                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                key decisions,
-                                helping the company navigate challenges and capitalize on opportunities.</p>
-                        </div>
-                    </div>
                     </desktop>
                 </div>
                 <div v-else>
                     <mobile>
-                    <div class="row18">
-                        <div class="card1o">
-                            <h3>MANAGEMENT DEPARTMENT</h3>
-                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                provide
-                                leadership to drive the company's growth and success.</p>
+                        <div class="row18">
+                            <div class="card1o">
+                                <h3>MANAGEMENT DEPARTMENT</h3>
+                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                    provide
+                                    leadership to drive the company's growth and success.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>INVESTMENT DEPARTMENT</h3>
+                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                    investment decisions
+                                    to optimize the company's financial performance.</p>
+                            </div>
                         </div>
-                        <div class="card1o">
-                            <h3>INVESTMENT DEPARTMENT</h3>
-                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                investment decisions
-                                to optimize the company's financial performance.</p>
+                        <div class="row18">
+                            <div class="card1o">
+                                <h3>FINANCE DEPARTMENT</h3>
+                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                    while maintaining
+                                    quality standards to support the company's overall objectives.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>ADVISORING DEPARTMENT</h3>
+                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                    key decisions,
+                                    helping the company navigate challenges and capitalize on opportunities.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row18">
-                        <div class="card1o">
-                            <h3>FINANCE DEPARTMENT</h3>
-                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                while maintaining
-                                quality standards to support the company's overall objectives.</p>
-                        </div>
-                        <div class="card1o">
-                            <h3>ADVISORING DEPARTMENT</h3>
-                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                key decisions,
-                                helping the company navigate challenges and capitalize on opportunities.</p>
-                        </div>
-                    </div>
                     </mobile>
                 </div>
             </section>
-
 
 
 <section id="team-members-grid">
@@ -91,12 +90,9 @@
                             <div class="dropdown-grid-filter grid-x align-middle">
 
                                 <label for="all-team">
-                                    ALL
-                                    <input type="radio" id="all-team" value="" name="team-categories" v-model="team"
-                                        checked>
+                                    ALL <input type="radio" id="all-team" value="" name="team-categories" v-model="team" checked>
                                     <span class="checkmark"></span>
                                 </label>
-
 
                                 <label for="investment-team">
                                     MANAGEMENT <input type="radio" id="Management-Team" value="Management Team"
@@ -104,13 +100,11 @@
                                     <span class="checkmark"></span>
                                 </label>
 
-
                                 <label for="investor-relations">
                                     INVESTMENT <input type="radio" id="Investment-Team" value="Investment Team"
                                         name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
-
 
                                 <label for="finance-operations">
                                     FINANCE <input type="radio" id="finance-operations"
@@ -123,6 +117,7 @@
                                         value="Advisoring Board Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
+
                             </div>
                         </div>
                     </div>
@@ -169,14 +164,11 @@ const filtered = computed(() => {
 
     const arr = []
 
-
     // Filtering the list
     for (let person of people.value) {
         if (person.team == team.value) {
             arr.push(person)
-        }/*
-        else if (person.role.toLowerCase().includes(role.value.toLowerCase()))
-            arr.push(person)*/
+        }
     }
 
     // Returning the filtered list
@@ -202,6 +194,7 @@ onMounted(() => {
 });
 
 </script>
+
 <script>
 export default {
     data() {
@@ -230,7 +223,7 @@ export default {
 
 <style scoped>
 .department-section {
-    padding-top: 0.5%;
+    padding-top: 0.1%;
 }
 
 .container.custom-container {
@@ -243,11 +236,9 @@ export default {
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 30%;
 
 }
-
-
 
 #card-container {
     display: flex;
@@ -264,7 +255,6 @@ export default {
     display: flex;
     width: 100%;
     gap: 2%;
-
     padding-bottom: 2%;
 }
 
@@ -496,7 +486,7 @@ p.small {
 
 .ourt-intro {
     background-color: rgb(239, 241, 246);
-    color: rgb(6, 6, 6);
+    color: #00838d;
     font-size: 60px;
     font-weight: bold;
     margin: 0 auto;
@@ -506,7 +496,7 @@ p.small {
     text-align: center;
     position: inherit;
     transform: translate(-50%, -50%);
-    mix-blend-mode: screen;
+    mix-blend-mode: unset;
 }
 
 
@@ -537,6 +527,7 @@ p.small {
     bottom: 30%;
     justify-content: space-between;
     align-items: center;
+    margin: 2% 0;
 }
 
 .row0 {
@@ -595,6 +586,7 @@ p.small {
     padding-top: 20%; /* Adjusted padding top */
     height: auto; /* Adjusted height to auto */
   }
+
   .ourt-intro {
     background-color: rgb(239, 241, 246);
     color: #00838d;
