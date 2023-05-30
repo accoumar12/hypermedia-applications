@@ -46,7 +46,7 @@
                 </div>
                 <div v-else>
                     <mobile>
-                    <div class="row">
+                    <div class="row18">
                         <div class="card1o">
                             <h3>MANAGEMENT DEPARTMENT</h3>
                             <p class="small-a">They develop and implement strategic plans, set organizational goals, and
@@ -60,9 +60,9 @@
                                 to optimize the company's financial performance.</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row18">
                         <div class="card1o">
-                            <h3>OPS & FINANCE DEPARTMENT</h3>
+                            <h3>FINANCE DEPARTMENT</h3>
                             <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
                                 while maintaining
                                 quality standards to support the company's overall objectives.</p>
@@ -113,7 +113,7 @@
 
 
                                 <label for="finance-operations">
-                                    OPS &amp; FINANCE <input type="radio" id="finance-operations"
+                                    FINANCE <input type="radio" id="finance-operations"
                                         value="Operations and Finance Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
@@ -551,6 +551,8 @@ p.small {
     text-decoration: none;
 }
 
+
+
 .row1 {
     background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
     background-repeat: no-repeat;
@@ -595,13 +597,15 @@ p.small {
   }
   .ourt-intro {
     background-color: rgb(239, 241, 246);
-    color: rgb(6, 6, 6);
+    color: #00838d;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     position: inherit;
     transform: translate(-50%, -50%);
     margin: 0 50%;
+    padding: 20px;
+    mix-blend-mode: unset;
     }
 
     .container.custom-container {
@@ -614,7 +618,38 @@ p.small {
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding-top: 65%;
+    padding-top: 50%;
+    }
+
+    .grid-container {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20%;
+    max-width: 90rem;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 5%;
+    }
+
+    #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+    font-size: 18px;
+    line-height: 1.1;
+    font-family: sans-serif;
+    color: #0e6b74;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    opacity: 1;
+    margin-right: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 2px;
+    flex-direction: column;
+    margin: 0 10%;
     }
 }
 
@@ -804,7 +839,7 @@ label>[type=radio] {
         font-size: 16px; /* Adjusted font size for smaller screens */
     }
     .card1o p {
-        font-size: 10px; /* Adjusted font size for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
     }
 
 
