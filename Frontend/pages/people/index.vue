@@ -253,7 +253,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
     text-decoration: none;
     border: none;
     padding-bottom: 3%;
