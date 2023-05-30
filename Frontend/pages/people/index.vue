@@ -586,7 +586,6 @@ p.small {
     width: 100%; /* Adjusted width for better responsiveness */
     margin: 0 auto; /* Center the element horizontally */
     align-items: center;
-    left: 70px;
   }
 
   .row1 {
@@ -602,6 +601,20 @@ p.small {
     text-align: center;
     position: inherit;
     transform: translate(-50%, -50%);
+    margin: 0 50%;
+    }
+
+    .container.custom-container {
+    background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 65%;
     }
 }
 

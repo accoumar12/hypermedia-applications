@@ -182,7 +182,7 @@ h3 {
     position: absolute;    
     opacity: 0.6;
     font-size: 10px;
-    padding-left: 350%;
+    padding-left: 285%;
     width: 150%;
     
 }
