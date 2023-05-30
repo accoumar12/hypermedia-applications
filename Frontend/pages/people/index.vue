@@ -13,38 +13,74 @@
                 </div>
             </div>
         </section>
-        <section id="team-members-grid">
-            <section class="department-section">
-                <div class="row">
-                    <div class="card1o">
-                        <h3>MANAGEMENT DEPARTMENT</h3>
-                        <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                            provide
-                            leadership to drive the company's growth and success.</p>
+        <section class="department-section">
+                <div v-if="!isMobile">
+                    <desktop> 
+                    <div class="row">
+                        <div class="card1o">
+                            <h3>MANAGEMENT DEPARTMENT</h3>
+                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                provide
+                                leadership to drive the company's growth and success.</p>
+                        </div>
+                        <div class="card1o">
+                            <h3>INVESTMENT DEPARTMENT</h3>
+                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                investment decisions
+                                to optimize the company's financial performance.</p>
+                        </div>
+                        <div class="card1o">
+                            <h3>OPS & FINANCE DEPARTMENT</h3>
+                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                while maintaining
+                                quality standards to support the company's overall objectives.</p>
+                        </div>
+                        <div class="card1o">
+                            <h3>ADVISORING DEPARTMENT</h3>
+                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                key decisions,
+                                helping the company navigate challenges and capitalize on opportunities.</p>
+                        </div>
                     </div>
-                    <div class="card1o">
-                        <h3>INVESTMENT DEPARTMENT</h3>
-                        <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                            investment decisions
-                            to optimize the company's financial performance.</p>
+                    </desktop>
+                </div>
+                <div v-else>
+                    <mobile>
+                    <div class="row">
+                        <div class="card1o">
+                            <h3>MANAGEMENT DEPARTMENT</h3>
+                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                provide
+                                leadership to drive the company's growth and success.</p>
+                        </div>
+                        <div class="card1o">
+                            <h3>INVESTMENT DEPARTMENT</h3>
+                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                investment decisions
+                                to optimize the company's financial performance.</p>
+                        </div>
                     </div>
-                    <div class="card1o">
-                        <h3>OPS & FINANCE DEPARTMENT</h3>
-                        <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                            while maintaining
-                            quality standards to support the company's overall objectives.</p>
+                    <div class="row">
+                        <div class="card1o">
+                            <h3>OPS & FINANCE DEPARTMENT</h3>
+                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                while maintaining
+                                quality standards to support the company's overall objectives.</p>
+                        </div>
+                        <div class="card1o">
+                            <h3>ADVISORING DEPARTMENT</h3>
+                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                key decisions,
+                                helping the company navigate challenges and capitalize on opportunities.</p>
+                        </div>
                     </div>
-                    <div class="card1o">
-                        <h3>ADVISORING DEPARTMENT</h3>
-                        <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                            key decisions,
-                            helping the company navigate challenges and capitalize on opportunities.</p>
-                    </div>
+                    </mobile>
                 </div>
             </section>
 
 
 
+<section id="team-members-grid">
             <div class="grid-container">
                 <div id="filter-container">
 
@@ -165,6 +201,31 @@ onMounted(() => {
     }, 2000); // Adjust the duration of blinking (in milliseconds) as per your preference
 });
 
+</script>
+<script>
+export default {
+    data() {
+        return {
+            isMobile: false,
+        };
+    },
+    methods: {
+        detectMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          );
+        },
+        
+    },
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    },
+};
 </script>
 
 <style scoped>
@@ -521,8 +582,11 @@ p.small {
     bottom: auto; /* Removed bottom positioning */
     height: auto; /* Adjusted height to auto */
     left: auto; /* Removed left positioning */
-    width: 90%; /* Adjusted width for better responsiveness */
+    top: 30px;
+    width: 100%; /* Adjusted width for better responsiveness */
     margin: 0 auto; /* Center the element horizontally */
+    align-items: center;
+    left: 70px;
   }
 
   .row1 {
@@ -535,7 +599,6 @@ p.small {
     color: rgb(6, 6, 6);
     font-size: 18px;
     font-weight: bold;
-    top: auto;
     text-align: center;
     position: inherit;
     transform: translate(-50%, -50%);
