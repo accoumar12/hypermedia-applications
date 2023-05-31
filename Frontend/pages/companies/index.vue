@@ -34,13 +34,9 @@
                         </router-link></a>
                 </div>
                 <label for="Technology">
-
-
                     <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
                     <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
             </div>
 
@@ -59,8 +55,6 @@
                     <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
                     <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
             </div>
 
@@ -81,8 +75,6 @@
                         v-model="areas">
                     <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
                     <span class="checkmark" href="#"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
                 </label>
 
             </div>
@@ -106,10 +98,6 @@
                 </label>
 
             </div>
-            <div class="selection">
-                <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                    <button @click="MR = true">Most Relevant Companies</button></a>
-            </div>
 
         </div>
         <section class="team-members-grid">
@@ -120,53 +108,11 @@
                 </label></div>
             <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
                 <button @click="MR = true">Most Relevant Companies</button></a>
-            <!--
-            <div class="dropdown-grid-filter-container">
-                            <div class="dropdown-grid-filter grid-x align-middle">
-                <label for="Technology">
-                    
-                    <p> Technology Investments</p>
-                    <input type="radio" id="Technology" value="Technology"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-
-                <label for="Healthcare">
-                    
-                    <p>Healthcare Investments</p>
-                    <input type="radio" id="Healthcare" value="Healthcare"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-                <label for="Consumer Goods">
-                    
-                    <p>Consumer Goods Investments</p>
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>  
-                <label for="Sustainability">
-                    <span class="checkmark">
-                    <p>Sustainability Investments</p>
-                    <input type="radio" id="Sustainability" value="Sustainability"
-                                        name="Investments-categories" v-model="areas">
-                    </span>
-                </label>
-                </div>
-            </div>
-        -->
             <div class="form-container">
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
             </div>
             <div id="title2">PORTFOLIO SNAPSHOT</div>
-
-            <!-- <label for="all-areas">
-                                    ALL
-                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
-                                        checked>
-                                    <span class="checkmark"></span>
-                                </label>-->
             <div class="row-c">
                 <div id="card-container">
                     <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
@@ -186,18 +132,13 @@
                         }}</span></button>
                     </div>
                 </div>
-                <div style="position=relative;display: flex; align-items: center; justify-content: center; height: 100%;">
+                <div style="position=relative;display: flex; align-items: center; margin:5%; height: 100%;">
                     <div class="right-text">
                         <p>{{ rightColumnText }}</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!--<div id="card-container">
-            <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
-                :link="'/locations/' + location.id" />
-        </div>-->
-
     </main>
 </template>
 
@@ -324,165 +265,10 @@ export default {
         },
     },
 };
-//import { pbkdf2 } from 'crypto';
 
-/*
-    The defineNuxtComponent gets us access to the asyncData property.
-    This is the first function that is called by nuxt when the page is called.
-    We can use this to pre-load the data to make it available to the user.
-*/
-/*export default defineNuxtComponent({
-    async asyncData() {
-        // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-        const locations = await $fetch(useRuntimeConfig().public.serverURL + '/locations')
-
-        return {
-            locations
-        }
-    }
-})*/
 </script>
 <style scoped>
-#card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    text-decoration: none;
-    border: none;
-    padding-bottom: 2%;
-}
-
-.form-container {
-    text-align: right;
-    padding-right: 4%;
-    padding-bottom: 0%;
-    font-family: sans-serif;
-    font-size: 16px;
-}
-
-input {
-    border-color: #b2b7b5;
-    padding: 10px;
-    font-size: 1.1em;
-    width: 10%;
-    background-color: rgba(233, 237, 237, 0.997);
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-#age-filter {
-    border-color: #b2b7b5;
-    padding: 10px;
-    font-size: 1.1em;
-    width: 20%;
-    background-color: rgba(233, 237, 237, 0.997);
-    box-sizing: border-box;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-input[type=text]:focus {
-    border: 3px solid #555;
-}
-
-input::placeholder {
-    color: #b2b7b5;
-}
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    border-color: none;
-    border-style: none;
-    margin-left: 5rem;
-}
-
-.image-container img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    width: 80%;
-}
-
-.image-container h2 {
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-.image-container:hover img {
-    opacity: 0;
-}
-
-.image-container:hover h2 {
-    opacity: 0;
-}
-
-.clickable-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #77c7ac;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-style: solid;
-    border-radius: 20%;
-    border-color: #77c7ac;
-}
-
-.clickable-image-container img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.clickable-image-container:hover {
-    opacity: 1;
-}
-
-.clickable-image-container:hover img {
-    opacity: 1;
-}
-
-.image-container:hover .clickable-image-container {
-    opacity: 1;
-}
-
-.hover-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-.hover-content p {
-    margin: 0;
-    color: #fff;
-    margin-top: 2%;
-    text-decoration: none;
-}
-
-.hover-content img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-}
-
+/*First-intro styles*/
 .containeri {
     background-color: #033f52;
     padding-top: 6%;
@@ -544,12 +330,24 @@ input::placeholder {
     color: white;
 }
 
-
 .text-containeri h1 {
     font-size: 28px;
     font-family: sans-serif;
     margin-bottom: 0.5 rem;
     color: rgb(242, 249, 246);
+}
+
+
+
+
+/*Styles for the counter section*/
+.row4 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .column4 {
@@ -579,7 +377,6 @@ input::placeholder {
     padding: 0.7rem;
     opacity: 0.07;
 
-
 }
 
 .column41 {
@@ -595,6 +392,32 @@ input::placeholder {
     align-items: center;
     text-align: right;
 }
+
+.hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hover-content p {
+    margin: 0;
+    color: #fff;
+    margin-top: 2%;
+    text-decoration: none;
+}
+
+.hover-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 
 
 .counter {
@@ -613,38 +436,7 @@ input::placeholder {
     flex-basis: 20%;
     padding: 0.7rem;
     background-color: rgba(255, 255, 255, 0.8);
-
     opacity: 0.07;
-
-}
-
-
-
-.row4 {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.row41 {
-    background: url('assets/img/exit.png') no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.row41 .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
 }
 
 .area-icons {
@@ -666,19 +458,16 @@ input::placeholder {
     object-fit: contain;
 }
 
-
 .column4 p {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 
 .column41 p {
     font-size: 1.5rem;
     font-weight: bold;
 
 }
-
 
 .learn-more {
     text-decoration: none;
@@ -705,6 +494,7 @@ label>[type=radio] {
     position: absolute;
 }
 
+/*Styles for the section of companies*/
 .team-members-grid {
     background-color: rgba(233, 237, 237, 0.997);
     background-position-x: center;
@@ -731,27 +521,97 @@ label>[type=radio] {
     z-index: 5;
 }
 
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    padding-bottom: 2%;
+}
+
+.form-container {
+    text-align: right;
+    padding-right: 4%;
+    padding-bottom: 0%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+input {
+    border-color: #b2b7b5;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 10%;
+    background-color: rgba(233, 237, 237, 0.997);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#age-filter {
+    border-color: #b2b7b5;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 20%;
+    background-color: rgba(233, 237, 237, 0.997);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input::placeholder {
+    color: #b2b7b5;
+}
+
+.row4.button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+/*Exit Strategies section styles*/
+.row41 {
+    background: url('assets/img/exit.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.row41 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .text-block {
     position: relative;
     font-family: sans-serif;
-    font-size: 3rem;
+    font-size: 40px;
     color: white;
     padding-left: 8%;
     padding-top: 5%;
     padding-right: 10%;
 }
 
-.container-fluid {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .buttons-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding-left: 5%;
+    width: 60%;
     padding-bottom: 2%;
 }
 
@@ -759,27 +619,22 @@ label>[type=radio] {
     margin-top: 3%;
     width: 35%;
     font-family: sans-serif;
-    font-size: 1.1rem;
+    font-size: 20px;
     color: white;
 }
 
 .buttons {
-    padding-top: 5%;
     padding-bottom: 2%;
-    display: flex;
     width: 40%;
     height: 100%;
-    gap: 2%;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+
 }
 
 .buttons button {
     width: 150px;
     height: 2.5rem;
-    margin-right: 10%;
+    margin: 2%;
     font-size: 18px;
     text-decoration-color: white;
     cursor: pointer;
@@ -791,30 +646,18 @@ label>[type=radio] {
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
-.row4.button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 10%;
-    cursor: pointer;
-}
-
 button:hover {
     background-color: #5ecbde;
 }
 
 .right-text {
+    padding: 1%;
     background-color: rgba(18, 143, 165, 0.7);
     border-radius: 5%;
     padding-left: 1%;
-    width: 33%;
+    width: 40%;
     font-family: sans-serif;
-    font-size: 1.1rem;
-    color: #f6f9f9;
-}
-
-.col p {
     font-size: 18px;
-    line-height: 1.5;
+    color: #f6f9f9;
 }
 </style>
