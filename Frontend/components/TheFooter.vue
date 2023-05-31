@@ -30,9 +30,7 @@
                         </ul>
                     </div>
 
-                    <div class="logof">
-                        <router-link to="/"><img class="logof" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
-                    </div>
+                    
                 </div>
                 <div class="col-md-3 col-sm-6 item ">
                     <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
@@ -75,9 +73,10 @@
                         <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
                         <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
                             <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                            <div class="copy-right2">© 2020 VenTour
+                            <div class="copy-right2">
+                                <p>© 2020 VenTour
                                 <br>
-                            All rights reserved.</div>
+                            All rights reserved.</p></div>
                             </div>
                         </div>    
                     </div>
@@ -95,6 +94,7 @@
                 isMobile: false,
         };
     },
+    // Only for website seen by mobile 
     methods: {
         detectMobile() {
           return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -114,6 +114,19 @@
 <style>
 .container-f {
     height: 200px;
+}
+@media screen and (max-width: 768px) {
+    .container-f {
+        height: 100%;
+    }
+    .rowf {
+        display: flex;
+        flex-direction: column;
+        align-items: flex;
+        justify-content: space-between;
+        height: 20%;
+        align-items: center;
+    }
 }
 .container-f2 {
     height: 100%;
@@ -227,7 +240,6 @@ h3 {
     width: 30%;
     position: relative;
     display: flex;
-    
     align-items: center;
     margin-top: 5%;
     gap: 12%;
@@ -248,6 +260,12 @@ h3 {
     padding: auto;
     cursor: pointer;
 }
+.social-iconsf2 p {
+    width: 80px;
+    padding-right: 100px;
+    padding: auto;
+    cursor: pointer;
+}
 
 @media (max-width: 767px) {
     .footer-dark .item:not(.social) {
@@ -264,9 +282,7 @@ h3 {
 
     .col-md-3 {
         flex: 0 0 100%;
-        padding-top: 2%;
         height: auto;
-        text-align: center;
     }
 
     .text-middle,

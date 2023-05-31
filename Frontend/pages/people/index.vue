@@ -154,12 +154,11 @@ const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-const role = ref("");
 const team = ref("");
 
 const filtered = computed(() => {
     // Checking for values where the full list is provided
-    if ((role.value == 0 || role.value == "") & (team.value == 0 || team.value == ""))
+    if (team.value == 0 || team.value == "")
         return people.value
 
     const arr = []
@@ -175,15 +174,7 @@ const filtered = computed(() => {
     return arr
 
 })
-function getButtonString(a) {
-    const arr = []
-    var button = a; // replace "myButton" with the ID of your button
-    for (let person of people.value) {
-        if (person.role.includes(role.value) && person.team == a)
-            arr.push(person)
-    }
-    return arr;
-}
+
 const blinking = ref(false);
 
 onMounted(() => {
