@@ -175,19 +175,17 @@
         </div>
       </div>
     </div>
-    <div class="row3-container">
-      <div class="col3">
-        <router-link to="/people" class="nav-link-end">
-          <a class="card13">
-            <h3>MEET OUR TEAM</h3>
-            <div class="go-corner">
-              <div class="go-arrow">
-                →
-              </div>
+    <div class="col3">
+      <router-link to="/people" class="nav-link-end">
+        <a class="card13">
+          <h3>MEET OUR TEAM</h3>
+          <div class="go-corner">
+            <div class="go-arrow">
+              →
             </div>
-          </a>
-        </router-link>
-      </div>
+          </div>
+        </a>
+      </router-link>
     </div>
   </section>
 </template>
@@ -472,7 +470,7 @@ h2 {
 .card-o:hover p,
 .card-o:hover a {
   font-size: 18px;
-  padding-top: 18%;
+  padding-top: 15%;
   color: black;
   z-index: 4;
   opacity: 0.9;
@@ -511,14 +509,27 @@ h2 {
 }
 
 /*button passing to the next page style */
+.row3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col3 {
+  max-width: 100%;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+}
+
 .card13 {
   display: block;
   position: relative;
-  max-width: 151px;
+  width: 100%;
+  font-size: 18px;
   background-color: #f2f8f9;
   border-radius: 10px;
   padding: 20px 20px;
-  margin: 10px;
   text-decoration: none;
   z-index: 5;
   overflow: hidden;
@@ -574,8 +585,6 @@ h2 {
     max-width: 10%;
   }
 
-
-
   .card-o {
     margin-right: 10px;
   }
@@ -590,6 +599,11 @@ h2 {
 
   .card-o .a {
     inset: auto auto 20px 20px;
+  }
+
+  .card13 {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -620,6 +634,10 @@ h2 {
   #header1 p {
     font-size: 12px;
   }
+
+  .card-o h2 {
+    inset: auto auto 120px 10px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -638,6 +656,10 @@ h2 {
     display: inline-block;
   }
 
+  .card-o h2 {
+    inset: auto auto 100px 5px;
+  }
+
   #header3,
   #header2,
   #header1 {
@@ -648,6 +670,20 @@ h2 {
   #header2 p,
   #header1 p {
     font-size: 12px;
+  }
+
+  .card13 {
+    display: block;
+    position: relative;
+    max-width: 80%;
+    font-size: 12px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 10px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
   }
 }
 
@@ -672,6 +708,20 @@ h2 {
 
   .card-o .a {
     inset: auto auto 10px 15px;
+  }
+
+  .card13 {
+    display: block;
+    position: relative;
+    max-width: 80%;
+    font-size: 16px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 10px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
   }
 }
 
@@ -778,6 +828,10 @@ h2 {
     font-size: 5px;
   }
 
+  .card-o h2 {
+    font-size: 15px;
+  }
+
   #header3,
   #header2,
   #header1 {
@@ -807,6 +861,19 @@ h2 {
 
   .card-o .a {
     inset: auto auto 5px 5px;
+  }
+
+  .card13 {
+    display: block;
+    position: relative;
+    max-width: 80%;
+    font-size: 10px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 20px 20px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
   }
 }
 </style>
