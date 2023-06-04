@@ -443,7 +443,7 @@ label {
   flex-direction: column;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   form div {
     flex-direction: column;
   }
@@ -495,7 +495,7 @@ label {
   mix-blend-mode: screen;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .co-container {
     max-width: 100%;
     /* Adjusted to full width */
@@ -558,12 +558,12 @@ label {
 }
 
 /* Media Query for mobile devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .description-container-co {
     font-size: 8px;
     /* Adjusted font size for smaller screens */
     margin-top: 5px;
-    /* Adjusted margin top for smaller screens */
+    /* Adjusted margin top for smaller screens */ 
   }
 }
 
