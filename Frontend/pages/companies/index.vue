@@ -5,97 +5,97 @@
 <template>
     <main>
         <div class="containeri">
-            <div class="image-containeri">
-                <div class="image-wrapperi">
-                    <img src="~/assets/img/logoinv.png" style="width: 100%;height: 100%;">
+            <div class="col-md-4">
+                <div class="image-text-overlay text-middle-left">
+                    <p>
+                        <span class="overlay-title">Ventour investments</span><br>
+                        <span class="overlay-subtext">We have a track record of identifying and nurtuing some of the most
+                            innovative and dynamic
+                            startups in the world!</span><br>
+                        <span class="overlay-subsubtext">*Click the buttons to view all companies we have invested on, or
+                            select an investment area and click the buttons to filter.</span>
+                    </p>
                 </div>
-
             </div>
-            <div class="text-containeri">
-                <h1>Investing in the most promising startups with the potential to change the
-                    world! </h1>
-            </div>
-            <div class="text-containeri2">
-                <p>
-                    We have a track record of identifying and nurtuing some of the most innovative and dynamic
-                    startups in the world!
-                </p>
-            </div>
-        </div>
-        <div class="row4">
-            <div class="column41">
-                <div class="area-icons">
-                    <img src="~/assets/img/technology.png" alt="Tech">
+            <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
+                    <button @click="MR = true">Most Relevant Companies</button></a></div>
+            <div class="row4">
+                <div class="column41">
+                    <div class="area-icons">
+                        <img src="~/assets/img/technology.png" alt="Tech">
+                    </div>
+                    <div class="counter" data-target="100"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/technology">
+                                <h1 style="color:#033f52">Technology Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Technology">
+                        <input type="radio" id="Technology" value="Technology" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
-                <div class="counter" data-target="100"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/technology">
-                            <h1 style="color:#033f52">Technology Investments</h1>
-                        </router-link></a>
+
+                <div class=" column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/health.png" alt="Healthcare">
+                    </div>
+                    <div class="counter" data-target="250"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/healthcare">
+                                <h1 style="color:#033f52">Healthcare Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Healthcare">
+                        <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
-                <label for="Technology">
-                    <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark"></span>
-                </label>
-            </div>
 
 
-            <div class=" column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/health.png" alt="Healthcare">
-                </div>
-                <div class="counter" data-target="250"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/healthcare">
-                            <h1 style="color:#033f52">Healthcare Investments</h1>
-                        </router-link></a>
-                </div>
-                <label for="Healthcare">
-                    <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark"></span>
-                </label>
-            </div>
+                <div class="column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/customer.png" alt="Goods">
+                    </div>
+                    <div class="counter" data-target="120"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/consumer">
+                                <h1 style="color:#033f52">Consumer Goods Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Consumer Goods">
 
+                        <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark" href="#"></span>
+                    </label>
 
-            <div class="column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/customer.png" alt="Goods">
                 </div>
-                <div class="counter" data-target="120"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/consumer">
-                            <h1 style="color:#033f52">Consumer Goods Investments</h1>
-                        </router-link></a>
+
+                <div class="column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/sustainable.png" alt="Sustainability">
+                    </div>
+                    <div class="counter" data-target="270"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/sustainability">
+                                <h1 style="color:#033f52">Sustainability Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Sustainability">
+
+                        <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark" href="#"></span>
+                    </label>
+
                 </div>
-                <label for="Consumer Goods">
-
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
-                        v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark" href="#"></span>
-                </label>
-
-            </div>
-
-            <div class="column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/sustainable.png" alt="Sustainability">
-                </div>
-                <div class="counter" data-target="270"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/sustainability">
-                            <h1 style="color:#033f52">Sustainability Investments</h1>
-                        </router-link></a>
-                </div>
-                <label for="Sustainability">
-
-                    <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
-                        v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark" href="#"></span>
-                </label>
 
             </div>
 
@@ -106,8 +106,7 @@
                     <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas" checked>
                     <span class="checkmark"></span>
                 </label></div>
-            <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                <button @click="MR = true">Most Relevant Companies</button></a>
+
             <div class="form-container">
                 <label for="age-filter">Filter companies by name </label>
                 <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
@@ -269,79 +268,101 @@ export default {
 </script>
 <style scoped>
 /*First-intro styles*/
+.image-text-overlay {
+    width: 70%;
+    height: 225px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.overlay-title {
+    font-size: 60px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+}
+
+.overlay-subtext {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+
+}
+
+.overlay-subsubtext {
+    font-size: 18px;
+    color: #646766;
+    display: block;
+}
+
+
+.text-middle-left {
+    display: table;
+}
+
+.text-middle-left p {
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    padding: 15px 20px 15px 20px;
+}
+
+.text-middle-left p {
+    vertical-align: middle;
+    text-align: left;
+}
+
 .containeri {
-    background-color: #033f52;
-    padding-top: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-.image-containeri {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    align-items: stretch;
-    max-width: 100%;
-}
-
-.image-wrapperi {
-    border-radius: 100%;
-    border: 3px solid #fff;
-    overflow: hidden;
-    padding-top: 100%;
     position: relative;
-    width: 20rem;
-    height: 0.9rem;
-    margin: 0 auto;
 }
 
-.image-wrapperi img {
+.containeri::before {
+    content: "";
+    background: url('assets/img/logoinv.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 55%;
+    opacity: 0.7;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    width: auto;
-    object-fit: cover;
+
 }
 
-.text-containeri {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.overlay-buttons {
+    position: relative;
+    z-index: 2;
 }
 
-.text-containeri2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.col-md-4 {
+    position: relative;
+    width: 50%;
+    margin-top: 5%;
+    margin-right: 45%;
 }
 
-.text-containeri2 p {
-    width: 30%;
-    font-size: 24px;
+#title2 {
+    padding-top: 1%;
+    padding-left: 45.5%;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
     font-family: sans-serif;
-    text-align: center;
-    color: white;
+    z-index: 6;
 }
-
-.text-containeri h1 {
-    font-size: 28px;
-    font-family: sans-serif;
-    margin-bottom: 0.5 rem;
-    color: rgb(242, 249, 246);
-}
-
-
-
 
 /*Styles for the counter section*/
 .row4 {
+    margin-top: 2%;
+    margin-bottom: 5%;
     width: 100%;
     height: 30%;
     display: flex;
@@ -351,7 +372,6 @@ export default {
 }
 
 .column4 {
-
     position: relative;
     background-size: 80%;
     height: 100%;
@@ -362,7 +382,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: right;
-    border-left: 1px solid black;
+
 
 }
 
@@ -375,7 +395,7 @@ export default {
     height: 100%;
     flex-basis: 20%;
     padding: 0.7rem;
-    opacity: 0.07;
+    opacity: 0.17;
 
 }
 
@@ -465,6 +485,11 @@ export default {
 
 }
 
+.link-text {
+    text-align: center;
+    text-decoration: underline;
+}
+
 .learn-more {
     text-decoration: none;
     font-size: 16px;
@@ -507,15 +532,7 @@ label>[type=radio] {
     font-weight: bold;
 }
 
-#title2 {
-    padding-top: 1%;
-    padding-left: 45.5%;
-    position: relative;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: sans-serif;
-    z-index: 5;
-}
+
 
 #card-container {
     display: flex;

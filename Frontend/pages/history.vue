@@ -207,7 +207,7 @@ export default {
   background-size: cover;
   width: 100%;
   height: 40%;
-  padding-top: 11%;
+  padding-top: 8%;
   background-position-y: 30%;
   background-position-x: 55%;
 }
