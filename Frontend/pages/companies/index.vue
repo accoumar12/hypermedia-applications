@@ -12,13 +12,18 @@
                         <span class="overlay-subtext">We have a track record of identifying and nurtuing some of the most
                             innovative and dynamic
                             startups in the world!</span><br>
-                        <span class="overlay-subsubtext">*Click the buttons to view all companies we have invested on, or
+                        <span class="overlay-subsubtext"><em>*</em> Click the buttons to view all companies we have invested
+                            on, or
                             select an investment area and click the buttons to filter.</span>
+
+                    <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all
+                            </button>
+                            <button @click="MR = true">Most Relevant Companies</button></a></div>
                     </p>
                 </div>
+
             </div>
-            <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                    <button @click="MR = true">Most Relevant Companies</button></a></div>
+
             <div class="row4">
                 <div class="column41">
                     <div class="area-icons">
@@ -296,6 +301,9 @@ export default {
     display: block;
 }
 
+.overlay-subsubtext em {
+    color: red;
+}
 
 .text-middle-left {
     display: table;
@@ -338,8 +346,27 @@ export default {
 }
 
 .overlay-buttons {
+    margin-top: 2%;
+    align-items: center;
     position: relative;
     z-index: 2;
+    width: 100%;
+}
+
+.overlay-buttons button {
+    cursor: pointer;
+    color: #f6f9f9;
+    background-color: #033f52;
+    border: none;
+    padding: 2%;
+    font-size: 18px;
+    border: solid #bafefe;
+}
+
+.overlay-buttons button:hover {
+    cursor: pointer;
+    color: #f6f9f9;
+    background-color: #076b8a;
 }
 
 .col-md-4 {
@@ -361,7 +388,6 @@ export default {
 
 /*Styles for the counter section*/
 .row4 {
-    margin-top: 2%;
     margin-bottom: 5%;
     width: 100%;
     height: 30%;
@@ -743,6 +769,13 @@ button:hover {
 
 
 /* Media Queries */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4 {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .text-block {
         font-size: 30px;
@@ -771,6 +804,15 @@ button:hover {
         padding: 0.5%;
         width: 100%;
         font-size: 16px;
+    }
+
+    .image-text-overlay {
+        width: 70%;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-right: 0;
     }
 }
 
@@ -835,6 +877,12 @@ button:hover {
     }
 }
 
+@media (max-width: 460px) {
+    .image-text-overlay {
+        width: 90%;
+    }
+}
+
 @media (max-width: 400px) {
     .text-block {
         font-size: 18px;
@@ -863,6 +911,10 @@ button:hover {
         padding: 0.5%;
         width: 100%;
         font-size: 12px;
+    }
+
+    .image-text-overlay {
+        width: 100%;
     }
 }
 
@@ -893,6 +945,22 @@ button:hover {
     .right-text {
         padding: 0.5%;
         width: 100%;
+        font-size: 10px;
+    }
+
+    .image-text-overlay {
+        width: 60%;
+    }
+
+    .overlay-title {
+        font-size: 20px;
+    }
+
+    .overlay-subtext {
+        font-size: 10px;
+    }
+
+    .overlay-subsubtext {
         font-size: 10px;
     }
 }
