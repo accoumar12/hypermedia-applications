@@ -132,7 +132,7 @@
                         }}</span></button>
                     </div>
                 </div>
-                <div style="position=relative;display: flex; align-items: center; margin:5%; height: 100%;">
+                <div style="position=relative; align-items: center; margin:5%; ">
                     <div class="right-text">
                         <p>{{ rightColumnText }}</p>
                     </div>
@@ -249,7 +249,7 @@ export default {
     data() {
         return {
             areas: '',
-            leftColumnText: 'We are committed to helping our portfolio companies realize theri full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
+            leftColumnText: 'We are committed to helping our portfolio companies realize their full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
             rightColumnText: '',
             buttons: [
                 { id: 2, label: 'IPO', text: 'An Initial Public Offering is a process where a private company goes public and offers shares of stock to the public market. We prepare our companies for an IPO, including helping them build a strong management team, establishing governance and financial controls,and developing a compelling growth strategy. Our deep understanding of the public markets, combined with our network of investment bankers,allows us to guide our companies to achieve the best possible outcome.' },
@@ -415,10 +415,6 @@ export default {
     max-width: 100%;
     height: auto;
 }
-
-
-
-
 
 .counter {
     font-size: 3rem;
@@ -616,7 +612,7 @@ input::placeholder {
 }
 
 .row41 .left-text {
-    margin-top: 3%;
+    margin-top: 2%;
     width: 35%;
     font-family: sans-serif;
     font-size: 20px;
@@ -651,13 +647,236 @@ button:hover {
 }
 
 .right-text {
+    position: relative;
     padding: 1%;
-    background-color: rgba(18, 143, 165, 0.7);
+    background-color: #0e6b74;
     border-radius: 5%;
     padding-left: 1%;
-    width: 40%;
+    width: 80%;
     font-family: sans-serif;
     font-size: 18px;
     color: #f6f9f9;
+}
+
+.row41 {
+    background: url('assets/img/exit.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.row41 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-block {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-left: 8%;
+    padding-top: 5%;
+    padding-right: 10%;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 60%;
+    padding-bottom: 2%;
+}
+
+.row41 .left-text {
+    margin-top: 3%;
+    width: 35%;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.buttons {
+    padding-bottom: 2%;
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.buttons button {
+    width: 150px;
+    height: 2.5rem;
+    margin: 2%;
+    font-size: 18px;
+    text-decoration-color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #0e6b74;
+    border: 2px solid #0e6b74;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #5ecbde;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .text-block {
+        font-size: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 80%;
+    }
+
+    .row41 .left-text {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .buttons button {
+
+        height: 2rem;
+        margin: 1%;
+        font-size: 16px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-block {
+        font-size: 24px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 80%;
+    }
+
+    .row41 .left-text {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .buttons button {
+        height: 1.5rem;
+        margin: 1%;
+        font-size: 14px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-block {
+        font-size: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .buttons button {
+        width: 120px;
+        height: 1.5rem;
+        margin: 1%;
+        font-size: 14px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-block {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 1.25rem;
+        margin: 1%;
+        font-size: 12px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .text-block {
+        font-size: 16px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 1rem;
+        margin: 1%;
+        font-size: 10px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 10px;
+    }
 }
 </style>

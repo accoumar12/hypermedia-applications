@@ -443,6 +443,10 @@ body {
     height: 500px;
   }
 
+  .card-content {
+    padding: 10px;
+  }
+
   .carousel {
     width: 100%;
     height: 40%;
