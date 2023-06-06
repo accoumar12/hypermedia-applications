@@ -232,7 +232,6 @@ export default {
   font-size: 60px;
   font-weight: 400;
   font-family: sans-serif;
-
   mix-blend-mode: screen;
 }
 
