@@ -13,17 +13,28 @@
                             innovative and dynamic
                             startups in the world!</span><br>
                         <span class="overlay-subsubtext"><em>*</em> Click the buttons to view all companies we have invested
-                            on, or
+                            in, or
                             select an investment area and click the buttons to filter.</span>
 
                     <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all
                             </button>
                             <button @click="MR = true">Most Relevant Companies</button></a></div>
                     </p>
+
                 </div>
 
             </div>
 
+            <div class="row4-a">
+                <div class="title">
+                    <label for="all-team">
+                        <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
+                            checked>
+                        <h1 class="learn-more-2" style="color:#033f52">ALL COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
             <div class="row4">
                 <div class="column41">
                     <div class="area-icons">
@@ -106,17 +117,12 @@
 
         </div>
         <section class="team-members-grid">
-            <div class="title"> <label for="all-team">
-                    ALL COMPANIES
-                    <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas" checked>
-                    <span class="checkmark"></span>
-                </label></div>
-
-            <div class="form-container">
-                <label for="age-filter">Filter companies by name </label>
-                <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
+            <div id="title2">PORTFOLIO SNAPSHOT
+                <div class="form-container">
+                    <label for="age-filter">Filter companies by name </label>
+                    <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
+                </div>
             </div>
-            <div id="title2">PORTFOLIO SNAPSHOT</div>
             <div class="row-c">
                 <div id="card-container">
                     <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
@@ -253,7 +259,7 @@ export default {
     data() {
         return {
             areas: '',
-            leftColumnText: 'We are committed to helping our portfolio companies realize their full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
+            leftColumnText: 'We are committed to helping our portfolio companies realize their full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities. Take a look at our exit strategies in the buttons below:',
             rightColumnText: '',
             buttons: [
                 { id: 2, label: 'IPO', text: 'An Initial Public Offering is a process where a private company goes public and offers shares of stock to the public market. We prepare our companies for an IPO, including helping them build a strong management team, establishing governance and financial controls,and developing a compelling growth strategy. Our deep understanding of the public markets, combined with our network of investment bankers,allows us to guide our companies to achieve the best possible outcome.' },
@@ -274,7 +280,7 @@ export default {
 <style scoped>
 /*First-intro styles*/
 .image-text-overlay {
-    width: 70%;
+    width: 80%;
     height: 225px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -296,6 +302,7 @@ export default {
 }
 
 .overlay-subsubtext {
+    width: 70%;
     font-size: 18px;
     color: #646766;
     display: block;
@@ -377,10 +384,11 @@ export default {
 }
 
 #title2 {
+    align-items: center;
     padding-top: 1%;
-    padding-left: 45.5%;
+    padding-left: 45%;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 24px;
     font-weight: bold;
     font-family: sans-serif;
     z-index: 6;
@@ -395,6 +403,13 @@ export default {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.row4-a {
+    width: 92%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column4 {
@@ -528,6 +543,20 @@ export default {
     position: left;
 }
 
+.learn-more-2 {
+    margin-left: 16%;
+    text-decoration: none;
+    font-size: 16px;
+    text-decoration-color: #033f52;
+    font-family: sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 4;
+
+}
+
 .learn-more a {
     text-decoration: none;
     font-size: 10px;
@@ -551,10 +580,8 @@ label>[type=radio] {
 }
 
 .title {
-    padding-top: 4%;
-    padding-left: 44.8%;
+    width: 20%;
     position: relative;
-    font-size: 1.6rem;
     font-weight: bold;
 }
 
