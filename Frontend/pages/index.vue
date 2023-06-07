@@ -3,63 +3,45 @@
 -->
 <template>
     <main id="back-h">
-        <div class="row-h-1">
+        <section class="homeintro">
             <div class="content2">
                 <p class="content__container__text">
                     Fly with us to a journey of growth!
                 </p>
-                <a href="#us" class="plane-icon">
-                    <img src="~/assets/img/plane.png" />
-                </a>
-            </div>
-            <div class="content">
-                <div class="content__container">
-                    <p class="content__container__text">
-                        We are
-                    </p>
-                    <ul class="content__container__list">
-                        <li class="content__container__list__item">inovation !</li>
-                        <li class="content__container__list__item">power !</li>
-                        <li class="content__container__list__item">potential !</li>
-                        <li class="content__container__list__item">VenTour !</li>
-
-                    </ul>
+                <div class="content">
+                    <div class="content__container">
+                        <p class="content__container__text">
+                            We are
+                        </p>
+                        <ul class="content__container__list">
+                            <li class="content__container__list__item">inovation !</li>
+                            <li class="content__container__list__item">power !</li>
+                            <li class="content__container__list__item">potential !</li>
+                            <li class="content__container__list__item">VenTour !</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <a href="#numbers">
-                <div class="container-first">
-                    <div class="container__image-f">
-                        <div class="container__info container__author">Investments in a decade </div>
-                    </div>
-                </div>
-            </a>
-            <a href="#section3">
-                <div class="container-second">
-                    <div class="container__image-t">
-
-                        <div class="container__info2 container__author">Invested in 5 BEST worldwide companies</div>
-                    </div>
-                </div>
-            </a>
-            <a href="#section3">
-                <div class="container-second-b">
-                    <div class="container__image-e">
-                        <div class="container__info3 container__author">Operating in 4 diverse investment areas</div>
-                    </div>
-                </div>
-            </a>
-        </div>
+            <img class="firstimg3" src="~/assets/img/logo_transparent3.png">
+            <img class="firstimg2" src="~/assets/img/logo_transparent2.png">
+            <img class="firstimg" src="~/assets/img/logo_transparent.png">
+        </section>
         <section id="us">
             <div class="us-left-col">
                 <div class="left-layout">
                     <h5 class="u-section-text">why ventour</h5>
                     <h2 class="u-section-text2">What do we represent?</h2>
-                    <p class="u-section-text3">"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody the
-                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a venture
-                        capital firm, we specialize in providing crucial support and funding to early-stage and high-growth
-                        companies that are reshaping industries and driving forward societal progress. We understand that
+                    <p class="u-section-text3">"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
+                        the
+                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
+                        venture
+                        capital firm, we specialize in providing crucial support and funding to early-stage and
+                        high-growth
+                        companies that are reshaping industries and driving forward societal progress. We understand
+                        that
                         the journey of transforming groundbreaking ideas into successful businesses can be challenging,
-                        which is why we strive to be more than just financial backers. Our mission is to be your strategic
+                        which is why we strive to be more than just financial backers. Our mission is to be your
+                        strategic
                         partner, offering not only capital but also expertise, guidance, and an extensive network of
                         industry connections. </p>
                     <router-link to="/contact">
@@ -76,8 +58,10 @@
                                     <div class="us-right-col1-layout3">
                                         <img class="icon-circle" src="~/assets/img/innovation.png">
                                         <h4 class="us-text1">Empowering Innovation</h4>
-                                        <p class="us-text2">Innovation is at the core of everything we do. We actively seek
-                                            out the most innovative and disruptive ideas across a wide range of industries,
+                                        <p class="us-text2">Innovation is at the core of everything we do. We actively
+                                            seek
+                                            out the most innovative and disruptive ideas across a wide range of
+                                            industries,
                                             from technology and healthcare to energy and beyond. </p>
                                     </div>
                                 </div>
@@ -87,8 +71,10 @@
                                     <div class="us-right-col1-layout3">
                                         <img class="icon-circle" src="~/assets/img/fuel.png">
                                         <h4 class="us-text1">Fuelling growth</h4>
-                                        <p class="us-text2">We believe in the transformative power of ideas.We are a leading
-                                            venture capital firm dedicated to fueling the growth of groundbreaking startups
+                                        <p class="us-text2">We believe in the transformative power of ideas.We are a
+                                            leading
+                                            venture capital firm dedicated to fueling the growth of groundbreaking
+                                            startups
                                             and empowering them to reach their full potential. </p>
                                     </div>
                                 </div>
@@ -100,7 +86,8 @@
                                     <div class="us-right-col1-layout3">
                                         <img class="icon-circle" src="~/assets/img/unlock.png">
                                         <h4 class="us-text1">Unlocking potential</h4>
-                                        <p class="us-text2">We partner with visionary entrepreneurs and startups at every
+                                        <p class="us-text2">We partner with visionary entrepreneurs and startups at
+                                            every
                                             stage of their journey, providing financial support, but also
                                             invaluable expertise, resources, and a vast network of industry connections.
                                         </p>
@@ -166,64 +153,71 @@
             </div>
         </section>
         <section id="best-comp">
-            <div class="step-container">
-                <div class="step">
-                    <div class="icon">
-                        <i class="fa-solid fa-bicycle"></i>
+            <div class="container">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="~/assets/img/Dell.png">
                     </div>
-                    <div class="title">Step 1</div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                    <div class="content">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="icon">
-                        <i class="fa-solid fa-car"></i>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="~/assets/img/nike.png">
                     </div>
-                    <div class="title">Step 2</div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                    <div class="content">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="icon">
-                        <i class="fa-solid fa-helicopter"></i>
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="~/assets/img/canadiansolar.png">
                     </div>
-                    <div class="title">Step 3</div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
+                    <div class="content">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="icon">
-                        <i class="fa-solid fa-plane"></i>
+                <div class="box">
+                    <div class="imgBx">
+
                     </div>
-                    <div class="title">Step 4</div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
-                </div>
-                <div class="step">
-                    <div class="icon">
-                        <i class="fa-solid fa-rocket"></i>
+                    <div class="content">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                                iusto.
+                            </p>
+                        </div>
                     </div>
-                    <div class="title">Step 5</div>
-                    <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div>
                 </div>
             </div>
         </section>
     </main>
 </template>
 
-<script>
-export default {
-    mounted() {
-        const planeIcon = document.querySelector(".plane-icon");
-        const planeImage = document.querySelector(".plane-icon img");
 
-        planeIcon.addEventListener("mouseover", () => {
-            planeImage.style.animation = "movePlane 1s infinite";
-        });
-
-        planeIcon.addEventListener("mouseout", () => {
-            planeImage.style.animation = "";
-        });
-    },
-};
-</script>
 <style>
+.homeintro {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
 #us {
     width: 100%;
     height: 40%;
@@ -419,18 +413,6 @@ export default {
     position: relative;
 }
 
-.plane-icon img {
-    opacity: 1;
-    position: absolute;
-    width: 38%;
-    top: 212%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    z-index: 7;
-    border-radius: 50%;
-    animation: movePlane 5s linear infinite;
-}
-
 .us-right-col1-layout2 {
     border: 15px solid transparent;
     color: #111111;
@@ -512,39 +494,6 @@ export default {
     margin: 20px auto 0 0;
 }
 
-.plane-icon:hover img {
-    animation: none;
-    opacity: 0.5;
-    animation: blink 1s linear infinite;
-}
-
-@keyframes movePlane {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-
-    50% {
-        transform: translate(-50%, 0%);
-    }
-
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 body {
     margin: 0;
@@ -554,24 +503,34 @@ body {
 }
 
 .row-h-1 {
-    background-image: url("~/assets/img/wallhome.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
-    height: 90%;
+    height: 100%;
     position: relative;
-    top: 0%;
-    left: 0%;
-    right: 0;
-    z-index: 1;
 
 }
 
+.firstimg {
+    position: relative;
+    width: 30%;
+    left: -10.5%;
+}
+
+.firstimg2 {
+    position: relative;
+    left: 26%;
+    width: 15%;
+}
+
+.firstimg3 {
+
+    position: relative;
+    left: 13%;
+    width: 15%;
+}
+
+
 .content {
-    position: absolute;
-    top: 29%;
-    left: 68%;
-    transform: translate(50%, 50%);
+    position: relative;
     height: 180px;
     overflow: hidden;
     padding: 20px;
@@ -583,19 +542,16 @@ body {
 }
 
 .content2 {
-    width: 25%;
-    position: absolute;
+    left: 12%;
+    width: 40%;
+    position: relative;
     font-weight: bold;
-    top: 0px;
-    left: 58%;
-    transform: translate(46%, 50%);
+    top: 100px;
     height: 135px;
-    padding: 20px;
     font-family: sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     line-height: 100%;
     color: rgb(15, 108, 126);
-    z-index: 6
 }
 
 
@@ -603,47 +559,16 @@ body {
     font-weight: 600;
     overflow: hidden;
     height: 44px;
-    padding: 0 40px;
+    padding: 0 26px;
     position: relative;
 }
 
-.content__container:before {
-    content: '[';
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.content__container:after {
-    content: ']';
-    position: absolute;
-    right: 0;
-    top: 0;
-}
 
 .content__container__text {
     display: inline;
     float: left;
     margin: 0;
 }
-
-.content:after,
-.content:before {
-    position: absolute;
-    top: 0;
-
-    color: #0e1010;
-    font-size: 60px;
-    line-height: 40px;
-
-    -webkit-animation-name: opacity;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: opacity;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
 
 .content__container__list {
     margin-top: 0;
@@ -1167,6 +1092,117 @@ body {
     opacity: 0.18;
     filter: blur(10px) saturate(100%);
     transform: scale(2.8) translate3d(-18%, 0px, 0px);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+}
+
+.container .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #d9f3f3;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+}
+
+.container:hover .box {
+    transform: rotateY(25deg);
+}
+
+.container .box:hover~.box {
+    transform: rotateY(-25deg);
+}
+
+.container .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #225160, #60888d);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+}
+
+.container .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.container .box .content h2 {
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+
+.container .box:hover .content h2 {
+    transform: translateY(0px);
+}
+
+.container .box .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+}
+
+.container .box:hover .content p {
+    transform: translateY(0px);
 }
 
 @media (max-width: 768px) {
