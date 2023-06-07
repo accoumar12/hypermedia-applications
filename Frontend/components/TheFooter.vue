@@ -61,6 +61,8 @@
                             <div class="Space">
                                 <p> </p>                            
                             </div>
+                        </div>
+                        <div class="Services">
                             <h3>Contacts</h3>
                             <ul>
                                 <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
@@ -70,14 +72,17 @@
                                 <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
                                         ventourteam@gmail.com</a></li>
                             </ul>
+                        </div>
+                        <div class="Services">
                         <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
                         <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
                             <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                            <div class="copy-right2">
+                            </div>
+                        <div class="copy-right2">
                                 <p>© 2020 VenTour
                                 <br>
-                            All rights reserved.</p></div>
-                            </div>
+                        All rights reserved.</p></div>
+                        
                         </div>    
                     </div>
                 </div>
@@ -150,11 +155,10 @@ h3 {
 }
 .rowf2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex;
     justify-content: space-between;
-    height: 50%;
-    align-items: center;
+    height: 100%;
 }
 
 .col-md-3 {
@@ -188,11 +192,10 @@ h3 {
     padding-top: 20%;
 }
 .copy-right2 {
-    position: absolute;    
+    position: relative;    
     opacity: 0.6;
     font-size: 10px;
-    padding-left: 285%;
-    width: 150%;
+    width: 100%;
     
 }
 
@@ -262,7 +265,6 @@ h3 {
 }
 .social-iconsf2 p {
     width: 80px;
-    padding-right: 100px;
     padding: auto;
     cursor: pointer;
 }
@@ -347,5 +349,10 @@ h3 {
 
 .footer-dark .item.social>a:hover {
     opacity: 0.9;
+}
+
+.Services{
+    margin: 10px 50px;
+    flex-direction: column;
 }
 </style>
