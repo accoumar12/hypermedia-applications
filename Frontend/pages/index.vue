@@ -21,9 +21,14 @@
                         </ul>
                     </div>
                 </div>
+                <p class="section-text4">Transforming the investment landscape and fueling inovation.<br>
+                    Our focus is your success.</p>
+                <router-link to="/history" class="sec-tex">
+                    <p class="section-text4">LEARN MORE</p>
+                </router-link>
             </div>
-            <img class="firstimg3" src="~/assets/img/logo_transparent3.png">
-            <img class="firstimg2" src="~/assets/img/logo_transparent2.png">
+            <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png"></a>
+            <a href="#numbers"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
             <img class="firstimg" src="~/assets/img/logo_transparent.png">
         </section>
         <section id="us">
@@ -114,37 +119,41 @@
         </section>
         <section id="numbers">
             <div class="midl-container">
-                <h4 class="subtitle-midl">INVESTMENTS MILLIONSSSS</h4>
+                <h4 class="subtitle-midl">A wide investment map</h4>
                 <div class="midl-list">
                     <div class="repeater">
-
                         <div class="first-rep">
-                            <img class="rep-icon" src="~/assets/img/worldwide.png">
-                            <h7 class="number-text">breaking ideas into</h7>
+                            <img class="rep-icon" src="~/assets/img/europe.png">
+                            <h7 class="number-text">EUROPE</h7>
                             <div class="text-container-list">
-                                <h8 class="text-up">548395720</h8>
-                                <p class="text-down">548395720</p>
-                            </div>
-
-                        </div>
-
-                        <div class="first-rep">
-                            <img class="rep-icon" src="~/assets/img/worldwide.png">
-                            <h7 class="number-text">548395720</h7>
-                            <div class="text-container-list">
-                                <h8 class="text-up">548395720</h8>
-                                <p class="text-down">548395720</p>
+                                <h8 class="text-up">strategically allocated 60% of our investments</h8>
+                                <p class="text-down">Committed to fueling innovation in
+                                    Europe, where we have strategically allocated 60% of our investments. With a thriving
+                                    startup ecosystem and a rich pool of talent, Europe offers immense growth potential for
+                                    entrepreneurs and investors alike.</p>
                             </div>
                         </div>
-
-
-
-                        <div class="first-rep">
-                            <img class="rep-icon" src="~/assets/img/worldwide.png">
-                            <h7 class="number-text">548395720</h7>
+                        <div class="first-rep2">
+                            <img class="rep-icon" src="~/assets/img/asia.png">
+                            <h7 class="number-text">ASIA</h7>
                             <div class="text-container-list">
-                                <h8 class="text-up">548395720</h8>
-                                <p class="text-down">548395720</p>
+                                <h8 class="text-up">dedicated 30% of our investments to this region</h8>
+                                <p class="text-down">We recognize the immense opportunities in Asia's dynamic market. That's
+                                    why we have dedicated 30% of our investments to this region, capitalizing on the rapid
+                                    technological advancements and the unprecedented growth potential across various
+                                    industries.</p>
+                            </div>
+                        </div>
+                        <div class="first-rep3">
+                            <img class="rep-icon" src="~/assets/img/america.png">
+                            <h7 class="number-text">SOUTH AMERICA</h7>
+                            <div class="text-container-list">
+                                <h8 class="text-up">10% of our portfolio dedicated to this vibrant
+                                    region</h8>
+                                <p class="text-down">Unlocking the untapped potential of South America is a key focus for
+                                    our venture capital investments. With 10% of our portfolio dedicated to this vibrant
+                                    region, we aim to support visionary entrepreneurs and drive innovation in an emerging
+                                    market filled with promising opportunities.</p>
                             </div>
                         </div>
 
@@ -153,6 +162,7 @@
             </div>
         </section>
         <section id="best-comp">
+            <h4 class="subtitle-midl">Our Top 4 Investments</h4>
             <div class="container">
                 <div class="box">
                     <div class="imgBx">
@@ -215,7 +225,7 @@
 <style>
 .homeintro {
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 
 #us {
@@ -260,6 +270,20 @@
     line-height: 120%;
     font-size: 20px;
     margin: 28px 0 0;
+}
+
+.section-text4 {
+    padding-right: 15%;
+    font-size: 24px;
+    line-height: 120%;
+    z-index: 3;
+}
+
+.sec-tex p {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    font-size: 16px;
+    color: rgb(15, 108, 126);
 }
 
 .us-button {
@@ -315,7 +339,6 @@
     width: 100%;
     height: 40%;
     color: #111111;
-    background-color: #f2f2f2;
     position: relative;
     text-align: left;
 }
@@ -332,21 +355,35 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -20px;
-    justify-content: center;
 }
 
 
 
 .first-rep {
     border-radius: 5% !important;
-    padding: 10px 10px;
     position: relative;
     max-width: 50% !important;
     transition-duration: inherit;
-    box-shadow: 5px 5px 37px 0 rgba(0, 0, 0, 0.1);
     max-width: 80%;
-    margin-bottom: 10px;
+    margin-left: 12%;
+}
 
+.first-rep2 {
+    border-radius: 5% !important;
+    position: relative;
+    max-width: 50% !important;
+    transition-duration: inherit;
+    max-width: 80%;
+    margin-left: 30%;
+}
+
+.first-rep3 {
+    border-radius: 5% !important;
+    position: relative;
+    max-width: 50% !important;
+    transition-duration: inherit;
+    max-width: 80%;
+    margin-left: 50%;
 }
 
 .rep-icon img {
@@ -358,24 +395,22 @@
 }
 
 .text-container-list {
-    margin-bottom: 15%;
-    text-align: center;
+    margin-bottom: 5%;
+    text-align: left;
 }
 
 .number-text {
     font-weight: 700;
     font-size: 20px;
-    margin: 5% 0px 0px 2%;
-    font-family: Montserrat, sans-serif !important;
-    padding: 0;
+    font-family: sans-serif !important;
+    margin-bottom: 20%;
     word-wrap: break-word;
     position: relative;
-    font-weight: 400;
-    line-height: 1.2;
+    color: rgb(15, 108, 126);
 }
 
 .text-up {
-    font-size: 18px;
+    font-size: 24px;
     margin-top: 2%;
     text-transform: uppercase;
     font-weight: 700;
@@ -388,18 +423,21 @@
 }
 
 .text-down {
+    font-size: 20px;
     margin: 10px 0 0;
     word-wrap: break-word;
     position: relative;
-    padding: 0;
+    padding-right: 20%;
 }
 
 .subtitle-midl {
-    padding-top: 5%;
-    margin-left: 12%;
-    font-size: 40px;
-    line-height: 1.1;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 12px 0 0;
+    position: relative;
+    max-width: 100%;
+    padding: 0% 60% 0 12%;
 }
 
 .midl-list {
@@ -516,16 +554,21 @@ body {
 }
 
 .firstimg2 {
+    cursor: pointer;
     position: relative;
     left: 26%;
     width: 15%;
+    z-index: 2;
+    box-shadow: 0 2px 0px rgba(200, 195, 195, 0.5);
 }
 
 .firstimg3 {
-
+    cursor: pointer;
     position: relative;
     left: 13%;
     width: 15%;
+    z-index: 2;
+    box-shadow: 0 2px 0px rgba(200, 195, 195, 0.5);
 }
 
 
@@ -1113,7 +1156,7 @@ body {
     transition: 0.5s;
     transform-style: preserve-3d;
     overflow: hidden;
-    margin-right: 15px;
+    margin-right: 41px;
     margin-top: 45px;
 }
 
