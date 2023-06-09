@@ -62,71 +62,72 @@
             </div>
         </section>
         <section class="department-section">
-            <div v-if="!isMobile">
-                <desktop>
-                    <div class="row">
-                        <div class="card1o">
-                            <h3>MANAGEMENT DEPARTMENT</h3>
-                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                provide
-                                leadership to drive the company's growth and success.</p>
+                <div v-if="!isMobile">
+                    <desktop> 
+                        <div class="row">
+                            <div class="card1o">
+                                <h3>MANAGEMENT DEPARTMENT</h3>
+                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                    provide
+                                    leadership to drive the company's growth and success.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>INVESTMENT DEPARTMENT</h3>
+                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                    investment decisions
+                                    to optimize the company's financial performance.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>OPS & FINANCE DEPARTMENT</h3>
+                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                    while maintaining
+                                    quality standards to support the company's overall objectives.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>ADVISORING DEPARTMENT</h3>
+                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                    key decisions,
+                                    helping the company navigate challenges and capitalize on opportunities.</p>
+                            </div>
                         </div>
-                        <div class="card1o">
-                            <h3>INVESTMENT DEPARTMENT</h3>
-                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                investment decisions
-                                to optimize the company's financial performance.</p>
+                    </desktop>
+                </div>
+                <div v-else>
+                    <mobile>
+                        <div class="row18">
+                            <div class="card1o">
+                                <h3>MANAGEMENT DEPARTMENT</h3>
+                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
+                                    provide
+                                    leadership to drive the company's growth and success.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>INVESTMENT DEPARTMENT</h3>
+                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
+                                    investment decisions
+                                    to optimize the company's financial performance.</p>
+                            </div>
                         </div>
-                        <div class="card1o">
-                            <h3>OPS & FINANCE DEPARTMENT</h3>
-                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                while maintaining
-                                quality standards to support the company's overall objectives.</p>
+                        <div class="row18">
+                            <div class="card1o">
+                                <h3>FINANCE DEPARTMENT</h3>
+                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
+                                    while maintaining
+                                    quality standards to support the company's overall objectives.</p>
+                            </div>
+                            <div class="card1o">
+                                <h3>ADVISORING DEPARTMENT</h3>
+                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
+                                    key decisions,
+                                    helping the company navigate challenges and capitalize on opportunities.</p>
+                            </div>
                         </div>
-                        <div class="card1o">
-                            <h3>ADVISORING DEPARTMENT</h3>
-                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                key decisions,
-                                helping the company navigate challenges and capitalize on opportunities.</p>
-                        </div>
-                    </div>
-                </desktop>
-            </div>
-            <div v-else>
-                <mobile>
-                    <div class="row">
-                        <div class="card1o">
-                            <h3>MANAGEMENT DEPARTMENT</h3>
-                            <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                provide
-                                leadership to drive the company's growth and success.</p>
-                        </div>
-                        <div class="card1o">
-                            <h3>INVESTMENT DEPARTMENT</h3>
-                            <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                investment decisions
-                                to optimize the company's financial performance.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="card1o">
-                            <h3>OPS & FINANCE DEPARTMENT</h3>
-                            <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                while maintaining
-                                quality standards to support the company's overall objectives.</p>
-                        </div>
-                        <div class="card1o">
-                            <h3>ADVISORING DEPARTMENT</h3>
-                            <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                key decisions,
-                                helping the company navigate challenges and capitalize on opportunities.</p>
-                        </div>
-                    </div>
-                </mobile>
-            </div>
-        </section>
--->
-        <section id="team-members-grid">
+                    </mobile>
+                </div>
+            </section>
+
+
+<section id="team-members-grid">
             <div class="grid-container">
                 <div id="filter-container">
 
@@ -137,12 +138,9 @@
                             <div class="dropdown-grid-filter grid-x align-middle">
 
                                 <label for="all-team">
-                                    ALL
-                                    <input type="radio" id="all-team" value="" name="team-categories" v-model="team"
-                                        checked>
+                                    ALL <input type="radio" id="all-team" value="" name="team-categories" v-model="team" checked>
                                     <span class="checkmark"></span>
                                 </label>
-
 
                                 <label for="investment-team">
                                     MANAGEMENT <input type="radio" id="Management-Team" value="Management Team"
@@ -150,16 +148,14 @@
                                     <span class="checkmark"></span>
                                 </label>
 
-
                                 <label for="investor-relations">
                                     INVESTMENT <input type="radio" id="Investment-Team" value="Investment Team"
                                         name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
-
                                 <label for="finance-operations">
-                                    OPS &amp; FINANCE <input type="radio" id="finance-operations"
+                                    FINANCE <input type="radio" id="finance-operations"
                                         value="Operations and Finance Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
@@ -169,6 +165,7 @@
                                         value="Advisoring Board Team" name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
+
                             </div>
                         </div>
                     </div>
@@ -203,39 +200,27 @@ const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-const role = ref("");
 const team = ref("");
 
 const filtered = computed(() => {
     // Checking for values where the full list is provided
-    if ((role.value == 0 || role.value == "") & (team.value == 0 || team.value == ""))
+    if (team.value == 0 || team.value == "")
         return people.value
 
     const arr = []
-
 
     // Filtering the list
     for (let person of people.value) {
         if (person.team == team.value) {
             arr.push(person)
-        }/*
-        else if (person.role.toLowerCase().includes(role.value.toLowerCase()))
-            arr.push(person)*/
+        }
     }
 
     // Returning the filtered list
     return arr
 
 })
-function getButtonString(a) {
-    const arr = []
-    var button = a; // replace "myButton" with the ID of your button
-    for (let person of people.value) {
-        if (person.role.includes(role.value) && person.team == a)
-            arr.push(person)
-    }
-    return arr;
-}
+
 const blinking = ref(false);
 
 onMounted(() => {
@@ -246,6 +231,7 @@ onMounted(() => {
 });
 
 </script>
+
 <script>
 export default {
     data() {
@@ -273,6 +259,9 @@ export default {
 </script>
 
 <style scoped>
+.department-section {
+    padding-top: 0.1%;
+}
 .container.custom-container {
     background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
     background-repeat: no-repeat;
@@ -441,6 +430,97 @@ export default {
     padding-top: 0%;
 }
 
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+  .row0 {
+    bottom: auto; /* Removed bottom positioning */
+    height: auto; /* Adjusted height to auto */
+    left: auto; /* Removed left positioning */
+    top: 30px;
+    width: 100%; /* Adjusted width for better responsiveness */
+    margin: 0 auto; /* Center the element horizontally */
+    align-items: center;
+  }
+
+  .row1 {
+    background-position-y: center; /* Adjusted background position */
+    padding-top: 20%; /* Adjusted padding top */
+    height: auto; /* Adjusted height to auto */
+  }
+
+  .ourt-intro {
+    background-color: rgb(239, 241, 246);
+    color: #00838d;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: inherit;
+    transform: translate(-50%, -50%);
+    margin: 0 50%;
+    padding: 20px;
+    mix-blend-mode: unset;
+    }
+
+    .container.custom-container {
+    background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 50%;
+    }
+
+    .grid-container {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 20%;
+    max-width: 90rem;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 5%;
+    }
+
+    #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+    font-size: 18px;
+    line-height: 1.1;
+    font-family: sans-serif;
+    color: #0e6b74;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    opacity: 1;
+    margin-right: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 2px;
+    flex-direction: column;
+    margin: 0 10%;
+    }
+    #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+        padding-bottom: 3%;
+        margin-right: 20%;
+    }
+
+    .row3-container {
+    padding-left: 50%;
+    padding-bottom: 2%;
+}
+}
+
 /*button passing to the next page style */
 .col3f {
     max-width: 100%;
@@ -600,9 +680,9 @@ label>[type=radio] {
 
         font-size: 20px;
     }
-
-
-
+    .card1o p {
+        font-size: 12px; /* Adjusted font size for smaller screens */
+        }
     .card13 {
         display: block;
         position: relative;
@@ -617,29 +697,6 @@ label>[type=radio] {
         overflow: hidden;
     }
 }
-
-@media screen and (max-width: 480px) {
-
-
-    .card13 {
-        display: block;
-        position: relative;
-        max-width: 80%;
-        font-size: 16px;
-        background-color: #f2f8f9;
-        border-radius: 10px;
-        padding: 20px 20px;
-        margin: 10px;
-        text-decoration: none;
-        z-index: 5;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 400px) {}
-
-@media (max-width: 450px) {}
-
 @media (max-width: 950px) and (min-width: 450px) {
     .container.custom-container {
         background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");

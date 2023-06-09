@@ -30,9 +30,7 @@
                         </ul>
                     </div>
 
-                    <div class="logof">
-                        <router-link to="/"><img class="logof" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
-                    </div>
+                    
                 </div>
                 <div class="col-md-3 col-sm-6 item ">
                     <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
@@ -50,44 +48,46 @@
     <div v-else>
         <mobile>
             <div class="footer-dark">
-        <footer>
-            <div class="container-f2">
-                <div class="rowf2">
-                    <div class="Services">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Terms & Policy</a></li>
-                        </ul>
-                        <div class="Space">
-                            <p> </p>                            
+            <footer>
+                <div class="container-f2">
+                    <div class="rowf2">
+                        <div class="Services">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Terms & Policy</a></li>
+                            </ul>
+                            <div class="Space">
+                                <p> </p>                            
+                            </div>
                         </div>
-                    <h3>Contacts</h3>
-                        <ul>
-                            <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
-                                    target="_blank">Address:
-                                    Politecnico di Milano</a></li>
-                            <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                            <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
-                                    ventourteam@gmail.com</a></li>
-                        </ul>
-                    <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
-                    <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
-                        <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                        <div class="copy-right2">© 2020 VenTour
-                            <br>
-                        All rights reserved.</div>
+                        <div class="Services">
+                            <h3>Contacts</h3>
+                            <ul>
+                                <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
+                                        target="_blank">Address:
+                                        Politecnico di Milano</a></li>
+                                <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
+                                <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
+                                        ventourteam@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="Services">
+                        <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
+                        <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
+                            <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
+                            </div>
+                        <div class="copy-right2">
+                                <p>© 2020 VenTour
+                                <br>
+                        All rights reserved.</p></div>
+                        
+                        </div>    
                     </div>
-                    </div>
-                    
-                    
                 </div>
-                
-
+            </footer>
             </div>
-        </footer>
-    </div>
         </mobile>
     </div>
     </div>
@@ -99,6 +99,7 @@
                 isMobile: false,
         };
     },
+    // Only for website seen by mobile 
     methods: {
         detectMobile() {
           return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -118,6 +119,19 @@
 <style>
 .container-f {
     height: 200px;
+}
+@media screen and (max-width: 768px) {
+    .container-f {
+        height: 100%;
+    }
+    .rowf {
+        display: flex;
+        flex-direction: column;
+        align-items: flex;
+        justify-content: space-between;
+        height: 20%;
+        align-items: center;
+    }
 }
 .container-f2 {
     height: 100%;
@@ -141,11 +155,10 @@ h3 {
 }
 .rowf2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex;
     justify-content: space-between;
-    height: 50%;
-    align-items: center;
+    height: 100%;
 }
 
 .col-md-3 {
@@ -179,11 +192,10 @@ h3 {
     padding-top: 20%;
 }
 .copy-right2 {
-    position: absolute;    
+    position: relative;    
     opacity: 0.6;
     font-size: 10px;
-    padding-left: 285%;
-    width: 150%;
+    width: 100%;
     
 }
 
@@ -231,7 +243,6 @@ h3 {
     width: 30%;
     position: relative;
     display: flex;
-    
     align-items: center;
     margin-top: 5%;
     gap: 12%;
@@ -252,6 +263,11 @@ h3 {
     padding: auto;
     cursor: pointer;
 }
+.social-iconsf2 p {
+    width: 80px;
+    padding: auto;
+    cursor: pointer;
+}
 
 @media (max-width: 767px) {
     .footer-dark .item:not(.social) {
@@ -268,9 +284,7 @@ h3 {
 
     .col-md-3 {
         flex: 0 0 100%;
-        padding-top: 2%;
         height: auto;
-        text-align: center;
     }
 
     .text-middle,
@@ -335,5 +349,10 @@ h3 {
 
 .footer-dark .item.social>a:hover {
     opacity: 0.9;
+}
+
+.Services{
+    margin: 10px 50px;
+    flex-direction: column;
 }
 </style>
