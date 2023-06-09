@@ -50,7 +50,7 @@
                         partner, offering not only capital but also expertise, guidance, and an extensive network of
                         industry connections. </p>
                     <router-link to="/contact">
-                        <a href="/contact" class="us-button">join us</a>
+                        <a class="us-button">join us</a>
                     </router-link>
                 </div>
             </div>
@@ -170,7 +170,9 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Read More</h2>
+                            <router-link to="/companies/27">
+                                <h2>Read More</h2>
+                            </router-link>
                             <p>Giving light to technology with one of the best trending companies in todays' market.
                             </p>
                         </div>
@@ -182,7 +184,9 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Read More</h2>
+                            <router-link to="/companies/33">
+                                <h2>Read More</h2>
+                            </router-link>
                             <p>The top leading company in sportswear trusted on us to become the most wanted one.
                             </p>
                         </div>
@@ -194,7 +198,9 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Read More</h2>
+                            <router-link to="/companies/38">
+                                <h2>Read More</h2>
+                            </router-link>
                             <p>Producing power from the support they gained from us and leading the energy market.
                             </p>
                         </div>
@@ -206,7 +212,9 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Read More</h2>
+                            <router-link to="/companies/24">
+                                <h2>Read More</h2>
+                            </router-link>
                             <p>Being your insurance and health companion in international markets just like us are for our
                                 companies.
                             </p>

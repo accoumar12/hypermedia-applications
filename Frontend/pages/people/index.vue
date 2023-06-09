@@ -61,6 +61,7 @@
                 </div>
             </div>
         </section>
+    -->
         <section class="department-section">
                 <div v-if="!isMobile">
                     <desktop> 
