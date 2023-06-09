@@ -170,9 +170,8 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Image Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
-                                iusto.
+                            <h2>Read More</h2>
+                            <p>Giving light to technology with one of the best trending companies in todays' market.
                             </p>
                         </div>
                     </div>
@@ -183,9 +182,8 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Image Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
-                                iusto.
+                            <h2>Read More</h2>
+                            <p>The top leading company in sportswear trusted on us to become the most wanted one.
                             </p>
                         </div>
                     </div>
@@ -196,27 +194,29 @@
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Image Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
-                                iusto.
+                            <h2>Read More</h2>
+                            <p>Producing power from the support they gained from us and leading the energy market.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="imgBx">
-
+                        <img src="~/assets/img/Cigna.png">
                     </div>
                     <div class="content">
                         <div>
-                            <h2>Image Title</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
-                                iusto.
+                            <h2>Read More</h2>
+                            <p>Being your insurance and health companion in international markets just like us are for our
+                                companies.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="areasrep">
+            <h4 class="subtitle-midl">Leading in 4 directions</h4>
         </section>
     </main>
 </template>
@@ -432,7 +432,7 @@
 
 .subtitle-midl {
     font-family: 'Open Sans', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     margin: 12px 0 0;
     position: relative;
@@ -1145,7 +1145,7 @@ body {
     flex-wrap: wrap;
     transform-style: preserve-3d;
     perspective: 500px;
-    margin: auto;
+    margin-bottom: 5%;
 }
 
 .container .box {
