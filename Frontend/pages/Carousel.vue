@@ -43,7 +43,7 @@ export default {
         {
           image: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
           title: "Forging a Legacy: VenTour's Early Years of Innovation",
-          text: "The relentless determination and tireless efforts marked VenTour's formative years, as visionary founders and dedicated teams worked tirelessly to lay the foundation for a venture capital empire. It took us years and year of hardworking hours and study to rise up till here.",
+          text: "The relentless determination and tireless efforts marked VenTour's formative years, as visionary founders and dedicated teams worked tirelessly to lay the foundation for a venture capital empire. It took us years and years of hardworking hours and study to rise up till here.",
         },
         {
           image: 'https://media.wnyc.org/i/800/0/c/85/1/47244u.jpg',
@@ -436,83 +436,73 @@ body {
   background-color: var(--veryLightGray);
 }
 
-@media (max-width: 480px) {
-  #carousel-container {
-    width: 100%;
-    padding-top: 1%;
-    height: 500px;
-  }
-
+/* Media Query for tablets */
+@media screen and (max-width: 1024px) {
   .card-content {
-    padding: 10px;
+    padding: 15px; /* Adjusted padding for smaller screens */
   }
 
-  .carousel {
-    width: 100%;
-    height: 40%;
+  .card-content img {
+    width: 100%; /* Adjusted width to fit the container */
+  }
+
+  .text-container2 {
+    width: 80%; /* Adjusted width for smaller screens */
+    bottom: 20%; /* Adjusted positioning */
+    padding: 2%;
+  }
+
+  .card-title {
+    font-size: 18px; /* Adjusted font size for smaller screens */
+    max-width: 90%; /* Adjusted max-width for smaller screens */
+  }
+
+  .card-text {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+    max-width: 90%; /* Adjusted max-width for smaller screens */
   }
 
   .left-arrow-container,
   .right-arrow-container {
-    width: 30px;
-    height: 20px;
-  }
-
-  .left-arrow-container {
-    left: 2%;
-  }
-
-  .right-arrow-container {
-    right: 2%;
-  }
-
-  .card {
-    flex: 0 0 100%;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-text {
-    font-size: 0.8rem;
+    width: 40px; /* Adjusted width for smaller screens */
+    height: 30px; /* Adjusted height for smaller screens */
   }
 }
 
-@media (max-width: 768px) {
-  #carousel-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+  .card-content {
+    padding: 10px; /* Adjusted padding for smaller screens */
+    height: 120%;
   }
 
-  .carousel {
-    width: 100%;
-    height: auto;
+  .card-content img {
+    height: 100%; /* Adjusted width to fit the container */
+    height: fit-content;
   }
 
-  .inner {
-    flex-wrap: wrap;
-  }
-
-  .card {
-    flex: 0 0 50%;
-  }
-
-  .card-info {
-    text-align: center;
+  .text-container2 {
+    width: 90%; /* Adjusted width for smaller screens */
+    height: fit-content;
+    bottom: 35%; /* Adjusted positioning */
+    padding: 1%;
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: 18px; /* Adjusted font size for smaller screens */
+    max-width: 100%; /* Adjusted max-width for smaller screens */
   }
 
   .card-text {
-    font-size: 1rem;
+    font-size: 14px; /* Adjusted font size for smaller screens */
+    max-width: 100%; /* Adjusted max-width for smaller screens */
   }
 
-  .arrow-c {
-    display: none;
+  .left-arrow-container,
+  .right-arrow-container {
+    width: 30px; /* Adjusted width for smaller screens */
+    height: 20px; /* Adjusted height for smaller screens */
+    top: -150px;
   }
 }
 
@@ -536,98 +526,6 @@ body {
 
   .card-text {
     font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 375px) {
-
-  /* Styles for iPhone 6/7/8 and similar devices */
-  #carousel-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-text {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 414px) {
-
-  /* Styles for iPhone 6/7/8 Plus and similar devices */
-  #carousel-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-title {
-    font-size: 1.3rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  /* Styles for most Android phones */
-  #carousel-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-title {
-    font-size: 1.4rem;
-  }
-
-  .card-text {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-
-  /* Styles for larger phone screens */
-  #carousel-container {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
-  }
-
-  .card-text {
-    font-size: 1.1rem;
   }
 }
 </style>
