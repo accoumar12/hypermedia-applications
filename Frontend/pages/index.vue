@@ -28,7 +28,7 @@
                 </router-link>
             </div>
             <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png"></a>
-            <a href="#numbers"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
+            <a href="#areasrep"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
             <img class="firstimg" src="~/assets/img/logo_transparent.png">
         </section>
         <section id="us">
@@ -170,7 +170,7 @@
                     </div>
                     <div class="content">
                         <div>
-                            <router-link to="/companies/27">
+                            <router-link to="/companies/27" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                             <p>Giving light to technology with one of the best trending companies in todays' market.
@@ -184,7 +184,7 @@
                     </div>
                     <div class="content">
                         <div>
-                            <router-link to="/companies/33">
+                            <router-link to="/companies/33" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                             <p>The top leading company in sportswear trusted on us to become the most wanted one.
@@ -198,7 +198,7 @@
                     </div>
                     <div class="content">
                         <div>
-                            <router-link to="/companies/38">
+                            <router-link to="/companies/38" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                             <p>Producing power from the support they gained from us and leading the energy market.
@@ -212,7 +212,7 @@
                     </div>
                     <div class="content">
                         <div>
-                            <router-link to="/companies/24">
+                            <router-link to="/companies/24" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                             <p>Being your insurance and health companion in international markets just like us are for our
@@ -223,8 +223,75 @@
                 </div>
             </div>
         </section>
-        <section class="areasrep">
+        <section id="areasrep">
             <h4 class="subtitle-midl">Leading in 4 directions</h4>
+            <div class="row-areas">
+                <!-- Column One -->
+                <div class="column">
+                    <router-link to="/technology" class="area-router">
+                        <div class="card-area">
+                            <div class="icon">
+                            </div>
+                            <h3>TECHNOLOGY</h3>
+                            <p>
+                                We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
+                                companies that are
+                                revolutionizing
+                                industries and disrupting traditional business models.
+                            </p>
+                        </div>
+                    </router-link>
+                </div>
+                <!-- Column Two -->
+                <div class="column">
+                    <router-link to="/healthcare" class="area-router">
+                        <div class="card-area">
+                            <div class="icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3>HEALTHCARE</h3>
+                            <p>
+                                We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
+                                    advancements</span> in medical
+                                technology, biopharmaceuticals, and healthcare services.
+                            </p>
+                        </div>
+                    </router-link>
+                </div>
+                <!-- Column Three -->
+                <div class="column">
+                    <router-link to="/consumer" class="area-router">
+                        <div class="card-area">
+                            <div class="icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h3>CONSUMER GOODS</h3>
+                            <p>
+                                We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
+                                consumer product spaces,in companies with <span class="highlight">innovative business
+                                    models</span>.
+                            </p>
+                        </div>
+                    </router-link>
+                </div>
+                <!-- Column Four -->
+                <div class="column">
+                    <router-link to="/sustainability" class="area-router">
+                        <div class="card-area">
+                            <div class="icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h3>SUSTAINABILITY</h3>
+                            <p>
+                                We aim to accelerate the transition to a greener future while <span
+                                    class="highlight">generating attractive returns</span>
+                                for our investor entrepreneurs
+                                who prioritize sustainability.
+                            </p>
+                        </div>
+                    </router-link>
+                </div>
+            </div>
         </section>
     </main>
 </template>
@@ -1164,7 +1231,7 @@ body {
     transition: 0.5s;
     transform-style: preserve-3d;
     overflow: hidden;
-    margin-right: 41px;
+    margin-left: 88px;
     margin-top: 45px;
 }
 
@@ -1231,6 +1298,7 @@ body {
 }
 
 .container .box .content h2 {
+
     color: #fff;
     transition: 0.5s;
     text-transform: uppercase;
@@ -1238,6 +1306,11 @@ body {
     font-size: 20px;
     transform: translateY(200px);
     transition-delay: 0.3s;
+}
+
+.read-more {
+    text-decoration: underline;
+    color: #1e9ec9;
 }
 
 .container .box:hover .content h2 {
@@ -1254,6 +1327,117 @@ body {
 
 .container .box:hover .content p {
     transform: translateY(0px);
+}
+
+.row-areas {
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.75em;
+    margin: 0.6em 0;
+    font-weight: 600;
+    color: #070024;
+}
+
+.column {
+    padding: 1em;
+}
+
+.card-area {
+    font-family: sans-serif;
+    padding: 3.1em 1.25em;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(15, 108, 126) 10px, transparent 10px);
+    background-repeat: no-repeat;
+    background-position: 0 0.62em;
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+    border-radius: 0.5em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.area-router {
+    text-decoration: none;
+}
+
+.card-area .icon {
+    object-fit: contain;
+    background-image: url('assets/img/area.png');
+    background-size: cover;
+    font-size: 2.5em;
+    height: 2em;
+    width: 2em;
+    margin: auto;
+    background-color: rgb(15, 108, 126);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+.icon:before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    border: 0.12em solid rgb(15, 108, 126);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+span.highlight {
+    background-color: #d9f3f3;
+}
+
+.card-area h3 {
+    font-size: 18px;
+    margin: 1em 0 1.4em 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #070024;
+}
+
+.card-area p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #625a71;
+}
+
+.card-area:hover {
+    background-position: 0;
+}
+
+.card-area:hover .icon:before {
+    height: 2.25em;
+    width: 2.25em;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        padding: 1em 7em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        padding: 1em;
+    }
+
+    .card-area {
+        padding: 2em 2em;
+    }
+
+    .column {
+        flex: 0 0 33.33%;
+        max-width: 22.33%;
+        padding: 0 1em;
+    }
 }
 
 @media (max-width: 768px) {
