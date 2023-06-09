@@ -305,8 +305,8 @@ export default async (models) => {
     const companySup10 = companySup[10] //await models.Company.create(personModel[10])
     const companySup11 = companySup[11] //await models.Company.create(personModel[11])
     const companySup14 = companySup[15] //await models.Company.create(personModel[14])
-    console.log('\n The solution issss \n',companySup14)
-    //console.log('\n The solution issss \n',companySup)
+    console.log('\n Debug who is this supervisor: \n',companySup14)
+    
     const CompanyModel = [
         {
             name: "UnitedHealth Group",
@@ -350,7 +350,7 @@ export default async (models) => {
             link: "https://www.cigna.com/",
             ceo: "David Cordani",
             image: "https://1000logos.net/wp-content/uploads/2020/07/Cigna-Logo-640x360.png",
-            MostRelevant: false,
+            MostRelevant: true,
         },
         {
             name: "Pfizer Inc.",
@@ -361,7 +361,7 @@ export default async (models) => {
             link: "https://www.pfizer.it/",
             ceo: "Albert Bourla",
             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Pfizer.svg/1200px-Pfizer.svg.png",
-            MostRelevant: true,
+            MostRelevant: false,
         },
         {
             name: "Microsoft",
@@ -372,7 +372,7 @@ export default async (models) => {
             link: "https://www.microsoft.com/it-it",
             ceo: "Satya Nadella",
             image: "https://www.pngplay.com/wp-content/uploads/1/Microsoft-Logo-Download-Free-PNG.png",
-            MostRelevant: true,
+            MostRelevant: false,
         },
         {
             name: "Dell Technologies, Inc",
@@ -383,7 +383,7 @@ export default async (models) => {
             link: "https://www.dell.com/it-it",
             ceo: "Michael Dell",
             image: "https://aeseurope.com/wp-content/uploads/2021/05/dell-technologies-vertical_logo.png",
-            MostRelevant: false,
+            MostRelevant: true,
         },
         {
             name: "Taiwan Semiconductor Manufacturing Co.",
@@ -504,23 +504,23 @@ export default async (models) => {
             link: "https://www.canadiansolar.com/",
             ceo: "Xiaohua Qu Ph.D.",
             image: "https://tandem-solar-systems.com/wp-content/uploads/2017/03/Canadian-Solar-logo.png",
-            MostRelevant: false,
+            MostRelevant: true,
         },
         {
             name: "JinkoSolar Holding Co",
             areas: "Sustainability",
-            companyId: 14,
+            companyId: companySup14.id,
             description: "JinkoSolar Holding Co., Ltd. engages in the manufacture of solar modules. It distributes solar products and sells its solutions and services to a diversified international utility, commercial and residential customers. The company was founded by Xian De Li, Kang Ping Chen, and Xian Hua Li on August 3, 2007 and is headquartered in Shangrao, China.",
             description2: "",
             link: "https://www.jinkosolar.com/en/",
             ceo: "Xiande Li",
             image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Jinko_Solar_logo.svg/1200px-Jinko_Solar_logo.svg.png",
-            MostRelevant: true,
+            MostRelevant: false,
         },
         {
             name: "Enel X",
             areas: "Sustainability",
-            companyId: 14,
+            companyId: companySup14.id,
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             description2: "",
             link: "https://www.enelx.com/",
