@@ -27,7 +27,6 @@ const props = defineProps(['image', 'subtitle', 'link', 'area']);
 }
 
 .row-c {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

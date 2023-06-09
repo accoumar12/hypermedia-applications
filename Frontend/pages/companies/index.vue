@@ -5,168 +5,124 @@
 <template>
     <main>
         <div class="containeri">
-            <div class="image-containeri">
-                <div class="image-wrapperi">
-                    <img src="~/assets/img/logoinv.png" style="width: 100%;height: 100%;">
+            <div class="col-md-4">
+                <div class="image-text-overlay text-middle-left">
+                    <p>
+                        <span class="overlay-title">Ventour investments</span><br>
+                        <span class="overlay-subtext">We have a track record of identifying and nurtuing some of the most
+                            innovative and dynamic
+                            startups in the world!</span><br>
+                        <span class="overlay-subsubtext"><em>*</em> Click the buttons to view all companies we have invested
+                            in, or
+                            select an investment area and click the buttons to filter.</span>
+
+                    <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all
+                            </button>
+                            <button @click="MR = true">Most Relevant Companies</button></a></div>
+                    </p>
+
                 </div>
 
             </div>
-            <div class="text-containeri">
-                <h1>Investing in the most promising startups with the potential to change the
-                    world! </h1>
+
+            <div class="row4-a">
+                <div class="title">
+                    <label for="all-team">
+                        <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
+                            checked>
+                        <h1 class="learn-more-2" style="color:#033f52">ALL COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
             </div>
-            <div class="text-containeri2">
-                <p>
-                    We have a track record of identifying and nurtuing some of the most innovative and dynamic
-                    startups in the world!
-                </p>
-            </div>
-        </div>
-        <div class="row4">
-            <div class="column41">
-                <div class="area-icons">
-                    <img src="~/assets/img/technology.png" alt="Tech">
+            <div class="row4">
+                <div class="column41">
+                    <div class="area-icons">
+                        <img src="~/assets/img/technology.png" alt="Tech">
+                    </div>
+                    <div class="counter" data-target="100"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/technology">
+                                <h1 style="color:#033f52">Technology Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Technology">
+                        <input type="radio" id="Technology" value="Technology" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
-                <div class="counter" data-target="100"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/technology">
-                            <h1 style="color:#033f52">Technology Investments</h1>
-                        </router-link></a>
+
+                <div class=" column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/health.png" alt="Healthcare">
+                    </div>
+                    <div class="counter" data-target="250"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/healthcare">
+                                <h1 style="color:#033f52">Healthcare Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Healthcare">
+                        <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
-                <label for="Technology">
 
 
-                    <input type="radio" id="Technology" value="Technology" name="Investments-categories" v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
-                </label>
-            </div>
+                <div class="column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/customer.png" alt="Goods">
+                    </div>
+                    <div class="counter" data-target="120"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/consumer">
+                                <h1 style="color:#033f52">Consumer Goods Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Consumer Goods">
 
+                        <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark" href="#"></span>
+                    </label>
 
-            <div class=" column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/health.png" alt="Healthcare">
                 </div>
-                <div class="counter" data-target="250"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/healthcare">
-                            <h1 style="color:#033f52">Healthcare Investments</h1>
-                        </router-link></a>
+
+                <div class="column4">
+                    <div class="area-icons">
+                        <img src="~/assets/img/sustainable.png" alt="Sustainability">
+                    </div>
+                    <div class="counter" data-target="270"></div>
+                    <div class="link-text">
+                        <a class="learn-more"><router-link to="/sustainability">
+                                <h1 style="color:#033f52">Sustainability Investments →</h1>
+                            </router-link></a>
+                    </div>
+                    <label for="Sustainability">
+
+                        <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
+                            v-model="areas">
+                        <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
+                        <span class="checkmark" href="#"></span>
+                    </label>
+
                 </div>
-                <label for="Healthcare">
-                    <input type="radio" id="Healthcare" value="Healthcare" name="Investments-categories" v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
-                </label>
-            </div>
 
-
-            <div class="column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/customer.png" alt="Goods">
-                </div>
-                <div class="counter" data-target="120"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/consumer">
-                            <h1 style="color:#033f52">Consumer Goods Investments</h1>
-                        </router-link></a>
-                </div>
-                <label for="Consumer Goods">
-
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods" name="Investments-categories"
-                        v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark" href="#"></span>
-                    <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                        <button @click="MR = true">Most Relevant Companies</button></a>
-                </label>
-
-            </div>
-
-            <div class="column4">
-                <div class="area-icons">
-                    <img src="~/assets/img/sustainable.png" alt="Sustainability">
-                </div>
-                <div class="counter" data-target="270"></div>
-                <div class="link-text">
-                    <a class="learn-more"><router-link to="/sustainability">
-                            <h1 style="color:#033f52">Sustainability Investments</h1>
-                        </router-link></a>
-                </div>
-                <label for="Sustainability">
-
-                    <input type="radio" id="Sustainability" value="Sustainability" name="Investments-categories"
-                        v-model="areas">
-                    <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
-                    <span class="checkmark" href="#"></span>
-                </label>
-
-            </div>
-            <div class="selection">
-                <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                    <button @click="MR = true">Most Relevant Companies</button></a>
             </div>
 
         </div>
         <section class="team-members-grid">
-            <div class="title"> <label for="all-team">
-                    ALL COMPANIES
-                    <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas" checked>
-                    <span class="checkmark"></span>
-                </label></div>
-            <a href="#title2"><button class="active" @click="MR = ''"> Show all </button>
-                <button @click="MR = true">Most Relevant Companies</button></a>
-            <!--
-            <div class="dropdown-grid-filter-container">
-                            <div class="dropdown-grid-filter grid-x align-middle">
-                <label for="Technology">
-                    
-                    <p> Technology Investments</p>
-                    <input type="radio" id="Technology" value="Technology"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-
-                <label for="Healthcare">
-                    
-                    <p>Healthcare Investments</p>
-                    <input type="radio" id="Healthcare" value="Healthcare"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>
-                <label for="Consumer Goods">
-                    
-                    <p>Consumer Goods Investments</p>
-                    <input type="radio" id="Consumer Goods" value="Consumer Goods"
-                                        name="Investments-categories" v-model="areas">
-                    <span class="checkmark"></span>
-                </label>  
-                <label for="Sustainability">
-                    <span class="checkmark">
-                    <p>Sustainability Investments</p>
-                    <input type="radio" id="Sustainability" value="Sustainability"
-                                        name="Investments-categories" v-model="areas">
-                    </span>
-                </label>
+            <div id="title2">PORTFOLIO SNAPSHOT
+                <div class="form-container">
+                    <label for="age-filter">Filter companies by name </label>
+                    <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
                 </div>
             </div>
-        -->
-            <div class="form-container">
-                <label for="age-filter">Filter companies by name </label>
-                <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
-            </div>
-            <div id="title2">PORTFOLIO SNAPSHOT</div>
-
-            <!-- <label for="all-areas">
-                                    ALL
-                                    <input type="radio" id="all-areas" value="" name="areas-categories" v-model="areas"
-                                        checked>
-                                    <span class="checkmark"></span>
-                                </label>-->
             <div class="row-c">
                 <div id="card-container">
                     <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
@@ -186,18 +142,13 @@
                         }}</span></button>
                     </div>
                 </div>
-                <div style="position=relative;display: flex; align-items: center; justify-content: center; height: 100%;">
+                <div style="position=relative; align-items: center; margin:5%; ">
                     <div class="right-text">
                         <p>{{ rightColumnText }}</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!--<div id="card-container">
-            <Card v-for="location of locations" :title="location.name" :subtitle="location.city"
-                :link="'/locations/' + location.id" />
-        </div>-->
-
     </main>
 </template>
 
@@ -308,7 +259,7 @@ export default {
     data() {
         return {
             areas: '',
-            leftColumnText: 'We are committed to helping our portfolio companies realize theri full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities.',
+            leftColumnText: 'We are committed to helping our portfolio companies realize their full potential. One of the key ways is by working closely with our companies to develop and execute a successful exit strategy. Our goal is to help our companies achieve a successful exit that maximizes returns for our investors and provides a strong foundation for future growth and opportunities. Take a look at our exit strategies in the buttons below:',
             rightColumnText: '',
             buttons: [
                 { id: 2, label: 'IPO', text: 'An Initial Public Offering is a process where a private company goes public and offers shares of stock to the public market. We prepare our companies for an IPO, including helping them build a strong management team, establishing governance and financial controls,and developing a compelling growth strategy. Our deep understanding of the public markets, combined with our network of investment bankers,allows us to guide our companies to achieve the best possible outcome.' },
@@ -324,25 +275,318 @@ export default {
         },
     },
 };
-//import { pbkdf2 } from 'crypto';
 
-/*
-    The defineNuxtComponent gets us access to the asyncData property.
-    This is the first function that is called by nuxt when the page is called.
-    We can use this to pre-load the data to make it available to the user.
-*/
-/*export default defineNuxtComponent({
-    async asyncData() {
-        // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-        const locations = await $fetch(useRuntimeConfig().public.serverURL + '/locations')
-
-        return {
-            locations
-        }
-    }
-})*/
 </script>
 <style scoped>
+/*First-intro styles*/
+.image-text-overlay {
+    width: 80%;
+    height: 225px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.overlay-title {
+    font-size: 60px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+}
+
+.overlay-subtext {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+
+}
+
+.overlay-subsubtext {
+    width: 70%;
+    font-size: 18px;
+    color: #646766;
+    display: block;
+}
+
+.overlay-subsubtext em {
+    color: red;
+}
+
+.text-middle-left {
+    display: table;
+}
+
+.text-middle-left p {
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    padding: 15px 20px 15px 20px;
+}
+
+.text-middle-left p {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.containeri {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.containeri::before {
+    content: "";
+    background: url('assets/img/logoinv.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 55%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.overlay-buttons {
+    margin-top: 2%;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.overlay-buttons button {
+    cursor: pointer;
+    color: #f6f9f9;
+    background-color: #033f52;
+    border: none;
+    padding: 2%;
+    font-size: 18px;
+    border: solid #bafefe;
+}
+
+.overlay-buttons button:hover {
+    cursor: pointer;
+    color: #f6f9f9;
+    background-color: #076b8a;
+}
+
+.col-md-4 {
+    position: relative;
+    width: 50%;
+    margin-top: 5%;
+    margin-right: 45%;
+}
+
+#title2 {
+    align-items: center;
+    padding-top: 1%;
+    padding-left: 45%;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 6;
+}
+
+/*Styles for the counter section*/
+.row4 {
+    margin-bottom: 5%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row4-a {
+    width: 92%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column4 {
+    position: relative;
+    background-size: 80%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+
+
+}
+
+.column4::before {
+    background: url('assets/img/areas.png') center center no-repeat;
+    content: "";
+    position: absolute;
+    background-size: 80%;
+    width: 90%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    opacity: 0.17;
+
+}
+
+.column41 {
+    padding-top: 2%;
+    position: relative;
+    background-size: 80%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hover-content p {
+    margin: 0;
+    color: #fff;
+    margin-top: 2%;
+    text-decoration: none;
+}
+
+.hover-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #033f52;
+}
+
+.column41::before {
+    background: url('assets/img/areas.png') center center no-repeat;
+    content: "";
+    position: absolute;
+    background-size: 80%;
+    width: 90%;
+    height: 100%;
+    flex-basis: 20%;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.07;
+}
+
+.area-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.area-icons img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.column4 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.column41 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.link-text {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.learn-more {
+    text-decoration: none;
+    font-size: 16px;
+    text-decoration-color: #033f52;
+    font-family: sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    position: left;
+}
+
+.learn-more-2 {
+    margin-left: 16%;
+    text-decoration: none;
+    font-size: 16px;
+    text-decoration-color: #033f52;
+    font-family: sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 4;
+
+}
+
+.learn-more a {
+    text-decoration: none;
+    font-size: 10px;
+}
+
+label>[type=checkbox],
+label>[type=radio] {
+    margin-right: 2rem;
+    -webkit-text-fill-color: #0e6b74;
+    margin: 1rem 1rem 0.2rem 0;
+    position: absolute;
+}
+
+/*Styles for the section of companies*/
+.team-members-grid {
+    background-color: rgba(233, 237, 237, 0.997);
+    background-position-x: center;
+    opacity: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    width: 20%;
+    position: relative;
+    font-weight: bold;
+}
+
+
+
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -395,249 +639,21 @@ input::placeholder {
     color: #b2b7b5;
 }
 
-.image-container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    border-color: none;
-    border-style: none;
-    margin-left: 5rem;
-}
-
-.image-container img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    width: 80%;
-}
-
-.image-container h2 {
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-.image-container:hover img {
-    opacity: 0;
-}
-
-.image-container:hover h2 {
-    opacity: 0;
-}
-
-.clickable-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #77c7ac;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-style: solid;
-    border-radius: 20%;
-    border-color: #77c7ac;
-}
-
-.clickable-image-container img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.clickable-image-container:hover {
-    opacity: 1;
-}
-
-.clickable-image-container:hover img {
-    opacity: 1;
-}
-
-.image-container:hover .clickable-image-container {
-    opacity: 1;
-}
-
-.hover-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-.hover-content p {
-    margin: 0;
-    color: #fff;
-    margin-top: 2%;
-    text-decoration: none;
-}
-
-.hover-content img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-}
-
-.containeri {
-    background-color: #033f52;
-    padding-top: 6%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.image-containeri {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    align-items: stretch;
-    max-width: 100%;
-}
-
-.image-wrapperi {
-    border-radius: 100%;
-    border: 3px solid #fff;
-    overflow: hidden;
-    padding-top: 100%;
-    position: relative;
-    width: 20rem;
-    height: 0.9rem;
-    margin: 0 auto;
-}
-
-.image-wrapperi img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-}
-
-.text-containeri {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-containeri2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-containeri2 p {
-    width: 30%;
-    font-size: 24px;
-    font-family: sans-serif;
-    text-align: center;
-    color: white;
+.row4.button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
 }
 
 
-.text-containeri h1 {
-    font-size: 28px;
-    font-family: sans-serif;
-    margin-bottom: 0.5 rem;
-    color: rgb(242, 249, 246);
-}
-
-.column4 {
-
-    position: relative;
-    background-size: 80%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-    border-left: 1px solid black;
-
-}
-
-.column4::before {
-    background: url('assets/img/areas.png') center center no-repeat;
-    content: "";
-    position: absolute;
-    background-size: 80%;
-    width: 90%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    opacity: 0.07;
-
-
-}
-
-.column41 {
-    padding-top: 2%;
-    position: relative;
-    background-size: 80%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-}
-
-
-.counter {
-    font-size: 3rem;
-    font-weight: bolder;
-    color: #033f52;
-}
-
-.column41::before {
-    background: url('assets/img/areas.png') center center no-repeat;
-    content: "";
-    position: absolute;
-    background-size: 80%;
-    width: 90%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.8);
-
-    opacity: 0.07;
-
-}
-
-
-
-.row4 {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
+/*Exit Strategies section styles*/
 .row41 {
     background: url('assets/img/exit.png') no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .row41 .content {
@@ -647,139 +663,44 @@ input::placeholder {
     width: 100%;
 }
 
-.area-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 0;
-    padding-bottom: 50%;
-    position: relative;
-}
-
-.area-icons img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-.column4 p {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-
-.column41 p {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-}
-
-
-.learn-more {
-    text-decoration: none;
-    font-size: 16px;
-    text-decoration-color: #033f52;
-    font-family: sans-serif;
-    font-size: large;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    position: left;
-}
-
-.learn-more a {
-    text-decoration: none;
-    font-size: 10px;
-}
-
-label>[type=checkbox],
-label>[type=radio] {
-    margin-right: 2rem;
-    -webkit-text-fill-color: #0e6b74;
-    margin: 1rem 1rem 0.2rem 0;
-    position: absolute;
-}
-
-.team-members-grid {
-    background-color: rgba(233, 237, 237, 0.997);
-    background-position-x: center;
-    opacity: 100%;
-    position: relative;
-    width: 100%;
-}
-
-.title {
-    padding-top: 4%;
-    padding-left: 44.8%;
-    position: relative;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-#title2 {
-    padding-top: 1%;
-    padding-left: 45.5%;
-    position: relative;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: sans-serif;
-    z-index: 5;
-}
-
 .text-block {
     position: relative;
     font-family: sans-serif;
-    font-size: 3rem;
+    font-size: 40px;
     color: white;
     padding-left: 8%;
     padding-top: 5%;
     padding-right: 10%;
 }
 
-.container-fluid {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .buttons-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding-left: 5%;
+    width: 60%;
     padding-bottom: 2%;
 }
 
 .row41 .left-text {
-    margin-top: 3%;
+    margin-top: 2%;
     width: 35%;
     font-family: sans-serif;
-    font-size: 1.1rem;
+    font-size: 20px;
     color: white;
 }
 
 .buttons {
-    padding-top: 5%;
     padding-bottom: 2%;
-    display: flex;
     width: 40%;
     height: 100%;
-    gap: 2%;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+
 }
 
 .buttons button {
     width: 150px;
     height: 2.5rem;
-    margin-right: 10%;
+    margin: 2%;
     font-size: 18px;
     text-decoration-color: white;
     cursor: pointer;
@@ -791,30 +712,283 @@ label>[type=radio] {
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
-.row4.button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 10%;
+button:hover {
+    background-color: #5ecbde;
+}
+
+.right-text {
+    position: relative;
+    padding: 1%;
+    background-color: #0e6b74;
+    border-radius: 5%;
+    padding-left: 1%;
+    width: 80%;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #f6f9f9;
+}
+
+.row41 {
+    background: url('assets/img/exit.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.row41 .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-block {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-left: 8%;
+    padding-top: 5%;
+    padding-right: 10%;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 60%;
+    padding-bottom: 2%;
+}
+
+.row41 .left-text {
+    margin-top: 3%;
+    width: 35%;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.buttons {
+    padding-bottom: 2%;
+    width: 40%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.buttons button {
+    width: 150px;
+    height: 2.5rem;
+    margin: 2%;
+    font-size: 18px;
+    text-decoration-color: white;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #0e6b74;
+    border: 2px solid #0e6b74;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
     background-color: #5ecbde;
 }
 
-.right-text {
-    background-color: rgba(18, 143, 165, 0.7);
-    border-radius: 5%;
-    padding-left: 1%;
-    width: 33%;
-    font-family: sans-serif;
-    font-size: 1.1rem;
-    color: #f6f9f9;
+
+/* Media Queries */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4 {
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
-.col p {
-    font-size: 18px;
-    line-height: 1.5;
+@media (max-width: 768px) {
+    .text-block {
+        font-size: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 80%;
+    }
+
+    .row41 .left-text {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .buttons button {
+
+        height: 2rem;
+        margin: 1%;
+        font-size: 16px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .image-text-overlay {
+        width: 70%;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-block {
+        font-size: 24px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 80%;
+    }
+
+    .row41 .left-text {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .buttons button {
+        height: 1.5rem;
+        margin: 1%;
+        font-size: 14px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-block {
+        font-size: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .buttons button {
+        width: 120px;
+        height: 1.5rem;
+        margin: 1%;
+        font-size: 14px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 460px) {
+    .image-text-overlay {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-block {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 1.25rem;
+        margin: 1%;
+        font-size: 12px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .image-text-overlay {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .text-block {
+        font-size: 16px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .buttons-container {
+        padding-left: 2%;
+        width: 90%;
+    }
+
+    .row41 .left-text {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 1rem;
+        margin: 1%;
+        font-size: 10px;
+    }
+
+    .right-text {
+        padding: 0.5%;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .image-text-overlay {
+        width: 60%;
+    }
+
+    .overlay-title {
+        font-size: 20px;
+    }
+
+    .overlay-subtext {
+        font-size: 10px;
+    }
+
+    .overlay-subsubtext {
+        font-size: 10px;
+    }
 }
 </style>
