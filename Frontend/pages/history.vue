@@ -562,6 +562,23 @@ h2 {
 /* Media Queries */
 
 @media (max-width: 768px) {
+  .header-center {
+    background-color: white;
+    color: black;
+    margin-top: 10%;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+    position: relative;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 200;
+    font-family: sans-serif;
+    mix-blend-mode: screen;
+    }
+  .h2{
+    font-size: 48px;
+    font-weight: 200;
+  }
   #carousel-container {
     width: 90%;
   }
@@ -609,7 +626,7 @@ h2 {
 
 @media screen and (max-width: 600px) {
   .co-container {
-    max-width: 100%;
+    max-width: 90%;
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -641,7 +658,7 @@ h2 {
 
 @media screen and (max-width: 400px) {
   .co-container {
-    max-width: 100%;
+    max-width: 80%;
     padding-right: 10px;
     padding-left: 10px;
   }
