@@ -118,7 +118,7 @@
 
 <style>
 .container-f {
-    height: 200px;
+    height: 250px;
 }
 @media screen and (max-width: 768px) {
     .container-f {
@@ -149,7 +149,8 @@ h3 {
 .rowf {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 10px;
     align-items: center;
     height: 20%;
 }
@@ -208,14 +209,14 @@ h3 {
 .footer-dark h3 {
     margin-top: 0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .footer-dark ul {
     padding: 0;
     list-style: none;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 0;
 }
 
