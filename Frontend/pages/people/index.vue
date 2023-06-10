@@ -52,81 +52,6 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="container custom-container">
-            <div>
-                <div class="row0">
-                    <a href="#team-members-grid">
-                        <h1 class="ourt-intro">Meet Our Team</h1>
-                    </a>
-                </div>
-            </div>
-        </section>
-    -->
-        <section class="department-section">
-                <div v-if="!isMobile">
-                    <desktop> 
-                        <div class="row">
-                            <div class="card1o">
-                                <h3>MANAGEMENT DEPARTMENT</h3>
-                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                    provide
-                                    leadership to drive the company's growth and success.</p>
-                            </div>
-                            <div class="card1o">
-                                <h3>INVESTMENT DEPARTMENT</h3>
-                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                    investment decisions
-                                    to optimize the company's financial performance.</p>
-                            </div>
-                            <div class="card1o">
-                                <h3>OPS & FINANCE DEPARTMENT</h3>
-                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                    while maintaining
-                                    quality standards to support the company's overall objectives.</p>
-                            </div>
-                            <div class="card1o">
-                                <h3>ADVISORING DEPARTMENT</h3>
-                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                    key decisions,
-                                    helping the company navigate challenges and capitalize on opportunities.</p>
-                            </div>
-                        </div>
-                    </desktop>
-                </div>
-                <div v-else>
-                    <mobile>
-                        <div class="row18">
-                            <div class="card1o">
-                                <h3>MANAGEMENT DEPARTMENT</h3>
-                                <p class="small-a">They develop and implement strategic plans, set organizational goals, and
-                                    provide
-                                    leadership to drive the company's growth and success.</p>
-                            </div>
-                            <div class="card1o">
-                                <h3>INVESTMENT DEPARTMENT</h3>
-                                <p class="small-a">They conduct thorough research, assess risk factors, and make informed
-                                    investment decisions
-                                    to optimize the company's financial performance.</p>
-                            </div>
-                        </div>
-                        <div class="row18">
-                            <div class="card1o">
-                                <h3>FINANCE DEPARTMENT</h3>
-                                <p class="small-a">They monitor cash flow, manage resources, and implement cost-saving measures
-                                    while maintaining
-                                    quality standards to support the company's overall objectives.</p>
-                            </div>
-                            <div class="card1o">
-                                <h3>ADVISORING DEPARTMENT</h3>
-                                <p class="small-a">They offer valuable insights, assess risks, and provide recommendations on
-                                    key decisions,
-                                    helping the company navigate challenges and capitalize on opportunities.</p>
-                            </div>
-                        </div>
-                    </mobile>
-                </div>
-            </section>
-
 
 <section id="team-members-grid">
             <div class="grid-container">
@@ -618,7 +543,7 @@ section {
 }
 
 #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.1;
     font-family: sans-serif;
     color: #0e6b74;
