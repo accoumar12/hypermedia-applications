@@ -580,7 +580,7 @@ label>[type=radio] {
 
 @media screen and (max-width: 600px) {
     .co-container {
-        max-width: 100%;
+        max-width: 95%;
         padding-right: 10px;
         padding-left: 10px;
     }
