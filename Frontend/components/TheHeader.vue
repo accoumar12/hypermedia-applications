@@ -178,6 +178,10 @@ export default {
             navigator.userAgent
           );
         },
+        closeNavbar() {
+          this.navOpen = false; // Close the navbar
+          this.navOpen2 = false; // Close the navbar
+        },
         
     },
     mounted() {
@@ -186,6 +190,12 @@ export default {
             if (!event.target.closest(".search")) {
                 this.isSearchExpanded = false;
             }
+        });
+        // Add a navigation guard to close the navbar before each route change
+        this.$router.beforeEach((to, from, next) => {
+          this.navOpen = false; // Close the navbar
+          this.navOpen2 = false; // Close the navbar
+          next(); // Proceed to the next route
         });
     },
 };

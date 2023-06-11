@@ -429,6 +429,14 @@ h2 {
   text-transform: uppercase;
   inset: auto auto 220px 30px;
 }
+/* Responsive modifications */
+@media (max-width: 767px) {
+  .card-o h2 {
+    font-size: 18px;
+    inset: auto auto 120px 15px;
+    transition: transform 0.1s ease-in, font-size 0.3s ease-in, inset 0.3s ease-in;
+  }
+}
 
 .card-o .p,
 .card-o .a {
