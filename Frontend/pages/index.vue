@@ -62,7 +62,7 @@
                 <div class="column-right">
                     <div class="row-container">
                         <div class="row-top">
-                            <div class="card card1">
+                            <div class="card card11">
                                 <img class="icon-circle" src="~/assets/img/innovation.png">
                                 <h3>Empowering Innovation</h3>
                                 <p>Innovation is at the core of everything we do. We actively
@@ -339,7 +339,7 @@
     flex-basis: 48%;
 }
 
-.card1 {
+.card11 {
     background-color: rgb(15, 108, 126);
 }
 
@@ -355,7 +355,7 @@
     background-color: #d9f3f3;
 }
 
-.card1,
+.card11,
 .card3,
 .card4,
 .card2 {
