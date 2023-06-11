@@ -2,115 +2,102 @@
     Home page
 -->
 <template>
-    <main id="back-h">
-        <section class="homeintro">
-            <div class="content2">
-                <p class="content__container__text">
-                    Fly with us to a journey of growth!
-                </p>
-                <div class="content">
+    <main>
+        <section class="responsive-section1">
+            <div class="column-container">
+                <div class="column-left2">
                     <div class="content__container">
-                        <p class="content__container__text">
-                            We are
-                        </p>
                         <ul class="content__container__list">
-                            <li class="content__container__list__item">inovation !</li>
-                            <li class="content__container__list__item">power !</li>
-                            <li class="content__container__list__item">potential !</li>
+                            <li class="content__container__list__item">Inovation !</li>
+                            <li class="content__container__list__item">Power !</li>
+                            <li class="content__container__list__item">Potential !</li>
                             <li class="content__container__list__item">VenTour !</li>
                         </ul>
                     </div>
+                    <h2> Fly with us to a journey of growth!</h2>
+                    <p class="section-text4">Transforming the investment landscape and fueling inovation.<br>
+                        Our focus is your success!</p>
+                    <router-link to="/history" class="sec-tex">
+                        <p class="section-text41">LEARN MORE</p>
+                    </router-link>
                 </div>
-                <p class="section-text4">Transforming the investment landscape and fueling inovation.<br>
-                    Our focus is your success.</p>
-                <router-link to="/history" class="sec-tex">
-                    <p class="section-text4">LEARN MORE</p>
-                </router-link>
+                <div class="column-right">
+                    <div class="row-container">
+                        <div class="row-top1">
+                            <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png"></a>
+                            <a href="#areasrep"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
+                        </div>
+                        <div class="row-bottom1">
+                            <img class="firstimg" src="~/assets/img/logo_transparent.png">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png"></a>
-            <a href="#areasrep"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
-            <img class="firstimg" src="~/assets/img/logo_transparent.png">
         </section>
-        <section id="us">
-            <div class="us-left-col">
-                <div class="left-layout">
+        <section class="responsive-section">
+            <div class="column-container">
+                <div class="column-left">
                     <h5 class="u-section-text">why ventour</h5>
-                    <h2 class="u-section-text2">What do we represent?</h2>
-                    <p class="u-section-text3">"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
+                    <h2>What do we represent?</h2>
+                    <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
                         the
                         spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
                         venture
                         capital firm, we specialize in providing crucial support and funding to early-stage and
                         high-growth
-                        companies that are reshaping industries and driving forward societal progress. We understand
+                        companies that are reshaping industries and driving forward societal progress. <br> <br>We
+                        understand
                         that
                         the journey of transforming groundbreaking ideas into successful businesses can be challenging,
                         which is why we strive to be more than just financial backers. Our mission is to be your
                         strategic
                         partner, offering not only capital but also expertise, guidance, and an extensive network of
-                        industry connections. </p>
-                    <router-link to="/contact">
-                        <a class="us-button">join us</a>
-                    </router-link>
+                        industry connections.</p>
+                    <div class="sec-butt">
+                        <router-link to="/contact">
+                            <a class="us-button">join us</a>
+                        </router-link>
+                    </div>
                 </div>
-            </div>
-            <div class="us-right-col">
-                <div class="us-right-col1-layout">
-                    <div class="us-right-col1-layout-row">
-                        <div class="us-right-col1">
-                            <div class="us-right-col1-layout2">
-                                <div class="us-right-col1-layout2-card-1">
-                                    <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="~/assets/img/innovation.png">
-                                        <h4 class="us-text1">Empowering Innovation</h4>
-                                        <p class="us-text2">Innovation is at the core of everything we do. We actively
-                                            seek
-                                            out the most innovative and disruptive ideas across a wide range of
-                                            industries,
-                                            from technology and healthcare to energy and beyond. </p>
-                                    </div>
-                                </div>
+                <div class="column-right">
+                    <div class="row-container">
+                        <div class="row-top">
+                            <div class="card card1">
+                                <img class="icon-circle" src="~/assets/img/innovation.png">
+                                <h3>Empowering Innovation</h3>
+                                <p>Innovation is at the core of everything we do. We actively
+                                    seek
+                                    out the most innovative and disruptive ideas across a wide range of
+                                    industries,
+                                    from technology and healthcare to energy and beyond. </p>
                             </div>
-                            <div class="us-right-col1-layout4">
-                                <div class="us-right-col1-layout2-card-2">
-                                    <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="~/assets/img/fuel.png">
-                                        <h4 class="us-text1">Fuelling growth</h4>
-                                        <p class="us-text2">We believe in the transformative power of ideas.We are a
-                                            leading
-                                            venture capital firm dedicated to fueling the growth of groundbreaking
-                                            startups
-                                            and empowering them to reach their full potential. </p>
-                                    </div>
-                                </div>
+                            <div class="card card2">
+                                <img class="icon-circle" src="~/assets/img/fuel.png">
+                                <h3>Fuelling growth</h3>
+                                <p>We believe in the transformative power of ideas.We are a
+                                    leading
+                                    venture capital firm dedicated to fueling the growth of groundbreaking
+                                    startups
+                                    and empowering them to reach their full potential.</p>
                             </div>
                         </div>
-                        <div class="us-right-col1">
-                            <div class="us-right-col1-layout2">
-                                <div class="us-right-col1-layout2-card-3">
-                                    <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="~/assets/img/unlock.png">
-                                        <h4 class="us-text1">Unlocking potential</h4>
-                                        <p class="us-text2">We partner with visionary entrepreneurs and startups at
-                                            every
-                                            stage of their journey, providing financial support, but also
-                                            invaluable expertise, resources, and a vast network of industry connections.
-                                        </p>
-                                    </div>
-                                </div>
+                        <div class="row-bottom">
+                            <div class="card card3">
+                                <img class="icon-circle" src="~/assets/img/unlock.png">
+                                <h3>Unlocking potential</h3>
+                                <p>We partner with visionary entrepreneurs and startups at
+                                    every
+                                    stage of their journey, providing financial support, but also
+                                    invaluable expertise, resources, and a vast network of industry connections.</p>
                             </div>
-                            <div class="us-right-col1-layout4">
-                                <div class="us-right-col1-layout2-card-4">
-                                    <div class="us-right-col1-layout3">
-                                        <img class="icon-circle" src="~/assets/img/worldwide.png">
-                                        <h4 class="us-text1">Global Reach, Local Impact</h4>
-                                        <p class="us-text2">We are rooted in
-                                            startups in every country. Our experts
-                                            combine deep industry knowledge with a passion for supporting entrepreneurs.
-                                            We create a dynamic environment that drives
-                                            positive change. </p>
-                                    </div>
-                                </div>
+                            <div class="card card4">
+                                <img class="icon-circle" src="~/assets/img/worldwide.png">
+                                <h3>Global Reach, Local Impact</h3>
+                                <p>We are rooted in
+                                    startups in every country. Our experts
+                                    combine deep industry knowledge with a passion for supporting entrepreneurs.
+                                    We create a dynamic environment that drives
+                                    positive change. </p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +143,6 @@
                                     market filled with promising opportunities.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -299,47 +285,113 @@
 
 <style>
 /*Intro Home Page Style*/
-.homeintro {
+.responsive-section1 {
+    background-color: #d9f3f3;
+    display: flex;
+    justify-content: center;
+}
+
+.responsive-section {
+    display: flex;
+    justify-content: center;
+}
+
+.column-container {
+    margin-left: 12%;
+    margin-right: 10%;
+    display: flex;
     width: 100%;
-    margin-bottom: 8%;
 }
 
-.content {
-    position: relative;
-    height: 180px;
-    overflow: hidden;
+.column-right {
+    width: 50%;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.row-top,
+.row-bottom {
+    gap: 5%;
     padding: 20px;
-    font-family: sans-serif;
-    font-size: 25px;
-    line-height: 40px;
-    color: rgb(15, 108, 126);
-    z-index: 2;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.content2 {
-    left: 12%;
-    width: 40%;
-    position: relative;
-    font-weight: bold;
-    top: 100px;
-    height: 135px;
-    font-family: sans-serif;
-    font-size: 80px;
-    line-height: 100%;
-    color: rgb(15, 108, 126);
+.row-top1,
+.row-bottom1 {
+    gap: 5%;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.card {
+    width: 60%;
+    background-color: white;
+    padding: 10px;
+    flex-basis: 48%;
+}
+
+.card1 {
+    background-color: rgb(15, 108, 126);
+}
+
+.card2 {
+    background-color: #9fb7b7;
+}
+
+.card3 {
+    background-color: #9fb7b7;
+}
+
+.card4 {
+    background-color: #d9f3f3;
+}
+
+.card1,
+.card3,
+.card4,
+.card2 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    margin: 20px auto 0 0;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .column-container {
+        flex-direction: column;
+    }
+
+    .column-left,
+    .column-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .card {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+}
 
 .content__container {
     font-weight: 600;
     overflow: hidden;
     height: 44px;
-    padding: 0 26px;
     position: relative;
 }
 
-
 .content__container__text {
+    font-family: sans-serif;
+    font-size: 30px;
     display: inline;
     float: left;
     margin: 0;
@@ -347,44 +399,42 @@
 
 /* Media Query for phones */
 @media screen and (max-width: 480px) {
-  .homeintro {
-    margin-bottom: 4%; /* Adjusted margin for smaller screens */
-  }
+    .content {
+        font-size: 20px;
+        line-height: 30px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
 
-  .content {
-    font-size: 20px; /* Adjusted font size for smaller screens */
-    line-height: 30px; /* Adjusted line height for smaller screens */
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+    .content2 {
+        width: 60%;
+        font-size: 60px;
+        top: 80px;
+        height: 100px;
+        font-size: 25px;
+        display: block;
+        margin: 0 auto;
+    }
 
-  .content2 {
-    width: 60%; /* Adjusted width for smaller screens */
-    font-size: 60px; /* Adjusted font size for smaller screens */
-    top: 80px; /* Adjusted positioning */
-    height: 100px; /* Adjusted height for smaller screens */
-    font-size: 25px;
-  }
+    .content__container {
+        height: 32px;
+        padding: 0 16px;
+        display: block;
+    }
 
-  .content__container {
-    height: 32px; /* Adjusted height for smaller screens */
-    padding: 0 16px; /* Adjusted padding for smaller screens */
-  }
-
-  .content__container__text {
-    font-size: 16px; /* Adjusted font size for smaller screens */
-  }
+    .content__container__text {
+        font-size: 16px;
+    }
 }
-
-
 
 .content__container__list {
     margin-top: 0;
-    padding-left: 100px;
     text-align: left;
     list-style: none;
-
+    font-size: 42px;
+    font-family: sans-serif;
     -webkit-animation-name: change;
     -webkit-animation-duration: 10s;
     -webkit-animation-iteration-count: infinite;
@@ -583,50 +633,71 @@
 }
 
 .section-text4 {
+    width: 30%;
     padding-right: 15%;
     font-size: 24px;
     line-height: 120%;
     z-index: 3;
 }
 
+.section-text41 {
+    padding-right: 15%;
+    font-size: 24px;
+    line-height: 120%;
+    z-index: 3;
+}
+
+.section-text41:hover {
+    color: #225160;
+}
+
 .firstimg {
     position: relative;
-    width: 30%;
-    left: -10.5%;
+    width: 50%;
+    left: 35%;
 }
 
 .firstimg2 {
+    top: 50%;
     cursor: pointer;
     position: relative;
     left: 26%;
-    width: 15%;
+    width: 100%;
+    height: auto;
     z-index: 2;
-    box-shadow: 0 2px 0px rgba(200, 195, 195, 0.5);
 }
 
 .firstimg3 {
+    top: 50%;
     cursor: pointer;
     position: relative;
     left: 13%;
-    width: 15%;
+    width: 100%;
+    height: auto;
     z-index: 2;
-    box-shadow: 0 2px 0px rgba(200, 195, 195, 0.5);
+}
+
+.column-left2 {
+    padding-top: 10%;
+    width: 50%;
+    padding-right: 30px;
+}
+
+.column-left2 p {
+    width: 40%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 120%;
+}
+
+.column-left2 h2 {
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: 700;
 }
 
 /*Section two*/
-#us {
-    width: 100%;
-    height: 40%;
-    background-color: #ffffff;
-    justify-content: center;
-    display: flex;
-}
-
-.us-left-col {
-    width: 40%;
-    min-height: 836px;
-    margin: 58px auto 0 0;
-}
 
 .left-layout {
     font-family: 'Open Sans', sans-serif;
@@ -638,18 +709,32 @@
 }
 
 .u-section-text {
+    color: #1e9ec9;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
-    margin: 0% 0 0;
+    font-weight: 1000;
 }
 
-.u-section-text2 {
-    font-size: 60px;
+.column-left {
+    padding-top: 6%;
+    width: 50%;
+}
+
+.column-left h2 {
+    font-family: sans-serif;
+    font-size: 40px;
     font-weight: 700;
-    margin: 12px 0 0;
+}
+
+.column-left p {
+    width: 70%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 120%;
+    padding-bottom: 2%;
 }
 
 .u-section-text3 {
@@ -658,70 +743,23 @@
     margin: 28px 0 0;
 }
 
-
-@media screen and (max-width: 480px) {
-  .section-text4 {
-    padding-right: 10%; /* Adjusted padding for smaller screens */
-    font-size: 20px; /* Adjusted font size for smaller screens */
-  }
-
-  .firstimg {
-    width: 40%; /* Adjusted width for smaller screens */
-    left: -25%; /* Adjusted left position for smaller screens */
-  }
-
-  .firstimg2 {
-    width: 25%; /* Adjusted width for smaller screens */
-    right: 10%; /* Adjusted left position for smaller screens */
-  } 
-  .firstimg3 {
-    width: 25%; /* Adjusted width for smaller screens */
-    left: 10%; /* Adjusted left position for smaller screens */
-  }
-
-  #us {
-    height: auto; /* Adjusted height to accommodate content */
-    position: absolute;
-  }
-
-  .us-left-col {
-    width: 100%; /* Adjusted width to occupy full width */
-    margin: 20px auto; /* Adjusted margin for centering */
-    position: absolute;
-  }
-
-  .left-layout {
-    padding: 5% 5% 0; /* Adjusted padding for smaller screens */
-  }
-
-  .u-section-text {
-    font-size: 16px; /* Adjusted font size for smaller screens */
-    line-height: 20px; /* Adjusted line height for smaller screens */
-  }
-
-  .u-section-text2 {
-    font-size: 32px; /* Adjusted font size for smaller screens */
-    margin: 10px 0 0; /* Adjusted margin for smaller screens */
-  }
-
-  .u-section-text3 {
-    font-size: 16px; /* Adjusted font size for smaller screens */
-    margin: 20px 0 0; /* Adjusted margin for smaller screens */
-  }
-}
-
-
-
-
 .sec-tex p {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     font-size: 16px;
-    color: rgb(15, 108, 126);
+    color: rgb(11 11 11);
+}
+
+.sec-butt {
+    width: 100%;
+}
+
+.sec-butt a {
+    text-decoration: none;
 }
 
 .us-button {
-    position: absolute;
+    position: relative;
     text-decoration: none;
     border-style: none;
     font-weight: 700;
@@ -729,7 +767,7 @@
     font-size: 1.125rem;
     letter-spacing: 2px;
     background-image: none;
-    margin: 26px 9px 12px 80px;
+    margin-left: 20%;
     padding: 15px 46px 15px 45px;
     color: #060606 !important;
     background-color: #d9f3f3 !important;
@@ -741,138 +779,11 @@
     background-color: rgb(15, 108, 126) !important;
 }
 
-.us-right-col1 {
-    justify-content: flex-end;
-    margin: -15px;
-    box-sizing: border-box;
-    z-index: 5;
-    display: flex;
-}
-
-.us-right-col1-layout {
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 100%;
-    max-width: 100%;
-    display: flex;
-}
-
-.us-right-col1-layout-row {
-    flex: 1 0 50%;
-    max-width: 100%;
-}
-
-.us-right-col {
-    padding-top: 6%;
-    width: 50%;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-.us-right-col1-layout2 {
-    border: 15px solid transparent;
-    color: #111111;
-
-    flex: 1;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout4 {
-    padding-top: 80px;
-    margin-left: auto;
-    min-height: 367px;
-    border: 15px solid transparent;
-    color: #111111;
-    flex: 1;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout2-card-1 {
-    background-color: rgb(15, 108, 126);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    flex: 1;
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout2-card-2 {
-    background-color: #9fb7b7;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    flex: 1;
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout2-card-3 {
-    background-color: #9fb7b7;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    flex: 1;
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout2-card-4 {
-    background-color: #d9f3f3;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    flex: 1;
-    max-width: 80%;
-    box-sizing: border-box;
-}
-
-.us-right-col1-layout3 {
-    padding: 30px;
-    justify-content: center;
-}
-
 .icon-circle {
     height: 75px;
     width: 75px;
     background-image: none;
     margin: 0 auto 0 0;
-}
-
-.us-text1 {
-    font-size: 18px;
-    margin: 20px auto 0 0;
-}
-
-.us-text2 {
-    line-height: 1.8;
-    font-style: italic;
-    margin: 20px auto 0 0;
-}
-
-@media (max-width: 768px) {
-  .us-right-col1-layout {
-    flex-direction: column;
-  }
-
-  .us-right-col1-layout-row {
-    flex: 1 0 100%;
-  }
-
-  .us-right-col {
-    width: 100%;
-  }
-
-  .us-right-col1-layout4 {
-    padding-top: 40px;
-  }
-
-  .us-right-col1-layout2-card-1,
-  .us-right-col1-layout2-card-2,
-  .us-right-col1-layout2-card-3,
-  .us-right-col1-layout2-card-4 {
-    max-width: 100%;
-  }
 }
 
 /*Section three*/
@@ -885,10 +796,27 @@
 }
 
 .midl-container {
+    background-image: url("~/assets/img/wepik-export-202306111838401U6j.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     margin: 0 auto;
     box-sizing: border-box;
     display: block;
+}
+
+.midl-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 2;
+    z-index: -1;
 }
 
 .repeater {
@@ -901,7 +829,7 @@
 .first-rep {
     border-radius: 5% !important;
     position: relative;
-    max-width: 50% !important;
+    max-width: 28% !important;
     transition-duration: inherit;
     max-width: 80%;
     margin-left: 12%;
@@ -910,19 +838,19 @@
 .first-rep2 {
     border-radius: 5% !important;
     position: relative;
-    max-width: 50% !important;
+    max-width: 28% !important;
     transition-duration: inherit;
     max-width: 80%;
-    margin-left: 30%;
+    margin-left: 18%;
 }
 
 .first-rep3 {
     border-radius: 5% !important;
     position: relative;
-    max-width: 50% !important;
+    max-width: 28% !important;
     transition-duration: inherit;
     max-width: 80%;
-    margin-left: 50%;
+    margin-left: 40%;
 }
 
 .rep-icon img {
@@ -976,7 +904,7 @@
     margin: 12px 0 0;
     position: relative;
     max-width: 100%;
-    padding: 0% 60% 0 12%;
+    padding: 2% 60% 0 12%;
 }
 
 .midl-list {
@@ -1111,6 +1039,7 @@
 
 /*Section areas*/
 .row-areas {
+    margin-bottom: 2%;
     margin-left: 10%;
     margin-top: 2%;
     display: flex;
@@ -1199,22 +1128,7 @@ span.highlight {
     width: 2.25em;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-@media screen and (min-width: 768px) {
-    section {
-        padding: 1em 7em;
-    }
-}
-
 @media screen and (min-width: 992px) {
-    section {
-        padding: 1em;
-    }
 
     .card-area {
         padding: 2em 2em;
@@ -1227,9 +1141,185 @@ body {
     }
 }
 
+
+
 @media (max-width: 768px) {
-    .rep-items {
-        flex-basis: 100%;
+
+    .firstimg2,
+    .firstimg3 {
+        width: 30%;
+        left: 35%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .content__container {
+        height: auto;
+        padding: 10px;
+    }
+
+    .content__container__text {
+        font-size: 20px;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .content__container__list {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .content__container__list__item {
+        line-height: 26px;
+    }
+}
+
+/* Responsive adjustments for larger screens */
+
+@media screen and (min-width: 301px) and (max-width: 768px) {
+    .content__container {
+        height: auto;
+        padding: 10px;
+    }
+
+    .content__container__text {
+        font-size: 24px;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .content__container__list {
+        width: 100%;
+        padding-top: 10%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content__container__list__item {
+        line-height: 30px;
+    }
+
+    .section-text4 {
+        width: 100%;
+    }
+
+    .column-left p {
+        width: 207%;
+    }
+
+    .column-left2 {
+        padding-top: 30%;
+    }
+
+    .column-left2 h2 {
+        font-size: 30px;
+        width: 186%;
+    }
+
+    .column-left2 p {
+        width: 186%;
+    }
+
+    .firstimg2,
+    .firstimg3 {
+        width: 121%;
+        left: -10%;
+    }
+
+    .firstimg {
+        position: relative;
+        width: 73%;
+        left: 15%;
+    }
+
+    .first-rep {
+        border-radius: 5% !important;
+        position: relative;
+        max-width: 96% !important;
+        transition-duration: inherit;
+        max-width: 80%;
+        margin-left: 6%;
+    }
+
+    .first-rep3 {
+        border-radius: 5% !important;
+        position: relative;
+        max-width: 96% !important;
+        transition-duration: inherit;
+        max-width: 80%;
+        margin-left: 6%;
+    }
+
+    .first-rep2 {
+        border-radius: 5% !important;
+        position: relative;
+        max-width: 96% !important;
+        transition-duration: inherit;
+        max-width: 80%;
+        margin-left: 6%;
+    }
+
+    .sec-butt {
+        width: 171%;
+    }
+
+    .us-button {
+        font-size: 16px;
+        margin-right: -11%;
+    }
+
+    .row-top,
+    .row-bottom {
+        flex-wrap: wrap;
+        gap: 5%;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homeintro {
+        margin-bottom: 4%;
+        /* Adjusted margin for smaller screens */
+    }
+
+    .content {
+        font-size: 20px;
+        /* Adjusted font size for smaller screens */
+        line-height: 30px;
+        /* Adjusted line height for smaller screens */
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .content2 {
+        width: 60%;
+        /* Adjusted width for smaller screens */
+        font-size: 60px;
+        /* Adjusted font size for smaller screens */
+        top: 80px;
+        /* Adjusted positioning */
+        height: 100px;
+        /* Adjusted height for smaller screens */
+        font-size: 25px;
+    }
+
+    .content__container {
+        height: 32px;
+        /* Adjusted height for smaller screens */
+        padding: 0 16px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .content__container__text {
+        font-size: 16px;
+        /* Adjusted font size for smaller screens */
     }
 }
 </style>

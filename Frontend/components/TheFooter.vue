@@ -4,109 +4,113 @@
 
 <template>
     <div>
-    <div v-if="!isMobile">
-    <desktop> 
-    <div class="footer-dark">
-        <footer>
-            <div class="container-f">
-                <div class="rowf">
-                    <div class="col-md-3 col-sm-6 item text-right">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Terms & Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6 item text-middle">
-                        <h3>Contacts</h3>
-                        <ul>
-                            <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
-                                    target="_blank">Address:
-                                    Politecnico di Milano</a></li>
-                            <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                            <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
-                                    ventourteam@gmail.com</a></li>
-                        </ul>
-                    </div>
+        <div v-if="!isMobile">
+            <desktop>
+                <div class="footer-dark">
+                    <footer>
+                        <div class="container-f">
+                            <div class="rowf">
+                                <div class="col-md-3 col-sm-6 item text-right">
+                                    <h3>Services</h3>
+                                    <ul>
+                                        <li><a href="#">Web design</a></li>
+                                        <li><a href="#">Development</a></li>
+                                        <li><a href="#">Terms & Policy</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-6 item text-middle">
+                                    <h3>Contacts</h3>
+                                    <ul>
+                                        <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
+                                                target="_blank">Address:
+                                                Politecnico di Milano</a></li>
+                                        <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
+                                        <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
+                                                ventourteam@gmail.com</a></li>
+                                    </ul>
+                                </div>
 
-                    
-                </div>
-                <div class="col-md-3 col-sm-6 item ">
-                    <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
-                        <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
-                        <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                        <div class="copy-right">© 2020 VenTour. All rights reserved.</div>
-                    </div>
-                </div>
 
-            </div>
-        </footer>
-    </div>
-    </desktop>
-    </div>
-    <div v-else>
-        <mobile>
-            <div class="footer-dark">
-            <footer>
-                <div class="container-f2">
-                    <div class="rowf2">
-                        <div class="Services">
-                            <h3>Services</h3>
-                            <ul>
-                                <li><a href="#">Web design</a></li>
-                                <li><a href="#">Development</a></li>
-                                <li><a href="#">Terms & Policy</a></li>
-                            </ul>
-                            <div class="Space">
-                                <p> </p>                            
+                            </div>
+                            <div class="col-md-3 col-sm-6 item ">
+                                <div class="social-iconsf"><a href="#"><img src="~/assets/img/facebook.png"
+                                            alt="Facebook" /></a>
+                                    <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
+                                    <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
+                                    <div class="copy-right">© 2020 VenTour. All rights reserved.</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </footer>
+                </div>
+            </desktop>
+        </div>
+        <div v-else>
+            <mobile>
+                <div class="footer-dark">
+                    <footer>
+                        <div class="container-f2">
+                            <div class="rowf2">
+                                <div class="Services">
+                                    <h3>Services</h3>
+                                    <ul>
+                                        <li><a href="#">Web design</a></li>
+                                        <li><a href="#">Development</a></li>
+                                        <li><a href="#">Terms & Policy</a></li>
+                                    </ul>
+                                    <div class="Space">
+                                        <p> </p>
+                                    </div>
+                                </div>
+                                <div class="Services">
+                                    <h3>Contacts</h3>
+                                    <ul>
+                                        <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
+                                                target="_blank">Address:
+                                                Politecnico di Milano</a></li>
+                                        <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
+                                        <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
+                                                ventourteam@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="Services">
+                                    <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png"
+                                                alt="Facebook" /></a>
+                                        <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
+                                        <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
+                                    </div>
+                                    <div class="copy-right2">
+                                        <p>© 2020 VenTour
+                                            <br>
+                                            All rights reserved.
+                                        </p>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                        <div class="Services">
-                            <h3>Contacts</h3>
-                            <ul>
-                                <li><a href="https://www.google.com/maps/place/Politecnico+di+Milano/@45.4780976,9.2223853,17z/data=!3m2!4b1!5s0x4786c6f41814d881:0x372c7074dcfca556!4m6!3m5!1s0x4786c6f67dd11753:0x8e30fae1774a3377!8m2!3d45.4780977!4d9.2272562!16s%2Fg%2F11g_76wmz"
-                                        target="_blank">Address:
-                                        Politecnico di Milano</a></li>
-                                <li><a href="tel:+393123456789">Phone: +39 312 345 6789</a></li>
-                                <li><a href="mailto:ventourteam@gmail.com" target="_blank">Email:
-                                        ventourteam@gmail.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="Services">
-                        <div class="social-iconsf2"><a href="#"><img src="~/assets/img/facebook.png" alt="Facebook" /></a>
-                        <a href="#"><img src="~/assets/img/linkedin.png" alt="LinkedIn" /></a>
-                            <a href="#"><img src="~/assets/img/instagram.png" alt="Instagram" /></a>
-                            </div>
-                        <div class="copy-right2">
-                                <p>© 2020 VenTour
-                                <br>
-                        All rights reserved.</p></div>
-                        
-                        </div>    
-                    </div>
+                    </footer>
                 </div>
-            </footer>
-            </div>
-        </mobile>
-    </div>
+            </mobile>
+        </div>
     </div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-                isMobile: false,
+export default {
+    data() {
+        return {
+            isMobile: false,
         };
     },
     // Only for website seen by mobile 
     methods: {
         detectMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
         },
-        
+
     },
     mounted() {
         this.isMobile = this.detectMobile();
@@ -120,10 +124,12 @@
 .container-f {
     height: 250px;
 }
+
 @media screen and (max-width: 768px) {
     .container-f {
         height: 100%;
     }
+
     .rowf {
         display: flex;
         flex-direction: column;
@@ -133,6 +139,7 @@
         align-items: center;
     }
 }
+
 .container-f2 {
     height: 100%;
 }
@@ -142,9 +149,7 @@
     padding-top: 2%;
 }
 
-h3 {
-    color: aliceblue;
-}
+
 
 .rowf {
     display: flex;
@@ -154,6 +159,7 @@ h3 {
     align-items: center;
     height: 20%;
 }
+
 .rowf2 {
     display: flex;
     flex-direction: row;
@@ -192,12 +198,13 @@ h3 {
     padding-left: 5%;
     padding-top: 20%;
 }
+
 .copy-right2 {
-    position: relative;    
+    position: relative;
     opacity: 0.6;
     font-size: 10px;
     width: 100%;
-    
+
 }
 
 .footer-dark {
@@ -240,6 +247,7 @@ h3 {
     margin-left: 45%;
     gap: 6%;
 }
+
 .social-iconsf2 {
     width: 30%;
     position: relative;
@@ -248,7 +256,8 @@ h3 {
     margin-top: 5%;
     gap: 12%;
 }
-.space{
+
+.space {
     top: 10px;
 }
 
@@ -258,12 +267,14 @@ h3 {
     padding: auto;
     cursor: pointer;
 }
+
 .social-iconsf2 img {
     width: 25px;
     height: 25px;
     padding: auto;
     cursor: pointer;
 }
+
 .social-iconsf2 p {
     width: 80px;
     padding: auto;
@@ -279,6 +290,7 @@ h3 {
     .rowf {
         flex-wrap: wrap;
     }
+
     .rowf2 {
         flex-wrap: wrap;
     }
@@ -352,8 +364,7 @@ h3 {
     opacity: 0.9;
 }
 
-.Services{
+.Services {
     margin: 10px 50px;
     flex-direction: column;
-}
-</style>
+}</style>

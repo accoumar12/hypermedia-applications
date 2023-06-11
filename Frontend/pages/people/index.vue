@@ -53,7 +53,7 @@
             </div>
         </section>
 
-<section id="team-members-grid">
+        <section id="team-members-grid">
             <div class="grid-container">
                 <div id="filter-container">
 
@@ -64,7 +64,8 @@
                             <div class="dropdown-grid-filter grid-x align-middle">
 
                                 <label for="all-team">
-                                    ALL <input type="radio" id="all-team" value="" name="team-categories" v-model="team" checked>
+                                    ALL <input type="radio" id="all-team" value="" name="team-categories" v-model="team"
+                                        checked>
                                     <span class="checkmark"></span>
                                 </label>
 
@@ -81,8 +82,8 @@
                                 </label>
 
                                 <label for="finance-operations">
-                                    FINANCE <input type="radio" id="finance-operations"
-                                        value="Operations and Finance Team" name="team-categories" v-model="team">
+                                    FINANCE <input type="radio" id="finance-operations" value="Operations and Finance Team"
+                                        name="team-categories" v-model="team">
                                     <span class="checkmark"></span>
                                 </label>
 
@@ -147,15 +148,6 @@ const filtered = computed(() => {
 
 })
 
-const blinking = ref(false);
-
-onMounted(() => {
-    blinking.value = true;
-    setTimeout(() => {
-        blinking.value = false;
-    }, 2000); // Adjust the duration of blinking (in milliseconds) as per your preference
-});
-
 </script>
 
 <script>
@@ -188,6 +180,7 @@ export default {
 .department-section {
     padding-top: 0.1%;
 }
+
 .container.custom-container {
     background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
     background-repeat: no-repeat;
@@ -358,78 +351,87 @@ export default {
 
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
-  .row0 {
-    bottom: auto; /* Removed bottom positioning */
-    height: auto; /* Adjusted height to auto */
-    left: auto; /* Removed left positioning */
-    top: 30px;
-    width: 100%; /* Adjusted width for better responsiveness */
-    margin: 0 auto; /* Center the element horizontally */
-    align-items: center;
-  }
+    .row0 {
+        bottom: auto;
+        /* Removed bottom positioning */
+        height: auto;
+        /* Adjusted height to auto */
+        left: auto;
+        /* Removed left positioning */
+        top: 30px;
+        width: 100%;
+        /* Adjusted width for better responsiveness */
+        margin: 0 auto;
+        /* Center the element horizontally */
+        align-items: center;
+    }
 
-  .row1 {
-    background-position-y: center; /* Adjusted background position */
-    padding-top: 20%; /* Adjusted padding top */
-    height: auto; /* Adjusted height to auto */
-  }
+    .row1 {
+        background-position-y: center;
+        /* Adjusted background position */
+        padding-top: 20%;
+        /* Adjusted padding top */
+        height: auto;
+        /* Adjusted height to auto */
+    }
 
-  .ourt-intro {
-    background-color: rgb(239, 241, 246);
-    color: #00838d;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    position: inherit;
-    transform: translate(-50%, -50%);
-    margin: 0 50%;
-    padding: 20px;
-    mix-blend-mode: unset;
+    .ourt-intro {
+        background-color: rgb(239, 241, 246);
+        color: #00838d;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        position: inherit;
+        transform: translate(-50%, -50%);
+        margin: 0 50%;
+        padding: 20px;
+        mix-blend-mode: unset;
     }
 
     .container.custom-container {
-    background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
-    background-repeat: no-repeat;
-    background-position-y: 35%;
-    background-size: cover;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
-    padding-top: 50%;
+        background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+        background-repeat: no-repeat;
+        background-position-y: 35%;
+        background-size: cover;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        padding-top: 50%;
     }
 
     .grid-container {
-    position: relative;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 20%;
-    max-width: 90rem;
-    margin-left: 10%;
-    margin-right: auto;
-    margin-top: 5%;
+        position: relative;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 20%;
+        max-width: 90rem;
+        margin-left: 10%;
+        margin-right: auto;
+        margin-top: 5%;
     }
 
     #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
-    font-size: 18px;
-    line-height: 1.1;
-    font-family: sans-serif;
-    color: #0e6b74;
-    font-weight: 500;
-    display: block;
-    position: relative;
-    opacity: 1;
-    margin-right: 40px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding-bottom: 2px;
-    flex-direction: column;
-    margin: 0 10%;
+        font-size: 18px;
+        line-height: 1.1;
+        font-family: sans-serif;
+        color: #0e6b74;
+        font-weight: 500;
+        display: block;
+        position: relative;
+        opacity: 1;
+        margin-right: 40px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding-bottom: 2px;
+        flex-direction: column;
+        margin: 0 10%;
     }
+
     #card-container {
         display: flex;
         flex-wrap: wrap;
@@ -442,9 +444,9 @@ export default {
     }
 
     .row3-container {
-    padding-left: 50%;
-    padding-bottom: 2%;
-}
+        padding-left: 50%;
+        padding-bottom: 2%;
+    }
 }
 
 /*button passing to the next page style */
@@ -606,9 +608,12 @@ label>[type=radio] {
 
         font-size: 20px;
     }
+
     .card1o p {
-        font-size: 12px; /* Adjusted font size for smaller screens */
-        }
+        font-size: 12px;
+        /* Adjusted font size for smaller screens */
+    }
+
     .card13 {
         display: block;
         position: relative;
@@ -623,6 +628,7 @@ label>[type=radio] {
         overflow: hidden;
     }
 }
+
 @media (max-width: 950px) and (min-width: 450px) {
     .container.custom-container {
         background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
