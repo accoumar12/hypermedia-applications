@@ -11,6 +11,7 @@ The authors are:
     Nikolina Zallemi
 
 ## Project Description
+In this repository you can find the website of a possible Venture Capital Company. As a VC, its goal is to show the areas of interest and the the companies in which the people of the VC invest. 
 
 ### Design
 
