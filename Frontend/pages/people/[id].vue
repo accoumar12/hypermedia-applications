@@ -19,60 +19,123 @@
                 <img src="~/assets/img/linkedin.png" alt="LinkedIn" />
                 <img src="~/assets/img/email.png" alt="Email" />
             </div>
-            <div class="row-section">
-                <div class="column">
-                    <img id="main-img" :src="person.image" />
-                </div>
-                <div class="column2">
-                    <div class="description-containera">
-                        <div class="button-container" style="position: relative; top: 0; z-index: 1;">
-                            <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
-                                <br>
-                                BIO
-                            </button>
-                            <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
-                                <br>
-                                AWARDS
-                            </button>
-                        </div>
+            <div v-if="!isMobile">
+                <desktop> 
+                <div class="row-section">
+                    <div class="column">
+                        <img id="main-img2" :src="person.image" />
+                    </div>
+                    <div class="column2">
+                        <div class="description-containera">
+                            <div class="button-container" style="position: relative; top: 0; z-index: 1;">
+                                <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                                    <br>
+                                    BIO
+                                </button>
+                                <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                                    <br>
+                                    AWARDS
+                                </button>
+                            </div>
 
-                        <div class="description-container" v-if="activeSection === 1">
-                            <p2 class="description">{{ person.description }}</p2>
-                            <p2 class="description">{{ person.description2 }}</p2>
-                        </div>
+                            <div class="description-container" v-if="activeSection === 1">
+                                <p2 class="description">{{ person.description }}</p2>
+                                <p2 class="description">{{ person.description2 }}</p2>
+                            </div>
 
-                        <div class="description-container" v-else-if="activeSection === 2">
-                            <p3 class="description">
-                            
-                             <ul>
-                                  <li>{{ person.award1 }}</li>
-                                  <br>
-                                  <li v-if="person.award2 != ''">{{ person.award2 }}</li>
-                                  <br>
-                                  <li v-if="person.award3 != ''">{{ person.award3 }}</li>
-                                  <br>
-                                  <li v-if="person.award4 != ''">{{ person.award4 }}</li>
-                            </ul>
-                            <!--
-                            <ul id="AwardList"></ul>
-                            -->
-                            </p3>
+                            <div class="description-container" v-else-if="activeSection === 2">
+                                <p3 class="description">
+                                
+                                 <ul>
+                                      <li>{{ person.award1 }}</li>
+                                      <br>
+                                      <li v-if="person.award2 != ''">{{ person.award2 }}</li>
+                                      <br>
+                                      <li v-if="person.award3 != ''">{{ person.award3 }}</li>
+                                      <br>
+                                      <li v-if="person.award4 != ''">{{ person.award4 }}</li>
+                                </ul>
+                                <!--
+                                <ul id="AwardList"></ul>
+                                -->
+                                </p3>
+                            </div>
                         </div>
                     </div>
                 </div>
+                </desktop>
+            </div>
+            <div v-else>
+                <mobile>
+
+                <div class="column">
+                    <div class="column">
+                        <img id="main-img2" :src="person.image" />
+                    </div>
+                    <div class="column2">
+                        <div class="description-containera2">
+                            <div class="button-container2" style="position: relative; top: 0; z-index: 1;">
+                                <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                                    <br>
+                                    BIO
+                                </button>
+                                <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                                    <br>
+                                    AWARDS
+                                </button>
+                            </div>
+
+                            <div class="description-container2" v-if="activeSection === 1">
+                                <p2 class="description2">{{ person.description }}</p2>
+                                <p2 class="description2">{{ person.description2 }}</p2>
+                            </div>
+
+                            <div class="description-container2" v-else-if="activeSection === 2">
+                                <p3 class="description">
+                                
+                                 <ul>
+                                      <li>{{ person.award1 }}</li>
+                                      <br>
+                                      <li v-if="person.award2 != ''">{{ person.award2 }}</li>
+                                      <br>
+                                      <li v-if="person.award3 != ''">{{ person.award3 }}</li>
+                                      <br>
+                                      <li v-if="person.award4 != ''">{{ person.award4 }}</li>
+                                </ul>
+                                <!--
+                                <ul id="AwardList"></ul>
+                                -->
+                                </p3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </mobile>
             </div>
             <hr />
         </div>
         <div v-if="filtered.length > 0">
-
             <div class="row-section">
                 <div class="text-center">
                     <p>COMPANIES IN SUPERVISION:</p>
                 </div>
             </div>
-            <div class="row-section2">
-                <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                    :link="'/companies/' + company.id" />
+            <div v-if="!isMobile">
+                <desktop>
+                    <div class="row-section2">
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                            :link="'/companies/' + company.id" />
+                    </div>
+                </desktop>
+            </div>
+            <div v-else>
+                <mobile>
+                    <div class="column2Card">
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                            :link="'/companies/' + company.id" />
+                    </div>
+                </mobile>
             </div>
         </div>
     </main>
@@ -109,7 +172,15 @@ export default defineNuxtComponent({
         data() {
             return {
                 activeSection: 1,
+                isMobile: false,
             };
+        },
+        methods:{
+            detectMobile() {
+              return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              );
+            },
         },
         async asyncData() {
             // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
@@ -118,7 +189,15 @@ export default defineNuxtComponent({
             return {
                 companies
             }
-        }
+        },
+        mounted() {
+            this.isMobile = this.detectMobile();
+            document.addEventListener("click", (event) => {
+                if (!event.target.closest(".search")) {
+                    this.isSearchExpanded = false;
+                }
+            });
+        },
 })
 </script>
 
@@ -280,6 +359,13 @@ hr {
     margin-top: 30px;
     padding-bottom: 2%;
 }
+.row-section2 {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: -12%;
+    padding-bottom: 2%;
+}
 
 
 .column {
@@ -292,16 +378,21 @@ hr {
     padding-right: 4%;
 
 }
+.column2Card {
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
 .column.p2 {
     position: absolute;
 }
 
-#main-img {
+#main-img2 {
     width: 60%;
     height: 40%;
     padding-left: 10%;
-    display: initial;
+    
     /*
     height: auto;
     padding-left: 10%;
@@ -336,6 +427,7 @@ button2:hover {
     font-family: PT sans-serif;
     font-size: 1.1rem;
 }
+
 .description-container p3 {
     margin-bottom: 8px;
     font-size: 15pt;
@@ -374,6 +466,15 @@ button2:hover {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
 }
+
+.description-containera2 p2 {
+    height: 20%;
+    padding-left: -10%;
+    width: 90%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.0rem;
+}
+
 .description-containera p3 {
     height: 20%;
     padding-left: 70%;
@@ -381,6 +482,14 @@ button2:hover {
     width: 150%;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
+}
+.description-containera2 p3 {
+    height: 20%;
+    padding-left: 70%;
+    font-size: 15pt;
+    width: 150%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.0rem;
 }
 
 .row2 {
@@ -451,6 +560,15 @@ button2:hover {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2%;
+    font-family: monospace;
+    color: #033f52;
+}
+.button-container2 {
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    margin-left: 7%;
     font-family: monospace;
     color: #033f52;
 }

@@ -397,7 +397,7 @@ export default {
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    padding-top: 50%;
+    padding-top: 18%;
     }
 
     .grid-container {
@@ -597,7 +597,6 @@ label>[type=radio] {
 
 @media screen and (max-width: 400px) {
     .co-container {
-        max-width: 100%;
         padding-right: 10px;
         padding-left: 10px;
     }
