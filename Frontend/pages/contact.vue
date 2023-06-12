@@ -27,7 +27,7 @@
     <div class="description-container-co" v-if="activeSection === 1">
       <h1>Do you have a company in the field of: </h1>
       <div class="job-boards-company-grid">
-        <router-link to="/healthcare">
+        <router-link to="/companies/Areas/healthcare">
           <div class="job-boards-company-item">
             <img class="job-boards-company-logo" alt="Personio logo"
               src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
@@ -40,7 +40,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/technology">
+        <router-link to="/companies/Areas/technology">
           <div class="job-boards-company-item">
             <img class="job-boards-company-logo" alt="Personio logo"
               src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
@@ -55,7 +55,7 @@
         </router-link>
       </div>
       <div class="job-boards-company-grid">
-        <router-link to="/consumer">
+        <router-link to="/companies/Areas/consumer">
           <div class="job-boards-company-item">
             <img class="job-boards-company-logo" alt="Personio logo"
               src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
@@ -67,7 +67,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/sustainability">
+        <router-link to="/companies/Areas/sustainability">
           <div class="job-boards-company-item">
             <img class="job-boards-company-logo" alt="Personio logo"
               src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
