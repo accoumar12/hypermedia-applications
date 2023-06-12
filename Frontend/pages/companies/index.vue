@@ -42,7 +42,7 @@
                     </div>
                     <div class="counter" data-target="100"></div>
                     <div class="link-text">
-                        <a class="learn-more"><router-link to="/technology">
+                        <a class="learn-more"><router-link to="/companies/Areas/technology">
                                 <h1 style="color:#033f52">Technology Investments →</h1>
                             </router-link></a>
                     </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="counter" data-target="250"></div>
                     <div class="link-text">
-                        <a class="learn-more"><router-link to="/healthcare">
+                        <a class="learn-more"><router-link to="/companies/Areas/healthcare">
                                 <h1 style="color:#033f52">Healthcare Investments →</h1>
                             </router-link></a>
                     </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="counter" data-target="120"></div>
                     <div class="link-text">
-                        <a class="learn-more"><router-link to="/consumer">
+                        <a class="learn-more"><router-link to="/companies/Areas/consumer">
                                 <h1 style="color:#033f52">Consumer Goods Investments →</h1>
                             </router-link></a>
                     </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="counter" data-target="270"></div>
                     <div class="link-text">
-                        <a class="learn-more"><router-link to="/sustainability">
+                        <a class="learn-more"><router-link to="/companies/Areas/sustainability">
                                 <h1 style="color:#033f52">Sustainability Investments →</h1>
                             </router-link></a>
                     </div>
