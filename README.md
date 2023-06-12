@@ -91,7 +91,10 @@ const corsOptions = {
 
 ### Frontend
 Frontend folder is split in many folders and many parts:
-- In **assets** you can find some of the images used in the webiste (some others are directly retrieved by link from the Web) and the global css model of the website. Here, in particular, the tailwind library is defined.
+- In **assets** you can find some of the images used in the webiste (some others are directly retrieved by link from the Web) and the global css model of the website. Here, in particular, the tailwind library is defined. Also default.vue in layout folder gives a default setting
+- In **Components** there are all the components that have been used in the pages of the website. For component we mean a modular, reusable, and self-contained unit of code that performs a specific function. It is a building block or a piece of code that encapsulates related functionality and data together.
+- **dist** folder is used only to render the github page online. It is in practice one folder of the **output** folder, used to render all the website.
+- **pages** folder contains all the pages of the website. The order mantains the structure you can find in the website, so the branches will be in folders and then the leaves subfolders.
 
 
 - In package.json there is a list of extra modules imported in the project:
@@ -105,8 +108,6 @@ Frontend folder is split in many folders and many parts:
 
 
 Brief description of the project explaining the chosen theme
-• Structure of the project
-o Structure of links/pages folder with short description
 o Available server endpoint with short description
 • List of Components implemented with description, props and emit (if used)
 Additionally, you can add descriptions (not mandatory) of:
