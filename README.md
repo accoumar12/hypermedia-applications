@@ -109,6 +109,12 @@ Frontend folder is split in many folders and many parts:
 
 ### Functionalities
 The main components of the application are:
+- **Carousel**: Carousel component is used to display a set of images or content in a slideshow format. It allows users to navigate through the images or content horizontally. It is used in "About us" section to show the most relevant moment in the history of the company.
+- **Cards**: Cards are UI components that represent a small, self-contained unit of content. Cards contain:
+    - Image, Area and role of people working in the company in "Our Team" section.
+    - Logo, CEO and Area of companies of Investments in "Investments" section.
+- **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information. It typically contains information, links, copyright notices, and other supplementary content. Footers provide navigation options, contact information, social media links, or additional details about the website or application.
+- **Header**: The header component is located at the top of a webpage or application screen. It often includes a logo or branding, navigation menus, search functionality, and user account links. Headers provide a consistent and easily accessible way for users to navigate the application or website. They can also display notifications, user settings, or other relevant information.
 
 
 Brief description of the project explaining the chosen theme
