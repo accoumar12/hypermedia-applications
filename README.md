@@ -77,9 +77,22 @@ Backend is mainly made by 4 files, two javascript files and two are jjson files:
 - **package-lock.json**: here all the package and modules needed are defined, in order to make the website working.
 - **pagkage.json**: General information about the application with the dependencies needed
 
-#### 
+ The list of extra modules imported in the project and that you need to install are:
+ - "cors": "^2.8.5": used to fix the localhost address (link used to open the project):
+`
+const corsOptions = {
+    origin: "http://localhost:3000" // The link of your project when run locally
+}
+`
+- "express": "^4.18.2": It is used to manage the routing and the get function in HTTP methods
+- "sequelize": "^6.29.3" and "sqlite3": "^5.1.6" are used to work in SQL and manage database.
+
 
 ### Frontend
+Frontend folder is split in many folders and many parts:
+- In **assets** you can find some of the images used in the webiste (some others are directly retrieved by link from the Web) and the global css model of the website. Here, in particular, the tailwind library is defined.
+
+
 
 
 
