@@ -96,6 +96,9 @@ Frontend folder is split in many folders and many parts:
 - **dist** folder is used only to render the github page online. It is in practice one folder of the **output** folder, used to render all the website.
 - **pages** folder contains all the pages of the website. The order mantains the structure you can find in the website, so the branches will be in folders and then the leaves subfolders.
 
+> You can notice that we could make all the areas with a single page connected to the database (like [id].vue file in both folders people and companies). We decided to put in the database only data that can change in time, so people and companies. We think that areas will be immutable in the story of the company, or at least will not change as fast as the other two components mentioned above.
+> For this reason we preferred to put the areas in static pages without a connection to the database.
+
 
 - In package.json there is a list of extra modules imported in the project:
     - "autoprefixer": A tool that automatically adds vendor prefixes to CSS properties, ensuring better cross-browser compatibility.
@@ -104,7 +107,8 @@ Frontend folder is split in many folders and many parts:
     - "postcss": A tool for transforming CSS styles using JavaScript plugins, enabling tasks such as autoprefixing, minification, and more.
     - "tailwindcss": A highly customizable CSS framework that provides utility classes for quickly building responsive and modern user interfaces. We used it only for the form in "Get in Touch" section.
 
-
+### Functionalities
+The main components of the application are:
 
 
 Brief description of the project explaining the chosen theme
