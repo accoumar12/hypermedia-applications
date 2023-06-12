@@ -66,8 +66,18 @@ npm run dev
 
 
 ### Design
+Design in-the-large with C-IDM, and in the small with the Wireframes can be found, together with use case scenarios and database design, in the folder Design Document.
+
+#TODO TO BE ADDED
 
 ### Backend
+Backend is mainly made by 4 files, two javascript files and two are jjson files:
+- **dbInit.js**: here all data of the database needed in the website is contained and defined.
+- **index.js**: Definition of all tables needed to make the website working. The Server is initialized with company and people (where you can find all the data related to those table) and they are connected one each other (as defined in the Realtional schema of the database) 
+- **package-lock.json**: here all the package and modules needed are defined, in order to make the website working.
+- **pagkage.json**: General information about the application with the dependencies needed
+
+#### 
 
 ### Frontend
 
