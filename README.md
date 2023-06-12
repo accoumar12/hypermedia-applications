@@ -59,9 +59,7 @@ npm run dev
 3. **Data Flow**: All Data is stored in the file dbInit.js and it is static. It means that it is not updated externally by the user, but can be updated only by the developer adding new fields or modyfying the one already existing in the dbInit.js file and in index.js file
 4. **Scalability and Performance**: The website is optimized for both Mobile and Desktop. We simplified some features in the mobile version of the code in order to make the application faster and more usable.
 5. **Deployment Considerations**: All the code needed to run the application is contained in this repository and the host of the website online used to run this application is github pages.
-
-    System Architecture: Explain the overall architecture of the hypermedia application, including components, layers, and their interactions.
-    Technologies Used: List the technologies, frameworks, and tools used in the project. 
+6. **Technologies Used**: The website has been developed thanks to the VUE.js framework together with NodeJS and it has been published online using Github pages. List the technologies, frameworks, and tools used in the project. 
 
 ### Design
 
