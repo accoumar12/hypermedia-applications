@@ -191,7 +191,7 @@
 </template>
 
 <script>
-import Carousel from '/pages/Carousel.vue'
+import Carousel from '/components/Carousel.vue'
 
 export default {
   name: 'History',
