@@ -79,6 +79,7 @@ Backend is mainly made by 4 files, two javascript files and two are jjson files:
 
  The list of extra modules imported in the project and that you need to install are:
  - "cors": "^2.8.5": used to fix the localhost address (link used to open the project):
+
 `
 const corsOptions = {
     origin: "http://localhost:3000" // The link of your project when run locally
@@ -93,6 +94,13 @@ Frontend folder is split in many folders and many parts:
 - In **assets** you can find some of the images used in the webiste (some others are directly retrieved by link from the Web) and the global css model of the website. Here, in particular, the tailwind library is defined.
 
 
+- In package.json there is a list of extra modules imported in the project:
+    - "autoprefixer": A tool that automatically adds vendor prefixes to CSS properties, ensuring better cross-browser compatibility.
+    - "gh-pages": A utility for publishing web pages directly from a Git repository to GitHub Pages.
+    - "nuxt": A Vue.js framework for building static websites. 
+    - "postcss": A tool for transforming CSS styles using JavaScript plugins, enabling tasks such as autoprefixing, minification, and more.
+    - "tailwindcss": A highly customizable CSS framework that provides utility classes for quickly building responsive and modern user interfaces. We used it only for the form in "Get in Touch" section.
+
 
 
 
@@ -101,8 +109,6 @@ Brief description of the project explaining the chosen theme
 o Structure of links/pages folder with short description
 o Available server endpoint with short description
 • List of Components implemented with description, props and emit (if used)
-• List of extra modules imported in the project (for example: Supabase, Pinia, Vuetify etc...)
-and how they were used.
 Additionally, you can add descriptions (not mandatory) of:
 • Extra functionalities implemented (e.g., store, filters, etc...)
 • different approaches from what was discussed during lectures.
