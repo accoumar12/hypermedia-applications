@@ -87,10 +87,10 @@
                                               <ul class="sidemenu__list2">
                                 <!--<p> <router-link to="/companies" class="nav-link">Areas</router-link> </p>
                             <div class="sub-menu">-->
-                                <p><router-link to="/technology" class="nav-link">Technology</router-link></p>
-                                <p><router-link to="/healthcare" class="nav-link">Healthcare</router-link></p>
-                                <p><router-link to="/consumer" class="nav-link">Consumer Goods</router-link></p>
-                                <p><router-link to="/sustainability" class="nav-link">Sustainability</router-link></p>
+                                <p><router-link to="/companies/Areas/technology" class="nav-link">Technology</router-link></p>
+                                <p><router-link to="/companies/Areas/healthcare" class="nav-link">Healthcare</router-link></p>
+                                <p><router-link to="/companies/Areas/consumer" class="nav-link">Consumer Goods</router-link></p>
+                                <p><router-link to="/companies/Areas/sustainability" class="nav-link">Sustainability</router-link></p>
 <!--                        </div>-->
                                               </ul>
                                             </div>
