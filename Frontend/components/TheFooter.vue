@@ -214,7 +214,7 @@ export default {
 }
 
 .footer-dark h3 {
-    margin-top: 0;
+    margin-top: 10%;
     font-weight: bold;
     font-size: 18px;
 }
@@ -365,6 +365,6 @@ export default {
 }
 
 .Services {
-    margin: 10px 50px;
+    margin: 10px 50px 0px;
     flex-direction: column;
 }</style>

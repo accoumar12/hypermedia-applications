@@ -17,7 +17,10 @@
                 </div>
             </div>
             <hr />
-            <div class="row-section">
+
+            <div v-if="!isMobile">
+                <desktop> 
+                <div class="row-section">
                 <div class="column-c">
                     <img id="main-img" :src="company.image" />
                 </div>
@@ -33,6 +36,32 @@
                     </div>
                 </div>
             </div>
+            </desktop>
+            </div>
+
+            <div v-else>
+                <mobile>
+
+                <div class="column-section">
+                <div class="column-c">
+                    <img id="main-img3" :src="company.image" />
+                </div>
+                <div class="column2-c">
+                    <div class="description-container2">
+                        <p class="description">{{ company.description }}</p>
+                        <p class="description2">{{ company.description2 }}</p>
+                        <p class='official-link'>Visit their official website:
+                            <a href="{{ company.link }}" target="_blank">
+                                {{ company.link }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                </mobile>
+            </div>
+
             <hr />
         </div>
     </main>
@@ -40,20 +69,33 @@
      
 
 <script>
+
 export default defineNuxtComponent({
     data() {
         return {
             activeSection: 1,
+            isMobile: false,
         };
     },
-    /*async asyncData() {
-        //const route = useRoute()
-        const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies')
 
-        return {
-            companies
-        }
-    }*/
+    methods:{
+
+            detectMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          );
+        },
+    },
+
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    }
+
 })
 
 
@@ -169,7 +211,6 @@ hr {
 }
 
 
-
 .column-c {
     flex-basis: 500px;
 }
@@ -182,11 +223,20 @@ hr {
     position: absolute;
 }
 
+.column-section {
+    flex-direction: column;
+}
+
 #main-img {
     width: 300px;
     height: 40%;
     padding-left: 10%;
 
+}
+
+#main-img3 {
+    width: 80%;
+    height: 40%;
 }
 
 .description-container {
@@ -197,6 +247,21 @@ hr {
     margin-top: 10px;
     text-align: justify;
     font-family: PT sans-serif;
+}
+
+.description-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: justify;
+    font-family: PT sans-serif;
+    padding: 8%;
+    font-size: 13pt;
+}
+
+.official-link {
+    text-align: left;
 }
 
 .link {
