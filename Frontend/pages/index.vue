@@ -71,7 +71,7 @@
                                     industries,
                                     from technology and healthcare to energy and beyond. </p>
                             </div>
-                            <div class="card card2">
+                            <div class="card card11">
                                 <img class="icon-circle" src="~/assets/img/fuel.png">
                                 <h3>Fuelling growth</h3>
                                 <p>We believe in the transformative power of ideas.We are a
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="row-bottom">
-                            <div class="card card3">
+                            <div class="card card11">
                                 <img class="icon-circle" src="~/assets/img/unlock.png">
                                 <h3>Unlocking potential</h3>
                                 <p>We partner with visionary entrepreneurs and startups at
@@ -90,7 +90,7 @@
                                     stage of their journey, providing financial support, but also
                                     invaluable expertise, resources, and a vast network of industry connections.</p>
                             </div>
-                            <div class="card card4">
+                            <div class="card card11">
                                 <img class="icon-circle" src="~/assets/img/worldwide.png">
                                 <h3>Global Reach, Local Impact</h3>
                                 <p>We are rooted in
@@ -314,14 +314,24 @@
     justify-content: space-between;
 }
 
-.row-top,
+.row-top{
+    gap: 5%;
+    padding: 20px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .row-bottom {
     gap: 5%;
     padding: 20px;
     margin-bottom: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
 }
+
 
 .row-top1,
 .row-bottom1 {
@@ -341,27 +351,20 @@
 
 .card11 {
     background-color: rgb(15, 108, 126);
+    border-radius: 7%
 }
+.card11 p,h3 {
+    color: #d9f3f3;
+    padding-left: 10%;
+    padding-right: 10%;
+} 
 
-.card2 {
-    background-color: #9fb7b7;
-}
 
-.card3 {
-    background-color: #9fb7b7;
-}
 
-.card4 {
-    background-color: #d9f3f3;
-}
-
-.card11,
-.card3,
-.card4,
-.card2 {
+.card11{
     margin-bottom: 30px;
     font-size: 18px;
-    margin: 20px auto 0 0;
+    margin: -10px auto 0 0;
 }
 
 /* Media Query for smaller screens */
@@ -783,7 +786,7 @@
 .icon-circle {
     height: 75px;
     width: 75px;
-    background-image: none;
+    background-image: #d9f3f3;
     margin: 0 auto 0 0;
 }
 
