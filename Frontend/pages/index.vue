@@ -884,7 +884,7 @@
     font-weight: 700;
     margin: 0;
     font-family: sans-serif !important;
-    padding: 0;
+    padding: 10px;
     word-wrap: break-word;
     position: relative;
     line-height: 1.2;
