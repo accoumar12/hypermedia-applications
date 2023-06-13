@@ -797,7 +797,7 @@
 }
 
 .midl-container {
-    background-image: url("~/assets/img/wepik-export-202306111838401U6j.png");
+    background-image: url("~/assets/img/wepik-export-202306111838401U6j.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -884,7 +884,6 @@
     font-weight: 700;
     margin: 0;
     font-family: sans-serif !important;
-    padding: 10px;
     word-wrap: break-word;
     position: relative;
     line-height: 1.2;
@@ -930,6 +929,7 @@
     transform-style: preserve-3d;
     perspective: 500px;
     margin-bottom: 5%;
+    margin-left: -14%;
 }
 
 .container .box {
