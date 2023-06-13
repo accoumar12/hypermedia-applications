@@ -36,6 +36,8 @@
         </section>
         <section class="responsive-section">
             <div class="column-container">
+                <div v-if="!isMobile">
+                <desktop> 
                 <div class="column-left">
                     <h5 class="u-section-text">why ventour</h5>
                     <h2>What do we represent?</h2>
@@ -59,9 +61,8 @@
                         </router-link>
                     </div>
                 </div>
+
                 <div class="column-right">
-                    <div v-if="!isMobile">
-                        <desktop> 
                     <div class="row-container">
                         <div class="row-top">
                             <div class="card card11">
@@ -103,10 +104,34 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
+                    <div class="column-left-Mobile">
+                    <h5 class="u-section-text">why ventour</h5>
+                    <h2>What do we represent?</h2>
+                    <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
+                        the
+                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
+                        venture
+                        capital firm, we specialize in providing crucial support and funding to early-stage and
+                        high-growth
+                        companies that are reshaping industries and driving forward societal progress. <br> <br>We
+                        understand
+                        that
+                        the journey of transforming groundbreaking ideas into successful businesses can be challenging,
+                        which is why we strive to be more than just financial backers. Our mission is to be your
+                        strategic
+                        partner, offering not only capital but also expertise, guidance, and an extensive network of
+                        industry connections.</p>
+                    <div class="sec-butt">
+                        <router-link to="/contact">
+                            <a class="us-button">join us</a>
+                        </router-link>
+                    </div>
+                    </div>
                     <div class="columnMobile">
                             <div class="card card11Mobile">
                                 <img class="icon-circle" src="~/assets/img/innovation.png">
@@ -149,7 +174,6 @@
             </div>
 
                 </div>
-            </div>
         </section>
         <section id="numbers">
             <div class="midl-container">
@@ -893,6 +917,26 @@ export default {
 
 .column-left p {
     width: 70%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 120%;
+    padding-bottom: 2%;
+}
+
+.column-left-Mobile{
+    padding-top: 6%;
+    width: 100%;
+}
+
+.column-left-Mobile h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.column-left-Mobile p {
+    width: 100%;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 200;
