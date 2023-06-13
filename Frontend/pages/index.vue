@@ -214,7 +214,7 @@
             <div class="row-areas">
                 <!-- Column One -->
                 <div class="column">
-                    <router-link to="/technology" class="area-router">
+                    <router-link to="/companies/Areas/technology" class="area-router">
                         <div class="card-area">
                             <div class="icon">
                             </div>
@@ -230,7 +230,7 @@
                 </div>
                 <!-- Column Two -->
                 <div class="column">
-                    <router-link to="/healthcare" class="area-router">
+                    <router-link to="/companies/Areas/healthcare" class="area-router">
                         <div class="card-area">
                             <div class="icon">
                                 <i class="fa-solid fa-shield-halved"></i>
@@ -246,7 +246,7 @@
                 </div>
                 <!-- Column Three -->
                 <div class="column">
-                    <router-link to="/consumer" class="area-router">
+                    <router-link to="/companies/Areas/consumer" class="area-router">
                         <div class="card-area">
                             <div class="icon">
                                 <i class="fa-solid fa-headset"></i>
@@ -262,7 +262,7 @@
                 </div>
                 <!-- Column Four -->
                 <div class="column">
-                    <router-link to="/sustainability" class="area-router">
+                    <router-link to="/companies/Areas/sustainability" class="area-router">
                         <div class="card-area">
                             <div class="icon">
                                 <i class="fa-solid fa-headset"></i>
