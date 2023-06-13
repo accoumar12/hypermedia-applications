@@ -16,7 +16,7 @@
                     </div>
                     <h2> Fly with us to a journey of growth!</h2>
                     <p class="section-text4">Transforming the investment landscape and fueling inovation.<br>
-                        Our focus is your success!</p>
+                        <br>Our focus is your success!</p>
                     <router-link to="/history" class="sec-tex">
                         <p class="section-text41">LEARN MORE</p>
                     </router-link>
@@ -684,7 +684,7 @@
 }
 
 .column-left2 p {
-    width: 40%;
+    width: 120%;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 200;
@@ -748,6 +748,7 @@
     text-decoration-thickness: 3px;
     font-size: 16px;
     color: rgb(11 11 11);
+    margin-top: 15%;
 }
 
 .sec-butt {
