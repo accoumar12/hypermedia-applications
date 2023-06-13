@@ -127,7 +127,7 @@
             available to provide support and
             answer questions.
           </p>
-          <a class="button-o" @click="sendEmail">
+          <a class="button-o" href="mailto:ventourteam@gmail.com">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
@@ -147,7 +147,7 @@
             deep understanding of the challenges that startups face, and we draw on this knowledge to provide targeted
             guidance to our porfolio companies.
           </p>
-          <a href="#" class="button-o" @click="sendEmail">
+          <a class="button-o" href="mailto:ventourteam@gmail.com">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
@@ -167,7 +167,7 @@
             services, such as marketing and branding support, legal and accounting services, and HR and recruiting
             support.
           </p>
-          <a href="#" class="button-o" @click="sendEmail">
+          <a class="button-o" href="mailto:ventourteam@gmail.com">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
