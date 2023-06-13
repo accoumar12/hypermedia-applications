@@ -60,6 +60,8 @@
                     </div>
                 </div>
                 <div class="column-right">
+                    <div v-if="!isMobile">
+                        <desktop> 
                     <div class="row-container">
                         <div class="row-top">
                             <div class="card card11">
@@ -101,6 +103,51 @@
                             </div>
                         </div>
                     </div>
+                </desktop>
+            </div>
+            <div v-else>
+                <mobile>
+                    <div class="columnMobile">
+                            <div class="card card11Mobile">
+                                <img class="icon-circle" src="~/assets/img/innovation.png">
+                                <h3>Empowering Innovation</h3>
+                                <p>Innovation is at the core of everything we do. We actively
+                                    seek
+                                    out the most innovative and disruptive ideas across a wide range of
+                                    industries,
+                                    from technology and healthcare to energy and beyond. </p>
+                            </div>
+                            <div class="card card11Mobile">
+                                <img class="icon-circle" src="~/assets/img/fuel.png">
+                                <h3>Fuelling growth</h3>
+                                <p>We believe in the transformative power of ideas.We are a
+                                    leading
+                                    venture capital firm dedicated to fueling the growth of groundbreaking
+                                    startups
+                                    and empowering them to reach their full potential.</p>
+                            </div>
+                            <div class="card card11Mobile">
+                                <img class="icon-circle" src="~/assets/img/unlock.png">
+                                <h3>Unlocking potential</h3>
+                                <p>We partner with visionary entrepreneurs and startups at
+                                    every
+                                    stage of their journey, providing financial support, but also
+                                    invaluable expertise, resources, and a vast network of industry connections.</p>
+                            </div>
+                            <div class="card card11Mobile">
+                                <img class="icon-circle" src="~/assets/img/worldwide.png">
+                                <h3>Global Reach, Local Impact</h3>
+                                <p>We are rooted in
+                                    startups in every country. Our experts
+                                    combine deep industry knowledge with a passion for supporting entrepreneurs.
+                                    We create a dynamic environment that drives
+                                    positive change. </p>
+                            </div>
+                    </div>
+
+                </mobile>
+            </div>
+
                 </div>
             </div>
         </section>
@@ -438,6 +485,17 @@ export default {
     display: flex;
     justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens up to 768px width */
+  .row-top, .row-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .row-top > *, .row-bottom > * {
+    flex-basis: 100%;
+  }
+}
 
 
 .row-top1,
@@ -458,21 +516,16 @@ export default {
 
 .card11 {
     background-color: rgb(15, 108, 126);
-    border-radius: 7%
+    border-radius: 7%;
+    margin-bottom: 30px;
+    font-size: 18px;
+    margin: -10px auto 0 0;
 }
 .card11 p,h3 {
     color: #d9f3f3;
     padding-left: 10%;
     padding-right: 10%;
 } 
-
-
-
-.card11{
-    margin-bottom: 30px;
-    font-size: 18px;
-    margin: -10px auto 0 0;
-}
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -847,6 +900,22 @@ export default {
     padding-bottom: 2%;
 }
 
+.columnMobile{
+    flex-direction: column;
+    padding-top: 18%;
+    margin-right: -20%;
+}
+.card11Mobile{
+   background-color: rgb(15, 108, 126);
+   border-radius: 7%;
+   font-size: 18px;     
+}
+.card11Mobile p,h3 {
+    color: #d9f3f3;
+    padding-left: 10%;
+    padding-right: 10%;
+} 
+
 .u-section-text3 {
     line-height: 120%;
     font-size: 20px;
@@ -920,6 +989,9 @@ export default {
     /* Styles for mobile devices */
     .midl-container {
         background-size: contain;
+    }
+    .midl-container {
+    background-image: none;
     }
 }
 
