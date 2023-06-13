@@ -127,7 +127,7 @@
             available to provide support and
             answer questions.
           </p>
-          <a href="#" class="button-o" @click="sendEmail">
+          <a class="button-o" @click="sendEmail">
             Contact for info. or questions
             <span class="material-symbols-outlined">
             </span>
