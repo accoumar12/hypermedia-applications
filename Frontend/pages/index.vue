@@ -808,6 +808,12 @@
     box-sizing: border-box;
     display: block;
 }
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    .midl-container {
+        background-size: contain;
+    }
+}
 
 .midl-container::before {
     content: "";
@@ -907,7 +913,7 @@
     margin: 12px 0 0;
     position: relative;
     max-width: 100%;
-    padding: 2% 60% 0 12%;
+    padding: 2% 30% 0 12%;
 }
 
 .midl-list {
@@ -931,8 +937,7 @@
     flex-wrap: wrap;
     transform-style: preserve-3d;
     perspective: 500px;
-    margin-bottom: 5%;
-    margin-left: -14%;
+    margin-bottom: 5%; 
 }
 
 .container .box {
@@ -945,6 +950,14 @@
     overflow: hidden;
     margin-left: 88px;
     margin-top: 45px;
+}
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .container .box {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
 
 .container:hover .box {
