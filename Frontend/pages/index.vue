@@ -804,10 +804,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+<<<<<<< Updated upstream
     position: relative;
+=======
+    position: static;
+>>>>>>> Stashed changes
     margin: 0 auto;
-    box-sizing: border-box;
     display: block;
+    min-height: 150%;
 }
 @media (max-width: 767px) {
     /* Styles for mobile devices */
@@ -843,7 +847,8 @@
     max-width: 28% !important;
     transition-duration: inherit;
     max-width: 80%;
-    margin-left: 12%;
+    margin-left: 10%;
+    background-color: rgb(212,220,228,0.8);
 }
 
 .first-rep2 {
@@ -852,7 +857,8 @@
     max-width: 28% !important;
     transition-duration: inherit;
     max-width: 80%;
-    margin-left: 18%;
+    margin-left: 20%;
+    background-color: rgb(212,220,228,0.8);
 }
 
 .first-rep3 {
@@ -862,6 +868,7 @@
     transition-duration: inherit;
     max-width: 80%;
     margin-left: 40%;
+    background-color: rgb(212,220,228,0.8);
 }
 
 .rep-icon img {
@@ -897,6 +904,9 @@
     word-wrap: break-word;
     position: relative;
     line-height: 1.2;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: inline-block;
 }
 
 .text-down {
@@ -904,7 +914,8 @@
     margin: 10px 0 0;
     word-wrap: break-word;
     position: relative;
-    padding-right: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .subtitle-midl {
