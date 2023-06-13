@@ -803,6 +803,7 @@
     background-image: url("~/assets/img/wepik-export-202306111838401U6j.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     position: relative;
     margin: 0 auto;
     box-sizing: border-box;
