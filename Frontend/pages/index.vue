@@ -35,9 +35,9 @@
             </div>
         </section>
         <section class="responsive-section">
-            <div class="column-container">
                 <div v-if="!isMobile">
                 <desktop> 
+                <div class="column-container">
                 <div class="column-left">
                     <h5 class="u-section-text">why ventour</h5>
                     <h2>What do we represent?</h2>
@@ -105,10 +105,12 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
+                    <div class="column-container-Mobile">
                     <div class="column-left-Mobile">
                     <h5 class="u-section-text">why ventour</h5>
                     <h2>What do we represent?</h2>
@@ -169,11 +171,10 @@
                                     positive change. </p>
                             </div>
                     </div>
+                </div>
 
                 </mobile>
             </div>
-
-                </div>
         </section>
         <section id="numbers">
             <div class="midl-container">
@@ -475,10 +476,13 @@ export default {
 }
 
 .column-container {
-    margin-left: 12%;
+    margin-left: 10%;
     margin-right: 10%;
-    display: flex;
+    flex-direction: row;
     width: 100%;
+}
+.column-container-Mobile{
+    flex-direction: column;
 }
 
 .column-right {
@@ -532,7 +536,7 @@ export default {
 }
 
 .card {
-    width: 60%;
+    width: 40%;
     background-color: white;
     padding: 10px;
     flex-basis: 48%;
