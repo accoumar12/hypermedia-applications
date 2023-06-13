@@ -903,7 +903,6 @@ export default {
 .columnMobile{
     flex-direction: column;
     padding-top: 18%;
-    margin-right: -20%;
 }
 .card11Mobile{
    background-color: rgb(15, 108, 126);
