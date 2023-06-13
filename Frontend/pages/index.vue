@@ -211,76 +211,183 @@
         </section>
         <section id="areasrep">
             <h4 class="subtitle-midl">Leading in 4 directions</h4>
-            <div class="row-areas">
-                <!-- Column One -->
-                <div class="column">
-                    <router-link to="/companies/Areas/technology" class="area-router">
-                        <div class="card-area">
-                            <div class="icon">
+            <div v-if="!isMobile">
+                <desktop> 
+                <div class="row-areas">
+                    <!-- Column One -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/technology" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                </div>
+                                <h3>TECHNOLOGY</h3>
+                                <p>
+                                    We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
+                                    companies that are
+                                    revolutionizing
+                                    industries and disrupting traditional business models.
+                                </p>
                             </div>
-                            <h3>TECHNOLOGY</h3>
-                            <p>
-                                We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
-                                companies that are
-                                revolutionizing
-                                industries and disrupting traditional business models.
-                            </p>
-                        </div>
-                    </router-link>
-                </div>
-                <!-- Column Two -->
-                <div class="column">
-                    <router-link to="/companies/Areas/healthcare" class="area-router">
-                        <div class="card-area">
-                            <div class="icon">
-                                <i class="fa-solid fa-shield-halved"></i>
+                        </router-link>
+                    </div>
+                    <!-- Column Two -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/healthcare" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <h3>HEALTHCARE</h3>
+                                <p>
+                                    We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
+                                        advancements</span> in medical
+                                    technology, biopharmaceuticals, and healthcare services.
+                                </p>
                             </div>
-                            <h3>HEALTHCARE</h3>
-                            <p>
-                                We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
-                                    advancements</span> in medical
-                                technology, biopharmaceuticals, and healthcare services.
-                            </p>
-                        </div>
-                    </router-link>
-                </div>
-                <!-- Column Three -->
-                <div class="column">
-                    <router-link to="/companies/Areas/consumer" class="area-router">
-                        <div class="card-area">
-                            <div class="icon">
-                                <i class="fa-solid fa-headset"></i>
+                        </router-link>
+                    </div>
+                    <!-- Column Three -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/consumer" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <h3>CONSUMER GOODS</h3>
+                                <p>
+                                    We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
+                                    consumer product spaces,in companies with <span class="highlight">innovative business
+                                        models</span>.
+                                </p>
                             </div>
-                            <h3>CONSUMER GOODS</h3>
-                            <p>
-                                We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
-                                consumer product spaces,in companies with <span class="highlight">innovative business
-                                    models</span>.
-                            </p>
-                        </div>
-                    </router-link>
-                </div>
-                <!-- Column Four -->
-                <div class="column">
-                    <router-link to="/companies/Areas/sustainability" class="area-router">
-                        <div class="card-area">
-                            <div class="icon">
-                                <i class="fa-solid fa-headset"></i>
+                        </router-link>
+                    </div>
+                    <!-- Column Four -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/sustainability" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <h3>SUSTAINABILITY</h3>
+                                <p>
+                                    We aim to accelerate the transition to a greener future while <span
+                                        class="highlight">generating attractive returns</span>
+                                    for our investor entrepreneurs
+                                    who prioritize sustainability.
+                                </p>
                             </div>
-                            <h3>SUSTAINABILITY</h3>
-                            <p>
-                                We aim to accelerate the transition to a greener future while <span
-                                    class="highlight">generating attractive returns</span>
-                                for our investor entrepreneurs
-                                who prioritize sustainability.
-                            </p>
-                        </div>
-                    </router-link>
+                        </router-link>
+                    </div>
                 </div>
-            </div>
+            </desktop>
+        </div>
+        <div v-else>
+            <mobile>
+                <div class="column">
+                    <!-- Column One -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/technology" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                </div>
+                                <h3>TECHNOLOGY</h3>
+                                <p>
+                                    We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
+                                    companies that are
+                                    revolutionizing
+                                    industries and disrupting traditional business models.
+                                </p>
+                            </div>
+                        </router-link>
+                    </div>
+                    <!-- Column Two -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/healthcare" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <h3>HEALTHCARE</h3>
+                                <p>
+                                    We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
+                                        advancements</span> in medical
+                                    technology, biopharmaceuticals, and healthcare services.
+                                </p>
+                            </div>
+                        </router-link>
+                    </div>
+                    <!-- Column Three -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/consumer" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <h3>CONSUMER GOODS</h3>
+                                <p>
+                                    We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
+                                    consumer product spaces,in companies with <span class="highlight">innovative business
+                                        models</span>.
+                                </p>
+                            </div>
+                        </router-link>
+                    </div>
+                    <!-- Column Four -->
+                    <div class="column">
+                        <router-link to="/companies/Areas/sustainability" class="area-router">
+                            <div class="card-area">
+                                <div class="icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <h3>SUSTAINABILITY</h3>
+                                <p>
+                                    We aim to accelerate the transition to a greener future while <span
+                                        class="highlight">generating attractive returns</span>
+                                    for our investor entrepreneurs
+                                    who prioritize sustainability.
+                                </p>
+                            </div>
+                        </router-link>
+                    </div>
+                </div>
+            </mobile>
+        </div>
+
+
         </section>
     </main>
 </template>
+
+<script>
+
+//import { reactive } from 'vue';
+
+const searchText = ref("");
+export default {
+
+    data() {
+        return {
+            isMobile: false,
+        };
+    },
+    methods: {
+        detectMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          );
+        },
+    },
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    },
+};
+</script>
 
 
 <style>
@@ -804,7 +911,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: relative;
+    position: static;
     margin: 0 auto;
     display: block;
     min-height: 150%;
