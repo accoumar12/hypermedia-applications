@@ -658,7 +658,7 @@
 }
 
 .firstimg2 {
-    top: 50%;
+    top: 69%;
     cursor: pointer;
     position: relative;
     left: 26%;
@@ -668,7 +668,7 @@
 }
 
 .firstimg3 {
-    top: 50%;
+    top: 69%;
     cursor: pointer;
     position: relative;
     left: 13%;
