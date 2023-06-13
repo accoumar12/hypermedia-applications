@@ -113,8 +113,11 @@ The main components of the application are:
 - **Cards**: Cards are UI components that represent a small, self-contained unit of content. Cards contain:
     - Image, Area and role of people working in the company in "Our Team" section.
     - Logo, CEO and Area of companies of Investments in "Investments" section.
-- **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information. It typically contains information, links, copyright notices, and other supplementary content. Footers provide navigation options, contact information, social media links, or additional details about the website or application.
-- **Header**: The header component is located at the top of a webpage or application screen. It often includes a logo or branding, navigation menus, search functionality, and user account links. Headers provide a consistent and easily accessible way for users to navigate the application or website. They can also display notifications, user settings, or other relevant information.
+- **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information about:
+    - Copyright notices
+    - Services and contacts  links.
+    - Social media links.
+- **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch).
 
 
 Brief description of the project explaining the chosen theme
