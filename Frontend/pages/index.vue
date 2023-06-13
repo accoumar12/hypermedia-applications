@@ -804,11 +804,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-<<<<<<< Updated upstream
     position: relative;
-=======
-    position: static;
->>>>>>> Stashed changes
     margin: 0 auto;
     display: block;
     min-height: 150%;
