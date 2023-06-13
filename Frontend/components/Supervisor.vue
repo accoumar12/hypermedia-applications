@@ -1,12 +1,5 @@
 <!--
-    Card to display information in the list page.
-    This component could be achieved with the SmallCard component by using a <slot> to insert the div with the image. The solution used here allows for better control of the layout.
-    Since the information shown can be categorized into title and subtitle, it was preferred to use only one component for both people and location.
-
-    PROPS:
-    - title: main information to display
-    - subtitle: second information to display
-    - link: link to the page description
+    This small component has been made to show the specific supervisor for each company.
 -->
 <template>
     <NuxtLink class="link" :to="link">
