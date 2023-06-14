@@ -235,7 +235,7 @@ export default {
 .card1r {
     display: block;
     position: relative;
-    max-width: 262px;
+    max-width: 254px;
     background: #00838d;
     border-radius: 4px;
     padding: 42px 34px;
@@ -243,6 +243,7 @@ export default {
     text-decoration: none;
     z-index: 5;
     overflow: hidden;
+    height: 190px;
 
 }
 
