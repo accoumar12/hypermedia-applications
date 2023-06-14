@@ -1323,7 +1323,6 @@ export default {
 @media (max-width: 768px) {
   .container .box {
     width: 70%; /* Adjust the width to fit the container */
-    height: auto; /* Allow the height to adjust based on content */
     margin: 0 auto; /* Center the box horizontally */
     margin-top: 20px; /* Adjust the top margin */
     margin-bottom: 20px; /* Add bottom margin */
