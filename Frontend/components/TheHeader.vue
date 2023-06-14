@@ -78,20 +78,16 @@
                                     <div id="sidemenu" class="sidemenu2">
                                         <button class="sidemenu__btn" @click="navOpen2 = !navOpen2" :class="{ active: navOpen2 }">
                                               <span class="vert"></span>
-                                              <!--<span class="mid"></span>-->
                                               <span class="horiz"></span>
                                         </button>
                                         <transition name="translateX">
                                           <nav class="sidemenu__nav2" v-show="navOpen2">
                                             <div class="sidemenu__wrapper">
                                               <ul class="sidemenu__list2">
-                                <!--<p> <router-link to="/companies" class="nav-link">Areas</router-link> </p>
-                            <div class="sub-menu">-->
                                 <p><router-link to="/companies/Areas/technology" class="nav-link">Technology</router-link></p>
                                 <p><router-link to="/companies/Areas/healthcare" class="nav-link">Healthcare</router-link></p>
                                 <p><router-link to="/companies/Areas/consumer" class="nav-link">Consumer Goods</router-link></p>
                                 <p><router-link to="/companies/Areas/sustainability" class="nav-link">Sustainability</router-link></p>
-<!--                        </div>-->
                                               </ul>
                                             </div>
                                           </nav>
@@ -401,6 +397,7 @@ nav {
 .sidemenu2{
     right: 10px;
     position: fixed;
+    width: 50px;
 }
 
 
@@ -417,13 +414,12 @@ nav {
   }
 
 .sidemenu__nav2 {
-    width: 100%;
+    width: 280%;
     height: auto;
-    padding-right: 10px;
     background: rgba(255, 255, 255, 0.9);
     position: relative;
-    top: 8rem;
-    left: 0;
+    top: 4.2rem;
+    left: -200%;
     z-index: 25;
     box-shadow: 2px 0 3px$grey-6;
     overflow-y: scroll;
@@ -475,6 +471,7 @@ nav {
 .sidemenu__btn.active .bottom {
         transform: rotate(45deg);
       }
+
 .sidemenu__btn.active .vert {
         transform: rotate(-45deg);
         width: 20px;
