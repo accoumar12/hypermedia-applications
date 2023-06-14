@@ -1,5 +1,9 @@
 <template>
     <main id="back">
+
+        <div v-if="!isMobile">
+                    <desktop> 
+
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
@@ -18,8 +22,7 @@
             <h1 class="name">Technology Investments</h1>
             <hr/>
 
-            <div v-if="!isMobile">
-            <desktop> 
+            
 
             <div>
             <div class="row">
@@ -154,6 +157,26 @@
 
     <div v-else>
     <mobile>
+
+
+        <div class="info-group">
+            <div class="arrow">
+                <div class="arrow-left">
+                    <router-link to="/companies">
+                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    </router-link>
+                </div>
+                <router-link to="/healthcare">
+                    <div class="arrow-right">
+                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
+                    </div>
+
+                </router-link>
+            </div>
+            </div>
+            <h1 class="name">Technology Investments</h1>
+            <hr/>
+        
         <div>
         <div class="column">
                 <div class="columna-mobile">

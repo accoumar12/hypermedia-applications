@@ -1,5 +1,9 @@
 <template>
     <main id="back">
+
+        <div v-if="!isMobile">
+            <desktop>
+
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
@@ -17,6 +21,8 @@
 
             <h1 class="name">Healthcare Investments</h1>
             <hr />
+
+
             <div class="row">
                 <div class="columna">
                     <img id="area-img" src="~/assets/img/health-team.png" />
@@ -143,20 +149,188 @@
             </div>
             <div id="right-zone"></div>
         </div>
+
+        </desktop>
+        </div>  
+
+        <div v-else>
+        <mobile>
+
+            <div class="info-group">
+            <div class="arrow">
+                <div class="arrow-left">
+                    <router-link to="/technology">
+                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    </router-link>
+                </div>
+                <router-link to="/consumer">
+                    <div class="arrow-right">
+                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
+                    </div>
+
+                </router-link>
+            </div>
+
+            <h1 class="name">Healthcare Investments</h1>
+            <hr />
+
+            <div class="column">
+                <div class="columna-mobile">
+                    <img id="area-img-mobile" src="~/assets/img/health-team.png" />
+                </div>
+                <div class="columna2-mobile">
+                    <div class="button-container-mobile" style="position: sticky; top: 0; z-index: 1;">
+                        <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                            <br>
+                            DESCRIPTION
+                        </button>
+                        <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                            <br>
+                            PROJECTS
+                        </button>
+                    </div>
+                    <div class="description-containera-mobile">
+                        <div v-if="activeSection === 1">
+                            <p2 class="description">
+                                Our company has a strong track record of identifying promising healthcare startups and
+                                helping them grow and succeed.
+                                VenTour invests in a variety of healthcare sectors, including biotechnology, medical
+                                devices, and digital health.Investments are targeted at companies that are developing
+                                cutting-edge technologies and products that can improve patient outcomes,
+                                reduce healthcare costs, and increase access to care.
+                                <br>
+                                Our goal is to help every portfolio company to navigate the complex healthcare landscape
+                                and bring their innovations to market as quickly and efficiently as possible.
+                            </p2>
+                        </div>
+                        <div v-else-if="activeSection === 2">
+                            <p2 class="description">
+                                Current Portfolio of the investment projects in the field of Healthcare:
+                            </p2>
+                            <ul class="comp-list">
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.unitedhealthgroup.com/" target="_blank"
+                                        style="text-decoration: none;">UnitedHealth Group, Inc.</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.cardinalhealth.com/en.html" target="_blank"
+                                        style="text-decoration: none;">Cardinal Health, Inc.</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.cigna.com/" target="_blank" style="text-decoration: none;">The
+                                        Cigna Group</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.elevancehealth.com/" target="_blank"
+                                        style="text-decoration: none;">Elevance Health, Inc.
+                                        Ltd</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.pfizer.it/"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Pfizer Inc</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <p>HAPPY INVESTORS:</p>
+            </div>
+        </div>
+        <div id="flex-container" class="testimonials">
+            <div id="left-zone">
+                <ul class="list">
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial1-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial1-1" for="radio_testimonial1-1">UnitedHealth Group</label>
+                        <div class="content-test content_testimonial1-1">
+                            <span class="picto"></span>
+
+                            <p>"As a healthcare professional, I am thrilled to be a part of VenTour's investment portfolio.
+                                Their commitment to improving patient outcomes through innovative technology and services is
+                                truly inspiring.
+                                I have no doubt that their investments will continue to make a significant impact on the
+                                healthcare industry."</p>
+                            <p class="testimonialFrom">Richard T. Burke, Founder</p>
+                            <p class="testimonialState">Minnetonka, MN</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial1-2" name="basic_carousel" />
+                        <label class="label_testimonial1-2" for="radio_testimonial1-2">Cigna Group</label>
+                        <div class="content-test content_testimonial1-2">
+                            <span class="picto"></span>
+
+                            <p>"VenTour's expertise and guidance have been instrumental in helping our healthcare startup
+                                succeed. Their understanding of the market and willingness to take risks has allowed us to
+                                develop groundbreaking solutions that have the potential to transform patient care."</p>
+                            <p class="testimonialFrom">Mike Crompton, CEO</p>
+                            <p class="testimonialState">Round Rock, TX</p>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial1-3" name="basic_carousel" />
+                        <label class="label_testimonial1-3" for="radio_testimonial1-3">CardinalHealth</label>
+                        <div class="content-test content_testimonial1-3">
+                            <span class="picto"></span>
+
+                            <p>"Working with VenTour has been an incredibly positive experience. Their team is
+                                knowledgeable, professional, and committed to supporting companies that are making a real
+                                difference in healthcare. I have no doubt that their investments will have a lasting impact
+                                on the industry and improve the lives of countless patients."</p>
+                            <p class="testimonialFrom">Robert D. Walter, Founder</p>
+                            <p class="testimonialState">Dublin, OH</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial1-4" name="basic_carousel" />
+                        <label class="label_testimonial1-4" for="radio_testimonial1-4">Pfizer</label>
+                        <div class="content-test content_testimonial1-4">
+                            <span class="picto"></span>
+
+                            <p>"As an investor, I appreciate VenTour's approach to healthcare investments. They are focused
+                                on supporting companies that are developing innovative solutions to some of the biggest
+                                challenges in healthcare. Their commitment to making a positive impact is evident in their
+                                portfolio, and I am proud to be a part of it."</p>
+                            <p class="testimonialFrom">Charles Erhart, Founder</p>
+                            <p class="testimonialState">New York, NY</p>
+                            <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="right-zone"></div>
+        </div>
+
+        </mobile>
+        </div>        
+
     </main>
 </template>
         
-        <!--
-        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
-        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
-        -->
 <script>
 export default {
     data() {
         return {
             activeSection: 1,
+            isMobile: false,
         };
     },
+    methods:{
+        detectMobile() {
+              return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              );
+            },
+    },
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    }
+
 };
 
 const testimonial1Items = document.querySelectorAll('.item label');
@@ -309,10 +483,19 @@ hr {
     padding-left: 8%;
 }
 
+.columna-mobile {
+    flex-basis: 50%;
+}
+
 .columna2 {
     flex-basis: 50%;
     padding-right: 4%;
 
+}
+
+
+.columna2 {
+    flex-basis: 50%;
 }
 
 .columna.p2 {
@@ -326,6 +509,12 @@ hr {
 
 }
 
+#area-img-mobile {
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+
+}
 
 .description-containera {
     height: 20%;
