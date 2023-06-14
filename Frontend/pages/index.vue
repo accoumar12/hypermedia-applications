@@ -228,11 +228,11 @@
                     </div>
                     <div class="content">
                         <div>
+                            <p>Giving light to technology with one of the best trending companies in todays' market.
+                            </p>
                             <router-link to="/companies/27" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
-                            <p>Giving light to technology with one of the best trending companies in todays' market.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -242,11 +242,11 @@
                     </div>
                     <div class="content">
                         <div>
+                            <p>The top leading company in sportswear trusted on us to become the most wanted one.
+                            </p>
                             <router-link to="/companies/33" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
-                            <p>The top leading company in sportswear trusted on us to become the most wanted one.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -256,11 +256,11 @@
                     </div>
                     <div class="content">
                         <div>
+                            <p>Producing power from the support they gained from us and leading the energy market.
+                            </p>
                             <router-link to="/companies/38" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
-                            <p>Producing power from the support they gained from us and leading the energy market.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -269,13 +269,13 @@
                         <img src="~/assets/img/Cigna.png">
                     </div>
                     <div class="content">
-                        <div>
-                            <router-link to="/companies/24" class="read-more">
-                                <h2>Read More</h2>
-                            </router-link>
+                        <div>                            
                             <p>Being your insurance and health companion in international markets just like us are for our
                                 companies.
                             </p>
+                            <router-link to="/companies/24" class="read-more">
+                                <h2>Read More</h2>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -869,6 +869,7 @@ export default {
 }
 
 .column-left2 {
+    padding-left: 5%;
     padding-top: 10%;
     width: 50%;
     padding-right: 30px;
@@ -938,25 +939,28 @@ export default {
     font-family: sans-serif;
     font-size: 40px;
     font-weight: 700;
+    padding-left: 5%;
 }
 
 .column-left-Mobile p {
-    width: 100%;
+    width: 90%;
+    padding-left: 5%;
     font-family: sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 120%;
+    font-size: 18px;
+    line-height: 106%;
     padding-bottom: 2%;
 }
 
 .columnMobile{
     flex-direction: column;
     padding-top: 18%;
+    padding-left: 5%;
 }
 .card11Mobile{
    background-color: rgb(15, 108, 126);
    border-radius: 7%;
-   font-size: 18px;     
+   font-size: 15px;     
+   width: 90%
 }
 .card11Mobile p,h3 {
     color: #d9f3f3;
@@ -1141,6 +1145,17 @@ export default {
     padding-left: 10%;
 }
 
+@media (max-width: 768px) {
+    .text-down {
+        font-size: 15pt;
+        margin: 10px 0 0;
+        word-wrap: break-word;
+        position: relative;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}
+
 .subtitle-midl {
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
@@ -1188,10 +1203,26 @@ export default {
 }
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
-    .container .box {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 10px;
+    .subtitle-midl {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 24pt;
+        font-display: bold;
+        margin: 12px 0 0;
+        position: relative;
+        max-width: 100%;
+        padding: 2% 10% 0 10%;
+    }
+    .repeater {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -20px;
+      flex-direction: column;
+      padding-right: 8%;
+      gap: 20px; 
+    }
+
+    .repeater > div {
+      margin-bottom: 20px; /* Margine inferiore tra i box */
     }
 }
 
@@ -1287,6 +1318,37 @@ export default {
 
 .container .box:hover .content p {
     transform: translateY(0px);
+}
+
+@media (max-width: 768px) {
+  .container .box {
+    width: 70%; /* Adjust the width to fit the container */
+    height: auto; /* Allow the height to adjust based on content */
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 20px; /* Adjust the top margin */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+  .container .box .imgBx img {
+    position: relative;
+    object-fit: contain;
+    }
+.container .box .content h2 {
+
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 12pt;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+}
+
+.container .box .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 8pt;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+}
 }
 
 /*Section areas*/
