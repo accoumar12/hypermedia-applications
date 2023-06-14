@@ -128,7 +128,7 @@
                         strategic
                         partner, offering not only capital but also expertise, guidance, and an extensive network of
                         industry connections.</p>
-                    <div class="sec-butt">
+                    <div class="sec-butt2">
                         <router-link to="/contact">
                             <a class="us-button">join us</a>
                         </router-link>
@@ -172,7 +172,6 @@
                             </div>
                     </div>
                 </div>
-
                 </mobile>
             </div>
         </section>
@@ -982,8 +981,9 @@ export default {
     margin-top: 15%;
 }
 
-.sec-butt {
-    width: 100%;
+.sec-butt2 {
+    padding-left: 10%;
+    padding-top: 10%;
 }
 
 .sec-butt a {
