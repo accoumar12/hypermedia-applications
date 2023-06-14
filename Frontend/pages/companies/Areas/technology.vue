@@ -14,9 +14,14 @@
 
                 </router-link>
             </div>
-
+            </div>
             <h1 class="name">Technology Investments</h1>
-            <hr />
+            <hr/>
+
+            <div v-if="!isMobile">
+            <desktop> 
+
+            <div>
             <div class="row">
                 <div class="columna">
                     <img id="area-img" src="~/assets/img/tech-team.png" />
@@ -79,7 +84,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <p>HAPPY INVESTORS:</p>
+                <p>HAPPY INVESTORS</p>
             </div>
         </div>
         <div id="flex-container" class="testimonials">
@@ -143,13 +148,147 @@
             </div>
             <div id="right-zone"></div>
         </div>
+
+    </desktop>
+    </div>
+
+    <div v-else>
+    <mobile>
+        <div>
+        <div class="column">
+                <div class="columna-mobile">
+                    <img id="area-img-mobile" src="~/assets/img/tech-team.png" />
+                </div>
+                <div class="columna2-mobile">
+                    <div class="button-container-mobile" style="position: sticky; top: 0; z-index: 1;">
+                        <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                            <br>
+                            DESCRIPTION
+                        </button>
+                        <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                            <br>
+                            PROJECTS
+                        </button>
+                    </div>
+                    <div class="description-containera-mobile">
+                        <div v-if="activeSection === 1" id="section1">
+                            <p2 class="description">
+                                VenTour understands the importance of technology investments and is committed to investing
+                                in cutting-edge technologies. We have a team of experienced professionals who have an eye
+                                for identifying promising technologies and the potential to change the world.
+                                By investing in technology, VenTour aims to support startups that are focused on creating
+                                innovative solutions to complex problems.
+                                <br>
+                                VenTour has been investing in technology companies for years,
+                                contributing to the growth and success of some of the most innovative businesses in the
+                                industry.
+                                VenTour's extensive knowledge and expertise in technology investments have helped its
+                                portfolio companies reach their full potential.
+                            </p2>
+                        </div>
+                        <div v-else-if="activeSection === 2" id="projects">
+                            <p2 class="description2">
+                                Current Portfolio of the investment projects in the field of Technology:
+                            </p2>
+                            <ul class="comp-list">
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.microsoft.com/it-it" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">Microsoft</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.dell.com/it-it"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Dell</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">Intel</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.tsmc.com/english"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Taiwan
+                                        Semiconductor
+                                        Manufacturing Co.,
+                                        Ltd</a></li>
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.st.com/content/st_com/en.html" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">STMicroelectronics</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            <hr />
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="text-center-mobile">
+                <p>HAPPY INVESTORS</p>
+            </div>
+        </div>
+        <div id="flex-container" class="testimonials">
+            <div id="upper-zone">
+                <ul class="list">
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial-1" for="radio_testimonial-1">Microsoft</label>
+                        <div class="content-test content_testimonial-1">
+                            <span class="picto"></span>
+                            <p>"I've been investing with VenTour for the past few years and I couldn't be happier with the
+                                results. Their team of experts really knows how to spot promising startups and help them
+                                grow.
+                                My portfolio has seen significant gains thanks to VenTour's strategic investments."</p>
+                            <p class="testimonialFrom">Paul Gardner Allen, Founder</p>
+                            <p class="testimonialState">Redmond, NY</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
+                        <label class="label_testimonial-2" for="radio_testimonial-2">DELL</label>
+                        <div class="content-test content_testimonial-2">
+                            <span class="picto"></span>
+
+                            <p>"As a first-time investor, I was a bit nervous about putting my money into the hands of a
+                                venture capital firm. But VenTour's professionalism and transparency made me feel at ease.
+                                They keep me updated every step of the way and have exceeded my expectations in terms of
+                                returns."</p>
+                            <p class="testimonialFrom">Michael Saul Dell, Owner</p>
+                            <p class="testimonialState">Round Rock, TX</p>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
+                        <label class="label_testimonial-3" for="radio_testimonial-3">intel</label>
+                        <div class="content-test content_testimonial-3">
+                            <span class="picto"></span>
+
+                            <p>"I've been working with VenTour for several years now and I can confidently say they are one
+                                of the best venture capital firms out there.
+                                Their ability to identify and support high-growth companies is unmatched. ”</p>
+                            <p class="testimonialFrom">Gordon Earle Moore, CEO</p>
+                            <p class="testimonialState">Santa Clara, CA</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
+                        <label class="label_testimonial-4" for="radio_testimonial-4">ST Microelectronics</label>
+                        <div class="content-test content_testimonial-4">
+                            <span class="picto"></span>
+                            <p>"Working with VenTour has been an absolute pleasure. Their team is knowledgeable, responsive,
+                                and always willing to go the extra mile to ensure success. They have helped me diversify my
+                                portfolio and achieve financial goals I never thought possible."</p>
+                            <p class="testimonialFrom">Jean-Marc Chery, Chief Executive</p>
+                            <p class="testimonialState">Geneva, Switzerland</p>
+                            <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="down-zone"></div>
+        </div>
+
+    </mobile>
+    </div>
     </main>
 </template>
-        
-        <!--
-        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
-        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
-        -->
+
 <script>
 export default {
 
@@ -158,8 +297,25 @@ export default {
         return {
 
             activeSection: i,
+            isMobile: false,
         };
     },
+    methods:{
+        detectMobile() {
+              return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              );
+            },
+    },
+       
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    }
 
 
 };
@@ -298,6 +454,7 @@ hr {
     width: 70%;
     border: 1px solid black;
     margin: 20px 0;
+    align-content: center;
 }
 
 .row {
@@ -335,9 +492,18 @@ hr {
     padding-left: 8%;
 }
 
+.columna-mobile {
+    flex-basis: 50%;
+}
+
 .columna2 {
     flex-basis: 50%;
     padding-right: 4%;
+
+}
+
+.columna2-mobile {
+    flex-basis: 50%;
 
 }
 
@@ -352,25 +518,38 @@ hr {
 
 }
 
+#area-img-mobile {
+    width: 100%;
+    height: 100%;
+
+}
 
 .description-containera {
     height: 20%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 2%;
     align-items: center;
-    text-align: justify;
     padding-right: 23%;
-}
-
-.description-containera {
-    height: 20%;
     padding-left: 2%;
-    font-size: 15pt;
-    width: 70%;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
+}
+
+.description-containera-mobile {
+    height: 20%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .row2 {
@@ -388,6 +567,16 @@ hr {
     position: absolute;
     width: 100%;
     font-size: 18px;
+    font-weight: bold;
+    color: #010d08;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-center-mobile {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
     font-weight: bold;
     color: #010d08;
     font-family: Arial, Helvetica, sans-serif;
@@ -452,69 +641,76 @@ hr {
     color: #033f52;
 }
 
-/* ============= Begin Testimonial Flexbox ============ */
-#flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.button-container-mobile {
+    position: fixed;
     display: flex;
-    -ms-flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: monospace;
+    color: #033f52;
+}
+
+/* ============= Begin Testimonial Flexbox ============ */
+
+#flex-container {
+    display: flex;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 100%;
     min-height: 30%;
     max-width: 70%;
     margin-bottom: 2%;
     background-color: rgb(212, 208, 208);
-    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12),
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12),
         2px 1px 2px rgba(0, 0, 0, 0.24);
-    box-shadow: 2px 2px 2px 2px rgba(18, 2, 2, 0.12);
     overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
+    margin-left: 17%;
 }
 
 #left-zone {
     height: 50%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
 }
 
 #left-zone .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     list-style: none;
-    -ms-flex-line-pack: stretch;
     align-content: stretch;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     margin: auto;
     padding: 0;
-    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#upper-zone {
+    height: 50%;
+    flex: 0 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+#upper-zone .list {
+    display: flex;
+    list-style: none;
+    align-content: stretch;
+    flex-direction: row;
+    flex: 1 1 auto;
+    margin: auto;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .item input {
     display: none;
 }
+
 
 label {
     display: block;
@@ -532,58 +728,43 @@ label:hover {
 
 .content-test {
     position: absolute;
-
     right: 0;
     bottom: 0;
     opacity: 0;
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
     transform: translateY(100%);
     height: 50%;
     width: 100%;
-    -webkit-transition: 0.5s ease-out;
-    -o-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     pointer-events: none;
 }
 
 .content-test p {
-    max-width: 50%;
+    max-width: 90%;
     text-align: center;
 }
 
 #right-zone {
     width: 100%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    height: 50%;
+}
+
+#down-zone {
+    width: 100%;
     flex: 1 0 auto;
     height: 50%;
 }
 
 input:checked~.content-test {
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
     transform: translateY(0%);
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    -o-transition: transform 1s;
     transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s;
     opacity: 1;
 }
+
 
 @media (min-width: 480px) {
     #flex-container {

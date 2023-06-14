@@ -8,7 +8,7 @@
                 <div class="column-left2">
                     <div class="content__container">
                         <ul class="content__container__list">
-                            <li class="content__container__list__item">Inovation !</li>
+                            <li class="content__container__list__item">Innovation !</li>
                             <li class="content__container__list__item">Power !</li>
                             <li class="content__container__list__item">Potential !</li>
                             <li class="content__container__list__item">VenTour !</li>
@@ -112,7 +112,7 @@
                 <mobile>
                     <div class="column-container-Mobile">
                     <div class="column-left-Mobile">
-                    <h5 class="u-section-text">why ventour</h5>
+                    <h5 class="u-section-text-mobile">why ventour</h5>
                     <h2>What do we represent?</h2>
                     <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
                         the
@@ -906,6 +906,16 @@ export default {
     font-size: 18px;
     line-height: 24px;
     font-weight: 1000;
+}
+
+.u-section-text-mobile {
+    color: #1e9ec9;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 1000;
+    padding-left: 5%;
 }
 
 .column-left {
