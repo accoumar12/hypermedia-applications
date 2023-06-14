@@ -308,6 +308,28 @@ export default {
     display: block;
 }
 
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-top: 15% !important;
+    }
+}
+@media (max-width: 768px){
+
+    .overlay-title {
+        font-size: 40px;
+    }
+
+    .overlay-subtext {
+        font-size: 20px;
+    }
+
+    .overlay-subsubtext {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
 .overlay-subsubtext em {
     color: red;
 }
@@ -796,12 +818,6 @@ button:hover {
 
 
 /* Media Queries */
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-4 {
-        width: 100%;
-        margin-right: 0;
-    }
-}
 
 @media (max-width: 768px) {
     .text-block {
