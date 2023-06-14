@@ -7,11 +7,11 @@
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
-                    <router-link to="/technology">
+                    <router-link to="/companies/Areas/technology">
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </router-link>
                 </div>
-                <router-link to="/consumer">
+                <router-link to="/companies/Areas/consumer">
                     <div class="arrow-right">
                         <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
                     </div>

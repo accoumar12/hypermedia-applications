@@ -2,7 +2,7 @@
     <main id="back">
 
         <div v-if="!isMobile">
-                    <desktop> 
+        <desktop> 
 
         <div class="info-group">
             <div class="arrow">
@@ -166,7 +166,7 @@
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </router-link>
                 </div>
-                <router-link to="/healthcare">
+                <router-link to="/companies/Areas/healthcare">
                     <div class="arrow-right">
                         <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
                     </div>
@@ -452,12 +452,14 @@ cycleTestimonials();
     align-items: center;
     justify-content: center;
     text-align: center;
+    align-content: center;
 }
 
 .name {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 #data-container {

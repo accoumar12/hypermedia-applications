@@ -1179,8 +1179,6 @@ export default {
 .midl-list {
     margin-top: 45px;
     padding-bottom: 2%;
-    display: flex;
-    flex-direction: column;
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -1393,6 +1391,7 @@ export default {
     border-radius: 0.5em;
     transition: 0.5s;
     cursor: pointer;
+    height: 75%
 }
 
 .area-router {

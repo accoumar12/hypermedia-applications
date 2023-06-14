@@ -3,7 +3,7 @@
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
-                    <router-link to="/consumer">
+                    <router-link to="/companies/Areas/consumer">
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </router-link>
                 </div>
