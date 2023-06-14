@@ -512,8 +512,6 @@ hr {
 #area-img-mobile {
     width: 100%;
     height: 100%;
-    padding-left: 10%;
-
 }
 
 .description-containera {
@@ -525,6 +523,20 @@ hr {
     align-items: center;
     text-align: justify;
     padding-right: 23%;
+}
+
+.description-containera-mobile {
+    height: 20%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .description-containera p2 {
@@ -553,6 +565,16 @@ hr {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+}
+
+.text-center-mobile {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #010d08;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .column3 {
@@ -614,7 +636,18 @@ hr {
     color: #033f52;
 }
 
+.button-container-mobile {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: monospace;
+    color: #033f52;
+}
+
 /* ============= Begin Testimonial Flexbox ============ */
+
 #flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
