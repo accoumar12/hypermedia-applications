@@ -15,7 +15,7 @@
                         </ul>
                     </div>
                     <h2> Fly with us to a journey of growth!</h2>
-                    <p class="section-text4">Transforming the investment landscape and fueling inovation.<br>
+                    <p class="section-text4">Transforming the investment landscape and fueling innovation.<br>
                         <br>Our focus is your success!</p>
                     <router-link to="/history" class="sec-tex">
                         <p class="section-text41">LEARN MORE</p>
