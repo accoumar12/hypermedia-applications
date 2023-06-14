@@ -415,6 +415,19 @@ export default {
     font-family: sans-serif;
     z-index: 6;
 }
+@media (max-width: 768px) {
+  #title2 {
+        align-items: center;
+        padding-top: 1%;
+        padding-left: 10%;
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: sans-serif;
+        z-index: 6;
+    }
+}
+
 
 /*Styles for the counter section*/
 .row4 {
@@ -626,6 +639,15 @@ label>[type=radio] {
     font-family: sans-serif;
     font-size: 16px;
 }
+@media (max-width: 768px) {
+  .form-container {
+    text-align: center;
+    padding-right: 20%;
+    padding-bottom: 4%;
+  }
+}
+
+
 
 input {
     border-color: #b2b7b5;
@@ -652,6 +674,12 @@ input {
     transition: 0.5s;
     outline: none;
 }
+@media (max-width: 768px) {
+  #age-filter {
+    width: 100%;
+  }
+}
+
 
 input[type=text]:focus {
     border: 3px solid #555;
