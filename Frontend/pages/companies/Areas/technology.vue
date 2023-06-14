@@ -18,13 +18,9 @@
 
                 </router-link>
             </div>
-            </div>
             <h1 class="name">Technology Investments</h1>
             <hr/>
 
-            
-
-            <div>
             <div class="row">
                 <div class="columna">
                     <img id="area-img" src="~/assets/img/tech-team.png" />
@@ -173,11 +169,9 @@
 
                 </router-link>
             </div>
-            </div>
             <h1 class="name">Technology Investments</h1>
             <hr/>
         
-        <div>
         <div class="column">
                 <div class="columna-mobile">
                     <img id="area-img-mobile" src="~/assets/img/tech-team.png" />
@@ -234,11 +228,10 @@
 
                         </div>
                     </div>
-                    
                 </div>
-            <hr />
-            </div>
             
+            </div>
+            <hr />
         </div>
         <div class="row">
             <div class="text-center-mobile">
