@@ -476,10 +476,10 @@ export default {
 }
 
 .column-container {
-    margin-left: 10%;
     margin-right: 10%;
     flex-direction: row;
     width: 100%;
+    display: flex;
 }
 .column-container-Mobile{
     flex-direction: column;
@@ -909,6 +909,7 @@ export default {
 }
 
 .column-left {
+    margin-left: 10%;
     padding-top: 6%;
     width: 50%;
 }
