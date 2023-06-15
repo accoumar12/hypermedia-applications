@@ -83,18 +83,17 @@
       </div>
       <form>
         <div class="space">
-          <h1>
-            Join us
-          </h1>
+          <h1>Join us</h1>
           <div class="contact-us">
-
-            <label for="customerName">NAME<em>&#x2a;</em></label><input id="customerName" name="customerName" required=""
-              type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
-              name="customerEmail" required="" type="email" /><label for="customerPhone">PHONE</label><input
-              id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label
-              for="country">COUNTRY<em>&#x2a;</em></label>
+            <label for="customerName">NAME<em>&#x2a;</em></label>
+            <input id="customerName" v-model="customerName" required type="text" />
+            <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+            <input id="customerEmail" v-model="customerEmail" required type="email" />
+            <label for="customerPhone">PHONE</label>
+            <input id="customerPhone" v-model="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
+            <label for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
-              <select id="country" name="country" autocomplete="country-name" class="block" style="height: 36px;">
+              <select id="country" v-model="country" autocomplete="country-name" class="block" style="height: 36px;">
                 <option>Albania</option>
                 <option>China</option>
                 <option>France</option>
@@ -105,20 +104,16 @@
                 <option>Other</option>
               </select>
             </div>
-            <label for=" customerNote">ABOUT <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about your
-                company
-                (i.e. name and goal)
-              </span></label>
-            <textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+            <label for="customerNote">ABOUT <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about your company
+                (i.e. name and goal)</span></label>
+            <textarea id="customerNote" v-model="customerNote" required rows="4"></textarea>
             <label for="file-upload"
               class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file
-              </span>
-              <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
+              <input id="file-upload" type="file" class="sr-only" ref="fileUpload" />
             </label>
 
-            <button id="customerOrder">SUBMIT</button>
-
+            <button id="customerOrder" @click.prevent="submitForm" href="#" @click="sendEmail">SUBMIT</button>
           </div>
         </div>
       </form>
@@ -207,7 +202,7 @@
               <input id="file-upload" name="file-upload" type="file" class="sr-only" />
             </label>
 
-            <button id="customerOrder">SUBMIT</button>
+            <button id="customerOrder" @click="submitForm">SUBMIT</button>
 
           </div>
         </div>
@@ -221,81 +216,78 @@ export default defineNuxtComponent({
   data() {
     return {
       activeSection: 1,
+      customerName: '',
+      customerEmail: '',
+      customerPhone: '',
+      country: '',
+      customerNote: '',
     };
   },
-  async asyncData() {
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const route = useRoute()
-    const companies = await $fetch(useRuntimeConfig().public.serverURL + '/companies' + route.params.id)
-    return {
-      companies
-    }
-  }
+  methods: {
+    submitForm() {
+      const subject = `Request from ${this.customerName}`;
+      const body = `Good morning,\n\nI'm ${this.customerName} and I would like to send my request.`;
+
+      const formData = new FormData();
+      formData.append('name', this.customerName);
+      formData.append('email', this.customerEmail);
+      formData.append('phone', this.customerPhone);
+      formData.append('country', this.country);
+      formData.append('note', this.customerNote);
+      formData.append('file', this.$refs.fileUpload.files[0]);
+
+      const email = {
+        to: 'ventourteam@gmail.com',
+        subject,
+        body,
+        attachments: [
+          {
+            name: this.$refs.fileUpload.files[0].name,
+            data: this.$refs.fileUpload.files[0],
+          },
+        ],
+      };
+
+      // Here, we are using a dummy function as an example
+      this.sendEmail(email)
+        .then(() => {
+          // Email sent successfully
+          alert('Look your email provider and continue there!');
+          this.resetForm();
+        })
+        .catch((error) => {
+          // Error occurred while sending email
+          console.error('Error sending email:', error);
+          alert('An error occurred while sending the email. Please try again.');
+        });
+    },
+    sendEmail(email) {
+      const recipient = 'ventourteam@gmail.com';
+      const subject = 'Inquiry from ' + this.customerName;
+      const body = 'Good morning,\n I\'m ' + this.customerName + ' and I would like to send my request.\n Talking about my company, I would like to say a couple of words (for example that my company has its register office in ' + this.country + '\n' + this.customerNote + 'C\n Can you please contact me at this email' + this.customerEmail+'\n Thank you for your attention, \n Best Regards \n + ' this.customerName;
+
+      const mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = mailtoLink;
+      // This is just a dummy function that returns a promise resolved after 2 seconds
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Sending email:', email);
+          resolve();
+        }, 2000);
+      });
+    },
+    resetForm() {
+      this.customerName = '';
+      this.customerEmail = '';
+      this.customerPhone = '';
+      this.country = '';
+      this.customerNote = '';
+      this.$refs.fileUpload.value = '';
+    },
+  },
 })
 </script>
 
-<script setup>
-
-const route = useRoute()
-const id = route.params.id
-// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: person } = await useFetch(useRuntimeConfig().public.serverURL + '/people/' + id)
-
-const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
-/*
-    In order to implement a filter, we use the computed property.
-    This allows to have a cached value that contains the filtered list.
-    Instead of using the normal list for the cards, we used the computed property directly.
-*/
-//const role = ref("");
-const areas = ref("");
-
-const filtered = computed(() => {
-  const arrTot = []
-  // Checking for values where the full list is provided
-  for (let company of companies.value) {
-    if ((areas.value == 0 || areas.value == "") & (company.companyId == id)) {
-      console.log(company)
-      arrTot.push(company)
-    }
-  }
-  return arrTot
-
-  const arr = []
-
-
-  // Filtering the list
-  for (let company of companies.value) {
-    if (company.areas == areas.value) {
-      arr.push(company)
-    }/*
-        else if (company.areas.toLowerCase().includes(areas.value.toLowerCase()))
-            arr.push(company)*/
-  }
-
-  // Returning the filtered list
-  return arr
-
-})
-
-/*
-  var items = [
-    { text: person.award1 },
-    { text: person.award2 },
-    { text: person.award3 },
-    { text: person.award4 }
-  ];
-
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].text !== '') {
-      var listItem = document.createElement('li');
-      listItem.textContent = items[i].text;
-      document.getElementById('myList').appendChild(listItem);
-    }
-  }
-*/
-
-</script>
 
 <style>
 .contact-us {
@@ -358,6 +350,20 @@ textarea:focus {
 textarea {
   resize: none;
 }
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
 
 #customerOrder {
   cursor: pointer;
