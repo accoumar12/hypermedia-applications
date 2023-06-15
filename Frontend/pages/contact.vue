@@ -411,7 +411,8 @@ button {
 @media (max-width: 768px) {
   #customerOrder {
     float: none;
-    margin-top: 100px;
+    margin-top: 150px;
+    align-items: center;
   }
 }
 
