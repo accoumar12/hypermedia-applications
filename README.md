@@ -127,8 +127,15 @@ The main components of the application are:
         - **img**: **image** you can see of the person who works in Ventour and the icon of the company
 - **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information about:
     - Copyright notices
-    - Services and contacts  links.
+    - Services and contacts links.
     - Social media links.
+    - The main properties are given by:
+        - **Service**: External and useful link.
+        - **Contact**: Main information to keep in contact with Ventour
+        - **Social Media icons**: 3 icons of the three main social the Ventour uses, so Facebook, Instagram and Linkedin
+![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/e14d1016-9328-42b8-bd55-6a85929b2f51)
+
+
 - **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch).
 - **Supervisor**: gives to each company the right supervisor.
 
