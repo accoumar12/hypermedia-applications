@@ -119,6 +119,13 @@ The main components of the application are:
     - Social media links.
 - **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch).
 
+In the website you can find some functions that help the users finding information and achieving thei goals (i.e. apply for a new job position or ask Ventour to invest in their company) and some function built in order to make the website responsive for both mobile and desktop. The main functions we have developed are:
+- **Mobile vs Desktop**: some of the components have been designed with a media query in the css. It allows us to see different dimensions of objects in the screen depending on the dimension on the screen used. Even if it can be considered a good option, we thought it was better to build some specific class for mobile, in order to design page that is more suitable for mobile. It is the reason why in some pages we used this function (an example is the header)
+-  **Filter by**: we exploited some fields of the database to filter data in "Our Team" and "Investments" pages. In Investments page you can filter companies by area, but also the most important companies (they are showed also in Home Page). Filters can be mixed, such a way the user can filter only by area, only the Most Relevant, or both.
+-  **Search by name**: in Investments page
+
+
+
 
 Brief description of the project explaining the chosen theme
 o Available server endpoint with short description
