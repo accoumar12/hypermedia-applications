@@ -312,6 +312,7 @@ export default defineNuxtComponent({
   background: rgb(212, 208, 208);
   padding: 70px 100px;
   border-top: 10px solid #2A293E;
+  height: fit-content;
 }
 
 label,
@@ -407,6 +408,12 @@ button {
 ::selection {
   background: #ffc7b8;
 }
+@media (max-width: 768px) {
+  #customerOrder {
+    float: none;
+    margin-top: 100px;
+  }
+}
 
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
@@ -439,7 +446,7 @@ textarea:-webkit-autofill:focus {
 }
 
 form {
-  width: 60%;
+  width: 80%;
   margin-bottom: 5%;
 }
 
@@ -482,7 +489,7 @@ label {
 
   form {
     width: 90%;
-    min-width: 400px;
+    min-width: 100%;
   }
 }
 
@@ -528,8 +535,10 @@ label {
   }
 
   .header-center {
-    font-size: 36px;
+    font-size: 32px;
+    max-width: 100%;
     /* Adjusted font size for smaller screens */
+    padding-right: 10px;
   }
 }
 
@@ -539,7 +548,6 @@ label {
 
 
 .section-button-co {
-
   padding-bottom: 2.5%;
   border: none;
   background: none;
