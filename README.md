@@ -121,9 +121,10 @@ The main components of the application are:
     - Image, Area and role of people working in the company in "Our Team" section.
     - Logo, CEO and Area of companies of Investments in "Investments" section.
     - In details the properties are:
-        - title: main information to display. It is the **name** of the person or of the company
-        - subtitle: second information to display. It is the role and the area in the company for people.
-        - link: link to the page description
+        - **title**: main information to display. It is the **name** of the person in "Our Team"
+        - **subtitle**: second information to display. It is the **role** and the **area** in the company for people in "Our Team" and it is the **CEO** and the **area** in Investments.
+        - **link**: link to the **page description**, in both "Our Team" and "Investments"
+        - **img**: **image** you can see of the person who works in Ventour and the icon of the company
 - **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information about:
     - Copyright notices
     - Services and contacts  links.
