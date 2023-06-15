@@ -116,7 +116,9 @@ Frontend folder is split in many folders and many parts:
 
 ### Functionalities
 The main components of the application are:
-- **Carousel**: Carousel component is used to display a set of images or content in a slideshow format. It allows users to navigate through the images or content horizontally. It is used in "About us" section to show the most relevant moment in the history of the company.
+- **Carousel**: Carousel component is used to display a set of images or content in a slideshow format. It allows users to navigate through the images or content horizontally. It is used in "About us" section to show the most relevant moment in the history of the company. The Carousel is made by 6 slides and on the right and on the left there are two arrows that allow you to go to the next and to the previous slide. Slides are made by a header with a paragraph, contained in a container with low opacity. On the background you can see a specific image for each slide. 
+  ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/a1fc72d2-b8d4-4021-9767-7b1c85db229f)
+
 - **Cards**: Cards are UI components that represent a small, self-contained unit of content. Cards contain:
     - Image, Area and role of people working in the company in "Our Team" section.
     - Logo, CEO and Area of companies of Investments in "Investments" section.
@@ -125,6 +127,8 @@ The main components of the application are:
         - **subtitle**: second information to display. It is the **role** and the **area** in the company for people in "Our Team" and it is the **CEO** and the **area** in Investments.
         - **link**: link to the **page description**, in both "Our Team" and "Investments"
         - **img**: **image** you can see of the person who works in Ventour and the icon of the company
+   ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/76304399-c61e-447d-90cb-c05385c4475e)
+
 - **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information about:
     - Copyright notices
     - Services and contacts links.
