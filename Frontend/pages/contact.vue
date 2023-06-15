@@ -223,8 +223,17 @@ export default defineNuxtComponent({
   },
   methods: {
     submitForm() {
-
-  const email = {
+    let check
+      if (this.customerName=='' || !this.customerEmail || !this.customerNote || !this.$refs.fileUpload.files) {
+        check = false;
+      }
+    else{
+      check = true;
+    }
+    if (check==false) {
+      return
+    }
+    const email = {
     to: 'ventourteam@gmail.com',
     attachments: [
       {
@@ -248,6 +257,17 @@ export default defineNuxtComponent({
     });
   },
   sendEmail(activeSection) {
+    let check
+      if (this.customerName=='' || !this.customerEmail || !this.customerNote|| !this.$refs.fileUpload.files) {
+        check = false;
+      }
+    else{
+      check = true;
+    }
+    if (check==false) {
+      alert('Please fill in all mandatory fields.')
+      return
+    }
   const recipient = 'ventourteam@gmail.com';
   let subject;
   let body;
