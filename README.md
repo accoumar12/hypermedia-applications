@@ -147,7 +147,19 @@ Footer also change between Desktop mode (horizontal) and mobile (vertical)
 
 ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/f8e4c73d-4f44-41a1-9b0b-d7ec89694e1d)
 
-- **Supervisor**: gives to each company the right supervisor.
+- **Supervisor**: gives to each company the right supervisor. The only one property is the name of the supervisor. The output is the following
+  ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/f5b6fdb9-023b-458e-82c3-9914dc8242b2)
+
+
+  
+- **CardSection**: cards here are made by containers that are clickable and inside there is the image of the company and in the bottom 2 subtitles with name of the CEO and the Area. The result is the following:
+  ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/995106c5-dd50-4ba4-b13e-06a078c0eee5)
+There are the following properties:
+    - Image container with the logo;
+    - 2 subtitles with name of the CEO and the area the company mainly addresses.
+
+
+ 
 
 In the website you can find some functions that help the users finding information and achieving thei goals (i.e. apply for a new job position or ask Ventour to invest in their company) and some function built in order to make the website responsive for both mobile and desktop. The main functions we have developed are:
 - **Mobile vs Desktop**: some of the components have been designed with a media query in the css. It allows us to see different dimensions of objects in the screen depending on the dimension on the screen used. Even if it can be considered a good option, we thought it was better to build some specific class for mobile, in order to design page that is more suitable for mobile. It is the reason why in some pages we used this function (an example is the header)
@@ -157,7 +169,7 @@ In the website you can find some functions that help the users finding informati
 > The user has to read the warning. Indeed the attachment can be loaded on the page but it has to be reloaded also in the email for privacy reason.
 
 
-
+### SEO
 
 
 
