@@ -118,11 +118,15 @@ The main components of the application are:
     - Services and contacts  links.
     - Social media links.
 - **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch).
+- **Supervisor**: gives to each company the right supervisor.
 
 In the website you can find some functions that help the users finding information and achieving thei goals (i.e. apply for a new job position or ask Ventour to invest in their company) and some function built in order to make the website responsive for both mobile and desktop. The main functions we have developed are:
 - **Mobile vs Desktop**: some of the components have been designed with a media query in the css. It allows us to see different dimensions of objects in the screen depending on the dimension on the screen used. Even if it can be considered a good option, we thought it was better to build some specific class for mobile, in order to design page that is more suitable for mobile. It is the reason why in some pages we used this function (an example is the header)
 -  **Filter by**: we exploited some fields of the database to filter data in "Our Team" and "Investments" pages. In Investments page you can filter companies by area, but also the most important companies (they are showed also in Home Page). Filters can be mixed, such a way the user can filter only by area, only the Most Relevant, or both.
--  **Search by name**: in Investments page
+-  **Search by name**: in Investments page gives you the possibility to search among all the companies that are present in the database, therefore among all the one Ventour has connection with
+-  **Forms**: This is the last function I'm going to describe and it is in between a component and a function. The style is a component that has been retrieved by tailwind-css, but the function has been all developed by us. The forms retrieves data from some mandatory fields in the forms and automatically generate the e-mail. The fuction gives a warning if the user doesn't put all the information
+
+
 
 
 
