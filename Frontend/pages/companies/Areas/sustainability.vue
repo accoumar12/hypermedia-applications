@@ -1,5 +1,9 @@
 <template>
     <main id="back">
+
+        <div v-if="!isMobile">
+            <desktop>
+
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
@@ -145,20 +149,189 @@
             </div>
             <div id="right-zone"></div>
         </div>
+
+        </desktop>
+        </div>  
+
+        <div v-else>
+        <mobile>
+
+            <div class="info-group">
+            <div class="arrow">
+                <div class="arrow-left">
+                    <router-link to="/companies/Areas/consumer">
+                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    </router-link>
+                </div>
+                <router-link to="/companies">
+                    <div class="arrow-right">
+                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
+                    </div>
+
+                </router-link>
+            </div>
+
+            <h1 class="name">Sustainability Investments</h1>
+            <hr />
+            <div class="column">
+                <div class="columna-mobile">
+                    <img id="area-img-mobile" src="~/assets/img/sustainability-team.png" />
+                </div>
+                <div class="columna2-mobile">
+                    <div class="button-container-mobile" style="position: sticky; top: 0; z-index: 1;">
+                        <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                            <br>
+                            DESCRIPTION
+                        </button>
+                        <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                            <br>
+                            PROJECTS
+                        </button>
+                    </div>
+                    <div class="description-containera-mobile">
+                        <div v-if="activeSection === 1">
+                            <p2 class="description">
+                                As a venture capital firm committed to sustainability, VenTour seeks to invest in companies
+                                that prioritize environmental, social, and governance (ESG) considerations.
+                                The firm is particularly interested in supporting innovative solutions that promote the
+                                transition to a low-carbon economy, enhance resource efficiency, and reduce waste.
+                                <br>
+                                One area of focus for VenTour is renewable energy, including companies developing
+                                technologies for solar, wind, and geothermal power.
+                                The firm also seeks out opportunities in energy storage and distribution, as well as in the
+                                electrification of transportation.VenTour also supports companies focused on improving
+                                supply chain transparency and reducing food waste.
+                            </p2>
+                        </div>
+                        <div v-else-if="activeSection === 2">
+                            <p2 class="description">
+                                Current Portfolio of the investment projects in the field of Sustainability:
+                            </p2>
+                            <ul class="comp-list">
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.ge.com/" target="_blank" style="text-decoration: none;">General
+                                        Electric Co.</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.iberdrola.it/" target="_blank"
+                                        style="text-decoration: none;">Iberdrola SA</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.canadiansolar.com/" target="_blank"
+                                        style="text-decoration: none;">Canadian Solar, Inc. </a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.jinkosolar.com/en/" target="_blank"
+                                        style="text-decoration: none;">JinkoSolar Holding Co., Ltd. </a></li>
+                                <li style="list-style: none; text-decoration: none;"><a href="https://www.enelx.com/"
+                                        target="_blank" style="text-decoration: none;font-size: medium;">Enel X</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <p>HAPPY INVESTORS:</p>
+            </div>
+        </div>
+        <div id="flex-container" class="testimonials">
+            <div id="left-zone">
+                <ul class="list">
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial3-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial3-1" for="radio_testimonial3-1">Canadian Solar</label>
+                        <div class="content-test content_testimonial3-1">
+                            <span class="picto"></span>
+
+                            <p>"I have been investing with VenTour for years, and I can say with confidence that they are
+                                one of the best in the business when it comes to sustainability. They have a clear vision of
+                                the kind of world they want to help create. It's been a pleasure to be a part of their
+                                journey."
+                            </p>
+                            <p class="testimonialFrom">Shawn Qu, Founder</p>
+                            <p class="testimonialState">Guelph, Canada</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial3-2" name="basic_carousel" />
+                        <label class="label_testimonial3-2" for="radio_testimonial3-2">Enel X</label>
+                        <div class="content-test content_testimonial3-2">
+                            <span class="picto"></span>
+
+                            <p>"Working with VenTour has been a fantastic experience. Not only are they dedicated to
+                                sustainability, but they are also incredibly knowledgeable about the latest trends and
+                                technologies in the field. I feel confident that my investment is not only supporting a good
+                                cause, but also in the hands of experts who know how to make it grow."</p>
+                            <p class="testimonialFrom">Francesco Venturini, CEO</p>
+                            <p class="testimonialState">Rome, Italy</p>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial3-3" name="basic_carousel" />
+                        <label class="label_testimonial3-3" for="radio_testimonial3-3">Iberdrola SA</label>
+                        <div class="content-test content_testimonial3-3">
+                            <span class="picto"></span>
+
+                            <p>"VenTour has truly shown us that investing in sustainability can be both profitable and good
+                                for the planet. They have a keen eye for identifying companies that are making a real impact
+                                on the environment, and their support has been instrumental in helping these businesses
+                                thrive."</p>
+                            <p class="testimonialFrom">Juan de Urrutia, Founder</p>
+                            <p class="testimonialState">Bilbao, Spain</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial3-4" name="basic_carousel" />
+                        <label class="label_testimonial3-4" for="radio_testimonial3-4">General
+                            Electric Co.</label>
+                        <div class="content-test content_testimonial3-4">
+                            <span class="picto"></span>
+
+                            <p>"I am so impressed with VenTour's commitment to sustainability. Their portfolio of companies
+                                includes some of the most innovative and environmentally-conscious businesses I have ever
+                                seen. As an investor, I am proud to be associated with a company that is making a real
+                                difference in the world."</p>
+                            <p class="testimonialFrom">Thomas Alva Edison, Founder</p>
+                            <p class="testimonialState">Boston, MA</p>
+                            <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="right-zone"></div>
+        </div>
+
+
+        </mobile>
+        </div>
+
     </main>
 </template>
         
-        <!--
-        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
-        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
-        -->
 <script>
 export default {
     data() {
         return {
             activeSection: 1,
+            isMobile: false,
         };
     },
+    methods:{
+        detectMobile() {
+              return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              );
+            },
+    },
+    mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    }
 };
 
 const testimonial3Items = document.querySelectorAll('.item label');
@@ -311,6 +484,10 @@ hr {
     padding-left: 8%;
 }
 
+.columna-mobile {
+    flex-basis: 50%;
+}
+
 .columna2 {
     flex-basis: 50%;
     padding-right: 4%;
@@ -319,6 +496,11 @@ hr {
 
 .columna.p2 {
     position: absolute;
+}
+
+.columna2-mobile {
+    flex-basis: 50%;
+
 }
 
 #area-img {
@@ -338,6 +520,20 @@ hr {
     align-items: center;
     text-align: justify;
     padding-right: 23%;
+}
+
+.description-containera-mobile {
+    height: 20%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .description-containera p2 {
@@ -366,6 +562,16 @@ hr {
     font-size: 18px;
     font-weight: bold;
     color: #010d08;
+}
+
+.text-center-mobile {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #010d08;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .column3 {
@@ -426,6 +632,17 @@ hr {
     font-family: monospace;
     color: #033f52;
 }
+
+.button-container-mobile {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: monospace;
+    color: #033f52;
+}
+
 
 /* ============= Begin Testimonial Flexbox ============ */
 #flex-container {

@@ -1,5 +1,9 @@
 <template>
     <main id="back">
+
+        <div v-if="!isMobile">
+            <desktop>
+
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
@@ -78,7 +82,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <p>HAPPY INVESTORS:</p>
+                <p>HAPPY INVESTORS</p>
             </div>
         </div>
         <div id="flex-container" class="testimonials">
@@ -143,20 +147,187 @@
             </div>
             <div id="right-zone"></div>
         </div>
+
+        </desktop>
+        </div>
+
+        <div v-else>
+        <mobile>
+
+
+        <div class="info-group">
+            <div class="arrow">
+                <div class="arrow-left">
+                    <router-link to="/companies/Areas/healthcare">
+                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    </router-link>
+                </div>
+                <router-link to="/companies/Areas/sustainability">
+                    <div class="arrow-right">
+                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
+                    </div>
+
+                </router-link>
+            </div>
+
+            <h1 class="name">Consumer Goods Investments</h1>
+            <hr />
+            <div class="column">
+                <div class="columna-mobile">
+                    <img id="area-img-mobile" src="~/assets/img/consumer-team.png" />
+                </div>
+                <div class="columna2-mobile">
+                    <div class="button-container-mobile" style="position: sticky; top: 0; z-index: 1;">
+                        <button class="section-button" :class="{ active: activeSection === 1 }" @click="activeSection = 1">
+                            <br>
+                            DESCRIPTION
+                        </button>
+                        <button class="section-button" :class="{ active: activeSection === 2 }" @click="activeSection = 2">
+                            <br>
+                            PROJECTS
+                        </button>
+                    </div>
+                    <div class="description-containera-mobile">
+                        <div v-if="activeSection === 1">
+                            <p2 class="description">
+                                Our company looks for opportunities in the consumer goods sector that are able to offer
+                                unique value propositions to customers,
+                                create new markets or disrupt existing ones.
+                                <br>
+                                The company's consumer goods investments span across a variety of categories including food
+                                and beverage, beauty and personal care,
+                                and household goods. VenTour is interested in companies that leverage cutting-edge
+                                technologies to create new products and services that meet evolving consumer needs.
+                                The company also prioritizes businesses that have a strong brand identity and are able to
+                                connect with their customers on a personal level.
+                            </p2>
+                        </div>
+                        <div v-else-if="activeSection === 2">
+                            <p2 class="description">
+                                Current Portfolio of the investment projects in the field of Consumer Goods:
+                            </p2>
+                            <ul class="comp-list">
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.nestle.it/" target="_blank"
+                                        style="text-decoration: none;">Nestlé</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.unilever.com/" target="_blank"
+                                        style="text-decoration: none;">Unilever</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.nike.com/it/" target="_blank"
+                                        style="text-decoration: none;">Nike</a></li>
+                                <li style="list-style: none; text-decoration: none;font-size: medium;"><a
+                                        href="https://www.asahigroup-holdings.com/en/" target="_blank"
+                                        style="text-decoration: none;">Asahi Group
+                                    </a></li>
+                                <li style="list-style: none; text-decoration: none;"><a
+                                        href="https://www.kraftheinzcompany.com/" target="_blank"
+                                        style="text-decoration: none;font-size: medium;">Kraft Heinz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <p>HAPPY INVESTORS</p>
+            </div>
+        </div>
+        <div id="flex-container" class="testimonials">
+            <div id="left-zone">
+                <ul class="list">
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial2-1" name="basic_carousel" checked="checked" />
+                        <label class="label_testimonial2-1" for="radio_testimonial2-1">Nestlè</label>
+                        <div class="content-test content_testimonial2-1">
+                            <span class="picto"></span>
+
+                            <p>"I've been investing with VenTour for a few years now and I couldn't be happier with their
+                                work in the consumer goods sector. Their expertise and guidance have helped our portfolio of
+                                companies grow tremendously."</p>
+                            <p class="testimonialFrom">Mark Schneider, Chief Executive Officer</p>
+                            <p class="testimonialState">Vevey, Switzerland</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial2-2" name="basic_carousel" />
+                        <label class="label_testimonial2-2" for="radio_testimonial2-2">Unilever</label>
+                        <div class="content-test content_testimonial2-2">
+                            <span class="picto"></span>
+
+                            <p>"As an investor, it's always reassuring to see the companies you've invested in succeed.
+                                VenTour's strategic investments in the consumer goods sector have consistently led to
+                                impressive results, and I'm proud to be a part of it."</p>
+                            <p class="testimonialFrom">Alan Jope, CEO</p>
+                            <p class="testimonialState">London, UK</p>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial2-3" name="basic_carousel" />
+                        <label class="label_testimonial2-3" for="radio_testimonial2-3">NIKE</label>
+                        <div class="content-test content_testimonial2-3">
+                            <span class="picto"></span>
+
+                            <p>"I've invested in several venture capital firms over the years, but VenTour stands out in
+                                their commitment to their portfolio companies in the consumer goods industry. Their team's
+                                dedication and support have helped take our investments to the next level."</p>
+                            <p class="testimonialFrom">John Donahoe, President</p>
+                            <p class="testimonialState">Oregon, USA</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="radio" id="radio_testimonial2-4" name="basic_carousel" />
+                        <label class="label_testimonial2-4" for="radio_testimonial2-4">Kraft Heinz</label>
+                        <div class="content-test content_testimonial2-4">
+                            <span class="picto"></span>
+
+                            <p>"VenTour's approach to investing in the consumer goods sector is truly unique. Their focus on
+                                sustainability and ethical practices in their portfolio companies has not only yielded great
+                                returns but has also made a positive impact on our environment and society. I'm proud to be
+                                a part of their mission."</p>
+                            <p class="testimonialFrom">Miguel Patricio, Chief Executive</p>
+                            <p class="testimonialState"> Illinois, USA</p>
+                            <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="right-zone"></div>
+        </div>
+
+        </mobile>
+        </div>
+
     </main>
 </template>
         
-        <!--
-        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
-        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
-        -->
 <script>
 export default {
     data() {
         return {
             activeSection: 1,
+            isMobile: false,
         };
     },
+     methods:{
+        detectMobile() {
+              return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              );
+            },
+    },
+       mounted() {
+        this.isMobile = this.detectMobile();
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".search")) {
+                this.isSearchExpanded = false;
+            }
+        });
+    }
 };
 
 const testimonial2Items = document.querySelectorAll('.item label');
@@ -308,9 +479,18 @@ hr {
     padding-left: 8%;
 }
 
+.columna-mobile {
+    flex-basis: 50%;
+}
+
 .columna2 {
     flex-basis: 50%;
     padding-right: 4%;
+
+}
+
+.columna2-mobile {
+    flex-basis: 50%;
 
 }
 
@@ -325,6 +505,11 @@ hr {
 
 }
 
+#area-img-mobile {
+    width: 100%;
+    height: 100%;
+}
+
 
 .description-containera {
     height: 20%;
@@ -335,6 +520,20 @@ hr {
     align-items: center;
     text-align: justify;
     padding-right: 23%;
+}
+
+.description-containera-mobile {
+    height: 20%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
 }
 
 .description-containera p2 {
@@ -363,6 +562,16 @@ hr {
     font-size: 18px;
     font-weight: bold;
     color: #010d08;
+}
+
+.text-center-mobile {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #010d08;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .column3 {
@@ -423,6 +632,17 @@ hr {
     font-family: monospace;
     color: #033f52;
 }
+
+.button-container-mobile {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: monospace;
+    color: #033f52;
+}
+
 
 /* ============= Begin Testimonial Flexbox ============ */
 #flex-container {

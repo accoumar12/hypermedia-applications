@@ -81,7 +81,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <p>HAPPY INVESTORS:</p>
+                <p>HAPPY INVESTORS</p>
             </div>
         </div>
         <div id="flex-container" class="testimonials">
@@ -232,7 +232,7 @@
         </div>
         <div class="row">
             <div class="text-center">
-                <p>HAPPY INVESTORS:</p>
+                <p>HAPPY INVESTORS</p>
             </div>
         </div>
         <div id="flex-container" class="testimonials">
@@ -493,8 +493,7 @@ hr {
 
 }
 
-
-.columna2 {
+.columna2-mobile {
     flex-basis: 50%;
 }
 
