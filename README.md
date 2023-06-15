@@ -88,6 +88,13 @@ const corsOptions = {
 - "express": "^4.18.2": It is used to manage the routing and the get function in HTTP methods
 - "sequelize": "^6.29.3" and "sqlite3": "^5.1.6" are used to work in SQL and manage database.
 
+#### Server
+In access of the Databasem you need some parameters, in both companies and people you need:
+- id (required): The ID of the person/company the user want to retrieve from the database.
+The response can be:
+- 200 OK - Person/Company information returned successfully.
+- 404 Not Found - Object not found.
+
 
 ### Frontend
 Frontend folder is split in many folders and many parts:
@@ -113,6 +120,10 @@ The main components of the application are:
 - **Cards**: Cards are UI components that represent a small, self-contained unit of content. Cards contain:
     - Image, Area and role of people working in the company in "Our Team" section.
     - Logo, CEO and Area of companies of Investments in "Investments" section.
+    - In details the properties are:
+        - title: main information to display. It is the **name** of the person or of the company
+        - subtitle: second information to display. It is the role and the area in the company for people.
+        - link: link to the page description
 - **Footer**: The footer component appears at the bottom of the webpage or application screen and gives some information about:
     - Copyright notices
     - Services and contacts  links.
@@ -124,7 +135,9 @@ In the website you can find some functions that help the users finding informati
 - **Mobile vs Desktop**: some of the components have been designed with a media query in the css. It allows us to see different dimensions of objects in the screen depending on the dimension on the screen used. Even if it can be considered a good option, we thought it was better to build some specific class for mobile, in order to design page that is more suitable for mobile. It is the reason why in some pages we used this function (an example is the header)
 -  **Filter by**: we exploited some fields of the database to filter data in "Our Team" and "Investments" pages. In Investments page you can filter companies by area, but also the most important companies (they are showed also in Home Page). Filters can be mixed, such a way the user can filter only by area, only the Most Relevant, or both.
 -  **Search by name**: in Investments page gives you the possibility to search among all the companies that are present in the database, therefore among all the one Ventour has connection with
--  **Forms**: This is the last function I'm going to describe and it is in between a component and a function. The style is a component that has been retrieved by tailwind-css, but the function has been all developed by us. The forms retrieves data from some mandatory fields in the forms and automatically generate the e-mail. The fuction gives a warning if the user doesn't put all the information
+-  **Forms**: This is the last function I'm going to describe and it is in between a component and a function. The style is a component that has been retrieved by tailwind-css, but the function has been all developed by us. The forms retrieves data from some mandatory fields in the forms and automatically generate the e-mail. The function gives a warning if the user doesn't put all the information.
+> The user has to read the warning. Indeed the attachment can be loaded on the page but it has to be reloaded also in the email for privacy reason.
+
 
 
 
@@ -132,7 +145,6 @@ In the website you can find some functions that help the users finding informati
 
 
 Brief description of the project explaining the chosen theme
-o Available server endpoint with short description
 • List of Components implemented with description, props and emit (if used)
 Additionally, you can add descriptions (not mandatory) of:
 • Extra functionalities implemented (e.g., store, filters, etc...)
