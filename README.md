@@ -134,9 +134,14 @@ The main components of the application are:
         - **Contact**: Main information to keep in contact with Ventour
         - **Social Media icons**: 3 icons of the three main social the Ventour uses, so Facebook, Instagram and Linkedin
 ![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/e14d1016-9328-42b8-bd55-6a85929b2f51)
+Footer also change between Desktop mode (horizontal) and mobile (vertical)
 
 
-- **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch).
+- **Header**: The header component is located at the top of the webpage. It includes the logo and navigation menus to the main pages of the website (about us, our team, Investments and Get in Touch). Header is one of the components that changes between mobile and desktop and the difference is in the presence of a so called hamburger menu. It allows the mobile user to choose among the section by clicking on the 3 rows. On the other hand, in desktop mode, all the section can be seen in the header. Here we can provide the two examples because they are quite different:
+![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/7a64020e-e8a7-4a01-a0fd-e2d0b750bc20)
+And
+![immagine](https://github.com/Rkomi98/VenTour/assets/72648197/f8e4c73d-4f44-41a1-9b0b-d7ec89694e1d)
+
 - **Supervisor**: gives to each company the right supervisor.
 
 In the website you can find some functions that help the users finding information and achieving thei goals (i.e. apply for a new job position or ask Ventour to invest in their company) and some function built in order to make the website responsive for both mobile and desktop. The main functions we have developed are:
