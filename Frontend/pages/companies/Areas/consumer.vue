@@ -155,7 +155,7 @@
         <mobile>
 
 
-        <div class="info-group">
+        <div class="info-group-mobile">
             <div class="arrow">
                 <div class="arrow-left">
                     <router-link to="/companies/Areas/healthcare">
@@ -438,6 +438,17 @@ cycleTestimonials();
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.info-group-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    padding-top: 18%;
 }
 
 .name {
