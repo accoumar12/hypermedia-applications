@@ -109,11 +109,11 @@
             <textarea id="customerNote" v-model="customerNote" required rows="4"></textarea>
             <label for="file-upload"
               class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
-              <input id="file-upload" type="file" class="sr-only" ref="fileUpload" />
+              Company Profile or Business Proposal <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
+              <input id="file-upload" type="file" class="sr-only" ref="fileUpload"/>
             </label>
 
-            <button id="customerOrder" @click.prevent="submitForm" href="#" @click="sendEmail">SUBMIT</button>
+            <button id="customerOrder" @click.prevent="submitForm" href="#" @click="sendEmail(1)">SUBMIT</button>
           </div>
         </div>
       </form>
@@ -195,14 +195,12 @@
             <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about you
                 (goals,expectations)
               </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
-            <label for="file-upload"
-              class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file
-              </span>
-              <input id="file-upload" name="file-upload" type="file" class="sr-only" />
-            </label>
-
-            <button id="customerOrder" @click="submitForm">SUBMIT</button>
+              <label for="file-upload"
+                class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
+                <input id="file-upload" type="file" class="sr-only" ref="fileUpload"/>
+              </label>
+            <button id="customerOrder" @click.prevent="submitForm" href="#" @click="sendEmail(2)">SUBMIT</button>
 
           </div>
         </div>
@@ -225,65 +223,65 @@ export default defineNuxtComponent({
   },
   methods: {
     submitForm() {
-      const subject = `Request from ${this.customerName}`;
-      const body = `Good morning,\n\nI'm ${this.customerName} and I would like to send my request.`;
 
-      const formData = new FormData();
-      formData.append('name', this.customerName);
-      formData.append('email', this.customerEmail);
-      formData.append('phone', this.customerPhone);
-      formData.append('country', this.country);
-      formData.append('note', this.customerNote);
-      formData.append('file', this.$refs.fileUpload.files[0]);
+  const email = {
+    to: 'ventourteam@gmail.com',
+    attachments: [
+      {
+        name: this.$refs.fileUpload.files[0].name,
+        data: this.$refs.fileUpload.files[0],
+      },
+    ],
+  };
 
-      const email = {
-        to: 'ventourteam@gmail.com',
-        subject,
-        body,
-        attachments: [
-          {
-            name: this.$refs.fileUpload.files[0].name,
-            data: this.$refs.fileUpload.files[0],
-          },
-        ],
-      };
+  // Here, we are using a dummy function as an example
+  this.sendEmail()
+    .then(() => {
+      // Email sent successfully
+      alert('Look for your email provider and continue there! Unfortunately, you have to attach the file you have uploaded (' + this.$refs.fileUpload.files[0].name + ') again for privacy reasons');
+      this.resetForm();
+    })
+    .catch((error) => {
+      // Error occurred while sending email
+      console.error('Error sending email:', error);
+      alert('An error occurred while opening the email provider. Please try again.');
+    });
+  },
+  sendEmail(activeSection) {
+  const recipient = 'ventourteam@gmail.com';
+  let subject;
+  let body;
+  console.log('I am a ' + activeSection, typeof activeSection);
 
-      // Here, we are using a dummy function as an example
-      this.sendEmail(email)
-        .then(() => {
-          // Email sent successfully
-          alert('Look your email provider and continue there!');
-          this.resetForm();
-        })
-        .catch((error) => {
-          // Error occurred while sending email
-          console.error('Error sending email:', error);
-          alert('An error occurred while sending the email. Please try again.');
-        });
-    },
-    sendEmail(email) {
-      const recipient = 'ventourteam@gmail.com';
-      const subject = 'Inquiry from ' + this.customerName;
-      const body = 'Good morning,\n I\'m ' + this.customerName + ' and I would like to send my request.\n Talking about my company, I would like to say a couple of words (for example that my company has its register office in ' + this.country + '\n' + this.customerNote + 'C\n Can you please contact me at this email' + this.customerEmail+'\n Thank you for your attention, \n Best Regards \n + ' this.customerName;
+  if (activeSection === 1) {
+    subject = 'Request from ' + this.customerName;
+    body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to send my request. \nTalking about my company, I would like to say a couple of words (for example that my company has its register office in ' + this.country + '\n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
+  } else {
+    subject = 'Application from ' + this.customerName;
+    body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to apply for the job offer I found on your website. \nTalking about me, I would like to say a couple of words (for example that I was born in ' + this.country + 'and: \n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
+  }
 
-      const mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      window.location.href = mailtoLink;
-      // This is just a dummy function that returns a promise resolved after 2 seconds
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log('Sending email:', email);
-          resolve();
-        }, 2000);
-      });
-    },
-    resetForm() {
-      this.customerName = '';
-      this.customerEmail = '';
-      this.customerPhone = '';
-      this.country = '';
-      this.customerNote = '';
-      this.$refs.fileUpload.value = '';
-    },
+  const mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.location.href = mailtoLink;
+
+  // This is just a dummy function that returns a promise resolved after 2 seconds
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('Sending email:');
+      resolve();
+    }, 2000);
+  });
+},
+
+  resetForm() {
+    this.customerName = '';
+    this.customerEmail = '';
+    this.customerPhone = '';
+    this.country = '';
+    this.customerNote = '';
+    this.$refs.fileUpload.value = '';
+  },
+
   },
 })
 </script>
