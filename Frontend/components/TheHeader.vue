@@ -31,19 +31,21 @@
                 </div>
                 
                 <router-link to="/contact" class="nav-link">Get In Touch</router-link>
+                <!-- 
                 <div class="search">
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
                             style="color: #2479a3;"></button>
-                 <!--   
+                   
                     <ul>
                       <li v-for="result in searchResults" :key="result.text">
                         <a :href="result.link">{{ result.text }}</a>
                       </li>
                     </ul>
-                -->
+                
                 </div>
+                -->
             </nav>
         </header>
     </div>
@@ -98,19 +100,21 @@
                 </div>
                 
                 <p><router-link to="/contact" class="nav-link">Get In Touch</router-link></p>
+                <!-- 
                 <div class="search">
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
                     <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
                             style="color: #2479a3;"></button>
-                 <!--   
+                   
                     <ul>
                       <li v-for="result in searchResults" :key="result.text">
                         <a :href="result.link">{{ result.text }}</a>
                       </li>
                     </ul>
-                -->
+                
                 </div>
+                -->
                       </ul>
                     </div>
                   </nav>

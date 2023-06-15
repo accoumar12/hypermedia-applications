@@ -161,12 +161,7 @@
             v-html allows us to change the structure of a HTML element.
             It used because of the 'newLineOnFullStop' function that returns a string with the <br> tags.
             This function is a composable that is available anywhere, without requiring to be imported.
-        -->
-        <!--
-        <p id="description" v-html="newLineOnFullStop(person.description)"></p>
-        <SmallCard :title="person.location.name" :subtitle="person.location.city" :link="'/locations/' + person.location.id" />
-        -->
-  
+        -->  
 <script>
 export default defineNuxtComponent({
         data() {
