@@ -1361,7 +1361,8 @@ export default {
 /*Section areas*/
 .row-areas {
     margin-bottom: 2%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
