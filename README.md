@@ -91,6 +91,7 @@ const corsOptions = {
 #### Server
 In access of the Databasem you need some parameters, in both companies and people you need:
 - id (required): The ID of the person/company the user want to retrieve from the database.
+
 The response can be:
 - 200 OK - Person/Company information returned successfully.
 - 404 Not Found - Object not found.
