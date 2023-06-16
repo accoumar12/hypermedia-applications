@@ -145,7 +145,6 @@ export default {
 }
 
 .text-right {
-    padding-left: 5%;
     padding-top: 2%;
 }
 
@@ -214,7 +213,6 @@ export default {
 }
 
 .footer-dark h3 {
-    margin-top: 10%;
     font-weight: bold;
     font-size: 18px;
 }
@@ -244,7 +242,7 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    margin-left: 45%;
+    margin-left: 40 %;
     gap: 6%;
 }
 
@@ -316,6 +314,7 @@ export default {
     .copy-right {
         padding-left: 0;
         padding-top: 10%;
+
         padding-bottom: 2%;
         text-align: center;
     }
