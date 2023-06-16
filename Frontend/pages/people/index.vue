@@ -179,7 +179,6 @@ export default {
 <style scoped>
 .container.custom-container {
     background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 40%;
@@ -228,17 +227,17 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 2%;
 }
 
 /*Styles for the first 3 cards in the intro*/
 .card1r {
     display: block;
     position: relative;
-    max-width: 254px;
+    max-width: 262px;
     background: #00838d;
     border-radius: 4px;
-    padding: 42px 34px;
+    padding: 34px 32px;
     margin: 10px;
     text-decoration: none;
     z-index: 5;
@@ -248,11 +247,13 @@ export default {
 }
 
 .card1r p {
+    font-size: 18px;
     transition: all 0.3s ease-out;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .card1r h3 {
+    font-size: 18px;
     transition: all 0.3s ease-out;
     color: #ffffff;
 }
@@ -372,18 +373,6 @@ export default {
         /* Adjusted height to auto */
     }
 
-    .ourt-intro {
-        background-color: rgb(239, 241, 246);
-        color: #00838d;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        position: inherit;
-        transform: translate(-50%, -50%);
-        margin: 0 50%;
-        padding: 20px;
-        mix-blend-mode: unset;
-    }
 
     .container.custom-container {
         background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
@@ -542,7 +531,7 @@ section {
 }
 
 #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.1;
     font-family: sans-serif;
     color: #0e6b74;
@@ -570,10 +559,16 @@ label>[type=radio] {
 
 @media (max-width: 768px) {
 
-    .card13 {
+    .container.custom-container {
+        background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+        background-size: cover;
         width: 100%;
-        max-width: 100%;
+        height: fit-content;
+        padding-top: 8%;
+        background-position-y: 92%;
+        background-position-x: 62%;
     }
+
 }
 
 
@@ -610,11 +605,17 @@ label>[type=radio] {
         /* Adjusted font size for smaller screens */
     }
 
+
+    #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+        font-size: 18px;
+        margin-right: 12px;
+    }
+
     .card13 {
         display: block;
         position: relative;
-        max-width: 80%;
-        font-size: 12px;
+        max-width: 40%;
+        font-size: 16px;
         background-color: #f2f8f9;
         border-radius: 10px;
         padding: 20px 20px;
@@ -622,6 +623,23 @@ label>[type=radio] {
         text-decoration: none;
         z-index: 5;
         overflow: hidden;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 59px;
+        height: 60%;
+    }
+
+    .col3f {
+        padding-left: 18%;
+        max-width: 100%;
+        margin: 0%;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -631,10 +649,24 @@ label>[type=radio] {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 40%;
+        height: fit-content;
         padding-top: 8%;
         background-position-y: 65%;
         background-position-x: 70%;
+    }
+
+    .card13 {
+        display: block;
+        position: relative;
+        max-width: 80%;
+        font-size: 16px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 20px 20px;
+        margin: 10px;
+        text-decoration: none;
+        z-index: 5;
+        overflow: hidden;
     }
 }
 
@@ -646,9 +678,9 @@ label>[type=radio] {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 40%;
+        height: fit-content;
         padding-top: 8%;
-        background-position-y: 92%;
+        background-position-y: 82%;
         background-position-x: 55%;
     }
 
@@ -665,7 +697,7 @@ label>[type=radio] {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 40%;
+        height: fit-content;
         padding-top: 8%;
         background-position-y: 92%;
         background-position-x: 70%;
@@ -682,6 +714,90 @@ label>[type=radio] {
         text-decoration: none;
         z-index: 5;
         overflow: hidden;
+    }
+
+    #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+        font-size: 18px;
+        line-height: 1.1;
+        font-family: sans-serif;
+        color: #0e6b74;
+        font-weight: 500;
+        display: block;
+        position: relative;
+        opacity: 1;
+        margin-right: 17px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding-bottom: 2px;
+        flex-direction: column;
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .container.custom-container {
+        background-image: url("https://images.unsplash.com/photo-1603201667230-bd139210db18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: fit-content;
+        padding-top: 8%;
+        background-position-y: 92%;
+        background-position-x: 70%;
+    }
+
+    .card13 {
+        display: block;
+        position: relative;
+        max-width: 80%;
+        font-size: 10px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 20px 20px;
+        text-decoration: none;
+        z-index: 5;
+        overflow: hidden;
+    }
+
+    #filter-container .dropdown-grid-filter-container .dropdown-grid-filter label {
+        font-size: 18px;
+        line-height: 1.1;
+        font-family: sans-serif;
+        color: #0e6b74;
+        font-weight: 500;
+        display: block;
+        position: relative;
+        opacity: 1;
+        margin-right: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding-bottom: 2px;
+        flex-direction: column;
+        margin: 0 10%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 59px;
+        height: 60%;
+    }
+
+    .col3f {
+        padding-left: 26%;
+        max-width: 100%;
+        margin: 0%;
+        display: flex;
+        justify-content: center;
     }
 }
 </style>

@@ -439,69 +439,69 @@ body {
 /* Media Query for tablets */
 @media screen and (max-width: 1024px) {
   .card-content {
-    padding: 15px; /* Adjusted padding for smaller screens */
+    padding: 15px;
   }
 
   .card-content img {
-    width: 100%; /* Adjusted width to fit the container */
+    width: 100%;
   }
 
   .text-container2 {
-    width: 80%; /* Adjusted width for smaller screens */
-    bottom: 20%; /* Adjusted positioning */
+    width: 80%;
+    bottom: 20%;
     padding: 2%;
   }
 
   .card-title {
-    font-size: 18px; /* Adjusted font size for smaller screens */
-    max-width: 90%; /* Adjusted max-width for smaller screens */
+    font-size: 18px;
+    max-width: 90%;
   }
 
   .card-text {
-    font-size: 16px; /* Adjusted font size for smaller screens */
-    max-width: 90%; /* Adjusted max-width for smaller screens */
+    font-size: 16px;
+    max-width: 90%;
   }
 
   .left-arrow-container,
   .right-arrow-container {
-    width: 40px; /* Adjusted width for smaller screens */
-    height: 30px; /* Adjusted height for smaller screens */
+    width: 40px;
+    height: 30px;
   }
 }
 
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
   .card-content {
-    padding: 10px; /* Adjusted padding for smaller screens */
+    padding: 10px;
     height: 120%;
   }
 
   .card-content img {
-    height: 100%; /* Adjusted width to fit the container */
+    height: 100%;
     height: fit-content;
   }
 
   .text-container2 {
-    width: 90%; /* Adjusted width for smaller screens */
+    width: 90%;
     height: fit-content;
-    bottom: 35%; /* Adjusted positioning */
+    bottom: 35%;
     padding: 1%;
   }
 
   .card-title {
-    font-size: 18px; /* Adjusted font size for smaller screens */
-    max-width: 100%; /* Adjusted max-width for smaller screens */
+    font-size: 18px;
+    max-width: 100%;
   }
 
   .card-text {
-    font-size: 14px; /* Adjusted font size for smaller screens */
-    max-width: 100%; /* Adjusted max-width for smaller screens */
+    font-size: 14px;
+    max-width: 100%;
   }
 
   .left-arrow-container,
   .right-arrow-container {
-    width: 30px; /* Adjusted width for smaller screens */
-    height: 20px; /* Adjusted height for smaller screens */
+    width: 30px;
+    height: 20px;
     top: -150px;
   }
 }
@@ -526,6 +526,15 @@ body {
 
   .card-text {
     font-size: 0.7rem;
+  }
+
+  .text-container2 {
+    width: 70%;
+    position: relative;
+    bottom: 27%;
+    height: 15%;
+    padding: 2%;
+    background-color: rgba(233, 228, 228, 0.5);
   }
 }
 </style>

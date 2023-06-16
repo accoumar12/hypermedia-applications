@@ -16,7 +16,8 @@
                     </div>
                     <h2> Fly with us to a journey of growth!</h2>
                     <p class="section-text4">Transforming the investment landscape and fueling innovation.<br>
-                        <br>Our focus is your success!</p>
+                        <br>Our focus is your success!
+                    </p>
                     <router-link to="/history" class="sec-tex">
                         <p class="section-text41">LEARN MORE</p>
                     </router-link>
@@ -35,109 +36,111 @@
             </div>
         </section>
         <section class="responsive-section">
-                <div v-if="!isMobile">
-                <desktop> 
-                <div class="column-container">
-                <div class="column-left">
-                    <h5 class="u-section-text">why ventour</h5>
-                    <h2>What do we represent?</h2>
-                    <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
-                        the
-                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
-                        venture
-                        capital firm, we specialize in providing crucial support and funding to early-stage and
-                        high-growth
-                        companies that are reshaping industries and driving forward societal progress. <br> <br>We
-                        understand
-                        that
-                        the journey of transforming groundbreaking ideas into successful businesses can be challenging,
-                        which is why we strive to be more than just financial backers. Our mission is to be your
-                        strategic
-                        partner, offering not only capital but also expertise, guidance, and an extensive network of
-                        industry connections.</p>
-                    <div class="sec-butt">
-                        <router-link to="/contact">
-                            <a class="us-button">join us</a>
-                        </router-link>
-                    </div>
-                </div>
+            <div v-if="!isMobile">
+                <desktop>
+                    <div class="column-container">
+                        <div class="column-left">
+                            <h1 class="u-section-text">why ventour</h1>
+                            <h2>What do we represent?</h2>
+                            <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
+                                the
+                                spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
+                                venture
+                                capital firm, we specialize in providing crucial support and funding to early-stage and
+                                high-growth
+                                companies that are reshaping industries and driving forward societal progress. <br> <br>We
+                                understand
+                                that
+                                the journey of transforming groundbreaking ideas into successful businesses can be
+                                challenging,
+                                which is why we strive to be more than just financial backers. Our mission is to be your
+                                strategic
+                                partner, offering not only capital but also expertise, guidance, and an extensive network of
+                                industry connections.</p>
+                            <div class="sec-butt">
+                                <router-link to="/contact">
+                                    <a class="us-button">join us</a>
+                                </router-link>
+                            </div>
+                        </div>
 
-                <div class="column-right">
-                    <div class="row-container">
-                        <div class="row-top">
-                            <div class="card card11">
-                                <img class="icon-circle" src="~/assets/img/innovation.png">
-                                <h3>Empowering Innovation</h3>
-                                <p>Innovation is at the core of everything we do. We actively
-                                    seek
-                                    out the most innovative and disruptive ideas across a wide range of
-                                    industries,
-                                    from technology and healthcare to energy and beyond. </p>
-                            </div>
-                            <div class="card card11">
-                                <img class="icon-circle" src="~/assets/img/fuel.png">
-                                <h3>Fuelling growth</h3>
-                                <p>We believe in the transformative power of ideas.We are a
-                                    leading
-                                    venture capital firm dedicated to fueling the growth of groundbreaking
-                                    startups
-                                    and empowering them to reach their full potential.</p>
-                            </div>
-                        </div>
-                        <div class="row-bottom">
-                            <div class="card card11">
-                                <img class="icon-circle" src="~/assets/img/unlock.png">
-                                <h3>Unlocking potential</h3>
-                                <p>We partner with visionary entrepreneurs and startups at
-                                    every
-                                    stage of their journey, providing financial support, but also
-                                    invaluable expertise, resources, and a vast network of industry connections.</p>
-                            </div>
-                            <div class="card card11">
-                                <img class="icon-circle" src="~/assets/img/worldwide.png">
-                                <h3>Global Reach, Local Impact</h3>
-                                <p>We are rooted in
-                                    startups in every country. Our experts
-                                    combine deep industry knowledge with a passion for supporting entrepreneurs.
-                                    We create a dynamic environment that drives
-                                    positive change. </p>
+                        <div class="column-right">
+                            <div class="row-container">
+                                <div class="row-top">
+                                    <div class="card card11">
+                                        <img class="icon-circle" src="~/assets/img/innovation.png">
+                                        <h2 class="titleofcard">Empowering Innovation</h2>
+                                        <p>Innovation is at the core of everything we do. We actively
+                                            seek
+                                            out the most innovative and disruptive ideas across a wide range of
+                                            industries,
+                                            from technology and healthcare to energy and beyond. </p>
+                                    </div>
+                                    <div class="card card11">
+                                        <img class="icon-circle" src="~/assets/img/fuel.png">
+                                        <h2 class="titleofcard">Fuelling growth</h2>
+                                        <p>We believe in the transformative power of ideas.We are a
+                                            leading
+                                            venture capital firm dedicated to fueling the growth of groundbreaking
+                                            startups
+                                            and empowering them to reach their full potential.</p>
+                                    </div>
+                                </div>
+                                <div class="row-bottom">
+                                    <div class="card card11">
+                                        <img class="icon-circle" src="~/assets/img/unlock.png">
+                                        <h2 class="titleofcard">Unlocking potential</h2>
+                                        <p>We partner with visionary entrepreneurs and startups at
+                                            every
+                                            stage of their journey, providing financial support, but also
+                                            invaluable expertise, resources, and a vast network of industry connections.</p>
+                                    </div>
+                                    <div class="card card11">
+                                        <img class="icon-circle" src="~/assets/img/worldwide.png">
+                                        <h2 class="titleofcard">Global Reach, Local Impact</h2>
+                                        <p>We are rooted in
+                                            startups in every country. Our experts
+                                            combine deep industry knowledge with a passion for supporting entrepreneurs.
+                                            We create a dynamic environment that drives
+                                            positive change. </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
                     <div class="column-container-Mobile">
-                    <div class="column-left-Mobile">
-                    <h5 class="u-section-text-mobile">why ventour</h5>
-                    <h2>What do we represent?</h2>
-                    <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
-                        the
-                        spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
-                        venture
-                        capital firm, we specialize in providing crucial support and funding to early-stage and
-                        high-growth
-                        companies that are reshaping industries and driving forward societal progress. <br> <br>We
-                        understand
-                        that
-                        the journey of transforming groundbreaking ideas into successful businesses can be challenging,
-                        which is why we strive to be more than just financial backers. Our mission is to be your
-                        strategic
-                        partner, offering not only capital but also expertise, guidance, and an extensive network of
-                        industry connections.</p>
-                    <div class="sec-butt2">
-                        <router-link to="/contact">
-                            <a class="us-button">join us</a>
-                        </router-link>
-                    </div>
-                    </div>
-                    <div class="columnMobile">
+                        <div class="column-left-Mobile">
+                            <h1 class="u-section-text-mobile">why ventour</h1>
+                            <h2>What do we represent?</h2>
+                            <p>"Ven" meaning "come"...Come in a tour with us!...At VenTour, we embody
+                                the
+                                spirit of innovation and embrace the limitless potential of entrepreneurial ventures. As a
+                                venture
+                                capital firm, we specialize in providing crucial support and funding to early-stage and
+                                high-growth
+                                companies that are reshaping industries and driving forward societal progress. <br> <br>We
+                                understand
+                                that
+                                the journey of transforming groundbreaking ideas into successful businesses can be
+                                challenging,
+                                which is why we strive to be more than just financial backers. Our mission is to be your
+                                strategic
+                                partner, offering not only capital but also expertise, guidance, and an extensive network of
+                                industry connections.</p>
+                            <div class="sec-butt2">
+                                <router-link to="/contact">
+                                    <a class="us-button">join us</a>
+                                </router-link>
+                            </div>
+                        </div>
+                        <div class="columnMobile">
                             <div class="card card11Mobile">
-                                <img class="icon-circle" src="~/assets/img/innovation.png">
-                                <h3>Empowering Innovation</h3>
+                                <img class="icon-circle-mobile" src="~/assets/img/innovation.png">
+                                <h2 class="titleofcardMobile">Empowering Innovation</h2>
                                 <p>Innovation is at the core of everything we do. We actively
                                     seek
                                     out the most innovative and disruptive ideas across a wide range of
@@ -145,8 +148,8 @@
                                     from technology and healthcare to energy and beyond. </p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle" src="~/assets/img/fuel.png">
-                                <h3>Fuelling growth</h3>
+                                <img class="icon-circle-mobile" src="~/assets/img/fuel.png">
+                                <h2 class="titleofcardMobile">Fuelling growth</h2>
                                 <p>We believe in the transformative power of ideas.We are a
                                     leading
                                     venture capital firm dedicated to fueling the growth of groundbreaking
@@ -154,24 +157,24 @@
                                     and empowering them to reach their full potential.</p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle" src="~/assets/img/unlock.png">
-                                <h3>Unlocking potential</h3>
+                                <img class="icon-circle-mobile" src="~/assets/img/unlock.png">
+                                <h2 class="titleofcardMobile">Unlocking potential</h2>
                                 <p>We partner with visionary entrepreneurs and startups at
                                     every
                                     stage of their journey, providing financial support, but also
                                     invaluable expertise, resources, and a vast network of industry connections.</p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle" src="~/assets/img/worldwide.png">
-                                <h3>Global Reach, Local Impact</h3>
+                                <img class="icon-circle-mobile" src="~/assets/img/worldwide.png">
+                                <h2 class="titleofcardMobile">Global Reach, Local Impact</h2>
                                 <p>We are rooted in
                                     startups in every country. Our experts
                                     combine deep industry knowledge with a passion for supporting entrepreneurs.
                                     We create a dynamic environment that drives
                                     positive change. </p>
                             </div>
+                        </div>
                     </div>
-                </div>
                 </mobile>
             </div>
         </section>
@@ -220,7 +223,7 @@
         </section>
         <section id="best-comp">
             <h4 class="subtitle-midl">Our Top 4 Investments</h4>
-            <div class="container">
+            <div class="container-top4">
                 <div class="box">
                     <div class="imgBx">
                         <img src="~/assets/img/Dell.png">
@@ -268,7 +271,7 @@
                         <img src="~/assets/img/Cigna.png">
                     </div>
                     <div class="content">
-                        <div>                            
+                        <div>
                             <p>Being your insurance and health companion in international markets just like us are for our
                                 companies.
                             </p>
@@ -283,147 +286,155 @@
         <section id="areasrep">
             <h4 class="subtitle-midl">Leading in 4 directions</h4>
             <div v-if="!isMobile">
-                <desktop> 
-                <div class="row-areas">
-                    <!-- Column One -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/technology" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
+                <desktop>
+                    <div class="row-areas">
+                        <!-- Column One -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/technology" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                    </div>
+                                    <h3>TECHNOLOGY</h3>
+                                    <p>
+                                        We are <span class="highlight">THE FOREFRONT</span> of investing in innovative
+                                        technology
+                                        companies that are
+                                        revolutionizing
+                                        industries and disrupting traditional business models.
+                                    </p>
                                 </div>
-                                <h3>TECHNOLOGY</h3>
-                                <p>
-                                    We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
-                                    companies that are
-                                    revolutionizing
-                                    industries and disrupting traditional business models.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Two -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/healthcare" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-shield-halved"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Two -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/healthcare" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <h3>HEALTHCARE</h3>
+                                    <p>
+                                        We are committed to backing visionary entrepreneurs who are <span
+                                            class="highlight">driving
+                                            advancements</span> in medical
+                                        technology, biopharmaceuticals, and healthcare services.
+                                    </p>
                                 </div>
-                                <h3>HEALTHCARE</h3>
-                                <p>
-                                    We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
-                                        advancements</span> in medical
-                                    technology, biopharmaceuticals, and healthcare services.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Three -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/consumer" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-headset"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Three -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/consumer" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <h3>CONSUMER GOODS</h3>
+                                    <p>
+                                        We seek out dynamic startups that are reimagining traditional retail, e-commerce,
+                                        and
+                                        consumer product spaces,in companies with <span class="highlight">innovative
+                                            business
+                                            models</span>.
+                                    </p>
                                 </div>
-                                <h3>CONSUMER GOODS</h3>
-                                <p>
-                                    We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
-                                    consumer product spaces,in companies with <span class="highlight">innovative business
-                                        models</span>.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Four -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/sustainability" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-headset"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Four -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/sustainability" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <h3>SUSTAINABILITY</h3>
+                                    <p>
+                                        We aim to accelerate the transition to a greener future while <span
+                                            class="highlight">generating attractive returns</span>
+                                        for our investor entrepreneurs
+                                        who prioritize sustainability.
+                                    </p>
                                 </div>
-                                <h3>SUSTAINABILITY</h3>
-                                <p>
-                                    We aim to accelerate the transition to a greener future while <span
-                                        class="highlight">generating attractive returns</span>
-                                    for our investor entrepreneurs
-                                    who prioritize sustainability.
-                                </p>
-                            </div>
-                        </router-link>
+                            </router-link>
+                        </div>
                     </div>
-                </div>
-            </desktop>
-        </div>
-        <div v-else>
-            <mobile>
-                <div class="column">
-                    <!-- Column One -->
+                </desktop>
+            </div>
+            <div v-else>
+                <mobile>
                     <div class="column">
-                        <router-link to="/companies/Areas/technology" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
+                        <!-- Column One -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/technology" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                    </div>
+                                    <h3>TECHNOLOGY</h3>
+                                    <p>
+                                        We are <span class="highlight">THE FOREFRONT</span> of investing in innovative
+                                        technology
+                                        companies that are
+                                        revolutionizing
+                                        industries and disrupting traditional business models.
+                                    </p>
                                 </div>
-                                <h3>TECHNOLOGY</h3>
-                                <p>
-                                    We are <span class="highlight">THE FOREFRONT</span> of investing in innovative technology
-                                    companies that are
-                                    revolutionizing
-                                    industries and disrupting traditional business models.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Two -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/healthcare" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-shield-halved"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Two -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/healthcare" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <h3>HEALTHCARE</h3>
+                                    <p>
+                                        We are committed to backing visionary entrepreneurs who are <span
+                                            class="highlight">driving
+                                            advancements</span> in medical
+                                        technology, biopharmaceuticals, and healthcare services.
+                                    </p>
                                 </div>
-                                <h3>HEALTHCARE</h3>
-                                <p>
-                                    We are committed to backing visionary entrepreneurs who are <span class="highlight">driving
-                                        advancements</span> in medical
-                                    technology, biopharmaceuticals, and healthcare services.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Three -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/consumer" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-headset"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Three -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/consumer" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <h3>CONSUMER GOODS</h3>
+                                    <p>
+                                        We seek out dynamic startups that are reimagining traditional retail, e-commerce,
+                                        and
+                                        consumer product spaces,in companies with <span class="highlight">innovative
+                                            business
+                                            models</span>.
+                                    </p>
                                 </div>
-                                <h3>CONSUMER GOODS</h3>
-                                <p>
-                                    We seek out dynamic startups that are reimagining traditional retail, e-commerce, and
-                                    consumer product spaces,in companies with <span class="highlight">innovative business
-                                        models</span>.
-                                </p>
-                            </div>
-                        </router-link>
-                    </div>
-                    <!-- Column Four -->
-                    <div class="column">
-                        <router-link to="/companies/Areas/sustainability" class="area-router">
-                            <div class="card-area">
-                                <div class="icon">
-                                    <i class="fa-solid fa-headset"></i>
+                            </router-link>
+                        </div>
+                        <!-- Column Four -->
+                        <div class="column">
+                            <router-link to="/companies/Areas/sustainability" class="area-router">
+                                <div class="card-area">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <h3>SUSTAINABILITY</h3>
+                                    <p>
+                                        We aim to accelerate the transition to a greener future while <span
+                                            class="highlight">generating attractive returns</span>
+                                        for our investor entrepreneurs
+                                        who prioritize sustainability.
+                                    </p>
                                 </div>
-                                <h3>SUSTAINABILITY</h3>
-                                <p>
-                                    We aim to accelerate the transition to a greener future while <span
-                                        class="highlight">generating attractive returns</span>
-                                    for our investor entrepreneurs
-                                    who prioritize sustainability.
-                                </p>
-                            </div>
-                        </router-link>
+                            </router-link>
+                        </div>
                     </div>
-                </div>
-            </mobile>
-        </div>
+                </mobile>
+            </div>
 
 
         </section>
@@ -444,9 +455,9 @@ export default {
     },
     methods: {
         detectMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
         },
     },
     mounted() {
@@ -480,7 +491,8 @@ export default {
     width: 100%;
     display: flex;
 }
-.column-container-Mobile{
+
+.column-container-Mobile {
     flex-direction: column;
 }
 
@@ -495,7 +507,7 @@ export default {
     justify-content: space-between;
 }
 
-.row-top{
+.row-top {
     gap: 5%;
     padding: 20px;
     margin-bottom: 5px;
@@ -512,16 +524,20 @@ export default {
     display: flex;
     justify-content: space-between;
 }
+
 @media screen and (max-width: 768px) {
-  /* Adjust styles for screens up to 768px width */
-  .row-top, .row-bottom {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .row-top > *, .row-bottom > * {
-    flex-basis: 100%;
-  }
+
+    /* Adjust styles for screens up to 768px width */
+    .row-top,
+    .row-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .row-top>*,
+    .row-bottom>* {
+        flex-basis: 100%;
+    }
 }
 
 
@@ -543,16 +559,22 @@ export default {
 
 .card11 {
     background-color: rgb(15, 108, 126);
-    border-radius: 7%;
     margin-bottom: 30px;
     font-size: 18px;
     margin: -10px auto 0 0;
 }
-.card11 p,h3 {
+
+.titleofcard {
+    font-size: 20px;
+    padding-left: 10%;
+    color: #0b0c0c;
+}
+
+.card11 p {
     color: #d9f3f3;
     padding-left: 10%;
     padding-right: 10%;
-} 
+}
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -939,7 +961,7 @@ export default {
     padding-bottom: 2%;
 }
 
-.column-left-Mobile{
+.column-left-Mobile {
     padding-top: 6%;
     width: 100%;
 }
@@ -960,22 +982,30 @@ export default {
     padding-bottom: 2%;
 }
 
-.columnMobile{
+.columnMobile {
     flex-direction: column;
     padding-top: 18%;
     padding-left: 5%;
 }
-.card11Mobile{
-   background-color: rgb(15, 108, 126);
-   border-radius: 7%;
-   font-size: 15px;     
-   width: 90%
+
+.card11Mobile {
+    background-color: rgb(15, 108, 126);
+    font-size: 15px;
+    width: 90%
 }
-.card11Mobile p,h3 {
+
+.titleofcardMobile {
+    font-size: 17px;
     color: #d9f3f3;
     padding-left: 10%;
     padding-right: 10%;
-} 
+}
+
+.card11Mobile p {
+    color: #d9f3f3;
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
 .u-section-text3 {
     line-height: 120%;
@@ -994,6 +1024,10 @@ export default {
 .sec-butt2 {
     padding-left: 10%;
     padding-top: 10%;
+}
+
+.sec-butt2 a {
+    text-decoration: none;
 }
 
 .sec-butt a {
@@ -1028,6 +1062,13 @@ export default {
     margin: 0 auto 0 0;
 }
 
+.icon-circle-mobile {
+    height: 60px;
+    width: 65px;
+    background-image: #d9f3f3;
+    margin: 0 auto 0 0;
+}
+
 /*Section three*/
 #numbers {
     width: 100%;
@@ -1047,13 +1088,16 @@ export default {
     display: block;
     min-height: 150%;
 }
+
 @media (max-width: 767px) {
+
     /* Styles for mobile devices */
     .midl-container {
         background-size: contain;
     }
+
     .midl-container {
-    background-image: none;
+        background-image: none;
     }
 }
 
@@ -1085,7 +1129,7 @@ export default {
     transition-duration: inherit;
     max-width: 80%;
     margin-left: 10%;
-    background-color: rgb(212,220,228,0.8);
+    background-color: rgb(212, 220, 228, 0.8);
 }
 
 .first-rep2 {
@@ -1095,7 +1139,7 @@ export default {
     transition-duration: inherit;
     max-width: 80%;
     margin-left: 20%;
-    background-color: rgb(212,220,228,0.8);
+    background-color: rgb(212, 220, 228, 0.8);
 }
 
 .first-rep3 {
@@ -1105,7 +1149,7 @@ export default {
     transition-duration: inherit;
     max-width: 80%;
     margin-left: 40%;
-    background-color: rgb(212,220,228,0.8);
+    background-color: rgb(212, 220, 228, 0.8);
 }
 
 .rep-icon img {
@@ -1132,7 +1176,7 @@ export default {
 }
 
 .text-up {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 2%;
     text-transform: uppercase;
     font-weight: 700;
@@ -1147,7 +1191,7 @@ export default {
 }
 
 .text-down {
-    font-size: 20px;
+    font-size: 18px;
     margin: 10px 0 0;
     word-wrap: break-word;
     position: relative;
@@ -1187,7 +1231,7 @@ export default {
 
 /*Section top 4*/
 
-.container {
+.container-top4 {
     position: relative;
     width: 100%;
     display: flex;
@@ -1195,20 +1239,20 @@ export default {
     flex-wrap: wrap;
     transform-style: preserve-3d;
     perspective: 500px;
-    margin-bottom: 5%; 
+    margin-bottom: 2%;
 }
 
-.container .box {
+.container-top4 .box {
     position: relative;
-    width: 275px;
-    height: 275px;
+    width: 220px;
+    height: 196px;
     background: #d9f3f3;
     transition: 0.5s;
     transform-style: preserve-3d;
     overflow: hidden;
-    margin-left: 88px;
     margin-top: 45px;
 }
+
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
     .subtitle-midl {
@@ -1220,35 +1264,37 @@ export default {
         max-width: 100%;
         padding: 2% 10% 0 10%;
     }
+
     .repeater {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: -20px;
-      flex-direction: column;
-      padding-right: 8%;
-      gap: 20px; 
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+        flex-direction: column;
+        padding-right: 8%;
+        gap: 20px;
     }
 
-    .repeater > div {
-      margin-bottom: 20px; /* Margine inferiore tra i box */
+    .repeater>div {
+        margin-bottom: 20px;
+        /* Margine inferiore tra i box */
     }
 }
 
-.container:hover .box {
+.container-top4:hover .box {
     transform: rotateY(25deg);
 }
 
-.container .box:hover~.box {
+.container-top4 .box:hover~.box {
     transform: rotateY(-25deg);
 }
 
-.container .box:hover {
+.container-top4 .box:hover {
     transform: rotateY(0deg) scale(1.25);
     z-index: 1;
     box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
 }
 
-.container .box .imgBx {
+.container-top4 .box .imgBx {
     position: absolute;
     top: 0;
     left: 0;
@@ -1256,7 +1302,7 @@ export default {
     height: 100%;
 }
 
-.container .box .imgBx:before {
+.container-top4 .box .imgBx:before {
     content: '';
     position: absolute;
     top: 0;
@@ -1270,11 +1316,11 @@ export default {
     mix-blend-mode: multiply;
 }
 
-.container .box:hover .imgBx:before {
+.container-top4 .box:hover .imgBx:before {
     opacity: 1;
 }
 
-.container .box .imgBx img {
+.container-top4 .box .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1283,7 +1329,7 @@ export default {
     object-fit: cover;
 }
 
-.container .box .content {
+.container-top4 .box .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -1296,7 +1342,7 @@ export default {
     box-sizing: border-box;
 }
 
-.container .box .content h2 {
+.container-top4 .box .content h2 {
 
     color: #fff;
     transition: 0.5s;
@@ -1312,11 +1358,11 @@ export default {
     color: #1e9ec9;
 }
 
-.container .box:hover .content h2 {
+.container-top4 .box:hover .content h2 {
     transform: translateY(0px);
 }
 
-.container .box .content p {
+.container-top4 .box .content p {
     color: #fff;
     transition: 0.5s;
     font-size: 14px;
@@ -1324,45 +1370,50 @@ export default {
     transition-delay: 0.4s;
 }
 
-.container .box:hover .content p {
+.container-top4 .box:hover .content p {
     transform: translateY(0px);
 }
 
 @media (max-width: 768px) {
-  .container .box {
-    width: 70%; /* Adjust the width to fit the container */
-    margin: 0 auto; /* Center the box horizontally */
-    margin-top: 20px; /* Adjust the top margin */
-    margin-bottom: 20px; /* Add bottom margin */
-  }
-  .container .box .imgBx img {
-    position: relative;
-    object-fit: contain;
+    .container-top4 .box {
+        width: 70%;
+        /* Adjust the width to fit the container */
+        margin: 0 auto;
+        /* Center the box horizontally */
+        margin-top: 20px;
+        /* Adjust the top margin */
+        margin-bottom: 20px;
+        /* Add bottom margin */
     }
-.container .box .content h2 {
 
-    color: #fff;
-    transition: 0.5s;
-    text-transform: uppercase;
-    font-size: 12pt;
-    transform: translateY(200px);
-    transition-delay: 0.3s;
-}
+    .container-top4 .box .imgBx img {
+        position: relative;
+        object-fit: contain;
+    }
 
-.container .box .content p {
-    color: #fff;
-    transition: 0.5s;
-    font-size: 8pt;
-    transform: translateY(200px);
-    transition-delay: 0.4s;
-}
+    .container-top4 .box .content h2 {
+
+        color: #fff;
+        transition: 0.5s;
+        text-transform: uppercase;
+        font-size: 12pt;
+        transform: translateY(200px);
+        transition-delay: 0.3s;
+    }
+
+    .container-top4 .box .content p {
+        color: #fff;
+        transition: 0.5s;
+        font-size: 8pt;
+        transform: translateY(200px);
+        transition-delay: 0.4s;
+    }
 }
 
 /*Section areas*/
 .row-areas {
     margin-bottom: 2%;
     margin-left: 5%;
-    margin-right: 5%;
     margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
@@ -1602,6 +1653,17 @@ span.highlight {
         margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .container-top4 .box {
+        position: relative;
+        width: 166px;
+        height: 159px;
+        background: #d9f3f3;
+        transition: 0.5s;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        margin-top: 45px;
     }
 }
 
