@@ -46,10 +46,6 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
-        supervisor: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         description: {
             type: DataTypes.STRING,
             allowNull: true
