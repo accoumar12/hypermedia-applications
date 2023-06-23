@@ -224,7 +224,7 @@
         <section id="best-comp">
             <h4 class="subtitle-midl">Our Top 4 Investments</h4>
             <div class="container-top4">
-                <div class="box">
+                <div class="box1">
                     <div class="imgBx">
                         <img src="~/assets/img/Dell.png">
                     </div>
@@ -238,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box1">
                     <div class="imgBx">
                         <img src="~/assets/img/nike.png">
                     </div>
@@ -252,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box1">
                     <div class="imgBx">
                         <img src="~/assets/img/canadiansolar.png">
                     </div>
@@ -266,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box1">
                     <div class="imgBx">
                         <img src="~/assets/img/Cigna.png">
                     </div>
@@ -1018,7 +1018,6 @@ export default {
     text-decoration-thickness: 3px;
     font-size: 16px;
     color: rgb(11 11 11);
-    margin-top: 15%;
 }
 
 .sec-butt2 {
@@ -1232,6 +1231,7 @@ export default {
 /*Section top 4*/
 
 .container-top4 {
+    gap: 2%;
     position: relative;
     width: 100%;
     display: flex;
@@ -1242,10 +1242,10 @@ export default {
     margin-bottom: 2%;
 }
 
-.container-top4 .box {
+.container-top4 .box1 {
     position: relative;
-    width: 220px;
-    height: 196px;
+    width: 18%;
+    height: 280px;
     background: #d9f3f3;
     transition: 0.5s;
     transform-style: preserve-3d;
@@ -1280,21 +1280,21 @@ export default {
     }
 }
 
-.container-top4:hover .box {
+.container-top4:hover .box1 {
     transform: rotateY(25deg);
 }
 
-.container-top4 .box:hover~.box {
+.container-top4 .box1:hover~.box1 {
     transform: rotateY(-25deg);
 }
 
-.container-top4 .box:hover {
+.container-top4 .box1:hover {
     transform: rotateY(0deg) scale(1.25);
     z-index: 1;
     box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
 }
 
-.container-top4 .box .imgBx {
+.container-top4 .box1 .imgBx {
     position: absolute;
     top: 0;
     left: 0;
@@ -1302,7 +1302,7 @@ export default {
     height: 100%;
 }
 
-.container-top4 .box .imgBx:before {
+.container-top4 .box1 .imgBx:before {
     content: '';
     position: absolute;
     top: 0;
@@ -1316,11 +1316,11 @@ export default {
     mix-blend-mode: multiply;
 }
 
-.container-top4 .box:hover .imgBx:before {
+.container-top4 .box1:hover .imgBx:before {
     opacity: 1;
 }
 
-.container-top4 .box .imgBx img {
+.container-top4 .box1 .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1329,7 +1329,7 @@ export default {
     object-fit: cover;
 }
 
-.container-top4 .box .content {
+.container-top4 .box1 .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -1342,7 +1342,7 @@ export default {
     box-sizing: border-box;
 }
 
-.container-top4 .box .content h2 {
+.container-top4 .box1 .content h2 {
 
     color: #fff;
     transition: 0.5s;
@@ -1358,11 +1358,11 @@ export default {
     color: #1e9ec9;
 }
 
-.container-top4 .box:hover .content h2 {
+.container-top4 .box1:hover .content h2 {
     transform: translateY(0px);
 }
 
-.container-top4 .box .content p {
+.container-top4 .box1 .content p {
     color: #fff;
     transition: 0.5s;
     font-size: 14px;
@@ -1370,12 +1370,12 @@ export default {
     transition-delay: 0.4s;
 }
 
-.container-top4 .box:hover .content p {
+.container-top4 .box1:hover .content p {
     transform: translateY(0px);
 }
 
 @media (max-width: 768px) {
-    .container-top4 .box {
+    .container-top4 .box1 {
         width: 70%;
         /* Adjust the width to fit the container */
         margin: 0 auto;
@@ -1386,12 +1386,12 @@ export default {
         /* Add bottom margin */
     }
 
-    .container-top4 .box .imgBx img {
+    .container-top4 .box1 .imgBx img {
         position: relative;
         object-fit: contain;
     }
 
-    .container-top4 .box .content h2 {
+    .container-top4 .box1 .content h2 {
 
         color: #fff;
         transition: 0.5s;
@@ -1401,7 +1401,7 @@ export default {
         transition-delay: 0.3s;
     }
 
-    .container-top4 .box .content p {
+    .container-top4 .box1 .content p {
         color: #fff;
         transition: 0.5s;
         font-size: 8pt;
@@ -1655,7 +1655,7 @@ span.highlight {
         justify-content: space-between;
     }
 
-    .container-top4 .box {
+    .container-top4 .box1 {
         position: relative;
         width: 166px;
         height: 159px;
