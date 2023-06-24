@@ -13,51 +13,51 @@
                 <p class="areas">Area of investment: {{ company.areas }}</p>
                 <p class="ceo">CEO: {{ company.ceo }}</p>
                 <div class="supervisor">
-                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/people/'+person.id" />
+                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/people/' + person.id" />
                 </div>
             </div>
             <hr />
 
             <div v-if="!isMobile">
-                <desktop> 
-                <div class="row-section">
-                <div class="column-c">
-                    <img id="main-img" :src="company.image" />
-                </div>
-                <div class="column2-c">
-                    <div class="description-container">
-                        <p class="description">{{ company.description }}</p>
-                        <p class="description2">{{ company.description2 }}</p>
-                        <p>Visit their official website:
-                            <a href="{{ company.link }}" target="_blank">
-                                {{ company.link }}
-                            </a>
-                        </p>
+                <desktop>
+                    <div class="row-section">
+                        <div class="column-c">
+                            <img id="main-img" :src="company.image" />
+                        </div>
+                        <div class="column2-c">
+                            <div class="description-container">
+                                <p class="description">{{ company.description }}</p>
+                                <p class="description2">{{ company.description2 }}</p>
+                                <p>Visit their official website:
+                                    <a href="{{ company.link }}" target="_blank">
+                                        {{ company.link }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </desktop>
+                </desktop>
             </div>
 
             <div v-else>
                 <mobile>
 
-                <div class="column-section">
-                <div class="column-c">
-                    <img id="main-img3" :src="company.image" />
-                </div>
-                <div class="column2-c">
-                    <div class="description-container2">
-                        <p class="description">{{ company.description }}</p>
-                        <p class="description2">{{ company.description2 }}</p>
-                        <p class='official-link'>Visit their official website:
-                            <a href="{{ company.link }}" target="_blank">
-                                {{ company.link }}
-                            </a>
-                        </p>
+                    <div class="column-section">
+                        <div class="column-c">
+                            <img id="main-img3" :src="company.image" />
+                        </div>
+                        <div class="column2-c">
+                            <div class="description-container2">
+                                <p class="description">{{ company.description }}</p>
+                                <p class="description2">{{ company.description2 }}</p>
+                                <p class='official-link'>Visit their official website:
+                                    <a href="{{ company.link }}" target="_blank">
+                                        {{ company.link }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
                 </mobile>
             </div>
@@ -78,12 +78,12 @@ export default defineNuxtComponent({
         };
     },
 
-    methods:{
+    methods: {
 
-            detectMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
+        detectMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
         },
     },
 
@@ -119,8 +119,8 @@ const supervisorname = computed(() => {
         if (person.id === company.value.companyId) { // Irst 8 of the db are supervisors' name
             console.log("Hello world")
             NameSupervisor.push(person)
-            }
         }
+    }
     console.log(NameSupervisor)
     return NameSupervisor
 
@@ -230,7 +230,6 @@ hr {
 #main-img {
     width: 300px;
     height: 40%;
-    padding-left: 10%;
 
 }
 
@@ -241,12 +240,13 @@ hr {
 
 .description-container {
     display: flex;
+    font-size: 18px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    text-align: justify;
-    font-family: PT sans-serif;
+    text-align: left;
+    font-family: sans-serif;
 }
 
 .description-container2 {

@@ -26,43 +26,42 @@
                             <img id="main-img2" :src="person.image" />
                         </div>
                         <div class="column2">
-                            <div class="description-containera">
-                                <div class="button-container" style="position: relative; top: 0; z-index: 1;">
-                                    <button class="section-button" :class="{ active: activeSection === 1 }"
-                                        @click="activeSection = 1">
-                                        <br>
-                                        BIO
-                                    </button>
-                                    <button class="section-button" :class="{ active: activeSection === 2 }"
-                                        @click="activeSection = 2">
-                                        <br>
-                                        AWARDS
-                                    </button>
+                            <div class="button-container" style="position: relative; top: 0; z-index: 1;">
+                                <button class="section-button" :class="{ active: activeSection === 1 }"
+                                    @click="activeSection = 1">
+                                    <br>
+                                    BIO
+                                </button>
+                                <button class="section-button" :class="{ active: activeSection === 2 }"
+                                    @click="activeSection = 2">
+                                    <br>
+                                    AWARDS
+                                </button>
+                            </div>
+
+                            <div class="description-container1">
+                                <div v-if="activeSection === 1">
+                                    <p2 class="description">{{ person.description }}</p2>
+                                    <p2 class="description">{{ person.description2 }}</p2>
                                 </div>
-                            </div>
-                            <div class="description-container1" v-if="activeSection === 1">
-                                <p2 class="description">{{ person.description }}</p2>
-                                <p2 class="description">{{ person.description2 }}</p2>
-                            </div>
 
-                            <div class="description-container3" v-else-if="activeSection === 2">
-                                <p2 class="description">
-
-                                    <ul>
-                                        <li>{{ person.award1 }}</li>
-                                        <br>
-                                        <li v-if="person.award2 != ''">{{ person.award2 }}</li>
-                                        <br>
-                                        <li v-if="person.award3 != ''">{{ person.award3 }}</li>
-                                        <br>
-                                        <li v-if="person.award4 != ''">{{ person.award4 }}</li>
-                                    </ul>
-                                    <!--
+                                <div v-else-if="activeSection === 2">
+                                    <p2 class="description">
+                                        <ul class="award-list">
+                                            <li>{{ person.award1 }}</li>
+                                            <br>
+                                            <li v-if="person.award2 != ''">{{ person.award2 }}</li>
+                                            <br>
+                                            <li v-if="person.award3 != ''">{{ person.award3 }}</li>
+                                            <br>
+                                            <li v-if="person.award4 != ''">{{ person.award4 }}</li>
+                                        </ul>
+                                        <!--
                                 <ul id="AwardList"></ul>
                                 -->
-                                </p2>
+                                    </p2>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </desktop>
@@ -96,7 +95,6 @@
 
                                 <div class="description-container2" v-else-if="activeSection === 2">
                                     <p3 class="description2">
-
                                         <ul>
                                             <li>{{ person.award1 }}</li>
                                             <br>
@@ -359,6 +357,56 @@ hr {
     padding-bottom: 2%;
 }
 
+.column-b {
+    flex-basis: 30%;
+    padding-left: 8%;
+}
+
+.column2 {
+    flex-basis: 50%;
+    padding-right: 4%;
+}
+
+#main-img2 {
+    padding-right: 10%;
+    width: 300px;
+    height: 40%;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    font-family: sans-serif;
+    color: #033f52;
+}
+
+.section-button {
+    padding-bottom: 2.5%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family: monospace;
+    color: #033f52;
+    font-size: 1rem;
+}
+
+.section-button.active {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #033f52;
+    font-weight: bold;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10%;
+}
+
+.award-list {
+    width: 197%;
+    padding-left: 26%;
+}
+
 .row-section2 {
     display: flex;
     align-items: center;
@@ -367,15 +415,7 @@ hr {
     padding-bottom: 2%;
 }
 
-.column-b {
-    padding-left: 2%;
-}
 
-.column2 {
-    flex-basis: 50%;
-    padding-right: 4%;
-
-}
 
 .column2Card {
     margin-top: 30px;
@@ -387,89 +427,28 @@ hr {
     position: absolute;
 }
 
-#main-img2 {
 
-    width: 300px;
-    height: 40%;
-
-
-    /*
-    height: auto;
-    padding-left: 10%;
-    */
-}
 
 .description-container1 {
-    width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 2%;
     align-items: center;
-    margin-top: 10px;
     text-align: justify;
+    padding-right: 23%;
 }
 
 .description-container1 p2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    width: 80%;
-    font-family: sans-serif;
-
-}
-
-.description-container3 {
-    width: 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    text-align: justify;
-}
-
-.description-container3 p2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-family: sans-serif;
-
-}
-
-.description-container p3 {
-    margin-bottom: 8px;
-    font-size: 15pt;
-    width: 100%;
-    font-family: PT sans-serif;
-    font-size: 1.1rem;
-}
-
-.row6 {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
-    padding-bottom: 2%;
-}
-
-
-.description-containera {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-
-.description-containera p2 {
     height: 20%;
-    padding-left: -10%;
+    padding-left: 2%;
     font-size: 15pt;
-    width: 90%;
+    width: 40%;
     font-family: sans-serif;
     font-size: 1.1rem;
 }
+
 
 .description-containera2 p2 {
     height: 20%;
@@ -540,34 +519,6 @@ hr {
     font-size: 15pt;
 }
 
-.section-button {
-    padding-bottom: 2.5%;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-right: 20px;
-    font-family: monospace;
-    color: #033f52;
-    font-size: 1rem;
-}
-
-.section-button.active {
-    font-family: monospace;
-    font-size: 1rem;
-    color: #033f52;
-    font-weight: bold;
-    background-color: rgb(212, 208, 208);
-    border-radius: 10%;
-}
-
-.button-container {
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2%;
-    font-family: monospace;
-    color: #033f52;
-}
 
 .button-container2 {
     position: absolute;

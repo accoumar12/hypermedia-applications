@@ -409,7 +409,7 @@ export default {
 #title2 {
     align-items: center;
     padding-top: 1%;
-    padding-left: 45%;
+    padding-left: 40%;
     position: relative;
     font-size: 24px;
     font-weight: bold;
