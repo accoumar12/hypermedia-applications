@@ -314,7 +314,8 @@ export default {
         margin-top: 15% !important;
     }
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
 
     .overlay-title {
         font-size: 40px;
@@ -415,8 +416,9 @@ export default {
     font-family: sans-serif;
     z-index: 6;
 }
+
 @media (max-width: 768px) {
-  #title2 {
+    #title2 {
         align-items: center;
         padding-top: 1%;
         padding-left: 10%;
@@ -639,12 +641,13 @@ label>[type=radio] {
     font-family: sans-serif;
     font-size: 16px;
 }
+
 @media (max-width: 768px) {
-  .form-container {
-    text-align: center;
-    padding-right: 20%;
-    padding-bottom: 4%;
-  }
+    .form-container {
+        text-align: center;
+        padding-right: 20%;
+        padding-bottom: 4%;
+    }
 }
 
 
@@ -674,10 +677,11 @@ input {
     transition: 0.5s;
     outline: none;
 }
+
 @media (max-width: 768px) {
-  #age-filter {
-    width: 100%;
-  }
+    #age-filter {
+        width: 100%;
+    }
 }
 
 
@@ -770,7 +774,7 @@ button:hover {
     position: relative;
     padding: 1%;
     background-color: #0e6b74;
-    border-radius: 5%;
+    border-radius: 16px;
     padding-left: 1%;
     width: 80%;
     font-family: sans-serif;
