@@ -113,7 +113,7 @@
                     </label>
 
                 </div>-->
-                <AreaFilter v-for="area of areas" :logo="area.logo" :name="area.name" :link="'/areas/' + area.id" />
+                <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target" :link="'/areas/' + area.id" />
             </div>
 
         </div>
@@ -157,28 +157,30 @@
 <script setup>
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
 const name = ref("");
-const areas = ref("");
+const areas_value = ref("");
 const MR = ref("");
+
 
 const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the part of the company name is provided
     for (let company of companies.value) {
         if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
-            if ((name.value == 0 || name.value == "") & (areas.value == 0 || areas.value == "") & (MR.value == 0 || MR.value == "")) { // All companies
+            if ((name.value == 0 || name.value == "") & (areas_value.value == 0 || areas_value.value == "") & (MR.value == 0 || MR.value == "")) { // All companies
                 //console.log(company) // Only for debug
                 arrTot.push(company)
             }
             //else if ((company.name == name.value) & (company.areas == areas.value)) {
             //    arrTot.push(company)
             //}
-            else if ((company.name.toLowerCase().includes(name.value.toLowerCase())) & ((company.areas == areas.value) || (areas.value == 0 || areas.value == "")) & (company.MostRelevant == MR.value))
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase())) & ((company.areas == areas_value.value) || (areas_value.value == 0 || areas_value.value == "")) & (company.MostRelevant == MR.value))
                 arrTot.push(company)
             console.log(MR.value)
         }

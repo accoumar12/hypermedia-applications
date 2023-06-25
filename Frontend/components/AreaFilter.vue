@@ -3,16 +3,16 @@
         <div class="area-icons">
             <img class="img" :src="logo" alt="AreaLogo"/>
         </div>
-        <div class="counter" data-target="{{ data_target }}"></div>
+        <div class="counter" :data-target="data_target"></div>
         <div class="link-text">
             <a class="learn-more">
                 <NuxtLink :to="link">
-                    <h1 style="color:#033f52">Technology Investments →</h1>
+                    <h1 style="color:#033f52">{{ name }} Investments →</h1>
                 </NuxtLink>
             </a>
         </div>
-        <label for="Technology">
-            <input type="radio" id="{{ name }}" value="{{ name }}" name="Investments-categories" v-model="areas">
+        <label :for="name">
+            <input type="radio" id="name" value="name" name="Investments-categories" v-model="areas">
             <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
             <span class="checkmark"></span>
         </label>
@@ -65,30 +65,12 @@ export default {
         };
         window.addEventListener('scroll', handleScroll);
     },
-    methods: {
-        filterAndNavigate(event) {
-            // Prevent the default link behavior
-            event.preventDefault();
-
-            // Perform filtering based on the selected value (example filtering code)
-            // Replace this code with your actual filtering logic
-            if (this.areas === 'Technology') {
-                // Get the target section using the href attribute
-                const targetSection = document.querySelector(event.target.getAttribute('href'));
-
-                // Scroll to the target section
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        },
-        updateText(newText) {
-            this.rightColumnText = newText;
-        },
-    },
 };
+
 </script>
     
 <script setup>
-const props = defineProps(['logo', 'name', 'link']);
+const props = defineProps(['logo', 'name', 'data_target', 'link']);
 </script>
     
 <style>
