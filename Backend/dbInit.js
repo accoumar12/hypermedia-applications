@@ -1,6 +1,50 @@
 
 export default async (models) => {
     //List o all the people working in our company
+
+    const areaModel = [
+        {
+            name: "Technology",
+            description: "VenTour understands the importance of technology investments and is committed to investing in cutting-edge technologies. We have a team of experienced professionals who have an eye for identifying promising technologies and the potential to change the world. By investing in technology, VenTour aims to support startups that are focused on creating innovative solutions to complex problems.",
+            description2: "VenTour has been investing in technology companies for years, contributing to the growth and success of some of the most innovative businesses in the industry. VenTour's extensive knowledge and expertise in technology investments have helped its portfolio companies reach their full potential.",
+            image: "https://rkomi98.github.io/VenTour/_nuxt/tech-team.401264c6.png",
+        },
+        {
+            name: "Healthcare",
+            description: "Our company has a strong track record of identifying promising healthcare startups and helping them grow and succeed. VenTour invests in a variety of healthcare sectors, including biotechnology, medical devices, and digital health.Investments are targeted at companies that are developing cutting-edge technologies and products that can improve patient outcomes, reduce healthcare costs, and increase access to care.",
+            description2: "Our goal is to help every portfolio company to navigate the complex healthcare landscape and bring their innovations to market as quickly and efficiently as possible.",
+            image: "https://rkomi98.github.io/VenTour/_nuxt/health-team.0feb24fa.png",
+        },
+        {
+            name: "Consumer Goods",
+            description: "Our company looks for opportunities in the consumer goods sector that are able to offer unique value propositions to customers, create new markets or disrupt existing ones.",
+            description2: "The company's consumer goods investments span across a variety of categories including food and beverage, beauty and personal care, and household goods. VenTour is interested in companies that leverage cutting-edge technologies to create new products and services that meet evolving consumer needs. The company also prioritizes businesses that have a strong brand identity and are able to connect with their customers on a personal level.",
+            image: "https://rkomi98.github.io/VenTour/_nuxt/consumer-team.8af0b2ea.png",
+        },        
+        {
+            name: "Sustainability",
+            description: "As a venture capital firm committed to sustainability, VenTour seeks to invest in companies that prioritize environmental, social, and governance (ESG) considerations. The firm is particularly interested in supporting innovative solutions that promote the transition to a low-carbon economy, enhance resource efficiency, and reduce waste.",
+            description2: "One area of focus for VenTour is renewable energy, including companies developing technologies for solar, wind, and geothermal power. The firm also seeks out opportunities in energy storage and distribution, as well as in the electrification of transportation.VenTour also supports companies focused on improving supply chain transparency and reducing food waste.",
+            image: "https://rkomi98.github.io/VenTour/_nuxt/sustainability-team.f11c6793.png",
+        },
+    ]
+
+    await models.Area.bulkCreate(areaModel)
+
+    // Definition of Supervisors:
+
+    const areas_field = [];
+    let i = 0;
+
+    for (let c of areaModel) {
+        areas_field[i] = await models.Company.create(c);
+        i = i + 1;
+    }
+
+    const technology = areas_field[0] //await models.Company.create(personModel[0])
+    const healthcare = areas_field[1] //await models.Company.create(personModel[1])
+    const consumer_goods = areas_field[2] //await models.Company.create(personModel[2])
+    const sustainability = areas_field[3] //await models.Company.create(personModel[3])
     
     const personModel = [
         {
@@ -10,7 +54,8 @@ export default async (models) => {
             team: "Management Team",
             description: 'Anastasia Petrova is an accomplished technology manager with a wealth of experience in the venture capital industry. She is responsible for overseeing a diverse portfolio of technology startups, working closely with founders and management teams to help them navigate the challenges of scaling their businesses. Anastasia is widely respected in the industry for her expertise in identifying emerging trends and disruptive technologies, and for her ability to connect innovative startups with the resources they need to succeed.',
             description2: 'In addition to her work in venture capital, Anastasia is a passionate advocate for diversity and inclusion in the tech industry. She is committed to supporting underrepresented founders and promoting greater equity in funding and entrepreneurship. Her dedication to creating a more inclusive and equitable tech ecosystem has earned her widespread recognition and respect within the industry.',
-            area: 'Technology',
+            area: technology.name,
+            areaId: technology.id,
             award1: "Outstanding Team Leader Award",
             award2: "Excellence in Leadership Award",
             award3: "Innovator of the Year Award",
@@ -24,7 +69,8 @@ export default async (models) => {
             team: "Management Team",
             description: "Hiroshi Nakamura is an experienced marketing professional with a proven track record in the venture capital industry. As Marketing Manager of the Management Team, he oversees the development and execution of marketing strategies for a diverse portfolio of companies, working closely with founders and management teams to help them achieve their business goals. Hiroshi is widely recognized for his ability to identify emerging trends and disruptive technologies, and for his skill in crafting compelling narratives that resonate with investors, customers, and stakeholders.",
             description2: 'His strategic vision and creative approach to marketing have helped his clients to successfully launch new products and services, expand into new markets, and achieve significant growth and market share. With his combination of marketing expertise, industry knowledge, and business acumen, Hiroshi is a valuable asset to any organization he serves.',
-            area: 'Healthcare',
+            area: healthcare.name,
+            areaId: healthcare.id,
             award1: "Most Creative Thinker Award",
             award2: "Exceptional Problem Solver Award",
             award3: "",
@@ -38,7 +84,8 @@ export default async (models) => {
             team: "Investment Team",
             description: "Javier Rodriguez is a highly experienced Associate on the Investment Team. With a deep understanding of the venture capital industry, he is able to evaluate investment opportunities and identify promising startups across a variety of sectors. Javier is known for his strategic thinking, his analytical skills, and his ability to identify emerging trends and technologies. Javier is a valuable asset to his team, and his expertise has been critical in supporting the growth of several high-potential startups.",
             description2: 'His strong communication skills, collaborative approach, and attention to detail have enabled him to build lasting relationships with founders and management teams, and to provide valuable guidance and support as they navigate the challenges of scaling their businesses. With his proven track record of success and his commitment to creating long-term value, Javier is a key member of the Investment Team.',
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Positive Attitude Award",
             award2: "Collaborative Spirit Award",
             award3: "Mentor of the Year Award",
@@ -52,7 +99,8 @@ export default async (models) => {
             team: "Investment Team",
             description: "Emilia Costa is a highly experienced managing partner with a proven track record of success in the venture capital industry. As the leader of the Investment Team, she oversees a portfolio of high-growth technology startups and works closely with founders and management teams to help them achieve their business goals.",
             description2: 'In addition to her work in venture capital, Emilia is a dedicated advocate for social impact and sustainability. She believes that business can be a powerful force for positive change and is committed to supporting innovative companies that are working to create a more just and equitable world. Her passion for social impact has earned her widespread recognition and respect in the industry, and she is widely regarded as a thought leader in the field. With her combination of strategic thinking, operational expertise, and commitment to social responsibility, Emilia is a valuable asset to any organization she serves.',
-            area: "Healthcare",
+            area: healthcare.name,
+            areaId: healthcare.id,
             award1: "Rookie of the Year Award",
             award2: "Most Valuable Worker Award",
             award3: "",
@@ -66,7 +114,8 @@ export default async (models) => {
             team: "Advisoring Board Team",
             description: "Isabella Rossi is a seasoned Advisoring Manager at our venture capital company. With over a decade of experience in the industry, she has played a vital role in the growth and success of numerous startups. Her expertise lies in advising and strategizing with entrepreneurs to help them overcome challenges and make informed decisions.",
             description2: "Isabella's passion for entrepreneurship and her extensive network make her a valuable asset to our Advisoring Board Team. As an Advisoring Manager, Isabella takes a collaborative and personalized approach to work closely with startups. With her extensive experience in the industry, Isabella has a keen eye for identifying potential roadblocks and works with entrepreneurs to overcome them and stay on track. With her wealth of knowledge and experience, Isabella is a trusted advisor to many startups, and her contributions have been instrumental in their success.",
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Best Communication Skills Award",
             award2: "",
             award3: "",
@@ -80,7 +129,8 @@ export default async (models) => {
             team: "Management Team",
             description: "Maya Patel is a Marketing Manager with extensive experience in the venture capital industry. She has a strong background in marketing, branding, and business development. Maya is responsible for creating and implementing marketing strategies that help the firm attract and retain investors. She is an expert in using various digital marketing channels to drive awareness and engagement, and is always looking for new and innovative ways to promote the firm.",
             description2: "Maya is a collaborative team player and works closely with other members of the management team to ensure that the firm's marketing efforts are aligned with its overall business objectives. With her strategic vision and leadership skills, Maya is an invaluable asset to the firm.",
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Dependability Award",
             award2: "Continuous Learner Award",
             award3: "Team Motivator Award",
@@ -94,7 +144,8 @@ export default async (models) => {
             team: "Operations and Finance Team",
             description: "Juan Garcia is the Operations Manager at our venture capital company, responsible for overseeing the day-to-day operations of our business. With over 10 years of experience in operations and finance, Juan brings a wealth of knowledge and expertise to our team. He has a proven track record of streamlining processes, optimizing performance, and maximizing profitability.",
             description2: "Juan is known for his attention to detail, his analytical skills, and his ability to solve complex problems in a timely and effective manner. In his role as Operations Manager, Juan works closely with other members of our team to ensure that all aspects of our business are running smoothly. He oversees our finance and accounting functions, manages vendor relationships, and works to optimize our processes and procedures. Juan is a dedicated and hardworking member of our team who is always looking for ways to improve our operations and better serve our clients.",
-            area: "Healthcare",
+            area: healthcare.name,
+            areaId: healthcare.id,
             award1: "Workplace Safety Champion Award",
             award2: "",
             award3: "",
@@ -108,7 +159,8 @@ export default async (models) => {
             team: "Investment Team",
             description: "Aisha Khan is an Investment Partner on the Investment Team at our company. She brings years of experience in the finance industry and is responsible for leading the team's investment strategy and decision-making processes. Her expertise lies in identifying and evaluating investment opportunities that align with the company's mission and values. Aisha is an integral part of the team and works closely with other members to ensure that the team is meeting its goals and objectives.",
             description2: "Aisha's dedication and hard work have made a significant impact on the Investment Team's success and growth. As an Investment Partner, Aisha is constantly keeping up-to-date with the latest market trends and developments. She is also responsible for building and maintaining relationships with external stakeholders, including investors, fund managers, and industry experts.",
-            area: "Sustainability",
+            area: sustainability.name,
+            areaId: sustainability.id,
             award1: "Above and Beyond Award",
             award2: "Outstanding Sales Performance Award",
             award3: "Best Teamwork Award",
@@ -122,7 +174,8 @@ export default async (models) => {
             team: "Operations and Finance Team",
             description: "Kofi Mensah is an Analyst at our company and a valuable member of the Operations & Finance Team. Kofi's responsibilities include analyzing financial data, identifying trends, and generating reports that are used to inform decision-making processes. Kofi's attention to detail and ability to work with large datasets have been instrumental in the success of the team's projects.",
             description2: "Before joining our company, Kofi worked as a financial analyst for several years, gaining experience in the financial services industry. His background in finance has proven to be an asset to the team, as he is able to bring a unique perspective to projects and collaborate with other departments effectively. Kofi works well with others and is always willing to lend a helping hand. Kofi's positive attitude and strong work ethic make him a pleasure to work with, and we are lucky to have him on our team.",
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Outstanding Project Manager Award",
             award2: "",
             award3: "",
@@ -136,7 +189,8 @@ export default async (models) => {
             team: "Management Team",
             description: "Omar Al-Farsi is a Managing Partner at our company, bringing a wealth of experience and expertise to our management team. With a strong background in business and finance, Omar is responsible for overseeing the strategic direction of the company and ensuring that all operations are running smoothly. He is committed to building and maintaining strong relationships with our clients and partners, and his passion for innovation and collaboration drives our team to deliver the best possible results.",
             description2: "Prior to joining our company, Omar held several leadership roles in the finance industry, where he developed a deep understanding of the markets and established a proven track record of success. Omar's leadership style is characterized by his collaborative approach, and he places a strong emphasis on teamwork, communication, and continuous improvement.",
-            area: "Sustainability",
+            area: sustainability.name,
+            areaId: sustainability.id,
             award1: "Best Idea Generator Award",
             award2: "Creative Thinker Award",
             award3: "",
@@ -150,7 +204,8 @@ export default async (models) => {
             team: "Operations and Finance Team",
             description: "Leila Ahmed is the Operations Manager for the Operations & Finance Team. She is responsible for overseeing and managing the day-to-day operations of the team, ensuring that everything runs smoothly and efficiently. Leila brings a wealth of experience to her role, having worked in various operational roles in the past. With her excellent organizational skills and attention to detail, Leila ensures that all operational tasks are completed to a high standard, and that any issues are dealt with in a timely and effective manner. In her role as Operations Manager, Leila plays a critical role in driving the success of the organization.",
             description2: "Through her leadership, Leila has helped the team to become more efficient and effective, resulting in improved business outcomes. Leila is highly respected by her colleagues and is known for her dedication, hard work, and professionalism. She is a valuable member of the team and is committed to making a positive impact on the organization.",
-            area: 'Technology',
+            area: technology.name,
+            areaId: technology.id,
             award1: "Most Supportive Colleague Award",
             award2: "Employee of the Month Award",
             award3: "",
@@ -164,7 +219,8 @@ export default async (models) => {
             team: "Advisoring Board Team",
             description: "Carlos Ramirez is an Analyst on the Advisoring Board Team at our company. With his extensive experience in data analysis and market research, he plays a crucial role in providing insights and recommendations to our clients.",
             description2: "Carlos is a detail-oriented individual who is skilled at identifying patterns and trends in complex data sets, allowing him to provide valuable insights that help our clients make informed decisions. His excellent communication skills and ability to work under tight deadlines have made him a valuable asset to the team. Carlos is always looking for ways to improve processes and add value to the team, and his passion for his work is evident in everything he does. Outside of work, Carlos enjoys playing basketball and hiking in the mountains. He is also an avid reader and enjoys learning about new topics, particularly in the field of technology and innovation.",
-            area: "Sustainability",
+            area: sustainability.name,
+            areaId: sustainability.id,
             award1: "Inspirational Leader Award",
             award2: "",
             award3: "",
@@ -178,7 +234,8 @@ export default async (models) => {
             team: "Investment Team",
             description: "Niamh Murphy is a Managing Advisor who is a key member of the Management Team at the company. She plays a crucial role in providing guidance and direction to the organization's operations and strategic planning. Niamh's expertise in management and leadership allows her to oversee and optimize various processes, resulting in increased efficiency and productivity.As a Managing Advisor, Niamh also provides mentorship and support to other team members, helping to develop their skills and expertise.",
             description2: "Niamh's extensive experience in management and leadership roles in various industries has equipped her with a diverse skill set that allows her to adapt to changing circumstances and drive the organization towards success. She is committed to the company's values and mission and works tirelessly to ensure that these are reflected in all aspects of the organization's operations.",
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Most Reliable Award",
             award2: "Team Spirit Award",
             award3: "Outstanding Customer Support Award",
@@ -192,7 +249,8 @@ export default async (models) => {
             team: "Advisoring Board Team",
             description: "Tariq Ali is an Operations Manager at the company, currently based in the same location as the rest of the team. With several years of experience in managing operations in various industries, Tariq is a valuable member of the team. In his current role, he oversees the daily operations of the Advisoring Board Team, ensuring that everything runs smoothly and efficiently. As an Operations Manager, Tariq is responsible for ensuring that the team has the necessary resources to achieve its objectives. This includes managing budgets, schedules, and other resources. He works closely with other members of the team to identify areas for improvement and implement solutions that enhance the overall performance of the team.",
             description2: "In addition to his work as an Operations Manager, Tariq is also an active member of the Advisoring Board Team. He regularly participates in team meetings and provides valuable input on various matters.",
-            area: 'Technology',
+            area: technology.name,
+            areaId: technology.id,
             award1: "Dedication and Commitment Award",
             award2: "Quality Champion Award",
             award3: "",
@@ -206,7 +264,8 @@ export default async (models) => {
             team: "Advisoring Board Team",
             description: "Sofia Hernandez is a General Advisor working as a part of the Advisoring Board Team at the company. In this role, Sofia is responsible for providing advice and guidance on various aspects of the company's operations, including strategy, finances, and business development. With her experience and expertise, Sofia helps the company navigate challenges and seize opportunities to grow and thrive.As a key member of the Advisoring Board Team, Sofia works closely with other advisors and executives to ensure that the company is on the right path to success.",
             description2: "Sofia brings a wealth of knowledge and experience to her role at the company. Prior to joining the team, she worked in a variety of roles in the business and financial sectors, developing a deep understanding of the industry and the challenges and opportunities it presents. Sofia is passionate about helping companies succeed and is committed to working collaboratively with others to achieve this goal.",
-            area: "Sustainability",
+            area: sustainability.name,
+            areaId: sustainability.id,
             award1: "Best Problem Solver Award",
             award2: "Initiative and Proactivity Award",
             award3: "Most Improved Award",
@@ -220,7 +279,8 @@ export default async (models) => {
             team: "Management Team",
             description: "Rajesh Singh is a Managing Partner at our company, where he leads our Management Team. He is responsible for overseeing the overall strategy and direction of our company, as well as managing and mentoring our team of talented professionals.",
             description2: "Prior to joining our company, Rajesh held senior leadership positions at several other firms in the industry, where he gained extensive experience in business development, financial planning, and operations management. He is known for his ability to build strong relationships with clients and stakeholders, and his strategic vision and leadership have been instrumental in driving our company's growth and success. Rajesh holds an MBA from a top-tier business school, and he is a frequent speaker at industry conferences and events.",
-            area: 'Healthcare',
+            area: healthcare.name,
+            areaId: healthcare.id,
             award1: "Exceptional Time Management Award",
             award2: "Outstanding Sales Growth Award",
             award3: "",
@@ -234,7 +294,8 @@ export default async (models) => {
             team: "Operations and Finance Team",
             description: "Olivia Jones is an Analyst in the Operations & Finance Team. She is responsible for analyzing financial data, preparing reports and budgets, and identifying cost-saving opportunities. Olivia is known for her attention to detail, strong analytical skills, and ability to work effectively under pressure.",
             description2: "With a background in finance and accounting, Olivia brings a wealth of knowledge and experience to the team. Prior to joining the company, she worked for several large financial institutions, where she gained experience in financial analysis, risk management, and strategic planning. In her current role, Olivia enjoys working collaboratively with her colleagues to solve complex financial problems and drive the company's success. Outside of work, Olivia enjoys hiking, reading, and spending time with family and friends. She is also actively involved in several community organizations and volunteers her time to support causes related to education and social justice.",
-            area: "Sustainability",
+            area: sustainability.name,
+            areaId: sustainability.id,
             award1: "Best Customer Relationship Builder Award",
             award2: "Leadership by Example Award",
             award3: "",
@@ -248,7 +309,8 @@ export default async (models) => {
             team: "Advisoring Board Team",
             description: "Amirah Abdullahi is a former executive who is a valued member of our Advising Board team. With her wealth of experience and expertise, she has provided invaluable insights and guidance to our team. Amirah's contributions have helped us make strategic decisions that have positively impacted our business. As a member of the Advising Board team, Amirah plays a key role in advising our senior leadership team on key business decisions.",
             description2: "Her experience in leadership, strategy, and operations has proven to be invaluable in shaping our approach to tackling complex business challenges. Despite her busy schedule, Amirah remains committed to sharing her knowledge and experience with the rest of our team. She regularly engages with our staff to share insights, provide guidance, and offer support whenever needed. Her dedication and commitment to our organization make her an invaluable member of our team.",
-            area: 'Consumer Goods',
+            area: consumer_goods.name,
+            areaId: consumer_goods.id,
             award1: "Excellence in Productivity Award",
             award2: "Best Team Building Award",
             award3: "Most Creative Project Award",
@@ -262,7 +324,8 @@ export default async (models) => {
             team: "Operations and Finance Team",
             description: "Lars Andersen is the Finance Director at our company and brings with him a wealth of knowledge and experience in financial management. He has been with the company for over a decade and has played an instrumental role in the growth and success of our organization. Lars is responsible for the financial health of the company and ensures that we operate within budget, meet our financial targets, and comply with all regulatory requirements. He oversees all financial operations, including budgeting, forecasting, and financial reporting. He has a deep understanding of financial analysis and is able to provide insightful recommendations to the management team.",
             description2: "One of Lars's key strengths is his ability to identify potential risks and opportunities in the financial markets. He is able to analyze economic trends and market conditions to determine the best course of action for the company. He is constantly seeking new ideas and innovative solutions to drive growth and profitability.",
-            area: 'Healthcare',
+            area: healthcare.name,
+            areaId: healthcare.id,
             award1: "Positive Impact Award",
             award2: "Exceptional Technical Skills Award",
             award3: "Excellent Communication Award",
@@ -276,7 +339,8 @@ export default async (models) => {
             team: "Investment Team",
             description: "Fatima Hassan is an Investment Partner on our Investment Team. With years of experience in the industry, she has a keen eye for identifying promising investment opportunities and a strong track record of delivering results. Fatima is a strategic thinker who is able to identify and capitalize on emerging trends, and she has played a key role in driving the success of our investment portfolio. As an Investment Partner, Fatima is responsible for leading and executing investment deals, as well as managing portfolio companies.",
             description2: "Fatima is also actively involved in mentoring and training junior members of the team, helping to develop the next generation of investment professionals. Outside of work, Fatima is passionate about giving back to her community and is involved in several philanthropic initiatives. She is a graduate of a top business school and holds several certifications in finance and investment.",
-            area: 'Technology',
+            area: technology.name,
+            areaId: technology.id,
             award1: "Outstanding Marketing Campaign Award",
             award2: "Exceptional Analytical Skills Award",
             award3: "Employee of the Year Award",
@@ -289,11 +353,11 @@ export default async (models) => {
     // Definition of Supervisors:
 
     const companySup = [];
-    let i = 0;
+    let j = 0;
 
     for (let c of personModel) {
-        companySup[i] = await models.Company.create(c);
-        i = i + 1;
+        companySup[j] = await models.Company.create(c);
+        j = j + 1;
     }
 
     const companySup0 = companySup[0] //await models.Company.create(personModel[0])
@@ -310,7 +374,8 @@ export default async (models) => {
     const CompanyModel = [
         {
             name: "UnitedHealth Group",
-            areas: "Healthcare",
+            areas: healthcare.name,
+            areasId: healthcare.id,
             companyId: companySup1.id,
             description: "UnitedHealth Group, Inc. engages in the provision of health care coverage, software, and data consultancy services. It operates through the following segments: UnitedHealthcare, OptumHealth, OptumInsight, and OptumRx. The UnitedHealthcare segment utilizes Optum's capabilities to help coordinate patient care, improve affordability of medical care, analyze cost trends, manage pharmacy benefits, work with care providers more effectively, and create a simpler consumer experience. The OptumHealth segment provides health and wellness care, serving the broad health care marketplace including payers, care providers, employers, government, life sciences companies, and consumers.",
             description2: "The OptumInsight segment focuses on data and analytics, technology, and information to help major participants in the healthcare industry. The OptumRx segment offers pharmacy care services. The company was founded by Richard T. Burke in January 1977 and is headquartered in Minnetonka, MN.",
@@ -321,7 +386,8 @@ export default async (models) => {
         },
         {
             name: "Cardinal Health",
-            areas: "Healthcare",
+            areas: healthcare.name,
+            areasId: healthcare.id,
             companyId: companySup1.id,
             description: "Cardinal Health, Inc. is a healthcare services and products company, which engages in the provision of customized solutions for hospitals, healthcare systems, pharmacies, ambulatory surgery centers, clinical laboratories, and physician offices. It also provides medical products and pharmaceuticals and cost-effective solutions that enhance supply chain efficiency. The firm operates through the Pharmaceutical and Medical segments. The Pharmaceutical segment distributes branded and generic pharmaceutical, specialty pharmaceutical and over-the-counter healthcare and consumer products.",
             description2: "The Medical segment manufactures, sources and distributes Cardinal Health branded medical, surgical, and laboratory products. The company was founded by Robert D. Walter in 1971 and is headquartered in Dublin, OH.",
@@ -332,7 +398,8 @@ export default async (models) => {
         },
         {
             name: "Elevance Health, Inc.",
-            areas: "Healthcare",
+            areas: healthcare.name,
+            areasId: healthcare.id,
             companyId: companySup1.id,
             description: "Elevance Health, Inc. operates as a health company, which engages in improving lives and communities, and making healthcare simpler. It operates through the following segments: Commercial and Specialty Business, Government Business, CarelonRx, and Other. The Commercial and Specialty Business segment provides insurance products and services such as stop loss, dental, vision, life, disability and supplemental health insurance. The Government Business segment includes medicare and medicaid businesses, national government services, and services provided to the federal government.",
             description2: "The CerelonRx segment offers formulary management, pharmacy networks, prescription drug database, member services, and mail order capabilities. The Other segment is involved in health services business focused on quality of healthcare by enabling and creating new care delivery and payment models. The company was founded in 1944 and is headquartered in Indianapolis, IN.",
@@ -343,7 +410,8 @@ export default async (models) => {
         },
         {
             name: "Cigna Group",
-            areas: "Healthcare",
+            areas: healthcare.name,
+            areasId: healthcare.id,
             companyId: companySup3.id,
             description: "The Cigna Group is engaged in the provision of global health services. It operates through the following segments: Evernorth, U.S. Medical, International Markets, and Group Disability and Other. The Evernorth segment includes a broad range of coordinated and point solution health services, including pharmacy solutions, benefits management solutions, care solutions and intelligence solutions. The U.S. Medical segment includes Cigna's U.S. Commercial and U.S. Government businesses that provide comprehensive medical and coordinated solutions to clients and customers.",
             description2: "The International Markets segment includes supplemental health, life and accident insurance products and health care coverage in international markets, as well as health care benefits to globally mobile employees of multinational organizations. The Group Disability and Other segment represents group disability and life, corporate-owned life insurance, and run-off business consisting of reinsurance, settlement authority, and individual life insurance and annuity and retirement benefits business. The company was founded in 1792 and is headquartered in Bloomfield, CT.",
@@ -354,7 +422,8 @@ export default async (models) => {
         },
         {
             name: "Pfizer Inc.",
-            areas: "Healthcare",
+            areas: healthcare.name,
+            areasId: healthcare.id,
             companyId: companySup3.id,
             description: "Pfizer Inc is a research-based global biopharmaceutical company. It engages in the discovery, development, manufacture, marketing, sales and distribution of biopharmaceutical products worldwide. The firm works across developed and emerging markets to advance wellness, prevention, treatments and cures that challenge the most feared diseases. The company was founded by Charles Pfizer Sr. and Charles Erhart in 1849 and is headquartered in New York, NY",
             description2: "",
@@ -365,7 +434,8 @@ export default async (models) => {
         },
         {
             name: "Microsoft",
-            areas: "Technology",
+            areas: technology.name,
+            areasId: technology.id,
             companyId: companySup0.id,
             description: "Microsoft Corp engages in the development and support of software, services, devices, and solutions. It operates through the following business segments: Productivity and Business Processes; Intelligent Cloud; and More Personal Computing. The Productivity and Business Processes segment comprises products and services in the portfolio of productivity, communication, and information services of the company spanning a variety of devices and platform. The Intelligent Cloud segment refers to the public, private, and hybrid serve products and cloud services of the company which can power modern business.",
             description2: "The More Personal Computing segment encompasses products and services geared towards the interests of end users, developers, and IT professionals across all devices. The firm also offers operating systems; cross-device productivity applications; server applications; business solution applications; desktop and server management tools; software development tools; video games; personal computers, tablets; gaming and entertainment consoles; other intelligent devices; and related accessories. The company was founded by Paul Gardner Allen and William Henry Gates III in 1975 and is headquartered in Redmond.",
@@ -376,7 +446,8 @@ export default async (models) => {
         },
         {
             name: "Dell Technologies, Inc",
-            areas: "Technology",
+            areas: technology.name,
+            areasId: technology.id,
             companyId: companySup0.id,
             description: "Dell Technologies, Inc. is a holding company, which engages in the provision of information technology hardware, software, and service solutions through its subsidiaries. It operates through the following segments: Infrastructure Solutions Group (ISG), Client Solutions Group (CSG), and VMware. The ISG segment includes servers, networking, and storage, as well as services and third-party software and peripherals that are closely tied to the sale of ISG hardware.",
             description2: "The CSG segment consists of sales to commercial and consumer customers of desktops, thin client products, and notebooks. The VMware segment provides compute, cloud management, networking and security, storage and availability, and other end-user computing offerings. The company was founded by Michael Saul Dell in 1984 and is headquartered in Round Rock, TX.",
@@ -387,7 +458,8 @@ export default async (models) => {
         },
         {
             name: "Taiwan Semiconductor Manufacturing Co.",
-            areas: "Technology",
+            areas: technology.name,
+            areasId: technology.id,
             companyId: companySup0.id,
             description: "Taiwan Semiconductor Manufacturing Co., Ltd. engages in the manufacture and sale of integrated circuits and wafer semiconductor devices. Its chips are used in personal computers and peripheral products, information applications, wired and wireless communications systems products, and automotive and industrial equipment including consumer electronics such as digital video compact disc player, digital television, game consoles, and digital cameras. The company was founded by Chung Mou Chang on February 21, 1987 and is headquartered in Hsinchu, Taiwan.",
             description2: "",
@@ -398,7 +470,8 @@ export default async (models) => {
         },
         {
             name: "Intel Corporation",
-            areas: "Technology",
+            areas: technology.name,
+            areasId: technology.id,
             companyId: companySup10.id,
             description: "Intel Corporation engages in the design, manufacture, and sale of computer products and technologies. It delivers computer, networking, data storage, and communications platforms. The firm operates through the following segments: Client Computing Group (CCG), Data Center Group (DCG), Internet of Things Group (IOTG), Non-Volatile Memory Solutions Group (NSG), Programmable Solutions (PSG), and All Other. The CCG segment consists of platforms designed for notebooks, 2-in-1 systems, desktops, tablets, phones, wireless and wired connectivity products, and mobile communication components. The DCG segment includes workload-optimized platforms and related products designed for enterprise, cloud, and communication infrastructure market.",
             description2: "The IOTG segment offers compute solutions for targeted verticals and embedded applications for the retail, manufacturing, health care, energy, automotive, and government market segments. The NSG segment constitutes of NAND flash memory products primarily used in solid-state drives. The PSG segment contains programmable semiconductors and related products for a broad range of markets, including communications, data center, industrial, military, and automotive. The All Other segment consists of results from other non-reportable segment and corporate-related charges. The company was founded by Robert Norton Noyce and Gordon Earle Moore on July 18, 1968 and is headquartered in Santa Clara, CA.",
@@ -409,7 +482,8 @@ export default async (models) => {
         },
         {
             name: "STMicroelectronics",
-            areas: "Technology",
+            areas: technology.name,
+            areasId: technology.id,
             companyId: companySup10.id,
             description: "STMicroelectronics is a global leader in the design, manufacturing, and sale of semiconductor devices. Their products are used in a wide range of applications including automotive and industrial equipment, consumer electronics, and wired and wireless communication systems. The company was founded in 1987 and is headquartered in Geneva, Switzerland. STMicroelectronics is committed to innovation, sustainability, and social responsibility, and is dedicated to providing their customers with high-quality products and services that meet their evolving needs. With a strong focus on research and development, STMicroelectronics is well-positioned to continue leading the way in the semiconductor industry for years to come.",
             description2: "",
@@ -420,7 +494,8 @@ export default async (models) => {
         },
         {
             name: "Nestlè",
-            areas: "Consumer Goods",
+            areas: consumer_goods.name,
+            areasId: consumer_goods.id,
             companyId: companySup2.id,
             description: "Nestlé is a leading global food and beverage company, with a portfolio of well-known brands including Nescafé, KitKat, and Gerber. The company was founded in 1866 and is headquartered in Vevey, Switzerland. Nestlé's products are sold in over 190 countries and include coffee, water, pet food, and infant nutrition. The company is committed to sustainability, responsible sourcing, and improving the lives of farmers and communities where it operates.",
             description2: "Nestlé has set ambitious goals to reduce its environmental impact and has pledged to achieve zero net greenhouse gas emissions by 2050. With a focus on innovation and meeting consumer needs, Nestlé is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
@@ -431,7 +506,8 @@ export default async (models) => {
         },
         {
             name: "Unilever",
-            areas: "Consumer Goods",
+            areas: consumer_goods.name,
+            areasId: consumer_goods.id,
             companyId: companySup2.id,
             description: "Unilever is a leading global consumer goods company, with a portfolio of well-known brands including Dove, Lipton, and Ben & Jerry's. The company was founded in 1929 and is headquartered in London, UK. Unilever's products are sold in over 190 countries and include food, home care, and personal care products. The company is committed to sustainability, responsible sourcing, and improving the lives of people around the world.",
             description2: "Unilever has set ambitious goals to reduce its environmental impact and has pledged to achieve net zero emissions from its products by 2039. With a focus on innovation and meeting the changing needs of consumers, Unilever is well-positioned to continue driving growth and delivering value to its stakeholders for years to come.",
@@ -442,7 +518,8 @@ export default async (models) => {
         },
         {
             name: "Nike",
-            areas: "Consumer Goods",
+            areas: consumer_goods.name,
+            areasId: consumer_goods.id,
             companyId: companySup2.id,
             description: "Nike is a leading global athletic footwear and apparel company, headquartered in Beaverton, Oregon, USA. The company was founded in 1964 and is known for its innovative products, including the iconic Air Jordan line of sneakers. Nike's products are sold in over 190 countries and include footwear, apparel, and accessories for a variety of sports and activities. The company is committed to sustainability and has set ambitious goals to reduce its carbon footprint and waste.",
             description2: "Nike is also focused on promoting diversity, inclusion, and social justice, and has taken steps to address issues such as worker rights and gender inequality in its supply chain. With a strong brand and a focus on innovation and sustainability, Nike is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
@@ -453,7 +530,8 @@ export default async (models) => {
         },
         {
             name: "Asahi Group",
-            areas: "Consumer Goods",
+            areas: consumer_goods.name,
+            areasId: consumer_goods.id,
             companyId: companySup5.id,
             description: "Asahi Group is a leading global beverage and food company, headquartered in Tokyo, Japan. The company was founded in 1889 and is known for its high-quality beer, including the popular Asahi Super Dry brand. Asahi's products are sold in over 80 countries and include alcoholic and non-alcoholic beverages, as well as food products. The company is committed to sustainability and has set ambitious goals to reduce its greenhouse gas emissions and water usage.",
             description2: "Asahi is also focused on promoting responsible drinking and has implemented initiatives to reduce harmful drinking behavior. With a strong brand and a focus on sustainability and responsible drinking, Asahi Group is well-positioned to continue driving growth and delivering value to its stakeholders in the years to come.",
@@ -464,7 +542,8 @@ export default async (models) => {
         },
         {
             name: "Kraft Heinz",
-            areas: "Consumer Goods",
+            areas: consumer_goods.name,
+            areasId: consumer_goods.id,
             companyId: companySup5.id,
             description: "Kraft Heinz is a global food and beverage company based in Chicago, Illinois, USA. The company was formed in 2015 through the merger of Kraft Foods Group and H.J. Heinz Company. Kraft Heinz is known for its iconic brands, including Kraft Macaroni & Cheese, Heinz Ketchup, and Oscar Mayer. The company's products are sold in over 40 countries and include a wide range of food and beverage categories, such as condiments, cheese, frozen meals, and snacks. Kraft Heinz is committed to sustainability and has set goals to reduce its environmental impact, including reducing greenhouse gas emissions and water usage.",
             description2: "The company is also focused on promoting healthy eating habits and has implemented initiatives to improve the nutritional quality of its products. With a strong portfolio of brands and a commitment to sustainability and healthy eating, Kraft Heinz is well-positioned to drive growth and deliver value to its stakeholders in the years to come.",
@@ -475,7 +554,8 @@ export default async (models) => {
         },
         {
             name: "General Electric Co.",
-            areas: "Sustainability",
+            areas: sustainability.name,
+            areasId: sustainability.id,
             companyId: companySup11.id,
             description: "General Electric Co. engages in the provision of commercial and military aircraft engines and systems, wind, and other renewable energy generation equipment and grid solutions, and gas, steam, nuclear, and other power generation equipment. It operates through the following segments: Aviation, Healthcare, Renewable Energy, and Power. The Aviation segment designs and produces commercial and military aircraft engines, integrated engine components, electric power and mechanical aircraft systems. The Healthcare segment provides essential healthcare technologies to developed and emerging markets and has expertise in medical imaging, digital solutions, patient monitoring and diagnostics, drug discovery and performance improvement solutions.",
             description2: "The Renewable Energy segment’s portfolio of business units includes onshore and offshore wind, blade manufacturing, grid solutions, hydro, storage, hybrid renewables and digital services offerings. The Power segment serves power generation, industrial, government and other customers worldwide with products and services related to energy production. The company was founded by Thomas Alva Edison in 1878 and is headquartered in Boston, MA.",
@@ -486,7 +566,8 @@ export default async (models) => {
         },
         {
             name: "Iberdrola SA",
-            areas: "Sustainability",
+            areas: sustainability.name,
+            areasId: sustainability.id,
             companyId: companySup11.id,
             description: "Iberdrola SA is a holding company, which engages in the generation, distribution, trading, and marketing of electricity. It operates through the following businesses: Networks, Liberalized, Renewables and Other Businesses. The Networks business engages in the transmission and distribution of energy businesses, as well as those of any other regulated nature, originating in Spain, the United Kingdom, the United States and Brazil.",
             description2: "The Liberalized business includes wholesale and retail of electricity in Spain, Portugal, the United Kingdom, Mexico and Continental Europe. The Renewables business involves the generation of electricity from renewable energy sources worldwide. The Other Businesses segment consists of group's supply and gas storage up to the moment of sale and other non-energy businesses. The company was founded by Juan de Urrutia in 1901 and is headquartered in Bilbao, Spain",
@@ -497,7 +578,8 @@ export default async (models) => {
         },
         {
             name: "Canadian Solar, Inc.",
-            areas: "Sustainability",
+            areas: sustainability.name,
+            areasId: sustainability.id,
             companyId: companySup11.id,
             description: "Canadian Solar, Inc. engages in the manufacture of solar photovoltaic modules, provision of solar energy and battery storage solutions, and development of utility-scale solar and battery storage products. It operates through the CSI Solar and Global Energy segments. The CSI Solar segment designs, develops, and manufactures solar ingots, wafers, cells, modules, and other solar power and battery storage products. The Global Energy segment includes solar and battery storage project development and sale, asset management services for operational projects, sale of electricity, and investment in retained assets. The company was founded by Shawn Qu in October 2001 and is headquartered in Guelph, Canada.",
             description2: "",
@@ -508,7 +590,8 @@ export default async (models) => {
         },
         {
             name: "JinkoSolar Holding Co",
-            areas: "Sustainability",
+            areas: sustainability.name,
+            areasId: sustainability.id,
             companyId: companySup14.id,
             description: "JinkoSolar Holding Co., Ltd. engages in the manufacture of solar modules. It distributes solar products and sells its solutions and services to a diversified international utility, commercial and residential customers. The company was founded by Xian De Li, Kang Ping Chen, and Xian Hua Li on August 3, 2007 and is headquartered in Shangrao, China.",
             description2: "",
@@ -519,7 +602,8 @@ export default async (models) => {
         },
         {
             name: "Enel X",
-            areas: "Sustainability",
+            areas: sustainability.name,
+            areasId: sustainability.id,
             companyId: companySup14.id,
             description: "Enel X is a global leader in energy solutions, providing innovative products and services to help customers optimize their energy usage and reduce their environmental impact. The company offers a range of solutions for businesses and individuals, including energy storage, electric vehicle charging, demand response programs, and energy management software. Enel X has a presence in more than 35 countries around the world and is committed to driving the transition to a sustainable energy future. The company was founded in 2017 as part of Enel Group, a multinational energy company headquartered in Rome, Italy.",
             description2: "",

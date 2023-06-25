@@ -41,12 +41,9 @@
                     <div class="description-containera">
                         <div v-if="activeSection === 1">
                             <p2 class="description">
-                                Our company has a strong track record of identifying promising healthcare startups and
-                                helping them grow and succeed.
+                                Our company has a strong track record of identifying promising healthcare startups and helping them grow and succeed.
                                 VenTour invests in a variety of healthcare sectors, including biotechnology, medical
-                                devices, and digital health.Investments are targeted at companies that are developing
-                                cutting-edge technologies and products that can improve patient outcomes,
-                                reduce healthcare costs, and increase access to care.
+                                devices, and digital health.Investments are targeted at companies that are developing cutting-edge technologies and products that can improve patient outcomes, reduce healthcare costs, and increase access to care.
                                 <br>
                                 Our goal is to help every portfolio company to navigate the complex healthcare landscape
                                 and bring their innovations to market as quickly and efficiently as possible.
