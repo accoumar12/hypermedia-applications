@@ -14,7 +14,8 @@ export default async (models) => {
             award1: "Outstanding Team Leader Award",
             award2: "Excellence in Leadership Award",
             award3: "Innovator of the Year Award",
-            award4: "Customer Service Champion Award"
+            award4: "Customer Service Champion Award",
+            cv: "Anastasia Petrova's education includes Sciences Po in France and Stanford University in the United States, where she obtained a Master of Finance degree. With 4 years of experience as a Financial Analyst at Venture Catalysts, Anastasia has developed strong financial modeling skills and expertise in evaluating investment opportunities."
         },
         {
             name: "Hiroshi Nakamura",
@@ -27,7 +28,8 @@ export default async (models) => {
             award1: "Most Creative Thinker Award",
             award2: "Exceptional Problem Solver Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Hiroshi Nakamura completed his education at Keio University in Japan and the Wharton School, University of Pennsylvania in the United States, earning a Bachelor of Economics degree. With 4 years of experience as an Associate at Growth Equity Partners, Hiroshi has supported investment decisions, conducted market research, and performed financial analysis."
         },
         {
             name: "Javier Rodriguez",
@@ -40,7 +42,8 @@ export default async (models) => {
             award1: "Positive Attitude Award",
             award2: "Collaborative Spirit Award",
             award3: "Mentor of the Year Award",
-            award4: ""
+            award4: "",
+            cv: "Javier Rodriguez holds a Master in Finance degree from the University of Buenos Aires in Argentina and Lagos Business School in Nigeria. With 4 years of experience as a Financial Analyst at Bold Investments, Javier has performed financial analysis, conducted due diligence, and supported investment decision-making."
         },
         {
             name: "Emilia Costa",
@@ -53,7 +56,8 @@ export default async (models) => {
             award1: "Rookie of the Year Award",
             award2: "Most Valuable Worker Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Emilia Costa's education includes the University of São Paulo in Brazil and INSEAD in France/Singapore, where she obtained a Master in Business Administration degree. With 3 years of experience as a Principal at VentureX Capital, Emilia has played a key role in evaluating investment opportunities and managing portfolio companies."
         },
         {
             name: "Isabella Rossi",
@@ -66,7 +70,8 @@ export default async (models) => {
             award1: "Best Communication Skills Award",
             award2: "",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Isabella Rossi's education includes Bocconi University in Italy and Harvard Business School in the United States, where she earned a Master of Business Administration degree. With 4 years of experience as an Associate at Nexus Ventures, Isabella has been involved in investment sourcing, due diligence, and supporting portfolio companies' growth strategies."
         },
         {
             name: "Maya Patel",
@@ -79,7 +84,8 @@ export default async (models) => {
             award1: "Dependability Award",
             award2: "Continuous Learner Award",
             award3: "Team Motivator Award",
-            award4: "Most Organized Award"
+            award4: "Most Organized Award",
+            cv: "Maya Patel completed her education at Oxford High School and the University of Oxford, earning a Bachelor's degree in Economics. With 2 years of experience as a Financial Analyst at Capital Investments Ltd, she possess strong analytical skills and a solid understanding of financial markets."
         },
         {
             name: "Juan Garcia",
@@ -92,7 +98,8 @@ export default async (models) => {
             award1: "Workplace Safety Champion Award",
             award2: "",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Juan Garcia completed his education at Universidad de los Andes in Colombia and IESE Business School in Spain, earning a Master of Business Administration degree. With 5 years of experience as a Senior Associate at Venture Prime Capital, Juan has been involved in deal sourcing, due diligence, and supporting portfolio companies' growth strategies."
         },
         {
             name: "Aisha Khan",
@@ -105,7 +112,8 @@ export default async (models) => {
             award1: "Above and Beyond Award",
             award2: "Outstanding Sales Performance Award",
             award3: "Best Teamwork Award",
-            award4: ""
+            award4: "",
+            cv: "Aisha Khan holds a Master in Finance degree from Universidad de Chile in Chile and INSEAD in France/Singapore. With 4 years of experience as an Associate at Fortis Investment Partners, Aisha has supported investment decisions, conducted market research, and performed financial analysis."
         },
         {
             name: "Kofi Mensah",
@@ -118,13 +126,13 @@ export default async (models) => {
             award1: "Outstanding Project Manager Award",
             award2: "",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Kofi Mensah completed his education at the University of Cape Town in South Africa and Columbia Business School in the United States, earning a Master of Business Administration degree. With 3 years of experience as an Investment Analyst at Nova Ventures, Kofi has conducted market research, financial analysis, and due diligence for potential investment opportunities."
         },
         {
             name: "Omar Al-Farsi",
             role: "Managing Partner",
             image: "https://images.generated.photos/kGsAWkP8-SuFDEjVOnhTj1VqLDtv_exzolBxepiJyvs/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDkyNTY3LmpwZw.jpg",
-            
             team: "Management Team",
             description: "Omar Al-Farsi is a Managing Partner at our company, bringing a wealth of experience and expertise to our management team. With a strong background in business and finance, Omar is responsible for overseeing the strategic direction of the company and ensuring that all operations are running smoothly. He is committed to building and maintaining strong relationships with our clients and partners, and his passion for innovation and collaboration drives our team to deliver the best possible results.",
             description2: "Prior to joining our company, Omar held several leadership roles in the finance industry, where he developed a deep understanding of the markets and established a proven track record of success. Omar's leadership style is characterized by his collaborative approach, and he places a strong emphasis on teamwork, communication, and continuous improvement.",
@@ -132,7 +140,8 @@ export default async (models) => {
             award1: "Best Idea Generator Award",
             award2: "Creative Thinker Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Omar Al-Farsi completed his education at the University of Sydney in Australia and INSEAD in France/Singapore, earning a Master in Business Administration degree. With 2 years of experience as an Investment Manager at Quantum Ventures, Omar has evaluated investment opportunities, conducted due diligence, and supported portfolio management efforts."
         },
         {
             name: "Leila Ahmed",
@@ -145,7 +154,8 @@ export default async (models) => {
             award1: "Most Supportive Colleague Award",
             award2: "Employee of the Month Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Leila Ahmed completed her education at McGill University in Canada and INSEAD in France/Singapore, earning a Master in Business Administration degree. With 5 years of experience as a Principal at Venture Catalysts, Leila has played a key role in evaluating investment opportunities and supporting the growth of portfolio companies."
         },
         {
             name: "Carlos Ramirez",
@@ -158,7 +168,8 @@ export default async (models) => {
             award1: "Inspirational Leader Award",
             award2: "",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Carlos Ramirez completed his education at the University of São Paulo in Brazil and Stanford Graduate School of Business in the United States, earning a Master of Business Administration degree. With 4 years of experience as a Senior Associate at Catalyst Capital Partners, Carlos has been involved in deal sourcing, conducting due diligence, and supporting portfolio company growth."
         },
         {
             name: "Niamh Murphy",
@@ -171,7 +182,8 @@ export default async (models) => {
             award1: "Most Reliable Award",
             award2: "Team Spirit Award",
             award3: "Outstanding Customer Support Award",
-            award4: ""
+            award4: "",
+            cv: "Niamh Murphy holds a Master of Science in Finance degree from the University of Toronto in Canada and the London School of Economics and Political Science in the United Kingdom. With 2 years of experience as an Investment Manager at Nova Ventures, Niamh has evaluated investment opportunities, conducted due diligence, and supported portfolio management."
         },
         {
             name: "Tariq Ali",
@@ -184,7 +196,8 @@ export default async (models) => {
             award1: "Dedication and Commitment Award",
             award2: "Quality Champion Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Tariq Ali completed his education at the University of Cape Town in South Africa and Columbia Business School in the United States, earning a Master of Business Administration degree. With 5 years of experience as a Senior Analyst at Momentum Capital, Tariq has been involved in investment analysis, deal structuring, and portfolio management."
         },
         {
             name: "Sofia Hernandez",
@@ -197,7 +210,8 @@ export default async (models) => {
             award1: "Best Problem Solver Award",
             award2: "Initiative and Proactivity Award",
             award3: "Most Improved Award",
-            award4: "Best Collaborator Award"
+            award4: "Best Collaborator Award",
+            cv: "Sofia Hernandez completed her education at Universidad Autónoma de Madrid in Spain and the University of Cape Town in South Africa, earning a Master of Business Administration degree. With 3 years of experience as an Investment Analyst at Stellar Capital Ventures, Sofia Hernandez has evaluated investment opportunities, conducted market research, and supported portfolio management."
         },
         {
             name: "Rajesh Singh",
@@ -210,7 +224,8 @@ export default async (models) => {
             award1: "Exceptional Time Management Award",
             award2: "Outstanding Sales Growth Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Rajesh Singh completed his education at the Indian Institute of Technology Bombay in India and the Indian School of Business in India, earning a Master of Business Administration degree. With 3 years of experience as an Investment Analyst at Venture Catalysts, Rajesh has evaluated investment opportunities, conducted market research, and supported portfolio management."
         },
         {
             name: "Olivia Jones",
@@ -223,7 +238,8 @@ export default async (models) => {
             award1: "Best Customer Relationship Builder Award",
             award2: "Leadership by Example Award",
             award3: "",
-            award4: ""
+            award4: "",
+            cv: "Olivia Jones pursued her education at the University of Sydney and the London School of Economics and Political Science, earning a Master of Business Administration degree. With 4 years of experience as a Senior Consultant at a Management Consulting Firm, she have developed strong analytical and problem-solving skills, enabling her to make strategic investment decisions in the venture capital industry."
         },
         {
             name: "Amirah Abdullahi",
@@ -236,7 +252,8 @@ export default async (models) => {
             award1: "Excellence in Productivity Award",
             award2: "Best Team Building Award",
             award3: "Most Creative Project Award",
-            award4: ""
+            award4: "",
+            cv: "Amirah Abdullahi's education includes the University of Nairobi in Kenya and ESADE Business School in Spain, where she obtained a Master in Finance degree. With 3 years of experience as an Investment Manager at Equinox Capital Partners, Samuel has evaluated investment opportunities, conducted market research, and supported portfolio management efforts."
         },
         {
             name: "Lars Andersen",
@@ -249,7 +266,8 @@ export default async (models) => {
             award1: "Positive Impact Award",
             award2: "Exceptional Technical Skills Award",
             award3: "Excellent Communication Award",
-            award4: "Best Presentation Skills Award"
+            award4: "Best Presentation Skills Award",
+            cv: "Lars Andersen holds a Master of Business Administration degree from the University of Munich in Germany and Stanford Graduate School of Business in the United States. With 5 years of experience as a Senior Analyst at Catalyst Capital Partners, Lars has participated in investment analysis, deal structuring, and portfolio management."
         },
         {
             name: "Fatima Hassan",
@@ -262,7 +280,8 @@ export default async (models) => {
             award1: "Outstanding Marketing Campaign Award",
             award2: "Exceptional Analytical Skills Award",
             award3: "Employee of the Year Award",
-            award4: ""
+            award4: "",
+            cv: "Fatima Hassan's education includes the University of Lagos in Nigeria and ESADE Business School in Spain, where she earned a Master of Business Administration degree. With 3 years of experience as an Investment Analyst at Momentum Ventures, Fatima Hassan has conducted investment analysis, market research, and due diligence for potential investments."
         },
     ]
     await models.Person.bulkCreate(personModel)
