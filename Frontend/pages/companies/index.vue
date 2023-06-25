@@ -36,7 +36,8 @@
                 </div>
             </div>
             <div class="row4">
-                <div class="column41">
+                <!--
+                     <div class="column41">
                     <div class="area-icons">
                         <img src="~/assets/img/technology.png" alt="Tech">
                     </div>
@@ -111,8 +112,8 @@
                         <span class="checkmark" href="#"></span>
                     </label>
 
-                </div>
-
+                </div>-->
+                <AreaFilter v-for="area of areas" :logo="area.logo" :name="area.name" :link="'/areas/' + area.id" />
             </div>
 
         </div>
@@ -233,14 +234,9 @@ export default {
             animateCounters();
             window.removeEventListener('scroll', handleScroll);
         };
-
-        animateCounters();
         window.addEventListener('scroll', handleScroll);
     },
     methods: {
-        navigateToProjects() {
-            this.$router.push({ name: 'technology', hash: '#projects' });
-        },
         filterAndNavigate(event) {
             // Prevent the default link behavior
             event.preventDefault();
@@ -255,6 +251,9 @@ export default {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         },
+        updateText(newText) {
+            this.rightColumnText = newText;
+        },
     },
     data() {
         return {
@@ -268,11 +267,6 @@ export default {
                 { id: 5, label: 'Recapitalization', text: 'Recapitalization involves restructuring the capital structure of a company, often through a combination of debt and equity. We work closely to evaluate their capital needs and develop comprehensive recapitalization plan that balances the companys growth objectives with its financial profile. We help the companies achieve a successful recapitalization that provides a strong foundation for future growth and opportunities.' },
             ],
         }
-    },
-    methods: {
-        updateText(newText) {
-            this.rightColumnText = newText;
-        },
     },
 };
 

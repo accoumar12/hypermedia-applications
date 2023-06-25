@@ -140,6 +140,14 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
+        logo: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        data_target: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
     })
 
     models.Company.belongsTo(models.Person)

@@ -8,24 +8,32 @@ export default async (models) => {
             description: "VenTour understands the importance of technology investments and is committed to investing in cutting-edge technologies. We have a team of experienced professionals who have an eye for identifying promising technologies and the potential to change the world. By investing in technology, VenTour aims to support startups that are focused on creating innovative solutions to complex problems.",
             description2: "VenTour has been investing in technology companies for years, contributing to the growth and success of some of the most innovative businesses in the industry. VenTour's extensive knowledge and expertise in technology investments have helped its portfolio companies reach their full potential.",
             image: "https://rkomi98.github.io/VenTour/_nuxt/tech-team.401264c6.png",
+            logo: "~/assets/img/technology.png",
+            data_target: 100,
         },
         {
             name: "Healthcare",
             description: "Our company has a strong track record of identifying promising healthcare startups and helping them grow and succeed. VenTour invests in a variety of healthcare sectors, including biotechnology, medical devices, and digital health.Investments are targeted at companies that are developing cutting-edge technologies and products that can improve patient outcomes, reduce healthcare costs, and increase access to care.",
             description2: "Our goal is to help every portfolio company to navigate the complex healthcare landscape and bring their innovations to market as quickly and efficiently as possible.",
             image: "https://rkomi98.github.io/VenTour/_nuxt/health-team.0feb24fa.png",
+            logo: "~/assets/img/health.png",
+            data_target: 250,
         },
         {
             name: "Consumer Goods",
             description: "Our company looks for opportunities in the consumer goods sector that are able to offer unique value propositions to customers, create new markets or disrupt existing ones.",
             description2: "The company's consumer goods investments span across a variety of categories including food and beverage, beauty and personal care, and household goods. VenTour is interested in companies that leverage cutting-edge technologies to create new products and services that meet evolving consumer needs. The company also prioritizes businesses that have a strong brand identity and are able to connect with their customers on a personal level.",
             image: "https://rkomi98.github.io/VenTour/_nuxt/consumer-team.8af0b2ea.png",
+            logo: "~/assets/img/customer.png",
+            data_target: 120,
         },        
         {
             name: "Sustainability",
             description: "As a venture capital firm committed to sustainability, VenTour seeks to invest in companies that prioritize environmental, social, and governance (ESG) considerations. The firm is particularly interested in supporting innovative solutions that promote the transition to a low-carbon economy, enhance resource efficiency, and reduce waste.",
             description2: "One area of focus for VenTour is renewable energy, including companies developing technologies for solar, wind, and geothermal power. The firm also seeks out opportunities in energy storage and distribution, as well as in the electrification of transportation.VenTour also supports companies focused on improving supply chain transparency and reducing food waste.",
             image: "https://rkomi98.github.io/VenTour/_nuxt/sustainability-team.f11c6793.png",
+            logo: "~/assets/img/sustainable.png",
+            data_target: 270,
         },
     ]
 
