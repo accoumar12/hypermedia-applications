@@ -11,8 +11,8 @@
                 </NuxtLink>
             </a>
         </div>
-        <label :for="name">
-            <input type="radio" id="name" value="name" name="Investments-categories" v-model="areas">
+         <label :for="name">
+            <input type="radio" :id="name" :value="name" name="Investments-categories" :checked="isSelectedArea(name)" @change="selectArea(name)">
             <h1 class="learn-more" style="color:#033f52">SELECT & CHECK COMPANIES</h1>
             <span class="checkmark"></span>
         </label>
@@ -21,6 +21,15 @@
 
 <script>
 export default {
+    emits: ['update:areas'],
+    methods: {
+        isSelectedArea(areaName) {
+          return this.value === areaName;
+        },
+        selectArea(areaName) {
+          this.$emit('update:areas', areaName);
+        },
+      },
     mounted() {
         const counters = document.querySelectorAll('.counter');
         const delay = 500;
@@ -70,7 +79,7 @@ export default {
 </script>
     
 <script setup>
-const props = defineProps(['logo', 'name', 'data_target', 'link']);
+const props = defineProps(['logo', 'name', 'data_target', 'link', 'value',]);
 </script>
     
 <style>
