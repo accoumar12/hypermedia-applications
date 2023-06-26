@@ -22,10 +22,7 @@
                             <router-link to="/companies" class="nav-link">Areas</router-link>
                         </p>
                         <div class="sub-menu">
-                            <p><router-link to="/companies/Areas/technology" class="nav-link">Technology</router-link></p>
-                            <p><router-link to="/companies/Areas/healthcare" class="nav-link">Healthcare</router-link></p>
-                            <p><router-link to="/companies/Areas/consumer" class="nav-link">Consumer Goods</router-link></p>
-                            <p><router-link to="/companies/Areas/sustainability" class="nav-link">Sustainability</router-link></p>
+                            <AreaHeader v-for="area of Allareas" :name = "area.name" :link="'/areas/' + area.id"/>
                         </div>
                     </div>
                 </div>
@@ -86,10 +83,7 @@
                                           <nav class="sidemenu__nav2" v-show="navOpen2">
                                             <div class="sidemenu__wrapper">
                                               <ul class="sidemenu__list2">
-                                <p><router-link to="/companies/Areas/technology" class="nav-link">Technology</router-link></p>
-                                <p><router-link to="/companies/Areas/healthcare" class="nav-link">Healthcare</router-link></p>
-                                <p><router-link to="/companies/Areas/consumer" class="nav-link">Consumer Goods</router-link></p>
-                                <p><router-link to="/companies/Areas/sustainability" class="nav-link">Sustainability</router-link></p>
+                                                <AreaHeader v-for="area of Allareas" :name = "area.name" :link="'/areas/' + area.id"/>
                                               </ul>
                                             </div>
                                           </nav>
@@ -199,6 +193,10 @@ export default {
         });
     },
 };
+</script>
+<script setup>
+    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+    const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
 </script>
 
 <style scoped>
