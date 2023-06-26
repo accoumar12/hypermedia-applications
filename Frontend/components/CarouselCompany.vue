@@ -1,84 +1,106 @@
 <template>
-  <div class="carousel">
-    <div class="card-carousel" :style="{ transform: `translateX(${translateX}px)` }">
-      <div class="card" v-for="card in cards" :key="card.id">
-        <NuxtLink :to="card.link">
-          <div class="image-container-section">
-            <img class="img" :src="card.image" />
-            <p><span class="subtitle2">CEO: {{ card.subtitle }}</span></p>
-            <p><span class="subtitle2">Area: {{ card.area }}</span></p>
-          </div>
+    <div class="row-c">
+        <NuxtLink :to="link">
+            <div class="image-container-section">
+                <img class="img" :src="image" />
+
+                <p><span class="subtitle2">CEO: {{ subtitle }}</span></p>
+                <p><span class="subtitle2">Area: {{ area }}</span></p>
+            </div>
         </NuxtLink>
-      </div>
     </div>
-    <button class="prev-button" @click="slide(-1)">Previous</button>
-    <button class="next-button" @click="slide(1)">Next</button>
-  </div>
 </template>
-
+    
 <script setup>
-import { ref, reactive } from 'vue';
-
-const cards = [
-  // Define your card objects here
-];
-
-const translateX = ref(0);
-const currentIndex = ref(0);
-
-function slide(direction) {
-  const cardWidth = 300; // Width of each card (adjust based on your design)
-  const containerWidth = 1000; // Width of the carousel container (adjust based on your design)
-  const numCards = cards.length;
-  
-  currentIndex.value += direction;
-  
-  if (currentIndex.value < 0) {
-    currentIndex.value = numCards - 1;
-  } else if (currentIndex.value >= numCards) {
-    currentIndex.value = 0;
-  }
-  
-  translateX.value = -currentIndex.value * cardWidth + (containerWidth - cardWidth) / 2;
-}
+const props = defineProps(['image', 'subtitle', 'link', 'area']);
 </script>
-
+    
 <style>
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.row-section2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    height: 20%;
+    width: 70%;
+    padding-bottom: 3%;
 }
 
-.card-carousel {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+.row-c {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 60%;
+    gap: 10%;
 }
 
-.card {
-  flex: 0 0 300px;
-  margin-right: 10px;
+.row-c a {
+    text-decoration: none;
 }
 
-/* Add styling for the cards and other elements based on your design */
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  font-size: 16px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    margin: auto;
 }
 
-.prev-button {
-  left: 10px;
+
+
+.h3 {
+    text-decoration: none;
 }
 
-.next-button {
-  right: 10px;
+.image-container-section {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 0%;
+    border-color: transparent;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.image-container-section:hover {
+    background-color: #94d5db;
+    border-color: #94d5db;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.image-container-section a {
+    text-decoration: none;
+}
+
+.image-container-section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 40%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container-section:hover img {
+    opacity: 1;
+    height: 40%;
+}
+
+.subtitle2 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
 }
 </style>

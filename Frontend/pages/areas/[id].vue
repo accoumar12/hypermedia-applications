@@ -43,11 +43,6 @@
                     <div class="description-container2">
                         <p class="description">{{ area.description }}</p>
                         <p class="description2">{{ area.description2 }}</p>
-                        <p class='official-link'>Visit their official website:
-                            <a href="{{ area.link }}" target="_blank">
-                                {{ area.link }}
-                            </a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -60,13 +55,13 @@
         <div v-if="filtered.length > 0">
             <div class="row-section">
                 <div class="text-center">
-                    <p>COMPANIES IN SUPERVISION:</p>
+                    <p>COMPANIES IN THIS AREA:</p>
                 </div>
             </div>
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-section3">
-                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                        <CarouselCompany v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
                             :link="'/companies/' + company.id" />
                     </div>
                 </desktop>
@@ -305,13 +300,19 @@ hr {
     text-decoration: none;
 }
 
+.text-center{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 .row-section3 {
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
-    align-items: center;
-    height: 20%;
-    width: 70%;
-    padding-bottom: 3%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new lines */
+  padding-left: 10%;
+  gap: 3%;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 3%;
 }
 </style>
