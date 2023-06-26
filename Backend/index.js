@@ -148,6 +148,18 @@ async function initDB() {
             type: DataTypes.INTEGER,
             allowNull: true
         },
+        p1: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        ph: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        p2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
     })
 
     models.Company.belongsTo(models.Person)

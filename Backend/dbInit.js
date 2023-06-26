@@ -10,6 +10,9 @@ export default async (models) => {
             image: "https://rkomi98.github.io/VenTour/_nuxt/tech-team.401264c6.png",
             logo: "https://rkomi98.github.io/VenTour/_nuxt/technology.3bd4598a.png",
             data_target: 100,
+            p1 : "We are",
+            ph : "the forefront",
+            p2 : "of investing in innovative technology companies that are revolutionizing industries and disrupting traditional business models."
         },
         {
             name: "Healthcare",
@@ -18,6 +21,9 @@ export default async (models) => {
             image: "https://rkomi98.github.io/VenTour/_nuxt/health-team.0feb24fa.png",
             logo: "https://rkomi98.github.io/VenTour/_nuxt/health.1f20c82d.png",
             data_target: 250,
+            p1 : "We are committed to backing visionary entrepreneurs who are",
+            ph : "driving advancements",
+            p2 : "in medical technology, biopharmaceuticals, and healthcare services.",
         },
         {
             name: "Consumer Goods",
@@ -26,6 +32,9 @@ export default async (models) => {
             image: "https://rkomi98.github.io/VenTour/_nuxt/consumer-team.8af0b2ea.png",
             logo: "https://rkomi98.github.io/VenTour/_nuxt/customer.d6811fd3.png",
             data_target: 120,
+            p1 : "We seek out dynamic startups that are reimagining traditional retail, e-commerce, and consumer product spaces,in companies with",
+            ph : "innovative business models",
+            p2 : ".",
         },        
         {
             name: "Sustainability",
@@ -34,6 +43,9 @@ export default async (models) => {
             image: "https://rkomi98.github.io/VenTour/_nuxt/sustainability-team.f11c6793.png",
             logo: "https://rkomi98.github.io/VenTour/_nuxt/sustainable.e0b5714f.png",
             data_target: 270,
+            p1 : "We aim to accelerate the transition to a greener future while",
+            ph : "generating attractive returns",
+            p2 : "for our investor entrepreneurs who prioritize sustainability.",
         },
     ]
 
