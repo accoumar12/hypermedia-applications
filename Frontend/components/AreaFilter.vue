@@ -21,6 +21,7 @@
 
 <script>
 export default {
+    // Note that this code can be easily update to use checkbox and so "multifilter area"
     emits: ['update:areas'],
     methods: {
         isSelectedArea(areaName) {

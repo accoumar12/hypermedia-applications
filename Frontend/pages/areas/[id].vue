@@ -1,6 +1,6 @@
 <!--
-    Page description for a single person.
-    As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
+    Page description for a single Area.
+    As described in the SmallCard component, the same component was used for both Area and Location since they have the same structure.
 -->
 <template>
     <main id="back">
@@ -8,29 +8,22 @@
             <div class="arrow">
                 <router-link to="/companies"><img src="~/assets/img/left-arrows.png"></router-link>
             </div>
-            <h1 class="name">{{ company.name }}</h1>
-            <div id="data-container-c">
-                <p class="areas">Area of investment: {{ company.areas }}</p>
-                <p class="ceo">CEO: {{ company.ceo }}</p>
-                <div class="supervisor">
-                    <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/people/'+person.id" />
-                </div>
-            </div>
+            <h1 class="name">{{ area.name }}</h1>
             <hr />
 
             <div v-if="!isMobile">
                 <desktop> 
                 <div class="row-section">
                 <div class="column-c">
-                    <img id="main-img" :src="company.image" />
+                    <img id="main-img" :src="area.image" />
                 </div>
                 <div class="column2-c">
                     <div class="description-container">
-                        <p class="description">{{ company.description }}</p>
-                        <p class="description2">{{ company.description2 }}</p>
+                        <p class="description">{{ area.description }}</p>
+                        <p class="description2">{{ area.description2 }}</p>
                         <p>Visit their official website:
-                            <a href="{{ company.link }}" target="_blank">
-                                {{ company.link }}
+                            <a href="{{ area.link }}" target="_blank">
+                                {{ area.link }}
                             </a>
                         </p>
                     </div>
@@ -44,15 +37,15 @@
 
                 <div class="column-section">
                 <div class="column-c">
-                    <img id="main-img3" :src="company.image" />
+                    <img id="main-img3" :src="area.image" />
                 </div>
                 <div class="column2-c">
                     <div class="description-container2">
-                        <p class="description">{{ company.description }}</p>
-                        <p class="description2">{{ company.description2 }}</p>
+                        <p class="description">{{ area.description }}</p>
+                        <p class="description2">{{ area.description2 }}</p>
                         <p class='official-link'>Visit their official website:
-                            <a href="{{ company.link }}" target="_blank">
-                                {{ company.link }}
+                            <a href="{{ area.link }}" target="_blank">
+                                {{ area.link }}
                             </a>
                         </p>
                     </div>
@@ -63,6 +56,29 @@
             </div>
 
             <hr />
+        </div>
+        <div v-if="filtered.length > 0">
+            <div class="row-section">
+                <div class="text-center">
+                    <p>COMPANIES IN SUPERVISION:</p>
+                </div>
+            </div>
+            <div v-if="!isMobile">
+                <desktop>
+                    <div class="row-section3">
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                            :link="'/companies/' + company.id" />
+                    </div>
+                </desktop>
+            </div>
+            <div v-else>
+                <mobile>
+                    <div class="column2Card">
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
+                            :link="'/companies/' + company.id" />
+                    </div>
+                </mobile>
+            </div>
         </div>
     </main>
 </template>
@@ -105,24 +121,32 @@ export default defineNuxtComponent({
 const route = useRoute()
 const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/people/')
-const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '/companies/' + id)
+const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+const { data: area } = await useFetch(useRuntimeConfig().public.serverURL + '/areas/' + id)
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-const supervisorname = computed(() => {
-    const NameSupervisor = []
+
+const filtered = computed(() => {
+    const arrTot = []
     // Checking for values where the part of the company name is provided
-    for (let person of people.value) {
-        if (person.id === company.value.companyId) { // Irst 8 of the db are supervisors' name
-            console.log("Hello world")
-            NameSupervisor.push(person)
+    console.log(area.value.name)
+    for (let company of companies.value) {
+        if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
+            if (company.areas==area.value.name) { // All companies
+                //console.log(company) // Only for debug
+                arrTot.push(company)
             }
+            //else if ((company.name == name.value) & (company.areas == areas.value)) {
+            //    arrTot.push(company)
+            //}
+            
         }
-    console.log(NameSupervisor)
-    return NameSupervisor
+    }
+    console.log("My life is here:", arrTot)
+    return arrTot
 
 })
 
@@ -279,5 +303,15 @@ hr {
     text-align: center;
     color: black;
     text-decoration: none;
+}
+
+.row-section3 {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    align-items: center;
+    height: 20%;
+    width: 70%;
+    padding-bottom: 3%;
 }
 </style>
