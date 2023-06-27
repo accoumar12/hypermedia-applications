@@ -436,7 +436,7 @@ export default {
 .titleofcard {
     font-size: 20px;
     padding-left: 10%;
-    color: #0b0c0c;
+    color: #d9f3f3;
 }
 
 .card11 p {
