@@ -77,6 +77,10 @@ async function initDB() {
         award4:{
             type: DataTypes.STRING,
             allowNull: true
+        },
+        cv:{
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
 
