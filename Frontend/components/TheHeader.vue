@@ -3,98 +3,39 @@
 -->
 <template>
     <div>
-    <div v-if="!isMobile">
-    <desktop> 
-    <div class="header-container">
-        <header>
-            <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link></h4>
-            <nav>
-                <span>
-                    <p><router-link to="/History" class="nav-link">About Us</router-link></p>
-                </span>
-                <router-link to="/people" class="nav-link">Our Team</router-link>
-                <div class="dropdown">
-                    <div class="dropdown-toggle">
-                        <router-link to="/companies" class="nav-link">Investments</router-link>
-                    </div>
-                    <div class="dropdown-menu">
-                        <p>
-                            <router-link to="/companies" class="nav-link">Areas</router-link>
-                        </p>
-                        <div class="sub-menu">
-                            <AreaHeader v-for="area of Allareas" :name = "area.name" :link="'/areas/' + area.id"/>
-                        </div>
-                    </div>
-                </div>
-                
-                <router-link to="/contact" class="nav-link">Get In Touch</router-link>
-                <!-- 
-                <div class="search">
-                    <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
-                        placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
-                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
-                            style="color: #2479a3;"></button>
-                   
-                    <ul>
-                      <li v-for="result in searchResults" :key="result.text">
-                        <a :href="result.link">{{ result.text }}</a>
-                      </li>
-                    </ul>
-                
-                </div>
-                -->
-            </nav>
-        </header>
-    </div>
-    </desktop>
-    </div>
-    <div v-else>
-    <mobile>
-        
-        <div class="navbar">
-        <header>
-            <a class="navbar-item">
-                <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="50" height="50"></router-link>
-            </a>
-                <div id="sidemenu" class="sidemenu">
-                <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
-                      <span class="top"></span>
-                      <span class="mid"></span>
-                      <span class="bottom"></span>
-                </button>
-                <transition name="translateX">
-                  <nav class="sidemenu__nav" v-show="navOpen">
-                    <div class="sidemenu__wrapper">
-                      <ul class="sidemenu__list">
-                        <span>
-                            <p><router-link to="/History" class="nav-link">About Us</router-link></p>
-                        </span>
-                        <p> <router-link to="/people" class="nav-link">Our Team</router-link></p>
-                        
+        <div v-if="!isMobile">
+            <desktop>
+                <div class="header-container">
+                    <header>
+                        <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
+                        </h4>
+                        <nav>
+                            <span>
+                                <p><router-link to="/History" class="nav-link" exact-active-class="active-link">About
+                                        Us</router-link></p>
+                            </span>
+                            <router-link to="/people" class="nav-link" exact-active-class="active-link">Our
+                                Team</router-link>
                             <div class="dropdown">
                                 <div class="dropdown-toggle">
-                                    <p><router-link to="/companies" class="nav-link">Investments</router-link></p>
-                                    <div id="sidemenu" class="sidemenu2">
-                                        <button class="sidemenu__btn" @click="navOpen2 = !navOpen2" :class="{ active: navOpen2 }">
-                                              <span class="vert"></span>
-                                              <span class="horiz"></span>
-                                        </button>
-                                        <transition name="translateX">
-                                          <nav class="sidemenu__nav2" v-show="navOpen2">
-                                            <div class="sidemenu__wrapper">
-                                              <ul class="sidemenu__list2">
-                                                <AreaHeader v-for="area of Allareas" :name = "area.name" :link="'/areas/' + area.id"/>
-                                              </ul>
-                                            </div>
-                                          </nav>
-                                      </transition>
+                                    <router-link to="/companies" class="nav-link"
+                                        exact-active-class="active-link">Investments</router-link>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <p>
+                                        <router-link to="/companies" class="nav-link"
+                                            exact-active-class="active-link">Areas</router-link>
+                                    </p>
+                                    <div class="sub-menu">
+                                        <AreaHeader v-for="area of Allareas" :name="area.name"
+                                            :link="'/areas/' + area.id" />
                                     </div>
                                 </div>
-                                
-                </div>
-                
-                <p><router-link to="/contact" class="nav-link">Get In Touch</router-link></p>
-                <!-- 
+                            </div>
+
+                            <router-link to="/contact" class="nav-link" exact-active-class="active-link">Get In
+                                Touch</router-link>
+                            <!-- 
                 <div class="search">
                     <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
                         placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
@@ -109,16 +50,86 @@
                 
                 </div>
                 -->
-                      </ul>
-                    </div>
-                  </nav>
-                </transition>
-              </div>
-        </header>    
+                        </nav>
+                    </header>
+                </div>
+            </desktop>
         </div>
-    </mobile>
+        <div v-else>
+            <mobile>
+
+                <div class="navbar">
+                    <header>
+                        <a class="navbar-item">
+                            <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="50"
+                                    height="50"></router-link>
+                        </a>
+                        <div id="sidemenu" class="sidemenu">
+                            <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
+                                <span class="top"></span>
+                                <span class="mid"></span>
+                                <span class="bottom"></span>
+                            </button>
+                            <transition name="translateX">
+                                <nav class="sidemenu__nav" v-show="navOpen">
+                                    <div class="sidemenu__wrapper">
+                                        <ul class="sidemenu__list">
+                                            <span>
+                                                <p><router-link to="/History" class="nav-link">About Us</router-link></p>
+                                            </span>
+                                            <p> <router-link to="/people" class="nav-link">Our Team</router-link></p>
+
+                                            <div class="dropdown">
+                                                <div class="dropdown-toggle">
+                                                    <p><router-link to="/companies"
+                                                            class="nav-link">Investments</router-link></p>
+                                                    <div id="sidemenu" class="sidemenu2">
+                                                        <button class="sidemenu__btn" @click="navOpen2 = !navOpen2"
+                                                            :class="{ active: navOpen2 }">
+                                                            <span class="vert"></span>
+                                                            <span class="horiz"></span>
+                                                        </button>
+                                                        <transition name="translateX">
+                                                            <nav class="sidemenu__nav2" v-show="navOpen2">
+                                                                <div class="sidemenu__wrapper">
+                                                                    <ul class="sidemenu__list2">
+                                                                        <AreaHeader v-for="area of Allareas"
+                                                                            :name="area.name" :link="'/areas/' + area.id" />
+                                                                    </ul>
+                                                                </div>
+                                                            </nav>
+                                                        </transition>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <p><router-link to="/contact" class="nav-link">Get In Touch</router-link></p>
+                                            <!-- 
+                <div class="search">
+                    <input v-if="isSearchExpanded" type="text" :class="{ 'search-expanded': isSearchExpanded }"
+                        placeholder="Search" v-model="searchText" @keyup.enter="search" ref="searchInput" />
+                    <button @click="toggleSearch"><img src="~/assets/img/magnifying-glass.png" alt="search-icon"
+                            style="color: #2479a3;"></button>
+                   
+                    <ul>
+                      <li v-for="result in searchResults" :key="result.text">
+                        <a :href="result.link">{{ result.text }}</a>
+                      </li>
+                    </ul>
+                
+                </div>
+                -->
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </transition>
+                        </div>
+                    </header>
+                </div>
+            </mobile>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -168,15 +179,15 @@ export default {
             return arrTot;
         },
         detectMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
         },
         closeNavbar() {
-          this.navOpen = false; // Close the navbar
-          this.navOpen2 = false; // Close the navbar
+            this.navOpen = false; // Close the navbar
+            this.navOpen2 = false; // Close the navbar
         },
-        
+
     },
     mounted() {
         this.isMobile = this.detectMobile();
@@ -187,19 +198,24 @@ export default {
         });
         // Add a navigation guard to close the navbar before each route change
         this.$router.beforeEach((to, from, next) => {
-          this.navOpen = false; // Close the navbar
-          this.navOpen2 = false; // Close the navbar
-          next(); // Proceed to the next route
+            this.navOpen = false; // Close the navbar
+            this.navOpen2 = false; // Close the navbar
+            next(); // Proceed to the next route
         });
     },
 };
 </script>
 <script setup>
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
+// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
 </script>
 
 <style scoped>
+.nav-link.active-link {
+    background-color: #268fb2;
+    color: white;
+}
+
 .header-container {
     display: flex;
     justify-content: right;
@@ -383,20 +399,22 @@ nav {
         max-height: 20%;
     }
 }
-.navbar{
+
+.navbar {
     position: relative;
 }
 
-.navbar-item{
+.navbar-item {
     left: 10px;
     position: fixed;
 }
 
-.sidemenu{
+.sidemenu {
     right: 10px;
     position: fixed;
 }
-.sidemenu2{
+
+.sidemenu2 {
     right: 10px;
     position: fixed;
     width: 50px;
@@ -411,9 +429,9 @@ nav {
     top: 4rem;
     left: 0;
     z-index: 25;
-    box-shadow: 2px 0 3px$grey-6;
+    box-shadow: 2px 0 3px;
     overflow-y: scroll;
-  }
+}
 
 .sidemenu__nav2 {
     width: 280%;
@@ -423,9 +441,9 @@ nav {
     top: 4.2rem;
     left: -200%;
     z-index: 25;
-    box-shadow: 2px 0 3px$grey-6;
+    box-shadow: 2px 0 3px;
     overflow-y: scroll;
-  }
+}
 
 .sidemenu__btn {
     align-items: left;
@@ -440,94 +458,102 @@ nav {
 }
 
 .sidemenu__btn span {
-      display: block;
-      width: 20px;
-      height: 3px;
-      margin: auto;
-      background: #033f52;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      transition: all 0.4s ease;
-    }
-.sidemenu__btn span.top{
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: auto;
+    background: #033f52;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.4s ease;
+}
+
+.sidemenu__btn span.top {
     transform: translateY(-8px);
 }
+
 .sidemenu__btn span.bottom {
-        transform: translateY(8px);
+    transform: translateY(8px);
 }
+
 .sidemenu__btn span.vert {
-        transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 
 .sidemenu__btn.active .top {
-        transform: rotate(-45deg);
-      }
+    transform: rotate(-45deg);
+}
+
 .sidemenu__btn.active .mid {
-        transform: translateX(-20px) rotate(360deg);
-        opacity: 0;
-      }
+    transform: translateX(-20px) rotate(360deg);
+    opacity: 0;
+}
+
 .sidemenu__btn.active .bottom {
-        transform: rotate(45deg);
-      }
+    transform: rotate(45deg);
+}
 
 .sidemenu__btn.active .vert {
-        transform: rotate(-45deg);
-        width: 20px;
-      }
+    transform: rotate(-45deg);
+    width: 20px;
+}
+
 .sidemenu__btn.active .horiz {
-        transform: rotate(45deg);
-      }
-    
+    transform: rotate(45deg);
+}
+
 .sidemenu__wrapper {
     padding-top: 10px;
-  }
-    
+}
+
 .sidemenu__list {
     padding-top: 10px;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
+
 .sidemenu__list2 {
     left: -20px;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
+
 .sidemenu__item a {
-      text-decoration: none;
-      line-height: 5px;
-      font-size: 10px;
-      padding: 5px;
-      display: block;
-      color: black;
-      transition: 0.4s ease;
-  }
+    text-decoration: none;
+    line-height: 5px;
+    font-size: 10px;
+    padding: 5px;
+    display: block;
+    color: black;
+    transition: 0.4s ease;
+}
+
 .sidemenu__item a:hover {
-        background: lightgrey;
-        color: dimgrey;
-      }
+    background: lightgrey;
+    color: dimgrey;
+}
 
 
 .translateX-enter {
-  transform: translateX(20px);
-  transform: translateY(20px);
-  opacity: 0;
+    transform: translateX(20px);
+    transform: translateY(20px);
+    opacity: 0;
 }
 
 .translateX-enter-active,
 .translateX-leave-active {
-  transform-origin: top left 0;
-  transition: 0.2s ease;
+    transform-origin: top left 0;
+    transition: 0.2s ease;
 }
 
 .translateX-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+    transform: translateX(20px);
+    opacity: 0;
 }
-
 </style>
