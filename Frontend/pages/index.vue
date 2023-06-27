@@ -288,158 +288,27 @@
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-areas">
-                        <!-- Column One -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/technology" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                    </div>
-                                    <h3>TECHNOLOGY</h3>
-                                    <p>
-                                        We are <span class="highlight">THE FOREFRONT</span> of investing in innovative
-                                        technology
-                                        companies that are
-                                        revolutionizing
-                                        industries and disrupting traditional business models.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Two -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/healthcare" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                    </div>
-                                    <h3>HEALTHCARE</h3>
-                                    <p>
-                                        We are committed to backing visionary entrepreneurs who are <span
-                                            class="highlight">driving
-                                            advancements</span> in medical
-                                        technology, biopharmaceuticals, and healthcare services.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Three -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/consumer" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-headset"></i>
-                                    </div>
-                                    <h3>CONSUMER GOODS</h3>
-                                    <p>
-                                        We seek out dynamic startups that are reimagining traditional retail, e-commerce,
-                                        and
-                                        consumer product spaces,in companies with <span class="highlight">innovative
-                                            business
-                                            models</span>.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Four -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/sustainability" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-headset"></i>
-                                    </div>
-                                    <h3>SUSTAINABILITY</h3>
-                                    <p>
-                                        We aim to accelerate the transition to a greener future while <span
-                                            class="highlight">generating attractive returns</span>
-                                        for our investor entrepreneurs
-                                        who prioritize sustainability.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
+                        <AreaHome v-for="area of Allareas" :name = "area.name" :p1="area.p1" :ph="area.ph" :p2="area.p2" :link="'/areas/' + area.id"/>
                     </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
                     <div class="column">
-                        <!-- Column One -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/technology" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                    </div>
-                                    <h3>TECHNOLOGY</h3>
-                                    <p>
-                                        We are <span class="highlight">THE FOREFRONT</span> of investing in innovative
-                                        technology
-                                        companies that are
-                                        revolutionizing
-                                        industries and disrupting traditional business models.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Two -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/healthcare" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                    </div>
-                                    <h3>HEALTHCARE</h3>
-                                    <p>
-                                        We are committed to backing visionary entrepreneurs who are <span
-                                            class="highlight">driving
-                                            advancements</span> in medical
-                                        technology, biopharmaceuticals, and healthcare services.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Three -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/consumer" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-headset"></i>
-                                    </div>
-                                    <h3>CONSUMER GOODS</h3>
-                                    <p>
-                                        We seek out dynamic startups that are reimagining traditional retail, e-commerce,
-                                        and
-                                        consumer product spaces,in companies with <span class="highlight">innovative
-                                            business
-                                            models</span>.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
-                        <!-- Column Four -->
-                        <div class="column">
-                            <router-link to="/companies/Areas/sustainability" class="area-router">
-                                <div class="card-area">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-headset"></i>
-                                    </div>
-                                    <h3>SUSTAINABILITY</h3>
-                                    <p>
-                                        We aim to accelerate the transition to a greener future while <span
-                                            class="highlight">generating attractive returns</span>
-                                        for our investor entrepreneurs
-                                        who prioritize sustainability.
-                                    </p>
-                                </div>
-                            </router-link>
-                        </div>
+                        
                     </div>
                 </mobile>
             </div>
-
+            
 
         </section>
     </main>
 </template>
+
+<script setup>
+// useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
+</script>
 
 <script>
 
@@ -1409,112 +1278,6 @@ export default {
         transition-delay: 0.4s;
     }
 }
-
-/*Section areas*/
-.row-areas {
-    margin-bottom: 2%;
-    margin-left: 5%;
-    margin-top: 2%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.row h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 3.75em;
-    margin: 0.6em 0;
-    font-weight: 600;
-    color: #070024;
-}
-
-.column {
-    padding: 1em;
-}
-
-.card-area {
-    font-family: sans-serif;
-    padding: 3.1em 1.25em;
-    text-align: center;
-    background: linear-gradient(0deg, rgb(15, 108, 126) 10px, transparent 10px);
-    background-repeat: no-repeat;
-    background-position: 0 0.62em;
-    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
-    border-radius: 0.5em;
-    transition: 0.5s;
-    cursor: pointer;
-    height: 75%
-}
-
-.area-router {
-    text-decoration: none;
-}
-
-.card-area .icon {
-    object-fit: contain;
-    background-image: url('assets/img/area.png');
-    background-size: cover;
-    font-size: 2.5em;
-    height: 2em;
-    width: 2em;
-    margin: auto;
-    background-color: rgb(15, 108, 126);
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    color: #ffffff;
-}
-
-.icon:before {
-    position: absolute;
-    content: "";
-    height: 1.5em;
-    width: 1.5em;
-    border: 0.12em solid rgb(15, 108, 126);
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-span.highlight {
-    background-color: #d9f3f3;
-}
-
-.card-area h3 {
-    font-size: 18px;
-    margin: 1em 0 1.4em 0;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    color: #070024;
-}
-
-.card-area p {
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #625a71;
-}
-
-.card-area:hover {
-    background-position: 0;
-}
-
-.card-area:hover .icon:before {
-    height: 2.25em;
-    width: 2.25em;
-}
-
-@media screen and (min-width: 992px) {
-
-    .card-area {
-        padding: 2em 2em;
-    }
-
-    .column {
-        flex: 0 0 33.33%;
-        max-width: 22.33%;
-        padding: 0 1em;
-    }
-}
-
 
 
 @media (max-width: 768px) {

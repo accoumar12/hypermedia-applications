@@ -46,10 +46,6 @@ async function initDB() {
             type: DataTypes.STRING,
             allowNull: true
         },
-        supervisor: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         description: {
             type: DataTypes.STRING,
             allowNull: true
@@ -60,6 +56,10 @@ async function initDB() {
         },
         area:{
             type: DataTypes.STRING,
+            allowNull: true
+        },        
+        areaId: {
+            type: DataTypes.INTEGER,
             allowNull: true
         },
         award1:{
@@ -113,14 +113,60 @@ async function initDB() {
             type: DataTypes.INTEGER,
             allowNull: true
         },
+        areasId: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
         MostRelevant: {
             type: DataTypes.BOOLEAN,
             allowNull: true
         },
     })
 
+    models.Area = db.define('area',{
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        description2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        image: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        logo: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        data_target: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        p1: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        ph: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        p2: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+    })
+
     models.Company.belongsTo(models.Person)
     models.Person.hasMany(models.Company)
+
+    models.Area.hasMany(models.Company)
+    models.Company.belongsTo(models.Area)
 
     await db.sync({ force: true })
 
@@ -173,17 +219,46 @@ async function initServer() {
             include: [
                 {
                     model: models.Person
+                },
+                {
+                    model: models.Area
                 }
             ]
-        })
+        });
 
         if (data) {
-            res.status(200).json(data)
+            res.status(200).json(data);
         }
         else {
-            res.sendStatus(404)
+            res.sendStatus(404);
         }
-    })
+    });
+
+    app.get('/areas', async (req, res) => {
+        const data = await models.Area.findAll();
+
+        res.status(200).json(data);
+    });
+
+    app.get('/areas/:id', async (req, res) => {
+        const data = await models.Area.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: [
+                {
+                    model: models.Company
+                }
+            ]
+        });
+
+        if (data) {
+            res.status(200).json(data);
+        }
+        else {
+            res.sendStatus(404);
+        }
+    });
 
     // Using a different port
     app.listen(3001, () => {

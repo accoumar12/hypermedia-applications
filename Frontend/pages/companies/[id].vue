@@ -10,7 +10,9 @@
             </div>
             <h1 class="name">{{ company.name }}</h1>
             <div id="data-container-c">
-                <p class="areas">Area of investment: {{ company.areas }}</p>
+                <p class="areas">
+                    <AreaIdPage v-for="area of AreaCompany" :name="area.name" :link="'/areas/'+area.id" />
+                </p>
                 <p class="ceo">CEO: {{ company.ceo }}</p>
                 <div class="supervisor">
                     <Supervisor v-for="person of supervisorname" :name="person.name" :link="'/people/' + person.id" />
@@ -107,6 +109,7 @@ const id = route.params.id
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: people } = await useFetch(useRuntimeConfig().public.serverURL + '/people/')
 const { data: company } = await useFetch(useRuntimeConfig().public.serverURL + '/companies/' + id)
+const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
@@ -123,6 +126,20 @@ const supervisorname = computed(() => {
     }
     console.log(NameSupervisor)
     return NameSupervisor
+
+})
+
+const AreaCompany = computed(() => {
+    const NameArea = []
+    // Checking for values where the part of the company name is provided
+    for (let area of Allareas.value) {
+        console.log('My best area isss', area.id)
+        console.log('My best area isss', company.value.areasId)
+        if (area.id === company.value.areasId) { // Irst 8 of the db are supervisors' name
+            NameArea.push(area)
+            }
+        }
+    return NameArea
 
 })
 

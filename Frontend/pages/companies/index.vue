@@ -36,7 +36,8 @@
                 </div>
             </div>
             <div class="row4">
-                <div class="column41">
+                <!--
+                     <div class="column41">
                     <div class="area-icons">
                         <img src="~/assets/img/technology.png" alt="Tech">
                     </div>
@@ -111,8 +112,8 @@
                         <span class="checkmark" href="#"></span>
                     </label>
 
-                </div>
-
+                </div>-->
+                <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target" :link="'/areas/' + area.id" :value="areas" @update:areas="areas = $event" />
             </div>
 
         </div>
@@ -156,6 +157,7 @@
 <script setup>
 // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
 const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL + '/companies')
+const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + '/areas')
 /*
     In order to implement a filter, we use the computed property.
     This allows to have a cached value that contains the filtered list.
@@ -164,6 +166,7 @@ const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL +
 const name = ref("");
 const areas = ref("");
 const MR = ref("");
+
 
 const filtered = computed(() => {
     const arrTot = []
@@ -177,7 +180,7 @@ const filtered = computed(() => {
             //else if ((company.name == name.value) & (company.areas == areas.value)) {
             //    arrTot.push(company)
             //}
-            else if ((company.name.toLowerCase().includes(name.value.toLowerCase())) & ((company.areas == areas.value) || (areas.value == 0 || areas.value == "")) & (company.MostRelevant == MR.value))
+            else if ((company.name.toLowerCase().includes(name.value.toLowerCase())) & ((company.areas == areas.value) || (areas.value == 0 || areas.value == "")) & (company.MostRelevant == MR.value || (MR.value == 0 || MR.value == "")))
                 arrTot.push(company)
             console.log(MR.value)
         }
@@ -191,69 +194,9 @@ const filtered = computed(() => {
 
 <script>
 export default {
-    mounted() {
-        const counters = document.querySelectorAll('.counter');
-        const delay = 500;
-
-        const isInView = (el) => {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        };
-
-        const animateCounters = () => {
-            counters.forEach((counter, index) => {
-                if (isInView(counter)) {
-                    const target = +counter.dataset.target;
-                    const start = performance.now();
-                    const duration = 2000;
-
-                    const step = (timestamp) => {
-                        const elapsed = timestamp - start;
-                        const progress = Math.min(elapsed / duration, 1);
-                        const value = Math.floor(progress * target);
-                        counter.textContent = `${value}+`;
-                        if (progress < 1) {
-                            requestAnimationFrame(step);
-                        }
-                    };
-
-                    requestAnimationFrame(step);
-                } else {
-                    counter.textContent = '0+';
-                }
-            });
-        };
-
-        const handleScroll = () => {
-            animateCounters();
-            window.removeEventListener('scroll', handleScroll);
-        };
-
-        animateCounters();
-        window.addEventListener('scroll', handleScroll);
-    },
     methods: {
-        navigateToProjects() {
-            this.$router.push({ name: 'technology', hash: '#projects' });
-        },
-        filterAndNavigate(event) {
-            // Prevent the default link behavior
-            event.preventDefault();
-
-            // Perform filtering based on the selected value (example filtering code)
-            // Replace this code with your actual filtering logic
-            if (this.areas === 'Technology') {
-                // Get the target section using the href attribute
-                const targetSection = document.querySelector(event.target.getAttribute('href'));
-
-                // Scroll to the target section
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
+        updateText(newText) {
+            this.rightColumnText = newText;
         },
     },
     data() {
@@ -268,11 +211,6 @@ export default {
                 { id: 5, label: 'Recapitalization', text: 'Recapitalization involves restructuring the capital structure of a company, often through a combination of debt and equity. We work closely to evaluate their capital needs and develop comprehensive recapitalization plan that balances the companys growth objectives with its financial profile. We help the companies achieve a successful recapitalization that provides a strong foundation for future growth and opportunities.' },
             ],
         }
-    },
-    methods: {
-        updateText(newText) {
-            this.rightColumnText = newText;
-        },
     },
 };
 
@@ -477,20 +415,6 @@ export default {
 
 }
 
-.column41 {
-    padding-top: 2%;
-    position: relative;
-    background-size: 80%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-}
-
 .hover-content {
     position: absolute;
     top: 50%;
@@ -512,91 +436,6 @@ export default {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
-}
-
-.counter {
-    font-size: 3rem;
-    font-weight: bolder;
-    color: #033f52;
-}
-
-.column41::before {
-    background: url('assets/img/areas.png') center center no-repeat;
-    content: "";
-    position: absolute;
-    background-size: 80%;
-    width: 90%;
-    height: 100%;
-    flex-basis: 20%;
-    padding: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0.07;
-}
-
-.area-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 0;
-    padding-bottom: 50%;
-    position: relative;
-}
-
-.area-icons img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.column4 p {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.column41 p {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-}
-
-.link-text {
-    text-align: center;
-    text-decoration: underline;
-}
-
-.learn-more {
-    text-decoration: none;
-    font-size: 16px;
-    text-decoration-color: #033f52;
-    font-family: sans-serif;
-    font-size: large;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    position: left;
-}
-
-.learn-more-2 {
-    margin-left: 16%;
-    text-decoration: none;
-    font-size: 16px;
-    text-decoration-color: #033f52;
-    font-family: sans-serif;
-    font-size: large;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    z-index: 4;
-
-}
-
-.learn-more a {
-    text-decoration: none;
-    font-size: 10px;
 }
 
 label>[type=checkbox],
