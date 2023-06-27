@@ -55,7 +55,7 @@
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-section3">
-                        <div class="carousel" ref="carousel">
+                        <div class="carousel-area" ref="carousel">
                             <div class="slides">
                                 <CarouselCompany v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
                                     :image="company.image" :link="'/companies/' + company.id" />
@@ -250,7 +250,7 @@ hr {
     align-items: center;
 }
 
-.carousel {
+.carousel-area {
     padding-left: 18%;
     padding-right: 25%;
     width: 40%;
