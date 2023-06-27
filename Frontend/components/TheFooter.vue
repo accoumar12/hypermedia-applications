@@ -242,7 +242,7 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    margin-left: 40 %;
+    margin-left: 40%;
     gap: 6%;
 }
 
