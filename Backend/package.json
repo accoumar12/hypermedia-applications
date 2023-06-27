@@ -2,7 +2,7 @@
   "name": "Venture Capital",
   "version": "1.0.0",
   "type": "module",
-  "description": "This is the repo for the webpage that was developed during the Academic Year 2022/23",
+  "description": "This is the repository for the Ventour webpage that was developed during the Academic Year 2022/23",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
