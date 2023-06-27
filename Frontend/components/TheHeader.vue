@@ -32,7 +32,8 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <router-link to="/topinvestments" class="nav-link" exact-active-class="active-link">Top
+                                Investments</router-link>
                             <router-link to="/contact" class="nav-link" exact-active-class="active-link">Get In
                                 Touch</router-link>
                             <!-- 
@@ -103,7 +104,9 @@
                                                 </div>
 
                                             </div>
-
+                                            <p><router-link to="/topinvestments" class="nav-link"
+                                                    exact-active-class="active-link">Top
+                                                    Investments</router-link></p>
                                             <p><router-link to="/contact" class="nav-link">Get In Touch</router-link></p>
                                             <!-- 
                 <div class="search">

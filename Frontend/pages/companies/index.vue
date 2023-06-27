@@ -20,11 +20,8 @@
                             </button>
                             <button @click="MR = true">Most Relevant Companies</button></a></div>
                     </p>
-
                 </div>
-
             </div>
-
             <div class="row4-a">
                 <div class="title">
                     <label for="all-team">
@@ -113,7 +110,8 @@
                     </label>
 
                 </div>-->
-                <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target" :link="'/areas/' + area.id" :value="areas" @update:areas="areas = $event" />
+                <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target"
+                    :link="'/areas/' + area.id" :value="areas" @update:areas="areas = $event" />
             </div>
 
         </div>

@@ -333,6 +333,30 @@ export default {
     }
 }
 
+@media (max-width: 300px) {
+    .logof {
+        max-width: 70%;
+    }
+
+    .copy-right {
+        width: 125%;
+        font-size: 11px;
+        padding-left: 0;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .social-iconsf {
+        width: 20%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        margin-left: 40%;
+        gap: 6%;
+    }
+}
+
 .footer-dark .item.text {
     margin-bottom: 36px;
 }
