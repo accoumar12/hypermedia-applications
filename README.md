@@ -44,13 +44,13 @@ In this section we talk about the high-level structure and organization of the h
 const { data: WhatYouWantToRetrieve } = await useFetch(useRuntimeConfig().public.serverURL + '/WhatYouWantToRetrieveFolder')
 `
 
-Remember to run both backend, with and the command in the terminal
+Remember to run the command in the terminal in `Backend` folder 
 
 `
 node index.js
 `
 
-And Frontend with the command:
+and in `Frontend` folder with the command:
 
 `
 npm run dev
@@ -58,8 +58,8 @@ npm run dev
 
 3. **Data Flow**: All Data is stored in the file dbInit.js and it is static. It means that it is not updated externally by the user, but can be updated only by the developer adding new fields or modyfying the one already existing in the dbInit.js file and in index.js file
 4. **Scalability and Performance**: The website is optimized for both Mobile and Desktop. We simplified some features in the mobile version of the code in order to make the application faster and more usable.
-5. **Deployment Considerations**: All the code needed to run the application is contained in this repository and the host of the website online used to run this application is github pages.
-6. **Technologies Used**: The website has been developed thanks to the VUE.js framework together with NodeJS and it has been published online using Github pages. List the technologies, frameworks, and tools used in the project. 
+5. **Deployment Considerations**: All the code needed to run the application is contained in this repository and the host of the website online used to run this application is **github pages**.
+6. **Technologies Used**: The website has been developed thanks to the VUE.js framework together with NodeJS and it has been published online using Github pages.
 7. **Hosting service**: We decided to use github pages because we designed a static website and we don't need to update the database when the user needs.
 8. **Rendering mode**: we don't need to update data frequently or when we prefer not to pre-render pages to mantain a good performance of the webiste. So we exluded the CSR method. We didn't have dynamic data in our design of the Database so we decided not to use neither SSR. It is the reason why at the end we used SSG. With static-site generation (SSG), the page fetches data once during build-time. You can see it running the `node index.js` in the Backend older. We decided to use **static-generated pages** because they are very fast and perform well because all the pages are built beforehand. We needed to maximize the performance on all the devices. In general we know that SSG is perfect for pages and it is exactly our case.
 
