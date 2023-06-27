@@ -37,6 +37,11 @@
                                     <br>
                                     AWARDS
                                 </button>
+                                <button class="section-button" :class="{ active: activeSection === 3 }"
+                                    @click="activeSection = 3">
+                                    <br>
+                                    CV
+                                </button>
                             </div>
 
                             <div class="description-container1">
@@ -47,6 +52,7 @@
 
                                 <div v-else-if="activeSection === 2">
                                     <p2 class="description">
+                                        At VenTour Capital, we believe in celebrating the outstanding contributions and achievements of our exceptional team members. Our dedicated professionals continually strive for excellence and consistently go above and beyond to achieve remarkable results. In acknowledgment of unwavering commitment, {{person.name}} received the following awards:
                                         <ul class="award-list">
                                             <li>{{ person.award1 }}</li>
                                             <br>
@@ -56,11 +62,13 @@
                                             <br>
                                             <li v-if="person.award4 != ''">{{ person.award4 }}</li>
                                         </ul>
-                                        <!--
-                                <ul id="AwardList"></ul>
-                                -->
                                     </p2>
                                 </div>
+
+                                <div v-else-if="activeSection === 3">
+                                    <p2 class="description">{{ person.cv }}</p2>
+                                </div>
+
                             </div>
                         </div>
                     </div>
