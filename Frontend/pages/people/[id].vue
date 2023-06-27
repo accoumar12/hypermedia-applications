@@ -52,7 +52,11 @@
 
                                 <div v-else-if="activeSection === 2">
                                     <p2 class="description">
-                                        At VenTour Capital, we believe in celebrating the outstanding contributions and achievements of our exceptional team members. Our dedicated professionals continually strive for excellence and consistently go above and beyond to achieve remarkable results. In acknowledgment of unwavering commitment, {{person.name}} received the following awards:
+                                        At VenTour Capital, we believe in celebrating the outstanding contributions and
+                                        achievements of our exceptional team members. Our dedicated professionals
+                                        continually strive for excellence and consistently go above and beyond to achieve
+                                        remarkable results. In acknowledgment of unwavering commitment, {{ person.name }}
+                                        received the following awards:
                                         <ul class="award-list">
                                             <li>{{ person.award1 }}</li>
                                             <br>
@@ -76,7 +80,6 @@
             </div>
             <div v-else>
                 <mobile>
-
                     <div class="column">
                         <div class="column">
                             <img id="main-img2" :src="person.image" />
@@ -462,7 +465,7 @@ hr {
     height: 20%;
     padding-left: -10%;
     width: 90%;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 1.0rem;
 }
 
@@ -471,7 +474,7 @@ hr {
     padding-left: 70%;
     font-size: 15pt;
     width: 150%;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 1.1rem;
 }
 
@@ -480,7 +483,7 @@ hr {
     padding-left: 70%;
     font-size: 15pt;
     width: 150%;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 1.0rem;
 }
 

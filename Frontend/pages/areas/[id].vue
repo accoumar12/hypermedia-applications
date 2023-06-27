@@ -12,40 +12,34 @@
             <hr />
 
             <div v-if="!isMobile">
-                <desktop> 
-                <div class="row-section">
-                <div class="column-c">
-                    <img id="main-img" :src="area.image" />
-                </div>
-                <div class="column2-c">
-                    <div class="description-container">
-                        <p class="description">{{ area.description }}</p>
-                        <p class="description2">{{ area.description2 }}</p>
-                        <p>Visit their official website:
-                            <a href="{{ area.link }}" target="_blank">
-                                {{ area.link }}
-                            </a>
-                        </p>
+                <desktop>
+                    <div class="row-section">
+                        <div class="column-c">
+                            <img id="main-img-area" :src="area.image" />
+                        </div>
+                        <div class="column2-c">
+                            <div class="description-container">
+                                <p class="description">{{ area.description }}</p>
+                                <p class="description2">{{ area.description2 }}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </desktop>
+                </desktop>
             </div>
 
             <div v-else>
                 <mobile>
-
-                <div class="column-section">
-                <div class="column-c">
-                    <img id="main-img3" :src="area.image" />
-                </div>
-                <div class="column2-c">
-                    <div class="description-container2">
-                        <p class="description">{{ area.description }}</p>
-                        <p class="description2">{{ area.description2 }}</p>
+                    <div class="column-section">
+                        <div class="column-c">
+                            <img id="main-img3" :src="area.image" />
+                        </div>
+                        <div class="column2-c">
+                            <div class="description-container2">
+                                <p class="description">{{ area.description }}</p>
+                                <p class="description2">{{ area.description2 }}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
                 </mobile>
             </div>
@@ -61,16 +55,28 @@
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-section3">
-                        <CarouselCompany v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                            :link="'/companies/' + company.id" />
+                        <div class="carousel" ref="carousel">
+                            <div class="slides">
+                                <CarouselCompany v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
+                                    :image="company.image" :link="'/companies/' + company.id" />
+                            </div>
+                        </div>
+                        <div class="nav-buttons">
+                            <div class="nav-button-wrapper">
+                                <button class="nav-button left" @click="scrollLeft">&#8249;</button>
+                            </div>
+                            <div class="nav-button-wrapper">
+                                <button class="nav-button right" @click="scrollRight">&#8250;</button>
+                            </div>
+                        </div>
                     </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
                     <div class="column2Card">
-                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas" :image="company.image"
-                            :link="'/companies/' + company.id" />
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
+                            :image="company.image" :link="'/companies/' + company.id" />
                     </div>
                 </mobile>
             </div>
@@ -89,12 +95,12 @@ export default defineNuxtComponent({
         };
     },
 
-    methods:{
+    methods: {
 
-            detectMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          );
+        detectMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
         },
     },
 
@@ -105,8 +111,24 @@ export default defineNuxtComponent({
                 this.isSearchExpanded = false;
             }
         });
-    }
+    },
+    methods: {
+        scrollLeft() {
+            const carousel = this.$refs.carousel;
+            carousel.scrollBy({
+                left: -carousel.offsetWidth,
+                behavior: 'smooth'
+            });
+        },
 
+        scrollRight() {
+            const carousel = this.$refs.carousel;
+            carousel.scrollBy({
+                left: carousel.offsetWidth,
+                behavior: 'smooth'
+            });
+        }
+    }
 })
 
 
@@ -130,14 +152,14 @@ const filtered = computed(() => {
     console.log(area.value.name)
     for (let company of companies.value) {
         if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
-            if (company.areas==area.value.name) { // All companies
+            if (company.areas == area.value.name) { // All companies
                 //console.log(company) // Only for debug
                 arrTot.push(company)
             }
             //else if ((company.name == name.value) & (company.areas == areas.value)) {
             //    arrTot.push(company)
             //}
-            
+
         }
     }
     console.log("My life is here:", arrTot)
@@ -163,7 +185,7 @@ const filtered = computed(() => {
     height: 15%;
     padding-top: 6%;
     justify-content: left;
-    padding-right: 70%;
+    padding-right: 66%;
 }
 
 .arrow img {
@@ -197,7 +219,8 @@ const filtered = computed(() => {
 }
 
 .name {
-    font-size: 30px;
+    font-family: sans-serif;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -225,10 +248,55 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    padding-bottom: 2%;
 }
 
+.carousel {
+    padding-left: 18%;
+    padding-right: 25%;
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    gap: 2%;
+    scroll-behavior: smooth;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nav-button-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.nav-button:hover {
+    color: #1d587c;
+}
+
+.left {
+    transform: rotate(0deg);
+}
+
+.right {
+    transform: rotate(0);
+}
 
 .column-c {
     flex-basis: 500px;
@@ -246,15 +314,14 @@ hr {
     flex-direction: column;
 }
 
-#main-img {
-    width: 300px;
+#main-img-area {
+    width: 80%;
     height: 40%;
-    padding-left: 10%;
-
 }
 
 #main-img3 {
-    width: 80%;
+    padding-right: 10%;
+    width: 300px;
     height: 40%;
 }
 
@@ -268,15 +335,20 @@ hr {
     font-family: PT sans-serif;
 }
 
+.description {
+    font-size: 18px;
+}
+
+.description2 {
+    font-size: 18px;
+}
+
 .description-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    text-align: justify;
-    font-family: PT sans-serif;
-    padding: 8%;
-    font-size: 13pt;
+    height: 20%;
+    padding-left: -10%;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 1.0rem;
 }
 
 .official-link {
@@ -300,19 +372,61 @@ hr {
     text-decoration: none;
 }
 
-.text-center{
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+.text-center {
+    font-size: 20px;
+    font-family: sans-serif;
     font-weight: bold;
 }
 
 .row-section3 {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to new lines */
-  padding-left: 10%;
-  gap: 3%;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 3%;
+    overflow: hidden;
+    gap: 3%;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+@media (max-width: 300px) {
+    .arrow {
+        width: 40%;
+    }
+
+    .arrow img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .carousel {
+        padding: 0 3%;
+        width: 94%;
+    }
+
+    #main-img-area,
+    #main-img3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .description-container2 {
+        padding: 3%;
+        font-size: 14px;
+    }
+
+    .nav-buttons {
+        margin-top: 3px;
+    }
+
+    .nav-button {
+        font-size: 24px;
+    }
+
+    .row-section3 {
+        gap: 1%;
+        padding-bottom: 1%;
+    }
 }
 </style>
