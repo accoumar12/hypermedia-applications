@@ -232,7 +232,7 @@
                         <div>
                             <p>Giving light to technology with one of the best trending companies in todays' market.
                             </p>
-                            <router-link to="/companies/27" class="read-more">
+                            <router-link to="/companies/31" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                         </div>
@@ -246,7 +246,7 @@
                         <div>
                             <p>The top leading company in sportswear trusted on us to become the most wanted one.
                             </p>
-                            <router-link to="/companies/33" class="read-more">
+                            <router-link to="/companies/37" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                         </div>
@@ -260,7 +260,7 @@
                         <div>
                             <p>Producing power from the support they gained from us and leading the energy market.
                             </p>
-                            <router-link to="/companies/38" class="read-more">
+                            <router-link to="/companies/41" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                         </div>
@@ -275,7 +275,7 @@
                             <p>Being your insurance and health companion in international markets just like us are for our
                                 companies.
                             </p>
-                            <router-link to="/companies/24" class="read-more">
+                            <router-link to="/companies/28" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                         </div>
