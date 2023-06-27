@@ -176,7 +176,9 @@
           <div class="contact-us">
 
             <label for="customerName">NAME<em>&#x2a;</em></label><input id="customerName" name="customerName" required=""
-              type="text" /><label for="customerEmail">EMAIL <em>&#x2a;</em></label><input id="customerEmail"
+              type="text" v-model="customerName" />
+            <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+            <input id="customerEmail" v-model="customerEmail" 
               name="customerEmail" required="" type="email" /><label for="customerPhone">PHONE</label><input
               id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label
               for="country">COUNTRY<em>&#x2a;</em></label>
@@ -194,7 +196,7 @@
             </div>
             <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about you
                 (goals,expectations)
-              </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"></textarea>
+              </span></label><textarea id="customerNote" name="customerNote" required="" rows="4" v-model="customerNote" ></textarea>
               <label for="file-upload"
                 class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                 CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
