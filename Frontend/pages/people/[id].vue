@@ -97,6 +97,11 @@
                                         <br>
                                         AWARDS
                                     </button>
+                                    <button class="section-button" :class="{ active: activeSection === 3 }"
+                                    @click="activeSection = 3">
+                                    <br>
+                                    CV
+                                    </button>
                                 </div>
 
                                 <div class="description-container2" v-if="activeSection === 1">
@@ -115,11 +120,12 @@
                                             <br>
                                             <li v-if="person.award4 != ''">{{ person.award4 }}</li>
                                         </ul>
-                                        <!--
-                                <ul id="AwardList"></ul>
-                                -->
                                     </p3>
                                 </div>
+                                <div v-else-if="activeSection === 3">
+                                    <p2 class="description">{{ person.cv }}</p2>
+                                </div>
+
                             </div>
                         </div>
                     </div>
