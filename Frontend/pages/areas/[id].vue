@@ -106,23 +106,11 @@ export default defineNuxtComponent({
     },
 
     methods: {
-
         detectMobile() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
                 navigator.userAgent
             );
         },
-    },
-
-    mounted() {
-        this.isMobile = this.detectMobile();
-        document.addEventListener("click", (event) => {
-            if (!event.target.closest(".search")) {
-                this.isSearchExpanded = false;
-            }
-        });
-    },
-    methods: {
         scrollLeft() {
             const carousel = this.$refs.carousel;
             carousel.scrollBy({
@@ -138,8 +126,12 @@ export default defineNuxtComponent({
                 behavior: 'smooth'
             });
         }
-    }
-})
+    },
+
+    mounted() {
+        this.isMobile = this.detectMobile();
+    },
+});
 
 
 </script>
@@ -161,15 +153,11 @@ const filtered = computed(() => {
     // Checking for values where the part of the company name is provided
     console.log(area.value.name)
     for (let company of companies.value) {
-        if (company.ceo != undefined) { // Irst 8 of the db are supervisors' name
+        if (company.ceo != undefined) { // First 8 of the db are supervisors' name
             if (company.areas == area.value.name) { // All companies
                 //console.log(company) // Only for debug
                 arrTot.push(company)
             }
-            //else if ((company.name == name.value) & (company.areas == areas.value)) {
-            //    arrTot.push(company)
-            //}
-
         }
     }
     console.log("My life is here:", arrTot)
@@ -351,7 +339,6 @@ hr {
 }
 
 #main-img3 {
-    padding-right: 10%;
     width: 300px;
     height: 40%;
 }
@@ -362,21 +349,34 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    margin-right: 25px;
     text-align: justify;
     font-family: PT sans-serif;
+}
+.description-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: justify;
+    font-family: PT sans-serif;
+    /* padding: 8%; */
+    font-size: 13pt;
 }
 
 .description {
     font-size: 18px;
+    padding-right: 25px;
 }
 
 .description2 {
     font-size: 18px;
+    padding-right: 25px;
 }
 
 .description-container2 {
     height: 20%;
-    padding-left: -10%;
+    padding-left: 7%;
     width: 90%;
     font-family: sans-serif;
     font-size: 1.0rem;
@@ -420,6 +420,15 @@ hr {
 @media (max-width: 300px) {
     .arrow {
         width: 40%;
+    }
+    .arrow-left {
+        position: absolute;
+        left: -212px; /* Position the left arrow at the left side */
+    }
+
+    .arrow-right {
+        position: absolute;
+        right: -212px; /* Position the right arrow at the right side */
     }
 
     .arrow img {

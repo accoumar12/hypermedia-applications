@@ -455,9 +455,7 @@ hr {
 
 .description-containera2 p3 {
     height: 20%;
-    padding-left: 70%;
     font-size: 15pt;
-    width: 150%;
     font-family: sans-serif;
     font-size: 1.0rem;
 }

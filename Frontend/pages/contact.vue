@@ -280,10 +280,10 @@ export default defineNuxtComponent({
 
       if (activeSection === 1) {
         subject = 'Request from ' + this.customerName;
-        body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to send my request. \nTalking about my company, I would like to say a couple of words (for example that my company has its register office in ' + this.country + '\n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
+        body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to send a request to make my company be part of Ventour Capital. \nTalking about my company, I would like to say a couple of words. First of all, its register office is in ' + this.country + '. \n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + 'or ' + this.customerPhone + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
       } else {
-        subject = 'Application from ' + this.customerName;
-        body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to apply for the job offer I found on your website. \nTalking about me, I would like to say a couple of words (for example that I was born in ' + this.country + 'and: \n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
+        subject = 'Application for Frontend developer - by ' + this.customerName;
+        body = 'Good morning,\nI\'m ' + this.customerName + ' and I would like to apply for the job offer I found on your website. \nTalking about me, I would like to say a couple of words. First of all I live in ' + this.country + '. \n' + this.customerNote + '\nCan you please contact me at this email: ' + this.customerEmail + '\n Thank you for your attention, \nBest Regards \n' + this.customerName;
       }
 
       const mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
