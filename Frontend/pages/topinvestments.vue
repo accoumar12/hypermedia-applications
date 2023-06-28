@@ -55,7 +55,7 @@
         </ul>
         <div class="col3">
             <router-link to="/companies" class="nav-link-end">
-                <a class="card13">
+                <a class="card13-top">
                     <h3>CHECK ALL INVESTMENTS</h3>
                     <div class="go-corner">
                         <div class="go-arrow">
@@ -229,7 +229,8 @@ input:checked+li>label {
     justify-content: center;
 }
 
-.card13 {
+.card13-top {
+    top: -75%;
     display: block;
     position: relative;
     width: 100%;
@@ -242,7 +243,7 @@ input:checked+li>label {
     overflow: hidden;
 }
 
-.card13:before {
+.card13-top:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -257,11 +258,11 @@ input:checked+li>label {
     transition: transform 0.25s ease-out;
 }
 
-.card13:hover:before {
+.card13-top:hover:before {
     transform: scale(21);
 }
 
-.card13:hover h3 {
+.card13-top:hover h3 {
     transition: all 0.3s ease-out;
     color: #ffffff;
 }
