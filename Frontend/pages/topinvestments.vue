@@ -36,7 +36,7 @@
             <input type="radio" name="radio-btn" id="img-3" />
             <li id="img-container">
                 <div id="img-inner">
-                    <router-link to="/companies/41"><img
+                    <router-link to="/companies/42"><img
                             src="https://www.solarchoice.net.au/wp-content/uploads/Canadian-Solar-Banner.png"></router-link>
                 </div>
                 <label for="img-2" class="sb-bignav" title="Previous">&#x2039;</label>

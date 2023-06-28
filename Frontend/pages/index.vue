@@ -260,7 +260,7 @@
                         <div>
                             <p>Producing power from the support they gained from us and leading the energy market.
                             </p>
-                            <router-link to="/companies/41" class="read-more">
+                            <router-link to="/companies/42" class="read-more">
                                 <h2>Read More</h2>
                             </router-link>
                         </div>
