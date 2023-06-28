@@ -16,7 +16,7 @@
             <input type="radio" name="radio-btn" id="img-1" checked />
             <li id="img-container">
                 <div id="img-inner">
-                    <router-link to="/companies/31"><img
+                    <router-link to="/companies/27"><img
                             src="https://assets.website-files.com/5e33539ac1dec48c992bdaae/5e5993706f7f75a7ce21dc93_DellTechnologiesWorld_3DExhibits_Fullscreen.jpg"></router-link>
                 </div>
                 <label for="img-6" class="sb-bignav" title="Previous">&#x2039;</label>
@@ -26,7 +26,7 @@
             <input type="radio" name="radio-btn" id="img-2" />
             <li id="img-container">
                 <div id="img-inner">
-                    <router-link to="/companies/37"><img
+                    <router-link to="/companies/33"><img
                             src="https://studycafe.in/cdn-cgi/image/fit=contain,format=webp,gravity=auto,metadata=none,quality=80,width=1200,height=730/wp-content/uploads/2022/12/Nike-1.jpg"></router-link>
                 </div>
                 <label for="img-1" class="sb-bignav" title="Previous">&#x2039;</label>
@@ -36,7 +36,7 @@
             <input type="radio" name="radio-btn" id="img-3" />
             <li id="img-container">
                 <div id="img-inner">
-                    <router-link to="/companies/42"><img
+                    <router-link to="/companies/38"><img
                             src="https://www.solarchoice.net.au/wp-content/uploads/Canadian-Solar-Banner.png"></router-link>
                 </div>
                 <label for="img-2" class="sb-bignav" title="Previous">&#x2039;</label>
@@ -46,7 +46,7 @@
             <input type="radio" name="radio-btn" id="img-4" />
             <li id="img-container">
                 <div id="img-inner">
-                    <router-link to="/companies/28"><img
+                    <router-link to="/companies/24"><img
                             src="https://www.fair360.com/media/2022/12/cigna-building.jpg"></router-link>
                 </div>
                 <label for="img-3" class="sb-bignav" title="Previous">&#x2039;</label>

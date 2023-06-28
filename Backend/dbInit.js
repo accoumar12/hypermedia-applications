@@ -49,8 +49,6 @@ export default async (models) => {
         },
     ]
 
-    await models.Area.bulkCreate(areaModel)
-
     // Definition of Supervisors:
 
     const areas_field = [];

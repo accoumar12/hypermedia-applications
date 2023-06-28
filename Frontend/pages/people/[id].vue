@@ -353,7 +353,8 @@ hr {
 }
 
 #main-img2 {
-    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 300px;
     height: 40%;
 }
