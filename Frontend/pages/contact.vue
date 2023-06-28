@@ -134,8 +134,8 @@
           </div>
         </div>
         <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://o.remove.bg/downloads/9c431996-882d-4b90-86c5-cace83d2c907/127-1270973_thumb-image-icon-html-css-png-transparent-png-removebg-preview.png">
+          <img class="job-boards-company-logo" alt="HTML logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png">
           <a href="https://www.w3schools.com/html/" target="_blank">
             <h2 class="job-boards-company-name">
               HTML
@@ -147,9 +147,8 @@
       </div>
       <div class="job-boards-company-grid">
         <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
-            src="https://o.remove.bg/downloads/9c431996-882d-4b90-86c5-cace83d2c907/127-1270973_thumb-image-icon-html-css-png-transparent-png-removebg-preview.png"
-            height="160">
+          <img class="job-boards-company-logo" alt="CSS logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
           <a href="https://www.w3schools.com/css/" target="_blank">
             <h2 class="job-boards-company-name">
               CSS
@@ -633,7 +632,7 @@ label {
 }
 
 .job-boards-company-logo {
-  width: 170px;
+  width: 150px;
   height: 140px;
 }
 
