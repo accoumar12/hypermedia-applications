@@ -201,6 +201,18 @@ label.sb-bignav:hover {
     background-color: rgba(255, 255, 255, 0.3);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
+@media (max-width: 600px) {
+    .sb-bignav {
+        margin-top: 10%;
+        position: fixed;
+        left: 20px;
+        inset-inline: 80px;
+        margin-inline: -100px;
+        width: 25%;
+        font-size: 64pt;
+        line-height: 152px;
+    }
+}
 
 label[title="Next"] {
     margin-left: 55%;
@@ -265,6 +277,27 @@ input:checked+li>label {
 .card13-top:hover h3 {
     transition: all 0.3s ease-out;
     color: #ffffff;
+}
+@media (max-width: 600px) {
+    .col3 {
+        margin: 1%;
+    }
+
+    .card13-top {
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+
+    .card13-top:before {
+        top: -6px;
+        right: -6px;
+        height: 12px;
+        width: 12px;
+    }
+
+    .card13-top:hover:before {
+        transform: scale(4);
+    }
 }
 
 @media (max-width: 768px) {
