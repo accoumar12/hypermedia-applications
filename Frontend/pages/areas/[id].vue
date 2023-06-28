@@ -7,15 +7,16 @@
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
-                    <router-link to="/technology">
+                    <NuxtLink :to="area.id === 1 ? '/companies' : '/areas/' + (area.id-1)" class="nav-link">
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
-                    </router-link>
+                    </NuxtLink>
                 </div>
-                <router-link to="/consumer">
-                    <div class="arrow-right">
-                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
-                    </div>
-                </router-link>
+
+                <div class="arrow-right">
+                    <NuxtLink :to="area.id === 4 ? '/companies' : '/areas/' + (area.id+1)" class="nav-link">
+                        <img src="~/assets/img/right-arrows.png" alt="right Arrow">
+                    </NuxtLink>
+                </div>
             </div>
             <h1 class="name">{{ area.name }}</h1>
             <hr />
@@ -189,19 +190,33 @@ const filtered = computed(() => {
     background-position-x: center;
 }
 
+
 .arrow {
-    width: 16%;
-    height: 15%;
-    padding-top: 6%;
-    justify-content: left;
-    padding-right: 66%;
+    position: relative; /* Set the arrows to absolute position */
+    top: 0; /* Position them at the top */
 }
 
+.arrow-left {
+    position: absolute;
+    left: 0; /* Position the left arrow at the left side */
+}
+
+.arrow-right {
+    position: absolute;
+    right: 0px; /* Position the right arrow at the right side */
+}
 .arrow img {
     max-width: 12%;
     max-height: 12%;
     position: relative;
     animation: blink 4s infinite;
+}
+
+.arrow-left img {
+    padding-left: 15%;
+}
+.arrow-right img {
+    padding-right: 15%;
 }
 
 .arrow-left img,
