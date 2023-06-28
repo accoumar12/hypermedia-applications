@@ -191,7 +191,7 @@ const filtered = computed(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
+    width: 80%;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
