@@ -85,13 +85,13 @@
         <div class="space">
           <h1>Join us</h1>
           <div class="contact-us">
-            <label for="customerName">NAME<em>&#x2a;</em></label>
+            <label class="labeljoin" for="customerName">NAME<em>&#x2a;</em></label>
             <input id="customerName" v-model="customerName" required type="text" />
-            <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+            <label class="labeljoin" for="customerEmail">EMAIL <em>&#x2a;</em></label>
             <input id="customerEmail" v-model="customerEmail" required type="email" />
-            <label for="customerPhone">PHONE</label>
+            <label class="labeljoin" for="customerPhone">PHONE</label>
             <input id="customerPhone" v-model="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
-            <label for="country">COUNTRY<em>&#x2a;</em></label>
+            <label class="labeljoin" for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
               <select id="country" v-model="country" autocomplete="country-name" class="block" style="height: 36px;">
                 <option>Albania</option>
@@ -104,13 +104,14 @@
                 <option>Other</option>
               </select>
             </div>
-            <label for="customerNote">ABOUT <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about your
+            <label class="labeljoin" for="customerNote">ABOUT <em>&#x2a;</em><span
+                class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about your
                 company
                 (i.e. name and goal)</span></label>
             <textarea id="customerNote" v-model="customerNote" required rows="4"></textarea>
-            <label for="file-upload"
-              class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-              Company Profile or Business Proposal <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
+            <label for="file-upload" class="labeljoin">
+              Company Profile or Business Proposal <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Upload
+                file</span>
               <input id="file-upload" type="file" class="sr-only" ref="fileUpload" />
             </label>
 
@@ -176,12 +177,13 @@
           </h1>
           <div class="contact-us">
 
-            <label for="customerName">NAME<em>&#x2a;</em></label><input id="customerName" name="customerName" required=""
-              type="text" v-model="customerName" />
-            <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
+            <label class="labeljoin" for="customerName">NAME<em>&#x2a;</em></label><input id="customerName"
+              name="customerName" required="" type="text" v-model="customerName" />
+            <label class="labeljoin" for="customerEmail">EMAIL <em>&#x2a;</em></label>
             <input id="customerEmail" v-model="customerEmail" name="customerEmail" required="" type="email" /><label
               for="customerPhone">PHONE</label><input id="customerPhone" name="customerPhone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label for="country">COUNTRY<em>&#x2a;</em></label>
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label class="labeljoin"
+              for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
               <select id="country" name="country" autocomplete="country-name" class="block" style="height: 36px;">
                 <option>Albania</option>
@@ -194,13 +196,13 @@
                 <option>Other</option>
               </select>
             </div>
-            <label for=" customerNote">ABOUT <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Write about you
+            <label class="labeljoin" for=" customerNote">ABOUT <em>&#x2a;</em><span
+                class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Write about you
                 (goals,expectations)
               </span></label><textarea id="customerNote" name="customerNote" required="" rows="4"
               v-model="customerNote"></textarea>
-            <label for="file-upload"
-              class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-              CV <em>&#x2a;</em><span>&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
+            <label for="file-upload" class="labeljoin">
+              CV <em>&#x2a;</em><span class="spanNew">&nbsp;&nbsp;&nbsp;&nbsp;Upload file</span>
               <input id="file-upload" type="file" class="sr-only" ref="fileUpload" />
             </label>
             <button id="customerOrder" @click.prevent="submitForm" href="#" @click="sendEmail(2)">SUBMIT</button>
@@ -318,10 +320,27 @@ export default defineNuxtComponent({
   height: fit-content;
 }
 
-.contact-us label,
-input,
+#customerPhone,
+#customerName,
+#customerEmail,
+#file-upload {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: sans-serif;
+}
+
 select,
 textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: sans-serif;
+}
+
+.labeljoin {
   display: block;
   width: 100%;
   font-size: 12pt;
@@ -333,17 +352,24 @@ textarea {
   margin-bottom: 3%;
 }
 
-.contact-us label {
+.labeljoin {
   text-align: left;
 }
 
-select,
-input {
+select {
   margin-bottom: 24pt;
 
 }
 
-span {
+#customerPhone,
+#customerName,
+#customerEmail,
+#file-upload {
+  margin-bottom: 24pt;
+
+}
+
+.spanNew {
   font-size: 8pt;
 }
 
@@ -352,7 +378,10 @@ em {
   font-weight: bold;
 }
 
-input,
+#customerPhone,
+#customerName,
+#customerEmail,
+#file-upload,
 select,
 textarea {
   border: none;
@@ -363,9 +392,27 @@ textarea {
   outline: none;
 }
 
+#customerPhone,
+#customerName,
+#customerEmail,
+#file-upload {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f1f1f1;
+  padding-left: 5px;
+  outline: none;
+}
+
 select:focus,
-input:focus,
 textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+#customerPhone:focus,
+#customerName:focus,
+#customerEmail:focus,
+#file-upload:focus {
   border: 1px solid #6bd4b1;
 }
 
@@ -461,8 +508,14 @@ textarea {
   resize: vertical;
 }
 
-select,
-input {
+select {
+  width: 60%;
+}
+
+#customerPhone,
+#customerName,
+#customerEmail,
+#file-upload {
   width: 60%;
 }
 
@@ -470,7 +523,7 @@ input {
   width: 60%;
 }
 
-label {
+.labeljoin {
   font-size: 13pt;
   font-weight: bold;
 }
@@ -484,7 +537,10 @@ label {
     flex-direction: column;
   }
 
-  input {
+  #customerPhone,
+  #customerName,
+  #customerEmail,
+  #file-upload {
     width: 100%;
   }
 
