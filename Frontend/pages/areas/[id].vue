@@ -222,14 +222,14 @@ const filtered = computed(() => {
 
 @media (max-width: 600px) {
     .arrow {
+        width: 100%;
+        height: 100%;
         margin-top: 20%; /* Add a top margin of 10% for mobile */
-        margin-right: 0%;
     }
     
     .arrow-left,
     .arrow-right {
-        width: 60px;
-        height: 30px;
+        width: 90%;
     }
 
     .arrow img {
