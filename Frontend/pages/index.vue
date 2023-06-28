@@ -296,7 +296,8 @@
             <div v-else>
                 <mobile>
                     <div class="column">
-
+                        <AreaHome v-for="area of Allareas" :name="area.name" :p1="area.p1" :ph="area.ph" :p2="area.p2"
+                            :link="'/areas/' + area.id" />
                     </div>
                 </mobile>
             </div>
