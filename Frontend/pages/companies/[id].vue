@@ -1,5 +1,5 @@
 <!--
-    Page description for a single person.
+    Page description for a single company or investment.
     As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
@@ -11,7 +11,7 @@
             <h1 class="name">{{ company.name }}</h1>
             <div id="data-container-c">
                 <p class="areas">
-                    <AreaIdPage v-for="area of AreaCompany" :name="area.name" :link="'/areas/'+area.id" />
+                    <AreaIdPage v-for="area of AreaCompany" :name="area.name" :link="'/areas/' + area.id" />
                 </p>
                 <p class="ceo">CEO: {{ company.ceo }}</p>
                 <div class="supervisor">
@@ -137,8 +137,8 @@ const AreaCompany = computed(() => {
         console.log('My best area isss', company.value.areasId)
         if (area.id === company.value.areasId) { // Irst 8 of the db are supervisors' name
             NameArea.push(area)
-            }
         }
+    }
     return NameArea
 
 })
