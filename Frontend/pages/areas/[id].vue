@@ -6,7 +6,16 @@
     <main id="back">
         <div class="info-group">
             <div class="arrow">
-                <router-link to="/companies"><img src="~/assets/img/left-arrows.png"></router-link>
+                <div class="arrow-left">
+                    <router-link to="/technology">
+                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    </router-link>
+                </div>
+                <router-link to="/consumer">
+                    <div class="arrow-right">
+                        <img src="~/assets/img/right-arrows.png" alt="Right Arrow">
+                    </div>
+                </router-link>
             </div>
             <h1 class="name">{{ area.name }}</h1>
             <hr />
@@ -194,6 +203,13 @@ const filtered = computed(() => {
     position: relative;
     animation: blink 4s infinite;
 }
+
+.arrow-left img,
+.arrow-right img {
+    height: 10%;
+    width: 10%;
+}
+
 
 @keyframes blink {
     0% {
