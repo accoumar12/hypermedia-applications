@@ -18,7 +18,7 @@
                     <p class="section-text4">Transforming the investment landscape and fueling innovation.<br>
                         <br>Our focus is your success!
                     </p>
-                    <router-link to="/history" class="sec-tex">
+                    <router-link to="/aboutus" class="sec-tex">
                         <p class="section-text41">LEARN MORE</p>
                     </router-link>
                 </div>
@@ -288,18 +288,19 @@
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-areas">
-                        <AreaHome v-for="area of Allareas" :name = "area.name" :p1="area.p1" :ph="area.ph" :p2="area.p2" :link="'/areas/' + area.id"/>
+                        <AreaHome v-for="area of Allareas" :name="area.name" :p1="area.p1" :ph="area.ph" :p2="area.p2"
+                            :link="'/areas/' + area.id" />
                     </div>
                 </desktop>
             </div>
             <div v-else>
                 <mobile>
                     <div class="column">
-                        
+
                     </div>
                 </mobile>
             </div>
-            
+
 
         </section>
     </main>

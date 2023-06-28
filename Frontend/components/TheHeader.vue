@@ -11,7 +11,7 @@
                         </h4>
                         <nav>
                             <span>
-                                <p><router-link to="/History" class="nav-link" exact-active-class="active-link">About
+                                <p><router-link to="/aboutus" class="nav-link" exact-active-class="active-link">About
                                         Us</router-link></p>
                             </span>
                             <router-link to="/people" class="nav-link" exact-active-class="active-link">Our
@@ -76,7 +76,7 @@
                                     <div class="sidemenu__wrapper">
                                         <ul class="sidemenu__list">
                                             <span>
-                                                <p><router-link to="/History" class="nav-link">About Us</router-link></p>
+                                                <p><router-link to="/aboutus" class="nav-link">About Us</router-link></p>
                                             </span>
                                             <p> <router-link to="/people" class="nav-link">Our Team</router-link></p>
 
