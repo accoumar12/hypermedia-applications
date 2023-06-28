@@ -379,10 +379,11 @@ export default async (models) => {
         companySup[j] = await models.Company.create(c);
         j = j + 1;
     }
+    console.log('\n Debug who is this supervisor: \n',companySup[0])
 
-    const companySup0 = companySup[0] //await models.Company.create(personModel[0])
-    const companySup1 = companySup[1] //await models.Company.create(personModel[1])
-    const companySup2 = companySup[2] //await models.Company.create(personModel[2])
+    const companySup0 = 1 // companySup[0] //await models.Company.create(personModel[0])
+    const companySup1 = 2 // companySup[1] //await models.Company.create(personModel[1])
+    const companySup2 = 3 // companySup[2] //await models.Company.create(personModel[2])
     const companySup3 = companySup[3] //await models.Company.create(personModel[3])
     const companySup5 = companySup[5] //await models.Company.create(personModel[5])
     //const companySup = await models.Company.create(personModel)
