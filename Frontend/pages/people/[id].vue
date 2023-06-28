@@ -101,7 +101,9 @@
                                     @click="activeSection = 3">
                                     <br>
                                     CV
+
                                     </button>
+
                                 </div>
 
                                 <div class="description-container2" v-if="activeSection === 1">
@@ -122,10 +124,9 @@
                                         </ul>
                                     </p3>
                                 </div>
-                                <div v-else-if="activeSection === 3">
-                                    <p2 class="description">{{ person.cv }}</p2>
+                                <div class="description-container2" v-else-if="activeSection === 3">
+                                    <p2 class="description2">{{ person.cv }}</p2>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -228,53 +229,20 @@ const { data: companies } = await useFetch(useRuntimeConfig().public.serverURL +
     This allows to have a cached value that contains the filtered list.
     Instead of using the normal list for the cards, we used the computed property directly.
 */
-//const role = ref("");
-const areas = ref("");
 
 const filtered = computed(() => {
     const arrTot = []
     // Checking for values where the full list is provided
     for (let company of companies.value) {
-        if ((areas.value == 0 || areas.value == "") & (company.companyId == id)) {
+        console.log(id + company.companyId)
+        if (company.companyId == id) {
             console.log(company)
             arrTot.push(company)
         }
     }
     return arrTot
 
-    const arr = []
-
-
-    // Filtering the list
-    for (let company of companies.value) {
-        if (company.areas == areas.value) {
-            arr.push(company)
-        }/*
-        else if (company.areas.toLowerCase().includes(areas.value.toLowerCase()))
-            arr.push(company)*/
-    }
-
-    // Returning the filtered list
-    return arr
-
 })
-
-/*
-  var items = [
-    { text: person.award1 },
-    { text: person.award2 },
-    { text: person.award3 },
-    { text: person.award4 }
-  ];
-
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].text !== '') {
-      var listItem = document.createElement('li');
-      listItem.textContent = items[i].text;
-      document.getElementById('myList').appendChild(listItem);
-    }
-  }
-*/
 
 </script>
 
