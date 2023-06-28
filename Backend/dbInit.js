@@ -57,7 +57,7 @@ export default async (models) => {
     let i = 0;
 
     for (let c of areaModel) {
-        areas_field[i] = await models.Company.create(c);
+        areas_field[i] = await models.Area.create(c);
         i = i + 1;
     }
 
@@ -379,7 +379,7 @@ export default async (models) => {
         companySup[j] = await models.Company.create(c);
         j = j + 1;
     }
-    console.log('\n Debug who is this supervisor: \n',companySup[0])
+    console.log('\n Debug who is this supervisor: \n',companySup[0].id)
 
     const companySup0 = companySup[0] //await models.Company.create(personModel[0])
     const companySup1 = companySup[1] //await models.Company.create(personModel[1])
