@@ -16,19 +16,19 @@ In this repository you can find the design and the implementation of a website o
 The requirements contain some constraints about the relationships of the main entities of the website. The project is divided into four main parts: Design, Backend, Frontend and Usability test.
 
 ### Requirements
-Before starting you have to download or fork the project on your PC and follow the installation of [NodeJS](https://nodejs.org/en). Once done, you have to run in the both Backend and Frontend folders:
+Before starting you have to download or fork the project on your PC and follow the installation of [NodeJS](https://nodejs.org/en). Once done, you have to run in both Backend and Frontend folders:
 
 `
 npm install
 `
 
-When everything is ready, use:
+When everything is ready, use in the backend folder to ensure that everything is ok there:
 
 `
 node index.js
 `
 
-in the backend folder to ensure that everything is ok there. Therefore go in the frontend folder and run the project:
+Therefore go in the frontend folder and run the project:
 
 `
       npm run dev
@@ -37,7 +37,7 @@ in the backend folder to ensure that everything is ok there. Therefore go in the
 ### Architecture:
 In this section we talk about the high-level structure and organization of the hypermedia application. It describes the major components and their relationships, providing an understanding of how different sections of the system work together to achieve the specific functionality.
 
-1. **System Components**: The repository is split in two main part: Backend and Frontend. We will better focus in the specific section. In Backend you can find the relational database and the package needed to run the application (see the section Backend for more information). In the folder ''Frontend'' there is everything that is due to the design and implementation of the website: it means we put all the HTML/CSS code used to see the pages, the VUE components and the function used to see some interactive tool developed in the website.
+1. **System Components**: The repository is split into two main parts: Backend and Frontend. We will better focus on the specific sections. In Backend, you can find the relational database and the package needed to run the application (see the section \ref{sec: Backend} for more information). In the folder 'Frontend', there is everything that is due to the design and implementation of the website: it means we put all the HTML/CSS code used to see the pages together with the necessary javascript scripts needed to run the website. Together with the pages of the website, there is also a folder "components" with all the VUE components used in one or more pages of the website.
 2. **Component Interaction**: Backend and frontend communicate one each other thanks to JavaScript functions, like:
 
 `
