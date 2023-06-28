@@ -11,14 +11,14 @@
                         <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </NuxtLink>
                 </div>
-
+                <h1 class="name">{{ area.name }}</h1>
                 <div class="arrow-right">
                     <NuxtLink :to="area.id === 4 ? '/companies' : '/areas/' + (area.id+1)" class="nav-link">
                         <img src="~/assets/img/right-arrows.png" alt="right Arrow">
                     </NuxtLink>
                 </div>
             </div>
-            <h1 class="name">{{ area.name }}</h1>
+            
             <hr />
 
             <div v-if="!isMobile">
@@ -178,21 +178,25 @@ const filtered = computed(() => {
     background-position-x: center;
 }
 
-
 .arrow {
-    position: relative; /* Set the arrows to absolute position */
-    top: 0; /* Position them at the top */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the arrows on desktop */
+    margin-top: 2%;
+    margin-right: -50%;
 }
 
-.arrow-left {
-    position: absolute;
-    left: 0; /* Position the left arrow at the left side */
-}
-
+.arrow-left,
 .arrow-right {
-    position: absolute;
-    right: 0px; /* Position the right arrow at the right side */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
 .arrow img {
     max-width: 12%;
     max-height: 12%;
@@ -200,18 +204,45 @@ const filtered = computed(() => {
     animation: blink 4s infinite;
 }
 
-.arrow-left img {
-    padding-left: 15%;
-}
-.arrow-right img {
-    padding-right: 15%;
+.name {
+    flex: 1;
+    margin: 0;
 }
 
-.arrow-left img,
-.arrow-right img {
-    height: 10%;
-    width: 10%;
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: #e0e0e0;
 }
+.name {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .arrow {
+        margin-top: 20%; /* Add a top margin of 10% for mobile */
+        margin-right: 0%;
+    }
+    
+    .arrow-left,
+    .arrow-right {
+        width: 60px;
+        height: 30px;
+    }
+
+    .arrow img {
+        max-width: 80%;
+        max-height: 80%;
+    }
+    
+    .name {
+        text-align: center; /* Center align the name on mobile */
+        font-size: 32px;
+    }
+}
+
 
 
 @keyframes blink {
@@ -237,11 +268,6 @@ const filtered = computed(() => {
     text-align: center;
 }
 
-.name {
-    font-family: sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-}
 
 #data-container-c {
     margin-top: 10px;
