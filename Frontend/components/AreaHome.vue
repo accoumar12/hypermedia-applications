@@ -1,5 +1,4 @@
 <template>
-
     <div class="column">
         <NuxtLink :to="link" class="area-router">
             <div class="card-area">
@@ -7,10 +6,10 @@
                 </div>
                 <h3>{{ name }}</h3>
                 <p>
-                    {{ p1 }} 
+                    {{ p1 }}
                     <span class="highlight">
                         {{ ph }}
-                    </span> 
+                    </span>
                     {{ p2 }}
                 </p>
             </div>
@@ -19,11 +18,11 @@
 </template>
 
 <script setup>
-    const props = defineProps(['name', 'p1', 'ph', 'p2', 'link']);
+const props = defineProps(['name', 'p1', 'ph', 'p2', 'link']);
 </script>
 
 <style >
-    /*Section areas*/
+/*Section areas*/
 .row-areas {
     margin-bottom: 2%;
     margin-left: 5%;
@@ -89,6 +88,7 @@
 }
 
 span.highlight {
+    font-size: 18px;
     background-color: #d9f3f3;
 }
 
@@ -128,5 +128,4 @@ span.highlight {
         padding: 0 1em;
     }
 }
-
 </style>
