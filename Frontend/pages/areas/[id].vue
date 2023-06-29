@@ -7,18 +7,18 @@
         <div class="info-group">
             <div class="arrow">
                 <div class="arrow-left">
-                    <NuxtLink :to="area.id === 1 ? '/companies' : '/areas/' + (area.id-1)" class="nav-link">
-                        <img src="~/assets/img/left-arrows.png" alt="Left Arrow">
+                    <NuxtLink :to="area.id === 1 ? '/companies' : '/areas/' + (area.id - 1)" class="nav-link2">
+                        <img class="area-arrow" src="~/assets/img/left-arrows.png" alt="Left Arrow">
                     </NuxtLink>
                 </div>
                 <h1 class="name">{{ area.name }}</h1>
                 <div class="arrow-right">
-                    <NuxtLink :to="area.id === 4 ? '/companies' : '/areas/' + (area.id+1)" class="nav-link">
-                        <img src="~/assets/img/right-arrows.png" alt="right Arrow">
+                    <NuxtLink :to="area.id === 4 ? '/companies' : '/areas/' + (area.id + 1)" class="nav-link2">
+                        <img class="area-arrow" src="~/assets/img/right-arrows.png" alt="right Arrow">
                     </NuxtLink>
                 </div>
             </div>
-            
+
             <hr />
 
             <div v-if="!isMobile">
@@ -178,10 +178,20 @@ const filtered = computed(() => {
     background-position-x: center;
 }
 
+.nav-link2 {
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8em;
+    font-size: 16px;
+}
+
 .arrow {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center align the arrows on desktop */
+    justify-content: center;
     margin-top: 2%;
     margin-right: -50%;
 }
@@ -210,10 +220,6 @@ const filtered = computed(() => {
 }
 
 
-.arrow-left:hover,
-.arrow-right:hover {
-    background-color: #e0e0e0;
-}
 .name {
     font-family: sans-serif;
     font-size: 40px;
@@ -224,10 +230,10 @@ const filtered = computed(() => {
     .arrow {
         width: 80%;
         height: 80%;
-        margin-top: 20%; /* Add a top margin of 10% for mobile */
+        margin-top: 20%;
         margin-right: 0px;
     }
-    
+
     .arrow-left,
     .arrow-right {
         width: 90%;
@@ -237,14 +243,12 @@ const filtered = computed(() => {
         max-width: 80%;
         max-height: 80%;
     }
-    
+
     .name {
-        text-align: center; /* Center align the name on mobile */
+        text-align: center;
         font-size: 32px;
     }
 }
-
-
 
 @keyframes blink {
     0% {
@@ -380,14 +384,14 @@ hr {
     text-align: justify;
     font-family: PT sans-serif;
 }
+
 .description-container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
     text-align: justify;
-    font-family: PT sans-serif;
-    /* padding: 8%; */
+    font-family: sans-serif;
     font-size: 13pt;
 }
 
@@ -448,14 +452,15 @@ hr {
     .arrow {
         width: 40%;
     }
+
     .arrow-left {
         position: absolute;
-        left: -212px; /* Position the left arrow at the left side */
+        left: -212px;
     }
 
     .arrow-right {
         position: absolute;
-        right: -212px; /* Position the right arrow at the right side */
+        right: -212px;
     }
 
     .arrow img {
@@ -494,6 +499,13 @@ hr {
     .row-section3 {
         gap: 1%;
         padding-bottom: 1%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-link2 {
+        font-size: 1rem;
+        padding: 0.3em;
     }
 }
 </style>
