@@ -2,7 +2,7 @@
 
 This is the official repository of the Hypermedia Web Application project, course followed in Politecnico di Milano during the Academic year 2022/23
 
-This website has been designed for a Venture Capital Company. Attached you can find the Design document and the implementation code (and usability inspection?) of the website.
+This website has been designed for a Venture Capital Company. Attached you can find the Design document, the [documentation](https://github.com/Rkomi98/VenTour/tree/main/Documents/Documentation), and the implementation code (and usability inspection?) of the website.
 
 The authors are:
 
