@@ -50,7 +50,7 @@
   <section id="back-c">
     <div id="header1">
       <h1>OUR BRIEF HISTORY</h1>
-      <p>Our history brings inovation.With a rich legacy spanning decades, we have been at the forefront of driving
+      <p>Our history brings inovation. With a rich legacy spanning decades, we have been at the forefront of driving
         transformative change and empowering startups to shape the future.With a rich heritage spanning over two
         decades,
         our venture company has been at the forefront of fueling innovation, supporting promising startups, and
