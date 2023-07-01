@@ -1,0 +1,31 @@
+\documentclass[../../DD.tex]{subfiles}
+\begin{document}
+\section{C-IDM}
+\textit{C-IDM} (Content Interactive Dialogue Model) represents the types of subjects and how they are grouped and related to each other.
+
+\paragraph{Person} The first kind of topic that we encounter in the structure of the model is \textit{People}. This entity represents the entity in which there are all the people who work in the VenTour company. 
+    They can be filtered through their department, which can be:
+    \begin{itemize}
+        \item \textbf{Management}: people who work in this team develop and implement strategic plans, set organizational goals, and provide leadership to drive the company's growth and success. 
+        \item \textbf{Investment}: people who work in this team assess risk factors, and make informed investment decisions to optimize the company's financial performance.
+        \item \textbf{Operation and Finance}: people who work in this team monitor cash flow and implement cost-saving measures while maintaining quality standards to support the company's overall objectives.
+        \item \textbf{Advisoring}: people who work in this team offer valuable insights, assess risks, and provide recommendations on key decisions, helping the company navigate on every challenge.
+    \end{itemize}
+    A person of the company can be supervisor of one or more investment projects. The projects in which each person is supervisor can be seen in his/her dedicated page.
+
+    \paragraph{Investment} Each Investment project needs only one supervisor among the people working in the company. In average, each person (who is supervisor) manages 3 companies. \\
+    In "Investments" page the user can find all the company and filter them by relevance (Most relevant Investments), by name (searching part of the name in the specific field) or by area.\\
+
+    Each Investment project belongs to a specific area. Therefore, there are some investments which belongs to the same area.
+
+    \paragraph{Area} The third topic is given by area. Each area can address multiple investment. In the page dedicated to each specific area it is possible to see all the investment project that belongs to that area.
+
+    \paragraph{Top Investments} The fourth topic is strictly related to the Investment page and contains the most relevant investment projects in which the VenTour Capital company is working now. They can also be found in Investments page using the proper filter.
+    
+	\paragraph{Get In touch and About us} Two single topics are included in the diagram: they are: 
+ \begin{itemize}
+     \item \textit{About Us}, that is the \textit{VenTour} entity, with its history, and its investment approach.
+     \item \textit{Get In Touch}, that includes ways to contact the office to apply for a free position in the company or to arrange an agreement as a startup with Ventour.
+ \end{itemize}
+	\image{11.8 cm}{IDM/C-IDM.pdf}{C-IDM of the VenTour website}{c-idm}
+\end{document}
