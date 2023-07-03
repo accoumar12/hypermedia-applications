@@ -6,7 +6,7 @@
     <main id="back">
         <div class="info-group">
             <div class="arrow">
-                <router-link to="/companies"><img src="~/assets/img/left-arrows.png"></router-link>
+                <router-link to="/companies"><img src="~/assets/img/left-arrows.png" alt="Left Arrow"></router-link>
             </div>
             <h1 class="name">{{ company.name }}</h1>
             <div id="data-container-c">
@@ -24,7 +24,7 @@
                 <desktop>
                     <div class="row-section">
                         <div class="column-c">
-                            <img id="main-img" :src="company.image" />
+                            <img id="main-img" :src="company.image" alt="Company Image"/>
                         </div>
                         <div class="column2-c">
                             <div class="description-container">
@@ -46,7 +46,7 @@
 
                     <div class="column-section">
                         <div class="column-c">
-                            <img id="main-img3" :src="company.image" />
+                            <img id="main-img3" :src="company.image" alt="Company Image"/>
                         </div>
                         <div class="column2-c">
                             <div class="description-container2">

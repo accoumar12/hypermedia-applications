@@ -6,7 +6,7 @@
     <main id="back">
         <div class="info-group">
             <div class="arrow">
-                <router-link to="/people"><img src="~/assets/img/left-arrows.png"></router-link>
+                <router-link to="/people"><img src="~/assets/img/left-arrows.png" alt="Arrow"></router-link>
             </div>
             <h1 class="name">{{ person.name }}</h1>
             <div id="data-container">
@@ -23,7 +23,7 @@
                 <desktop>
                     <div class="row-section">
                         <div class="column-b">
-                            <img id="main-img2" :src="person.image" />
+                            <img id="main-img2" :src="person.image" alt="Person Image"/>
                         </div>
                         <div class="column2">
                             <div class="button-container" style="position: relative; top: 0; z-index: 1;">
@@ -82,7 +82,7 @@
                 <mobile>
                     <div class="column">
                         <div class="column">
-                            <img id="main-img2" :src="person.image" />
+                            <img id="main-img2" :src="person.image" alt="Person Image"/>
                         </div>
                         <div class="column2">
                             <div class="description-containera2">
@@ -160,22 +160,6 @@
         </div>
     </main>
 
-
-    <!--<SmallCard :title="person.company.name" :subtitle="person.company.area" :link="'/companies/' + person.company.id" />-->
-    <!--
-            <div class="column3">
-                <img src="image1.jpg" alt="Image 1">
-                <p>Text for image 1</p>
-            </div>
-            <div class="column3">
-                <img src="image2.jpg" alt="Image 2">
-                <p>Text for image 2</p>
-            </div>
-            <div class="column3">
-                <img src="image3.jpg" alt="Image 3">
-                <p>Text for image 3</p>
-            </div>
-</div>-->
 </template>
         <!--
             v-html allows us to change the structure of a HTML element.

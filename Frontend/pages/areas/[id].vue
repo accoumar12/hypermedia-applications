@@ -24,7 +24,7 @@
                 <desktop>
                     <div class="row-section">
                         <div class="column-c">
-                            <img id="main-img-area" :src="area.image" />
+                            <img id="main-img-area" :src="area.image" alt="Area Image"/>
                         </div>
                         <div class="column2-c">
                             <div class="description-container">
@@ -40,7 +40,7 @@
                 <mobile>
                     <div class="column-section">
                         <div class="column-c">
-                            <img id="main-img3" :src="area.image" />
+                            <img id="main-img3" :src="area.image" alt="Area Image"/>
                         </div>
                         <div class="column2-c">
                             <div class="description-container2">

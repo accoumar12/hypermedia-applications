@@ -2,7 +2,7 @@
     <div class="row-c">
         <NuxtLink :to="link">
             <div class="image-container-section">
-                <img class="img" :src="image" />
+                <img class="img" :src="image" alt="Company Logo"/>
 
                 <p><span class="subtitle2">CEO: {{ subtitle }}</span></p>
                 <p><span class="subtitle2">Area: {{ area }}</span></p>
