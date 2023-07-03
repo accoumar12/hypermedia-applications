@@ -217,15 +217,15 @@
 <script>
 export default defineNuxtComponent({
   head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Contact VenTour - Get in touch with VenTour for inquiries, company registrations, and job applications. Learn how to apply for open positions or register your company with VenTour to explore investment opportunities.",
-                },
-            ],
-        };
-    },
+    return {
+      meta: [
+        {
+          name: "description",
+          content: "Contact VenTour - Get in touch with VenTour for inquiries, company registrations, and job applications. Learn how to apply for open positions or register your company with VenTour to explore investment opportunities.",
+        },
+      ],
+    };
+  },
   data() {
     return {
       activeSection: 1,
@@ -574,7 +574,6 @@ select {
 }
 
 .co-container {
-  max-width: 450px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -599,16 +598,12 @@ select {
 
 @media screen and (max-width: 700px) {
   .co-container {
-    max-width: 100%;
-    /* Adjusted to full width */
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 35px;
   }
 
   .header-center {
     font-size: 32px;
-    max-width: 100%;
-    /* Adjusted font size for smaller screens */
+    max-width: 70%;
     padding-right: 10px;
   }
 }
