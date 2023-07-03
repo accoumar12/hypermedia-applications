@@ -29,7 +29,7 @@
       <div class="job-boards-company-grid">
         <router-link to="/companies/Areas/healthcare">
           <div class="job-boards-company-item">
-            <img class="job-boards-company-logo" alt="Personio logo"
+            <img class="job-boards-company-logo" alt="HealthcareLogo"
               src="https://img.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg?w=826&t=st=1684688733~exp=1684689333~hmac=e2274bf2ff9039e3bec16c71647d0e149af066fb21aa3e84011cea30dcc2d821"
               width="240" height="160">
 
@@ -42,7 +42,7 @@
         </router-link>
         <router-link to="/companies/Areas/technology">
           <div class="job-boards-company-item">
-            <img class="job-boards-company-logo" alt="Personio logo"
+            <img class="job-boards-company-logo" alt="Technology logo"
               src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg?w=826&t=st=1684688628~exp=1684689228~hmac=9ee5d32fec913dab6323d9796c550d1106c27e8f15aa3744659eb846175cb796"
               width="240" height="160">
 
@@ -57,7 +57,7 @@
       <div class="job-boards-company-grid">
         <router-link to="/companies/Areas/consumer">
           <div class="job-boards-company-item">
-            <img class="job-boards-company-logo" alt="Personio logo"
+            <img class="job-boards-company-logo" alt="Consumer logo"
               src="https://img.freepik.com/free-vector/grocery-shopping-concept-illustration_114360-8991.jpg?w=826&t=st=1684688644~exp=1684689244~hmac=872efd172603cca9271028aef17524056d90ff660a4d461401126314c605b3e7"
               width="240" height="160">
             <h2 class="job-boards-company-name">
@@ -69,7 +69,7 @@
         </router-link>
         <router-link to="/companies/Areas/sustainability">
           <div class="job-boards-company-item">
-            <img class="job-boards-company-logo" alt="Personio logo"
+            <img class="job-boards-company-logo" alt="Sustainability logo"
               src="https://img.freepik.com/free-vector/palm-tree-concept-illustration_114360-9480.jpg?w=826&t=st=1684688781~exp=1684689381~hmac=da1284ec9192e47ae74a52c8dd503363c02b544475ec133edd23169b8e37e795"
               width="240" height="160">
 
@@ -124,7 +124,7 @@
       <h1>Do you have knowledge in Frontend Technologies: </h1>
       <div class="job-boards-company-grid">
         <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
+          <img class="job-boards-company-logo" alt="Vue logo"
             src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png">
           <a href="https://vuejs.org/" target="_blank">
             <h2 class="job-boards-company-name">
@@ -159,7 +159,7 @@
           </div>
         </div>
         <div class="job-boards-company-item">
-          <img class="job-boards-company-logo" alt="Personio logo"
+          <img class="job-boards-company-logo" alt="Javascript logo"
             src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png">
           <a href="https://www.w3schools.com/js/default.asp" target="_blank">
             <h2 class="job-boards-company-name">
