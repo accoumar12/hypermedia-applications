@@ -7,7 +7,7 @@
             <desktop>
                 <div class="header-container">
                     <header>
-                        <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png"></router-link>
+                        <h4><router-link to="/"><img class="logo" src="~/assets/img/logo-witho-bck-slog.png" alt="VenTour Logo"></router-link>
                         </h4>
                         <nav>
                             <span>
@@ -63,7 +63,7 @@
                     <header>
                         <a class="navbar-item">
                             <router-link to="/"><img src="~/assets/img/logo-witho-bck-slog.png" width="50"
-                                    height="50"></router-link>
+                                    height="50" alt="VenTour Logo"></router-link>
                         </a>
                         <div id="sidemenu" class="sidemenu">
                             <button class="sidemenu__btn" @click="navOpen = !navOpen" :class="{ active: navOpen }">
