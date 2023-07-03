@@ -7,7 +7,7 @@ export default async (models) => {
             name: "Technology",
             description: "VenTour understands the importance of technology investments and is committed to investing in cutting-edge technologies. We have a team of experienced professionals who have an eye for identifying promising technologies and the potential to change the world. By investing in technology, VenTour aims to support startups that are focused on creating innovative solutions to complex problems.",
             description2: "VenTour has been investing in technology companies for years, contributing to the growth and success of some of the most innovative businesses in the industry. VenTour's extensive knowledge and expertise in technology investments have helped its portfolio companies reach their full potential.",
-            image: "https://raw.githubusercontent.com/Rkomi98/VenTour/main/Frontend/assets/img/technology.png",
+            image: "https://raw.githubusercontent.com/Rkomi98/VenTour/main/Frontend/assets/img/tech-team.png",
             logo: "https://raw.githubusercontent.com/Rkomi98/VenTour/main/Frontend/assets/img/technology.png",
             data_target: 100,
             p1 : "We are",

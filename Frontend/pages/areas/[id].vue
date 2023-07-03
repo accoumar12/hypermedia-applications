@@ -3,6 +3,10 @@
     As described in the SmallCard component, the same component was used for both Area and Location since they have the same structure.
 -->
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Explore the area of investment of VenTour. Learn about the focus, potential investments, and success stories within this area of expertise, including the company involved.">
+    </head>
     <main id="back">
         <div class="info-group">
 
@@ -91,22 +95,13 @@
             </div>
         </div>
     </main>
+</div>
 </template>
      
 
 <script>
 
 export default defineNuxtComponent({
-    head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Explore the area of investment of VenTour. Learn about the focus, potential investments, and success stories within this area of expertise, including the company involved.",
-                },
-            ],
-        };
-    },
     data() {
         return {
             activeSection: 1,

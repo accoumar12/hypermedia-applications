@@ -9,6 +9,10 @@
     - link: link to the page description
 -->
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Cards with persone image and details">
+    </head>
     <div class="row">
         <div class="image-container">
             <span class="subtitle">
@@ -34,6 +38,7 @@
 
 
     </div>
+</div>
 </template>
 
 <script setup>

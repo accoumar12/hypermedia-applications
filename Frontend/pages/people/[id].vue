@@ -3,6 +3,10 @@
     As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Details of the person working in the area - Explore his or her profile at VenTour, including their area of investment, CV, awards achieved, and where he/she is supervisory role.">
+    </head>
     <main id="back">
         <div class="info-group">
             <div class="arrow">
@@ -159,6 +163,7 @@
             </div>
         </div>
     </main>
+</div>
 
 </template>
         <!--
@@ -168,16 +173,6 @@
         -->  
 <script>
 export default defineNuxtComponent({
-    head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Details of the person working in the area - Explore his or her profile at VenTour, including their area of investment, CV, awards achieved, and where he/she is supervisory role.",
-                },
-            ],
-        };
-    },
     data() {
         return {
             activeSection: 1,

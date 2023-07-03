@@ -1,4 +1,8 @@
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Cards defined for Companies">
+    </head>
     <div class="row-c">
         <NuxtLink :to="link">
             <div class="image-container-section">
@@ -9,6 +13,7 @@
             </div>
         </NuxtLink>
     </div>
+</div>
 </template>
     
 <script setup>

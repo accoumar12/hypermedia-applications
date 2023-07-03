@@ -6,7 +6,7 @@
     <head>
       <meta name="description" content="Page of Most Relevant Projects - VenTour">
     </head>
-    <main id="back" class="col-md-4">
+    <main id="back">
         <div class="col-md-4">
             <div class="image-text-overlay text-middle-left">
                 <p>

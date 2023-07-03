@@ -3,6 +3,10 @@
     As described in the Card component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
+<div>
+    <head>
+      <meta name="description" content="Meet Our Team - Get to know the talented members of VenTour, their expertise, and departments.">
+    </head>
     <main>
         <section class="container custom-container">
             <div class="co-container">
@@ -117,6 +121,7 @@
         </section>
 
     </main>
+</div>
 </template>
   
 <script setup>
@@ -152,16 +157,6 @@ const filtered = computed(() => {
 
 <script>
 export default {
-    head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Meet Our Team - Get to know the talented members of VenTour, their expertise, and departments.",
-                },
-            ],
-        };
-    },
     data() {
         return {
             isMobile: false,

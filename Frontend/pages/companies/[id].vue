@@ -3,6 +3,10 @@
     As described in the SmallCard component, the same component was used for both Person and Location since they have the same structure.
 -->
 <template>
+<div>
+    <head>
+      <meta name="description" content="Learn about the company, discover detailed information about it, including a brief description, the associated area of investment, the supervisor at VenTour, and the official website of the company.">
+    </head>
     <main id="back">
         <div class="info-group">
             <div class="arrow">
@@ -67,6 +71,7 @@
             <hr />
         </div>
     </main>
+</div>
 </template>
      
 

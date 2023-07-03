@@ -2,12 +2,16 @@
     This small component has been made to show the specific area for each company or Person.
 -->
 <template>
+<div>
+    <head>
+      <meta name="description" content="Area cards used to show area of investments">
+    </head>
     <NuxtLink class="link" :to="link">
         <div class="hover-content2">
             <p><span class="subtitle">Area of investment: {{ name }}</span></p>
         </div>
     </NuxtLink>
-                    
+</div>
 </template>
 
 <script setup>
