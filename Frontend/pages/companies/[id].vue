@@ -73,6 +73,16 @@
 <script>
 
 export default defineNuxtComponent({
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Learn about the company, discover detailed information about it, including a brief description, the associated area of investment, the supervisor at VenTour, and the official website of the company.",
+                },
+            ],
+        };
+    },
     data() {
         return {
             activeSection: 1,

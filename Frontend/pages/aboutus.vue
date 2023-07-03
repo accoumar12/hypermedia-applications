@@ -194,6 +194,16 @@
 import Carousel from '/components/Carousel.vue'
 
 export default {
+  head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "About Us - Discover the history and vision of VenTour, a leading investment company.",
+                },
+            ],
+        };
+  },
   name: 'History',
   components: {
     Carousel

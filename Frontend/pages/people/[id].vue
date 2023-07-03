@@ -184,6 +184,16 @@
         -->  
 <script>
 export default defineNuxtComponent({
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Details of the person working in the area - Explore his or her profile at VenTour, including their area of investment, CV, awards achieved, and where he/she is supervisory role.",
+                },
+            ],
+        };
+    },
     data() {
         return {
             activeSection: 1,

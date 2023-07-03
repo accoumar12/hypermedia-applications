@@ -97,6 +97,16 @@
 <script>
 
 export default defineNuxtComponent({
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Explore the area of investment of VenTour. Learn about the focus, potential investments, and success stories within this area of expertise, including the company involved.",
+                },
+            ],
+        };
+    },
     data() {
         return {
             activeSection: 1,

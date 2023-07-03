@@ -192,6 +192,16 @@ const filtered = computed(() => {
 
 <script>
 export default {
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Explore the investments at VenTour - View a comprehensive list of all the investments made by VenTour, including details about the companies with their ceo and the area in which they are included",
+                },
+            ],
+        };
+    },
     methods: {
         updateText(newText) {
             this.rightColumnText = newText;

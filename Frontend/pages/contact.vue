@@ -216,6 +216,16 @@
 </template>
 <script>
 export default defineNuxtComponent({
+  head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Contact VenTour - Get in touch with VenTour for inquiries, company registrations, and job applications. Learn how to apply for open positions or register your company with VenTour to explore investment opportunities.",
+                },
+            ],
+        };
+    },
   data() {
     return {
       activeSection: 1,
