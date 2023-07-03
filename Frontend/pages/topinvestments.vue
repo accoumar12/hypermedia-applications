@@ -57,12 +57,9 @@
             <div class="col3top">
                 <router-link to="/companies" class="nav-link-end">
                     <a class="card13top">
-                        <h3>CHECK ALL INVESTMENTS</h3>
                         <div class="go-cornertop">
-                            <div class="go-arrowtop">
-                                →
-                            </div>
                         </div>
+                        <h3>CHECK ALL INVESTMENTS</h3>
                     </a>
                 </router-link>
             </div>
