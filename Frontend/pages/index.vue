@@ -2,6 +2,10 @@
     Home page
 -->
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Home page of VenTour - Discover the best investment opportunities.">
+    </head>
     <main>
         <section class="responsive-section1">
             <div class="column-container">
@@ -305,6 +309,7 @@
 
         </section>
     </main>
+</div>
 </template>
 
 <script setup>
@@ -318,17 +323,6 @@ const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + 
 
 const searchText = ref("");
 export default {
-    head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Home page of VenTour - Discover the best investment opportunities.",
-                },
-            ],
-        };
-    },
-
     data() {
         return {
             isMobile: false,

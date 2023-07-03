@@ -2,6 +2,10 @@
     Page Of Most Relevant Projects
 -->
 <template>
+    <div>
+    <head>
+      <meta name="description" content="Page of Most Relevant Projects - VenTour">
+    </head>
     <main id="back">
         <div class="col-md-4">
             <div class="image-text-overlay text-middle-left">
@@ -65,22 +69,9 @@
             </div>
         </section>
     </main>
+</div>
 </template>
 
-<script>
-export default {
-    head() {
-        return {
-            meta: [
-                {
-                    name: "description",
-                    content: "Page of Most Relevant Projects - VenTour",
-                },
-            ],
-        };
-    },
-};
-</script>
 
 <style>
 #back {
