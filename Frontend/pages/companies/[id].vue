@@ -157,14 +157,12 @@ const AreaCompany = computed(() => {
 }
 
 .arrow {
-  width: 56%;
-  height: 15%;
-  padding-top: 6%;
-  padding-right: 48%;
+    height: 15%;
+    padding-top: 6%;
 }
 
 .arrow img {
-    max-width: 12%;
+    max-width: 8%;
     max-height: 12%;
     position: relative;
     animation: blink 4s infinite;
@@ -271,8 +269,7 @@ hr {
     align-items: center;
     margin-top: 10px;
     text-align: justify;
-    font-family: PT sans-serif;
-    padding: 8%;
+    font-family: sans-serif;
     font-size: 13pt;
 }
 

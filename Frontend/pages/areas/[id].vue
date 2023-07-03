@@ -5,6 +5,7 @@
 <template>
     <main id="back">
         <div class="info-group">
+
             <div class="arrow">
                 <div class="arrow-left">
                     <NuxtLink :to="area.id === 1 ? '/companies' : '/areas/' + (area.id - 1)" class="nav-link2">
@@ -18,9 +19,7 @@
                     </NuxtLink>
                 </div>
             </div>
-
             <hr />
-
             <div v-if="!isMobile">
                 <desktop>
                     <div class="row-section">
@@ -193,7 +192,6 @@ const filtered = computed(() => {
     align-items: center;
     justify-content: center;
     margin-top: 2%;
-    margin-right: -50%;
 }
 
 .arrow-left,
@@ -208,7 +206,7 @@ const filtered = computed(() => {
 }
 
 .arrow img {
-    max-width: 12%;
+    max-width: 8%;
     max-height: 12%;
     position: relative;
     animation: blink 4s infinite;
@@ -228,7 +226,6 @@ const filtered = computed(() => {
 
 @media (max-width: 600px) {
     .arrow {
-        width: 80%;
         height: 80%;
         margin-top: 20%;
         margin-right: 0px;
@@ -240,7 +237,7 @@ const filtered = computed(() => {
     }
 
     .arrow img {
-        max-width: 80%;
+        max-width: 20%;
         max-height: 80%;
     }
 
@@ -449,9 +446,6 @@ hr {
 }
 
 @media (max-width: 300px) {
-    .arrow {
-        width: 40%;
-    }
 
     .arrow-left {
         position: absolute;
@@ -484,7 +478,6 @@ hr {
     }
 
     .description-container2 {
-        padding: 3%;
         font-size: 14px;
     }
 
