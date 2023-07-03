@@ -14,10 +14,10 @@
               </div>
               <div class="arrow-c">
                 <div class="left-arrow-container">
-                  <img class="left-arrow" @click="prev" src="~/assets/img/left-arrows.png" />
+                  <img class="left-arrow" @click="prev" src="~/assets/img/left-arrows.png"  alt="left-arrow" />
                 </div>
                 <div class="right-arrow-container">
-                  <img class="right-arrow" @click="next" src="~/assets/img/right-arrows.png" />
+                  <img class="right-arrow" @click="next" src="~/assets/img/right-arrows.png" alt="right-arrow" />
                 </div>
               </div>
             </div>
