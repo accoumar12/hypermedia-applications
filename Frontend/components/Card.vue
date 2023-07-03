@@ -12,9 +12,7 @@
     <div class="row">
         <div class="image-container">
             <span class="subtitle">
-                <img class="img" :src="image" />
-
-                <!--<img class="img" src='~/assets/img/People/P01.png' />-->
+                <img class="img" :src="image" alt="Person image"/>
 
                 <h2>{{ title }}</h2>
 

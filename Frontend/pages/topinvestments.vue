@@ -69,6 +69,22 @@
         </section>
     </main>
 </template>
+
+<script>
+export default {
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Page of Most Relevant Projects - VenTour",
+                },
+            ],
+        };
+    },
+};
+</script>
+
 <style>
 #back {
     width: 100%;

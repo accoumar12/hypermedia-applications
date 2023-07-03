@@ -152,6 +152,16 @@ const filtered = computed(() => {
 
 <script>
 export default {
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Meet Our Team - Get to know the talented members of VenTour, their expertise, and departments.",
+                },
+            ],
+        };
+    },
     data() {
         return {
             isMobile: false,

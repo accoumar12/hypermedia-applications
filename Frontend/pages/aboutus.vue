@@ -70,14 +70,14 @@
     <div class="row1-container">
       <div class="box box-down cyan">
         <h2>Growing Markets</h2>
-        <img class="ikona" src="~/assets/img/market-analysis.png">
+        <img class="ikona" src="~/assets/img/market-analysis.png" alt="Market-Icon">
         <p>We look for startups that are addressing large and growing markets with significant untapped potential. We
           assess the size of the market, the competitive landscape, and the potential for disruption.</p>
 
       </div>
       <div class="box red">
         <h2>Team Experience</h2>
-        <img class="ikona" src="~/assets/img/teamexp.png">
+        <img class="ikona" src="~/assets/img/teamexp.png" alt="Team-Icon">
         <p>We believe that the founding team is critical to the success of any startup. We evaulate the team's
           experience,
           skills, and track record to ensure that they have the expertise and leadership necessary to execute on their
@@ -86,7 +86,7 @@
       </div>
       <div class="box box-down blue">
         <h2>Startup Products</h2>
-        <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg">
+        <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="Startup-Icon">
         <p>We evaluate the startup's product or technology to ensure that it has a strong competitive advantage and
           addresses a real customer need. We assess the potential for scalability and the potential for further
           innovation
@@ -97,7 +97,7 @@
     <div class="row2-container">
       <div class="box orange">
         <h2>Customer Needs</h2>
-        <img class="ikona" src="~/assets/img/customer-need.png">
+        <img class="ikona" src="~/assets/img/customer-need.png" alt="Customer-Icon">
         <p>We focus on analyzing the alignment with market demand and customer needs. We assess the clarity and
           feasibility of the company's objectives, ensuring that they are relevant and time-bound.
           We evaluate the strategic plans, including actions and milestones outlined to achieve the specific objectives.
@@ -117,7 +117,7 @@
       <div class="card-o">
         <img
           src="https://media.istockphoto.com/id/494940062/photo/financial-concept-business-and-money.jpg?b=1&s=170667a&w=0&k=20&c=XPiQNsS1zIOyNLFDeffchh6T03A_mkR2IkBP06J9iyw="
-          alt="">
+          alt="Support">
         <div class="card-content-o">
           <h2>
             SUPPORT
@@ -137,7 +137,7 @@
       <div class="card-o">
         <img
           src="https://media.istockphoto.com/id/950986640/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?b=1&s=170667a&w=0&k=20&c=RvubsRQ8G-ZHiD0VyahnuZWKoQ-88HMnGQMBFSnOBjU="
-          alt="">
+          alt="Guidance">
         <div class="card-content-o">
           <h2>
             GUIDANCE
@@ -157,7 +157,7 @@
       <div class="card-o">
         <img
           src="https://media.istockphoto.com/id/1468415656/photo/interest-rate-and-dividend-concept-businessman-with-percentage-symbol-and-up-arrow-interest.jpg?b=1&s=170667a&w=0&k=20&c=TeLXGpi5W-S04Lq0pSFluYu-xb7TpLa3isCcUiMOJb4="
-          alt="">
+          alt="Resources">
         <div class="card-content-o">
           <h2>
             RESOURCES
@@ -194,6 +194,16 @@
 import Carousel from '/components/Carousel.vue'
 
 export default {
+  head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "About Us - Discover the history and vision of VenTour, a leading investment company.",
+                },
+            ],
+        };
+  },
   name: 'History',
   components: {
     Carousel

@@ -25,11 +25,11 @@
                 <div class="column-right">
                     <div class="row-container">
                         <div class="row-top1">
-                            <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png"></a>
-                            <a href="#areasrep"><img class="firstimg2" src="~/assets/img/logo_transparent2.png"></a>
+                            <a href="#numbers"><img class="firstimg3" src="~/assets/img/logo_transparent3.png" alt ="In 3 continents"></a>
+                            <a href="#areasrep"><img class="firstimg2" src="~/assets/img/logo_transparent2.png" alt ="4 investment areas"></a>
                         </div>
                         <div class="row-bottom1">
-                            <img class="firstimg" src="~/assets/img/logo_transparent.png">
+                            <img class="firstimg" src="~/assets/img/logo_transparent.png" alt ="We are growth">
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <div class="row-container">
                                 <div class="row-top">
                                     <div class="card card11">
-                                        <img class="icon-circle" src="~/assets/img/innovation.png">
+                                        <img class="icon-circle" src="~/assets/img/innovation.png" alt="Innovation">
                                         <h2 class="titleofcard">Empowering Innovation</h2>
                                         <p>Innovation is at the core of everything we do. We actively
                                             seek
@@ -77,7 +77,7 @@
                                             from technology and healthcare to energy and beyond. </p>
                                     </div>
                                     <div class="card card11">
-                                        <img class="icon-circle" src="~/assets/img/fuel.png">
+                                        <img class="icon-circle" src="~/assets/img/fuel.png" alt="Growth">
                                         <h2 class="titleofcard">Fuelling growth</h2>
                                         <p>We believe in the transformative power of ideas.We are a
                                             leading
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="row-bottom">
                                     <div class="card card11">
-                                        <img class="icon-circle" src="~/assets/img/unlock.png">
+                                        <img class="icon-circle" src="~/assets/img/unlock.png" alt="Potential">
                                         <h2 class="titleofcard">Unlocking potential</h2>
                                         <p>We partner with visionary entrepreneurs and startups at
                                             every
@@ -96,7 +96,7 @@
                                             invaluable expertise, resources, and a vast network of industry connections.</p>
                                     </div>
                                     <div class="card card11">
-                                        <img class="icon-circle" src="~/assets/img/worldwide.png">
+                                        <img class="icon-circle" src="~/assets/img/worldwide.png" alt="Global reach">
                                         <h2 class="titleofcard">Global Reach, Local Impact</h2>
                                         <p>We are rooted in
                                             startups in every country. Our experts
@@ -139,7 +139,7 @@
                         </div>
                         <div class="columnMobile">
                             <div class="card card11Mobile">
-                                <img class="icon-circle-mobile" src="~/assets/img/innovation.png">
+                                <img class="icon-circle-mobile" src="~/assets/img/innovation.png" alt="Innovation">
                                 <h2 class="titleofcardMobile">Empowering Innovation</h2>
                                 <p>Innovation is at the core of everything we do. We actively
                                     seek
@@ -148,7 +148,7 @@
                                     from technology and healthcare to energy and beyond. </p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle-mobile" src="~/assets/img/fuel.png">
+                                <img class="icon-circle-mobile" src="~/assets/img/fuel.png" alt="Growth">
                                 <h2 class="titleofcardMobile">Fuelling growth</h2>
                                 <p>We believe in the transformative power of ideas.We are a
                                     leading
@@ -157,7 +157,7 @@
                                     and empowering them to reach their full potential.</p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle-mobile" src="~/assets/img/unlock.png">
+                                <img class="icon-circle-mobile" src="~/assets/img/unlock.png" alt="Potential">
                                 <h2 class="titleofcardMobile">Unlocking potential</h2>
                                 <p>We partner with visionary entrepreneurs and startups at
                                     every
@@ -165,7 +165,7 @@
                                     invaluable expertise, resources, and a vast network of industry connections.</p>
                             </div>
                             <div class="card card11Mobile">
-                                <img class="icon-circle-mobile" src="~/assets/img/worldwide.png">
+                                <img class="icon-circle-mobile" src="~/assets/img/worldwide.png" alt="Global reach">
                                 <h2 class="titleofcardMobile">Global Reach, Local Impact</h2>
                                 <p>We are rooted in
                                     startups in every country. Our experts
@@ -184,7 +184,7 @@
                 <div class="midl-list">
                     <div class="repeater">
                         <div class="first-rep">
-                            <img class="rep-icon" src="~/assets/img/europe.png">
+                            <img class="rep-icon" src="~/assets/img/europe.png" alt="Europe">
                             <h7 class="number-text">EUROPE</h7>
                             <div class="text-container-list">
                                 <h8 class="text-up">strategically allocated 60% of our investments</h8>
@@ -195,7 +195,7 @@
                             </div>
                         </div>
                         <div class="first-rep2">
-                            <img class="rep-icon" src="~/assets/img/asia.png">
+                            <img class="rep-icon" src="~/assets/img/asia.png"  alt="Asia">
                             <h7 class="number-text">ASIA</h7>
                             <div class="text-container-list">
                                 <h8 class="text-up">dedicated 30% of our investments to this region</h8>
@@ -206,7 +206,7 @@
                             </div>
                         </div>
                         <div class="first-rep3">
-                            <img class="rep-icon" src="~/assets/img/america.png">
+                            <img class="rep-icon" src="~/assets/img/america.png"  alt="South America">
                             <h7 class="number-text">SOUTH AMERICA</h7>
                             <div class="text-container-list">
                                 <h8 class="text-up">10% of our portfolio dedicated to this vibrant
@@ -226,7 +226,7 @@
             <div class="container-top4">
                 <div class="box1">
                     <div class="imgBx">
-                        <img src="~/assets/img/Dell.png">
+                        <img src="~/assets/img/Dell.png" alt="Dell Logo">
                     </div>
                     <div class="content">
                         <div>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="box1">
                     <div class="imgBx">
-                        <img src="~/assets/img/nike.png">
+                        <img src="~/assets/img/nike.png" alt="Nike Logo">
                     </div>
                     <div class="content">
                         <div>
@@ -254,7 +254,7 @@
                 </div>
                 <div class="box1">
                     <div class="imgBx">
-                        <img src="~/assets/img/canadiansolar.png">
+                        <img src="~/assets/img/canadiansolar.png" alt="CanadianSolar Logo">
                     </div>
                     <div class="content">
                         <div>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="box1">
                     <div class="imgBx">
-                        <img src="~/assets/img/Cigna.png">
+                        <img src="~/assets/img/Cigna.png" alt="Cigna Logo">
                     </div>
                     <div class="content">
                         <div>
@@ -318,6 +318,16 @@ const { data: Allareas } = await useFetch(useRuntimeConfig().public.serverURL + 
 
 const searchText = ref("");
 export default {
+    head() {
+        return {
+            meta: [
+                {
+                    name: "description",
+                    content: "Home page of VenTour - Discover the best investment opportunities.",
+                },
+            ],
+        };
+    },
 
     data() {
         return {
