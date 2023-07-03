@@ -53,18 +53,20 @@
                 <label for="img-5" class="sb-bignav" title="Next">&#x203a;</label>
             </li>
         </ul>
-        <div class="col3">
-            <router-link to="/companies" class="nav-link-end">
-                <a class="card13-top">
-                    <h3>CHECK ALL INVESTMENTS</h3>
-                    <div class="go-corner">
-                        <div class="go-arrow">
-                            →
+        <section class="topbutton">
+            <div class="col3top">
+                <router-link to="/companies" class="nav-link-end">
+                    <a class="card13top">
+                        <h3>CHECK ALL INVESTMENTS</h3>
+                        <div class="go-cornertop">
+                            <div class="go-arrowtop">
+                                →
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </router-link>
-        </div>
+                    </a>
+                </router-link>
+            </div>
+        </section>
     </main>
 </template>
 <style>
@@ -201,6 +203,7 @@ label.sb-bignav:hover {
     background-color: rgba(255, 255, 255, 0.3);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
+
 @media (max-width: 600px) {
     .sb-bignav {
         margin-top: 10%;
@@ -234,14 +237,21 @@ input:checked+li>label {
     display: block;
 }
 
-.col3 {
+.col3top {
     max-width: 100%;
     margin: 2%;
-    display: flex;
     justify-content: center;
 }
 
-.card13-top {
+.col3top h3 {
+    color: #262626;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card13top {
     top: -75%;
     display: block;
     position: relative;
@@ -255,7 +265,7 @@ input:checked+li>label {
     overflow: hidden;
 }
 
-.card13-top:before {
+.card13top:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -270,32 +280,41 @@ input:checked+li>label {
     transition: transform 0.25s ease-out;
 }
 
-.card13-top:hover:before {
+.card13top:hover:before {
     transform: scale(21);
 }
 
-.card13-top:hover h3 {
+.card13top:hover h3 {
     transition: all 0.3s ease-out;
     color: #ffffff;
 }
+
+.nav-link-end {
+    text-decoration: none;
+}
+
+.topbutton {
+    margin-bottom: 2%;
+}
+
 @media (max-width: 600px) {
-    .col3 {
+    .col3top {
         margin: 1%;
     }
 
-    .card13-top {
+    .card13top {
         font-size: 16px;
         padding: 15px 15px;
     }
 
-    .card13-top:before {
+    .card13top:before {
         top: -6px;
         right: -6px;
         height: 12px;
         width: 12px;
     }
 
-    .card13-top:hover:before {
+    .card13top:hover:before {
         transform: scale(4);
     }
 }
@@ -303,6 +322,11 @@ input:checked+li>label {
 @media (max-width: 768px) {
     .col-md-4 {
         margin-top: 15% !important;
+    }
+
+    .card13top {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -347,6 +371,23 @@ input:checked+li>label {
 
     label[title="Next"] {
         margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .card13 {
+        display: block;
+        position: relative;
+        max-width: 80%;
+        font-size: 12px;
+        background-color: #f2f8f9;
+        border-radius: 10px;
+        padding: 20px 20px;
+        margin: 10px;
+        text-decoration: none;
+        z-index: 5;
+        overflow: hidden;
     }
 }
 
