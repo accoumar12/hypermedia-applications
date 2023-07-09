@@ -6,8 +6,8 @@
     <head>
       <meta name="description" content="Page of Most Relevant Projects - VenTour">
     </head>
-    <main id="back">
-        <div class="col-md-4">
+    <main id="backTI">
+        <div class="col-md-4TI">
             <div class="image-text-overlay text-middle-left">
                 <p>
                     <span class="overlay-title">TOP ACTUAL INVESTMENTS</span><br>
@@ -15,7 +15,7 @@
                         success!</span><br>
                 </p>
             </div>
-        </div>
+        
         <ul id="section-top">
             <input type="radio" name="radio-btn" id="img-1" checked />
             <li id="img-container">
@@ -68,13 +68,14 @@
                 </router-link>
             </div>
         </section>
+    </div>
     </main>
 </div>
 </template>
 
 
 <style>
-#back {
+#backTI {
     width: 100%;
     height: 100%;
     display: flex;
@@ -83,9 +84,10 @@
     background-position-x: center;
 }
 
-.col-md-4 {
-    position: relative;
-    width: 50%;
+.col-md-4TI {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-top: 5%;
     margin-right: 45%;
 }
@@ -135,8 +137,9 @@ li {
 }
 
 #section-top {
-    left: 6%;
-    width: 54%;
+    left: 50%;
+    align-items: center;
+    width: 100%;
     height: 525px;
     display: block;
     position: relative;
@@ -211,7 +214,10 @@ label.sb-bignav:hover {
 @media (max-width: 600px) {
     .sb-bignav {
         margin-top: 10%;
-        position: fixed;
+        width: 100px;
+        height: 66%;
+        display: none;
+        position: absolute;
         left: 20px;
         inset-inline: 80px;
         margin-inline: -100px;
@@ -257,9 +263,10 @@ input:checked+li>label {
 
 .card13top {
     top: -75%;
+    left: 80%;
     display: block;
     position: relative;
-    width: 100%;
+    width: 30%;
     font-size: 18px;
     background-color: #f2f8f9;
     border-radius: 10px;
@@ -304,11 +311,13 @@ input:checked+li>label {
 @media (max-width: 600px) {
     .col3top {
         margin: 1%;
+        width: 75%;
     }
 
     .card13top {
         font-size: 16px;
         padding: 15px 15px;
+        left: 15%;
     }
 
     .card13top:before {
@@ -324,7 +333,7 @@ input:checked+li>label {
 }
 
 @media (max-width: 768px) {
-    .col-md-4 {
+    .col-md-4TI {
         margin-top: 15% !important;
     }
 

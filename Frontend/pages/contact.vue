@@ -180,8 +180,9 @@
             <label class="labeljoin" for="customerName">NAME<em>&#x2a;</em></label><input id="customerName"
               name="customerName" required="" type="text" v-model="customerName" />
             <label class="labeljoin" for="customerEmail">EMAIL <em>&#x2a;</em></label>
-            <input id="customerEmail" v-model="customerEmail" name="customerEmail" required="" type="email" /><label
-              for="customerPhone">PHONE</label><input id="customerPhone" name="customerPhone"
+            <input id="customerEmail" v-model="customerEmail" name="customerEmail" required="" type="email" />
+            <label class="labeljoin" for="customerPhone">PHONE</label>
+            <input id="customerPhone" name="customerPhone"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" /><label class="labeljoin"
               for="country">COUNTRY<em>&#x2a;</em></label>
             <div class="mt-2">
@@ -565,7 +566,7 @@ select {
 }
 
 .co-container {
-  width: 100%;
+  width: 39%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
