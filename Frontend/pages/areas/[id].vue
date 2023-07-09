@@ -94,6 +94,15 @@
                 </mobile>
             </div>
         </div>
+        <div class="col3topAreas">
+                <router-link to="/companies" class="nav-link-end">
+                    <a class="card13Areastop">
+                        <div class="go-cornertop">
+                        </div>
+                        <h3>CHECK ALL AREAS</h3>
+                    </a>
+                </router-link>
+        </div>
     </main>
 </div>
 </template>
@@ -504,6 +513,84 @@ hr {
     .nav-link2 {
         font-size: 1rem;
         padding: 0.3em;
+    }
+}
+
+.col3topAreas {
+    max-width: 100%;
+    margin: 2%;
+    justify-content: center;
+}
+
+.col3topAreas h3 {
+    color: #262626;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card13Areastop {
+    top: -36%;
+    left: 0%;
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 18px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 20px 20px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.card13Areastop:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 60% 50%;
+    transition: transform 0.25s ease-out;
+}
+
+.card13Areastop:hover:before {
+    transform: scale(21);
+}
+
+.card13Areastop:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .card13Areastop {
+        margin: 1%;
+        width: 75%;
+    }
+
+    .card13Areastop {
+        font-size: 16px;
+        padding: 15px 15px;
+        top: 0%;
+        left: 5%;
+    }
+
+    .card13Areastop:before {
+        top: -6px;
+        right: -6px;
+        height: 12px;
+        width: 12px;
+    }
+
+    .card13Areastop:hover:before {
+        transform: scale(4);
     }
 }
 </style>
