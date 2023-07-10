@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/general.css'
   ],
-  ssr: false, // Set ssr to false for Static Site Generation
+  ssr: true, // Set ssr to false for Static Site Generation
   target: 'static', // Specify the target as static
   runtimeConfig: {
     public: {
