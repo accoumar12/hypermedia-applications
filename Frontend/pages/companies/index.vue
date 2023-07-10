@@ -4,80 +4,85 @@
 -->
 <template>
     <div>
-    <head>
-      <meta name="description" content="Explore the investments at VenTour - View a comprehensive list of all the investments made by VenTour, including details about the companies with their ceo and the area in which they are included">
-    </head>
-    <main>
-        <div class="containeri">
-            <div class="col-md-4">
-                <div class="image-text-overlay text-middle-left">
-                    <p>
-                        <span class="overlay-title">Ventour investments</span><br>
-                        <span class="overlay-subtext">We have a track record of identifying and nurtuing some of the most
-                            innovative and dynamic
-                            startups in the world!</span><br>
-                        <span class="overlay-subsubtext"><em>*</em> Click the buttons to view all companies we have invested
-                            in, or
-                            select an investment area and click the buttons to filter.</span>
 
-                    <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all
-                            </button>
-                            <button @click="MR = true">Most Relevant Companies</button></a></div>
-                    </p>
-                </div>
-            </div>
-            <div class="row4-a">
-                <div class="title">
-                    <label for="all-team">
-                        <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
-                            checked>
-                        <h1 class="learn-more-2" style="color:#033f52">ALL COMPANIES</h1>
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="row4">
+        <head>
+            <meta name="description"
+                content="Explore the investments at VenTour - View a comprehensive list of all the investments made by VenTour, including details about the companies with their ceo and the area in which they are included">
+        </head>
+        <main>
+            <div class="containeri">
+                <div class="col-md-4">
+                    <div class="image-text-overlay text-middle-left">
+                        <p>
+                            <span class="overlay-title">Ventour investments</span><br>
+                            <span class="overlay-subtext">We have a track record of identifying and nurtuing some of the
+                                most
+                                innovative and dynamic
+                                startups in the world!</span><br>
+                            <span class="overlay-subsubtext"><em>*</em> Click the buttons to view all companies we have
+                                invested
+                                in, or
+                                select an investment area and click the buttons to filter.</span>
 
-                <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target"
-                    :link="'/areas/' + area.id" :value="areas" @update:areas="areas = $event" />
-            </div>
-
-        </div>
-        <section class="team-members-grid">
-            <div id="title2">PORTFOLIO SNAPSHOT
-                <div class="form-container">
-                    <label for="age-filter">Filter companies by name </label>
-                    <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
-                </div>
-            </div>
-            <div class="row-c">
-                <div id="card-container">
-                    <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
-                        :image="company.image" :link="'/companies/' + company.id" />
-                </div>
-            </div>
-        </section>
-        <div class="row41">
-            <div class="text-block">
-                Our Exit Strategies
-                <p class="left-text">{{ leftColumnText }}</p>
-            </div>
-            <div class="buttons-container">
-                <div class="buttons">
-                    <div v-for="button in buttons" :key="button.id">
-                        <button style="color: white;" @click="updateText(button.text)"><span>{{ button.label
-                        }}</span></button>
+                        <div class="overlay-buttons"> <a href="#title2"><button class="active" @click="MR = ''"> Show all
+                                </button>
+                                <button @click="MR = true">Most Relevant Companies</button></a></div>
+                        </p>
                     </div>
                 </div>
-                <div style="position=relative; align-items: center; margin:5%; ">
-                    <div class="right-text">
-                        <p>{{ rightColumnText }}</p>
+                <div class="row4-a">
+                    <div class="title">
+                        <label for="all-team">
+                            <input type="radio" id="all-investments" value="" name="Investments-categories" v-model="areas"
+                                checked>
+                            <h1 class="learn-more-2" style="color:#033f52">ALL COMPANIES</h1>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row4">
+
+                    <AreaFilter v-for="area of Allareas" :logo="area.logo" :name="area.name" :data_target="area.data_target"
+                        :link="'/areas/' + area.id" :value="areas" @update:areas="areas = $event" />
+                </div>
+
+            </div>
+            <section class="team-members-grid">
+                <div id="title2">PORTFOLIO SNAPSHOT
+                    <div class="form-container">
+                        <label for="age-filter">Filter companies by name </label>
+                        <input id="age-filter" type='text' placeholder="Search Company" v-model="name">
+                    </div>
+                </div>
+                <div class="row-c">
+                    <div id="card-container">
+                        <Cardsection v-for="company of filtered" :subtitle="company.ceo" :area="company.areas"
+                            :image="company.image" :link="'/companies/' + company.id" />
+                    </div>
+                </div>
+            </section>
+            <div class="row41">
+                <div class="text-block">
+                    Our Exit Strategies
+                    <p class="left-text">{{ leftColumnText }}</p>
+                </div>
+                <div class="buttons-container">
+                    <div class="buttons">
+                        <div v-for="button in buttons" :key="button.id">
+                            <button style="color: white;" @click="updateText(button.text)"><span class="exits">{{
+                                button.label
+                            }}</span></button>
+                        </div>
+                    </div>
+                    <div style="position=relative; align-items: center; margin:5%; ">
+                        <div class="right-text">
+                            <p>{{ rightColumnText }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
 </template>
 
 
@@ -509,6 +514,10 @@ input::placeholder {
     color: white;
 }
 
+.exits {
+    font-size: 16px;
+}
+
 .buttons {
     padding-bottom: 2%;
     width: 40%;
@@ -757,6 +766,10 @@ button:hover {
     .image-text-overlay {
         width: 100%;
     }
+
+    .exits {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -802,6 +815,10 @@ button:hover {
     }
 
     .overlay-subsubtext {
+        font-size: 10px;
+    }
+
+    .exits {
         font-size: 10px;
     }
 }
