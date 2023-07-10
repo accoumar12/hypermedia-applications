@@ -530,6 +530,7 @@ h2 {
 .col3 {
   max-width: 100%;
   margin: 2%;
+  padding-bottom: 2.5%;
   display: flex;
   justify-content: center;
 }

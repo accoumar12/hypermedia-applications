@@ -94,15 +94,6 @@
                 </mobile>
             </div>
         </div>
-        <div class="col3topAreas">
-                <router-link to="/companies" class="nav-link-end">
-                    <a class="card13Areastop">
-                        <div class="go-cornertop">
-                        </div>
-                        <h3>CHECK ALL AREAS</h3>
-                    </a>
-                </router-link>
-        </div>
     </main>
 </div>
 </template>
