@@ -1,198 +1,204 @@
 <template>
   <div>
+
     <head>
-      <meta name="description" content="About Us - Discover the history and vision of VenTour, a leading investment company.">
+      <meta name="description"
+        content="About Us - Discover the history and vision of VenTour, a leading investment company.">
     </head>
-  <section class="background-section">
-    <div class="co-container">
-      <div class="header-center">
-        <h2> About VenTour</h2>
+    <section class="background-section">
+      <div class="co-container">
+        <div class="header-center">
+          <h2> About VenTour</h2>
+        </div>
       </div>
-    </div>
-    <div class="row-a">
-      <div class="container-a">
-        <div class="col-a">
-          <a class="card1" href="#header1">
-            <h3>OUR HISTORY</h3>
-            <p class="small-a">Excellence over a decade in VenTour. From 15 million Euros of capital invested in 1910 to
-              500 million Euros in 2020. We grow together with our investors!
-            </p>
-            <div class="go-corner" href="#header1">
-              <div class="go-arrow">
-                →
+      <div class="row-a">
+        <div class="container-a">
+          <div class="col-a">
+            <a class="card1" href="#header1">
+              <h3>OUR HISTORY</h3>
+              <p class="small-a">Excellence over a decade in VenTour. From 15 million Euros of capital invested in 1910 to
+                500 million Euros in 2020. We grow together with our investors!
+              </p>
+              <div class="go-corner" href="#header1">
+                <div class="go-arrow">
+                  →
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-a">
-          <a class="card1" href="#header2">
-            <h3>OUR APPROACH</h3>
-            <p class="small-a">Evaluated from numerous experts as the best approach in helping the investors accomplish
-              their ambitions for success. We help you to believe in YOU!</p>
-            <div class="go-corner" href="#header2">
-              <div class="go-arrow">
-                →
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-a">
-          <a class="card1" href="#header3">
-            <h3>WHAT DO WE OFFER</h3>
-            <p class="small-a">We offer constant support, full guidance and numerous resources. We give information and
-              assistance to new investors interested in joining us.</p>
-            <div class="go-corner" href="#header3">
-              <div class="go-arrow">
-                →
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="back-c">
-    <div id="header1">
-      <h1>OUR BRIEF HISTORY</h1>
-      <p>Our history brings inovation. With a rich legacy spanning decades, we have been at the forefront of driving
-        transformative change and empowering startups to shape the future.With a rich heritage spanning over two
-        decades,
-        our venture company has been at the forefront of fueling innovation, supporting promising startups, and
-        fostering
-        groundbreaking ideas that have revolutionized industries worldwide.</p>
-    </div>
-    <Carousel />
-    <div id="header2">
-      <h1>OUR INVESTMENT APPROACH</h1>
-      <p>We are focused on four key factors that help us identify promising startups or better say... We make EVERYTHING
-        promising!Our investment approach is driven by a meticulous evaluation of market dynamics, team expertise,
-        product
-        viability, and customer needs, ensuring a comprehensive assessment of startup potential. By combining strategic
-        insights, rigorous analysis, and an unwavering belief in the power of innovation, we strive to transform every
-        venture we back into a resounding success story that shapes the future of industries.</p>
-    </div>
-    <div class="row1-container">
-      <div class="box box-down cyan">
-        <h2>Growing Markets</h2>
-        <img class="ikona" src="~/assets/img/market-analysis.png" alt="Market-Icon">
-        <p>We look for startups that are addressing large and growing markets with significant untapped potential. We
-          assess the size of the market, the competitive landscape, and the potential for disruption.</p>
-
-      </div>
-      <div class="box red">
-        <h2>Team Experience</h2>
-        <img class="ikona" src="~/assets/img/teamexp.png" alt="Team-Icon">
-        <p>We believe that the founding team is critical to the success of any startup. We evaulate the team's
-          experience,
-          skills, and track record to ensure that they have the expertise and leadership necessary to execute on their
-          vision. </p>
-
-      </div>
-      <div class="box box-down blue">
-        <h2>Startup Products</h2>
-        <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="Startup-Icon">
-        <p>We evaluate the startup's product or technology to ensure that it has a strong competitive advantage and
-          addresses a real customer need. We assess the potential for scalability and the potential for further
-          innovation
-          and development.</p>
-
-      </div>
-    </div>
-    <div class="row2-container">
-      <div class="box orange">
-        <h2>Customer Needs</h2>
-        <img class="ikona" src="~/assets/img/customer-need.png" alt="Customer-Icon">
-        <p>We focus on analyzing the alignment with market demand and customer needs. We assess the clarity and
-          feasibility of the company's objectives, ensuring that they are relevant and time-bound.
-          We evaluate the strategic plans, including actions and milestones outlined to achieve the specific objectives.
-        </p>
-
-      </div>
-    </div>
-    <div id="header3">
-      <h1>WHAT WE OFFER TO COMPANIES</h1>
-      <p>Once we have identified a promising startup, we work closely with the founding team to provide support, guidance,
-        and resources to help them achieve their goals. Our team's extensive network and industry connections give our
-        portfolio companies a competitive advantage in their respective markets.Our goal is to provide all companies with
-        the resources they need to succeed, no matter what challenges
-        they may face.</p>
-    </div>
-    <div class="card-o-row">
-      <div class="card-o">
-        <img
-          src="https://media.istockphoto.com/id/494940062/photo/financial-concept-business-and-money.jpg?b=1&s=170667a&w=0&k=20&c=XPiQNsS1zIOyNLFDeffchh6T03A_mkR2IkBP06J9iyw="
-          alt="Support">
-        <div class="card-content-o">
-          <h2>
-            SUPPORT
-          </h2>
-          <p> We believe that investing in a startup is more than just providing funding. We take a hands-on approach,
-            working closely with our companies to provide the support they need to succeed. We are always
-            available to provide support and
-            answer questions.
-          </p>
-          <a class="button-o" href="mailto:ventourteam@gmail.com">
-            Contact for info. or questions
-            <span class="material-symbols-outlined">
-            </span>
-          </a>
-        </div>
-      </div>
-      <div class="card-o">
-        <img
-          src="https://media.istockphoto.com/id/950986640/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?b=1&s=170667a&w=0&k=20&c=RvubsRQ8G-ZHiD0VyahnuZWKoQ-88HMnGQMBFSnOBjU="
-          alt="Guidance">
-        <div class="card-content-o">
-          <h2>
-            GUIDANCE
-          </h2>
-          <p>
-            We work with out founding team to help companies develop their strategy and execute on their vision. We have a
-            deep understanding of the challenges that startups face, and we draw on this knowledge to provide targeted
-            guidance to our porfolio companies.
-          </p>
-          <a class="button-o" href="mailto:ventourteam@gmail.com">
-            Contact for info. or questions
-            <span class="material-symbols-outlined">
-            </span>
-          </a>
-        </div>
-      </div>
-      <div class="card-o">
-        <img
-          src="https://media.istockphoto.com/id/1468415656/photo/interest-rate-and-dividend-concept-businessman-with-percentage-symbol-and-up-arrow-interest.jpg?b=1&s=170667a&w=0&k=20&c=TeLXGpi5W-S04Lq0pSFluYu-xb7TpLa3isCcUiMOJb4="
-          alt="Resources">
-        <div class="card-content-o">
-          <h2>
-            RESOURCES
-          </h2>
-          <p>
-            We provide our portfolio companies with a wide range of resources. We provide them with access to a variety of
-            services, such as marketing and branding support, legal and accounting services, and HR and recruiting
-            support.
-          </p>
-          <a class="button-o" href="mailto:ventourteam@gmail.com">
-            Contact for info. or questions
-            <span class="material-symbols-outlined">
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col3">
-      <router-link to="/people" class="nav-link-end">
-        <a class="card13">
-          <h3>MEET OUR TEAM</h3>
-          <div class="go-corner">
-            <div class="go-arrow">
-              →
-            </div>
+            </a>
           </div>
-        </a>
-      </router-link>
-    </div>
-  </section>
-</div>
+          <div class="col-a">
+            <a class="card1" href="#header2">
+              <h3>OUR APPROACH</h3>
+              <p class="small-a">Evaluated from numerous experts as the best approach in helping the investors accomplish
+                their ambitions for success. We help you to believe in YOU!</p>
+              <div class="go-corner" href="#header2">
+                <div class="go-arrow">
+                  →
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-a">
+            <a class="card1" href="#header3">
+              <h3>WHAT DO WE OFFER</h3>
+              <p class="small-a">We offer constant support, full guidance and numerous resources. We give information and
+                assistance to new investors interested in joining us.</p>
+              <div class="go-corner" href="#header3">
+                <div class="go-arrow">
+                  →
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="back-c">
+      <div id="header1">
+        <h1>OUR BRIEF HISTORY</h1>
+        <p>Our history brings inovation. With a rich legacy spanning decades, we have been at the forefront of driving
+          transformative change and empowering startups to shape the future.With a rich heritage spanning over two
+          decades,
+          our venture company has been at the forefront of fueling innovation, supporting promising startups, and
+          fostering
+          groundbreaking ideas that have revolutionized industries worldwide.</p>
+      </div>
+      <Carousel />
+      <div id="header2">
+        <h1>OUR INVESTMENT APPROACH</h1>
+        <p>We are focused on four key factors that help us identify promising startups or better say... We make EVERYTHING
+          promising!Our investment approach is driven by a meticulous evaluation of market dynamics, team expertise,
+          product
+          viability, and customer needs, ensuring a comprehensive assessment of startup potential. By combining strategic
+          insights, rigorous analysis, and an unwavering belief in the power of innovation, we strive to transform every
+          venture we back into a resounding success story that shapes the future of industries.</p>
+      </div>
+      <div class="row1-container">
+        <div class="box box-down cyan">
+          <h2>Growing Markets</h2>
+          <img class="ikona" src="~/assets/img/market-analysis.png" alt="Market-Icon">
+          <p>We look for startups that are addressing large and growing markets with significant untapped potential. We
+            assess the size of the market, the competitive landscape, and the potential for disruption.</p>
+
+        </div>
+        <div class="box red">
+          <h2>Team Experience</h2>
+          <img class="ikona" src="~/assets/img/teamexp.png" alt="Team-Icon">
+          <p>We believe that the founding team is critical to the success of any startup. We evaulate the team's
+            experience,
+            skills, and track record to ensure that they have the expertise and leadership necessary to execute on their
+            vision. </p>
+
+        </div>
+        <div class="box box-down blue">
+          <h2>Startup Products</h2>
+          <img class="ikona" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="Startup-Icon">
+          <p>We evaluate the startup's product or technology to ensure that it has a strong competitive advantage and
+            addresses a real customer need. We assess the potential for scalability and the potential for further
+            innovation
+            and development.</p>
+
+        </div>
+      </div>
+      <div class="row2-container">
+        <div class="box orange">
+          <h2>Customer Needs</h2>
+          <img class="ikona" src="~/assets/img/customer-need.png" alt="Customer-Icon">
+          <p>We focus on analyzing the alignment with market demand and customer needs. We assess the clarity and
+            feasibility of the company's objectives, ensuring that they are relevant and time-bound.
+            We evaluate the strategic plans, including actions and milestones outlined to achieve the specific objectives.
+          </p>
+
+        </div>
+      </div>
+      <div id="header3">
+        <h1>WHAT WE OFFER TO COMPANIES</h1>
+        <p>Once we have identified a promising startup, we work closely with the founding team to provide support,
+          guidance,
+          and resources to help them achieve their goals. Our team's extensive network and industry connections give our
+          portfolio companies a competitive advantage in their respective markets.Our goal is to provide all companies
+          with
+          the resources they need to succeed, no matter what challenges
+          they may face.</p>
+      </div>
+      <div class="card-o-row">
+        <div class="card-o">
+          <img
+            src="https://media.istockphoto.com/id/494940062/photo/financial-concept-business-and-money.jpg?b=1&s=170667a&w=0&k=20&c=XPiQNsS1zIOyNLFDeffchh6T03A_mkR2IkBP06J9iyw="
+            alt="Support">
+          <div class="card-content-o">
+            <h2>
+              SUPPORT
+            </h2>
+            <p> We believe that investing in a startup is more than just providing funding. We take a hands-on approach,
+              working closely with our companies to provide the support they need to succeed. We are always
+              available to provide support and
+              answer questions.
+            </p>
+            <a class="button-o" href="mailto:ventourteam@gmail.com">
+              Contact for info. or questions
+              <span class="material-symbols-outlined">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card-o">
+          <img
+            src="https://media.istockphoto.com/id/950986640/photo/business-finance-accounting-contract-advisor-investment-consulting-marketing-plan-for-the.jpg?b=1&s=170667a&w=0&k=20&c=RvubsRQ8G-ZHiD0VyahnuZWKoQ-88HMnGQMBFSnOBjU="
+            alt="Guidance">
+          <div class="card-content-o">
+            <h2>
+              GUIDANCE
+            </h2>
+            <p>
+              We work with out founding team to help companies develop their strategy and execute on their vision. We have
+              a
+              deep understanding of the challenges that startups face, and we draw on this knowledge to provide targeted
+              guidance to our porfolio companies.
+            </p>
+            <a class="button-o" href="mailto:ventourteam@gmail.com">
+              Contact for info. or questions
+              <span class="material-symbols-outlined">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card-o">
+          <img
+            src="https://media.istockphoto.com/id/1468415656/photo/interest-rate-and-dividend-concept-businessman-with-percentage-symbol-and-up-arrow-interest.jpg?b=1&s=170667a&w=0&k=20&c=TeLXGpi5W-S04Lq0pSFluYu-xb7TpLa3isCcUiMOJb4="
+            alt="Resources">
+          <div class="card-content-o">
+            <h2>
+              RESOURCES
+            </h2>
+            <p>
+              We provide our portfolio companies with a wide range of resources. We provide them with access to a variety
+              of
+              services, such as marketing and branding support, legal and accounting services, and HR and recruiting
+              support.
+            </p>
+            <a class="button-o" href="mailto:ventourteam@gmail.com">
+              Contact for info. or questions
+              <span class="material-symbols-outlined">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col3">
+        <router-link to="/people" class="nav-link-end">
+          <a class="card13">
+            <h3>MEET OUR TEAM</h3>
+            <div class="go-corner">
+              <div class="go-arrow">
+                →
+              </div>
+            </div>
+          </a>
+        </router-link>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -434,6 +440,7 @@ h2 {
   text-transform: uppercase;
   inset: auto auto 220px 30px;
 }
+
 /* Responsive modifications */
 @media (max-width: 767px) {
   .card-o h2 {
@@ -529,7 +536,7 @@ h2 {
 
 .col3 {
   max-width: 100%;
-  margin: 2%;
+  padding-top: 2%;
   padding-bottom: 2.5%;
   display: flex;
   justify-content: center;
@@ -588,11 +595,13 @@ h2 {
     font-weight: 200;
     font-family: sans-serif;
     mix-blend-mode: screen;
-    }
-  .h2{
+  }
+
+  .h2 {
     font-size: 48px;
     font-weight: 200;
   }
+
   #carousel-container {
     width: 90%;
   }
@@ -905,5 +914,4 @@ h2 {
     z-index: 5;
     overflow: hidden;
   }
-}
-</style>
+}</style>

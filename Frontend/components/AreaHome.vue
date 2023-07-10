@@ -88,7 +88,7 @@ const props = defineProps(['name', 'p1', 'ph', 'p2', 'link']);
 }
 
 span.highlight {
-    font-size: 18px;
+    font-size: 16px;
     background-color: #d9f3f3;
 }
 
