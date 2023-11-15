@@ -1,14 +1,6 @@
 # [VenTour website](https://rkomi98.github.io/VenTour/)
 
-This is the official repository of the Hypermedia Web Application project, course followed in Politecnico di Milano during the Academic year 2022/23
-
 This website has been designed for a Venture Capital Company. Attached you can find the Design document, the [documentation](https://github.com/Rkomi98/VenTour/tree/main/Documents/Documentation), and the implementation code (and usability inspection?) of the website.
-
-The authors are:
-
-    Mirko Calcaterra
-    Emma Lodetti
-    Nikolina Zallemi
 
 ## Project Description
 In this repository you can find the design and the implementation of a website of a possible Venture Capital Company. As a VC, its goal is to show the areas of interest and  the companies in which the people of the VC invest. 
